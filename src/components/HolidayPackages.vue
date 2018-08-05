@@ -121,9 +121,17 @@ export default {
         },
         {
           title: 'Lorem ipsum dolor sit amet.', 
-          pricesmall: '$599 - $599',
-          url: './src/assets/images/travel-agency-website-grand-canyon-image.jpg' ,
-          place: 'Washington',
+          pricesmall: '$599 - $899',
+          url: './src/assets/images/travel-agency-website-bangkok-image.jpg' ,
+          place: 'Bangkok',
+          month: 'May',
+        },
+
+        {
+          title: 'Lorem ipsum dolor sit amet.', 
+          pricesmall: '$899 - $999',
+          url: './src/assets/images/travel-agency-website-eiffel-tower-image.jpg' ,
+          place: 'France',
           month: 'May',
         }
 
