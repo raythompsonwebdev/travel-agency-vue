@@ -10,7 +10,7 @@
 
       <h2>Holiday Search</h2>
 
-      <form id="search_form">
+      <form id="search_form" >
 
         <ul>
           <li>
@@ -18,7 +18,7 @@
 
             <select v-model="searchdestination" name="searchdestination" class="destination1">
               
-              <option v-for="(searchdestination,index) in searchdestination" :key='index' >{{searchdestination.destination}}</option>
+              <option v-for="(searchdestination,destination) in searchdestination" :key='destination' >{{searchdestination.destination}}</option>
 
 					  </select>
             
@@ -222,32 +222,125 @@ export default {
     }
 
   },
+
   name: 'Home',
+  
+
   data() {
 
     return {
 
       show: 'true',
-            
-      searchdestination:
-      [
-        {destination: 'Istanbul'}, 
-        {destination: 'HongKong'}, 
-        {destination: 'Paris'}, 
-        {destination: 'Bangkok'}, 
-        {destination: 'London'}, 
-        {destination: 'Dubai'}, 
-        {destination: 'Sydney'}
+      
+                  
+      searchdestination: [
+        {destination: "Istanbul"}, 
+        {destination: "HongKong"}, 
+        {destination: "Paris"}, 
+        {destination: "Bangkok"}, 
+        {destination: "London"}, 
+        {destination: "Dubai"}, 
+        {destination: "Sydney"}
       ],
 
-      searchday:['1',' 2', '3','4', '5', '6',  '7', '8','9', '10', '11', '12', '13', '14','15', '16', '17', '18', '19', '20','21',  '22',  '23',  '24', '25',  '26',  '27', '28', '29',  '30',  '31',],
-      searchmonth:['January','February','March','April','May','June', 'July','August','September','October', 'November','December'],
-      searchyear:['2018', '2019', '2020', '2021', '2022'],
-      searchduration:['Day Trip', 'Weekend','One Week','Two Weeks','Three Weeks','One Month', 'Three Months','Six Months'],
-      searchboard:['Half','Full'],
-      searchstar:['1 Star','2 Star','3 Star','4 Star', '5 Star'],
-      searchadult:['1',' 2', '3','4', '5', '6'],
-      searchchildren:['1',' 2', '3','4', '5', '6'],
+      searchday: [
+        1,
+        2, 
+        3,
+        4, 
+        5, 
+        6,  
+        7, 
+        8,
+        9, 
+        10, 
+        11, 
+        12, 
+        13, 
+        14,
+        15, 
+        16, 
+        17, 
+        18, 
+        19, 
+        20,
+        21,  
+        22,  
+        23,  
+        24, 
+        25,  
+        26,  
+        27, 
+        28, 
+        29,  
+        30,  
+        31,
+      ],
+
+      searchmonth:[
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June', 
+        'July',
+        'August',
+        'September',
+        'October', 
+        'November',
+        'December'
+      ],
+
+      searchyear:[
+        2018, 
+        2019, 
+        2020, 
+        2021, 
+        2022
+      ],
+
+      searchduration:[
+        'Day Trip', 
+        'Weekend',
+        'One Week',
+        'Two Weeks',
+        'Three Weeks',
+        'One Month', 
+        'Three Months',
+        'Six Months'
+      ],
+
+      searchboard:[
+        'Half',
+        'Full'
+      ],
+
+      searchstar:[
+        '1 Star',
+        '2 Star',
+        '3 Star',
+        '4 Star', 
+        '5 Star'
+      ],
+
+      searchadult:[
+        '1',
+        '2', 
+        '3',
+        '4', 
+        '5', 
+        '6'
+      ],
+
+      searchchildren:[
+        '1',
+        '2', 
+        '3',
+        '4', 
+        '5', 
+        '6'
+      ],
 
       holidayspots:[
             
@@ -282,10 +375,6 @@ export default {
             hotels : '504 Hotels'
           },
 
-   
-          
-         
-        
       ]
 
     }

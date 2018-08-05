@@ -22,13 +22,14 @@
 			margin-bottom: 0.5em;
 			figure#logo {
 				height: auto;
-				width: 18.64%;
+				width: 253px;
 				margin: 0px;
 				text-indent: -9999px;
 				background-repeat: no-repeat;
 				background-position: 50% 50%;
 				img {
 					display: block;
+					max-width:100%;
 					width:100%;
 				}
 			}
@@ -377,8 +378,7 @@
 						margin: 5% auto;
 						width: 50%;
 						color: $colorpw;
-						height: 35px;
-						
+						line-height:35px;
 						border: 1px solid #f47f11;
 						display: block;
 						&:hover {
@@ -387,6 +387,7 @@
 							@include gradient($colorsearchbtnroll,
 							$colorsearchbtn);
 							font-weight: bold;
+							cursor:pointer;
 						}
 					}
 				}
@@ -404,7 +405,7 @@
 						img {
 							width: 32%;
 							float: left;
-							display: inline-block;
+							display: block;
 							margin-right: 3%;
 						}
 						figcaption {
@@ -415,18 +416,18 @@
 								font-size: 0.95em;
 								font-weight: bold;
 								width: 100%;
-								height: 30px;
 								margin: 0;
 								padding: 0;
-								line-height: 30px;
+								line-height: 25px;
+								display:block;
 							}
 							p {
 								font-size: 0.75em;
 								width: 100%;
 								float: none;
 								height: auto;
-								margin: 0px;
-								padding: 0px;
+								margin: 0;
+								padding: 0;
 								display: inline-block;
 								color: #bcbdbc;
 								line-height: 20px;
@@ -1034,8 +1035,7 @@
 		header {
 			height: 117px;
 			figure#logo {
-				
-				
+		
 				margin: 0px;
 			}
 			aside.contact {
@@ -1160,10 +1160,8 @@
 						}
 					}
 					#searchbtn {
-						clear: left;
-						margin: 5% auto;
-						height: 35px;
 						line-height: 35px;
+						width: 60%;
 						&:hover {
 							border: 0;
 						}
@@ -1183,8 +1181,7 @@
 							width: 50%;
 							h3 {
 								font-size: 0.9em;
-								height: 30px;
-								line-height: 30px;
+								
 							}
 							p {
 								font-size: 0.75em;
@@ -1584,7 +1581,6 @@
 		header {
 			height: 117px;
 			figure#logo {
-				
 				margin: 0px;
 			}
 			aside.contact {
@@ -1700,8 +1696,7 @@
 						}
 					}
 					#searchbtn {
-						clear: left;
-						margin: 5% auto;
+						width: 65%;
 						&:hover {
 							border: 0;
 						}
@@ -1721,12 +1716,11 @@
 							width: 50%;
 							h3 {
 								font-size: 0.95em;
-								height: 30px;
-								line-height: 30px;
+								
 							}
 							p {
 								font-size: 0.75em;
-								line-height: 20px;
+								
 							}
 						}
 					}
@@ -2088,7 +2082,7 @@
 			height: 117px;
 			figure#logo {
 				
-				margin: 0px;
+				width:215px;
 			}
 			aside.contact {
 				width: 141px;
@@ -2203,8 +2197,8 @@
 						}
 					}
 					#searchbtn {
-						clear: left;
-						font-size: 0.9em;
+
+						width: 70%;
 						&:hover {
 							border: 0;
 						}
@@ -2227,7 +2221,7 @@
 							}
 							p {
 								font-size: 0.75em;
-								line-height: 20px;
+								
 							}
 						}
 					}
@@ -2597,7 +2591,7 @@
 		header {
 			height: 117px;
 			figure#logo {
-				
+				width: 200px;
 			}
 			aside.contact {
 				width: 141px;
@@ -2710,8 +2704,8 @@
 						}
 					}
 					#searchbtn {
-						clear: left;
-						font-size: 0.9em;
+
+						width: 75%;
 						&:hover {
 							border: 0;
 						}
@@ -2733,7 +2727,7 @@
 							}
 							p {
 								font-size: 0.7em;
-								line-height: 20px;
+								
 							}
 						}
 					}
@@ -3059,9 +3053,7 @@
 		width: 92%;
 		header {
 			height: 107px;
-			figure#logo {
-				
-			}
+
 			aside.contact {
 				width: 141px;
 				span.tele {
@@ -3178,8 +3170,8 @@
 						}
 					}
 					#searchbtn {
-						clear: left;
-						font-size: 0.9em;
+
+						
 						&:hover {
 							border: 0;
 						}
@@ -3198,12 +3190,11 @@
 							width: 40%;
 							h3 {
 								font-size: 0.8em;
-								line-height: 25px;
-								height: 25px;
+								
 							}
 							p {
 								font-size: 0.7em;
-								line-height: 20px;
+								
 							}
 						}
 					}
@@ -3524,9 +3515,7 @@
 		width: 94%;
 		header {
 			height: 107px;
-			figure#logo {
-				
-			}
+
 			aside.contact {
 				width: 141px;
 				span.tele {
@@ -3635,8 +3624,8 @@
 						}
 					}
 					#searchbtn {
-						clear: left;
-						font-size: 0.9em;
+
+						width: 80%;
 						&:hover {
 							border: 0;
 						}
@@ -3655,12 +3644,11 @@
 							width: 40%;
 							h3 {
 								font-size: 0.75em;
-								line-height: 25px;
-								height: 25px;
+								
 							}
 							p {
 								font-size: 0.7em;
-								line-height: 20px;
+								
 							}
 						}
 					}
@@ -4010,9 +3998,7 @@
 
 		header {
 			height: 107px;
-			figure#logo {
-				
-			}
+
 			aside.contact {
 				width: 141px;
 				span.tele {
@@ -4067,7 +4053,7 @@
 					position: fixed;
 					z-index: 100;
 					opacity:0;
-					top: 12vh;
+					top: 12.5vh;
 					width: 96%;
 					height: auto;
 					float: none;
@@ -4237,8 +4223,8 @@
 						}
 					}
 					#searchbtn {
-						clear: left;
-						font-size: 0.9em;
+
+						
 						&:hover {
 							border: 0;
 						}
@@ -4260,7 +4246,7 @@
 							}
 							p {
 								font-size: 0.7em;
-								line-height: 20px;
+								
 							}
 						}
 					}
@@ -4613,6 +4599,7 @@
 			#toggle-menu,button {
 				left: 3vw;
 				font-size: 0.9em;
+				top: 7.5vh;
 			}
 			/*contact end*/
 			nav {
@@ -4638,7 +4625,7 @@
 					}
 				}
 				aside#language-box {
-					width: 22%;
+					width: 25%;
 					margin-left: 0%;
 					form {
 						span {
@@ -4656,10 +4643,12 @@
 		}
 		/*header end*/
 		#side-bar-btn{
+			top: 7.5vh;
 
 		}
 		#contact-bar-btn{
 			font-size: 0.75em;
+			top: 7.5vh;
 			
 		}
 		#leftside {
@@ -4715,8 +4704,7 @@
 						}
 					}
 					#searchbtn {
-						clear: left;
-						font-size: 0.9em;
+
 						&:hover {
 							border: 0;
 						}
@@ -4738,7 +4726,7 @@
 							}
 							p {
 								font-size: 0.7em;
-								line-height: 20px;
+								
 							}
 						}
 					}
@@ -5060,8 +5048,7 @@
 				}
 			}
 			#toggle-menu,button {
-				left: 3vw;
-				top: 7vh;
+				
 				font-size: 0.9em;
 			}
 			/*contact end*/
@@ -5094,7 +5081,7 @@
 					}
 				}
 				aside#language-box {
-					width: 23%;
+					width: 28%;
 					margin-left: 0%;
 					form {
 						span {
@@ -5113,7 +5100,6 @@
 		/*header end*/
 
 		#side-bar-btn{
-
 
 		}
 		#contact-bar-btn{
@@ -5173,8 +5159,7 @@
 						}
 					}
 					#searchbtn {
-						clear: left;
-						font-size: 0.9em;
+						width: 85%;
 						&:hover {
 							border: 0;
 						}
@@ -5196,7 +5181,7 @@
 							}
 							p {
 								font-size: 0.7em;
-								line-height: 20px;
+								
 							}
 						}
 					}
@@ -5533,8 +5518,8 @@
 				}
 			}
 			#toggle-menu,button {
-				left: 1vw;
-				top: 7vh;
+				left: 2.5vw;
+				
 				font-size: 0.9em;
 			}
 			/*contact end*/
@@ -5564,7 +5549,7 @@
 					}
 				}
 				aside#language-box {
-					width: 23%;
+					width: 30%;
 					margin-left: 0%;
 					form {
 						label {
@@ -5583,7 +5568,7 @@
 		/*header end*/
 
 		#side-bar-btn{
-			left: 18vw;
+			left: 19vw;
 
 		}
 		#contact-bar-btn{
@@ -5643,8 +5628,8 @@
 						}
 					}
 					#searchbtn {
-						clear: left;
-						font-size: 0.9em;
+
+						
 						&:hover {
 							border: 0;
 						}
@@ -5666,7 +5651,7 @@
 							}
 							p {
 								font-size: 0.7em;
-								line-height: 20px;
+								
 							}
 						}
 					}
@@ -6001,7 +5986,7 @@
 			/*contact end*/
 			#toggle-menu,button {
 				left: 2vw;
-				top: 7vh;
+				
 				font-size: 0.9em;
 			}
 			nav {
@@ -6030,7 +6015,7 @@
 					}
 				}
 				aside#language-box {
-					width: 27%;
+					width: 30%;
 					margin-left: 0%;
 					form {
 						span {
@@ -6110,8 +6095,7 @@
 						}
 					}
 					#searchbtn {
-						clear: left;
-						font-size: 0.9em;
+						
 						&:hover {
 							border: 0;
 						}
@@ -6133,7 +6117,7 @@
 							}
 							p {
 								font-size: 0.7em;
-								line-height: 20px;
+								
 							}
 						}
 					}
@@ -6466,8 +6450,7 @@
 				}
 			}
 			#toggle-menu,button {
-				left: 2vw;
-				top: 7vh;
+								
 				font-size: 0.9em;
 			}
 			/*contact end*/
@@ -6499,7 +6482,7 @@
 					}
 				}
 				aside#language-box {
-					width: 29%;
+					
 					margin-left: 0%;
 					form {
 						span {
@@ -6576,8 +6559,7 @@
 						}
 					}
 					#searchbtn {
-						clear: left;
-						font-size: 0.9em;
+						
 						&:hover {
 							border: 0;
 						}
@@ -6599,7 +6581,7 @@
 							}
 							p {
 								font-size: 0.7em;
-								line-height: 20px;
+								
 							}
 						}
 					}
@@ -6930,7 +6912,6 @@
 			}
 			/*contact end*/
 			#toggle-menu,button {
-
 				font-size: 0.9em;
 			}
 			nav {
@@ -6949,9 +6930,7 @@
 							&:hover {
 								line-height: 50px;
 							}
-							&:visited {}
-							&:focus {}
-							&:active {}
+							
 						}
 					}
 					li:nth-of-type(2){
@@ -6963,7 +6942,7 @@
 					}
 				}
 				aside#language-box {
-					width: 31%;
+					
 					margin-left: 0%;
 					form {
 						label {
@@ -7041,8 +7020,7 @@
 						}
 					}
 					#searchbtn {
-						clear: left;
-						font-size: 0.9em;
+						width: 90%;
 						&:hover {
 							border: 0;
 						}
@@ -7064,7 +7042,7 @@
 							}
 							p {
 								font-size: 0.7em;
-								line-height: 20px;
+								
 							}
 						}
 					}
@@ -7400,9 +7378,8 @@
 				}
 			}
 			#toggle-menu,button {
-
 				top: 8.5vh;
-				font-size: 0.9em;
+				
 			}
 			/*contact end*/
 			nav {
@@ -7506,8 +7483,7 @@
 						}
 					}
 					#searchbtn {
-						clear: left;
-						font-size: 0.9em;
+
 						&:hover {
 							border: 0;
 						}
@@ -7529,7 +7505,7 @@
 							}
 							p {
 								font-size: 0.7em;
-								line-height: 20px;
+								
 							}
 						}
 					}
@@ -7863,7 +7839,6 @@
 				}
 			}
 			#toggle-menu,button {
-
 				font-size: 0.9em;
 			}
 			/*contact end*/
@@ -7896,7 +7871,7 @@
 					}
 				}
 				aside#language-box {
-					width: 33%;
+					
 					margin-left: 0%;
 					form {
 						label {
@@ -7975,8 +7950,7 @@
 						}
 					}
 					#searchbtn {
-						clear: left;
-						font-size: 0.9em;
+
 						&:hover {
 							border: 0;
 						}
@@ -7998,7 +7972,7 @@
 							}
 							p {
 								font-size: 0.7em;
-								line-height: 20px;
+								
 							}
 						}
 					}
