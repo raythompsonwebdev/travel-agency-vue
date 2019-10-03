@@ -6,7 +6,11 @@
 
       <!--header-->
       <header>
-
+        <!---logo-->
+        <figure id="logo">
+          <img :src="'assets/images/travel-agency-website-logo.png'" />
+        </figure>
+        <!--<div id="midsection"></div>-->
         <!---contact number-->
         <aside class="contact">
           <span class="tele">
@@ -15,12 +19,7 @@
           </span>
           <span id="opening-time">{{openTime}}</span>
         </aside>
-
-        <!---logo-->
-        <figure id="logo">
-          <img :src="'assets/images/travel-agency-website-logo.png'" />
-        </figure>
-
+        
         <!---primary navigation-->
         <nav>
           

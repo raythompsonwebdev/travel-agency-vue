@@ -4,7 +4,6 @@
     <aside id="leftside2" class="hide" v-if="leftsideFunction">
       <br />
       <h1>Filter By Season</h1>
-
       <ul>
         <li v-for="season in seasons" v-bind:key="season.id">
           <a href v-on:click="filterFunction">{{season.title}}</a>
@@ -65,15 +64,21 @@ export default {
         el.setAttribute("class", "hide");
 
       }
-    },
+    }  
 
-    filterFunction: function(){
 
-        
 
+  }
+  /**
+   * 
+   * computed: {
+    filteredList() {
+      return this.postList.filter(post => {
+        return )
+      })
     }
-
-  },
+  }
+   */
     
 };
 </script>
