@@ -58,8 +58,9 @@
         <router-view></router-view>
 
       </transition>
-    </div>
 
+    </div>
+    
     <!--footer-->
     <footer>
       <ul>
@@ -94,6 +95,7 @@ import LanguageSelect from "./components/LanguageSelect.vue";
 export default {
   name: "app",
   methods: {
+    
     testerFunction: function() {
       //console.log(event);
 

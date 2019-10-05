@@ -74,7 +74,7 @@ export default {
    * computed: {
     filteredList() {
       return this.postList.filter(post => {
-        return )
+        return post.title.toLowerCase().includes(this.search.toLowerCase())
       })
     }
   }

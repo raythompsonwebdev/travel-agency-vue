@@ -3,7 +3,7 @@
       <aside id="language-box">
             <form>
               <label>Language:</label>
-              <select name="language">
+              <select name="language" >
                 <option :value="languageselect.country" v-for="languageselect in languageselect" v-bind:key="languageselect.id">{{languageselect.country}}</option>
                 
               </select>
@@ -24,4 +24,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style lang="scss" >
+
+
 </style>
