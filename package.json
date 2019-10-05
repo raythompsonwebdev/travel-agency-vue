@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    
     "start": "node server.js",
     "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then npm run build ; fi "
   },
@@ -52,5 +53,10 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "engines": {
+    "node": ">=8.9.1",
+    "npm": ">=5.3.0"
+  }
+
 }
