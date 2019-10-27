@@ -1,15 +1,11 @@
 <template>
-
   <div class="HolidayPackages">
-    
-
     <!---leftside2-->
-    <FilterNav 
+    <FilterNav
       v-bind:seasons="seasons"
-      v-bind:locations="locations" 
+      v-bind:locations="locations"
       v-bind:prices="prices"
-      v-bind:ratings="ratings" 
-       
+      v-bind:ratings="ratings"
     />
 
     <!---main content-->
@@ -18,7 +14,6 @@
     </main>
 
     <div class="clearfix"></div>
-
   </div>
 </template>
 
@@ -27,10 +22,7 @@ import FilterNav from "./FilterNav.vue";
 import HolidayPackageItem from "./HolidayPackageItem.vue";
 
 export default {
-  
   name: "HolidayPackages",
-
-  
 
   components: {
     HolidayPackageItem,
@@ -42,7 +34,6 @@ export default {
       show: "true",
 
       holidaypackageitem: [
-        
         {
           id: 1,
 
@@ -60,11 +51,7 @@ export default {
 
           location: "america",
 
-          rating: "2 Star",
-
-
-
-
+          rating: "2 Star"
         },
         {
           id: 2,
@@ -83,106 +70,98 @@ export default {
 
           location: "america",
 
-          rating: "4 Star",
+          rating: "4 Star"
         }
       ],
-          
+
       seasons: [
-
         {
-          id:1,
-          title: 'Winter'
+          id: 1,
+          title: "Winter"
         },
         {
-          id:2,
-          title: 'Summer'
+          id: 2,
+          title: "Summer"
         },
         {
-          id:3,
-          title: 'Spring'
+          id: 3,
+          title: "Spring"
         },
         {
-          id:4,
-          title: 'Autumn'
+          id: 4,
+          title: "Autumn"
         }
-
       ],
 
       locations: [
-
         {
-          id:1,
-          title: 'London'
+          id: 1,
+          title: "London"
         },
         {
-          id:2,
-          title: 'Paris'
+          id: 2,
+          title: "Paris"
         },
         {
-          id:3,
-          title: 'Madrid'
+          id: 3,
+          title: "Madrid"
         },
         {
-          id:4,
-          title: 'Rome'
+          id: 4,
+          title: "Rome"
         },
         {
-          id:5,
-          title: 'Dubai'
+          id: 5,
+          title: "Dubai"
         }
-
       ],
 
       prices: [
-
         {
-          id:1,
-          title: '$100 - $500'
+          id: 1,
+          title: "$100 - $500"
         },
         {
-          id:2,
-          title: '$500 - $1000'
+          id: 2,
+          title: "$500 - $1000"
         },
         {
-          id:3,
-          title: '$1000 - $1500'
+          id: 3,
+          title: "$1000 - $1500"
         },
         {
-          id:4,
-          title: '$1500 - $2000'
+          id: 4,
+          title: "$1500 - $2000"
         },
         {
-          id:5,
-          title: '$2000 +'
+          id: 5,
+          title: "$2000 +"
         }
-
       ],
 
       ratings: [
-
         {
-          id:1,
-          title: '1 Star'
+          id: 1,
+          title: "1 Star"
         },
         {
-          id:2,
-          title: '2 Star'
+          id: 2,
+          title: "2 Star"
         },
         {
-          id:3,
-          title: '3 Star'
+          id: 3,
+          title: "3 Star"
         },
         {
-          id:4,
-          title: '4 Star'
+          id: 4,
+          title: "4 Star"
         },
         {
-          id:5,
-          title: '5 Star'
+          id: 5,
+          title: "5 Star"
         }
-
       ],
-            
+
       holiday: [],
 
       count: 10

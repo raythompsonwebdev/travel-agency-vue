@@ -61,13 +61,13 @@
 				width: 13%;
 				height: auto;
 				margin: 1% 0 0 0;
-				font-size: 0.9em;
 				display: block;
 				line-height: 25px;
+				font-size:0.9em;
 				span.tele {
 					margin: 0;
 					padding: 0;
-					width: 99%;
+					width: 100%;
 					float: left;
 					display: block;
 					display:flex;
@@ -84,11 +84,11 @@
 					}
 
 					a#contact-number {
-						width: 88%;
+						width: 87%;
 						
 						padding: 0;
 						display: inline-block;
-						line-height: 27px;
+						line-height: 30px;
 						letter-spacing: 0.01em;
 						font-weight: bold;
 						font-size: 1em;
@@ -1060,8 +1060,7 @@
 			}
 			aside.contact {
 				width: 13%;
-    			font-size: 0.9em;
-
+    			
 				span.tele {
 					margin: 0;
 					img{
@@ -1617,9 +1616,8 @@
 				
 			}
 			aside.contact {
-				width: 14%;
-				font-size: 0.8em;
-
+				width: 15%;
+				
 				span.tele {
 					margin: 0;
 
@@ -1632,9 +1630,8 @@
 					}
 
 					a#contact-number {
-
-						font-size: 1em;
-						
+						width:86%;
+											
 
 						&:active {
 							color: #fff;
@@ -2130,9 +2127,8 @@
 				
 			}
 			aside.contact {
-				width: 15%;
-				font-size: 0.75em;
-
+				width: 16%;
+				font-size:0.85em;
 				span.tele {
 					margin: 0;
 
@@ -2184,7 +2180,7 @@
 					}
 				}
 				aside#language-box {
-					width: 13%;
+					width: 14%;
 					form {
 						label {
 							width: 58%;
@@ -2650,9 +2646,8 @@
 				
 			}
 			aside.contact {
-				width: 15%;
-				font-size: 0.7em;
-
+				width: 20%;
+				
 				span.tele {
 					margin: 0;
 
@@ -2664,7 +2659,7 @@
 					}
 
 					a#contact-number {
-						width:86%;
+						
 						font-size: 1em;
 
 						&:active {
@@ -3125,9 +3120,8 @@
 				
 			}
 			aside.contact {
-				width: 16%;
-				font-size: 0.7em;
-
+				width: 20%;
+				
 				span.tele {
 					margin: 0;
 
@@ -3598,9 +3592,7 @@
 				
 			}
 			aside.contact {
-				width: 17%;
-
-				font-size: 0.65em;
+				width: 20%;
 
 				span.tele {
 					margin: 0;
@@ -3613,7 +3605,7 @@
 					}
 
 					a#contact-number {
-
+						width:84%;
 						font-size: 1em;
 
 						&:active {
@@ -4097,8 +4089,7 @@
 			}
 			aside.contact {
 				width: 22%;
-				font-size: 0.65em;
-
+				font-size:0.8em;
 				span.tele {
 					margin: 0;
 
@@ -4120,7 +4111,7 @@
 				}
 				span#opening-time {
 
-					font-size: 85%;
+					font-size: 90%;
 	
 
 				}
@@ -4131,8 +4122,8 @@
 				width: 80px;
 				position: fixed;
 				z-index:500;
-				left: 3vw;
-				top: 14vh;
+				left: 1vw;
+				top: 21vh;
 				background-color: $colorbg;
 				border: 0;
 				outline: none;
@@ -4232,8 +4223,8 @@
 			z-index:100;
 			height:40px;
 			width:80px;
-			left: 20vw;
-    		top: 14vh;
+			left: 17vw;
+    		top: 21vh;
 			border:none;
 			outline:none;
 			&:hover{
@@ -4251,7 +4242,7 @@
 			z-index: 100;
 			height: 50px;
 			left: 82vw;
-			top: 14vh;
+			top: 21vh;
 			border:none;
 			outline:none;
 			font-size:0.8em;
@@ -4686,8 +4677,6 @@
 			}
 			aside.contact {
 
-				font-size: 0.7em;
-
 				span.tele {
 					margin: 0;
 
@@ -4716,7 +4705,7 @@
 				}
 			}
 			#toggle-menu,button {
-				left: 3vw;
+				
 				font-size: 0.9em;
 			}
 			/*contact end*/
@@ -4726,7 +4715,7 @@
 				
 				ul#navi {
 					left: 1vw;
-
+					top: 34vh;
 					li {
 						width: 100%;
 						height: 50px;
@@ -5146,8 +5135,6 @@
 			}
 			aside.contact {
 				
-				font-size: 0.7em;
-
 				span.tele {
 					margin: 0;
 
@@ -5159,7 +5146,7 @@
 					}
 
 					a#contact-number {
-
+						width:84%;
 						font-size: 1em;
 
 
@@ -5176,7 +5163,7 @@
 				}
 			}
 			#toggle-menu,button {
-				left: 3vw;
+				
 				font-size: 0.9em;
 			}
 			/*contact end*/
@@ -5228,7 +5215,7 @@
 		/*header end*/
 		#side-bar-btn{
 			
-    		top: 14vh;
+    		top: 21vh;
 			
 			
 		}
@@ -5236,6 +5223,7 @@
 		
 		#contact-bar-btn{
 			font-size:0.7em;
+			top: 21vh;
 			
 		}
 		#leftside {
@@ -5632,9 +5620,8 @@
 
 			}
 			aside.contact {
-				width: 23%;
-				font-size: 0.7em;
-
+				width: 25%;
+				
 				span.tele {
 					margin: 0;
 
@@ -5647,7 +5634,7 @@
 					}
 
 					a#contact-number {
-
+						width:85%;
 						font-size: 1em;
 
 
@@ -5664,7 +5651,7 @@
 				}
 			}
 			#toggle-menu,button {
-				
+				top: 24vh;
 				font-size: 0.85em;
 			}
 			/*contact end*/
@@ -5673,7 +5660,7 @@
 				margin-bottom: 0px;
 				
 				ul#navi {
-
+					top: 38vh;
 					width: 96%;
 					li {
 						width: 100%;
@@ -5712,10 +5699,12 @@
 
 		#side-bar-btn{
 			left: 20vw;
+			top: 24vh;
 
 		}
 		#contact-bar-btn{
 			font-size: 0.65em;
+			top: 24vh;
 		}
 		#leftside {
 			
@@ -6123,9 +6112,8 @@
 
 			}
 			aside.contact {
-				width: 25%;
-				font-size:0.65em;
-				
+				width: 30%;
+								
 				span.tele {
 					margin: 0;
 
@@ -6155,7 +6143,7 @@
 			}
 			/*contact end*/
 			#toggle-menu,button {
-				left: 2.5vw;
+				
 				font-size: 0.8em;
 			}
 			nav {
@@ -6618,8 +6606,8 @@
 			}
 			aside.contact {
 
-				width: 30%;
-
+				width: 35%;
+				font-size:0.75em;
 				span.tele {
 					margin: 0;
 
@@ -6647,8 +6635,9 @@
 				}
 			}
 			#toggle-menu,button {
-				left:3vw;
+				
 				font-size: 0.8em;
+				top: 11vh;
 			}
 			/*contact end*/
 
@@ -6658,7 +6647,7 @@
 				
 				ul#navi {
 					left: 1vw;
-
+					top: 17vh;
 					li {
 
 						line-height: 50px;
@@ -6698,6 +6687,11 @@
 		/*header end*/
 		#side-bar-btn{
 			left: 24vw;
+			top: 11vh;
+		}
+		#contact-bar-btn{
+			top: 11vh;
+			
 		}
 		
 		#leftside {
@@ -7103,9 +7097,7 @@
 
 			}
 			aside.contact {
-
-				
-
+				font-size: 0.7em;
 				span.tele {
 					margin: 0;
 
@@ -7117,7 +7109,7 @@
 					}
 
 					a#contact-number {
-
+						width:84%;
 						font-size: 1em;
 	
 						&:active {
@@ -7134,6 +7126,7 @@
 			}
 			/*contact end*/
 			#toggle-menu,button {
+				top: 12vh;
 				font-size: 0.8em;
 			}
 			nav {
@@ -7182,8 +7175,14 @@
 		}
 		/*header end*/
 		#side-bar-btn{
+			top: 12vh;
 			left: 28vw;
 
+		}
+
+		#contact-bar-btn{
+			top: 12vh;
+			
 		}
 		
 		#leftside {
@@ -7596,7 +7595,7 @@
 
 			}
 			aside.contact {
-				font-size:0.6em;
+				font-size: 0.65em;
 				span.tele {
 					margin: 0;
 
@@ -7608,7 +7607,6 @@
 					}
 
 					a#contact-number {
-						line-height: 25px;
 						font-size: 1em;
 
 						&:active {
@@ -7633,7 +7631,7 @@
 				margin-bottom: 0px;
 				
 				ul#navi{
-					top: 98px;
+					top: 20vh;
 
 					li {
 						width: 100%;
@@ -8078,13 +8076,12 @@
 			height: 110px;
 
 			figure#logo {
-				width: 200px;
+				width: 190px;
 
 
 			}
 			aside.contact {
-				font-size: 0.55em;
-				
+								
 				span.tele {
 					margin: 0;
 
@@ -8096,9 +8093,8 @@
 					}
 
 					a#contact-number {
-
-						font-size: 1em;
-
+						width:82%;
+						
 						&:active {
 							color: #fff;
 						}
@@ -8113,7 +8109,7 @@
 			}
 			#toggle-menu,button {
 				font-size: 0.8em;
-				top: 13vh;
+				top: 12vh;
 			}
 			/*contact end*/
 			nav {
@@ -8121,9 +8117,7 @@
 				margin-bottom: 0px;
 				
 				ul#navi {
-
-					top: 98px;
-
+					top: 20vh;
 					li {
 						height: 50px;
 						line-height: 50px;
@@ -8164,10 +8158,11 @@
 		/*header end*/
 		#side-bar-btn{
 			left: 29vw;
-			top: 13vh;
+			top: 12vh;
 		}
 		#contact-bar-btn{
 			font-size:0.7em;
+			top: 12vh;
 			
 		}
 		#leftside {

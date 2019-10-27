@@ -1,4 +1,4 @@
-![Travel Agency](/assets/page1.jpg)
+![Travel Agency](/_assets/page1.jpg)
 
 ## Travel Agency
 Travel agency is a holiday booking website where you can make holiday reservations for various holiday destinations all over the world. Website design used provided by https://www.phpjabbers.com/free-website-templates.php

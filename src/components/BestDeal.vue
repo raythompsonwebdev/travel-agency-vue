@@ -2,6 +2,7 @@
 
   <div class="BestDeal">
     <!--Leftside-->
+     
 
     <FilterNav
       v-bind:seasons="seasons"
@@ -30,6 +31,7 @@ export default {
     BestDealItem,
     FilterNav
   },
+  
 
   data() {
     return {

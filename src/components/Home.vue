@@ -38,7 +38,6 @@ import FeaturedHolidays from "./FeaturedHolidays.vue";
 export default {
   methods: {
     leftSideFunction: function(event) {
-      
       event.preventDefault();
 
       var el = document.getElementById("leftside");
