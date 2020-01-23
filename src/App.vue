@@ -26,9 +26,9 @@
           <!---language select-->
           <LanguageSelect v-bind:languageselect="languageselect"/>
 
-          <button v-on:click="testerFunction" id="toggle-menu">Menu</button>
-
-          <ul id="navi" class="hide" v-if="testerFunction">
+          <button v-on:click="naviFunction" id="toggle-menu">Menu</button>
+          
+          <ul id="navi" class="hide" v-if="naviFunction">
             <li>
               <router-link to="/" class="nav-item r-item">Home</router-link>
             </li>
@@ -96,12 +96,12 @@ export default {
   name: "app",
   methods: {
     
-    testerFunction: function() {
+    naviFunction: function() {
       //console.log(event);
 
       event.preventDefault();
 
-      var el = document.getElementById("navi");
+      var el = document.querySelector("#navi");
 
       var box = el.getAttribute("class");
 
@@ -111,6 +111,7 @@ export default {
         el.setAttribute("class", "hide");
       }
     }
+
   },
 
   components:{

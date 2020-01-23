@@ -16,7 +16,7 @@
         <figcaption>
           <p>Location : {{holidaypackageitem.place}}</p>
           <p>{{holidaypackageitem.text}}</p>
-          <a href>View Details</a>
+          <button>View Details</button>
         </figcaption>
       </figure>
     </div>
@@ -26,7 +26,7 @@
 <script>
 export default {
   name: "HolidayPackageItem",
-  props: ["holidaypackageitem", "holiday", "count"]
+  props: ["holidaypackageitem"]
 };
 </script>
 

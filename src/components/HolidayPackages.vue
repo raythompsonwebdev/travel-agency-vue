@@ -1,13 +1,16 @@
 <template>
   <div class="HolidayPackages">
+   
     <!---leftside2-->
-    <FilterNav
-      v-bind:seasons="seasons"
-      v-bind:locations="locations"
-      v-bind:prices="prices"
-      v-bind:ratings="ratings"
-    />
+   
 
+      <FilterNav
+        v-bind:seasons="seasons"
+        v-bind:locations="locations"
+        v-bind:prices="prices"
+        v-bind:ratings="ratings"        
+      />
+    
     <!---main content-->
     <main id="content2">
       <HolidayPackageItem v-bind:holidaypackageitem="holidaypackageitem" />
@@ -22,7 +25,29 @@ import FilterNav from "./FilterNav.vue";
 import HolidayPackageItem from "./HolidayPackageItem.vue";
 
 export default {
+  
   name: "HolidayPackages",
+
+  /*
+  methods: {
+
+    leftSideFunction: function(event) {
+
+      event.preventDefault();
+
+      var el = document.querySelector("#leftside2");
+
+      var box = el.getAttribute("class");
+
+      if (box == "hide") {
+        el.setAttribute("class", "show");
+      } else {
+        el.setAttribute("class", "hide");
+      }
+    }
+  
+  },
+  */
 
   components: {
     HolidayPackageItem,
@@ -167,10 +192,13 @@ export default {
       count: 10
     };
   }
+
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style lang="scss" >
+
+
 </style>

@@ -2,6 +2,17 @@
 @import "variables";
 @import "mixins";
 
+@font-face {
+    font-family: "avantgarde-book";
+    src: url('assets/fonts/Poet(2).eot');
+    src: url('assets/fonts/Poet(2).eot?#iefix') format('embedded-opentype'),
+    //url('assets/fonts/Poet(2).svg#AvantGarde-Book') format('svg'),
+    //url('assets/fonts/Poet(2).woff') format('woff'),
+    url('assets/fonts/Poet(2).ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html,
 button,
 input,
@@ -12,7 +23,11 @@ textarea {
 
 html {
 	font-size: 1em;
-	line-height: 1.4;
+	box-sizing: border-box;
+}
+
+*,*:before,*:after {
+	box-sizing: inherit;
 }
 
 ::-moz-selection {
@@ -125,12 +140,37 @@ textarea {
 
 a {
 	text-decoration: none;
-	@include TranSition(all 0.2s linear);
+		@include TranSition(all 0.2s linear);
+		&:link {
+        background-color: $colorpw1;
+        color: $colorpw;
+
+    }
+
+    &:visited {
+        background-color: $colorblue2;
+        
+    }
+
+    &:focus {
+        //background-color: $color1;
+        outline: 1px dotted $colorpw2;
+        color: $colorpw;
+    }
+
+    &:hover {
+        background-color: $colorblue1;
+        font-weight: bold;
+		color: $colorpw;
+		@include TransScale(scale(1.00));
+    }
+
+    &:active {
+        background-color: $colorblue2;
+        color: $colorpw;
+    }
 }
 
-a:hover {
-	@include TransScale(scale(1.00));
-}
 a:active, a:focus{
 	color:#fff;
 	text-decoration:none;

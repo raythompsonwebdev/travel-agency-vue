@@ -1,8 +1,9 @@
 <template>
 
   <div class="BestDeal">
+    
     <!--Leftside-->
-     
+
 
     <FilterNav
       v-bind:seasons="seasons"
@@ -24,15 +25,35 @@ import FilterNav from "./FilterNav.vue";
 import BestDealItem from "./BestDealItem.vue";
 
 export default {
+  
   name: "BestDeal",
 
+/*
+  methods: {
+
+    leftSideFunction: function(event) {
+
+      event.preventDefault();
+
+      var el = document.querySelector("#leftside2");
+
+      var box = el.getAttribute("class");
+
+      if (box == "hide") {
+        el.setAttribute("class", "show");
+      } else {
+        el.setAttribute("class", "hide");
+      }
+    }
+  
+  },
+*/
   
   components: {
     BestDealItem,
     FilterNav
   },
-  
-
+   
   data() {
     return {
       bestdealitem: [
@@ -152,6 +173,7 @@ export default {
       count: 10
     };
   }
+
 };
 </script>
 
@@ -159,4 +181,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style lang="scss">
+
+
+
 </style>

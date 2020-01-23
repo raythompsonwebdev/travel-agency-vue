@@ -1,7 +1,6 @@
 <template>
   <div class="Home page">
-    <button id="side-bar-btn" v-on:click="leftSideFunction">SIDE</button>
-
+    <button v-on:click="leftSideFunction" id="side-bar-btn">SIDE</button>
     <!--Leftside-->
     <aside id="leftside" class="hide" v-if="leftSideFunction">
       <!---Search form-->
@@ -49,8 +48,9 @@ export default {
       } else {
         el.setAttribute("class", "hide");
       }
-    }
+    }    
   },
+  
   name: "Home",
 
   components: {
@@ -149,4 +149,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style lang="scss" scoped>
+
+
 </style>

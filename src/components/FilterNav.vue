@@ -1,6 +1,6 @@
 <template>
-  <!---leftside2-->
-  <aside id="leftside2" class="hide" v-if="leftsideFunction">
+  <!---leftside2  v-if="leftsideFunction2"-->
+  <aside id="leftside2" >
     <br />
     <h1>Filter By Season</h1>
     <ul>
@@ -38,39 +38,16 @@
 
 <script>
 export default {
+  
   name: "FilterNav",
   props: ["ratings", "locations", "seasons", "prices"],
-  methods: {
-    leftsideFunction: function() {
-      //console.log(event);
 
-      event.preventDefault();
-
-      var el = document.getElementById("leftside2");
-
-      var box = el.getAttribute("class");
-
-      if (box == "hide") {
-        el.setAttribute("class", "show");
-      } else {
-        el.setAttribute("class", "hide");
-      }
-    }
-  }
-  /**
-   * 
-   * computed: {
-    filteredList() {
-      return this.postList.filter(post => {
-        return post.title.toLowerCase().includes(this.search.toLowerCase())
-      })
-    }
-  }
-   */
+  
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style lang="scss" >
+
 </style>
