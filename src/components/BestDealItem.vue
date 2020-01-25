@@ -1,6 +1,7 @@
 <template>
-  <article class="holiday_details_small">
-    <div v-bind:key="bestdealitem.id" v-for="bestdealitem in bestdealitem">
+  <div>
+    <article class="holiday_details_small" v-bind:key="bestdealitem.id" v-for="bestdealitem in bestdealitem">
+
       <h1>{{bestdealitem.title}}</h1>
 
       <span class="holidayprice">
@@ -17,8 +18,9 @@
           <button >View Details</button>
         </figcaption>
       </figure>
-    </div>
-  </article>
+      
+    </article>
+  </div>
 </template>
 
 <script>

@@ -35,15 +35,7 @@ export default {
 
       event.preventDefault();
 
-      var el = document.querySelector("#leftside2");
-
-      var box = el.getAttribute("class");
-
-      if (box == "hide") {
-        el.setAttribute("class", "show");
-      } else {
-        el.setAttribute("class", "hide");
-      }
+      
     }
   
   },
@@ -59,6 +51,25 @@ export default {
       bestdealitem: [
         {
           id: 1,
+
+          url: "assets/images/page2grandcanyon_03.jpg",
+
+          title: "Lorem ipsum dolor sit amet.",
+
+          price: "$399 - $599",
+
+          place: "Yellowstone",
+
+          month: "June",
+
+          season:"Summer",
+
+          location: "London",
+
+          rating : "1 star"
+        },
+        {
+          id: 2,
 
           url: "assets/images/page2grandcanyon_03.jpg",
 
