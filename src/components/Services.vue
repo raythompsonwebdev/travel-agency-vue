@@ -91,14 +91,10 @@
 <script>
 export default {
    	name: 'Services',
-   	data(){
-  
-		return{
-
-			show :'true',
-						
-		}
-	
+   	data(){  
+			return{
+				show :'true',							
+			}	
 	}
 }
 </script>

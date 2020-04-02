@@ -17,6 +17,7 @@
     </main>
 
     <div class="clearfix"></div>
+    
   </div>
 </template>
 
@@ -48,6 +49,7 @@ export default {
    
   data() {
     return {
+
       bestdealitem: [
         {
           id: 1,
