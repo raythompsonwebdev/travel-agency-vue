@@ -24,7 +24,7 @@
       <nav>
 
         <!---language select-->
-        <LanguageSelect v-bind:languageselect="languageselect" />
+        <LanguageSelect v-bind:languageselectitems="languageselectitems" />
 
         <button v-on:click="naviFunction" id="toggle-menu">Menu</button>
 
@@ -91,6 +91,7 @@
 <script>
 
 import LanguageSelect from "./components/LanguageSelect.vue";
+import languageselectitems from "./components/data/languageselectitems.js";
 
 export default {
   name: "app",
@@ -124,35 +125,7 @@ export default {
     return {
       phoneNumber: "0208-365-1452",
       openTime: "Everyday 8am - 9pm",
-      languageselect: [{
-          id: 1,
-          country: " "
-        },
-        {
-          id: 2,
-          country: "United_Kingdom"
-        },
-        {
-          id: 3,
-          country: "Germany"
-        },
-        {
-          id: 4,
-          country: "United_States"
-        },
-        {
-          id: 5,
-          country: "Jamaica"
-        },
-        {
-          id: 6,
-          country: "France"
-        },
-        {
-          id: 7,
-          country: "Spain"
-        }
-      ]
+      languageselectitems : languageselectitems
     };
   }
 };

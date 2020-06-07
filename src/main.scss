@@ -56,6 +56,7 @@
 
 
 			}
+
 			aside.contact {
 				-webkit-flex: 0 1 auto;
 				-ms-flex: 0 1 auto;
@@ -217,6 +218,7 @@
 						}
 					}
 				}
+
 				aside#language-box {
 					width: 13%;
 					display: block;
@@ -248,11 +250,12 @@
 							//background-image: url("assets/images/United_Kingdom.jpg");
 							background-repeat: no-repeat;
 							background-position: 5% 50%;
+
 							option[value="United_States"] {
 								background-image: url("assets/images/USA.gif");
 								background-repeat: no-repeat;
-								background-position: 50% 50%;
-								padding: 0.5em 0;
+								background-position: center;
+								padding: 0;
 							}
 							option[value="United_Kingdom"] {
 								background-image: url("assets/images/United_Kingdom.jpg");
@@ -283,6 +286,14 @@
 								background-repeat: no-repeat;
 								background-position: 50% 50%;
 								padding: 0.5em 0;
+							}
+						}
+
+						select > option{
+							padding:0.25em;							
+							font-size:85%;
+							&:hover{
+								cursor:pointer;
 							}
 						}
 					}
@@ -6518,7 +6529,6 @@
 				font-size: 0.8em;
 
 			}
-
 
 			nav {
 				height: 40px;

@@ -9,6 +9,7 @@
         v-bind:locations="locations"
         v-bind:prices="prices"
         v-bind:ratings="ratings"
+
       />
 
     <!---main content-->

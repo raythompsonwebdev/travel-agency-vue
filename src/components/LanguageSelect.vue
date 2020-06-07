@@ -4,20 +4,28 @@
             <form>
               <label>Language:</label>
               <select name="language" >
-                <option :value="languageselect.country" v-for="languageselect in languageselect" v-bind:key="languageselect.id">{{languageselect.country}}</option>
-                
+
+                <option
+                  v-for ="languageselectitem in languageselectitems"
+                  :value="languageselectitem.country"
+                  :key="languageselectitem.id"
+                >
+                  {{languageselectitem.country}}
+
+                </option>
+
               </select>
             </form>
           </aside>
-    
+
 </template>
 
 <script>
 export default {
-    
+
   name: "LanguageSelect",
-  props:["languageselect"]
-    
+  props:["languageselectitems"]
+
 };
 </script>
 

@@ -6,7 +6,7 @@
     <h1>Filter By Season</h1>
     <ul>
       <li v-for="season in seasons" v-bind:key="season.id">
-        <a href>{{season.title}}</a>
+        <a href="#" >{{season.title}}</a>
       </li>
     </ul>
     <br />
@@ -39,15 +39,12 @@
 
 <script>
 
-//import filterNavText from './data/filterNavText.js'
-
 export default {
 
   name: "FilterNav",
   props: ["seasons","prices","locations","ratings"],
 
   methods: {
-
     leftSideFunction: function(event) {
 
       event.preventDefault();
@@ -61,7 +58,8 @@ export default {
       } else {
         el.setAttribute("class", "hide");
       }
-    }
+    },
+
   },
 
 
