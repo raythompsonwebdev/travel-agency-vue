@@ -1,6 +1,7 @@
 <template>
   <!---leftside2  v-if="leftsideFunction2"-->
-  <aside id="leftside2" >
+  <aside id="leftside2" class="hide" v-if="leftSideFunction">
+    <button v-on:click="leftSideFunction" id="side-bar-btn">SIDE</button>
     <br />
     <h1>Filter By Season</h1>
     <ul>
@@ -13,7 +14,7 @@
     <h1>Filter By Location</h1>
     <ul>
       <li v-for="location in locations" v-bind:key="location.id">
-        <a href>{{location.title}}</a>
+        <a href >{{location.title}}</a>
       </li>
     </ul>
     <br />
@@ -37,13 +38,37 @@
 </template>
 
 <script>
-export default {
-  
-  name: "FilterNav",
-  props: ["ratings", "locations", "seasons", "prices"],
 
-  
+//import filterNavText from './data/filterNavText.js'
+
+export default {
+
+  name: "FilterNav",
+  props: ["seasons","prices","locations","ratings"],
+
+  methods: {
+
+    leftSideFunction: function(event) {
+
+      event.preventDefault();
+
+      var el = document.getElementById("leftside2");
+
+      var box = el.getAttribute("class");
+
+      if (box == "hide") {
+        el.setAttribute("class", "show");
+      } else {
+        el.setAttribute("class", "hide");
+      }
+    }
+  },
+
+
 };
+
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

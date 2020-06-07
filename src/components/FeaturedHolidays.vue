@@ -1,12 +1,12 @@
 <template>
 <!--Featured Holiday Package-->
-    
+
     <section id="offers">
 
       <h2>Featured Holiday Package</h2>
 
-      <div class="offerbox" v-for="featuredholiday in featuredholidays" v-bind:key="featuredholiday.id">
-         
+      <div class="offerbox" v-for="featuredholiday in featuredholidayitems" v-bind:key="featuredholiday.id">
+
         <figure>
           <img :src='featuredholiday.url'>
 
@@ -16,21 +16,21 @@
           </figcaption>
 
         </figure>
-        
+
       </div>
-      
+
 
       <div class="clearfix"></div>
 
-    </section> 
+    </section>
 </template>
 
 <script>
 export default {
-    
+
   name: "FeaturedHolidays",
-  props:['featuredholidays']
-    
+  props:['featuredholidayitems']
+
 };
 </script>
 

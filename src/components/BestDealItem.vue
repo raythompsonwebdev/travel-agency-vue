@@ -1,6 +1,6 @@
 <template>
   <div>
-    <article class="holiday_details_small" v-bind:key="bestdealitem.id" v-for="bestdealitem in bestdealitem">
+    <article class="holiday_details_small" v-bind:key="bestdealitem.id" v-for="bestdealitem in bestdealitems">
 
       <h1>{{bestdealitem.title}}</h1>
 
@@ -9,16 +9,16 @@
             <span class="offerbox-price">{{bestdealitem.price}}</span>
           </span>
       <figure>
-        <img :src="bestdealitem.url" />
+        <img :src="bestdealitem.url" :alt="bestdealitem.title" />
 
         <figcaption>
-          
+
           <p>Location: {{bestdealitem.place}}.</p>
           <p>Available: {{bestdealitem.month}}.</p>
           <button >View Details</button>
         </figcaption>
       </figure>
-      
+
     </article>
   </div>
 </template>
@@ -26,7 +26,7 @@
 <script>
   export default {
     name: "BestDealItem",
-    props: ["bestdealitem"]
+    props: ["bestdealitems"]
   };
 </script>
 

@@ -2,7 +2,7 @@
 <!--Destinations-->
     <section class="leftsidebox" >
       <h2>Top Destinations</h2>
-    <div v-for="destination in destinations" v-bind:key="destination.id">
+    <div v-for="destination in destinationitems" v-bind:key="destination.id">
       <div class="destinations">
         <figure>
           <img :src='destination.url' />
@@ -17,15 +17,15 @@
       </div>
     </div>
 
-    </section>   
+    </section>
 </template>
 
 <script>
 export default {
-    
+
   name: "Destinations",
-  props:['destinations']
-    
+  props:['destinationitems']
+
 };
 </script>
 

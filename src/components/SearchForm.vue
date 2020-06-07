@@ -2,7 +2,6 @@
 <section class="leftsidebox">
         <h2>Holiday Search</h2>
 
-        
         <form id="search_form">
           <ul>
             <li>
@@ -101,15 +100,16 @@
           </ul>
           <input type="submit" value="Find Holiday" id="searchbtn" />
         </form>
-        
+
       </section>
+
 </template>
 
 <script>
 export default {
-    
+
   name: "SearchForm"
-    
+
 };
 </script>
 
