@@ -13,7 +13,7 @@
       <figure>
         <img :src="holidaypackageitem.url" :alt="holidaypackageitem.title"/>
         <figcaption>
-          <p>Location : {{holidaypackageitem.location}}</p>
+          <p>Location : {{holidaypackageitem.place}}</p>
           <p>{{holidaypackageitem.text}}</p>
           <button>View Details</button>
         </figcaption>

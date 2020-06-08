@@ -9,12 +9,14 @@
         v-bind:locations="locations"
         v-bind:prices="prices"
         v-bind:ratings="ratings"
-
+        @seasonClick="itemsSearched"
       />
 
     <!---main content-->
     <main id="content2">
-      <HolidayPackageItem v-bind:holidaypackageitems="holidaypackageitems" />
+      <HolidayPackageItem
+        v-bind:holidaypackageitems="holidaypackageitems"
+      />
     </main>
 
     <div class="clearfix"></div>
@@ -42,6 +44,7 @@ export default {
     return {
 
       show: "true",
+      search: ' ',
       holidaypackageitems: holidaypackageitems,
       locations: locations,
       prices: prices,
@@ -52,6 +55,22 @@ export default {
 
     };
   },
+
+  methods : {
+      itemsSearched : function(){
+
+        let ses = this.seasons.title;
+        
+        return this.holidaypackageitems.filter(function(holidaypackageitem){
+          return holidaypackageitem ? holidaypackageitem.season == ses : holidaypackageitem;
+        });
+
+      }
+  }
+
+
+
+
 
 
 };

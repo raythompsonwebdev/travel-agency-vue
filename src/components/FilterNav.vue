@@ -1,12 +1,14 @@
 <template>
   <!---leftside2  v-if="leftsideFunction2"-->
   <aside id="leftside2" class="hide" v-if="leftSideFunction">
+
     <button v-on:click="leftSideFunction" id="side-bar-btn">SIDE</button>
+
     <br />
     <h1>Filter By Season</h1>
     <ul>
       <li v-for="season in seasons" v-bind:key="season.id">
-        <a href="#" >{{season.title}}</a>
+        <button v-on:click="$emit('seasonClick', {season})"  >{{season.title}}</button>
       </li>
     </ul>
     <br />
@@ -14,7 +16,7 @@
     <h1>Filter By Location</h1>
     <ul>
       <li v-for="location in locations" v-bind:key="location.id">
-        <a href >{{location.title}}</a>
+        <button v-on:click="$emit('seasonClick', $event.target.value)" >{{location.title}}</button>
       </li>
     </ul>
     <br />
@@ -22,7 +24,7 @@
     <h1>Filter By Price</h1>
     <ul>
       <li v-for="price in prices" v-bind:key="price.id">
-        <a href>{{price.title}}</a>
+        <button v-on:click="$emit('seasonClick', $event.target.value)" >{{price.title}}</button>
       </li>
     </ul>
     <br />
@@ -30,7 +32,7 @@
     <h1>Filter By Rating</h1>
     <ul>
       <li v-for="rating in ratings" v-bind:key="rating.id">
-        <a href>{{rating.title}}</a>
+        <button v-on:click="$emit('seasonClick', $event.target.value)" >{{rating.title}}</button>
       </li>
     </ul>
     <br />
@@ -45,6 +47,7 @@ export default {
   props: ["seasons","prices","locations","ratings"],
 
   methods: {
+
     leftSideFunction: function(event) {
 
       event.preventDefault();
@@ -61,6 +64,7 @@ export default {
     },
 
   },
+
 
 
 };

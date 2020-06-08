@@ -1,36 +1,43 @@
 const languageselectitems = [
   {
     id: 1,
-    country: " "
+    value:"nothing",
+    text: " "
   },
   {
     id: 2,
-    country: "United_Kingdom",
+    value:"United_Kingdom",
+    text: "United_Kingdom",
     img:"assets/images/United_kingdom.png"
   },
   {
     id: 3,
-    country: "Germany",
+    value:"Germany",
+    text: "Germany",
     img:"assets/images/Germany.png"
   },
   {
     id: 4,
-    country: "United_States",
+    value:"United_States",
+    text: "United_States",
     img:"assets/images/United_States.png"
   },
   {
     id: 5,
-    country: "Jamaica",
+    value:"Jamaica",
+    text: "Jamaica",
     img:"assets/images/Jamaica.png"
   },
   {
     id: 6,
-    country: "France",
+    value:"France",
+    text: "France",
     img:"assets/images/France.png"
   },
   {
     id: 7,
-    country: "Spain",
+    value:"Spain",
+    text: "Spain",
     img:"assets/images/Spain.png"
   }
 ];

@@ -3,17 +3,17 @@
       <aside id="language-box">
             <form>
               <label>Language:</label>
-              <select name="language" >
+              <select name="language" v-model="languageselectitems">
 
                 <option
                   v-for ="languageselectitem in languageselectitems"
-                  :value="languageselectitem.country"
+                  :value="languageselectitem.value"
                   :key="languageselectitem.id"
                 >
-                  {{languageselectitem.country}}
+                  {{languageselectitem.text}}
 
                 </option>
-
+                
               </select>
             </form>
           </aside>
@@ -24,7 +24,9 @@
 export default {
 
   name: "LanguageSelect",
-  props:["languageselectitems"]
+  props:["languageselectitems"],
+
+
 
 };
 </script>
