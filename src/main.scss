@@ -515,10 +515,12 @@
 					width: 96%;
 					height: 25px;
 					margin: 0 0 2% 0;
+					
 					button {
 						display: block;
 						height: 100%;
 						font-size: 0.8em;
+						text-transform:capitalize;
 						@include TranSition( all 0.2s linear ease-in-out);
 						width: 100%;
 						@include gradient($colorpw2,
@@ -527,8 +529,10 @@
 						color: $colorpw1a;
 						letter-spacing: 0.02em;
 						border:none;
-						&::before {
-							content: "<   ";
+						&:before {
+							content: "<";
+							
+
 						}
 						&:hover {
 							cursor:pointer;
@@ -881,6 +885,7 @@
 							margin: 0;
 							line-height: 35px;
 							color: #9e9e9e;
+							text-transform:capitalize;
 						}
 						button {
 							width: 20%;
@@ -968,6 +973,7 @@
 						margin-bottom: 0.5em;
 						p {
 							font-size: 0.9em;
+							text-transform:capitalize;
 							width: 100%;
 							margin: 0;
 							line-height: 30px;

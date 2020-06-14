@@ -25,23 +25,23 @@ let locations = [
 let prices = [
     {
       id: 1,
-      title: "$100 - $200"
+      title: "$399 - $499"
     },
     {
       id: 2,
-      title: "$200 - $300"
+      title: "$499 - $599"
     },
     {
       id: 3,
-      title: "$300 - $400"
+      title: "$599 - $699"
     },
     {
       id: 4,
-      title: "$400 - $500"
+      title: "$699 - $999"
     },
     {
       id: 5,
-      title: "$500 +"
+      title: "$999 +"
     }
   ];
 

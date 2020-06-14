@@ -7,15 +7,15 @@ const bestdealitems = [
 
     title: "Lorem ipsum dolor sit amet.",
 
-    price: "$399 - $599",  
+    price: "$399 - $499",  
 
-    month: "june",
+    month: "october",
 
     season:"winter",
 
-    location: "grand canyon",
+    location: "london",
 
-    rating : "one"
+    rating : "three"
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const bestdealitems = [
 
     title: "Lorem ipsum dolor sit amet.",
 
-    price: "$399 - $599",  
+    price: "$399 - $499",  
 
     month: "june",
 
@@ -41,9 +41,9 @@ const bestdealitems = [
 
     title: "Lorem ipsum dolor sit amet.",
 
-    price: "$399 - $599",
+    price: "$999 +",
 
-    month: "may",
+    month: "september",
 
     season:"autumn",
 
@@ -58,9 +58,9 @@ const bestdealitems = [
 
     title: "Lorem ipsum dolor sit amet.",
 
-    price: "$399 - $599",
+    price: "$499 - $599",
 
-    month: "september",
+    month: "november",
 
     season:"winter",
 
@@ -75,9 +75,9 @@ const bestdealitems = [
 
     title: "Lorem ipsum dolor sit amet.",
 
-    price: "$399 - $599",
+    price: "$499 - $599",
 
-    month: "may",
+    month: "april",
 
     season:"spring",
 
@@ -92,15 +92,49 @@ const bestdealitems = [
 
     title: "Lorem ipsum dolor sit amet.",
 
-    price: "$399 - $599",
+    price: "$599 - $699",
 
-    month: "february",
+    month: "july",
 
-    season:"spring",
+    season:"summer",
 
     location: "rome",
 
     rating : "five"
+  },
+  {
+    id: 7,
+
+    url: "assets/images/travel-agency-website-spanish-villa-image.jpg",
+
+    title: "Lorem ipsum dolor sit amet.",
+
+    price: "$499 - $599",
+
+    month: "june",
+
+    season:"summer",
+
+    location: "madrid",
+
+    rating : "five"
+  },
+  {
+    id: 8,
+
+    url: "assets/images/travel-agency-website-taj-mahal-image.jpg",
+
+    title: "Lorem ipsum dolor sit amet.",
+
+    price: "$699 - $999",
+
+    month: "april",
+
+    season:"spring",
+
+    location: "dubai",
+
+    rating : "two"
   }
 ];
 

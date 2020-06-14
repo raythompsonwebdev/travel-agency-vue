@@ -65,7 +65,7 @@ export default {
     return {
       selected: ' ',
       bestdealitems: bestdealitems,
-      show: true,
+      
       locations: locations,
       prices: prices,
       ratings: ratings,
@@ -79,9 +79,8 @@ export default {
 
       itemsSearched: function (id) {
 
-        this.selected = id 
+        this.selected = id         
         
-        alert(id)
 
       }
       
@@ -109,7 +108,7 @@ export default {
 
         return this.bestdealitems.filter( bestdealitem => bestdealitem.rating === this.selected)
 
-      }else if('$100 - $200' == this.selected || '$200 - $300' == this.selected || '$300 - $400' == this.selected || '$400 - $500' == this.selected || '$500 +' == this.selected){        
+      }else if('$399 - $499' == this.selected || '$499 - $599' == this.selected || '$599 - $699' == this.selected || '$699 - $999' == this.selected || '$999 +' == this.selected){        
 
         return this.bestdealitems.filter( bestdealitem => bestdealitem.price === this.selected)
 
