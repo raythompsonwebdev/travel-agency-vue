@@ -1,9 +1,12 @@
 <template>
-  <article>
+  <article
+    
+      >
     <div
       class="holiday_details"
       v-for="holidaypackageitem in holidaypackageitems"
-      v-bind:key="holidaypackageitem.id"
+      v-bind:key="holidaypackageitem.id"  
+      
     >
       <h1>{{holidaypackageitem.title}}</h1>
       <span class="holidayprice">
@@ -28,6 +31,17 @@ export default {
   name: "HolidayPackageItem",
   props: ["holidaypackageitems"],
 
+  data:() => {
+
+    return{
+      
+       show: true,
+
+    }
+   
+
+  }
+  
 };
 
 

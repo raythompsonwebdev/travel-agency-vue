@@ -8,7 +8,7 @@
     <h1>Filter By Season</h1>
     <ul>
       <li v-for="season in seasons" v-bind:key="season.id">
-        <button v-on:click="$emit('seasonClick', {season})"  >{{season.title}}</button>
+        <button v-on:click="SearchItemBtn(season.id)" >{{season.title}}</button>
       </li>
     </ul>
     <br />
@@ -16,7 +16,7 @@
     <h1>Filter By Location</h1>
     <ul>
       <li v-for="location in locations" v-bind:key="location.id">
-        <button v-on:click="$emit('seasonClick', $event.target.value)" >{{location.title}}</button>
+        <button v-on:click="SearchItemBtn(location.id)" >{{location.title}}</button>
       </li>
     </ul>
     <br />
@@ -24,7 +24,7 @@
     <h1>Filter By Price</h1>
     <ul>
       <li v-for="price in prices" v-bind:key="price.id">
-        <button v-on:click="$emit('seasonClick', $event.target.value)" >{{price.title}}</button>
+        <button v-on:click="SearchItemBtn(price.id)" >{{price.title}}</button>
       </li>
     </ul>
     <br />
@@ -32,7 +32,7 @@
     <h1>Filter By Rating</h1>
     <ul>
       <li v-for="rating in ratings" v-bind:key="rating.id">
-        <button v-on:click="$emit('seasonClick', $event.target.value)" >{{rating.title}}</button>
+        <button v-on:click="SearchItemBtn(rating.id)" >{{rating.title}}</button>
       </li>
     </ul>
     <br />
@@ -62,6 +62,10 @@ export default {
         el.setAttribute("class", "hide");
       }
     },
+
+    SearchItemBtn(item) {
+      this.$emit('seasonClick', item)
+    }
 
   },
 
