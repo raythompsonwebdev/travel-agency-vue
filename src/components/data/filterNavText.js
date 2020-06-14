@@ -2,88 +2,88 @@
 let locations = [
     {
       id: 1,
-      title: "London"
+      title: "london"
     },
     {
       id: 2,
-      title: "Paris"
+      title: "paris"
     },
     {
       id: 3,
-      title: "Madrid"
+      title: "madrid"
     },
     {
       id: 4,
-      title: "Rome"
+      title: "rome"
     },
     {
       id: 5,
-      title: "Dubai"
+      title: "dubai"
     }
   ];
 
 let prices = [
     {
       id: 1,
-      title: "$100 - $500"
+      title: "$100 - $200"
     },
     {
       id: 2,
-      title: "$500 - $1000"
+      title: "$200 - $300"
     },
     {
       id: 3,
-      title: "$1000 - $1500"
+      title: "$300 - $400"
     },
     {
       id: 4,
-      title: "$1500 - $2000"
+      title: "$400 - $500"
     },
     {
       id: 5,
-      title: "$2000 +"
+      title: "$500 +"
     }
   ];
 
 let ratings = [
     {
       id: 1,
-      title: "1 Star"
+      title: "one"
     },
     {
       id: 2,
-      title: "2 Star"
+      title: "two"
     },
     {
       id: 3,
-      title: "3 Star"
+      title: "three"
     },
     {
       id: 4,
-      title: "4 Star"
+      title: "four"
     },
     {
       id: 5,
-      title: "5 Star"
+      title: "five"
     }
   ];
 
 let seasons = [
   {
     id: 1,
-    title: "Winter"
+    title: "winter"
   },
   {
     id: 2,
-    title: "Summer"
+    title: "summer"
   },
   {
     id: 3,
-    title: "Spring"
+    title: "spring"
   },
   {
     id: 4,
-    title: "Autumn"
+    title: "autumn"
   }
 ];
 

@@ -10,8 +10,6 @@
         v-bind:prices="prices"
         v-bind:ratings="ratings"
         v-on:seasonClick="itemsSearched"
-        
-        
       />
 
     <!---main content-->
@@ -88,7 +86,7 @@ export default {
 
         this.selected = id           
           
-        //alert(id)
+        alert(id)
           
 
       }
@@ -106,7 +104,7 @@ export default {
 
       }else{
 
-        return this.holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.id == this.selected)
+        return this.holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.id === this.selected)
 
 
       }       

@@ -8,7 +8,7 @@
     <h1>Filter By Season</h1>
     <ul>
       <li v-for="season in seasons" v-bind:key="season.id">
-        <button v-on:click="SearchItemBtn(season.id)" >{{season.title}}</button>
+        <button v-on:click="SearchItemBtn(season.title)" >{{season.title}}</button>
       </li>
     </ul>
     <br />
@@ -16,7 +16,7 @@
     <h1>Filter By Location</h1>
     <ul>
       <li v-for="location in locations" v-bind:key="location.id">
-        <button v-on:click="SearchItemBtn(location.id)" >{{location.title}}</button>
+        <button v-on:click="SearchItemBtn(location.title)" >{{location.title}}</button>
       </li>
     </ul>
     <br />
@@ -24,7 +24,7 @@
     <h1>Filter By Price</h1>
     <ul>
       <li v-for="price in prices" v-bind:key="price.id">
-        <button v-on:click="SearchItemBtn(price.id)" >{{price.title}}</button>
+        <button v-on:click="SearchItemBtn(price.title)" >{{price.title}}</button>
       </li>
     </ul>
     <br />
@@ -32,7 +32,7 @@
     <h1>Filter By Rating</h1>
     <ul>
       <li v-for="rating in ratings" v-bind:key="rating.id">
-        <button v-on:click="SearchItemBtn(rating.id)" >{{rating.title}}</button>
+        <button v-on:click="SearchItemBtn(rating.title)" >{{rating.title}}</button>
       </li>
     </ul>
     <br />
@@ -44,7 +44,9 @@
 export default {
 
   name: "FilterNav",
+
   props: ["seasons","prices","locations","ratings"],
+ 
 
   methods: {
 

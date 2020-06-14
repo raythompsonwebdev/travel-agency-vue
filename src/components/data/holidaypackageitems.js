@@ -4,56 +4,51 @@ const holidaypackageitems = [
     id: 1,
     url: "assets/images/travel-agency-website-grand-canyon-image.jpg",
     title: "Lorem ipsum dolor sit amet.",
-    price: "$399 - $499",
-    place: "Grand Canyon",
-    month: "June",
+    price: "$399 - $499",    
+    month: "june",
     season: "summer",
-    location: "America",
-    rating: "2 Star"
+    location: "grand canyon",
+    rating: "three"
   },
   {
     id: 2,
     url: "assets/images/travel-agency-website-dubai-image.jpg",
     title: "Lorem ipsum dolor sit amet.",
     price: "$399 - $599",
-    place: "Dubai",
-    month: "June",
+    month: "june",
     season: "winter",
-    location: "Dubai",
-    rating: "4 Star"
+    location: "dubai",
+    rating: "three"
   },
   {
     id: 3,
     url: "assets/images/travel-agency-website-gold-coast-image.jpg",
     title: "Lorem ipsum dolor sit amet.",
     price: "$699 - $999",
-    place: "Gold Coast",
-    month: "June",
+    month: "june",
     season: "spring",
-    location: "Africa",
-    rating: "4 Star"
+    location: "paris",
+    rating: "four"
   },
   {
     id: 4,
     url: "assets/images/travel-agency-website-singapore-image.jpg",
     title: "Lorem ipsum dolor sit amet.",
     price: "$699 - $999",
-    place: "Singapore",
-    month: "June",
+    month: "may",
     season: "autumn",
-    location: "Singapore",
-    rating: "4 Star"
+    location: "madrid",
+    rating: "four"
   },
   {
     id: 5,
     url: "assets/images/travel-agency-website-toronto-image.jpg",
     title: "Lorem ipsum dolor sit amet.",
     price: "$699 - $999",
-    place: "Toronto",
-    month: "June",
+    month: "june",
     season: "autumn",
-    location: "Canada",
-    rating: "4 Star"
+    location: "rome",
+    rating: "two"
   },
   
 
