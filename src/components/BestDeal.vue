@@ -64,8 +64,7 @@ export default {
 
     return {
       selected: ' ',
-      bestdealitems: bestdealitems,
-      
+      bestdealitems: bestdealitems,      
       locations: locations,
       prices: prices,
       ratings: ratings,
@@ -92,29 +91,29 @@ export default {
       
       if(this.selected == ' '){
 
-        return this.bestdealitems  
+        return bestdealitems  
 
       }else if('winter' === this.selected || 'summer' === this.selected || 'spring' === this.selected || 'autumn' === this.selected ){        
 
-          return  this.bestdealitems.filter( bestdealitem => bestdealitem.season === this.selected)
+          return  bestdealitems.filter( bestdealitem => bestdealitem.season === this.selected)
         
 
       }else if('london' === this.selected || 'paris' === this.selected || 'madrid' === this.selected || 'dubai' == this.selected || 'rome' == this.selected ){        
 
-        return this.bestdealitems.filter( bestdealitem => bestdealitem.location == this.selected)
+        return bestdealitems.filter( bestdealitem => bestdealitem.location == this.selected)
 
 
       }else if('one' === this.selected || 'two' === this.selected || 'three' === this.selected || 'four' == this.selected || 'five' === this.selected){        
 
-        return this.bestdealitems.filter( bestdealitem => bestdealitem.rating === this.selected)
+        return bestdealitems.filter( bestdealitem => bestdealitem.rating === this.selected)
 
       }else if('$399 - $499' == this.selected || '$499 - $599' == this.selected || '$599 - $699' == this.selected || '$699 - $999' == this.selected || '$999 +' == this.selected){        
 
-        return this.bestdealitems.filter( bestdealitem => bestdealitem.price === this.selected)
+        return bestdealitems.filter( bestdealitem => bestdealitem.price === this.selected)
 
       }else{ 
         
-        return this.bestdealitems        
+        return bestdealitems        
 
       }       
        

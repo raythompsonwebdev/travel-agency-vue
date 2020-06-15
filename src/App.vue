@@ -14,8 +14,8 @@
       <!---contact number-->
       <aside class="contact">
         <span class="tele">
-          <img :src="'assets/images/images/Telephone.png'" />
-          <a href="tel:0208-000-1452" id="contact-number">{{phoneNumber}}</a>
+          <img :src="'assets/images/Telephone.png'" />
+          <a :href="`tel:${phoneNumber}`" id="contact-number">{{phoneNumber}}</a>
         </span>
         <span id="opening-time">{{openTime}}</span>
       </aside>

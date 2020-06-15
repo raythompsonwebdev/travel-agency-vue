@@ -7,14 +7,14 @@
       <figcaption>
         <h1>Lorem ipsum dolor sit amet</h1>
 
-        <span><img :src="'assets/images/travel-agency-website-sidebar-banner-image-label.jpg'" alt=""></span>
+        <span><img :src="'assets/images/travel-agency-website-sidebar-banner-image-label.jpg'" :alt="'travel-agency-website-sidebar-banner-image-label'"></span>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         <p> Maxime minima magnam iure libero, laboriosam. Vitae magnam earum, quae</p>
         <p> rillo cupiditate deleniti expedita. Maxime minima magnam iure libero</p>
       </figcaption>
 
-      <img :src="'assets/images/travel-agency-website-sidebar-banner-image-small.jpg'" alt="travel-agency-website-sidebar-banner-image">
+      <img :src="'assets/images/travel-agency-website-sidebar-banner-image-small.jpg'" :alt="'travel-agency-website-sidebar-banner-image'">
     </figure>
   </aside>
 

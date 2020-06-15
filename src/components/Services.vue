@@ -5,19 +5,26 @@
 	<aside id="leftside3" >
 
 		<figure>
-		<figcaption>
-			<h1>Lorem ipsum dolor sit amet</h1>
-			
-			<span><img v-bind:src="'assets/images/travel-agency-website-sidebar-banner-image-label.jpg'" alt=""></span>
-			
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-			<p> Maxime minima magnam iure libero, laboriosam. Vitae magnam earum, quae</p>
-			<p> rillo cupiditate deleniti expedita. Maxime minima magnam iure libero</p>
-		</figcaption>
+			<figcaption>
+				<h1>Lorem ipsum dolor sit amet</h1>
+				
+				<span>
+					<img 
+						v-bind:src="'assets/images/travel-agency-website-sidebar-banner-image-label.jpg'" :alt="'travel-agency-website-sidebar-banner-image-label'"
+					>
+				</span>
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<p> Maxime minima magnam iure libero, laboriosam. Vitae magnam earum, quae</p>
+				<p> rillo cupiditate deleniti expedita. Maxime minima magnam iure libero</p>
+			</figcaption>
 
-		<img v-bind:src="'assets/images/travel-agency-website-sidebar-banner-image-small.jpg'" alt="travel-agency-website-sidebar-banner-image">
+			<img 
+				v-bind:src="'assets/images/travel-agency-website-sidebar-banner-image-small.jpg'" :alt="'travel-agency-website-sidebar-banner-image-small'"
+			>
 
 		</figure>
+
 	</aside>
 
 	<main id="content2">
@@ -31,11 +38,16 @@
 		<br/>
 		<div class="servicebox">
 			<h1>Enim odit dolor sequi voluptatem</h1>
-			<figure><img class="service-box-img" v-bind:src="'assets/images/travel-agency-website-customer-service-image.jpg'" >
-			<figcaption>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.</p>
-			<a href="http://www.google.com" >Learn More</a>
-			</figcaption>
+			<figure>
+				<img 
+					class="service-box-img" 
+					v-bind:src="'assets/images/travel-agency-website-customer-service-image.jpg'"
+					:alt="'travel-agency-website-customer-service-image'" 
+				>
+				<figcaption>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.</p>
+				<a :href="'http://www.google.com'" >Learn More</a>
+				</figcaption>
 			</figure>
 
 		</div>
@@ -43,13 +55,17 @@
 		<div class="servicebox">
 			<h1>Enim odit dolor sequi voluptatem</h1>
 			<figure>
-			<img class="service-box-img" v-bind:src="'assets/images/travel-agency-website-bus-tours-image.jpg'" >
+				<img 
+					class="service-box-img" 
+					v-bind:src="'assets/images/travel-agency-website-bus-tours-image.jpg'" 
+					:alt="'travel-agency-website-bus-tours-image'"
+				>
 
-			<figcaption>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.</p>
+				<figcaption>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.</p>
 
-			<a href="" >Learn More</a>
-			</figcaption>
+				<a :href="'http://www.google.com'" >Learn More</a>
+				</figcaption>
 			</figure>
 
 		</div>
@@ -57,11 +73,15 @@
 		<div class="servicebox">
 			<h1>Enim odit dolor sequi voluptatem</h1>
 			<figure>
-			<img class="service-box-img" v-bind:src="'assets/images/travel-agency-website-hotel-room-image.jpg'" >
-
+			<img 
+				class="service-box-img" 
+				v-bind:src="'assets/images/travel-agency-website-hotel-room-image.jpg'" 
+				:alt="'travel-agency-website-hotel-room-image'"
+				
+			>
 			<figcaption>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.</p>
-			<a href="#" >Learn More</a>
+			<a :href="'http://www.google.com'" >Learn More</a>
 			</figcaption>
 			</figure>
 

@@ -6,11 +6,11 @@
     <!--contact details box-->
     <aside id="contactside" class="hide" v-if="contactFunction">
       <ul id="contact-details">
-        <li><span><img v-bind:src= "'assets/images/images/Telephone.png'" ></span>
+        <li><span><img v-bind:src= "'assets/images/Telephone.png'" ></span>
         Phone: <a href="tel:123 436 7890">123 436 7890</a></li>
-        <li><span><img v-bind:src="'assets/images/images/envelope.png'" ></span>
+        <li><span><img v-bind:src="'assets/images/envelope.png'" ></span>
         Mail: <a href="mailto:info@travelagency.com">info@travelagency.com</a></li>
-        <li><span><img v-bind:src="'assets/images/images/Address.png'" ></span>
+        <li><span><img v-bind:src="'assets/images/Address.png'" ></span>
         Address:<br/> Lorem Ipsum 1234 Dolo Sit Amet</li>
       </ul>
       <div class="clearfix"></div>

@@ -92,34 +92,33 @@ export default {
 
   computed: {
 
-    filteredPacks: function(){            
-              
+    filteredPacks: function(){                    
       
       if(this.selected === " "){
 
-         return this.holidaypackageitems
+         return holidaypackageitems
 
       }else if('winter' === this.selected || 'summer' === this.selected || 'spring' === this.selected || 'autumn' === this.selected ){        
 
-          return  this.holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.season === this.selected)
+          return  holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.season === this.selected)
         
 
       }else if('london' === this.selected || 'paris' === this.selected || 'madrid' === this.selected || 'dubai' == this.selected || 'rome' == this.selected ){        
 
-        return this.holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.location == this.selected)
+        return holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.location == this.selected)
 
 
       }else if('one' === this.selected || 'two' === this.selected || 'three' === this.selected || 'four' == this.selected || 'five' === this.selected){        
 
-        return this.holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.rating === this.selected)
+        return holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.rating === this.selected)
 
       }else if('$399 - $499' == this.selected || '$499 - $599' == this.selected || '$599 - $699' == this.selected || '$699 - $999' == this.selected || '$999 +' == this.selected){        
 
-        return this.holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.price === this.selected)
+        return holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.price === this.selected)
 
       }else{ 
         
-        return this.holidaypackageitems        
+        return holidaypackageitems        
 
       }        
        

@@ -17,7 +17,7 @@
     <main id="content">
       <!--Banner Image-->
       <figure id="banner">
-        <img :src="bannerimage" />
+        <img :src="'assets/images/travel-agency-website-banner-image.jpg'" :alt="'banner-image'" />
       </figure>
 
       <!--Featured Holiday Packages-->
@@ -67,10 +67,10 @@ export default {
 
     return {
 
-      show: "true",
+      show: true,
       destinationitems: destinationitems,
       featuredholidayitems: featuredholidayitems,
-      bannerimage: "assets/images/travel-agency-website-banner-image.jpg"
+      
     };
   }
 };
