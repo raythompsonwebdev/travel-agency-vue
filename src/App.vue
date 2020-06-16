@@ -121,7 +121,7 @@ export default {
 
   },
 
-  data() {
+  data:() => {
     return {
       phoneNumber: "0208-365-1452",
       openTime: "Everyday 8am - 9pm",
@@ -137,18 +137,18 @@ export default {
   @import "main.scss";
 
   .router-anim-enter-active {
-      animation: coming 1s;
-      animation-delay: 1s;
+      animation: coming 0.5s;
+      animation-delay: 0.5s;
       opacity: 0;
   }
 
   .router-anim-leave-active {
-      animation: going 1s;
+      animation: going 0.5s;
   }
 
   @keyframes coming {
       from {
-          transform: translateX(-50px);
+          transform: translateX(-200px);
           opacity: 0;
       }
       to {
@@ -162,7 +162,7 @@ export default {
           transform: translateX(0);
       }
       to {
-          transform: translateX(-50px);
+          transform: translateX(-200px);
           opacity: 0;
       }
   }

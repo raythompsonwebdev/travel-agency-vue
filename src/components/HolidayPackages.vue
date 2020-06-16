@@ -15,12 +15,11 @@
     <!---main content-->
     <main id="content2">
       <!-- <HolidayPackageItem
-        v-bind:holidaypackageitems="holidaypackageitems"
-                
+        v-bind:holidaypackageitems="holidaypackageitems"                
       /> -->
-      <article
-        v-if="show"
-          >
+      
+      <article>
+        <transition-group name="fade" tag="div" >
         <div
           class="holiday_details"
           v-for="holidaypackageitem in filteredPacks"
@@ -40,7 +39,9 @@
             </figcaption>
           </figure>
         </div>
+        </transition-group>
       </article>
+      
     </main>
 
     <div class="clearfix"></div>
@@ -66,7 +67,7 @@ export default {
   data: () => {
 
     return {
-      show: true,
+      //show: true,
       selected: ' ',
       holidaypackageitems: holidaypackageitems,
       locations: locations,
@@ -124,10 +125,7 @@ export default {
        
     }          
     
-  }
-
-  
-      
+  }  
 
 };
 </script>
@@ -135,6 +133,37 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style lang="scss" >
+
+  .fade-enter-active {
+      animation: coming 1s;
+      animation-delay: 1s;
+      opacity: 0;
+  }
+
+  .fade-leave-active {
+      animation: going 1s;
+  }
+
+  @keyframes coming {
+      from {
+          transform: translateX(-50px);
+          opacity: 0;
+      }
+      to {
+          transform: translateX(0px);
+          opacity: 1;
+      }
+  }
+
+  @keyframes going {
+      from {
+          transform: translateX(0);
+      }
+      to {
+          transform: translateX(-50px);
+          opacity: 0;
+      }
+  }
 
 
 </style>
