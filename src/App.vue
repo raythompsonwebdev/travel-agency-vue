@@ -24,7 +24,7 @@
       <nav>
 
         <!---language select-->
-        <LanguageSelect v-bind:languageselectitems="languageselectitems" />
+        <LanguageSelect />
 
         <button v-on:click="naviFunction" id="toggle-menu">Menu</button>
 
@@ -91,14 +91,18 @@
 <script>
 
 import LanguageSelect from "./components/LanguageSelect.vue";
-import languageselectitems from "./components/data/languageselectitems.js";
+
 
 export default {
   name: "app",
+  components: {
+
+    LanguageSelect
+
+  },
   methods: {
 
-    naviFunction: function() {
-      //console.log(event);
+    naviFunction: function(event) {      
 
       event.preventDefault();
 
@@ -111,23 +115,17 @@ export default {
       } else {
         el.setAttribute("class", "hide");
       }
-    }
+    }    
 
-  },
-
-  components: {
-
-    LanguageSelect
-
-  },
-
+  },  
   data:() => {
     return {
       phoneNumber: "0208-365-1452",
       openTime: "Everyday 8am - 9pm",
-      languageselectitems : languageselectitems
+      
     };
-  }
+  },
+  
 };
 
 </script>

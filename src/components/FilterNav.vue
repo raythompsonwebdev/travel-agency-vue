@@ -11,24 +11,18 @@
         <button v-on:click="SearchItemBtn(season.title)" >{{season.title}}</button>
       </li>
     </ul>
-    <br />
-    <br />
     <h1>Filter By Location</h1>
     <ul>
       <li v-for="location in locations" v-bind:key="location.id">
         <button v-on:click="SearchItemBtn(location.title)" >{{location.title}}</button>
       </li>
     </ul>
-    <br />
-    <br />
     <h1>Filter By Price</h1>
     <ul>
       <li v-for="price in prices" v-bind:key="price.id">
         <button v-on:click="SearchItemBtn(price.title)" >{{price.title}}</button>
       </li>
     </ul>
-    <br />
-    <br />
     <h1>Filter By Rating</h1>
     <ul>
       <li v-for="rating in ratings" v-bind:key="rating.id">
