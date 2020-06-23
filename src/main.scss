@@ -222,28 +222,40 @@
 					width: 13%;
 					display: block;
 					float: right;
+					
 					form {
+						height:40px;
+						
 						label {
-							width: 58%;
+							width: 64%;
 							font-size: 0.9em;
 							display: block;
-							line-height: 30px;
-							height: 30px;
+							line-height: 35px;
+							height: 35px;
 							float: left;
 							border-left: solid 1px #e4e2e2;
 							border-top: solid 1px #e4e2e2;
 							border-bottom: solid 1px #e4e2e2;
 							border-right: none;
+							display: -webkit-flex;
+							display: -ms-flexbox;
+							display: flex;
+							padding-top: 0.25em;
+						}
+						img#flagImg{
+							width: 31%;	
+							margin: 0.1em;
+							height: 25px;
 						}
 
 						datalist{
 							display:block;
 						}
 						select {
-							height: 30px;
-							line-height: 30px;
+							height: 35px;
+							line-height: 35px;
 							font-size: 0.85em;
-							width: 40%;
+							width: 35%;
 							display: inline-block;
 							border-right: solid 1px #e4e2e2;
 							border-top: solid 1px #e4e2e2;
@@ -1132,14 +1144,14 @@
 					}
 				}
 				aside#language-box {
-					width: 13%;
+					width: 13.5%;
 					form {
 						label {
 							
-							font-size: 0.9em;
+							font-size: 0.8em;
 						}
 						select {
-							font-size: 0.85em;
+							font-size: 0.8em;
 							
 						}
 					}
@@ -1650,14 +1662,14 @@
 					}
 				}
 				aside#language-box {
-					width: 14%;
+					width: 14.5%;
 					form {
 						label {
 							
-							font-size: 0.85em;
+							font-size: 0.75em;
 						}
 						select {
-							font-size: 0.9em;
+							font-size: 0.75em;
 							
 						}
 					}

@@ -90,6 +90,7 @@
 
 <script>
 
+
 import LanguageSelect from "./components/LanguageSelect.vue";
 
 
@@ -121,7 +122,8 @@ export default {
   data:() => {
     return {
       phoneNumber: "0208-365-1452",
-      openTime: "Everyday 8am - 9pm",
+      openTime: "Everyday 8am - 9pm"
+      
       
     };
   },
