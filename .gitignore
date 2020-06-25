@@ -25,3 +25,5 @@ src/assets/icons/
 src/assets/images/
 public/
 _assets/filter.txt
+
+src/components/data-json/*

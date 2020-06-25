@@ -24,7 +24,10 @@
       <nav>
 
         <!---language select-->
-        <LanguageSelect />
+        <LanguageSelect 
+          :languages="this.languages"         
+
+        />
 
         <button v-on:click="naviFunction" id="toggle-menu">Menu</button>
 
@@ -90,9 +93,8 @@
 
 <script>
 
-
 import LanguageSelect from "./components/LanguageSelect.vue";
-
+import axios from 'axios';
 
 export default {
   name: "app",
@@ -101,6 +103,13 @@ export default {
     LanguageSelect
 
   },
+
+  mounted() {
+
+    axios.get("./data-json/languageselect.json").then(response => (this.languages = response.data));
+     
+  },
+   
   methods: {
 
     naviFunction: function(event) {      
@@ -121,6 +130,7 @@ export default {
   },  
   data:() => {
     return {
+      languages:[],
       phoneNumber: "0208-365-1452",
       openTime: "Everyday 8am - 9pm"
       

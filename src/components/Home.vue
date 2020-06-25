@@ -7,7 +7,7 @@
       <!---Search form-->
       <SearchForm />
       <!--Destinations-->
-      <Destinations v-bind:destinationitems="destinationitems" />
+      <Destinations :destinationitems="this.data.destinationitems" />
 
       <br />
       <br />
@@ -21,7 +21,7 @@
       </figure>
 
       <!--Featured Holiday Packages-->
-      <FeaturedHolidays v-bind:featuredholidayitems="featuredholidayitems" />
+      <FeaturedHolidays :featuredholidayitems="this.data.featuredholidayitems" />
     </main>
 
     <div class="clearfix"></div>
@@ -33,11 +33,12 @@
 
 import SearchForm from "./SearchForm.vue";
 import Destinations from "./Destinations.vue";
-import destinationitems from './data/destinationitems.js';
 import FeaturedHolidays from "./FeaturedHolidays.vue";
-import featuredholidayitems from './data/featuredholidayitems.js';
+import axios from 'axios';
 
 export default {
+
+  name: "Home",
 
   methods: {
     leftSideFunction: function(event) {
@@ -53,23 +54,25 @@ export default {
         el.setAttribute("class", "hide");
       }
     }
-  },
-
-  name: "Home",
-
+  },  
   components: {
     Destinations,
     FeaturedHolidays,
     SearchForm
   },
 
+  mounted() {
+    axios.get("./data-json/data-json.json").then(response => (this.data = response.data));
+     
+  },
+
   data() {
 
     return {
-
+      data:[],
       show: true,
-      destinationitems: destinationitems,
-      featuredholidayitems: featuredholidayitems,
+      //destinationitems: this.data.destinationitems,
+      //featuredholidayitems: featuredholidayitems,
       
     };
   }

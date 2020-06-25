@@ -5,10 +5,10 @@
   <!---leftside2-->
 
       <FilterNav
-        v-bind:seasons="seasons"
-        v-bind:locations="locations"
-        v-bind:prices="prices"
-        v-bind:ratings="ratings"
+        :seasons="this.filternav.seasons"
+        :prices="this.filternav.prices"
+        :locations="this.filternav.locations"
+        :ratings="this.filternav.ratings"   
         v-on:seasonClick="itemsSearched"
       />
 
@@ -51,17 +51,19 @@
 <script>
 
 import FilterNav from "./FilterNav.vue";
-//import HolidayPackageItem from "./HolidayPackageItem.vue";
-import holidaypackageitems from './data/holidaypackageitems.js';
-import {locations , prices, ratings, seasons} from './data/filterNavText.js';
+import axios from 'axios';
 
 export default {
 
   name: "HolidayPackages",
 
-  components: {
-    //HolidayPackageItem,
+  components: {    
     FilterNav
+  },
+
+  mounted() {
+    axios.get("./data-json/holidaypackageitems.json").then(response => (this.holidaypackageitems = response.data));
+    axios.get("./data-json/filternav.json").then(response => (this.filternav = response.data)); 
   },
 
   data: () => {
@@ -69,11 +71,8 @@ export default {
     return {
       //show: true,
       selected: ' ',
-      holidaypackageitems: holidaypackageitems,
-      locations: locations,
-      prices: prices,
-      ratings: ratings,
-      seasons: seasons,
+      holidaypackageitems: [],
+      filternav: [],  
       holiday: [],
       count: 10,
       
@@ -95,31 +94,31 @@ export default {
 
     filteredPacks: function(){                    
       
-      if(this.selected === " "){
+      if(!this.selected){
 
-         return holidaypackageitems
+         return this.holidaypackageitems
 
       }else if('winter' === this.selected || 'summer' === this.selected || 'spring' === this.selected || 'autumn' === this.selected ){        
 
-          return  holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.season === this.selected)
+          return  this.holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.season === this.selected)
         
 
       }else if('london' === this.selected || 'paris' === this.selected || 'madrid' === this.selected || 'dubai' == this.selected || 'rome' == this.selected ){        
 
-        return holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.location == this.selected)
+        return this.holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.location == this.selected)
 
 
       }else if('one' === this.selected || 'two' === this.selected || 'three' === this.selected || 'four' == this.selected || 'five' === this.selected){        
 
-        return holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.rating === this.selected)
+        return this.holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.rating === this.selected)
 
       }else if('$399 - $499' == this.selected || '$499 - $599' == this.selected || '$599 - $699' == this.selected || '$699 - $999' == this.selected || '$999 +' == this.selected){        
 
-        return holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.price === this.selected)
+        return this.holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.price === this.selected)
 
       }else{ 
         
-        return holidaypackageitems        
+        return this.holidaypackageitems        
 
       }        
        

@@ -2,20 +2,25 @@
 
       <aside id="language-box">
             <form>
-              <label for="language">Language:<img id="flagImg" :src="'assets/images/flags/Jamaica.jpg'" :alt="'banner-image'"/></label>
+              <label for="language">Language:
+                  <img 
+                    id= "flagImg"                                       
+                                        
+                  />
+                </label>
               <select 
                 name="language" 
-                v-model="languageselectitems"
+                v-model="languages"
                 v-on:click="itemsSearched($event.target.value)"
                                 
                 >
                 <option
-                  v-for ="languageselectitem in onChange"
-                  :value="languageselectitem.value"
-                  :key="languageselectitem.id"               
+                  v-for ="language in languages"
+                  :value="language.value"
+                  :key="language.id"               
                       
                 >
-                  {{languageselectitem.text}}
+                  {{language.text}}
                   
                 </option>
                 
@@ -27,79 +32,69 @@
 
 <script>
 
-import languageselectitems from "./data/languageselectitems.js";
 
 export default {
 
-  name: "LanguageSelect",  
+  name: "LanguageSelect",
+  props: ["languages"],
+    
 
   data: () => {
 
     return {
       selected: ' ',
-      image:' ',
-      languageselectitems:languageselectitems    
-      
-      
       
     };
   },
 
   methods:{
     itemsSearched: function (id) {
-
-      this.selected = id  
-
+      this.selected = id                    
     }
   },
   computed: {
-      onChange:function (){ 
-        
-        if(this.selected == "Jamaica" ){
 
-          document.querySelector('#flagImg').setAttribute('src', './assets/images/flags/Jamaica.jpg')      
+      onChange:function (){                 
+                
+        if(!this.selected ){
+                                                  
+          console.log("select")                     
 
-          console.log("Jamaica")
+        }else if(this.selected == "Jamaica" ){
+                                                  
+          console.log("Jamaica")                     
 
         }else if(this.selected == "United_Kingdom" ){
-
-          document.querySelector('#flagImg').setAttribute('src', './assets/images/flags/United_Kingdom.jpg')      
-
-          console.log("United_Kingdom")
+          
+          console.log("United_Kingdom")         
+                     
 
         }else if(this.selected == "United_States" ){
 
-          document.querySelector('#flagImg').setAttribute('src', './assets/images/flags/USA.gif')      
-
-          console.log("United_States")
+           console.log("United_States")                
 
         }else if(this.selected == "France" ){
-
-          document.querySelector('#flagImg').setAttribute('src', './assets/images/flags/France.jpg')      
-
+ 
           console.log("France")
+       
 
         }else if(this.selected == "Spain" ){
 
-          document.querySelector('#flagImg').setAttribute('src', './assets/images/flags/Spain.jpg')      
-
           console.log("Spain")
+          
 
         }else if(this.selected == "Germany" ){
 
-          document.querySelector('#flagImg').setAttribute('src', './assets/images/flags/Germany.jpg')      
-
-          console.log("Germany")
+          console.log("Germany")           
 
         }else{
-
-          document.querySelector('#flagImg').setAttribute('src', './assets/images/flags/Jamaica.jpg')
-
+          console.log("Nothing")
         }                           
 
-        return languageselectitems
+        return this.languages
           
       }
+
   }
   
   
