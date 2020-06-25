@@ -13,11 +13,7 @@
       />
 
     <!---main content-->
-    <main id="content2">
-      <!-- <HolidayPackageItem
-        v-bind:holidaypackageitems="holidaypackageitems"                
-      /> -->
-      
+    <main id="content2">            
       <article>
         <transition-group name="fade" tag="div" >
         <div

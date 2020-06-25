@@ -2,25 +2,21 @@
 
       <aside id="language-box">
             <form>
-              <label for="language">Language:
-                  <img 
-                    id= "flagImg"                                       
-                                        
-                  />
+              <label for="langs">Language:
+                  
                 </label>
               <select 
-                name="language" 
-                v-model="languages"
-                v-on:click="itemsSearched($event.target.value)"
-                                
+                name="langs" 
+                v-model="this.langs"
+                v-on:click="itemsSearched($event.target.value);"                                
                 >
                 <option
-                  v-for ="language in languages"
-                  :value="language.value"
-                  :key="language.id"               
+                  v-for ="lang in onChange"
+                  :value="lang.value"
+                  :key="lang.id"             
                       
                 >
-                  {{language.text}}
+                  {{lang.text}}
                   
                 </option>
                 
@@ -31,76 +27,56 @@
 </template>
 
 <script>
-
+import axios from 'axios';
 
 export default {
 
-  name: "LanguageSelect",
-  props: ["languages"],
-    
+  name: "LanguageSelect",     
 
   data: () => {
 
     return {
       selected: ' ',
-      
+      langs:[],
+          
+            
     };
+  },
+  
+  mounted() {
+    axios.get("./data-json/languageselect.json").then(response => (this.langs = response.data));
+     
   },
 
   methods:{
+
     itemsSearched: function (id) {
-      this.selected = id                    
+
+      this.selected = id  
+
     }
+     
+    
   },
+
   computed: {
 
-      onChange:function (){                 
-                
-        if(!this.selected ){
-                                                  
-          console.log("select")                     
+      onChange:function (){  
 
-        }else if(this.selected == "Jamaica" ){
-                                                  
-          console.log("Jamaica")                     
+        if(this.selected == "Jamaica" || this.selected == "United_States" || this.selected == "United_Kingdom" || this.selected == "Spain" || this.selected == "France" || this.selected == "Germany" ){
 
-        }else if(this.selected == "United_Kingdom" ){
+          return console.log(this.selected + this.langs[3].value), this.langs         
           
-          console.log("United_Kingdom")         
-                     
-
-        }else if(this.selected == "United_States" ){
-
-           console.log("United_States")                
-
-        }else if(this.selected == "France" ){
- 
-          console.log("France")
-       
-
-        }else if(this.selected == "Spain" ){
-
-          console.log("Spain")
-          
-
-        }else if(this.selected == "Germany" ){
-
-          console.log("Germany")           
 
         }else{
-          console.log("Nothing")
-        }                           
-
-        return this.languages
+          
+          return this.langs
+        }   
           
       }
 
-  }
-  
-  
+  } 
    
-  
-  
 
 };
 </script>

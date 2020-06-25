@@ -70,9 +70,7 @@ export default {
 
     return {
       data:[],
-      show: true,
-      //destinationitems: this.data.destinationitems,
-      //featuredholidayitems: featuredholidayitems,
+      show: true,      
       
     };
   }

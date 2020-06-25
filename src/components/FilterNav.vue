@@ -64,9 +64,7 @@ export default {
       this.$emit('seasonClick', item)
     }
 
-  },
-
-
+  }
 
 };
 
