@@ -231,7 +231,7 @@
 							width: 45%;
 							font-size: 0.9em;
 							display: block;
-							line-height: 33px;
+							line-height: 35px;
 							height: 35px;
 							border-left: solid 1px #e4e2e2;
 							border-top: solid 1px #e4e2e2;
@@ -240,13 +240,15 @@
 							display: -webkit-flex;
 							display: -ms-flexbox;
 							display: flex;
-							padding-top: 0.25em;
+							text-indent:0.2em;
+							
 						}
 
 						div#flagImg{
 							width: 20%;	
 							margin: 0;
 							height: 35px;
+							padding:0.25em;
 						}
 						
 						select {

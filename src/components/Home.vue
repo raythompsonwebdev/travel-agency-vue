@@ -1,6 +1,5 @@
 <template>
   <div class="Home page">
-
     <button v-on:click="leftSideFunction" id="side-bar-btn">SIDE</button>
     <!--Leftside-->
     <aside id="leftside" class="hide" v-if="leftSideFunction">
@@ -30,14 +29,12 @@
 
 <!--scripting-->
 <script>
-
 import SearchForm from "./SearchForm.vue";
 import Destinations from "./Destinations.vue";
 import FeaturedHolidays from "./FeaturedHolidays.vue";
-import axios from 'axios';
+import axios from "axios";
 
 export default {
-
   name: "Home",
 
   methods: {
@@ -54,7 +51,7 @@ export default {
         el.setAttribute("class", "hide");
       }
     }
-  },  
+  },
   components: {
     Destinations,
     FeaturedHolidays,
@@ -62,16 +59,15 @@ export default {
   },
 
   mounted() {
-    axios.get("./data-json/data-json.json").then(response => (this.data = response.data));
-     
+    axios
+      .get("./data-json/data-json.json")
+      .then(response => (this.data = response.data));
   },
 
   data() {
-
     return {
-      data:[],
-      show: true,      
-      
+      data: [],
+      show: true
     };
   }
 };
@@ -80,6 +76,4 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style lang="scss" scoped>
-
-
 </style>

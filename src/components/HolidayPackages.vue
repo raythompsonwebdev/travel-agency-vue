@@ -13,7 +13,9 @@
       />
 
     <!---main content-->
-    <main id="content2">            
+    <main id="content2">
+       
+      <!--HolidayPackage Item component -->           
       <article>
         <transition-group name="fade" tag="div" >
         <div

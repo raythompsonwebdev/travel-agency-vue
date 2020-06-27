@@ -6,7 +6,6 @@
       <ul>
         <li v-for="error in errors" :key="error">{{error}}</li>
       </ul>
-
     </p>
 
     <form @submit.prevent="onSubmit" id="contactform">

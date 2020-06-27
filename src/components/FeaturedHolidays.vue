@@ -1,42 +1,39 @@
 <template>
-<!--Featured Holiday Package-->
+  <!--Featured Holiday Package-->
 
-    <section id="offers">
+  <section id="offers">
+    <h2>Featured Holiday Package</h2>
 
-      <h2>Featured Holiday Package</h2>
+    <div
+      class="offerbox"
+      v-for="featuredholiday in featuredholidayitems"
+      v-bind:key="featuredholiday.id"
+    >
+      <figure>
+        <img :src="featuredholiday.url" />
 
-      <div class="offerbox" v-for="featuredholiday in featuredholidayitems" v-bind:key="featuredholiday.id">
+        <figcaption>
+          <p>{{featuredholiday.text}}</p>
+          <p>
+            from only
+            <span class="offerbox-price">{{featuredholiday.price}}</span> per person
+          </p>
+        </figcaption>
+      </figure>
+    </div>
 
-        <figure>
-          <img :src='featuredholiday.url'>
-
-          <figcaption>
-            <p>{{featuredholiday.text}}</p>
-            <p>from only <span class="offerbox-price">{{featuredholiday.price}}</span> per person</p>
-          </figcaption>
-
-        </figure>
-
-      </div>
-
-
-      <div class="clearfix"></div>
-
-    </section>
+    <div class="clearfix"></div>
+  </section>
 </template>
 
 <script>
 export default {
-
   name: "FeaturedHolidays",
-  props:['featuredholidayitems']
-
+  props: ["featuredholidayitems"]
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style lang="scss" >
-
-
 </style>

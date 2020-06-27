@@ -11,14 +11,13 @@
     />
 
     <main id="content2">
-      
+      <!--BestDeal Item component -->
       <div>
         <article 
           class="holiday_details_small"            
           v-for="bestdealitem in filteredPacks"
           v-bind:key="bestdealitem.id"
         >
-
           <h1>{{bestdealitem.title}}</h1>
 
           <span class="holidayprice">

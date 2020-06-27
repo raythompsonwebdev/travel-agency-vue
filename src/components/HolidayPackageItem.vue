@@ -1,12 +1,9 @@
 <template>
-  <article
-    
-      >
+  <article>
     <div
       class="holiday_details"
       v-for="holidaypackageitem in holidaypackageitems"
-      v-bind:key="holidaypackageitem.id"  
-      
+      v-bind:key="holidaypackageitem.id"
     >
       <h1>{{holidaypackageitem.title}}</h1>
       <span class="holidayprice">
@@ -14,7 +11,7 @@
         <span class="offerbox-price">{{holidaypackageitem.price}}</span>
       </span>
       <figure>
-        <img :src="holidaypackageitem.url" :alt="holidaypackageitem.title"/>
+        <img :src="holidaypackageitem.url" :alt="holidaypackageitem.title" />
         <figcaption>
           <p>Location : {{holidaypackageitem.place}}</p>
           <p>{{holidaypackageitem.text}}</p>
@@ -26,25 +23,16 @@
 </template>
 
 <script>
-
 export default {
   name: "HolidayPackageItem",
   props: ["holidaypackageitems"],
 
-  data:() => {
-
-    return{
-      
-       show: true,
-
-    }
-   
-
+  data: () => {
+    return {
+      show: true
+    };
   }
-  
 };
-
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
