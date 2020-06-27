@@ -225,14 +225,14 @@
 					
 					form {
 						height:40px;
+						display:flex;
 						
 						label {
-							width: 64%;
+							width: 45%;
 							font-size: 0.9em;
 							display: block;
-							line-height: 35px;
+							line-height: 33px;
 							height: 35px;
-							float: left;
 							border-left: solid 1px #e4e2e2;
 							border-top: solid 1px #e4e2e2;
 							border-bottom: solid 1px #e4e2e2;
@@ -242,26 +242,22 @@
 							display: flex;
 							padding-top: 0.25em;
 						}
-						img#flagImg{
-							width: 31%;	
-							margin: 0.1em;
-							height: 25px;
-						}
 
-						datalist{
-							display:block;
+						div#flagImg{
+							width: 20%;	
+							margin: 0;
+							height: 35px;
 						}
+						
 						select {
 							height: 35px;
 							line-height: 35px;
 							font-size: 0.85em;
 							width: 35%;
-							display: inline-block;
 							border-right: solid 1px #e4e2e2;
 							border-top: solid 1px #e4e2e2;
 							border-bottom: solid 1px #e4e2e2;
-							border-left: none;
-							//background-image: url("assets/images/United_Kingdom.jpg");
+							border-left: none;							
 							background-repeat: no-repeat;
 							background-position: 5% 50%;
 							option{

@@ -26,19 +26,22 @@
         <!---language select-->
         <aside id="language-box">
             <form>
-              <label for="languages">Language:
-                  
-                </label>
+              <label for="languages">Language:</label>
+              <div id="flagImg">
+                <img 
+                  @error="imgUrlAlt"                                                   
+                  :src="'/assets/images/flags/' + selected + '.jpg'" 
+                />
+                </div>
               <select 
                 name="languages" 
                 v-model="selected"                
-                v-on:click="itemsSearched($event.target.value);"                                
+                v-on:click="itemsSearched($event.target.value);"                               
                 >
                 <option
                   v-for="(language, i) in onChangeImg"
                   :value="language.value"
-                  :key="i"             
-                      
+                  :key="i"
                 >
                   {{language.name}}
                   
@@ -139,11 +142,16 @@ export default {
         el.setAttribute("class", "hide");
       }
     },
+
     itemsSearched: function (id) {
 
-      this.selected = id  
+      this.selected = id 
 
-    }              
+    },
+    imgUrlAlt(event) {
+        event.target.src = "/assets/images/flags/default.jpg"
+    }       
+                 
 
   },
 
@@ -153,6 +161,7 @@ export default {
       phoneNumber: "0208-365-1452",
       openTime: "Everyday 8am - 9pm",
       selected: ' ',
+      defaultImage: '/assets/images/flags/default.jpg',
       languages:[],
       
       
@@ -161,17 +170,41 @@ export default {
 
   computed: {
 
-      onChangeImg:function (){  
+      onChangeImg:function (){         
+        
+        if(this.selected === "nothing"){
 
-        if(this.selected === "Jamaica" || this.selected === "United_States" || this.selected === "United_Kingdom" || this.selected === "Spain" || this.selected === "France" || this.selectee === "Germany" ){
+          return this.languages
 
-          return console.log(this.languages[0].selectedImage),this.languages          
-          
+        }else if(this.selected === "United_Kingdom" ){ 
+                                                 
+          return this.languages
+
+        }else if(this.selected === "Germany"){
+
+          return this.languages
+
+        }else if(this.selected === "United_States"){
+
+          return this.languages
+
+        }else if(this.selected === "Jamaica"){
+
+          return this.languages
+
+        }else if(this.selected === "France"){
+
+          return this.languages
+
+        }else if(this.selected === "Spain"){
+
+          return this.languages
 
         }else{
-          
+
           return this.languages
-        }   
+
+        }         
           
       }
 
