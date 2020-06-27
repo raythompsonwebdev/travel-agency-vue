@@ -22,7 +22,7 @@
 
           <span class="holidayprice">
                 From
-                <span class="offerbox-price"></span>
+                <span class="offerbox-price">{{bestdealitem.price}}</span>
               </span>
           <figure>
              <img :src="bestdealitem.url" :alt="bestdealitem.title" />

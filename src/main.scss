@@ -6,7 +6,7 @@
 
 @media only screen and (max-width: 1920px) {
 	#wrapper {
-		width: 70%;
+		width: 75%;
 		margin-left:auto;
 		margin-right:auto;
 		background-color: $color3;
@@ -61,7 +61,7 @@
 				-webkit-flex: 0 1 auto;
 				-ms-flex: 0 1 auto;
 				flex: 0 1 auto;
-				width: 13%;
+				width: 14%;
 				height: auto;
 				margin: 1% 0 0 0;
 				display: block;
@@ -173,33 +173,30 @@
 							@include borderRaduis(5px 5px 0px 0px);
 							height: 40px;
 							line-height: 40px;
-							color: #fff;
-							@include gradient($colorblue1,
-							$colorpw1);
+							color:$colorpw2;
+							@include gradient($colorblue1, $colorpw1);
 							@include TranSition( all 0.1s linear);
 							display: block;
 							font-weight: bold;
 							letter-spacing: 0.03em;
 
 							&:link {
-								color: $colorpw;
-								@include gradient($colorpw1,$colorblue1);
+								color:$colorpw2;	
 							}
 
 							&:visited {
-								@include gradient($colorpw,	$colorpw1a);
-								background-color:$colorblue1;
+								color: $colorsearchbtn;
+								@include gradient($colorpw2, $colorpw);
 
 							}
 							&:focus {
-								@include gradient($colorpw,$colorpw1a);
-
+								color: $colorsearchbtn;
+								@include gradient($colorpw2, $colorpw);
 								text-shadow: none;
 							}
 							&:active {
-								@include gradient($colorpw,$colorpw1a);
-								color: $color3;
-
+								color: $colorsearchbtn;
+								@include gradient($colorpw2, $colorpw);
 								text-shadow: none;
 							}
 							&:hover {
@@ -207,19 +204,20 @@
 								width: 100%;
 								text-align: center;
 								height: 40px;
-								color: #fff;
-								font-weight: bold;
-								@include gradient($colorpw1,$colorblue1);
+								color: $colorsearchbtn;
+								@include gradient($colorpw2, $colorpw);
+								font-weight: bold;								
 								border-top: 1px solid $colorgry2;
 								text-shadow: none;
 
 							}
 						}
 					}
+					
 				}
 
 				aside#language-box {
-					width: 13%;
+					width: 14%;
 					display: block;
 					float: right;
 					
@@ -229,7 +227,7 @@
 						
 						label {
 							width: 45%;
-							font-size: 0.9em;
+							font-size: 0.8em;
 							display: block;
 							line-height: 35px;
 							height: 35px;
@@ -278,6 +276,7 @@
 		/*mobile filter nav button*/
 		#side-bar-btn{
 			display:none;
+			top:40vh;
 		}
 
 		/*mobile contact page side bar button*/
@@ -712,7 +711,7 @@
 		}
 
 		#content2 {
-			width: 77%;
+			width: 79%;
 			height: auto;
 			float: left;
 			margin-bottom: 10px;
@@ -844,7 +843,7 @@
 					width: 100%;
 					margin: 0;
 					img {
-						width: 21%;
+						width: 19%;
 						float:left;
 						display: block;
 						margin-right: 0.5em;
@@ -1089,7 +1088,7 @@
 
 @media only screen and (max-width: 1440px) {
 	#wrapper {
-		width: 75%;
+		width: 80%;
 
 		header {
 
@@ -1099,20 +1098,20 @@
 			}
 
 			aside.contact {
-				width: 13%;
+				width: 14%;
 
 				span.tele {
 					margin: 0;
 					img{
 
-						width:13%;
+						width:14%;
 
 
 					}
 
 					a#contact-number {
 
-						font-size: 1em;
+						font-size: 0.9em;
 
 
 						&:active {
@@ -1137,12 +1136,12 @@
 						width: 16.5%;
 						height: 40px;
 						a {
-							font-size: 0.75em;
+							font-size: 0.7em;
 						}
 					}
 				}
 				aside#language-box {
-					width: 13.5%;
+					width: 14%;
 					form {
 						label {
 							
@@ -1237,9 +1236,8 @@
 				}
 
 				div.destinations {
-					width: 91%;
-					margin: 5px auto;
-					padding: 2.5%;
+					
+
 					figure {
 						margin: 0;
 						img {
@@ -1434,7 +1432,7 @@
 
 		}
 		#content2 {
-			width: 77%;
+			
 
 			h1 {
 				font-size: 1.3em;
@@ -1604,7 +1602,7 @@
 
 @media only screen and (max-width: 1280px) {
 	#wrapper {
-		width: 82.5%;
+		
 		header {
 
 			figure#logo {
@@ -1612,8 +1610,9 @@
 
 			}
 			aside.contact {
-				width: 15%;
-
+				width: 14%;
+				
+				
 				span.tele {
 					margin: 0;
 
@@ -1626,7 +1625,7 @@
 					}
 
 					a#contact-number {
-						width:86%;
+						font-size: 0.8em;
 
 
 						&:active {
@@ -1636,7 +1635,7 @@
 				}
 				span#opening-time {
 
-					font-size: 80%;
+					font-size: 70%;
 
 
 				}
@@ -1664,7 +1663,7 @@
 					form {
 						label {
 							
-							font-size: 0.75em;
+							font-size: 0.7em;
 						}
 						select {
 							font-size: 0.75em;
@@ -1739,9 +1738,7 @@
 				}
 
 				div.destinations {
-					width: 91%;
-					margin: 5px auto;
-					padding: 2.5%;
+					
 					figure {
 						margin: 0;
 						img {
@@ -1750,7 +1747,7 @@
 						figcaption {
 							width: 50%;
 							h3 {
-								font-size: 0.95em;
+								font-size: 0.9em;
 
 							}
 							p {
@@ -1912,7 +1909,7 @@
 		}
 
 		#content2 {
-			width: 77%;
+			
 
 			h1 {
 				font-size: 1.2em;
@@ -1966,7 +1963,7 @@
 			}
 
 			.holiday_details {
-				width: 96%;
+				
 				h1 {
 
 					font-size: 1.1em;
@@ -2005,7 +2002,8 @@
 
 
 				h1 {
-					font-size: 0.95em;
+					font-size: 0.90em;
+    			line-height: 25px;
 				}
 				span.holidayprice {
 					font-size: 0.8em;
@@ -2024,7 +2022,7 @@
 					figcaption {
 						width: 54%;
 						p {
-							font-size: 0.9em;
+							font-size: 0.85em;
 
 						}
 						button {
@@ -2089,7 +2087,7 @@
 @media only screen and (max-width: 1024px) {
 
 	#wrapper {
-		width: 82.5%;
+		width: 85%;
 		header {
 
 			figure#logo {
@@ -2098,7 +2096,6 @@
 			}
 			aside.contact {
 				width: 16%;
-				font-size:0.85em;
 				span.tele {
 					margin: 0;
 
@@ -2111,6 +2108,7 @@
 					}
 
 					a#contact-number {
+						font-size:0.8em;
 
 						&:active {
 							color: #fff;
@@ -2119,7 +2117,7 @@
 				}
 				span#opening-time {
 
-					font-size: 80%;
+					font-size: 65%;
 
 
 				}
@@ -2225,9 +2223,7 @@
 				}
 
 				div.destinations {
-					width: 91%;
-					margin: 5px auto;
-					padding: 2.5%;
+					
 					figure {
 						margin: 0;
 						img {
@@ -2236,7 +2232,7 @@
 						figcaption {
 							width: 40%;
 							h3 {
-								font-size: 0.9em;
+								font-size: 0.85em;
 							}
 							p {
 								font-size: 0.75em;
@@ -2407,8 +2403,7 @@
 
 		}
 		#content2 {
-			width: 77%;
-			line-height: 1.5em;
+						
 			h1 {
 				font-size: 1.2em;
 			}
@@ -2497,7 +2492,8 @@
 
 
 				h1 {
-					font-size: 0.95em;
+					font-size: 0.85em;
+					line-height:25px;
 				}
 				span.holidayprice {
 					font-size: 0.8em;
@@ -2592,7 +2588,7 @@
 
 			}
 			aside.contact {
-				width: 20%;
+				width: 18%;
 
 				span.tele {
 					margin: 0;
@@ -2613,7 +2609,7 @@
 				}
 				span#opening-time {
 
-					font-size: 80%;
+					font-size: 65%;
 
 
 				}
@@ -2641,15 +2637,15 @@
 					}
 				}
 				aside#language-box {
-					width: 15%;
+					width: 16.5%;
 
 					form {
 						label {
 
-							font-size: 0.85em;
+							font-size: 0.7em;
 						}
 						select {
-							font-size: 0.9em;
+							font-size: 0.8em;
 
 						}
 					}
@@ -2719,8 +2715,8 @@
 				}
 
 				div.destinations {
-					width: 91%;
-					padding: 2.5%;
+					
+					
 					figure {
 						margin: 0;
 						img {
@@ -2865,7 +2861,7 @@
 
 		}
 		#content2 {
-			width: 77%;
+			
 
 
 			h1 {
@@ -2949,13 +2945,14 @@
 			}
 
 			.holiday_details_small {
-				width: 75%;
+				width: 100%;
 
 				h1 {
-					font-size: 0.85em;
+					font-size: 1em;
+					line-height:40px;
 				}
 				span.holidayprice {
-					font-size: 0.8em;
+					font-size: 1em;
 					.offerbox-price {
 						display: inline-block;
 					}
@@ -2964,18 +2961,18 @@
 					width: 100%;
 
 					img {
-						width: 39%;
+						width: 28%;
 
 					}
 
 					figcaption {
 						width: 54%;
 						p {
-							font-size: 0.8em;
+							font-size: 0.9em;
 
 						}
 						button {
-							font-size: 0.85em;
+							font-size: 1em;
 
 						}
 
@@ -3043,7 +3040,7 @@
 
 			}
 			aside.contact {
-				width: 25%;
+				width: 20%;
 
 				span.tele {
 					margin: 0;
@@ -3056,7 +3053,7 @@
 					}
 
 					a#contact-number {
-
+						font-size: 0.9em;
 
 						&:active {
 							color: #fff;
@@ -3065,7 +3062,7 @@
 				}
 				span#opening-time {
 
-					font-size: 85%;
+					font-size: 75%;
 
 
 				}
@@ -3086,7 +3083,7 @@
 					li:nth-of-type(2){
 						padding-top:0em;
 						a{
-							font-size: 0.5em;
+							font-size: 45%;
 							height: auto;
 						}
 					}
@@ -3097,11 +3094,11 @@
 					form {
 						label {
 
-							font-size: 0.8em;
+							font-size: 0.65em;
 
 						}
 						select {
-							font-size: 0.85em;
+							font-size: 0.75em;
 
 						}
 					}
@@ -3172,8 +3169,8 @@
 				}
 
 				div.destinations {
-					width: 91%;
-					padding: 2.5%;
+					
+					
 					figure {
 						margin: 0;
 						img {
@@ -3318,7 +3315,7 @@
 
 		}
 		#content2 {
-			width: 77%;
+			
 
 			h1 {
 				font-size: 1.1em;
@@ -3398,13 +3395,13 @@
 			}
 
 			.holiday_details_small {
-				width: 85%;
+				
 
 				h1 {
-					font-size: 0.85em;
+					font-size: 1em;
 				}
 				span.holidayprice {
-					font-size: 0.8em;
+					font-size: 1em;
 					.offerbox-price {
 						display: inline-block;
 					}
@@ -3413,7 +3410,7 @@
 					width: 100%;
 
 					img {
-						width: 41%;
+						width: 32%;
 
 					}
 
@@ -3421,12 +3418,12 @@
 						width: 50%;
 
 						p {
-							font-size: 0.8em;
+							font-size: 0.9em;
 
 						}
 						button {
 
-							font-size: 0.8em;
+							font-size: 0.9em;
 
 						}
 
@@ -3496,7 +3493,7 @@
 
 			}
 			aside.contact {
-				width: 25%;
+				width: 20%;
 
 				span.tele {
 					margin: 0;
@@ -3510,7 +3507,7 @@
 
 					a#contact-number {
 						width:84%;
-						font-size: 0.9em;
+						
 
 						&:active {
 							color: #fff;
@@ -3519,7 +3516,7 @@
 				}
 				span#opening-time {
 
-					font-size: 85%;
+					font-size: 70%;
 
 
 				}
@@ -3539,6 +3536,7 @@
 
 						}
 					}
+					
 				}
 				aside#language-box {
 					width: 16%;
@@ -3546,11 +3544,11 @@
 					form {
 						label {
 
-							font-size: 0.8em;
+							font-size: 0.6em;
 
 						}
 						select {
-							font-size: 0.8em;
+							font-size: 0.75em;
 
 						}
 					}
@@ -3621,8 +3619,8 @@
 				}
 
 				div.destinations {
-					width: 91%;
-					padding: 2.5%;
+					
+					
 					figure {
 						margin: 0;
 						img {
@@ -3767,7 +3765,7 @@
 
 		}
 		#content2 {
-			width: 77%;
+			
 
 			h1 {
 				font-size: 1.1em;
@@ -3827,7 +3825,7 @@
 				figure {
 					width: 100%;
 					img {
-						width: 35%;
+						width: 29%;
 					}
 					figcaption {
 						width: 65%;
@@ -3848,13 +3846,12 @@
 			}
 
 			.holiday_details_small {
-				width: 90%;
-
+				
 				h1 {
-					font-size: 0.85em;
+					font-size: 1em;
 				}
 				span.holidayprice {
-					font-size: 0.8em;
+					font-size: 1em;
 					.offerbox-price {
 						display: inline-block;
 					}
@@ -3863,7 +3860,7 @@
 					width: 100%;
 
 					img {
-						width: 41%;
+						width: 32%;
 
 					}
 
@@ -3871,12 +3868,12 @@
 						width: 50%;
 
 						p {
-							font-size: 0.8em;
+							font-size: 0.9em;
 
 						}
 						button {
 							width: 75%;
-							font-size: 0.8em;
+							font-size: 0.9em;
 
 						}
 					}
@@ -3975,7 +3972,7 @@
 
 			}
 			aside.contact {
-				width: 25%;
+				width: 22%;
 				
 				span.tele {
 					margin: 0;
@@ -3999,7 +3996,7 @@
 				}
 				span#opening-time {
 
-					font-size: 75%;
+					font-size: 70%;
 
 
 				}
@@ -4007,12 +4004,12 @@
 
 			#toggle-menu,button {
 				display: block;
-				height: 150px;
-				width: 60px;
+				height: 100px;
+				width: 80px;
 				position: fixed;
 				z-index:500;
-				left: 89vw;
-				top: 15vh;
+				left: 88vw;
+				top: 23vh;
 				background-color: $colorbg;
 				border: 0;
 				outline: none;
@@ -4037,7 +4034,7 @@
 					position: fixed;
 					z-index: 100;
 					opacity:0;
-					top: 10vh;
+					top: 5vh;
 					width: 50%;
 					height: auto;
 					float: none;
@@ -4081,15 +4078,22 @@
 				}
 
 				aside#language-box {
-					width: 28%;
+					width: 40%;
 					margin-left: 0%;
 					form {
 						label {
-
-							font-size: 0.75em;
+							width: 35%;
+							font-size: 0.9em;
 
 						}
+						div#flagImg {
+							width: 25%;
+							margin: 0;
+							height: 35px;
+							padding: 0.25em;
+						}
 						select {
+							width:40%;
 							font-size: 0.65em;
 
 						}
@@ -4105,10 +4109,10 @@
 			background-color: $colorbg;
 			color: #fff;
 			z-index:100;
-			height:150px;
-			width:60px;
-			left: 89vw;
-    	top: 34vh;
+			height:100px;
+			width:80px;
+			left: 88vw;
+    	top: 40vh;
 			border:none;
 			outline:none;
 			&:hover{
@@ -4125,12 +4129,12 @@
 			background-color: $colorbg;
 			color: #fff;
 			z-index: 100;
-			height: 50px;
-			left: 82vw;
-			top: 11vh;
+			height: 100px;
+			left: 88vw;
+			top: 40vh;
 			border:none;
 			outline:none;
-			font-size:0.8em;
+			font-size:0.75em;
 			&:hover{
 				cursor:pointer;
 				background-color: #fff;
@@ -4152,7 +4156,7 @@
 
 		#leftside {
 			position:fixed;
-			top: 12vh;
+			top: 5vh;
 			width: 250px;
 			padding-top: 1%;
 			background-color:#fff;
@@ -4217,7 +4221,7 @@
 
 				div.destinations {
 					width: 91%;
-					padding: 2.5%;
+					
 					figure {
 						margin: 0;
 						img {
@@ -4243,7 +4247,7 @@
 		#leftside2 {
 			position:fixed;
 			z-index:100;
-			top: 10vh;
+			top: 5vh;
 			width: 200px;
 			margin-top: 1%;
 			@include TranSition(all 1s ease);
@@ -4271,7 +4275,7 @@
 		#leftside3 {
 			position:fixed;
 			z-index:100;
-			top: 12vh;
+			top: 5vh;
 			width: 200px;
 			margin-top: 1%;
 			@include TranSition(all 1s ease);
@@ -4580,7 +4584,7 @@
 				}
 				span#opening-time {
 
-					font-size: 80%;
+					font-size: 70%;
 
 
 				}
@@ -4595,7 +4599,7 @@
 				margin-bottom: 0px;
 
 				ul#navi {
-					top: 9vh;
+					top: 5vh;
 					li {
 						width: 100%;
 
@@ -4610,15 +4614,16 @@
 					}
 				}
 				aside#language-box {
-					width: 22%;
+					
 					margin-left: 0%;
 					form {
-						span {
+						label {
+							
+							font-size: 0.9em;
 
-							font-size: 0.75em;
 						}
 						select {
-							font-size: 0.65em;
+							font-size: 0.8em;
 
 						}
 					}
@@ -4634,10 +4639,10 @@
 		}
 		#leftside {
 			width: 250px;
-			padding-top: 1%;
+
 			.leftsidebox {
 				width: 96%;
-				margin-bottom: 1%;
+
 				a {
 					margin-left: 10px;
 					font-size: 0.9em;
@@ -4695,7 +4700,7 @@
 
 				div.destinations {
 					width: 91%;
-					padding: 2.5%;
+					
 					figure {
 						margin: 0;
 						img {
@@ -4904,7 +4909,7 @@
 			}
 
 			.holiday_details_small {
-				width: 48%;
+				
 
 				h1 {
 					font-size: 0.80em;
@@ -4991,7 +4996,7 @@
 
 @media only screen and (max-width: 600px) {
 	#wrapper {
-		width: 94%;
+		width: 98%;
 		header {
 
 			figure#logo {
@@ -4999,7 +5004,7 @@
 
 			}
 			aside.contact {
-
+				width: 25%;
 				span.tele {
 					margin: 0;
 
@@ -5012,7 +5017,7 @@
 
 					a#contact-number {
 						width:84%;
-						font-size: 0.85em;
+						font-size: 0.9em;
 
 
 						&:active {
@@ -5022,7 +5027,7 @@
 				}
 				span#opening-time {
 
-					font-size: 80%;
+					font-size: 70%;
 
 
 				}
@@ -5038,7 +5043,7 @@
 				margin-bottom: 0px;
 
 				ul#navi {
-					width: 96%;
+					
 					li {
 						width: 100%;
 						height: 50px;
@@ -5061,15 +5066,15 @@
 					}
 				}
 				aside#language-box {
-					width: 28%;
-					margin-left: 0%;
+					width: 40%;
+
 					form {
 						span {
 
 							font-size: 0.7em;
 						}
 						select {
-							font-size: 0.65em;
+							font-size: 0.75em;
 
 						}
 					}
@@ -5080,7 +5085,7 @@
 
 		#side-bar-btn{
 
-    		top: 35vh;
+    		top: 40vh;
 
 
 		}
@@ -5088,16 +5093,15 @@
 		#contact-bar-btn{
 			font-size:0.7em;
 			
-    	top: 35vh;
+    	
 
 		}
 
 		#leftside {
 
-			padding-top: 1%;
 			.leftsidebox {
 				width: 96%;
-				margin-bottom: 1%;
+
 				a {
 					margin-left: 10px;
 					font-size: 0.9em;
@@ -5155,7 +5159,7 @@
 
 				div.destinations {
 					width: 91%;
-					padding: 2.5%;
+					
 					figure {
 						margin: 0;
 						img {
@@ -5381,7 +5385,7 @@
 			}
 
 			.holiday_details_small {
-				width: 48%;
+				
 
 				h1 {
 					font-size: 0.8em;
@@ -5470,7 +5474,7 @@
 
 @media only screen and (max-width: 568px) {
 	#wrapper {
-		width: 94%;
+		width: 98%;
 		header {
 
 			figure#logo {
@@ -5478,7 +5482,7 @@
 
 			}
 			aside.contact {
-				width: 30%;
+				width: 27%;
 
 				span.tele {
 					margin: 0;
@@ -5502,24 +5506,27 @@
 				}
 				span#opening-time {
 
-					font-size: 80%;
+					font-size: 65%;
 
 
 				}
 			}
 
 			#toggle-menu,button {
-				top: 20vh;
+				top: 23vh;
 				font-size: 0.85em;
+				left: 87vw;
 			}
 
 			nav {
+				
 				height: 40px;
-				margin-bottom: 0px;
+
 
 				ul#navi {
-					top: 12vh;
-					width: 96%;
+					top: 5vh;
+					width:60%;
+
 					li {
 						width: 100%;
 
@@ -5535,15 +5542,18 @@
 					}
 				}
 				aside#language-box {
-					width: 28%;
+					width: 40%;
 					margin-left: 0%;
 					form {
 						label {
 
-							font-size: 0.7em;
+							font-size: 0.75em;
 						}
+						div#flagImg {							
+							padding: 0.5em;
+					}
 						select {
-							font-size: 0.65em;
+							font-size: 0.75em;
 
 						}
 					}
@@ -5553,7 +5563,7 @@
 		}
 
 		#side-bar-btn{			
-    	left: 89vw;
+    	left: 87vw;
     	
 
 		}
@@ -5567,10 +5577,10 @@
 		#leftside {
 
 			padding-top: 1%;
-			display: none;
+
 			.leftsidebox {
 				width: 96%;
-				margin-bottom: 1%;
+
 				a {
 					margin-left: 10px;
 					font-size: 0.9em;
@@ -5628,7 +5638,7 @@
 
 				div.destinations {
 					width: 91%;
-					padding: 2.5%;
+					
 					figure {
 						margin: 0;
 						img {
@@ -5857,7 +5867,7 @@
 				width: 98%;
 				float: none;
 				display: block;
-				margin: 1em auto;
+				margin: 0.5em auto;
 
 				h1 {
 					font-size: 0.9em;
@@ -5950,7 +5960,7 @@
 
 	#wrapper{
 		#contact-bar-btn{
-			left: 77vw;
+			left: 87vw;
 		}
 	}
 }
@@ -5958,7 +5968,7 @@
 
 @media only screen and (max-width: 480px) {
 	#wrapper {
-		width: 94%;
+		width: 98%;
 		header {
 
 			figure#logo {
@@ -5981,7 +5991,7 @@
 
 					a#contact-number {
 
-						font-size: 0.8em;
+						font-size: 0.9em;
 
 						&:active {
 							color: #fff;
@@ -5990,19 +6000,20 @@
 				}
 				span#opening-time {
 
-					font-size: 80%;
+					font-size: 65%;
 
 
 				}
 			}
 
 			#toggle-menu,button {
-
-				font-size: 0.8em;
+				left:84vw;
+				font-size: 0.85em;
 			}
+
 			nav {
 				height: 40px;
-				margin-bottom: 0px;
+
 
 				ul#navi {
 					
@@ -6026,15 +6037,15 @@
 					}
 				}
 				aside#language-box {
-					width: 30%;
+					width: 55%;
 
 					form {
 						span {
 
-							font-size: 0.7em;
+							font-size: 0.75em;
 						}
 						select {
-							font-size: 0.65em;
+							font-size: 0.7em;
 
 						}
 					}
@@ -6044,23 +6055,23 @@
 		}
 
 		#side-bar-btn{
-			left: 89vw;
+			left: 84vw;
 
 		}
 
 		#contact-bar-btn{
 			font-size: 0.75em;
-			left: 89vw;
+			left: 84vw;
 
 		}
 
 		#leftside {
-			width: 30%;
-			padding-top: 1%;
-			display: none;
+			width: 50%;
+
+
 			.leftsidebox {
 				width: 96%;
-				margin-bottom: 1%;
+
 				a {
 					margin-left: 10px;
 					font-size: 0.9em;
@@ -6118,7 +6129,7 @@
 
 				div.destinations {
 					width: 91%;
-					padding: 2.5%;
+					
 					figure {
 						margin: 0;
 						img {
@@ -6234,7 +6245,7 @@
 					letter-spacing: 0.05em;
 				}
 				div.offerbox {
-					width: 46%;
+					width: 48%;
 					figure {
 						margin: 2% 0;
 						img {
@@ -6326,7 +6337,7 @@
 				figure {
 					width: 100%;
 					img {
-						width: 27%;
+						width: 23%;
 					}
 					figcaption {
 						width: 71%;
@@ -6445,14 +6456,15 @@
 	#wrapper {
 		width: 94%;
 		header {
-			height: 100px;
+
 			figure#logo {
 				height: auto;
+				width: 67%;
 				
 
 			}
 			aside.contact {
-				width: 33%;
+				width: 30%;
 
 				span.tele {
 					margin: 0;
@@ -6465,7 +6477,7 @@
 					}
 
 					a#contact-number {
-
+						font-size: 0.75em;
 						
 
 						&:active {
@@ -6475,14 +6487,14 @@
 				}
 				span#opening-time {
 
-					font-size: 80%;
+					font-size: 60%;
 
 
 				}
 			}
 
 			#toggle-menu,button {
-
+				left: 81vw;
 				font-size: 0.8em;
 
 			}
@@ -6493,12 +6505,12 @@
 
 				ul#navi {
 					
-					top: 17vh;
+					top: 5vh;
 					li {
 
 						line-height: 50px;
 						a {
-							font-size: 0.9em;
+							font-size: 0.85em;
 
 							&:hover {
 								line-height: 50px;
@@ -6508,18 +6520,18 @@
 					li:nth-of-type(2){
 						margin-bottom: 0.2em;
 						a{
-							font-size:0.9em;
+							font-size:0.85em;
 
 						}
 					}
 				}
 				aside#language-box {
-					width: 33%;
+					width: 55%;
 
 					form {
 						span {
 
-							font-size: 0.7em;
+							font-size: 0.8em;
 						}
 						select {
 							font-size: 0.65em;
@@ -6532,27 +6544,28 @@
 		}
 
 		#side-bar-btn{
-			left: 89vw;
+			left: 81vw;
 
 		}
 
 		#contact-bar-btn{
-			top: 34vh;
+			left: 81vw;
+			top: 40vh;
 
 		}
 
 		#leftside {
-			width: 30%;
-			padding-top: 1%;
-			display: none;
+			width: 60%;
+
+			
 			.leftsidebox {
 				width: 96%;
-				margin-bottom: 1%;
+
 				a {
-					margin-left: 10px;
+
 					font-size: 0.9em;
 					&:hover {
-						height: 30px;
+
 						line-height: 30px;
 					}
 				}
@@ -6605,7 +6618,7 @@
 
 				div.destinations {
 					width: 91%;
-					padding: 2.5%;
+					
 					figure {
 						margin: 0;
 						img {
@@ -6716,7 +6729,7 @@
 					letter-spacing: 0.05em;
 				}
 				div.offerbox {
-					width: 46%;
+					width: 48%;
 					figure {
 						margin: 2% 0;
 						img {
@@ -6794,16 +6807,14 @@
 			}
 
 			.holiday_details {
+				padding: 0.5%;
 
-				padding: 1%;
-				width: 96%;
 				h1 {
 					width: 70%;
-					line-height: 40px;
 					font-size: 0.95em;
 				}
 				span.holidayprice {
-					font-size: 0.8em;
+					font-size: 0.7em;
 
 					.offerbox-price {
 						font-weight: bold;
@@ -6833,8 +6844,7 @@
 			}
 
 			.holiday_details_small {
-				width: 90%;
-				margin: 1em auto;
+
 				h1 {
 					font-size: 0.85em;
 					line-height: 20px;
@@ -6928,17 +6938,17 @@
 
 @media only screen and (max-width: 375px) {
 	#wrapper {
-		width: 94%;
+		width: 98%;
 
 		header {
 
 			figure#logo {
 				height: auto;
-    		width: 220px;
+    		width: 60%;
 
 			}
 			aside.contact {
-
+				width: 36%;
 				span.tele {
 					margin: 0;
 
@@ -6950,9 +6960,8 @@
 					}
 
 					a#contact-number {
-						width:84%;
-						
-
+						width:84%;						
+						font-size:0.85em;
 						&:active {
 							color: #fff;
 						}
@@ -6960,14 +6969,14 @@
 				}
 				span#opening-time {
 
-					font-size: 80%;
+					font-size: 60%;
 
 
 				}
 			}
 
 			#toggle-menu,button {
-				top: 10vh;
+
 				font-size: 0.8em;
 			}
 			nav {
@@ -6975,8 +6984,8 @@
 				margin-bottom: 0px;
 
 				ul#navi {
-					top: 12vh;
-					width: 96%;
+
+					width: 60%;
 					li {
 
 						a {
@@ -6997,15 +7006,15 @@
 					}
 				}
 				aside#language-box {
-					width: 33%;
+					width: 55%;
 
 					form {
 						label {
 
-							font-size: 0.65em;
+							font-size: 0.8em;
 						}
 						select {
-							font-size: 0.65em;
+							font-size: 0.7em;
 
 						}
 					}
@@ -7015,29 +7024,28 @@
 		}
 
 		#side-bar-btn{
-			left: 89vw;
-			top:34vw;
+			left: 81vw;
 
 		}
 
 		#contact-bar-btn{
-			top: 12vh;
+			top: 40vh;
 
 		}
 
 		#leftside {
-			width: 30%;
-			padding-top: 1%;
-			display: none;
+			width: 60%;
+
+
 			.leftsidebox {
 				width: 96%;
-				margin-bottom: 1%;
+
 				a {
-					margin-left: 10px;
+
 					font-size: 0.9em;
 					&:hover {
 						height: 30px;
-						line-height: 30px;
+
 					}
 				}
 				h2 {
@@ -7089,7 +7097,7 @@
 
 				div.destinations {
 					width: 91%;
-					padding: 2.5%;
+					
 					figure {
 						margin: 0;
 						img {
@@ -7134,6 +7142,7 @@
 				}
 			}
 		}
+
 		#leftside3 {
 			width:60%;
 
@@ -7153,6 +7162,7 @@
 				}
 			}
 		}
+
 		#contactside{
 			
 			#contact-details {
@@ -7174,6 +7184,7 @@
 				}
 			}
 		}
+
 		#content {
 			width: 100%;
 			height: auto;
@@ -7229,6 +7240,7 @@
 			font-size: 0.9em;
 
 		}
+
 		#content2 {
 			width: 100%;
 			padding: 1%;
@@ -7280,8 +7292,6 @@
 
 			.holiday_details {
 
-
-				width: 96%;
 				h1 {
 
 					font-size: 0.9em;
@@ -7306,7 +7316,7 @@
 
 						}
 						button {
-
+							width: 100%;
 							font-size: 0.85em;
 
 						}
@@ -7317,13 +7327,13 @@
 			}
 
 			.holiday_details_small {
-				width: 90%;
-				margin: 1em auto;
+				margin: 0.5em auto;
+
 				h1 {
 					font-size: 0.85em;
 				}
 				span.holidayprice {
-					font-size: 0.75em;
+					font-size: 0.7em;
 					.offerbox-price {
 						display: inline-block;
 					}
@@ -7419,12 +7429,12 @@
 		header {
 
 			figure#logo {
-				width: 210px;
+				width: 58%;
 
 
 			}
 			aside.contact {
-
+				width: 36%;
 				span.tele {
 					margin: 0;
 
@@ -7436,7 +7446,7 @@
 					}
 
 					a#contact-number {
-						font-size: 0.8em;
+						font-size: 0.75em;
 
 						&:active {
 							color: #fff;
@@ -7445,13 +7455,13 @@
 				}
 				span#opening-time {
 					line-height: 25px;
-					font-size: 75%;
+					font-size: 65%;
 
 
 				}
 			}
 			#toggle-menu,button {
-				
+				left: 79vw;
 				font-size: 0.85em;
 			}
 
@@ -7460,7 +7470,6 @@
 				margin-bottom: 0px;
 
 				ul#navi{
-					top: 12vh;
 
 					li {
 						width: 100%;
@@ -7477,15 +7486,15 @@
 					}
 				}
 				aside#language-box {
-					width: 33%;
+					width: 55%;
 
 					form {
 						label {
 
-							font-size: 0.6em;
+							font-size: 0.75em;
 						}
 						select {
-							font-size: 0.6em;
+							font-size: 0.7em;
 
 						}
 					}
@@ -7495,22 +7504,26 @@
 		}
 
 		#side-bar-btn{
-			left: 89vw;
+			left: 79vw;
+
+		}
+
+		#contact-bar-btn{
+			left: 79vw;
 
 		}
 
 		#leftside {
-			width: 30%;
-			padding-top: 1%;
+
 			.leftsidebox {
 				width: 96%;
-				margin-bottom: 1%;
+
 				a {
-					margin-left: 10px;
+
 					font-size: 0.9em;
 					&:hover {
 						height: 30px;
-						line-height: 30px;
+
 					}
 				}
 				h2 {
@@ -7562,7 +7575,7 @@
 
 				div.destinations {
 					width: 91%;
-					padding: 2.5%;
+					
 					figure {
 						margin: 0;
 						img {
@@ -7610,6 +7623,7 @@
 				}
 			}
 		}
+
 		#leftside3 {
 			width:60%;
 
@@ -7629,6 +7643,7 @@
 				}
 			}
 		}
+
 		#contactside{
 			
 			#contact-details {
@@ -7650,6 +7665,7 @@
 				}
 			}
 		}
+
 		#content {
 			width: 100%;
 			height: auto;
@@ -7702,6 +7718,7 @@
 			font-size: 0.9em;
 
 		}
+
 		#content2 {
 			width: 100%;
 			padding: 1%;
@@ -7752,11 +7769,15 @@
 			.holiday_details {
 
 				h1 {
-					width: 61%;
+					width: 55%;
 					font-size: 0.8em;
+					line-height: 20px;
 				}
+
 				span.holidayprice {
-					font-size: 0.75em;
+
+					font-size: 0.7em;
+					width: 44%;
 
 					.offerbox-price {
 						font-weight: bold;
@@ -7765,18 +7786,18 @@
 				figure {
 					width: 100%;
 					img {
-						width: 38%;
+						width: 35%;
 					}
 					figcaption {
 						width: 60%;
 
 						p {
-							font-size: 0.75em;
+							font-size: 0.85em;
 
 						}
 						button {
-							width: 80%;
-							font-size: 0.85em;
+							
+							font-size: 0.9em;
 						}
 
 					}
@@ -7786,7 +7807,7 @@
 			}
 
 			.holiday_details_small {
-				width: 90%;
+				width: 100%;
 
 				h1 {
 					font-size: 0.8em;
@@ -7887,13 +7908,11 @@
 
 @media only screen and (max-width: 320px) {
 	#wrapper {
-		width: 94%;
 
 		header {
-			height: 110px;
 
 			figure#logo {
-				width: 190px;
+				width: 58%;
 
 
 			}
@@ -7919,20 +7938,19 @@
 				}
 				span#opening-time {
 
-					font-size: 75%;
+					font-size: 65%;
 
 
 				}
 			}
 			#toggle-menu,button {
 				font-size: 0.8em;
-				top: 12vh;
+
 			}
 
 			nav {
 				height: 40px;
-				margin-bottom: 0px;
-
+	
 				ul#navi {
 					
 					li {
@@ -7955,15 +7973,15 @@
 					}
 				}
 				aside#language-box {
-					width: 35%;
+					width: 60%;
 
 					form {
 						label {
 
-							font-size: 0.6em;
+							font-size: 0.7em;
 						}
 						select {
-							font-size: 0.6em;
+							font-size: 0.65em;
 
 						}
 					}
@@ -7974,22 +7992,20 @@
 
 		#side-bar-btn{
 			
-			top: 12vh;
+			top: 40vh;
 		}
 		#contact-bar-btn{
 			font-size:0.7em;
-			top: 12vh;
 
 		}
 		#leftside {
-			width: 30%;
-			padding-top: 1%;
-			display: none;
+			width: 60%;
+
 			.leftsidebox {
 				width: 96%;
-				margin-bottom: 1%;
+
 				a {
-					margin-left: 10px;
+
 					font-size: 0.9em;
 					&:hover {
 						height: 30px;
@@ -7998,7 +8014,7 @@
 				}
 				h2 {
 					font-size: 1em;
-					text-indent: 2%;
+
 				}
 				#search_form {
 					padding: 2%;
@@ -8045,7 +8061,7 @@
 
 				div.destinations {
 					width: 91%;
-					padding: 2.5%;
+					
 					figure {
 						margin: 0;
 						img {
@@ -8150,6 +8166,8 @@
 				h2 {
 					font-size: 1em;
 					letter-spacing: 0.05em;
+					text-align: center;
+    			text-indent: 0;
 				}
 				div.offerbox {
 					width: 70%;
@@ -8229,13 +8247,13 @@
 			}
 
 			.holiday_details {
-				width: 96%;
+				
 				h1 {
-					width: 61%;
+					width: 55%;
 					font-size: 0.75em;
 				}
 				span.holidayprice {
-					font-size: 0.75em;
+					font-size: 0.7em;
 					.offerbox-price {
 						font-weight: bold;
 					}
@@ -8243,7 +8261,7 @@
 				figure {
 					width: 100%;
 					img {
-						width: 38%;
+						width: 33%;
 					}
 					figcaption {
 						width: 60%;
@@ -8253,7 +8271,7 @@
 
 						}
 						button {
-							width: 80%;
+							
 							font-size: 0.85em;
 						}
 
@@ -8264,8 +8282,8 @@
 			}
 
 			.holiday_details_small {
-				width: 90%;
-				margin: 1.1em auto;
+				
+				
 				h1 {
 					font-size: 0.8em;
 				}

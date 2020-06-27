@@ -67,7 +67,6 @@ export default {
   data: () => {
 
     return {
-      //show: true,
       selected: ' ',
       holidaypackageitems: [],
       filternav: [],  
