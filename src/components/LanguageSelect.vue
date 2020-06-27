@@ -7,16 +7,16 @@
                 </label>
               <select 
                 name="langs" 
-                v-model="this.langs"
+                v-model="this.languages"                
                 v-on:click="itemsSearched($event.target.value);"                                
                 >
                 <option
-                  v-for ="lang in onChange"
-                  :value="lang.value"
-                  :key="lang.id"             
+                  v-for="(language, i) in this.languages"
+                  :value="language.value"
+                  :key="i"             
                       
                 >
-                  {{lang.text}}
+                  {{language.name}}
                   
                 </option>
                 
@@ -27,26 +27,29 @@
 </template>
 
 <script>
+
 import axios from 'axios';
+
+//import langs from './data/languageselectitems'
 
 export default {
 
-  name: "LanguageSelect",     
+  name: "LanguageSelect", 
+  
+   mounted() {
+    axios.get("./data-json/languageselect.json").then(response => (this.languages = response.data));
+     
+  },
 
   data: () => {
 
     return {
       selected: ' ',
-      langs:[],
+      languages:[],
           
             
     };
-  },
-  
-  mounted() {
-    axios.get("./data-json/languageselect.json").then(response => (this.langs = response.data));
-     
-  },
+  }, 
 
   methods:{
 
@@ -63,14 +66,14 @@ export default {
 
       onChange:function (){  
 
-        if(this.selected == "Jamaica" || this.selected == "United_States" || this.selected == "United_Kingdom" || this.selected == "Spain" || this.selected == "France" || this.selected == "Germany" ){
+        if(this.selected === "Jamaica" || this.selected === "United_States" || this.selected === "United_Kingdom" || this.selected === "Spain" || this.selected === "France" || this.selectee === "Germany" ){
 
-          return console.log(this.selected + this.langs[3].value), this.langs         
+          return this.languages         
           
 
         }else{
           
-          return this.langs
+          return this.languages
         }   
           
       }

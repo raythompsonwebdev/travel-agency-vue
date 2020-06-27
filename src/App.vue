@@ -24,7 +24,29 @@
       <nav>
 
         <!---language select-->
-        <LanguageSelect />
+        <aside id="language-box">
+            <form>
+              <label for="languages">Language:
+                  
+                </label>
+              <select 
+                name="languages" 
+                v-model="selected"                
+                v-on:click="itemsSearched($event.target.value);"                                
+                >
+                <option
+                  v-for="(language, i) in onChangeImg"
+                  :value="language.value"
+                  :key="i"             
+                      
+                >
+                  {{language.name}}
+                  
+                </option>
+                
+              </select>
+            </form>
+          </aside>
 
         <button v-on:click="naviFunction" id="toggle-menu">Menu</button>
 
@@ -90,17 +112,17 @@
 
 <script>
 
-import LanguageSelect from "./components/LanguageSelect.vue";
+import axios from 'axios';
+
 
 export default {
   name: "app",
-  components: {
-
-    LanguageSelect
-
-  },
-
+  
+  mounted() {
+    axios.get("./data-json/languageselect.json").then(response => (this.languages = response.data));
      
+  },
+      
   methods: {
 
     naviFunction: function(event) {      
@@ -116,6 +138,11 @@ export default {
       } else {
         el.setAttribute("class", "hide");
       }
+    },
+    itemsSearched: function (id) {
+
+      this.selected = id  
+
     }              
 
   },
@@ -124,10 +151,30 @@ export default {
     return {
       
       phoneNumber: "0208-365-1452",
-      openTime: "Everyday 8am - 9pm"
+      openTime: "Everyday 8am - 9pm",
+      selected: ' ',
+      languages:[],
       
       
     };
+  },
+
+  computed: {
+
+      onChangeImg:function (){  
+
+        if(this.selected === "Jamaica" || this.selected === "United_States" || this.selected === "United_Kingdom" || this.selected === "Spain" || this.selected === "France" || this.selectee === "Germany" ){
+
+          return console.log(this.languages[0].selectedImage),this.languages          
+          
+
+        }else{
+          
+          return this.languages
+        }   
+          
+      }
+
   }
   
 };
