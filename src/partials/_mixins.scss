@@ -1,4 +1,4 @@
-@mixin clearfix {
+/*@mixin clearfix {
   &:before,
   &:after {
     content: '';
@@ -7,7 +7,7 @@
   &:after {
     clear: both;
   }
-}
+}*/
 
 @mixin box-sizing($type:border-box) {
     -webkit-box-sizing: $type; // Android < 2.3, iOS < 4
@@ -32,9 +32,9 @@
 
 @mixin gradient($baseColor, $toColor){
     background-color:$baseColor;
-    background-image: -moz-linear-gradient(top, $baseColor, $toColor); /* FF3.6 */
-    background-image: -webkit-gradient(linear,left top,left bottom, color-stop(0, $baseColor),color-stop(1, $toColor));  /* Saf4+, Chrome */
-    background-image: linear-gradient(top,$baseColor, $toColor);
+    background-image: -moz-linear-gradient(to right, $baseColor, $toColor); /* FF3.6 */
+    background-image: -webkit-linear-gradient(to right, color-stop(0, $baseColor),color-stop(1, $toColor));  /* Saf4+, Chrome */
+    background-image: linear-gradient(to right,$baseColor, $toColor);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$baseColor', EndColorStr='$toColor');   /* IE6â��IE9 */
 }
 
@@ -52,6 +52,6 @@
     -moz--transform: $TransScale;
     -o--transform: $TransScale;
     -ms--transform: $TransScale;
-    transform:$TransScale;	
+    transform:$TransScale;
 
 }
