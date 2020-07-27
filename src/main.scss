@@ -71,7 +71,6 @@
 					margin: 0;
 					padding: 0;
 					width: 100%;
-					float: left;
 					display: block;
 					display:flex;
 					text-align:left;
@@ -94,8 +93,7 @@
 						letter-spacing: 0.01em;
 						font-weight: bold;
 						font-size: 1em;
-						text-indent:0.2em;
-						text-align:left;
+						text-align:center;
 						text-shadow: 1px 1px 1px #000;
 						text-decoration: none;
 						color: $color3;
@@ -1742,7 +1740,7 @@
 					figure {
 						margin: 0;
 						img {
-							width: 38%;
+							width: 47%;
 						}
 						figcaption {
 							width: 50%;
@@ -2150,10 +2148,10 @@
 					form {
 						label {
 
-							font-size: 0.85em;
+							font-size: 0.8em;
 						}
 						select {
-							font-size: 0.9em;
+							font-size: 0.85em;
 
 						}
 					}
@@ -2227,7 +2225,7 @@
 					figure {
 						margin: 0;
 						img {
-							width: 49%;
+							width: 51%;
 						}
 						figcaption {
 							width: 40%;
@@ -2580,7 +2578,7 @@
 
 @media only screen and (max-width: 980px) {
 	#wrapper {
-		width: 85%;
+		width: 90%;
 		header {
 
 			figure#logo {
@@ -2642,7 +2640,7 @@
 					form {
 						label {
 
-							font-size: 0.7em;
+							font-size: 0.75em;
 						}
 						select {
 							font-size: 0.8em;
@@ -2707,7 +2705,7 @@
 					}
 					#searchbtn {
 
-						width: 60%;
+						width: 75%;
 						&:hover {
 							border: 0;
 						}
@@ -2720,12 +2718,12 @@
 					figure {
 						margin: 0;
 						img {
-							width: 48%;
+							width: 50%;
 						}
 						figcaption {
 							width: 45%;
 							h3 {
-								font-size: 0.85em;
+								font-size: 0.8em;
 							}
 							p {
 								font-size: 0.7em;
@@ -2831,7 +2829,7 @@
 					letter-spacing: 0.05em;
 				}
 				div.offerbox {
-					width: 30.5%;
+					width: 32%;
 					figure {
 						margin: 2% 0;
 						img {
@@ -3098,7 +3096,7 @@
 
 						}
 						select {
-							font-size: 0.75em;
+							font-size: 0.7em;
 
 						}
 					}
@@ -3180,8 +3178,8 @@
 							width: 40%;
 							h3 {
 								font-size: 0.8em;
-								line-height: 25px;
-								height: 25px;
+								line-height: 20px;
+								height: 20px;
 							}
 							p {
 								font-size: 0.7em;
@@ -3285,7 +3283,7 @@
 					letter-spacing: 0.05em;
 				}
 				div.offerbox {
-					width: 30%;
+					width: 32%;
 					figure {
 						margin: 2% 0;
 						img {
@@ -3548,7 +3546,7 @@
 
 						}
 						select {
-							font-size: 0.75em;
+							font-size: 0.7em;
 
 						}
 					}
@@ -3587,24 +3585,29 @@
 							width: 96%;
 							select.destination1 {
 								font-size: 0.75em;
+								height:30px;
+								line-height:30px;
 							}
 							select.time_1 {
-
+								height:30px;
+								line-height:30px;
 								font-size: 0.75em;
 							}
 							select#time_2 {
-
+								height:30px;
+								line-height:30px;
 								font-size: 0.75em;
 							}
 						}
 						li.misc_inner {
 							width: 48%;
 							select.misc {
-
+								height:30px;
+								line-height:30px;
 								font-size: 0.75em;
 							}
 							label {
-
+								
 								font-size: 0.75em;
 							}
 						}
@@ -3627,9 +3630,9 @@
 							width: 52%;
 						}
 						figcaption {
-							width: 40%;
+							width: 43%;
 							h3 {
-								font-size: 0.75em;
+								font-size: 0.70em;
 
 							}
 							p {
@@ -3735,7 +3738,7 @@
 					letter-spacing: 0.05em;
 				}
 				div.offerbox {
-					width: 30%;
+					width: 32%;
 					figure {
 						margin: 2% 0;
 						img {
@@ -3972,7 +3975,7 @@
 
 			}
 			aside.contact {
-				width: 22%;
+				width: 20%;
 				
 				span.tele {
 					margin: 0;
@@ -3986,7 +3989,7 @@
 
 					a#contact-number {
 
-						font-size: 0.85em;
+						font-size: 0.8em;
 						
 
 						&:active {
@@ -4005,11 +4008,11 @@
 			#toggle-menu,button {
 				display: block;
 				height: 100px;
-				width: 80px;
+				width: 60px;
 				position: fixed;
 				z-index:500;
-				left: 88vw;
-				top: 23vh;
+				left: 91vw;
+				top: 135px;
 				background-color: $colorbg;
 				border: 0;
 				outline: none;
@@ -4045,17 +4048,16 @@
 					flex-flow: column;
 					li {
 						width: 100%;
-						height: 50px;
+						height: auto;
 						float: none;
 						display: block;
 						margin-bottom: 0.2em;
 						a {
 							font-size: 1em;
-							height: 50px;
-							line-height: 50px;
+							height: 45px;
+							line-height: 45px;
 							&:hover {
-								height: 50px;
-								line-height: 50px;
+
 								box-shadow: none;
 							}
 						}
@@ -4066,10 +4068,10 @@
 						margin-bottom: 0.2em;
 						a{
 							font-size:1em;
-							line-height: 50px;
+							line-height: 45px;
 							&:hover{
-								height:50px;
-								line-height: 50px;
+								height:45px;
+								line-height: 45px;
 								box-shadow: none;
 							}
 						}
@@ -4078,23 +4080,23 @@
 				}
 
 				aside#language-box {
-					width: 40%;
-					margin-left: 0%;
+					width: 30%;
+
 					form {
 						label {
 							width: 35%;
-							font-size: 0.9em;
+							font-size: 0.65em;
 
 						}
 						div#flagImg {
-							width: 25%;
+							width: 20%;
 							margin: 0;
 							height: 35px;
 							padding: 0.25em;
 						}
 						select {
-							width:40%;
-							font-size: 0.65em;
+							width:45%;
+							font-size: 0.7em;
 
 						}
 					}
@@ -4110,9 +4112,9 @@
 			color: #fff;
 			z-index:100;
 			height:100px;
-			width:80px;
-			left: 88vw;
-    	top: 40vh;
+			width:60px;
+			left: 91vw;
+    	top: 240px;
 			border:none;
 			outline:none;
 			&:hover{
@@ -4130,11 +4132,10 @@
 			color: #fff;
 			z-index: 100;
 			height: 100px;
-			left: 88vw;
-			top: 40vh;
+			left: 91vw;
+			top: 240px;
 			border:none;
 			outline:none;
-			font-size:0.75em;
 			&:hover{
 				cursor:pointer;
 				background-color: #fff;
@@ -4230,7 +4231,7 @@
 						figcaption {
 							width: 53%;
 							h3 {
-								font-size: 0.8em;
+								font-size: 0.7em;
 							}
 							p {
 								font-size: 0.7em;
@@ -4348,7 +4349,7 @@
 					letter-spacing: 0.05em;
 				}
 				div.offerbox {
-					width: 30.5%;
+					width: 32%;
 					figure {
 						margin: 2% 0;
 						img {
@@ -4574,7 +4575,7 @@
 
 					a#contact-number {
 
-						font-size: 0.85em;
+						font-size: 0.8em;
 
 
 						&:active {
@@ -4584,7 +4585,7 @@
 				}
 				span#opening-time {
 
-					font-size: 70%;
+					font-size: 65%;
 
 
 				}
@@ -4619,11 +4620,11 @@
 					form {
 						label {
 							
-							font-size: 0.9em;
+							font-size: 0.6em;
 
 						}
 						select {
-							font-size: 0.8em;
+							font-size: 0.7em;
 
 						}
 					}
@@ -4796,7 +4797,7 @@
 					letter-spacing: 0.05em;
 				}
 				div.offerbox {
-					width: 30%;
+					width: 32%;
 					figure {
 						margin: 2% 0;
 						img {
@@ -5004,7 +5005,7 @@
 
 			}
 			aside.contact {
-				width: 25%;
+				width: 24%;
 				span.tele {
 					margin: 0;
 
@@ -5017,7 +5018,7 @@
 
 					a#contact-number {
 						width:84%;
-						font-size: 0.9em;
+						font-size: 0.85em;
 
 
 						&:active {
@@ -5039,42 +5040,47 @@
 			}
 
 			nav {
-				height: 40px;
 				margin-bottom: 0px;
 
 				ul#navi {
 					
 					li {
 						width: 100%;
-						height: 50px;
-						line-height: 50px;
+						height: 45px;
+						line-height: 45px;
+						margin-bottom: 0.2em;
 						a {
 							font-size: 0.9em;
 
 							&:hover {
 
-								line-height: 50px;
+								line-height: 45px;
 							}
 						}
 					}
 					li:nth-of-type(2){
 						margin-bottom: 0.2em;
+						height: 45px;
+						line-height: 45px;
 						a{
 							font-size:0.9em;
+							
 
 						}
 					}
 				}
 				aside#language-box {
-					width: 40%;
+					width: 30%;
 
 					form {
-						span {
+						label {
+							
+							font-size: 0.65em;
 
-							font-size: 0.7em;
 						}
+						
 						select {
-							font-size: 0.75em;
+							font-size: 0.7em;
 
 						}
 					}
@@ -5085,13 +5091,14 @@
 
 		#side-bar-btn{
 
-    		top: 40vh;
+    		top: 240px;
 
 
 		}
 
 		#contact-bar-btn{
 			font-size:0.7em;
+			top: 240px;
 			
     	
 
@@ -5272,7 +5279,7 @@
 					letter-spacing: 0.05em;
 				}
 				div.offerbox {
-					width: 30%;
+					width: 32%;
 					figure {
 						margin: 2% 0;
 						img {
@@ -5482,7 +5489,7 @@
 
 			}
 			aside.contact {
-				width: 27%;
+				width: 25%;
 
 				span.tele {
 					margin: 0;
@@ -5513,15 +5520,13 @@
 			}
 
 			#toggle-menu,button {
-				top: 23vh;
+
 				font-size: 0.85em;
-				left: 87vw;
+				left: 90vw;
 			}
 
 			nav {
 				
-				height: 40px;
-
 
 				ul#navi {
 					top: 5vh;
@@ -5534,7 +5539,7 @@
 							font-size: 0.9em;
 
 							&:hover {
-								height: 50px;
+								height: 45px;
 
 							}
 
@@ -5542,18 +5547,18 @@
 					}
 				}
 				aside#language-box {
-					width: 40%;
+					width: 30%;
 					margin-left: 0%;
 					form {
 						label {
 
-							font-size: 0.75em;
+							font-size: 0.65em;
 						}
 						div#flagImg {							
 							padding: 0.5em;
 					}
 						select {
-							font-size: 0.75em;
+							font-size: 0.65em;
 
 						}
 					}
@@ -5563,13 +5568,14 @@
 		}
 
 		#side-bar-btn{			
-    	left: 87vw;
+    	left: 90vw;
     	
 
 		}
 
 		#contact-bar-btn{
 			font-size: 0.65em;
+			left: 90vw;
 			
     	
 		}
@@ -5750,7 +5756,7 @@
 					letter-spacing: 0.05em;
 				}
 				div.offerbox {
-					width: 30%;
+					width: 32%;
 					figure {
 						margin: 2% 0;
 						img {
@@ -5973,6 +5979,7 @@
 
 			figure#logo {
 				height: auto;
+				width: 50%;
 
 			}
 			aside.contact {
@@ -6007,8 +6014,7 @@
 			}
 
 			#toggle-menu,button {
-				left:84vw;
-				font-size: 0.85em;
+				left:87vw;
 			}
 
 			nav {
@@ -6019,17 +6025,17 @@
 					
 
 					li {
-						line-height: 50px;
+						
 						a {
 							font-size: 0.8em;
 
 							&:hover {
-								line-height: 50px;
+								line-height: 45px;
 							}
 						}
 					}
 					li:nth-of-type(2){
-						margin-bottom: 0.2em;
+						
 						a{
 							font-size:0.9em;
 
@@ -6037,15 +6043,15 @@
 					}
 				}
 				aside#language-box {
-					width: 55%;
+					width: 40%;
 
 					form {
 						span {
 
-							font-size: 0.75em;
+							font-size: 0.6em;
 						}
 						select {
-							font-size: 0.7em;
+							font-size: 0.6em;
 
 						}
 					}
@@ -6055,13 +6061,12 @@
 		}
 
 		#side-bar-btn{
-			left: 84vw;
+			left: 87vw;
 
 		}
 
 		#contact-bar-btn{
-			font-size: 0.75em;
-			left: 84vw;
+			left: 87vw;
 
 		}
 
@@ -6459,7 +6464,7 @@
 
 			figure#logo {
 				height: auto;
-				width: 67%;
+				width: 50%;
 				
 
 			}
@@ -6494,13 +6499,12 @@
 			}
 
 			#toggle-menu,button {
-				left: 81vw;
-				font-size: 0.8em;
+				left: 85vw;
 
 			}
 
 			nav {
-				height: 40px;
+
 				margin-bottom: 0px;
 
 				ul#navi {
@@ -6508,17 +6512,16 @@
 					top: 5vh;
 					li {
 
-						line-height: 50px;
 						a {
 							font-size: 0.85em;
 
 							&:hover {
-								line-height: 50px;
+								line-height: 45px;
 							}
 						}
 					}
 					li:nth-of-type(2){
-						margin-bottom: 0.2em;
+
 						a{
 							font-size:0.85em;
 
@@ -6526,15 +6529,14 @@
 					}
 				}
 				aside#language-box {
-					width: 55%;
 
 					form {
 						span {
 
-							font-size: 0.8em;
+							font-size: 0.6em;
 						}
 						select {
-							font-size: 0.65em;
+							font-size: 0.6em;
 
 						}
 					}
@@ -6544,13 +6546,13 @@
 		}
 
 		#side-bar-btn{
-			left: 81vw;
+			left: 85vw;
 
 		}
 
 		#contact-bar-btn{
-			left: 81vw;
-			top: 40vh;
+			left: 85vw;
+			top: 240px
 
 		}
 
@@ -6944,11 +6946,11 @@
 
 			figure#logo {
 				height: auto;
-    		width: 60%;
+    		width: 65%;
 
 			}
 			aside.contact {
-				width: 36%;
+				width: 32%;
 				span.tele {
 					margin: 0;
 
@@ -6961,7 +6963,7 @@
 
 					a#contact-number {
 						width:84%;						
-						font-size:0.85em;
+						font-size:0.70em;
 						&:active {
 							color: #fff;
 						}
@@ -6975,12 +6977,14 @@
 				}
 			}
 
+			
+
 			#toggle-menu,button {
 
 				font-size: 0.8em;
 			}
 			nav {
-				height: 40px;
+
 				margin-bottom: 0px;
 
 				ul#navi {
@@ -6992,13 +6996,13 @@
 							font-size: 0.9em;
 
 							&:hover {
-								line-height: 50px;
+								line-height: 45px;
 							}
 
 						}
 					}
 					li:nth-of-type(2){
-						margin-bottom: 0.2em;
+
 						a{
 							font-size:0.9em;
 
@@ -7006,15 +7010,14 @@
 					}
 				}
 				aside#language-box {
-					width: 55%;
-
+					width:45%;
 					form {
 						label {
 
-							font-size: 0.8em;
+							font-size: 0.65em;
 						}
 						select {
-							font-size: 0.7em;
+							font-size: 0.65em;
 
 						}
 					}
@@ -7024,12 +7027,12 @@
 		}
 
 		#side-bar-btn{
-			left: 81vw;
+			left: 85vw;
 
 		}
 
 		#contact-bar-btn{
-			top: 40vh;
+			left: 85vw;
 
 		}
 
@@ -7429,24 +7432,24 @@
 		header {
 
 			figure#logo {
-				width: 58%;
+				width: 55%;
 
 
 			}
 			aside.contact {
-				width: 36%;
+				width: 33%;
 				span.tele {
 					margin: 0;
 
 
 					img{
 
-						width:16%;
+						width:18%;
 
 					}
 
 					a#contact-number {
-						font-size: 0.75em;
+						font-size: 0.65em;
 
 						&:active {
 							color: #fff;
@@ -7455,18 +7458,18 @@
 				}
 				span#opening-time {
 					line-height: 25px;
-					font-size: 65%;
+					font-size: 55%;
 
 
 				}
 			}
 			#toggle-menu,button {
-				left: 79vw;
+				left: 82vw;
 				font-size: 0.85em;
 			}
 
 			nav {
-				height: 40px;
+
 				margin-bottom: 0px;
 
 				ul#navi{
@@ -7479,19 +7482,18 @@
 
 							&:hover {
 
-								line-height: 50px;
+								line-height: 45px;
 							}
 
 						}
 					}
 				}
 				aside#language-box {
-					width: 55%;
 
 					form {
 						label {
 
-							font-size: 0.75em;
+							font-size: 0.6em;
 						}
 						select {
 							font-size: 0.7em;
@@ -7504,12 +7506,14 @@
 		}
 
 		#side-bar-btn{
-			left: 79vw;
+			left: 82vw;
+			font-size: 0.85em;
 
 		}
 
 		#contact-bar-btn{
-			left: 79vw;
+			left: 82vw;
+			font-size: 0.85em;
 
 		}
 
@@ -7938,7 +7942,7 @@
 				}
 				span#opening-time {
 
-					font-size: 65%;
+					font-size: 55%;
 
 
 				}
@@ -7949,8 +7953,7 @@
 			}
 
 			nav {
-				height: 40px;
-	
+					
 				ul#navi {
 					
 					li {
@@ -7959,7 +7962,7 @@
 							font-size: 0.9em;
 
 							&:hover {
-								height: 50px;
+								height: 45px;
 
 							}
 						}
@@ -7973,15 +7976,14 @@
 					}
 				}
 				aside#language-box {
-					width: 60%;
 
 					form {
 						label {
 
-							font-size: 0.7em;
+							font-size: 0.6em;
 						}
 						select {
-							font-size: 0.65em;
+							font-size: 0.6em;
 
 						}
 					}
@@ -7992,7 +7994,7 @@
 
 		#side-bar-btn{
 			
-			top: 40vh;
+			top: 240px;
 		}
 		#contact-bar-btn{
 			font-size:0.7em;
