@@ -1,0 +1,57 @@
+=clearfix
+  &:before,
+  &:after
+    content: ''
+    display: table
+
+  &:after
+    clear: both
+
+=box-sizing($type: border-box)
+  -webkit-box-sizing: $type
+
+  // Android < 2.3, iOS < 4
+  -moz-box-sizing: $type
+
+  // Firefox < 29
+  box-sizing: $type
+
+  // Chrome, IE 8+, Opera, Safari 5.1
+
+=boxShadow($shadow...)
+  -webkit-box-shadow: $shadow
+  -moz-box-shadow: $shadow
+  -o-box-shadow: $shadow
+  box-shadow: $shadow
+
+=borderRaduis($radius...)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -o-border-radius: $radius
+  border-radius: $radius
+
+=gradient($baseColor, $toColor)
+  background-color: $baseColor
+  background-image: -moz-linear-gradient(top, $baseColor, $toColor)
+
+  /* FF3.6
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $baseColor), color-stop(1, $toColor))
+
+  /* Saf4+, Chrome
+  background-image: linear-gradient(top, $baseColor, $toColor)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$baseColor', EndColorStr='$toColor')
+
+  /* IE6├ó´┐¢´┐¢IE9
+
+=TranSition($TranSition...)
+  -webkit-transition: $TranSition
+  -moz-transition: $TranSition
+  -o-transition: $TranSition
+  transition: $TranSition
+
+=TransScale($TransScale)
+  -webkit--transform: $TransScale
+  -moz--transform: $TransScale
+  -o--transform: $TransScale
+  -ms--transform: $TransScale
+  transform: $TransScale
