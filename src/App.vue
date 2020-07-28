@@ -19,28 +19,51 @@
           </span>
           <span id="opening-time">{{openTime}}</span>
         </aside>
-        <nav>         
-
+        <nav>
           <button v-on:click="naviFunction" id="toggle-menu">Menu</button>
 
           <ul id="navi" class="hide" v-if="naviFunction">
             <li>
-              <router-link to="/" class="nav-item r-item">Home</router-link>
+              <router-link
+                to="/"
+                class="nav-item r-item"
+                v-on:click.native="InlineButtonClickHandler"
+              >Home</router-link>
             </li>
             <li>
-              <router-link to="/HolidayPackages" class="nav-item r-item">HolidayPackages</router-link>
+              <router-link
+                to="/HolidayPackages"
+                class="nav-item r-item"
+                v-on:click.native="InlineButtonClickHandler"
+              >HolidayPackages</router-link>
             </li>
             <li>
-              <router-link to="/BestDeal" class="nav-item r-item">BestDeal</router-link>
+              <router-link
+                to="/BestDeal"
+                class="nav-item r-item"
+                v-on:click.native="InlineButtonClickHandler"
+              >BestDeal</router-link>
             </li>
             <li>
-              <router-link to="/Services" class="nav-item r-item">Services</router-link>
+              <router-link
+                to="/Services"
+                class="nav-item r-item"
+                v-on:click.native="InlineButtonClickHandler"
+              >Services</router-link>
             </li>
             <li>
-              <router-link to="/AboutUs" class="nav-item r-item">AboutUs</router-link>
+              <router-link
+                to="/AboutUs"
+                class="nav-item r-item"
+                v-on:click.native="InlineButtonClickHandler"
+              >AboutUs</router-link>
             </li>
             <li>
-              <router-link to="/Contact" class="nav-item r-item">Contact</router-link>
+              <router-link
+                to="/Contact"
+                class="nav-item r-item"
+                v-on:click.native="InlineButtonClickHandler"
+              >Contact</router-link>
             </li>
           </ul>
           <!--LanguageSelect Item component -->
@@ -105,10 +128,22 @@ export default {
   mounted() {
     axios
       .get("./data-json/languageselect.json")
-      .then(response => (this.languages = response.data));
+      .then((response) => (this.languages = response.data));
   },
   methods: {
-    naviFunction: function(event) {
+    InlineButtonClickHandler: function (e) {
+      e.preventDefault();
+
+      var slideoutMenu = document.querySelector("#navi");
+
+      if (slideoutMenu.classList.contains("show")) {
+        slideoutMenu.setAttribute("class", "hide");
+      } else {
+        slideoutMenu.setAttribute("class", "show");
+      }
+    },
+
+    naviFunction: function (event) {
       event.preventDefault();
       var el = document.querySelector("#navi");
       var box = el.getAttribute("class");
@@ -118,12 +153,12 @@ export default {
         el.setAttribute("class", "hide");
       }
     },
-    itemsSearched: function(id) {
+    itemsSearched: function (id) {
       this.selected = id;
     },
     imgUrlAlt(event) {
       event.target.src = "/assets/images/flags/default.jpg";
-    }
+    },
   },
   data: () => {
     return {
@@ -131,11 +166,11 @@ export default {
       openTime: "Everyday 8am - 9pm",
       selected: " ",
       defaultImage: "/assets/images/flags/default.jpg",
-      languages: []
+      languages: [],
     };
   },
   computed: {
-    onChangeImg: function() {
+    onChangeImg: function () {
       if (this.selected === "nothing") {
         return this.languages;
       } else if (this.selected === "United_Kingdom") {
@@ -153,8 +188,8 @@ export default {
       } else {
         return this.languages;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

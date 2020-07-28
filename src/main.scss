@@ -4075,7 +4075,7 @@
 					position: fixed;
 					z-index: 100;
 					opacity:0;
-					top: 5vh;
+					top: 0;
 					width: 50%;
 					height: auto;
 					float: none;
@@ -4199,7 +4199,7 @@
 
 		#leftside {
 			position:fixed;
-			top: 5vh;
+			top: 0;
 			width: 250px;
 
 			background-color:#fff;
@@ -4298,7 +4298,7 @@
 		#leftside2 {
 			position:fixed;
 			z-index:100;
-			top: 5vh;
+			top: 0;
 			width: 200px;
 			margin-top: 1%;
 			@include TranSition(all 1s ease);
@@ -4310,7 +4310,7 @@
 				width: 90%;
 
 				li {
-					margin: 0 0 2% 0;
+					margin: 0 0 1% 0;
 					button {
 						font-size: 0.8em;
 
@@ -4326,7 +4326,7 @@
 		#leftside3 {
 			position:fixed;
 			z-index:100;
-			top: 5vh;
+			top: 0;
 			width: 200px;
 			margin-top: 1%;
 			@include TranSition(all 1s ease);
@@ -4656,7 +4656,7 @@
 				margin-bottom: 0px;
 
 				ul#navi {
-					top: 5vh;
+
 					li {
 						width: 100%;
 
@@ -5588,7 +5588,7 @@
 				
 
 				ul#navi {
-					top: 5vh;
+
 					width:60%;
 
 					li {
@@ -6036,15 +6036,15 @@
 
 			figure#logo {
 				height: auto;
-				width:46%;
+				width:45%;
 
 			}
 			#midsection {
-				width: 23%;
+				width: 25%;
 				
 			}
 			aside.contact {
-				width: 27%;
+				width: 25%;
 
 				span.tele {
 					margin: 0;
@@ -6059,7 +6059,7 @@
 
 					a#contact-number {
 
-						font-size: 0.8em;
+						font-size: 0.75em;
 
 						&:active {
 							color: #fff;
@@ -6586,8 +6586,7 @@
 				margin-bottom: 0px;
 
 				ul#navi {
-					
-					top: 5vh;
+
 					li {
 
 						a {
@@ -6892,9 +6891,13 @@
 				h1 {
 					width: 70%;
 					font-size: 0.95em;
+					line-height: 30px;
+					height: 30px;
 				}
 				span.holidayprice {
 					font-size: 0.7em;
+					line-height: 35px;
+					height: 35px;
 
 					.offerbox-price {
 						font-weight: bold;
@@ -7024,7 +7027,7 @@
 
 			figure#logo {
 				height: auto;
-				width:60%;
+				width:56%;
 
 			}
 			#midsection {
@@ -7513,7 +7516,7 @@
 
 			figure#logo {
 				height: auto;
-				width:60%;
+				width:56%;
 
 			}
 			#midsection {
@@ -7534,7 +7537,7 @@
 					}
 
 					a#contact-number {
-						font-size: 0.67em;
+						font-size: 0.65em;
 
 						&:active {
 							color: #fff;
@@ -7859,13 +7862,15 @@
 				h1 {
 					width: 55%;
 					font-size: 0.8em;
-					line-height: 20px;
+					line-height: 25px;
+					height: 25px;
 				}
 
 				span.holidayprice {
 
 					font-size: 0.7em;
 					width: 44%;
+					line-height: 30px;
 
 					.offerbox-price {
 						font-weight: bold;
@@ -8000,7 +8005,7 @@
 		header {
 
 			figure#logo {
-				width: 68%;
+				width: 66%;
 
 
 			}
