@@ -1,6 +1,6 @@
 <template>
   <div class="Contact">
-    <button v-on:click="contactFunction" id="side-bar-btn">CONTACT</button>
+    <button v-on:click="contactFunction" id="side-bar-btn">Contact</button>
 
     <!--contact details box-->
     <aside id="contactside" class="hide" v-if="contactFunction">

@@ -9,7 +9,7 @@
           <img :src="'assets/images/travel-agency-website-logo.png'" />
         </figure>
 
-        <!--<div id="midsection"></div>-->
+        <div id="midsection"></div>
 
         <!---contact number-->
         <aside class="contact">
@@ -19,27 +19,7 @@
           </span>
           <span id="opening-time">{{openTime}}</span>
         </aside>
-        <nav>
-          <!--LanguageSelect Item component -->
-          <aside id="language-box">
-            <form>
-              <label for="languages">Language:</label>
-              <div id="flagImg">
-                <img @error="imgUrlAlt" :src="'/assets/images/flags/' + selected + '.jpg'" />
-              </div>
-              <select
-                name="languages"
-                v-model="selected"
-                v-on:click="itemsSearched($event.target.value);"
-              >
-                <option
-                  v-for="(language, i) in onChangeImg"
-                  :value="language.value"
-                  :key="i"
-                >{{language.name}}</option>
-              </select>
-            </form>
-          </aside>
+        <nav>         
 
           <button v-on:click="naviFunction" id="toggle-menu">Menu</button>
 
@@ -63,6 +43,26 @@
               <router-link to="/Contact" class="nav-item r-item">Contact</router-link>
             </li>
           </ul>
+          <!--LanguageSelect Item component -->
+          <aside id="language-box">
+            <form>
+              <label for="languages">Language:</label>
+              <div id="flagImg">
+                <img @error="imgUrlAlt" :src="'/assets/images/flags/' + selected + '.jpg'" />
+              </div>
+              <select
+                name="languages"
+                v-model="selected"
+                v-on:click="itemsSearched($event.target.value);"
+              >
+                <option
+                  v-for="(language, i) in onChangeImg"
+                  :value="language.value"
+                  :key="i"
+                >{{language.name}}</option>
+              </select>
+            </form>
+          </aside>
         </nav>
       </header>
 

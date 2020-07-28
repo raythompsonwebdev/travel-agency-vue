@@ -3,7 +3,6 @@
   <aside id="leftside2" class="hide" v-if="leftSideFunction">
     <button v-on:click="leftSideFunction" id="side-bar-btn">SIDE</button>
 
-    <br />
     <h1>Filter By Season</h1>
     <ul>
       <li v-for="season in seasons" v-bind:key="season.id">
