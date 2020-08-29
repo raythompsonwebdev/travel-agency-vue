@@ -7,10 +7,7 @@
         <!---logo-->
         <figure id="logo">
           <img :src="'assets/images/travel-agency-website-logo.png'" />
-        </figure>
-
-        <div id="midsection"></div>
-
+        </figure>    
         <!---contact number-->
         <aside class="contact">
           <span class="tele">
@@ -18,7 +15,9 @@
             <a :href="`tel:${phoneNumber}`" id="contact-number">{{phoneNumber}}</a>
           </span>
           <span id="opening-time">{{openTime}}</span>
-        </aside>
+        </aside>        
+      </header>
+
         <nav>
           <button v-on:click="naviFunction" id="toggle-menu">Menu</button>
 
@@ -87,7 +86,6 @@
             </form>
           </aside>
         </nav>
-      </header>
 
       <transition name="router-anim">
         <!--view-->

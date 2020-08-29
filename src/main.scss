@@ -17,28 +17,28 @@
 		/*header*/
 		header {
 			width: 100%;
-			height: 109px;
+			height: 70px;
 			background-color: #f9f9f9;
-			border-bottom: 1px solid $colorgry2;
+			
 			display: -webkit-flex;
 			display: -ms-flexbox;
 			display: flex;
 			-webkit-flex-flow: row wrap;
 			-ms-flex-flow: row wrap;
 			flex-flow: row wrap;
-			-webkit-justify-content: space-between;
-			-ms-flex-pack: space-between;
-			justify-content: space-between;
+			-webkit-justify-content:space-between;
+      -ms-flex-pack: space-between;
+      justify-content: space-between;
 
 			/*Logo*/
 			figure#logo {
 				height: auto;
-				width: 20%;
+				width: auto;
 				margin: 0px;
 				text-indent: -9999px;
-				-webkit-flex: 0 1 auto;
-				-ms-flex: 0 1 auto;
-				flex: 0 1 auto;
+				-webkit-flex: 0 0 auto;
+				-ms-flex: 0 0 auto;
+				flex: 0 0 auto;
 
 				img {
 					display: block;
@@ -47,19 +47,10 @@
 				}
 			}
 
-			#midsection{
-				width:65%;
-				-webkit-flex: 0 1 auto;
-				-ms-flex: 0 1 auto;
-				flex: 0 1 auto;
-
-
-			}
-
 			aside.contact {
-				-webkit-flex: 0 1 auto;
-				-ms-flex: 0 1 auto;
-				flex: 0 1 auto;
+				-webkit-flex: 0 0 auto;
+				-ms-flex: 0 0 auto;
+				flex: 0 0 auto;
 				width: 15%;
 				height: auto;
 				margin: 1% 0 0 0;
@@ -77,7 +68,7 @@
 
 					img{
 
-						width:13%;
+						width:auto;
 						display:block;
 						margin: 0.2em;
 
@@ -88,7 +79,7 @@
 						width: 87%;
 						padding: 0;
 						display: inline-block;
-						line-height: 30px;
+						line-height: 25px;
 						letter-spacing: 0.01em;
 						font-weight: bold;
 						font-size: 1em;
@@ -119,165 +110,163 @@
 					text-indent:unset;
 
 				}
-			}
+			}			
+		}
+		/*navigation*/
+		nav{
+			width: 100%;
+			height: 40px;
+			margin-bottom: 0px;
+			opacity:1;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-direction: row;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			border-bottom: 1px solid $colorgry2;
 
-			/*mobile menu button*/
-			#toggle-menu,button {
-				display: none;
-			}
-
-			/*navigation*/
-			nav{
-				width: 100%;
-				height: 40px;
-				margin-bottom: 0px;
-				opacity:1;
+			ul#navi {
+				height: 100%;
+				display: block;
+				margin: 0 0.25em 0 0;
+				padding: 0;
+				width: 80%;
+				float: left;
 				display: -webkit-flex;
 				display: -ms-flexbox;
 				display: flex;
 				-webkit-flex-direction: row;
 				-ms-flex-direction: row;
 				flex-direction: row;
-
-				ul#navi {
-					height: 100%;
+				-webkit-justify-content: space-between;
+				-ms-flex-pack: justify;
+				justify-content: space-between;
+				li {
+					list-style: none;
 					display: block;
-					margin: 0 0.25em 0 0;
-					padding: 0;
-					width: 80%;
+					width: 16.71%;
 					float: left;
-					display: -webkit-flex;
-					display: -ms-flexbox;
-					display: flex;
-					-webkit-flex-direction: row;
-					-ms-flex-direction: row;
-					flex-direction: row;
-					-webkit-justify-content: space-between;
-					-ms-flex-pack: justify;
-					justify-content: space-between;
-					li {
-						list-style: none;
-						display: block;
-						width: 16.71%;
-						float: left;
-						padding: 0px;
-						height: 40px;
+					padding: 0px;
+					height: 40px;
+					@include borderRaduis(5px 5px 0px 0px);
+					margin-right: 0.1em;
+					-webkit-flex: 0 1 auto;
+					-ms-flex: 0 1 auto;
+					flex: 0 1 auto;
+					a {
+						text-decoration: none;
+						text-transform:uppercase;
+						width: 100%;
+						font-size: 0.75em;
+						text-align: center;
 						@include borderRaduis(5px 5px 0px 0px);
-						margin-right: 0.1em;
-						-webkit-flex: 0 1 auto;
-						-ms-flex: 0 1 auto;
-						flex: 0 1 auto;
-						a {
+						height: 40px;
+						line-height: 40px;
+						color:$colorpw2;
+						@include gradient($colorblue1, $colorpw1);
+						@include TranSition( all 0.1s linear);
+						display: block;
+						font-weight: bold;
+						letter-spacing: 0.03em;
+
+						&:link {
+							color:$colorpw2;	
+						}
+
+						&:visited {
+							color: $colorsearchbtn;
+							@include gradient($colorpw2, $colorpw);
+
+						}
+						&:focus {
+							color: $colorsearchbtn;
+							@include gradient($colorpw2, $colorpw);
+							text-shadow: none;
+						}
+						&:active {
+							color: $colorsearchbtn;
+							@include gradient($colorpw2, $colorpw);
+							text-shadow: none;
+						}
+						&:hover {
 							text-decoration: none;
-							text-transform:uppercase;
 							width: 100%;
-							font-size: 0.75em;
 							text-align: center;
-							@include borderRaduis(5px 5px 0px 0px);
 							height: 40px;
-							line-height: 40px;
-							color:$colorpw2;
-							@include gradient($colorblue1, $colorpw1);
-							@include TranSition( all 0.1s linear);
-							display: block;
-							font-weight: bold;
-							letter-spacing: 0.03em;
+							color: $colorsearchbtn;
+							@include gradient($colorpw2, $colorpw);
+							font-weight: bold;								
+							border-top: 1px solid $colorgry2;
+							text-shadow: none;
 
-							&:link {
-								color:$colorpw2;	
-							}
-
-							&:visited {
-								color: $colorsearchbtn;
-								@include gradient($colorpw2, $colorpw);
-
-							}
-							&:focus {
-								color: $colorsearchbtn;
-								@include gradient($colorpw2, $colorpw);
-								text-shadow: none;
-							}
-							&:active {
-								color: $colorsearchbtn;
-								@include gradient($colorpw2, $colorpw);
-								text-shadow: none;
-							}
-							&:hover {
-								text-decoration: none;
-								width: 100%;
-								text-align: center;
-								height: 40px;
-								color: $colorsearchbtn;
-								@include gradient($colorpw2, $colorpw);
-								font-weight: bold;								
-								border-top: 1px solid $colorgry2;
-								text-shadow: none;
-
-							}
 						}
 					}
-					
 				}
-
-				aside#language-box {
-					width: 19.5%;
-			
-					form {
-						height:40px;
-						display:flex;
-						
-						label {
-							width: 35%;
-							font-size: 0.8em;
-							display: block;
-							line-height: 35px;
-							height: 35px;
-							border-left: solid 1px #e4e2e2;
-							border-top: solid 1px #e4e2e2;
-							border-bottom: solid 1px #e4e2e2;
-							border-right: none;
-							display: -webkit-flex;
-							display: -ms-flexbox;
-							display: flex;
-							text-indent:0.2em;
-							
-						}
-
-						div#flagImg{
-							width: 25%;	
-							margin: 0;
-							height: 35px;
-							padding:0.25em;
-						}
-						
-						select {
-							height: 35px;
-							line-height: 35px;
-							font-size: 0.85em;
-							width: 40%;
-							border-right: solid 1px #e4e2e2;
-							border-top: solid 1px #e4e2e2;
-							border-bottom: solid 1px #e4e2e2;
-							border-left: none;							
-							background-repeat: no-repeat;
-							background-position: 5% 50%;
-							option{
-								font-size:1em;
-								
-								
-							}
-							
-						}						
-					}
-				}
+				
 			}
 
+			aside#language-box {
+				width: 19.5%;
+		
+				form {
+					height:40px;
+					display:flex;
+					
+					label {
+						width: 35%;
+						font-size: 0.8em;
+						display: block;
+						line-height: 35px;
+						height: 35px;
+						border-left: solid 1px #e4e2e2;
+						border-top: solid 1px #e4e2e2;
+						border-bottom: solid 1px #e4e2e2;
+						border-right: none;
+						display: -webkit-flex;
+						display: -ms-flexbox;
+						display: flex;
+						text-indent:0.2em;
+						
+					}
+
+					div#flagImg{
+						width: 25%;	
+						margin: 0;
+						height: 35px;
+						padding:0.25em;
+					}
+					
+					select {
+						height: 35px;
+						line-height: 35px;
+						font-size: 0.85em;
+						width: 40%;
+						border-right: solid 1px #e4e2e2;
+						border-top: solid 1px #e4e2e2;
+						border-bottom: solid 1px #e4e2e2;
+						border-left: none;							
+						background-repeat: no-repeat;
+						background-position: 5% 50%;
+						option{
+							font-size:1em;
+							
+							
+						}
+						
+					}						
+				}
+			}
+		}	
+		
+		/*mobile menu button*/
+		#toggle-menu,button {
+			display: none;
 		}
 
 		/*mobile filter nav button*/
 		#side-bar-btn{
 			display:none;
-			top:40vh;
 		}
 
 		/*mobile contact page side bar button*/
@@ -470,50 +459,71 @@
 			float: left;
 			margin-top: 1%;
 			background-color: $sideboxbordercolvar;
-			h1 {
-				width: 100%;
-				text-indent: 1em;
-				color: $colorbgvar;
-				display: block;
-				font-size: 0.85em;
-				line-height: 30px;
-				margin: 0 auto;
-			}
-			ul {
-				height: auto;
-				width: 90%;
-				padding: 2%;
-				margin: 0 auto;
-				li {
-					display: block;
-					width: 96%;
-					height: 25px;
-					margin: 0 0 2% 0;
-					button {
-						display: block;
-						height: 100%;
-						font-size: 0.8em;
-						text-transform:capitalize;
-						@include TranSition( all 0.2s linear ease-in-out);
-						width: 100%;
-						@include gradient($colorpw2,
-						$sideboxbordercolvar);
-						line-height: 25px;
-						color: $colorpw1a;
-						letter-spacing: 0.02em;
-						border:none;
-						&:before {
-							content: "<";
-							
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-flow: column;
+      -ms-flex-flow: column;
+      flex-flow: column;
+			-webkit-align-content: flex-start;
+      -ms-flex-content: flex-start;
+      align-content: flex-start;
+			-webkit-align-content: flex-start;
+      -ms-flex-content: flex-start;
+      align-content: flex-start;
 
-						}
-						&:hover {
-							cursor:pointer;
+			section#seasons,
+			section#locations,
+			section#prices,
+			section#ratings {
+				width:100%;
+				h1 {
+					width: 100%;
+					text-indent: 1em;
+					color: $colorbgvar;
+					display: block;
+					font-size: 0.85em;
+					line-height: 30px;
+					margin: 0 auto;
+				}
+				ul {
+					-webkit-flex: 0 0 auto;
+					-ms-flex: 0 0 auto;
+					flex: 0 0 auto;
+					height: auto;
+					width: 90%;
+					padding: 1%;
+					margin: 0 auto;
+					li {
+						display: block;
+						width: 96%;
+						height: 25px;
+						margin: 0 0 2% 0;
+						button {
+							display: block;
 							height: 100%;
-							font-weight: bold;
-							font-size: 0.80em;
-							@include gradient($sideboxbordercolvar,
-							$colorpw2);
+							font-size: 0.8em;
+							text-transform:capitalize;
+							@include TranSition( all 0.2s linear ease-in-out);
+							width: 100%;
+							@include gradient($colorpw2,
+							$sideboxbordercolvar);
+							line-height: 25px;
+							color: $colorpw1a;
+							letter-spacing: 0.02em;
+							border:none;
+							&:before {
+								content: "<";
+								
+
+							}
+							&:hover {
+								cursor:pointer;
+								font-weight: bold;
+								font-size: 0.80em;
+								@include gradient($sideboxbordercolvar,
+								$colorpw2);
+							}
 						}
 					}
 				}
@@ -1122,7 +1132,7 @@
 					margin: 0;
 					img{
 
-						width:14%;
+						width:auto;
 
 
 					}
@@ -1277,27 +1287,32 @@
 		#leftside2 {
 			width: 20%;
 
-			h1 {
+			section#seasons,
+			section#locations,
+			section#prices,
+			section#ratings {
 
-				font-size: 0.85em;
+				h1 {
 
-			}
-			ul {
-				width: 90%;
-				padding: 2%;
-				li {
-					height: 25px;
-					margin: 0 0 2% 0;
-					button {
-						font-size: 0.8em;
+					font-size: 0.85em;
+
+				}
+				ul {
+					width: 90%;
+
+					li {
+
+						button {
+							font-size: 0.8em;
 
 
-						&::before {
-							content: "<   ";
-						}
-						&:hover {
-							font-size: 0.80em;
-							line-height: 25px;
+							&::before {
+								content: "<   ";
+							}
+							&:hover {
+								font-size: 0.80em;
+
+							}
 						}
 					}
 				}
@@ -1367,7 +1382,7 @@
 				width: 96%;
 
 				li {
-
+					font-size: 0.85em;
 					
 					&:first-line {
 						font-weight: bold;
@@ -1628,7 +1643,7 @@
 
 					img{
 
-						width:14%;
+						width:auto;
 
 
 					}
@@ -1773,25 +1788,31 @@
 		#leftside2 {
 			width: 20%;
 
-			h1 {
+			section#seasons,
+			section#locations,
+			section#prices,
+			section#ratings {
 
-				font-size: 0.85em;
+				h1 {
 
-			}
-			ul {
-				width: 90%;
-				padding: 2%;
-				li {
-					margin: 0 0 2% 0;
-					button {
-						font-size: 0.75em;
+					font-size: 0.85em;
 
-						&::before {
-							content: "<   ";
-						}
-						&:hover {
-							font-size: 0.80em;
-							line-height: 25px;
+				}
+				ul {
+					width: 90%;
+
+					li {
+
+						button {
+							font-size: 0.75em;
+
+							&::before {
+								content: "<   ";
+							}
+							&:hover {
+								font-size: 0.80em;
+
+							}
 						}
 					}
 				}
@@ -1840,7 +1861,7 @@
 
 
 				li {
-
+					font-size: 0.8em;
 					
 					&:first-line {
 						font-weight: bold;
@@ -2092,20 +2113,16 @@
 @media only screen and (max-width: 1024px) {
 
 	#wrapper {
-		width: 85%;
+		width: 90%;
 		header {
 
 			figure#logo {
 				height: auto;
-				width:23%;
+
 
 			}
 
-			#midsection {
-				width: 60%;
-				
-			}
-
+		
 			aside.contact {
 				width: 16%;
 				span.tele {
@@ -2114,7 +2131,7 @@
 
 					img{
 
-						width:14%;
+						width:auto;
 
 
 					}
@@ -2134,45 +2151,46 @@
 
 				}
 			}
+		}
 
-			nav {
-				height: 40px;
-				margin-bottom: 0px;
-				ul#navi{
-					height: 100%;
-					li {
-						width: 16.5%;
-						height: 40px;
-						a {
-							font-size: 0.7em;
-						}
-					}
-					li:nth-of-type(2){
-						padding-top:0;
-						a{
-							font-size: 0.6em;
-							line-height: 40px;
-							height: auto;
-
-						}
+		nav {
+			height: 40px;
+			margin-bottom: 0px;
+			ul#navi{
+				height: 100%;
+				li {
+					width: 16.5%;
+					height: 40px;
+					a {
+						font-size: 0.7em;
 					}
 				}
-				aside#language-box {
-					
-					form {
-						label {
+				li:nth-of-type(2){
+					padding-top:0;
+					a{
+						font-size: 0.6em;
+						line-height: 40px;
+						height: auto;
 
-							font-size: 0.7em;
-						}
-						select {
-							font-size: 0.7em;
-
-						}
 					}
 				}
 			}
+			aside#language-box {
+				
+				form {
+					label {
 
+						font-size: 0.7em;
+					}
+					select {
+						font-size: 0.7em;
+
+					}
+				}
+			}
 		}
+
+		
 
 		#leftside {
 			width: 30%;
@@ -2261,22 +2279,28 @@
 		#leftside2 {
 			width: 20%;
 
-			h1 {
+			section#seasons,
+			section#locations,
+			section#prices,
+			section#ratings {
 
-				font-size: 0.85em;
+				h1 {
 
-			}
-			ul {
-				width: 90%;
-				padding: 2%;
-				li {
-					margin: 0 0 2% 0;
-					button {
-						font-size: 0.7em;
+					font-size: 0.85em;
 
-						&:hover {
-							font-size: 0.80em;
-							line-height: 25px;
+				}
+				ul {
+					width: 90%;
+
+					li {
+
+						button {
+							font-size: 0.7em;
+
+							&:hover {
+								font-size: 0.80em;
+
+							}
 						}
 					}
 				}
@@ -2286,28 +2310,6 @@
 		#leftside3 {
 			width: 20%;
 			margin: 1% 1% 0 0;
-			#contact-details {
-
-				li {
-					font-size: 0.85em;
-					line-height: 20px;
-					height: 80px;
-					&:first-line {
-						font-weight: bold;
-					}
-					span {
-						width: 18%;
-						img {
-							width: 48%;
-							margin: 10% auto;
-						}
-					}
-					a {
-						line-height: 20px;
-
-					}
-				}
-			}
 			figure {
 				margin: 0;
 				figcaption {
@@ -2342,8 +2344,10 @@
 			width: 20%;
 
 			#contact-details {
+				
 
 				li {
+					font-size: 0.8em;
 					
 
 					&:first-line {
@@ -2592,19 +2596,16 @@
 
 @media only screen and (max-width: 980px) {
 	#wrapper {
-		width: 90%;
+		width: 94%;
 		header {
 
 			figure#logo {
 				height: auto;
-				width: 25%;
+
 
 			}
 
-			#midsection {
-				width: 55%;
-				
-			}
+			
 			aside.contact {
 				width: 16%;
 
@@ -2614,7 +2615,7 @@
 
 					img{
 
-						width:14%;
+						width:auto;
 
 					}
 
@@ -2633,44 +2634,46 @@
 
 				}
 			}
+		
+		}
 
-			nav {
-				height: 40px;
-				margin-bottom: 0px;
-				ul#navi {
-					width: 83%;
-					height: 100%;
-					li {
-						height: 40px;
-						a {
-							font-size: 0.6em;
-						}
+		nav {
+			height: 40px;
+			margin-bottom: 0px;
+			ul#navi {
+				width: 83%;
+				height: 100%;
+				li {
+					height: 40px;
+					a {
+						font-size: 0.6em;
+					}
 
-					}
-					li:nth-of-type(2){
-						padding-top:0;
-						a{
-							font-size: 0.5em;
-							height: auto;
-						}
-					}
 				}
-				aside#language-box {
-					
-					form {
-						label {
-
-							font-size: 0.65em;
-						}
-						select {
-							font-size: 0.65em;
-
-						}
+				li:nth-of-type(2){
+					padding-top:0;
+					a{
+						font-size: 0.5em;
+						height: auto;
 					}
 				}
 			}
+			aside#language-box {
+				
+				form {
+					label {
 
+						font-size: 0.65em;
+					}
+					select {
+						font-size: 0.65em;
+
+					}
+				}
+			}
 		}
+
+		
 
 		#leftside {
 			width: 30%;
@@ -2758,23 +2761,28 @@
 
 		#leftside2 {
 			width: 20%;
+			section#seasons,
+			section#locations,
+			section#prices,
+			section#ratings {
 
-			h1 {
+				h1 {
 
-				font-size: 0.85em;
-			}
-			ul {
-				width: 90%;
+					font-size: 0.85em;
+				}
+				ul {
+					width: 90%;
 
-				li {
-					margin: 0 0 2% 0;
-					button {
-						font-size: 0.7em;
+					li {
+
+						button {
+							font-size: 0.7em;
 
 
-						&:hover {
-							font-size: 0.80em;
-							line-height: 25px;
+							&:hover {
+								font-size: 0.80em;
+
+							}
 						}
 					}
 				}
@@ -2807,7 +2815,7 @@
 			#contact-details {
 
 				li {
-					
+					font-size: 0.75em;
 
 					&:first-line {
 						font-weight: bold;
@@ -3049,7 +3057,7 @@
 
 @media only screen and (max-width: 800px) {
 	#wrapper {
-		width: 92%;
+		width: 96%;
 		header {
 
 			figure#logo {
@@ -3065,7 +3073,7 @@
 
 					img{
 
-						width:14%;
+						width:auto;
 
 					}
 
@@ -3084,44 +3092,45 @@
 
 				}
 			}
+		}
 
-			nav {
-				height: 40px;
-				margin-bottom: 0px;
-				ul#navi {
-					height: 100%;
-					li {
-						width: 16.5%;
-						height: 40px;
-						a {
-							font-size: 0.65em;
-						}
-					}
-					li:nth-of-type(2){
-						padding-top:0em;
-						a{
-							font-size: 45%;
-							height: auto;
-						}
+		nav {
+			height: 40px;
+			margin-bottom: 0px;
+			ul#navi {
+				height: 100%;
+				li {
+					width: 16.5%;
+					height: 40px;
+					a {
+						font-size: 0.65em;
 					}
 				}
-				aside#language-box {
-					
-					form {
-						label {
-
-							font-size: 0.65em;
-
-						}
-						select {
-							font-size: 0.7em;
-
-						}
+				li:nth-of-type(2){
+					padding-top:0em;
+					a{
+						font-size: 45%;
+						height: auto;
 					}
 				}
 			}
+			aside#language-box {
+				
+				form {
+					label {
 
+						font-size: 0.65em;
+
+					}
+					select {
+						font-size: 0.7em;
+
+					}
+				}
+			}
 		}
+
+		
 
 		#leftside {
 			width: 30%;
@@ -3212,23 +3221,28 @@
 
 		#leftside2 {
 			width: 20%;
+			section#seasons,
+			section#locations,
+			section#prices,
+			section#ratings {
 
-			h1 {
+				h1 {
 
-				font-size: 0.8em;
-			}
-			ul {
-				width: 90%;
+					font-size: 0.8em;
+				}
+				ul {
+					width: 90%;
 
-				li {
-					margin: 0 0 2% 0;
-					button {
-						font-size: 0.7em;
+					li {
+
+						button {
+							font-size: 0.7em;
 
 
-						&:hover {
-							font-size: 0.80em;
-							line-height: 25px;
+							&:hover {
+								font-size: 0.80em;
+
+							}
 						}
 					}
 				}
@@ -3260,7 +3274,7 @@
 			#contact-details {
 
 				li {
-					
+					font-size: 0.7em;
 					&:first-line {
 						font-weight: bold;
 					}
@@ -3273,7 +3287,7 @@
 					}
 					a {
 						line-height: 20px;
-						font-size: 1em;
+
 					}
 				}
 			}
@@ -3500,19 +3514,15 @@
 
 @media only screen and (max-width: 768px) {
 	#wrapper {
-		width: 94%;
+		width: 98%;
 		header {
 
 			figure#logo {
-				width: 30%
+				height: auto;
 
 			}
 
-			#midsection {
-				width: 50%;
-				
-			}
-
+			
 			aside.contact {
 				width: 17%;
 
@@ -3522,7 +3532,7 @@
 
 					img{
 
-						width:14%;
+						width:auto;
 
 					}
 
@@ -3542,47 +3552,48 @@
 
 				}
 			}
+		}
 
-			nav {
-				height: 40px;
-				margin-bottom: 0px;
+		nav {
+			height: 40px;
+			margin-bottom: 0px;
 
-				ul#navi {
-					height: 100%;
-					li {
-						width: 16.5%;
-						height: 40px;
-						a {
-							font-size: 0.55em;
+			ul#navi {
+				height: 100%;
+				li {
+					width: 16.5%;
+					height: 40px;
+					a {
+						font-size: 0.55em;
 
-						}
 					}
-					li:nth-of-type(2){
-						padding-top:0em;
-						a{
-							font-size: 40%;
-							height: auto;
-						}
-					}
-					
 				}
-				aside#language-box {
-					
-					form {
-						label {
+				li:nth-of-type(2){
+					padding-top:0em;
+					a{
+						font-size: 40%;
+						height: auto;
+					}
+				}
+				
+			}
+			aside#language-box {
+				
+				form {
+					label {
 
-							font-size: 0.55em;
+						font-size: 0.55em;
 
-						}
-						select {
-							font-size: 0.6em;
+					}
+					select {
+						font-size: 0.6em;
 
-						}
 					}
 				}
 			}
-
 		}
+
+	
 
 		#leftside {
 			width: 30%;
@@ -3678,24 +3689,30 @@
 		#leftside2 {
 			width: 20%;
 
-			h1 {
+			section#seasons,
+			section#locations,
+			section#prices,
+			section#ratings {
 
-				font-size: 0.8em;
-			}
-			ul {
-				width: 90%;
+				h1 {
 
-				li {
-					margin: 0 0 2% 0;
-					button{
-						font-size: 0.7em;
+					font-size: 0.8em;
+				}
+				ul {
+					width: 90%;
 
-						&::before {
-							content: "<   ";
-						}
-						&:hover {
-							font-size: 0.80em;
-							line-height: 25px;
+					li {
+
+						button{
+							font-size: 0.7em;
+
+							&::before {
+								content: "<   ";
+							}
+							&:hover {
+								font-size: 0.80em;
+
+							}
 						}
 					}
 				}
@@ -3726,7 +3743,7 @@
 			#contact-details {
 
 				li {
-					
+					font-size: 0.65em;
 					&:first-line {
 						font-weight: bold;
 					}
@@ -3881,7 +3898,7 @@
 					font-size: 0.9em;
 				}
 				span.holidayprice {
-					font-size: 1em;
+					font-size: 0.85em;
 					.offerbox-price {
 						display: inline-block;
 					}
@@ -3890,7 +3907,7 @@
 					width: 100%;
 
 					img {
-						width: 32%;
+						width: 35%;
 
 					}
 
@@ -3982,30 +3999,39 @@
 		left:-650px;
 		opacity: 0;
 
-		}
+		}	
+		
+		#toggle-menu {
+			display: block;
+			height: 100px;
+			width: 60px;
+			position: fixed;
+			z-index:500;
+			left: 91vw;
+			top: 135px;
+			background-color: $colorbg;
+			border: 0;
+			outline: none;
+			color: #fff;
+			font-size: 0.9em;
+			text-align: center;
+			line-height: 40px;
+			&:hover{
+				cursor:pointer;
+				background-color: $color2;
+				color: #fff;
 
-		ul#navi.show{
-			left: 0;
-			opacity:1;
-			@include TranSition(all 1s ease);
+			}
 		}
-		ul#navi.hide{
-			left:-650px;
-			@include TranSition(all 1s ease);
-
-		}
-
+		
 		header {
 
 			figure#logo {
 				height: auto;
-				width:35%;
+
 
 			}
-			#midsection {
-				width: 45%;
-				
-			}
+			
 			aside.contact {
 				width: 20%;
 				
@@ -4015,7 +4041,7 @@
 
 					img{
 
-						width:14%;
+						width:auto;
 
 					}
 
@@ -4035,117 +4061,106 @@
 
 
 				}
-			}
+			}			
+		}
 
-			#toggle-menu,button {
-				display: block;
-				height: 100px;
-				width: 60px;
-				position: fixed;
-				z-index:500;
-				left: 91vw;
-				top: 135px;
-				background-color: $colorbg;
-				border: 0;
-				outline: none;
-				color: #fff;
-				font-size: 0.9em;
-				text-align: center;
-				line-height: 40px;
-				&:hover{
-					cursor:pointer;
-					background-color: $color2;
-					color: #fff;
+		nav {
+			height: 30px;
+			margin-bottom: 0px;
+			left: 0;
+			-webkit-align-content: flex-end;
+			-ms-flex-content: flex-end;
+			align-content: flex-end;
+			-webkit-justify-content: flex-end;
+			-ms-flex-pack: flex-end;
+			justify-content: flex-end;
 
-				}
-			}
-
-			nav {
-				height: 30px;
-				margin-bottom: 0px;
+			ul#navi.show{
 				left: 0;
-				-webkit-align-content: flex-end;
-				-ms-flex-content: flex-end;
-				align-content: flex-end;
-				-webkit-justify-content: flex-end;
-				-ms-flex-pack: flex-end;
-				justify-content: flex-end;
-				ul#navi {
-					@include TranSition(all 1s ease);
-					position: fixed;
-					z-index: 100;
-					opacity:0;
-					top: 0;
-					width: 50%;
+				opacity:1;
+				@include TranSition(all 1s ease);
+			}
+			ul#navi.hide{
+				left:-650px;
+				@include TranSition(all 1s ease);
+	
+			}
+
+			ul#navi {
+				@include TranSition(all 1s ease);
+				position: fixed;
+				z-index: 100;
+				opacity:0;
+				bottom: 0;
+				width: 100%;
+				height: auto;
+				float: none;
+				padding: 0.5em;
+				background-color: $colorbg;
+				-webkit-flex-flow: column;
+				-ms-flex-flow: column;
+				flex-flow: column;
+				li {
+					width: 100%;
 					height: auto;
 					float: none;
-					padding: 0.5em;
-					background-color: $colorbg;
-					-webkit-flex-flow: column;
-					-ms-flex-flow: column;
-					flex-flow: column;
-					li {
-						width: 100%;
-						height: auto;
-						float: none;
-						display: block;
-						margin-bottom: 0.2em;
-						a {
-							font-size: 1em;
-							height: 45px;
-							line-height: 45px;
-							&:hover {
+					display: block;
+					margin-bottom: 0.2em;
+					a {
+						font-size: 1em;
+						height: 50px;
+						line-height: 50px;
+						&:hover {
 
-								box-shadow: none;
-							}
+							box-shadow: none;
 						}
-					}
-
-					li:nth-of-type(2){
-
-						margin-bottom: 0.2em;
-						a{
-							font-size:1em;
-							line-height: 45px;
-							&:hover{
-								height:45px;
-								line-height: 45px;
-								box-shadow: none;
-							}
-						}
-
 					}
 				}
 
-				aside#language-box {
-					width: 35.5%;
-					height:auto;
-					form {
-						height:30px;
-						label {
-							width: 30%;
-							font-size: 0.65em;
-							height: 30px;
-    					line-height: 30px;
+				li:nth-of-type(2){
 
+					margin-bottom: 0.2em;
+					a{
+						font-size:1em;
+						line-height: 45px;
+						&:hover{
+							height:45px;
+							line-height: 45px;
+							box-shadow: none;
 						}
-						div#flagImg {
-							width: 25%;
-							margin: 0;
-							padding: 0.25em;
-						}
-						select {
-							width:45%;
-							font-size: 0.7em;
-							height: 30px;
-   					 line-height: 30px;
+					}
 
-						}
+				}				
+			}
+
+			aside#language-box {
+				width: 27%;
+				height:auto;
+				form {
+					height:25px;
+					label {
+						width: 35%;
+						font-size: 0.65em;
+						height:25px;
+						line-height: 25px;
+
+					}
+					div#flagImg {
+						width: 20%;
+						margin: 0;
+						padding: 0.25em;
+						height: 25px;
+					}
+					select {
+						width:45%;
+						font-size: 0.7em;
+						height:25px;
+						line-height: 25px;
+
 					}
 				}
 			}
-
-		}
+		}	
 
 		#side-bar-btn{
 			position: fixed;
@@ -4163,7 +4178,6 @@
 				cursor:pointer;
 				background-color: #fff;
 				color: $colorbg;
-
 			}
 		}
 
@@ -4187,16 +4201,7 @@
 
 		}
 
-		.show{
-			left: 5px;
-			opacity:1;
-			@include TranSition(all 1s ease);
-		}
-		.hide{
-			left:-400px;
-			@include TranSition(all 1s ease);
-		}
-
+		
 		#leftside {
 			position:fixed;
 			top: 0;
@@ -4295,32 +4300,54 @@
 			
 		}
 
+		.show{
+			left: 0;
+			opacity:1;
+			@include TranSition(all 1s ease);
+		}
+		.hide{
+			left:-100%;
+			@include TranSition(all 1s ease);
+		}
+
 		#leftside2 {
 			position:fixed;
+			-webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+			flex-flow: row wrap;			
 			z-index:100;
-			top: 0;
-			width: 200px;
-			margin-top: 1%;
+			bottom: 0;
+			width: 100%;
+			margin-top: 0;
 			@include TranSition(all 1s ease);
+			height:auto;			
+			section#seasons,
+			section#locations,
+			section#prices,
+			section#ratings {
+				width:50%;
+				h1 {
+					text-indent: 0;
+					text-align: center;
+				}
+				ul {
+					width: 90%;
 
-			h1 {
-				text-indent: 0.5em;
-			}
-			ul {
-				width: 90%;
+					li {
+						margin: 0 0 1% 0;
+						button {
+							font-size: 0.8em;
 
-				li {
-					margin: 0 0 1% 0;
-					button {
-						font-size: 0.8em;
+							&:hover {
+								font-size: 0.85em;
 
-						&:hover {
-							font-size: 0.85em;
-
+							}
 						}
 					}
 				}
 			}
+
+
 		}
 
 		#leftside3 {
@@ -4350,22 +4377,22 @@
 		}
 
 		#contactside{
-			position: absolute;
-			top: 14vh;
-			width: 50%;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
 			margin:0;
 			#contact-details {
 				width: 100%;
 				li {
-
+					font-size:0.9em;
 					&:first-line {
 						font-weight: bold;
 					}
 					span {
 						width: 25%;
 						img {
-							width: 24%;
-							margin: 4% auto;
+							width: 13%;
+							margin: 2% auto;
 						}
 					}
 					a {
@@ -4514,17 +4541,18 @@
 
 			.holiday_details_small {
 				width: 48%;
+				padding: 0.25em;
 
 				h1 {
-					font-size: 0.85em;
-					line-height: 22px;
+					font-size: 0.75em;
+					
 				}
 				span.holidayprice {
-					font-size: 0.8em;
-					line-height: 25px;
+					font-size: 0.7em;
+					
 					.offerbox-price {
 						display: inline-block;
-						line-height: 25px;
+						
 					}
 				}
 				figure {
@@ -4540,7 +4568,6 @@
 						margin-bottom: 2%;
 						p {
 							font-size: 0.75em;
-							line-height: 25px
 
 						}
 						button {
@@ -4608,30 +4635,27 @@
 		header {
 
 			figure#logo {
-				width: 35%;
+				height: auto;
 
 			}
 
 
-			#midsection {
-				width: 40%;
-				
-			}
+		
 			aside.contact {
-
+				width: 22%;
 				span.tele {
 					margin: 0;
 
 
 					img{
 
-						width:14%;
+						width:auto;
 
 					}
 
 					a#contact-number {
 
-						font-size: 0.8em;
+						font-size: 0.75em;
 
 
 						&:active {
@@ -4650,43 +4674,45 @@
 				
 				font-size: 0.9em;
 			}
+		}
 
-			nav {
+		nav {
 
-				margin-bottom: 0px;
+			margin-bottom: 0px;
 
-				ul#navi {
+			ul#navi {
 
-					li {
-						width: 100%;
+				li {
+					width: 100%;
 
-						a {
-							font-size: 1em;
+					a {
+						font-size: 1em;
 
-							&:hover {
+						&:hover {
 
-								box-shadow: none;
-							}
-						}
-					}
-				}
-				aside#language-box {
-					
-					form {
-						label {
-							
-							font-size: 0.6em;
-
-						}
-						select {
-							font-size: 0.7em;
-
+							box-shadow: none;
 						}
 					}
 				}
 			}
+			aside#language-box {
+				
+				form {
+					label {
+						
+						font-size: 0.6em;
 
+					}
+					select {
+						font-size: 0.7em;
+						
+
+					}
+				}
+			}
 		}
+
+		
 
 
 		#contact-bar-btn{
@@ -4780,23 +4806,29 @@
 		}
 
 		#leftside2 {
-			width: 200px;
-			h1 {
 
-				font-size: 0.75em;
-			}
-			ul {
-				width: 90%;
+			section#seasons,
+			section#locations,
+			section#prices,
+			section#ratings {
+				width:50%;
+				h1 {
 
-				li {
-					margin: 0 0 2% 0;
-					button {
-						font-size: 0.8em;
+					font-size: 0.75em;
+				}
+				ul {
+					width: 90%;
+
+					li {
+
+						button {
+							font-size: 0.8em;
 
 
-						&:hover {
-							font-size: 0.85em;
+							&:hover {
+								font-size: 0.85em;
 
+							}
 						}
 					}
 				}
@@ -4819,7 +4851,7 @@
 					span {
 						width: 25%;
 						img {
-							width: 24%;
+							width: 13%;
 						}
 					}
 					a {
@@ -4968,10 +5000,10 @@
 				
 
 				h1 {
-					font-size: 0.80em;
+					font-size: 0.7em;
 				}
 				span.holidayprice {
-					font-size: 0.75em;
+					font-size: 0.6em;
 					.offerbox-price {
 						display: inline-block;
 
@@ -4989,7 +5021,7 @@
 						width: 47%;
 
 						p {
-							font-size: 0.75em;
+							font-size: 0.7em;
 						}
 						button {
 							font-size: 0.8em;
@@ -5053,22 +5085,27 @@
 @media only screen and (max-width: 600px) {
 	#wrapper {
 		width: 98%;
+
+		#toggle-menu {
+				
+			font-size: 0.9em;
+		}
 		header {
 
 			figure#logo {
 	
-				width: 35%;
+				height: auto;
 
 			}
 			aside.contact {
-				width: 24%;
+				width: 22%;
 				span.tele {
 					margin: 0;
 
 
 					img{
 
-						width:14%;
+						width:auto;
 
 					}
 
@@ -5090,10 +5127,7 @@
 				}
 			}
 
-			#toggle-menu,button {
-				
-				font-size: 0.9em;
-			}
+			
 
 			nav {
 				margin-bottom: 0px;
@@ -5244,23 +5278,27 @@
 		}
 
 		#leftside2 {
-			width: 200px;
-			h1 {
+			section#seasons,
+			section#locations,
+			section#prices,
+			section#ratings {
+				h1 {
 
-				font-size: 0.75em;
-			}
-			ul {
-				width: 90%;
+					font-size: 0.75em;
+				}
+				ul {
+					width: 90%;
 
-				li {
-					margin: 0 0 2% 0;
-					button {
-						font-size: 0.75em;
+					li {
+		
+						button {
+							font-size: 0.75em;
 
 
-						&:hover {
-							font-size: 0.8em;
+							&:hover {
+								font-size: 0.8em;
 
+							}
 						}
 					}
 				}
@@ -5300,7 +5338,7 @@
 					span {
 						width: 30%;
 						img {
-							width: 30%;
+							width: 12%;
 						}
 					}
 					a {
@@ -5449,10 +5487,10 @@
 				
 
 				h1 {
-					font-size: 0.75em;
+					font-size: 0.7em;
 				}
 				span.holidayprice {
-					font-size: 0.7em;
+					font-size: 0.6em;
 					.offerbox-price {
 						display: inline-block;
 					}
@@ -5468,7 +5506,7 @@
 						width: 49%;
 						margin-bottom: 2%;
 						p {
-							font-size: 0.75em;
+							font-size: 0.7em;
 
 						}
 						a {
@@ -5536,19 +5574,21 @@
 @media only screen and (max-width: 568px) {
 	#wrapper {
 		width: 98%;
+		#toggle-menu {
+
+			font-size: 0.85em;
+			left: 90vw;
+		}
 		header {
 
 			figure#logo {
 				height: auto;
-				width:44%;
+				
 
 			}
-			#midsection {
-				width: 30%;
-				
-			}
+			
 			aside.contact {
-				width: 25%;
+				width: 22%;
 
 				span.tele {
 					margin: 0;
@@ -5556,14 +5596,14 @@
 
 					img{
 
-						width:15%;
+						width:auto;
 
 
 					}
 
 					a#contact-number {
 						width:85%;
-						
+						font-size: 0.7em;
 
 						&:active {
 							color: #fff;
@@ -5572,58 +5612,52 @@
 				}
 				span#opening-time {
 
-					font-size: 65%;
+					font-size: 60%;
 
 
 				}
 			}
-
-			#toggle-menu,button {
-
-				font-size: 0.85em;
-				left: 90vw;
-			}
-
-			nav {
-				
-
-				ul#navi {
-
-					width:60%;
-
-					li {
-						width: 100%;
-
-						a {
-							font-size: 0.9em;
-
-							&:hover {
-								height: 45px;
-
-							}
-
-						}
-					}
-				}
-				aside#language-box {
-					
-					form {
-						label {
-
-							font-size: 0.65em;
-						}
-						div#flagImg {							
-							padding: 0.5em;
-					}
-						select {
-							font-size: 0.65em;
-
-						}
-					}
-				}
-			}
-
+			
 		}
+
+		nav {
+			
+
+			ul#navi {
+				
+				li {
+					width: 100%;
+
+					a {
+						font-size: 0.9em;
+
+						&:hover {
+							height: 45px;
+
+						}
+
+					}
+				}
+			}
+			aside#language-box {
+				width: 35%;
+				form {
+					label {
+
+						font-size: 0.65em;
+					}
+					div#flagImg {							
+						padding: 0;
+				}
+					select {
+						font-size: 0.65em;
+
+					}
+				}
+			}
+		}
+
+		
 
 		#side-bar-btn{			
     	left: 90vw;
@@ -5725,23 +5759,28 @@
 		}
 
 		#leftside2 {
-			width: 200px;
-			h1 {
 
-				font-size: 0.75em;
-			}
-			ul {
-				width: 90%;
+			section#seasons,
+			section#locations,
+			section#prices,
+			section#ratings {
+				h1 {
 
-				li {
-					margin: 0 0 2% 0;
-					button {
-						font-size: 0.75em;
+					font-size: 0.75em;
+				}
+				ul {
+					width: 90%;
+
+					li {
+
+						button {
+							font-size: 0.75em;
 
 
-						&:hover {
-							font-size: 0.8em;
+							&:hover {
+								font-size: 0.8em;
 
+							}
 						}
 					}
 				}
@@ -5780,7 +5819,7 @@
 					span {
 						width: 30%;
 						img {
-							width: 30%;
+							width: 12%;
 						}
 					}
 					a {
@@ -5934,10 +5973,10 @@
 
 				h1 {
 					font-size: 0.9em;
-					line-height: 25px;
+					line-height: 32px;
 				}
 				span.holidayprice {
-					font-size: 0.8em;
+					font-size: 0.9em;
 					.offerbox-price {
 						display: inline-block;
 					}
@@ -6032,19 +6071,21 @@
 @media only screen and (max-width: 480px) {
 	#wrapper {
 		width: 98%;
+
+		#toggle-menu {
+			left:87vw;
+		}
+
 		header {
 
 			figure#logo {
 				height: auto;
-				width:45%;
+		
 
 			}
-			#midsection {
-				width: 25%;
-				
-			}
+			
 			aside.contact {
-				width: 25%;
+				width: 26%;
 
 				span.tele {
 					margin: 0;
@@ -6052,13 +6093,13 @@
 
 					img{
 
-						width:15%;
+						width:auto;
 
 
 					}
 
 					a#contact-number {
-
+						line-height: 28px;
 						font-size: 0.75em;
 
 						&:active {
@@ -6072,51 +6113,48 @@
 
 
 				}
-			}
-
-			#toggle-menu,button {
-				left:87vw;
-			}
-
-			nav {
-
-				ul#navi {					
-
-					li {
-						
-						a {
-							font-size: 0.8em;
-
-							&:hover {
-								line-height: 45px;
-							}
-						}
-					}
-					li:nth-of-type(2){
-						
-						a{
-							font-size:0.9em;
-
-						}
-					}
-				}
-				aside#language-box {
-					width: 40%;
-
-					form {
-						span {
-
-							font-size: 0.6em;
-						}
-						select {
-							font-size: 0.6em;
-
-						}
-					}
-				}
-			}
-
+			}		
 		}
+
+		nav {
+
+			ul#navi {					
+
+				li {
+					
+					a {
+						font-size: 0.8em;
+
+						&:hover {
+							line-height: 45px;
+						}
+					}
+				}
+				li:nth-of-type(2){
+					
+					a{
+						font-size:0.9em;
+
+					}
+				}
+			}
+			aside#language-box {
+				width: 40%;
+
+				form {
+					span {
+
+						font-size: 0.6em;
+					}
+					select {
+						font-size: 0.6em;
+
+					}
+				}
+			}
+		}
+
+		
 
 		#side-bar-btn{
 			left: 87vw;
@@ -6216,27 +6254,32 @@
 		}
 
 		#leftside2 {
-			width: 200px;
 
-			h1 {
+			section#seasons,
+			section#locations,
+			section#prices,
+			section#ratings {
 
-				font-size: 0.75em;
-			}
-			ul {
-				width: 90%;
+				h1 {
 
-				li {
-					margin: 0 0 2% 0;
-					button {
-						font-size: 0.7em;
-						line-height:30px;
-						&::before {
-							content: "<   ";
-						}
-						&:hover {
-							font-size: 0.75em;
+					font-size: 0.75em;
+				}
+				ul {
+					width: 90%;
+
+					li {
+
+						button {
+							font-size: 0.7em;
 							line-height:30px;
+							&::before {
+								content: "<   ";
+							}
+							&:hover {
+								font-size: 0.75em;
+								line-height:30px;
 
+							}
 						}
 					}
 				}
@@ -6275,7 +6318,7 @@
 					span {
 						width: 30%;
 						img {
-							width: 30%;
+							width: 12%;
 						}
 					}
 					a {
@@ -6439,7 +6482,7 @@
 				width: 98%;
 
 				h1 {
-					font-size: 0.85em;
+					font-size: 0.9em;
 				}
 				span.holidayprice {
 					font-size: 0.8em;
@@ -6534,20 +6577,22 @@
 @media only screen and (max-width: 414px) {
 	#wrapper {
 		width: 94%;
+
+		#toggle-menu {
+			left: 85vw;			
+		}
+
 		header {
 
 			figure#logo {
 				height: auto;
-				width:54%;
+	
 
 			}
-			#midsection {
-				width: 15%;
-				
-			}
+			
 
 			aside.contact {
-				width: 28%;
+				width: 30%;
 
 				span.tele {
 					margin: 0;
@@ -6560,8 +6605,8 @@
 					}
 
 					a#contact-number {
-						font-size: 0.7em;
-						
+						font-size: 0.75em;
+						line-height: 28px;
 
 						&:active {
 							color: #fff;
@@ -6576,51 +6621,49 @@
 				}
 			}
 
-			#toggle-menu,button {
-				left: 85vw;
-
-			}
-
-			nav {
-
-				margin-bottom: 0px;
-
-				ul#navi {
-
-					li {
-
-						a {
-							font-size: 0.85em;
-
-							&:hover {
-								line-height: 45px;
-							}
-						}
-					}
-					li:nth-of-type(2){
-
-						a{
-							font-size:0.85em;
-
-						}
-					}
-				}
-				aside#language-box {
-					width:45%;
-					form {
-						span {
-
-							font-size: 0.6em;
-						}
-						select {
-							font-size: 0.65em;
-
-						}
-					}
-				}
-			}
-
+		
 		}
+
+		nav {
+
+			margin-bottom: 0px;
+
+			ul#navi {
+
+				li {
+
+					a {
+						font-size: 0.85em;
+
+						&:hover {
+							line-height: 45px;
+						}
+					}
+				}
+				li:nth-of-type(2){
+
+					a{
+						font-size:0.85em;
+
+					}
+				}
+			}
+			aside#language-box {
+				width:45%;
+				form {
+					span {
+
+						font-size: 0.6em;
+					}
+					select {
+						font-size: 0.65em;
+
+					}
+				}
+			}
+		}
+
+		
 
 		#side-bar-btn{
 			left: 85vw;
@@ -6721,22 +6764,27 @@
 		}
 
 		#leftside2 {
-			width: 200px;
-			h1 {
 
-				font-size: 0.75em;
-			}
-			ul {
-				width: 90%;
+			section#seasons,
+			section#locations,
+			section#prices,
+			section#ratings {
+				h1 {
 
-				li {
-					margin: 0 0 2% 0;
-					button {
-						font-size: 0.75em;
+					font-size: 0.75em;
+				}
+				ul {
+					width: 90%;
 
-						&:hover {
-							font-size: 0.8em;
+					li {
 
+						button {
+							font-size: 0.75em;
+
+							&:hover {
+								font-size: 0.8em;
+
+							}
 						}
 					}
 				}
@@ -6775,7 +6823,7 @@
 					span {
 						width: 30%;
 						img {
-							width: 40%;
+							width: 12%;
 						}
 					}
 					a {
@@ -6929,8 +6977,8 @@
 			.holiday_details_small {
 
 				h1 {
-					font-size: 0.85em;
-					line-height: 20px;
+					font-size: 0.9em;
+
 				}
 				span.holidayprice {
 					font-size: 0.75em;
@@ -7023,32 +7071,31 @@
 	#wrapper {
 		width: 98%;
 
+		#toggle-menu {
+
+			font-size: 0.8em;
+		}
+
 		header {
 
 			figure#logo {
-				height: auto;
-				width:56%;
-
+				height: auto;	
 			}
-			#midsection {
-				width: 5%;
-				
-			}
+			
 			aside.contact {
 				width: 30%;
 				span.tele {
 					margin: 0;
 
-
 					img{
 
-						width:16%;
+						width:20%;
 
 					}
 
 					a#contact-number {
 						width:84%;						
-						font-size:0.65em;
+						font-size:0.7em;
 						&:active {
 							color: #fff;
 						}
@@ -7060,56 +7107,53 @@
 
 
 				}
-			}
+			}			
 
 			
-
-			#toggle-menu,button {
-
-				font-size: 0.8em;
-			}
-			nav {
-
-				margin-bottom: 0px;
-
-				ul#navi {
-
-					width: 60%;
-					li {
-
-						a {
-							font-size: 0.9em;
-
-							&:hover {
-								line-height: 45px;
-							}
-
-						}
-					}
-					li:nth-of-type(2){
-
-						a{
-							font-size:0.9em;
-
-						}
-					}
-				}
-				aside#language-box {
-					width:45%;
-					form {
-						label {
-
-							font-size: 0.65em;
-						}
-						select {
-							font-size: 0.65em;
-
-						}
-					}
-				}
-			}
-
 		}
+
+
+		nav {
+
+			margin-bottom: 0px;
+
+			ul#navi {
+				
+				li {
+
+					a {
+						font-size: 0.9em;
+
+						&:hover {
+							line-height: 45px;
+						}
+
+					}
+				}
+				li:nth-of-type(2){
+
+					a{
+						font-size:0.9em;
+
+					}
+				}
+			}
+			aside#language-box {
+				width:45%;
+				form {
+					label {
+
+						font-size: 0.6em;
+					}
+					select {
+						font-size: 0.65em;
+
+					}
+				}
+			}
+		}
+
+		
 
 		#side-bar-btn{
 			left: 85vw;
@@ -7209,22 +7253,27 @@
 		}
 
 		#leftside2 {
-			width: 200px;
 
-			h1 {
+			section#seasons,
+			section#locations,
+			section#prices,
+			section#ratings {
 
-				font-size: 0.75em;
-			}
-			ul {
-				width: 90%;
+				h1 {
 
-				li {
-					margin: 0 0 2% 0;
-					button {
-						font-size: 0.7em;
+					font-size: 0.75em;
+				}
+				ul {
+					width: 90%;
 
-						&:hover {
-							font-size: 0.75em;
+					li {
+
+						button {
+							font-size: 0.7em;
+
+							&:hover {
+								font-size: 0.75em;
+							}
 						}
 					}
 				}
@@ -7263,7 +7312,7 @@
 					span {
 						width: 30%;
 						img {
-							width: 40%;
+							width: 12%;
 						}
 					}
 					a {
@@ -7416,7 +7465,7 @@
 				margin: 0.5em auto;
 
 				h1 {
-					font-size: 0.85em;
+					font-size: 0.9em;
 				}
 				span.holidayprice {
 					font-size: 0.7em;
@@ -7512,17 +7561,18 @@
 	#wrapper {
 		width: 98%;
 
+		#toggle-menu {
+			left: 82vw;
+			font-size: 0.85em;
+		}
+
 		header {
 
 			figure#logo {
-				height: auto;
-				width:56%;
+				height: auto;				
 
 			}
-			#midsection {
-				width:5%;
-				
-			}
+			
 
 			aside.contact {
 				width: 30%;
@@ -7537,7 +7587,7 @@
 					}
 
 					a#contact-number {
-						font-size: 0.65em;
+						font-size: 0.6em;
 
 						&:active {
 							color: #fff;
@@ -7551,47 +7601,45 @@
 
 				}
 			}
-			#toggle-menu,button {
-				left: 82vw;
-				font-size: 0.85em;
-			}
-
-			nav {
-
-				margin-bottom: 0px;
-
-				ul#navi{
-
-					li {
-						width: 100%;
-
-						a {
-							font-size: 0.9em;
-
-							&:hover {
-
-								line-height: 45px;
-							}
-
-						}
-					}
-				}
-				aside#language-box {
-
-					form {
-						label {
-
-							font-size: 0.6em;
-						}
-						select {
-							font-size: 0.7em;
-
-						}
-					}
-				}
-			}
-
+			
 		}
+
+		nav {
+
+			margin-bottom: 0px;
+
+			ul#navi{
+
+				li {
+					width: 100%;
+
+					a {
+						font-size: 0.9em;
+
+						&:hover {
+
+							line-height: 45px;
+						}
+
+					}
+				}
+			}
+			aside#language-box {
+
+				form {
+					label {
+
+						font-size: 0.6em;
+					}
+					select {
+						font-size: 0.7em;
+
+					}
+				}
+			}
+		}
+
+	
 
 		#side-bar-btn{
 			left: 82vw;
@@ -7691,25 +7739,28 @@
 		}
 
 		#leftside2 {
-			width: 200px;
+			section#seasons,
+			section#locations,
+			section#prices,
+			section#ratings {
+				h1 {
 
-			h1 {
+					font-size: 0.7em;
+				}
+				ul {
+					width: 90%;
 
-				font-size: 0.7em;
-			}
-			ul {
-				width: 90%;
+					li {
 
-				li {
-					margin: 0 0 2% 0;
-					button {
-						font-size: 0.7em;
+						button {
+							font-size: 0.7em;
 
-						&::before {
-							content: "<   ";
-						}
-						&:hover {
-							font-size: 0.75em;
+							&::before {
+								content: "<   ";
+							}
+							&:hover {
+								font-size: 0.75em;
+							}
 						}
 					}
 				}
@@ -7748,7 +7799,7 @@
 					span {
 						width: 30%;
 						img {
-							width: 40%;
+							width: 12%;
 						}
 					}
 					a {
@@ -7903,10 +7954,12 @@
 				width: 100%;
 
 				h1 {
-					font-size: 0.8em;
+					font-size: 0.85em;
+					width: 65%;
 				}
 				span.holidayprice {
 					font-size: 0.7em;
+					width: 34%;
 					.offerbox-price {
 						display: inline-block;
 					}
@@ -8002,20 +8055,22 @@
 @media only screen and (max-width: 320px) {
 	#wrapper {
 
+		#toggle-menu {
+			font-size: 0.8em;
+
+		}
+
 		header {
 
 			figure#logo {
-				width: 66%;
+				height: auto;
 
 
 			}
 
-			#midsection {
-				width:1%;
-				
-			}
+			
 			aside.contact {
-				width:32%;
+				width:30%;
 				span.tele {
 					margin: 0;
 
@@ -8041,50 +8096,48 @@
 
 				}
 			}
-			#toggle-menu,button {
-				font-size: 0.8em;
-
-			}
-
-			nav {
-					
-				ul#navi {
-					
-					li {
-
-						a {
-							font-size: 0.9em;
-
-							&:hover {
-								height: 45px;
-
-							}
-						}
-					}
-					li:nth-of-type(2){
-						margin-bottom: 0.2em;
-						a{
-							font-size:0.9em;
-
-						}
-					}
-				}
-				aside#language-box {
-
-					form {
-						label {
-
-							font-size: 0.6em;
-						}
-						select {
-							font-size: 0.6em;
-
-						}
-					}
-				}
-			}
-
+			
 		}
+
+		nav {
+				
+			ul#navi {
+				
+				li {
+
+					a {
+						font-size: 0.9em;
+
+						&:hover {
+							height: 45px;
+
+						}
+					}
+				}
+				li:nth-of-type(2){
+					margin-bottom: 0.2em;
+					a{
+						font-size:0.9em;
+
+					}
+				}
+			}
+			aside#language-box {
+				width: 50%;
+				form {
+					label {
+
+						font-size: 0.6em;
+					}
+					select {
+						font-size: 0.6em;
+
+					}
+				}
+			}
+		}
+
+		
 
 		#side-bar-btn{
 			
@@ -8179,21 +8232,26 @@
 		}
 
 		#leftside2 {
-			width: 200px;
-			h1 {
-				font-size: 0.7em;
-			}
-			ul {
-				width: 90%;
 
-				li {
-					margin: 0 0 2% 0;
-					button {
-						font-size: 0.65em;
+			section#seasons,
+			section#locations,
+			section#prices,
+			section#ratings {
+				h1 {
+					font-size: 0.7em;
+				}
+				ul {
+					width: 90%;
 
-						&:hover {
-							font-size: 0.7em;
+					li {
 
+						button {
+							font-size: 0.65em;
+
+							&:hover {
+								font-size: 0.7em;
+
+							}
 						}
 					}
 				}
@@ -8230,7 +8288,7 @@
 					span {
 						width: 30%;
 						img {
-							width: 40%;
+							width: 12%;
 						}
 					}
 					a {
