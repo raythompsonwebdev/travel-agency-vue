@@ -1173,7 +1173,7 @@ body {
     font-weight: bold;
   }
   #wrapper #holiday-items {
-    width: 79%;
+    width: 80%;
     height: auto;
     float: left;
     margin-bottom: 10px;
@@ -1701,9 +1701,6 @@ body {
   #wrapper label.error {
     font-size: 0.9em;
   }
-  #wrapper #holiday-items {
-    width: 79%;
-  }
   #wrapper #holiday-items .holiday_details h1 {
     width: 80%;
   }
@@ -2020,9 +2017,6 @@ body {
   #wrapper label.error {
     font-size: 0.9em;
   }
-  #wrapper #holiday-items {
-    width: 79%;
-  }
   #wrapper #holiday-items .holiday_details h1 {
     font-size: 1.1em;
   }
@@ -2051,7 +2045,7 @@ body {
     width: 100%;
   }
   #wrapper #holiday-items .holiday_details_small figure img {
-    width: 53%;
+    width: 44%;
   }
   #wrapper #holiday-items .holiday_details_small figure figcaption {
     width: 54%;
@@ -2181,6 +2175,9 @@ body {
   }
   #wrapper nav ul#navi li a {
     font-size: 0.85em;
+  }
+  #wrapper nav ul#navi li:nth-of-type(2) a {
+    font-size: 65%;
   }
   #wrapper nav aside#language-box form label {
     font-size: 0.7em;
@@ -2351,9 +2348,6 @@ body {
   #wrapper label.error {
     font-size: 0.9em;
   }
-  #wrapper #holiday-items {
-    width: 79%;
-  }
   #wrapper #holiday-items .holiday_details h1 {
     font-size: 1.1em;
   }
@@ -2378,16 +2372,6 @@ body {
   #wrapper #holiday-items .holiday_details figure figcaption button {
     width: 30%;
   }
-  #wrapper #holiday-items .holiday_details_small h1 {
-    font-size: 0.85em;
-    line-height: 25px;
-  }
-  #wrapper #holiday-items .holiday_details_small span.holidayprice {
-    font-size: 0.8em;
-  }
-  #wrapper #holiday-items .holiday_details_small span.holidayprice .offerbox-price {
-    display: inline-block;
-  }
   #wrapper #holiday-items .holiday_details_small figure {
     width: 100%;
   }
@@ -2396,6 +2380,16 @@ body {
   }
   #wrapper #holiday-items .holiday_details_small figure figcaption {
     width: 54%;
+  }
+  #wrapper #holiday-items .holiday_details_small figure figcaption h1 {
+    font-size: 0.85em;
+    line-height: 25px;
+  }
+  #wrapper #holiday-items .holiday_details_small figure figcaption span.holidayprice {
+    font-size: 0.8em;
+  }
+  #wrapper #holiday-items .holiday_details_small figure figcaption span.holidayprice .offerbox-price {
+    display: inline-block;
   }
   #wrapper #holiday-items .holiday_details_small figure figcaption p {
     font-size: 0.85em;
@@ -2481,7 +2475,7 @@ body {
     height: auto;
   }
   #wrapper header aside.contact {
-    width: 19%;
+    width: 17%;
   }
   #wrapper header aside.contact span.tele {
     margin: 0;
@@ -2513,7 +2507,7 @@ body {
     font-size: 0.8em;
   }
   #wrapper nav ul#navi li:nth-of-type(2) a {
-    font-size: 55%;
+    font-size: 60%;
   }
   #wrapper nav aside#language-box {
     width: 14.5%;
@@ -2675,9 +2669,6 @@ body {
   #wrapper label.error {
     font-size: 0.9em;
   }
-  #wrapper #holiday-items {
-    width: 100%;
-  }
   #wrapper #holiday-items .holiday_details h1 {
     font-size: 1em;
     width: 75%;
@@ -2703,33 +2694,37 @@ body {
   #wrapper #holiday-items .holiday_details figure figcaption button {
     width: 35%;
   }
-  #wrapper #holiday-items .holiday_details_small {
-    width: 100%;
-  }
-  #wrapper #holiday-items .holiday_details_small h1 {
-    font-size: 1em;
-    line-height: 40px;
-  }
-  #wrapper #holiday-items .holiday_details_small span.holidayprice {
-    font-size: 1em;
-  }
-  #wrapper #holiday-items .holiday_details_small span.holidayprice .offerbox-price {
-    display: inline-block;
-  }
   #wrapper #holiday-items .holiday_details_small figure {
     width: 100%;
   }
   #wrapper #holiday-items .holiday_details_small figure img {
-    width: 28%;
+    width: 70%;
+    float: none;
+    margin: auto;
   }
   #wrapper #holiday-items .holiday_details_small figure figcaption {
-    width: 54%;
+    width: 100%;
+  }
+  #wrapper #holiday-items .holiday_details_small figure figcaption h1 {
+    font-size: 1em;
+    text-align: center;
+  }
+  #wrapper #holiday-items .holiday_details_small figure figcaption span.holidayprice {
+    display: block;
+    font-size: 1em;
+    text-align: center;
+  }
+  #wrapper #holiday-items .holiday_details_small figure figcaption span.holidayprice .offerbox-price {
+    display: inline-block;
   }
   #wrapper #holiday-items .holiday_details_small figure figcaption p {
-    font-size: 0.9em;
+    text-align: center;
+    font-size: 0.85em;
+    line-height: 25px;
   }
   #wrapper #holiday-items .holiday_details_small figure figcaption button {
     font-size: 1em;
+    width: 100%;
   }
   #wrapper #content2 h1 {
     font-size: 1.1em;
@@ -3004,9 +2999,6 @@ body {
   #wrapper label.error {
     font-size: 0.9em;
   }
-  #wrapper #holiday-items {
-    width: 100%;
-  }
   #wrapper #holiday-items .holiday_details h1 {
     font-size: 1em;
   }
@@ -3028,23 +3020,20 @@ body {
   #wrapper #holiday-items .holiday_details figure figcaption p {
     font-size: 0.85em;
   }
-  #wrapper #holiday-items .holiday_details_small h1 {
-    font-size: 0.9em;
-  }
-  #wrapper #holiday-items .holiday_details_small span.holidayprice {
-    font-size: 1em;
-  }
-  #wrapper #holiday-items .holiday_details_small span.holidayprice .offerbox-price {
-    display: inline-block;
-  }
   #wrapper #holiday-items .holiday_details_small figure {
     width: 100%;
   }
   #wrapper #holiday-items .holiday_details_small figure img {
-    width: 32%;
+    width: 80%;
   }
-  #wrapper #holiday-items .holiday_details_small figure figcaption {
-    width: 50%;
+  #wrapper #holiday-items .holiday_details_small figure figcaption h1 {
+    font-size: 0.9em;
+  }
+  #wrapper #holiday-items .holiday_details_small figure figcaption span.holidayprice {
+    font-size: 0.9em;
+  }
+  #wrapper #holiday-items .holiday_details_small figure figcaption span.holidayprice .offerbox-price {
+    display: inline-block;
   }
   #wrapper #holiday-items .holiday_details_small figure figcaption p {
     font-size: 0.9em;
@@ -3352,29 +3341,23 @@ body {
   #wrapper #holiday-items .holiday_details figure figcaption p {
     font-size: 0.85em;
   }
-  #wrapper #holiday-items .holiday_details_small h1 {
-    font-size: 0.9em;
-  }
-  #wrapper #holiday-items .holiday_details_small span.holidayprice {
-    font-size: 0.85em;
-  }
-  #wrapper #holiday-items .holiday_details_small span.holidayprice .offerbox-price {
-    display: inline-block;
-  }
   #wrapper #holiday-items .holiday_details_small figure {
     width: 100%;
   }
   #wrapper #holiday-items .holiday_details_small figure img {
-    width: 35%;
+    width: 85%;
   }
-  #wrapper #holiday-items .holiday_details_small figure figcaption {
-    width: 50%;
-  }
-  #wrapper #holiday-items .holiday_details_small figure figcaption p {
+  #wrapper #holiday-items .holiday_details_small figure figcaption h1 {
     font-size: 0.9em;
   }
-  #wrapper #holiday-items .holiday_details_small figure figcaption button {
-    width: 75%;
+  #wrapper #holiday-items .holiday_details_small figure figcaption span.holidayprice {
+    font-size: 0.85em;
+  }
+  #wrapper #holiday-items .holiday_details_small figure figcaption span.holidayprice .offerbox-price {
+    display: inline-block;
+  }
+  #wrapper #holiday-items .holiday_details_small figure figcaption p {
+    font-size: 0.85em;
   }
   #wrapper #content2 h1 {
     font-size: 1.1em;
@@ -3874,6 +3857,9 @@ body {
   #wrapper label.error {
     font-size: 0.9em;
   }
+  #wrapper #holiday-items {
+    width: 100%;
+  }
   #wrapper #holiday-items .holiday_details h1 {
     font-size: 1em;
   }
@@ -3903,31 +3889,26 @@ body {
     width: 48%;
     padding: 0.25em;
   }
-  #wrapper #holiday-items .holiday_details_small h1 {
-    font-size: 0.75em;
-  }
-  #wrapper #holiday-items .holiday_details_small span.holidayprice {
-    font-size: 0.7em;
-  }
-  #wrapper #holiday-items .holiday_details_small span.holidayprice .offerbox-price {
-    display: inline-block;
-  }
   #wrapper #holiday-items .holiday_details_small figure {
     width: 100%;
   }
   #wrapper #holiday-items .holiday_details_small figure img {
-    width: 45%;
+    width: 85%;
   }
-  #wrapper #holiday-items .holiday_details_small figure figcaption {
-    width: 50%;
-    margin-bottom: 2%;
+  #wrapper #holiday-items .holiday_details_small figure figcaption h1 {
+    font-size: 1em;
+  }
+  #wrapper #holiday-items .holiday_details_small figure figcaption span.holidayprice {
+    font-size: 0.9em;
+  }
+  #wrapper #holiday-items .holiday_details_small figure figcaption span.holidayprice .offerbox-price {
+    display: inline-block;
   }
   #wrapper #holiday-items .holiday_details_small figure figcaption p {
-    font-size: 0.75em;
+    font-size: 0.9em;
   }
   #wrapper #holiday-items .holiday_details_small figure figcaption button {
     width: 100%;
-    font-size: 0.8em;
   }
   #wrapper #content2 {
     width: 100%;
@@ -4219,10 +4200,10 @@ body {
     font-size: 0.85em;
   }
   #wrapper #holiday-items .holiday_details_small h1 {
-    font-size: 0.7em;
+    font-size: 0.9em;
   }
   #wrapper #holiday-items .holiday_details_small span.holidayprice {
-    font-size: 0.6em;
+    font-size: 0.85em;
   }
   #wrapper #holiday-items .holiday_details_small span.holidayprice .offerbox-price {
     display: inline-block;
@@ -4231,13 +4212,10 @@ body {
     width: 100%;
   }
   #wrapper #holiday-items .holiday_details_small figure img {
-    width: 45%;
-  }
-  #wrapper #holiday-items .holiday_details_small figure figcaption {
-    width: 47%;
+    width: 85%;
   }
   #wrapper #holiday-items .holiday_details_small figure figcaption p {
-    font-size: 0.8em;
+    font-size: 0.85em;
   }
   #wrapper #content2 {
     width: 100%;
@@ -4536,17 +4514,14 @@ body {
   #wrapper #holiday-items .holiday_details figure img {
     width: 30%;
   }
-  #wrapper #holiday-items .holiday_details figure figcaption {
-    width: 68%;
-  }
   #wrapper #holiday-items .holiday_details figure figcaption p {
     font-size: 0.8em;
   }
   #wrapper #holiday-items .holiday_details_small h1 {
-    font-size: 0.7em;
+    font-size: 0.9em;
   }
   #wrapper #holiday-items .holiday_details_small span.holidayprice {
-    font-size: 0.6em;
+    font-size: 0.85em;
   }
   #wrapper #holiday-items .holiday_details_small span.holidayprice .offerbox-price {
     display: inline-block;
@@ -4554,22 +4529,8 @@ body {
   #wrapper #holiday-items .holiday_details_small figure {
     width: 100%;
   }
-  #wrapper #holiday-items .holiday_details_small figure img {
-    width: 45%;
-  }
-  #wrapper #holiday-items .holiday_details_small figure figcaption {
-    width: 49%;
-    margin-bottom: 2%;
-  }
   #wrapper #holiday-items .holiday_details_small figure figcaption p {
-    font-size: 0.7em;
-  }
-  #wrapper #holiday-items .holiday_details_small figure figcaption a {
-    width: 85%;
-    font-size: 0.8em;
-  }
-  #wrapper #holiday-items .holiday_details_small figure figcaption a:hover {
-    width: 85%;
+    font-size: 0.85em;
   }
   #wrapper #content2 {
     width: 100%;
@@ -4872,14 +4833,13 @@ body {
     width: 100%;
   }
   #wrapper #holiday-items .holiday_details_small {
-    width: 98%;
+    width: 65%;
     float: none;
     display: block;
     margin: 0.5em auto;
   }
   #wrapper #holiday-items .holiday_details_small h1 {
     font-size: 0.9em;
-    line-height: 32px;
   }
   #wrapper #holiday-items .holiday_details_small span.holidayprice {
     font-size: 0.9em;
@@ -4891,11 +4851,7 @@ body {
     width: 100%;
   }
   #wrapper #holiday-items .holiday_details_small figure img {
-    width: 35%;
-  }
-  #wrapper #holiday-items .holiday_details_small figure figcaption {
-    width: 62%;
-    margin-bottom: 2%;
+    width: 65%;
   }
   #wrapper #holiday-items .holiday_details_small figure figcaption p {
     font-size: 0.85em;
@@ -5216,14 +5172,11 @@ body {
   #wrapper #holiday-items .holiday_details figure {
     width: 100%;
   }
-  #wrapper #holiday-items .holiday_details figure img {
-    width: 40%;
-  }
   #wrapper #holiday-items .holiday_details figure figcaption p {
     font-size: 0.8em;
   }
   #wrapper #holiday-items .holiday_details_small {
-    width: 98%;
+    width: 75%;
   }
   #wrapper #holiday-items .holiday_details_small h1 {
     font-size: 0.9em;
@@ -5238,10 +5191,7 @@ body {
     width: 100%;
   }
   #wrapper #holiday-items .holiday_details_small figure img {
-    width: 38%;
-  }
-  #wrapper #holiday-items .holiday_details_small figure figcaption {
-    width: 58%;
+    width: 85%;
   }
   #wrapper #holiday-items .holiday_details_small figure figcaption p {
     font-size: 0.8em;
@@ -5556,9 +5506,6 @@ body {
   #wrapper #holiday-items .holiday_details figure {
     width: 100%;
   }
-  #wrapper #holiday-items .holiday_details figure img {
-    width: 45%;
-  }
   #wrapper #holiday-items .holiday_details figure figcaption p {
     font-size: 0.8em;
   }
@@ -5566,22 +5513,16 @@ body {
     font-size: 0.9em;
   }
   #wrapper #holiday-items .holiday_details_small span.holidayprice {
-    font-size: 0.75em;
-  }
-  #wrapper #holiday-items .holiday_details_small span.holidayprice .offerbox-price {
-    display: inline-block;
+    font-size: 0.8em;
   }
   #wrapper #holiday-items .holiday_details_small figure {
     width: 100%;
   }
   #wrapper #holiday-items .holiday_details_small figure img {
-    width: 47%;
-  }
-  #wrapper #holiday-items .holiday_details_small figure figcaption {
-    width: 49%;
+    width: 85%;
   }
   #wrapper #holiday-items .holiday_details_small figure figcaption p {
-    font-size: 0.75em;
+    font-size: 0.8em;
   }
   #wrapper #holiday-items .holiday_details_small figure figcaption button {
     font-size: 0.8em;
@@ -5893,7 +5834,7 @@ body {
     font-size: 0.8em;
   }
   #wrapper #holiday-items .holiday_details_small {
-    margin: 0.5em auto;
+    width: 75%;
   }
   #wrapper #holiday-items .holiday_details_small h1 {
     font-size: 0.9em;
@@ -5907,14 +5848,8 @@ body {
   #wrapper #holiday-items .holiday_details_small figure {
     width: 100%;
   }
-  #wrapper #holiday-items .holiday_details_small figure img {
-    width: 48%;
-  }
-  #wrapper #holiday-items .holiday_details_small figure figcaption {
-    width: 48%;
-  }
   #wrapper #holiday-items .holiday_details_small figure figcaption p {
-    font-size: 0.75em;
+    font-size: 0.8em;
   }
   #wrapper #holiday-items .holiday_details_small figure figcaption button {
     font-size: 0.8em;
@@ -6224,14 +6159,14 @@ body {
     font-size: 0.8em;
   }
   #wrapper #holiday-items .holiday_details_small {
-    width: 100%;
+    width: 80%;
   }
   #wrapper #holiday-items .holiday_details_small h1 {
-    font-size: 0.85em;
+    font-size: 0.9em;
     width: 65%;
   }
   #wrapper #holiday-items .holiday_details_small span.holidayprice {
-    font-size: 0.7em;
+    font-size: 0.8em;
     width: 34%;
   }
   #wrapper #holiday-items .holiday_details_small span.holidayprice .offerbox-price {
@@ -6241,14 +6176,10 @@ body {
     width: 100%;
   }
   #wrapper #holiday-items .holiday_details_small figure img {
-    width: 48%;
-  }
-  #wrapper #holiday-items .holiday_details_small figure figcaption {
-    width: 46%;
-    margin-bottom: 2%;
+    width: 75%;
   }
   #wrapper #holiday-items .holiday_details_small figure figcaption p {
-    font-size: 0.75em;
+    font-size: 0.8em;
   }
   #wrapper #holiday-items .holiday_details_small figure figcaption button {
     font-size: 0.8em;
@@ -6563,7 +6494,7 @@ body {
     font-size: 0.75em;
   }
   #wrapper #holiday-items .holiday_details_small h1 {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   #wrapper #holiday-items .holiday_details_small span.holidayprice {
     font-size: 0.75em;
@@ -6574,14 +6505,8 @@ body {
   #wrapper #holiday-items .holiday_details_small figure {
     width: 100%;
   }
-  #wrapper #holiday-items .holiday_details_small figure img {
-    width: 45%;
-  }
-  #wrapper #holiday-items .holiday_details_small figure figcaption {
-    width: 50%;
-  }
   #wrapper #holiday-items .holiday_details_small figure figcaption p {
-    font-size: 0.75em;
+    font-size: 0.8em;
   }
   #wrapper #holiday-items .holiday_details_small figure figcaption button {
     font-size: 0.8em;
