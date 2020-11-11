@@ -5,16 +5,17 @@
       v-bind:key="bestdealitem.id"
       v-for="bestdealitem in bestdealitems"
     >
-      <h1>{{bestdealitem.title}}</h1>
-
-      <span class="holidayprice">
-        From
-        <span class="offerbox-price">{{bestdealitem.price}}</span>
-      </span>
       <figure>
+
         <img :src="bestdealitem.url" :alt="bestdealitem.title" />
 
         <figcaption>
+          <h1>{{bestdealitem.title}}</h1>
+
+          <span class="holidayprice">
+            From
+            <span class="offerbox-price">{{bestdealitem.price}}</span>
+          </span>
           <p>Location: {{bestdealitem.place}}.</p>
           <p>Available: {{bestdealitem.month}}.</p>
           <button>View Details</button>

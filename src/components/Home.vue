@@ -1,8 +1,8 @@
 <template>
   <div class="Home page">
-    <button v-on:click="leftSideFunction" id="side-bar-btn">SIDE</button>
+    <button v-on:click="sideBarFunction" id="side-bar-btn">SIDE</button>
     <!--Leftside-->
-    <aside id="leftside" class="hide" v-if="leftSideFunction">
+    <aside id="home-page-sidebar" class="hide" v-if="sideBarFunction">
       <!---Search form-->
       <SearchForm />
       <!--Destinations-->
@@ -13,7 +13,7 @@
       <br />
     </aside>
 
-    <main id="content">
+    <main id="home-page-content">
       <!--Banner Image-->
       <figure id="banner">
         <img :src="'assets/images/travel-agency-website-banner-image.jpg'" :alt="'banner-image'" />
@@ -36,9 +36,9 @@ import axios from "axios";
 export default {
   name: "Home",
   methods: {
-    leftSideFunction: function(event) {
+    sideBarFunction: function(event) {
       event.preventDefault();
-      var el = document.getElementById("leftside");
+      var el = document.getElementById("home-page-sidebar");
       var box = el.getAttribute("class");
       if (box == "hide") {
         el.setAttribute("class", "show");

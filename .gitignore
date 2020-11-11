@@ -26,5 +26,6 @@ src/assets/images/
 public/
 _assets/filter.txt
 spare/
+.sass-cache/1*
 
 src/components/data-json/*

@@ -8,20 +8,20 @@
         :seasons="this.filternav.seasons"
         :prices="this.filternav.prices"
         :locations="this.filternav.locations"
-        :ratings="this.filternav.ratings"   
+        :ratings="this.filternav.ratings"
         v-on:seasonClick="itemsSearched"
       />
 
     <!---main content-->
-    <main id="content2">
-       
-      <!--HolidayPackage Item component -->           
-      <article>
+    <main id="holiday-items">
+
+      <!--HolidayPackage Item component -->
+
         <transition-group name="fade" tag="div" >
         <div
           class="holiday_details"
           v-for="holidaypackageitem in filteredPacks"
-          v-bind:key="holidaypackageitem.id"          
+          v-bind:key="holidaypackageitem.id"
         >
           <h1>{{holidaypackageitem.title}}</h1>
           <span class="holidayprice">
@@ -38,11 +38,10 @@
           </figure>
         </div>
         </transition-group>
-      </article>
-      
+
+
     </main>
 
-    <div class="clearfix"></div>
   </div>
 </template>
 
@@ -51,51 +50,51 @@ import FilterNav from "./FilterNav.vue";
 import axios from 'axios';
 export default {
   name: "HolidayPackages",
-  components: {    
+  components: {
     FilterNav
   },
   mounted() {
     axios.get("./data-json/holidaypackageitems.json").then(response => (this.holidaypackageitems = response.data));
-    axios.get("./data-json/filternav.json").then(response => (this.filternav = response.data)); 
+    axios.get("./data-json/filternav.json").then(response => (this.filternav = response.data));
   },
   data: () => {
     return {
       selected: ' ',
       holidaypackageitems: [],
-      filternav: [],  
+      filternav: [],
       holiday: [],
       count: 10,
-      
+
     };
   },
   methods : {
       itemsSearched: function (id) {
-        this.selected = id  
+        this.selected = id
       }
-      
+
   },
   computed: {
-    filteredPacks: function(){                    
-      
+    filteredPacks: function(){
+
       if(!this.selected){
          return this.holidaypackageitems
-      }else if('winter' === this.selected || 'summer' === this.selected || 'spring' === this.selected || 'autumn' === this.selected ){        
+      }else if('winter' === this.selected || 'summer' === this.selected || 'spring' === this.selected || 'autumn' === this.selected ){
           return  this.holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.season === this.selected)
-        
-      }else if('london' === this.selected || 'paris' === this.selected || 'madrid' === this.selected || 'dubai' == this.selected || 'rome' == this.selected ){        
+
+      }else if('london' === this.selected || 'paris' === this.selected || 'madrid' === this.selected || 'dubai' == this.selected || 'rome' == this.selected ){
         return this.holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.location == this.selected)
-      }else if('one' === this.selected || 'two' === this.selected || 'three' === this.selected || 'four' == this.selected || 'five' === this.selected){        
+      }else if('one' === this.selected || 'two' === this.selected || 'three' === this.selected || 'four' == this.selected || 'five' === this.selected){
         return this.holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.rating === this.selected)
-      }else if('$399 - $499' == this.selected || '$499 - $599' == this.selected || '$599 - $699' == this.selected || '$699 - $999' == this.selected || '$999 +' == this.selected){        
+      }else if('$399 - $499' == this.selected || '$499 - $599' == this.selected || '$599 - $699' == this.selected || '$699 - $999' == this.selected || '$999 +' == this.selected){
         return this.holidaypackageitems.filter( holidaypackageitem => holidaypackageitem.price === this.selected)
-      }else{ 
-        
-        return this.holidaypackageitems        
-      }        
-       
-    }          
-    
-  }  
+      }else{
+
+        return this.holidaypackageitems
+      }
+
+    }
+
+  }
 };
 </script>
 
