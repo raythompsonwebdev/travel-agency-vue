@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "autoprefixer": "^9.7.4",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^2.6.11",
     "lodash": "^4.17.19",
     "node-forge": "^0.10.0",
