@@ -1,7 +1,7 @@
 <template>
-  <!---leftside2  v-if="leftsideFunction2"-->
-  <aside id="leftside2" class="hide" v-if="leftSideFunction">
-    <button v-on:click="leftSideFunction" id="side-bar-btn">SIDE</button>
+
+  <aside id="filter-nav-sidebar" class="hide" v-if="searchFilterFunction">
+    <button v-on:click="searchFilterFunction" id="side-bar-btn">SIDE</button>
 
   <section id="seasons">
     <h1>Filter By Season</h1>
@@ -46,10 +46,10 @@ export default {
   props: ["seasons", "prices", "locations", "ratings"],
 
   methods: {
-    leftSideFunction: function(event) {
+    searchFilterFunction: function(event) {
       event.preventDefault();
 
-      var el = document.getElementById("leftside2");
+      var el = document.getElementById("filter-nav-sidebar");
 
       var box = el.getAttribute("class");
 

@@ -3,7 +3,7 @@
     <button v-on:click="contactFunction" id="side-bar-btn">Contact</button>
 
     <!--contact details box-->
-    <aside id="contactside" class="hide" v-if="contactFunction">
+    <aside id="contact-page-sidebar" class="hide" v-if="contactFunction">
       <ul id="contact-details">
         <li>
           <span>

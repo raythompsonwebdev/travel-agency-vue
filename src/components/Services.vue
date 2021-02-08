@@ -1,7 +1,7 @@
 <template>
   <div class="Services">
     <!---Leftside3-->
-    <aside id="leftside3">
+    <aside id="about-page-banner">
       <figure>
         <figcaption>
           <h1>Lorem ipsum dolor sit amet</h1>
