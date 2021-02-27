@@ -1,23 +1,33 @@
 <template>
-  <div v-if="bestdealitem">
-    <div class="BestDealsItem">
-      <h1>Best deal item</h1>
-    
-      <main id="holiday-items">       
-        <div>
-          <h1>{{ bestdealitem[0].title }}</h1>
-          <p>{{ bestdealitem[0].season }}</p>
-          <img 
-            :src="bestdealitem[0].url" 
-            alt="Image" 
-          >
-          <button>Add to Cart</button>      
-        </div>
-      </main>
+  <!--BestDeal Item component v-for="bestdealitem in filteredPacks"-->
+  <div
+    v-if="bestdealitem"
+    class="BestDealsItem"
+  >
+    <h1>{{ bestdealitem[0].id }}</h1>
+    <article        
+      class="holiday_item_details"
+    >
+      <h1>{{ bestdealitem[0].title }}</h1>
+      <span class="holidayprice">
+        From
+        <span class="offerbox-price">{{ bestdealitem[0].price }}</span>
+      </span>
+      <figure>
+        <img
+          :src="bestdealitem[0].url"
+          :alt="bestdealitem[0].title"
+        >
 
-      <div class="clearfix" />
-    </div>
+        <figcaption>
+          <h3>Location: {{ bestdealitem[0].location }}.</h3>
+          
+          <button>Book Holiday</button>
+        </figcaption>
+      </figure>
+    </article>
   </div>
+ 
   <NotFoundpage v-else />
 </template>
 
@@ -32,8 +42,8 @@ export default {
     NotFoundpage
   },
   props:{
-    id:{
-      type: String,
+    bestdealitems:{
+      type: Array,
       default: null
     }
   },

@@ -1,35 +1,41 @@
 <template>
-  <div>
-    <article
-      v-for="bestdealitem in bestdealitems"
-      :key="bestdealitem.id"
-      class="holiday_details_small"
-    >
-      <figure>
-        <img
-          :src="bestdealitem.url"
-          :alt="bestdealitem.title"
-        >
+  <article 
+    class="holiday_details_small"
+  >
+    <figure>
+      <img
+        :src="bestdealitem.url"
+        :alt="bestdealitem.title"
+      >
 
-        <figcaption>
-          <h1>{{ bestdealitem.title }}</h1>
+      <figcaption>
+        <h1>{{ bestdealitem.title }}</h1>
 
-          <span class="holidayprice">
-            From
-            <span class="offerbox-price">{{ bestdealitem.price }}</span>
-          </span>
-          <p>Location: {{ bestdealitem.place }}.</p>
-          <p>Available: {{ bestdealitem.month }}.</p>
+        <span class="holidayprice">
+          From
+          <span class="offerbox-price">{{ bestdealitem.price }}</span>
+        </span>
+
+        <p>Location: {{ bestdealitem.location }}.</p>
+        <p>Available: {{ bestdealitem.month }}.</p>
+        <router-link :to="'/bestdeals/' + bestdealitem.id">
           <button>View Details</button>
-        </figcaption>
-      </figure>
-    </article>
-  </div>
+        </router-link>
+      </figcaption>
+    </figure>
+  </article>
 </template>
 
 <script>
 export default {
   name: "BestDealItem",
+  //props: ["bestdealitems"],
+  props: {
+    bestdealitem: {
+      type: Object,
+      default: null
+    }
+  }
   
 };
 </script>

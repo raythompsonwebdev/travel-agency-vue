@@ -1,4 +1,4 @@
-/* eslint-disable */
+
 <template>
   <aside id="language-box">
     <form>

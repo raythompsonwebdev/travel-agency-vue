@@ -28,7 +28,7 @@
       </li>
       <li>
         <router-link
-          to="/bestdeal"
+          to="/bestdeals"
           class="nav-item r-item"
         >
           BestDeal

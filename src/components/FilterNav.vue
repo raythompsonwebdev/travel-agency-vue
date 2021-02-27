@@ -69,9 +69,25 @@
 
 <script>
 export default {
-  name: "FilterNav",
-
-  //props: ["seasons", "prices", "locations", "ratings"],
+  name: "FilterNav",  
+  props: {
+    seasons: {
+      type: Array,
+      default: null
+    },
+    prices: {
+      type: Array,
+      default: null
+    },
+    locations: {
+      type: Array,
+      default: null
+    },
+    ratings: {
+      type: Array,
+      default: null
+    }
+  },
 
   methods: {
     searchFilterFunction: function(event) {
@@ -87,7 +103,6 @@ export default {
         el.setAttribute("class", "hide");
       }
     },
-
     SearchItemBtn(item) {
       this.$emit("seasonClick", item);
     }

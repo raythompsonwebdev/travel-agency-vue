@@ -1,27 +1,23 @@
 <template>
-  <article>
-    <div
-      v-for="holidaypackageitem in holidaypackageitems"
-      :key="holidaypackageitem.id"
-      class="holiday_details"
-    > 
-      <h1>{{ holidaypackageitem.title }}</h1>
-      <span class="holidayprice">
-        from
-        <span class="offerbox-price">{{ holidaypackageitem.price }}</span>
-      </span>
-      <figure>
-        <img
-          :src="holidaypackageitem.url"
-          :alt="holidaypackageitem.title"
-        >
-        <figcaption>
-          <p>Location : {{ holidaypackageitem.place }}</p>
-          <p>{{ holidaypackageitem.text }}</p>
+  <article class="holiday_details">
+    <h1>{{ holidaypackageitem.title }}</h1>
+    <span class="holidayprice">
+      from
+      <span class="offerbox-price">{{ holidaypackageitem.price }}</span>
+    </span>
+    <figure>
+      <img
+        :src="holidaypackageitem.url"
+        :alt="holidaypackageitem.title"
+      >
+      <figcaption>
+        <p>Location : {{ holidaypackageitem.location }}</p>
+        <p>{{ holidaypackageitem.text }}</p>
+        <router-link :to="'/holidaypackages/' + holidaypackageitem.id">
           <button>View Details</button>
-        </figcaption>
-      </figure>
-    </div>
+        </router-link>
+      </figcaption>
+    </figure>
   </article>
 </template>
 
@@ -29,12 +25,12 @@
 export default {
   name: "HolidayPackageItem",
   //props: ["holidaypackageitems"],
-
-  data: () => {
-    return {
-      show: true
-    };
-  }
+  props: {
+    holidaypackageitem: {
+      type: Object,
+      default: null
+    }
+  },
 };
 </script>
 

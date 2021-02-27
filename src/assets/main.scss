@@ -442,7 +442,7 @@
     }
 
     /*#best deal/holiday packages page sidebar*/
-    #leftside2 {
+    #filter-nav-sidebar {
       width: 20%;
       height: auto;
       float: left;
@@ -716,8 +716,96 @@
       padding: 1%;
       text-align: 1.5em;
     }
+    .BestDealsItem,
+    .HolidayPackagesItem {
+      /*Holiday details packages page*/
+      .holiday_item_details {
+        border: 4px #eaeaec solid;
+        margin: 0.5em auto;
+        padding: 0.5em;
+        @include borderRaduis(5px);
+        width: 50%;
+        display: flex;
+        flex-flow: column;
+        h1 {
+          margin: 0;
+          width: 100%;
+          line-height: 40px;
+          font-size: 1.1em;
+          color: #1485c9;
+          align-self: flex-start;
+          text-align: center;
+        }
+        span.holidayprice {
+          font-size: 0.9em;
+          width: 100%;
+          color: $colorgry2;
+          line-height: 40px;
+          text-align: center;
 
-    #content2 {
+          .offerbox-price {
+            display: inline-block;
+            color: $colorbtn4;
+            font-weight: bold;
+          }
+        }
+        figure {
+          width: 100%;
+          margin: 0;
+          img {
+            width: 90%;
+            display: block;
+            margin: 0.5em auto;
+          }
+          figcaption {
+            width: 100%;
+            display: inline-block;
+            margin-bottom: 0.5em;
+            h3 {
+              margin: 0;
+              width: 100%;
+              line-height: 40px;
+              font-size: 1em;
+              color: #1485c9;
+              text-align: center;
+            }
+
+            p {
+              font-size: 0.9em;
+              margin: 0;
+              line-height: 35px;
+              color: #9e9e9e;
+              text-transform: capitalize;
+            }
+            button {
+              width: 80%;
+              @include borderRaduis(5px);
+              text-align: center;
+              color: #fff;
+              height: auto;
+              font-size: 1em;
+              text-decoration: none;
+              padding: 0;
+              margin: 0 auto;
+              line-height: 45px;
+              border: 1px solid #f47f11;
+              @include gradient($colorbtn2, $colorbtn3);
+              display: block;
+              &:hover {
+                color: $colorpw;
+                text-align: center;
+                font-weight: bold;
+                @include gradient($colorbtn3, $colorbtn2);
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #content2,
+    #holiday-items {
       width: 79%;
       height: auto;
       float: left;
@@ -1226,7 +1314,7 @@
       }
     }
 
-    #leftside2 {
+    #filter-nav-sidebar {
       width: 20%;
 
       section#seasons,
@@ -1649,7 +1737,7 @@
       }
     }
 
-    #leftside2 {
+    #filter-nav-sidebar {
       width: 20%;
 
       section#seasons,
@@ -2060,7 +2148,7 @@
       }
     }
 
-    #leftside2 {
+    #filter-nav-sidebar {
       width: 20%;
 
       section#seasons,
@@ -2463,7 +2551,7 @@
       }
     }
 
-    #leftside2 {
+    #filter-nav-sidebar {
       width: 20%;
       section#seasons,
       section#locations,
@@ -2856,7 +2944,7 @@
       }
     }
 
-    #leftside2 {
+    #filter-nav-sidebar {
       width: 20%;
       section#seasons,
       section#locations,
@@ -3254,7 +3342,7 @@
       }
     }
 
-    #leftside2 {
+    #filter-nav-sidebar {
       width: 20%;
 
       section#seasons,
@@ -3802,7 +3890,7 @@
       @include TranSition(all 1s ease);
     }
 
-    #leftside2 {
+    #filter-nav-sidebar {
       position: fixed;
       -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
@@ -4230,7 +4318,7 @@
       }
     }
 
-    #leftside2 {
+    #filter-nav-sidebar {
       section#seasons,
       section#locations,
       section#prices,
@@ -4627,7 +4715,7 @@
       }
     }
 
-    #leftside2 {
+    #filter-nav-sidebar {
       section#seasons,
       section#locations,
       section#prices,
@@ -5034,7 +5122,7 @@
       }
     }
 
-    #leftside2 {
+    #filter-nav-sidebar {
       section#seasons,
       section#locations,
       section#prices,
@@ -5455,7 +5543,7 @@
       }
     }
 
-    #leftside2 {
+    #filter-nav-sidebar {
       section#seasons,
       section#locations,
       section#prices,
@@ -5890,7 +5978,7 @@
       }
     }
 
-    #leftside2 {
+    #filter-nav-sidebar {
       section#seasons,
       section#locations,
       section#prices,
@@ -6308,7 +6396,7 @@
       }
     }
 
-    #leftside2 {
+    #filter-nav-sidebar {
       section#seasons,
       section#locations,
       section#prices,
@@ -6725,7 +6813,7 @@
       }
     }
 
-    #leftside2 {
+    #filter-nav-sidebar {
       section#seasons,
       section#locations,
       section#prices,
@@ -7152,7 +7240,7 @@
       }
     }
 
-    #leftside2 {
+    #filter-nav-sidebar {
       section#seasons,
       section#locations,
       section#prices,
