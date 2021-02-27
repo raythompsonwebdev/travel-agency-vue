@@ -30,6 +30,12 @@
 export default {
   name: "FeaturedHolidays",
   //props: ["featuredholidayitems"]
+  props: {
+    featuredholidayitems: {
+      type: Array,
+      default: null
+    }
+  }
 };
 </script>
 

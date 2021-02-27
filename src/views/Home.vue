@@ -15,7 +15,7 @@
         <!---Search form-->
         <SearchForm />
         <!--Destinations-->
-        <!-- <Destinations :destinationitems="this.data.destinationitems" />  -->
+        <Destinations :destinationitems="destinationitems" /> 
         <br>
         <br>
         <br>
@@ -30,10 +30,10 @@
           >
         </figure>
 
-      <!--Featured Holiday Packages-->
-      <!-- <FeaturedHolidays
-        :featuredholidayitems="this.data.featuredholidayitems"
-      /> -->
+        <!--Featured Holiday Packages-->
+        <FeaturedHolidays
+          :featuredholidayitems="featuredholidayitems"
+        />
       </main>
 
       <div class="clearfix" />
@@ -45,16 +45,16 @@
 <script>
 
 import SearchForm from "../components/SearchForm.vue";
-//import Destinations from "./component/Destinations.vue";
-//import FeaturedHolidays from "./component/FeaturedHolidays.vue";
+import Destinations from "../components/Destinations.vue";
+import FeaturedHolidays from "../components/FeaturedHolidays.vue";
 
 import { destinationitems, featuredholidayitems  } from '../data-json.json';
 
 export default {
   name: "Home",
   components: {
-    //Destinations,
-    //FeaturedHolidays,
+    Destinations,
+    FeaturedHolidays,
     SearchForm
   },
   data() {

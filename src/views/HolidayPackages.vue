@@ -12,15 +12,17 @@
     <main id="holiday-items">
       <!--HolidayPackage Item component -->
 
-      <!-- <transition-group name="fade" tag="div"> -->
-      <div          
-        v-for="holidaypackageitem in holidaypackageitems"
-        :key="holidaypackageitem.id"
-        class="holiday_details"
+      <transition-group 
+        name="fade" 
+        tag="div"
       >
-        <HolidayPackageItem :holidaypackageitem="holidaypackageitem" />
-      </div>
-      <!-- </transition-group> -->
+        <div          
+          v-for="holidaypackageitem in filteredPacks"
+          :key="holidaypackageitem.id"
+        >
+          <HolidayPackageItem :holidaypackageitem="holidaypackageitem" />
+        </div>
+      </transition-group>
     </main>
   </div>
 </template>
@@ -46,21 +48,20 @@ export default {
       prices,
       selected: " ",
       holidaypackageitems,
-      holiday: [],
       count: 10
     };
   },  
   computed: {
     filteredPacks: function() {
       if (!this.selected) {
-        return this.holidaypackageitems;
+        return holidaypackageitems;
       } else if (
         "winter" === this.selected ||
         "summer" === this.selected ||
         "spring" === this.selected ||
         "autumn" === this.selected
       ) {
-        return this.holidaypackageitems.filter(
+        return holidaypackageitems.filter(
           holidaypackageitem => holidaypackageitem.season === this.selected
         );
       } else if (
@@ -70,7 +71,7 @@ export default {
         "dubai" == this.selected ||
         "rome" == this.selected
       ) {
-        return this.holidaypackageitems.filter(
+        return holidaypackageitems.filter(
           holidaypackageitem => holidaypackageitem.location == this.selected
         );
       } else if (
@@ -80,7 +81,7 @@ export default {
         "four" == this.selected ||
         "five" === this.selected
       ) {
-        return this.holidaypackageitems.filter(
+        return holidaypackageitems.filter(
           holidaypackageitem => holidaypackageitem.rating === this.selected
         );
       } else if (
@@ -90,11 +91,11 @@ export default {
         "$699 - $999" == this.selected ||
         "$999 +" == this.selected
       ) {
-        return this.holidaypackageitems.filter(
+        return holidaypackageitems.filter(
           holidaypackageitem => holidaypackageitem.price === this.selected
         );
       } else {
-        return this.holidaypackageitems;
+        return holidaypackageitems;
       }
     }
   },
@@ -109,31 +110,31 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style lang="scss">
-.fade-enter-active {
-  animation: coming 1s;
-  animation-delay: 1s;
-  opacity: 0;
-}
-.fade-leave-active {
-  animation: going 1s;
-}
-@keyframes coming {
-  from {
-    transform: translateX(-50px);
+  .fade-enter-active {
+    animation: coming 1s;
+    animation-delay: 1s;
     opacity: 0;
   }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
+  .fade-leave-active {
+    animation: going 1s;
   }
-}
-@keyframes going {
-  from {
-    transform: translateX(0);
+  @keyframes coming {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 1;
+    }
   }
-  to {
-    transform: translateX(-50px);
-    opacity: 0;
+  @keyframes going {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
   }
-}
 </style>

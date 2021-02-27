@@ -25,6 +25,12 @@
 export default {
   name: "Destinations",
   //props: ["destinationitems"]
+  props: {
+    destinationitems: {
+      type: Object,
+      default: null
+    }
+  }
 };
 </script>
 

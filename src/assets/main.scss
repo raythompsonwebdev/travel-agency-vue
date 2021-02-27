@@ -69,7 +69,6 @@
             -webkit-flex: 0 0 auto;
             -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-
             width: auto;
             display: block;
             margin: 0.2em;
@@ -82,7 +81,7 @@
             line-height: 27px;
             letter-spacing: 0.01em;
             font-weight: bold;
-            font-size: 1em;
+            font-size: 0.9em;
             text-align: center;
             text-shadow: 1px 1px 1px #000;
             text-decoration: none;
@@ -208,7 +207,6 @@
         form {
           height: 40px;
           display: flex;
-
           label {
             width: 35%;
             font-size: 0.8em;
@@ -720,7 +718,7 @@
     .HolidayPackagesItem {
       /*Holiday details packages page*/
       .holiday_item_details {
-        border: 4px #eaeaec solid;
+        border: 2px $sideboxbordercolvar solid;
         margin: 0.5em auto;
         padding: 0.5em;
         @include borderRaduis(5px);
@@ -811,8 +809,7 @@
       float: left;
       margin-bottom: 10px;
       background-color: $colorpw;
-      padding: 1%;
-      line-height: 1.5em;
+      padding: 0.25em;
 
       h1 {
         font-size: 1.3em;
@@ -903,9 +900,9 @@
 
       /*Holiday details packages page*/
       .holiday_details {
-        border: 4px #eaeaec solid;
-        margin: 0.5em 0;
-        padding: 0.5em;
+        border: 2px $sideboxborder solid;
+        margin: 0.25em 0;
+        padding: 0.25em;
         @include borderRaduis(5px);
         width: 100%;
         display: flex;
@@ -923,7 +920,7 @@
           width: 20%;
           color: $colorgry2;
           line-height: 40px;
-          text-align: center;
+          text-align: right;
 
           .offerbox-price {
             display: inline-block;
@@ -983,9 +980,10 @@
       /*Holiday best deals packages page*/
       .holiday_details_small {
         width: 48%;
-        border: 3px $sideboxborder solid;
+        border: 2px $sideboxborder solid;
+        @include borderRaduis(5px);
         margin: 0.25em;
-        padding: 0.5em;
+        padding: 0.25em;
         float: left;
         display: block;
         h1 {
@@ -996,7 +994,7 @@
           display: block;
           color: $heading;
           font-weight: bold;
-          width: 63%;
+          width: 70%;
           display: block;
           float: left;
         }
@@ -1004,10 +1002,10 @@
           line-height: 40px;
           color: $colorgry2;
           font-weight: bold;
-          font-size: 0.85em;
-          width: 37%;
+          font-size: 0.75em;
+          width: 30%;
           display: inline-block;
-          text-align: center;
+          text-align: right;
           .offerbox-price {
             display: inline-block;
             color: $colorbtn4;
@@ -1022,14 +1020,14 @@
           padding: 0;
           display: inline-block;
           img {
-            width: 40%;
+            width: 48%;
             display: block;
             float: left;
-            margin: 0 0.5em 0 0;
+            margin: 0 0.25em 0 0;
           }
 
           figcaption {
-            width: 54%;
+            width: 49%;
             display: inline-block;
             margin-bottom: 0.5em;
             p {
@@ -1041,12 +1039,12 @@
               color: $colorgry2;
             }
             button {
-              width: 55%;
+              width: 100%;
               @include borderRaduis(5px);
               display: block;
               text-align: center;
               color: #fff;
-              font-size: 0.8em;
+              font-size: 1em;
               text-decoration: none;
               margin: 0;
               line-height: 35px;
@@ -1185,7 +1183,7 @@
           }
 
           a#contact-number {
-            font-size: 1em;
+            font-size: 0.9em;
 
             &:active {
               color: #fff;
@@ -1466,7 +1464,8 @@
     label.error {
       font-size: 0.9em;
     }
-    #content2 {
+    #content2,
+    #holiday-items {
       h1 {
         font-size: 1.3em;
       }
@@ -1545,7 +1544,6 @@
           font-size: 0.95em;
         }
         span.holidayprice {
-          font-size: 0.8em;
           .offerbox-price {
             display: inline-block;
           }
@@ -1561,10 +1559,10 @@
             width: 54%;
 
             p {
-              font-size: 0.9em;
+              font-size: 0.85em;
             }
             button {
-              width: 60%;
+              width: 100%;
             }
           }
         }
@@ -1621,7 +1619,7 @@
           }
 
           a#contact-number {
-            font-size: 1em;
+            font-size: 0.9em;
 
             &:active {
               color: #fff;
@@ -1866,7 +1864,8 @@
       font-size: 0.9em;
     }
 
-    #content2 {
+    #content2,
+    #holiday-items {
       h1 {
         font-size: 1.2em;
       }
@@ -1944,10 +1943,10 @@
       .holiday_details_small {
         h1 {
           font-size: 0.9em;
-          line-height: 25px;
+          width: 67%;
         }
         span.holidayprice {
-          font-size: 0.8em;
+          width: 32%;
           .offerbox-price {
             display: inline-block;
           }
@@ -1956,16 +1955,16 @@
           width: 100%;
 
           img {
-            width: 43%;
+            width: 48%;
           }
 
           figcaption {
-            width: 54%;
+            width: 50%;
             p {
               font-size: 0.85em;
             }
             button {
-              width: 60%;
+              width: 100%;
             }
           }
         }
@@ -2057,7 +2056,7 @@
         li:nth-of-type(2) {
           padding-top: 0;
           a {
-            font-size: 0.6em;
+            font-size: 60%;
             line-height: 40px;
             height: auto;
           }
@@ -2270,7 +2269,8 @@
     label.error {
       font-size: 0.9em;
     }
-    #content2 {
+    #content2,
+    #holiday-items {
       h1 {
         font-size: 1.2em;
       }
@@ -2346,11 +2346,9 @@
 
       .holiday_details_small {
         h1 {
-          font-size: 0.85em;
-          line-height: 25px;
+          font-size: 0.9em;
         }
         span.holidayprice {
-          font-size: 0.8em;
           .offerbox-price {
             display: inline-block;
           }
@@ -2359,16 +2357,16 @@
           width: 100%;
 
           img {
-            width: 43%;
+            width: 48%;
           }
 
           figcaption {
-            width: 54%;
+            width: 50%;
             p {
               font-size: 0.85em;
             }
             button {
-              font-size: 0.85em;
+              font-size: 1em;
             }
           }
         }
@@ -2457,13 +2455,13 @@
         li {
           height: 40px;
           a {
-            font-size: 0.6em;
+            font-size: 0.7em;
           }
         }
         li:nth-of-type(2) {
           padding-top: 0;
           a {
-            font-size: 0.5em;
+            font-size: 50%;
             height: auto;
           }
         }
@@ -2663,7 +2661,8 @@
     label.error {
       font-size: 0.9em;
     }
-    #content2 {
+    #content2,
+    #holiday-items {
       h1 {
         font-size: 1.1em;
       }
@@ -2735,14 +2734,13 @@
       }
 
       .holiday_details_small {
-        width: 100%;
+        width: 48%;
 
         h1 {
-          font-size: 1em;
-          line-height: 40px;
+          font-size: 0.8em;
         }
         span.holidayprice {
-          font-size: 1em;
+          font-size: 0.65em;
           .offerbox-price {
             display: inline-block;
           }
@@ -2751,13 +2749,13 @@
           width: 100%;
 
           img {
-            width: 28%;
+            width: 48%;
           }
 
           figcaption {
-            width: 54%;
+            width: 50%;
             p {
-              font-size: 0.9em;
+              font-size: 0.8em;
             }
             button {
               font-size: 1em;
@@ -3054,7 +3052,8 @@
     label.error {
       font-size: 0.9em;
     }
-    #content2 {
+    #content2,
+    #holiday-items {
       h1 {
         font-size: 1.1em;
       }
@@ -3126,10 +3125,10 @@
 
       .holiday_details_small {
         h1 {
-          font-size: 0.9em;
+          font-size: 0.75em;
         }
         span.holidayprice {
-          font-size: 1em;
+          font-size: 0.6em;
           .offerbox-price {
             display: inline-block;
           }
@@ -3138,17 +3137,17 @@
           width: 100%;
 
           img {
-            width: 32%;
+            width: 48%;
           }
 
           figcaption {
             width: 50%;
 
             p {
-              font-size: 0.9em;
+              font-size: 0.75em;
             }
             button {
-              font-size: 0.9em;
+              font-size: 1em;
             }
           }
         }
@@ -3206,7 +3205,7 @@
       }
 
       aside.contact {
-        width: 17%;
+        width: 18%;
 
         span.tele {
           margin: 0;
@@ -3239,13 +3238,13 @@
           width: 16.5%;
           height: 40px;
           a {
-            font-size: 0.55em;
+            font-size: 0.65em;
           }
         }
         li:nth-of-type(2) {
           padding-top: 0em;
           a {
-            font-size: 40%;
+            font-size: 45%;
             height: auto;
           }
         }
@@ -3455,7 +3454,8 @@
     label.error {
       font-size: 0.9em;
     }
-    #content2 {
+    #content2,
+    #holiday-items {
       h1 {
         font-size: 1.1em;
       }
@@ -3525,11 +3525,12 @@
       }
 
       .holiday_details_small {
+        width: 100%;
         h1 {
-          font-size: 0.9em;
+          font-size: 1em;
         }
         span.holidayprice {
-          font-size: 0.85em;
+          font-size: 0.9em;
           .offerbox-price {
             display: inline-block;
           }
@@ -3538,18 +3539,18 @@
           width: 100%;
 
           img {
-            width: 35%;
+            width: 30%;
           }
 
           figcaption {
-            width: 50%;
+            width: 68%;
 
             p {
               font-size: 0.9em;
             }
             button {
-              width: 75%;
-              font-size: 0.9em;
+              width: 100%;
+              font-size: 1em;
             }
           }
         }
@@ -4027,10 +4028,9 @@
       font-size: 0.9em;
     }
 
-    #content2 {
+    #content2,
+    #holiday-items {
       width: 100%;
-      padding: 1%;
-      line-height: 1.5em;
       h1 {
         font-size: 1.1em;
       }
@@ -4103,14 +4103,13 @@
       }
 
       .holiday_details_small {
-        width: 48%;
-        padding: 0.25em;
+        width: 100%;
 
         h1 {
-          font-size: 0.75em;
+          font-size: 1em;
         }
         span.holidayprice {
-          font-size: 0.7em;
+          font-size: 0.9em;
 
           .offerbox-price {
             display: inline-block;
@@ -4120,18 +4119,17 @@
           width: 100%;
 
           img {
-            width: 45%;
+            width: 27%;
           }
 
           figcaption {
-            width: 50%;
-            margin-bottom: 2%;
+            width: 70%;
+            margin-bottom: 0;
             p {
-              font-size: 0.75em;
+              font-size: 0.9em;
             }
             button {
               width: 100%;
-              font-size: 0.8em;
             }
           }
         }
@@ -4412,10 +4410,10 @@
     label.error {
       font-size: 0.9em;
     }
-    #content2 {
+    #content2,
+    #holiday-items {
       width: 100%;
-      padding: 1%;
-      line-height: 1.5em;
+
       h1 {
         font-size: 1em;
       }
@@ -4488,10 +4486,10 @@
 
       .holiday_details_small {
         h1 {
-          font-size: 0.7em;
+          font-size: 1em;
         }
         span.holidayprice {
-          font-size: 0.6em;
+          font-size: 0.9em;
           .offerbox-price {
             display: inline-block;
           }
@@ -4500,17 +4498,17 @@
           width: 100%;
 
           img {
-            width: 45%;
+            width: 30%;
           }
 
           figcaption {
-            width: 47%;
+            width: 65%;
 
             p {
-              font-size: 0.7em;
+              font-size: 0.85em;
             }
             button {
-              font-size: 0.8em;
+              font-size: 1em;
             }
           }
         }
@@ -4827,10 +4825,10 @@
       font-size: 0.9em;
     }
 
-    #content2 {
+    #content2,
+    #holiday-items {
       width: 100%;
-      padding: 1%;
-      line-height: 1.5em;
+
       h1 {
         font-size: 1em;
       }
@@ -4901,10 +4899,10 @@
 
       .holiday_details_small {
         h1 {
-          font-size: 0.7em;
+          font-size: 1em;
         }
         span.holidayprice {
-          font-size: 0.6em;
+          font-size: 0.9em;
           .offerbox-price {
             display: inline-block;
           }
@@ -4912,21 +4910,16 @@
         figure {
           width: 100%;
           img {
-            width: 45%;
+            width: 31%;
           }
 
           figcaption {
-            width: 49%;
-            margin-bottom: 2%;
+            width: 68%;
             p {
-              font-size: 0.7em;
+              font-size: 0.85em;
             }
             a {
-              width: 85%;
-              font-size: 0.8em;
-              &:hover {
-                width: 85%;
-              }
+              width: 100%;
             }
           }
         }
@@ -5229,10 +5222,10 @@
     label.error {
       font-size: 0.9em;
     }
-    #content2 {
+    #content2,
+    #holiday-items {
       width: 100%;
-      padding: 1%;
-      line-height: 1.5em;
+
       h1 {
         font-size: 0.95em;
       }
@@ -5305,14 +5298,13 @@
       }
 
       .holiday_details_small {
-        width: 98%;
+        width: 100%;
         float: none;
         display: block;
         margin: 0.5em auto;
 
         h1 {
-          font-size: 0.9em;
-          line-height: 32px;
+          font-size: 1em;
         }
         span.holidayprice {
           font-size: 0.9em;
@@ -5324,21 +5316,16 @@
           width: 100%;
 
           img {
-            width: 35%;
+            width: 47%;
           }
 
           figcaption {
-            width: 62%;
-            margin-bottom: 2%;
+            width: 48%;
             p {
               font-size: 0.85em;
             }
             button {
               width: 100%;
-              font-size: 0.9em;
-              &:hover {
-                width: 100%;
-              }
             }
           }
         }
@@ -5671,9 +5658,8 @@
       font-size: 0.9em;
     }
 
-    #content2 {
-      padding: 1%;
-
+    #content2,
+    #holiday-items {
       h1 {
         font-size: 0.9em;
       }
@@ -5730,10 +5716,10 @@
         figure {
           width: 100%;
           img {
-            width: 23%;
+            width: 47%;
           }
           figcaption {
-            width: 71%;
+            width: 49%;
 
             p {
               font-size: 0.8em;
@@ -5746,10 +5732,10 @@
       }
 
       .holiday_details_small {
-        width: 98%;
+        width: 100%;
 
         h1 {
-          font-size: 0.9em;
+          font-size: 1em;
         }
         span.holidayprice {
           font-size: 0.8em;
@@ -5761,17 +5747,17 @@
           width: 100%;
 
           img {
-            width: 38%;
+            width: 47%;
           }
 
           figcaption {
-            width: 58%;
+            width: 48%;
 
             p {
               font-size: 0.8em;
             }
             button {
-              font-size: 0.8em;
+              font-size: 1em;
             }
           }
         }
@@ -6087,10 +6073,10 @@
       font-size: 0.9em;
     }
 
-    #content2 {
+    #content2,
+    #holiday-items {
       width: 100%;
-      padding: 1%;
-      line-height: 1.5em;
+
       h1 {
         font-size: 0.85em;
       }
@@ -6505,10 +6491,10 @@
       font-size: 0.9em;
     }
 
-    #content2 {
+    #content2,
+    #holiday-items {
       width: 100%;
-      padding: 1%;
-      line-height: 1.5em;
+
       h1 {
         font-size: 0.8em;
       }
@@ -6924,10 +6910,10 @@
       font-size: 0.9em;
     }
 
-    #content2 {
+    #content2,
+    #holiday-items {
       width: 100%;
-      padding: 1%;
-      line-height: 1.5em;
+
       h1 {
         font-size: 0.75em;
       }
@@ -7347,10 +7333,10 @@
     label.error {
       font-size: 0.9em;
     }
-    #content2 {
+    #content2,
+    #holiday-items {
       width: 100%;
-      padding: 1%;
-      line-height: 1.5em;
+
       h1 {
         font-size: 0.75em;
       }
