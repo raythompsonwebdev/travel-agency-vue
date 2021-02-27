@@ -2,15 +2,18 @@
   <!--Destinations-->
   <section class="leftsidebox">
     <h2>Top Destinations</h2>
-    <div v-for="destination in destinationitems" v-bind:key="destination.id">
+    <div
+      v-for="destination in destinationitems"
+      :key="destination.id"
+    >
       <div class="destinations">
         <figure>
-          <img :src="destination.url" />
+          <img :src="destination.url">
 
           <figcaption>
-            <h3>{{destination.city}}</h3>
-            <p>{{destination.country}}</p>
-            <p>{{destination.hotels}}</p>
+            <h3>{{ destination.city }}</h3>
+            <p>{{ destination.country }}</p>
+            <p>{{ destination.hotels }}</p> 
           </figcaption>
         </figure>
       </div>
@@ -21,7 +24,7 @@
 <script>
 export default {
   name: "Destinations",
-  props: ["destinationitems"]
+  //props: ["destinationitems"]
 };
 </script>
 

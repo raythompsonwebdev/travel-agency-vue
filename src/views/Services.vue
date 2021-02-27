@@ -8,9 +8,9 @@
 
           <span>
             <img
-              :src="'assets/images/travel-agency-website-sidebar-banner-image-label.jpg'"
+              :src="'../assets/images/travel-agency-website-sidebar-banner-image-label.jpg'"
               :alt="'travel-agency-website-sidebar-banner-image-label'"
-            />
+            >
           </span>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -19,9 +19,9 @@
         </figcaption>
 
         <img
-          :src="'assets/images/travel-agency-website-sidebar-banner-image-small.jpg'"
+          :src="'../assets/images/travel-agency-website-sidebar-banner-image-small.jpg'"
           :alt="'travel-agency-website-sidebar-banner-image-small'"
-        />
+        >
       </figure>
     </aside>
 
@@ -32,15 +32,15 @@
 
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.</p>
-      <br />
+      <br>
       <div class="servicebox">
         <h1>Enim odit dolor sequi voluptatem</h1>
         <figure>
           <img
             class="service-box-img"
-            :src="'assets/images/travel-agency-website-customer-service-image.jpg'"
+            :src="'../assets/images/travel-agency-website-customer-service-image.jpg'"
             :alt="'travel-agency-website-customer-service-image'"
-          />
+          >
           <figcaption>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.</p>
             <a :href="'http://www.google.com'">Learn More</a>
@@ -53,9 +53,9 @@
         <figure>
           <img
             class="service-box-img"
-            :src="'assets/images/travel-agency-website-bus-tours-image.jpg'"
+            :src="'../assets/images/travel-agency-website-bus-tours-image.jpg'"
             :alt="'travel-agency-website-bus-tours-image'"
-          />
+          >
 
           <figcaption>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.</p>
@@ -70,9 +70,9 @@
         <figure>
           <img
             class="service-box-img"
-            :src="'assets/images/travel-agency-website-hotel-room-image.jpg'"
+            :src="'../assets/images/travel-agency-website-hotel-room-image.jpg'"
             :alt="'travel-agency-website-hotel-room-image'"
-          />
+          >
           <figcaption>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.</p>
             <a :href="'http://www.google.com'">Learn More</a>
@@ -80,23 +80,23 @@
         </figure>
       </div>
 
-      <div class="clearfix"></div>
-      <br />
+      <div class="clearfix" />
+      <br>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.</p>
-      <br />
+      <br>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.</p>
-      <br />
+      <br>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.</p>
-      <br />
+      <br>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.</p>
-      <br />
+      <br>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.</p>
-      <br />
+      <br>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.</p>
-      <br />
+      <br>
     </main>
 
-    <div class="clearfix"></div>
+    <div class="clearfix" />
   </div>
 </template>
 

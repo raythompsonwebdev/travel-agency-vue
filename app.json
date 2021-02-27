@@ -1,8 +1,0 @@
-{
-  "name": "travel-agency",
-  "description": "Travel Agency Vue.js app",
-  "repository": "https://github.com/raythompsonwebdev/Holiday-Site-Vue",
-  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
-  "keywords": ["node", "vuejs", "heroku"],
-  "image": "heroku/nodejs"
-}

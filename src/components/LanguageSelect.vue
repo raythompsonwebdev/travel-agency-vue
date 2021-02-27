@@ -1,63 +1,69 @@
+/* eslint-disable */
 <template>
   <aside id="language-box">
     <form>
       <label for="langs">Language:</label>
+      <div id="flagImg">
+        <img
+          :src="'/assets/images/flags/' + selected + '.jpg'"
+          @error="imgUrlAlt"
+        >
+      </div>
       <select
-        name="langs"
-        v-model="this.languages"
-        v-on:click="itemsSearched($event.target.value);"
+        v-model="selected"
+        name="languageselectitems"
+        @click="itemsSearched($event.target.value);"
       >
         <option
-          v-for="(language, i) in this.languages"
-          :value="language.value"
+          v-for="(languageselectitem, i) in onChangeImg" 
           :key="i"
-        >{{language.name}}</option>
+          :value="languageselectitem.value"
+        >
+          {{ languageselectitem.text }}
+        </option>
       </select>
     </form>
   </aside>
 </template>
 
 <script>
-import axios from "axios";
-
-//import langs from './data/languageselectitems'
-
+import { languageselectitems } from '../data-json.json';
 export default {
   name: "LanguageSelect",
-
-  mounted() {
-    axios
-      .get("./data-json/languageselect.json")
-      .then(response => (this.languages = response.data));
-  },
-
   data: () => {
     return {
       selected: " ",
-      languages: []
+      defaultImage: "../assets/images/flags/default.jpg",
+      languageselectitems,
     };
   },
-
+  computed: {
+    onChangeImg: function() {
+      if (this.selected === "nothing") {
+        return this.languageselectitems;
+      } else if (this.selected === "United_Kingdom") {
+        return this.languageselectitems;
+      } else if (this.selected === "Germany") {
+        return this.languageselectitems;
+      } else if (this.selected === "United_States") {
+        return this.languageselectitems;
+      } else if (this.selected === "Jamaica") {
+        return this.languageselectitems;
+      } else if (this.selected === "France") {
+        return this.languageselectitems;
+      } else if (this.selected === "Spain") {
+        return this.languageselectitems;
+      } else {
+        return this.languageselectitems;
+      }
+    }
+  },
   methods: {
     itemsSearched: function(id) {
       this.selected = id;
-    }
-  },
-
-  computed: {
-    onChange: function() {
-      if (
-        this.selected === "Jamaica" ||
-        this.selected === "United_States" ||
-        this.selected === "United_Kingdom" ||
-        this.selected === "Spain" ||
-        this.selected === "France" ||
-        this.selectee === "Germany"
-      ) {
-        return this.languages;
-      } else {
-        return this.languages;
-      }
+    },
+    imgUrlAlt(e) {
+      e.target.src = "../assets/images/flags/default.jpg";
     }
   }
 };

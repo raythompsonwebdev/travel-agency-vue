@@ -125,7 +125,7 @@
       flex-direction: row;
       border-bottom: 1px solid $colorgry2;
 
-      ul#navi {
+      #navi {
         height: 100%;
         display: block;
         margin: 0 0.25em 0 0;
@@ -268,7 +268,7 @@
     }
 
     /*#home page sidebar*/
-    #leftside {
+    #home-page-sidebar {
       width: 30%;
       height: auto;
       float: left;
@@ -516,7 +516,7 @@
     }
 
     /*#about page sidebar*/
-    #leftside3 {
+    #about-page-banner {
       width: 20%;
       height: auto;
       float: left;
@@ -560,9 +560,8 @@
         }
       }
     }
-
     /*#contact page details sidebar*/
-    #contactside {
+    #contact-page-sidebar {
       width: 20%;
       height: auto;
       float: left;
@@ -613,7 +612,7 @@
       }
     }
 
-    #content {
+    #home-page-content {
       width: 70%;
       height: auto;
       float: left;
@@ -1143,7 +1142,7 @@
       display: none;
     }
 
-    #leftside {
+    #home-page-sidebar {
       width: 30%;
 
       .leftsidebox {
@@ -1255,7 +1254,7 @@
         }
       }
     }
-    #leftside3 {
+    #about-page-banner {
       width: 20%;
       margin: 1% 1% 0 0;
       #contact-details {
@@ -1307,7 +1306,7 @@
         }
       }
     }
-    #contactside {
+    #contact-page-sidebar {
       width: 20%;
 
       #contact-details {
@@ -1333,7 +1332,7 @@
       }
     }
 
-    #content {
+    #home-page-content {
       width: 70%;
 
       h1 {
@@ -1576,7 +1575,7 @@
       }
     }
 
-    #leftside {
+    #home-page-sidebar {
       width: 30%;
 
       .leftsidebox {
@@ -1679,7 +1678,7 @@
       }
     }
 
-    #leftside3 {
+    #about-page-banner {
       width: 20%;
       margin: 1% 1% 0 0;
 
@@ -1707,7 +1706,7 @@
       }
     }
 
-    #contactside {
+    #contact-page-sidebar {
       width: 20%;
 
       #contact-details {
@@ -1732,7 +1731,7 @@
       }
     }
 
-    #content {
+    #home-page-content {
       width: 70%;
 
       h1 {
@@ -1988,7 +1987,7 @@
       }
     }
 
-    #leftside {
+    #home-page-sidebar {
       width: 30%;
 
       .leftsidebox {
@@ -2087,7 +2086,7 @@
       }
     }
 
-    #leftside3 {
+    #about-page-banner {
       width: 20%;
       margin: 1% 1% 0 0;
       figure {
@@ -2115,7 +2114,7 @@
       }
     }
 
-    #contactside {
+    #contact-page-sidebar {
       width: 20%;
 
       #contact-details {
@@ -2137,7 +2136,7 @@
         }
       }
     }
-    #content {
+    #home-page-content {
       width: 70%;
 
       h1 {
@@ -2393,7 +2392,7 @@
       }
     }
 
-    #leftside {
+    #home-page-sidebar {
       width: 30%;
 
       .leftsidebox {
@@ -2488,7 +2487,7 @@
         }
       }
     }
-    #leftside3 {
+    #about-page-banner {
       width: 20%;
       margin: 1% 1% 0 0;
 
@@ -2508,7 +2507,7 @@
       }
     }
 
-    #contactside {
+    #contact-page-sidebar {
       width: 20%;
 
       #contact-details {
@@ -2530,7 +2529,7 @@
         }
       }
     }
-    #content {
+    #home-page-content {
       width: 70%;
 
       h1 {
@@ -2782,7 +2781,7 @@
       }
     }
 
-    #leftside {
+    #home-page-sidebar {
       width: 30%;
 
       .leftsidebox {
@@ -2881,7 +2880,7 @@
         }
       }
     }
-    #leftside3 {
+    #about-page-banner {
       width: 20%;
       margin: 1% 1% 0 0;
 
@@ -2900,7 +2899,7 @@
       }
     }
 
-    #contactside {
+    #contact-page-sidebar {
       width: 20%;
 
       #contact-details {
@@ -2921,7 +2920,7 @@
         }
       }
     }
-    #content {
+    #home-page-content {
       width: 70%;
 
       h1 {
@@ -3175,7 +3174,7 @@
       }
     }
 
-    #leftside {
+    #home-page-sidebar {
       width: 30%;
 
       .leftsidebox {
@@ -3283,7 +3282,7 @@
         }
       }
     }
-    #leftside3 {
+    #about-page-banner {
       width: 20%;
       margin: 1% 1% 0 0;
 
@@ -3301,7 +3300,7 @@
         }
       }
     }
-    #contactside {
+    #contact-page-sidebar {
       width: 20%;
 
       #contact-details {
@@ -3322,7 +3321,7 @@
         }
       }
     }
-    #content {
+    #home-page-content {
       width: 70%;
 
       h1 {
@@ -3709,7 +3708,7 @@
       }
     }
 
-    #leftside {
+    #home-page-sidebar {
       position: fixed;
       top: 0;
       width: 250px;
@@ -3840,7 +3839,7 @@
       }
     }
 
-    #leftside3 {
+    #about-page-banner {
       position: fixed;
       z-index: 100;
       top: 0;
@@ -3866,7 +3865,7 @@
       }
     }
 
-    #contactside {
+    #contact-page-sidebar {
       position: fixed;
       bottom: 0;
       width: 100%;
@@ -3892,7 +3891,7 @@
       }
     }
 
-    #content {
+    #home-page-content {
       width: 100%;
       height: auto;
       margin: 1% 0;
@@ -4156,7 +4155,7 @@
     #contact-bar-btn {
       font-size: 0.75em;
     }
-    #leftside {
+    #home-page-sidebar {
       width: 250px;
 
       .leftsidebox {
@@ -4255,11 +4254,11 @@
         }
       }
     }
-    #leftside3 {
+    #about-page-banner {
       display: none;
     }
 
-    #contactside {
+    #contact-page-sidebar {
       #contact-details {
         li {
           font-size: 0.9em;
@@ -4278,7 +4277,7 @@
         }
       }
     }
-    #content {
+    #home-page-content {
       width: 100%;
       height: auto;
       margin: 1% 0;
@@ -4556,7 +4555,7 @@
       top: 240px;
     }
 
-    #leftside {
+    #home-page-sidebar {
       .leftsidebox {
         width: 96%;
 
@@ -4652,7 +4651,7 @@
       }
     }
 
-    #leftside3 {
+    #about-page-banner {
       width: 60%;
 
       figure {
@@ -4673,7 +4672,7 @@
       }
     }
 
-    #contactside {
+    #contact-page-sidebar {
       #contact-details {
         li {
           &:first-line {
@@ -4692,7 +4691,7 @@
       }
     }
 
-    #content {
+    #home-page-content {
       width: 100%;
       height: auto;
       margin: 1% 0;
@@ -4961,7 +4960,7 @@
       left: 90vw;
     }
 
-    #leftside {
+    #home-page-sidebar {
       padding-top: 1%;
 
       .leftsidebox {
@@ -5059,7 +5058,7 @@
       }
     }
 
-    #leftside3 {
+    #about-page-banner {
       width: 60%;
 
       figure {
@@ -5076,7 +5075,7 @@
       }
     }
 
-    #contactside {
+    #contact-page-sidebar {
       #contact-details {
         li {
           &:first-line {
@@ -5095,7 +5094,7 @@
       }
     }
 
-    #content {
+    #home-page-content {
       width: 100%;
       height: auto;
       margin: 1% 0;
@@ -5382,7 +5381,7 @@
       left: 87vw;
     }
 
-    #leftside {
+    #home-page-sidebar {
       width: 50%;
 
       .leftsidebox {
@@ -5484,7 +5483,7 @@
       }
     }
 
-    #leftside3 {
+    #about-page-banner {
       width: 60%;
 
       figure {
@@ -5501,7 +5500,7 @@
       }
     }
 
-    #contactside {
+    #contact-page-sidebar {
       #contact-details {
         li {
           &:first-line {
@@ -5520,7 +5519,7 @@
       }
     }
 
-    #content {
+    #home-page-content {
       width: 100%;
       height: auto;
       margin: 1% 0;
@@ -5817,7 +5816,7 @@
       top: 240px;
     }
 
-    #leftside {
+    #home-page-sidebar {
       width: 60%;
 
       .leftsidebox {
@@ -5915,7 +5914,7 @@
       }
     }
 
-    #leftside3 {
+    #about-page-banner {
       width: 60%;
 
       figure {
@@ -5932,7 +5931,7 @@
       }
     }
 
-    #contactside {
+    #contact-page-sidebar {
       #contact-details {
         li {
           font-size: 0.85em;
@@ -5952,7 +5951,7 @@
       }
     }
 
-    #content {
+    #home-page-content {
       width: 100%;
       height: auto;
       margin: 1% 0;
@@ -6234,7 +6233,7 @@
       left: 85vw;
     }
 
-    #leftside {
+    #home-page-sidebar {
       width: 60%;
 
       .leftsidebox {
@@ -6333,7 +6332,7 @@
       }
     }
 
-    #leftside3 {
+    #about-page-banner {
       width: 60%;
 
       figure {
@@ -6350,7 +6349,7 @@
       }
     }
 
-    #contactside {
+    #contact-page-sidebar {
       #contact-details {
         li {
           &:first-line {
@@ -6369,7 +6368,7 @@
       }
     }
 
-    #content {
+    #home-page-content {
       width: 100%;
       height: auto;
       margin: 1% 0;
@@ -6654,7 +6653,7 @@
       font-size: 0.85em;
     }
 
-    #leftside {
+    #home-page-sidebar {
       .leftsidebox {
         width: 96%;
 
@@ -6753,7 +6752,7 @@
       }
     }
 
-    #leftside3 {
+    #about-page-banner {
       width: 60%;
 
       figure {
@@ -6770,7 +6769,7 @@
       }
     }
 
-    #contactside {
+    #contact-page-sidebar {
       #contact-details {
         li {
           &:first-line {
@@ -6789,7 +6788,7 @@
       }
     }
 
-    #content {
+    #home-page-content {
       width: 100%;
       height: auto;
       margin: 1% 0;
@@ -7078,7 +7077,7 @@
     #contact-bar-btn {
       font-size: 0.7em;
     }
-    #leftside {
+    #home-page-sidebar {
       width: 60%;
 
       .leftsidebox {
@@ -7176,7 +7175,7 @@
         }
       }
     }
-    #leftside3 {
+    #about-page-banner {
       width: 60%;
 
       figure {
@@ -7192,7 +7191,7 @@
         }
       }
     }
-    #contactside {
+    #contact-page-sidebar {
       width: 60%;
       #contact-details {
         li {
@@ -7212,7 +7211,7 @@
         }
       }
     }
-    #content {
+    #home-page-content {
       width: 100%;
       height: auto;
       margin: 1% 0;

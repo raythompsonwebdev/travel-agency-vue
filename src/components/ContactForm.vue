@@ -1,46 +1,77 @@
 <template>
   <div>
-
     <p v-if="errors.length">
       <b>please correct following errors:</b>
       <ul>
-        <li v-for="error in errors" :key="error">{{error}}</li>
+        <li
+          v-for="error in errors"
+          :key="error"
+        >
+          {{ error }}
+        </li>
       </ul>
     </p>
 
-    <form @submit.prevent="onSubmit" id="contactform">
-
+    <form
+      id="contactform"
+      @submit.prevent="onSubmit"
+    >
       <ul>
         <li>
           <label>First name</label>
-          <input id="firstname" type="text" name="firstname" v-model="firstname">
-        
+          <input
+            id="firstname"
+            v-model="firstname"
+            type="text"
+            name="firstname"
+          >
         </li>
         <li>
           <label>Last name</label>
-          <input type="text" id="lastname" name="lastname" v-model="lastname">
+          <input
+            id="lastname"
+            v-model="lastname"
+            type="text"
+            name="lastname"
+          >
         </li>
         <li>
           <label>Email</label>
-          <input type="text" id="email" name="email" v-model="email">
+          <input
+            id="email"
+            v-model="email"
+            type="text"
+            name="email"
+          >
         </li>
         <li>
           <label>Phone</label>
-          <input type="text" id="phone" name="phone" >
+          <input
+            id="phone"
+            type="text"
+            name="phone"
+          >
         </li>
         <li>
           <label>Message</label>
-          <textarea name="message" id="message" class="required" cols="50" rows="10"> ..</textarea>
+          <textarea
+            id="message"
+            name="message"
+            class="required"
+            cols="50"
+            rows="10"
+          > ..</textarea>
         </li>
         <li>
-          <input type="submit" value="submit" id="contactbtn">
+          <input
+            id="contactbtn"
+            type="submit"
+            value="submit"
+          >
         </li>
       </ul>
-
     </form>
-
   </div>
-
 </template>
 
 <script>
@@ -97,7 +128,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
-<style lang="scss" scoped>
+<style lang="scss" >
 
 
 

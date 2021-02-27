@@ -1,71 +1,24 @@
-![Travel Agency](/_assets/page1.jpg)
+# holiday-site-vue
 
-## Travel Agency
-Travel agency is a holiday booking website where you can make holiday reservations for various holiday destinations all over the world. Website design provided by [phpjabber.com](https://www.phpjabbers.com/free-website-templates.php) 
-
-## Prerequisites
-
-* npm
-* Ruby gems
-* node.js
-
-
-## Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-* Download zipfile to local development folder by either using download button or using git clone command.
-
+## Project setup
 ```
-git clone http://github/<username>/holiday-site-vue
-
+npm install
 ```
 
-* npm install to install dependancies in package.json.
-
+### Compiles and hot-reloads for development
 ```
-sudo npm install
-
+npm run serve
 ```
 
-* npm run dev to show website at localhost:4200.
-
+### Compiles and minifies for production
 ```
-sudo npm run dev
-
-```
-* npm run build to create production ready website.
-
+npm run build
 ```
 
-sudo npm run build
-
+### Lints and fixes files
+```
+npm run lint
 ```
 
-
-
-
-
-
-## Running the tests
-
-
-## Credits
-
-* Vue.js - https://github.com/vuejs/vue.git
-         https://vuejs.org/   
-
-* phpjabbers.com - https://www.phpjabbers.com/free-website-templates.php
-
-
-## Contributing
-
-
-## License
-
-MIT License
-
-phpjabbers - https://www.phpjabbers.com/licence-agreement.php
-
-## Acknowledgments
-
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

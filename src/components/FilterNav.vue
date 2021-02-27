@@ -1,41 +1,69 @@
 <template>
+  <aside
+    v-if="searchFilterFunction"
+    id="filter-nav-sidebar"
+    class="hide"
+  >
+    <button
+      id="side-bar-btn"
+      @click="searchFilterFunction"
+    >
+      SIDE
+    </button>
 
-  <aside id="filter-nav-sidebar" class="hide" v-if="searchFilterFunction">
-    <button v-on:click="searchFilterFunction" id="side-bar-btn">SIDE</button>
-
-  <section id="seasons">
-    <h1>Filter By Season</h1>
-    <ul>
-      <li v-for="season in seasons" v-bind:key="season.id">
-        <button v-on:click="SearchItemBtn(season.title)">{{season.title}}</button>
-      </li>
-    </ul>
-  </section>
-  <section id="locations">
-    <h1>Filter By Location</h1>
-    <ul>
-      <li v-for="location in locations" v-bind:key="location.id">
-        <button v-on:click="SearchItemBtn(location.title)">{{location.title}}</button>
-      </li>
-    </ul>
-  </section>
-  <section id="prices">
-    <h1>Filter By Price</h1>
-    <ul>
-      <li v-for="price in prices" v-bind:key="price.id">
-        <button v-on:click="SearchItemBtn(price.title)">{{price.title}}</button>
-      </li>
-    </ul>
-  </section>
-  <section id="ratings">
-    <h1>Filter By Rating</h1>
-    <ul>
-      <li v-for="rating in ratings" v-bind:key="rating.id">
-        <button v-on:click="SearchItemBtn(rating.title)">{{rating.title}}</button>
-      </li>
-    </ul>
-  </section>
-    <br />
+    <section id="seasons">
+      <h1>Filter By Season</h1>
+      <ul>
+        <li
+          v-for="season in seasons"
+          :key="season.id"
+        >
+          <button @click="SearchItemBtn(season.title)">
+            {{ season.title }}
+          </button> 
+        </li>
+      </ul>
+    </section>
+    <section id="locations">
+      <h1>Filter By Location</h1>
+      <ul>
+        <li
+          v-for="location in locations"
+          :key="location.id"
+        >
+          <button @click="SearchItemBtn(location.title)">
+            {{ location.title }}
+          </button>
+        </li>
+      </ul>
+    </section>
+    <section id="prices">
+      <h1>Filter By Price</h1>
+      <ul>
+        <li
+          v-for="price in prices"
+          :key="price.id"
+        >
+          <button @click="SearchItemBtn(price.title)">
+            {{ price.title }}
+          </button>
+        </li>
+      </ul>
+    </section>
+    <section id="ratings">
+      <h1>Filter By Rating</h1>
+      <ul>
+        <li
+          v-for="rating in ratings"
+          :key="rating.id"
+        >
+          <button @click="SearchItemBtn(rating.title)">
+            {{ rating.title }}
+          </button>
+        </li>
+      </ul>
+    </section>
+    <br>
   </aside>
 </template>
 
@@ -43,7 +71,7 @@
 export default {
   name: "FilterNav",
 
-  props: ["seasons", "prices", "locations", "ratings"],
+  //props: ["seasons", "prices", "locations", "ratings"],
 
   methods: {
     searchFilterFunction: function(event) {

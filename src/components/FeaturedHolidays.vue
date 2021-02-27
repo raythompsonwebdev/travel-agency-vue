@@ -5,31 +5,31 @@
     <h2>Featured Holiday Package</h2>
 
     <div
-      class="offerbox"
       v-for="featuredholiday in featuredholidayitems"
-      v-bind:key="featuredholiday.id"
+      :key="featuredholiday.id"
+      class="offerbox"
     >
       <figure>
-        <img :src="featuredholiday.url" />
+        <img :src="featuredholiday.url"> 
 
         <figcaption>
-          <p>{{featuredholiday.text}}</p>
+          <p>{{ featuredholiday.text }}</p>
           <p>
             from only
-            <span class="offerbox-price">£{{featuredholiday.price}}</span> per person
+            <span class="offerbox-price">£{{ featuredholiday.price }}</span> per person
           </p>
         </figcaption>
       </figure>
     </div>
 
-    <div class="clearfix"></div>
+    <div class="clearfix" />
   </section>
 </template>
 
 <script>
 export default {
   name: "FeaturedHolidays",
-  props: ["featuredholidayitems"]
+  //props: ["featuredholidayitems"]
 };
 </script>
 
