@@ -162,163 +162,171 @@ export const holidaypackageitems = [
     rating: "four",
   },
 ];
-export const destinationitems = [
+export const homePage = [
   {
-    id: 1,
-    city: "Paris",
-    country: "France",
-    hotels: "1,399 Hotels",
-    url: "../assets/images/travel-agency-website-eiffel-tower-image.jpg",
-  },
-  {
-    id: 2,
-    city: "London",
-    country: "England",
-    hotels: "1,912 Hotels",
-    url: "../assets/images/travel-agency-website-tower-of-london-image.jpg",
-  },
-  {
-    id: 3,
-    city: "Bangkok",
-    country: "Thailand",
-    hotels: "1,542 Hotels",
-    url: "../assets/images/travel-agency-website-bangkok-image.jpg",
-  },
-  {
-    id: 4,
-    city: "Istanbul",
-    country: "Turkey",
-    hotels: "504 Hotels",
-    url: "../assets/images/travel-agency-website-istanbul-image.jpg",
-  },
-  {
-    id: 5,
-    city: "Hong Kong",
-    country: "China",
-    hotels: "504 Hotels",
-    url: "../assets/images/travel-agency-website-hong-kong-image.jpg",
-  },
-];
-export const featuredholidayitems = [
-  {
-    id: 1,
-    url: "./../assets/images/travel-agency-website-spanish-villa-image.jpg",
-    text: "Lorem Ipsum Dolen sit.",
-    price: "£339",
-  },
-  {
-    id: 2,
-    url: "../assets/images/travel-agency-website-taj-mahal-image.jpg",
-    text: "Lorem Ipsum Dolen sit.",
-    price: "£339",
-  },
-  {
-    id: 3,
-    url: "../assets/images/travel-agency-website-gold-coast-image.jpg",
-    text: "Lorem Ipsum Dolen sit.",
-    price: "£339",
-  },
-  {
-    id: 4,
-    url: "../assets/images/travel-agency-website-dubai-image.jpg",
-    text: "Lorem Ipsum Dolen sit.",
-    price: "£339",
-  },
-  {
-    id: 5,
-    url: "../assets/images/travel-agency-website-singapore-image.jpg",
-    text: "Lorem Ipsum Dolen sit.",
-    price: "£339",
-  },
-  {
-    id: 6,
-    url: "../assets/images/travel-agency-website-toronto-image.jpg",
-    text: "Lorem Ipsum Dolen sit.",
-    price: "£339",
-  },
-];
-export const locations = [
-  {
-    id: 1,
-    title: "london",
-  },
-  {
-    id: 2,
-    title: "paris",
-  },
-  {
-    id: 3,
-    title: "madrid",
-  },
-  {
-    id: 4,
-    title: "rome",
-  },
-  {
-    id: 5,
-    title: "dubai",
+    destinationitems: [
+      {
+        id: "1",
+        city: "Paris",
+        country: "France",
+        hotels: "1,399 Hotels",
+        url: "../assets/images/travel-agency-website-eiffel-tower-image.jpg",
+      },
+      {
+        id: "2",
+        city: "London",
+        country: "England",
+        hotels: "1,912 Hotels",
+        url: "../assets/images/travel-agency-website-tower-of-london-image.jpg",
+      },
+      {
+        id: "3",
+        city: "Bangkok",
+        country: "Thailand",
+        hotels: "1,542 Hotels",
+        url: "../assets/images/travel-agency-website-bangkok-image.jpg",
+      },
+      {
+        id: "4",
+        city: "Istanbul",
+        country: "Turkey",
+        hotels: "504 Hotels",
+        url: "../assets/images/travel-agency-website-istanbul-image.jpg",
+      },
+      {
+        id: "5",
+        city: "Hong Kong",
+        country: "China",
+        hotels: "504 Hotels",
+        url: "../assets/images/travel-agency-website-hong-kong-image.jpg",
+      },
+    ],
+    featuredholidayitems: [
+      {
+        id: "1",
+        url: "./../assets/images/travel-agency-website-spanish-villa-image.jpg",
+        text: "Lorem Ipsum Dolen sit.",
+        price: "£339",
+      },
+      {
+        id: "2",
+        url: "../assets/images/travel-agency-website-taj-mahal-image.jpg",
+        text: "Lorem Ipsum Dolen sit.",
+        price: "£339",
+      },
+      {
+        id: "3",
+        url: "../assets/images/travel-agency-website-gold-coast-image.jpg",
+        text: "Lorem Ipsum Dolen sit.",
+        price: "£339",
+      },
+      {
+        id: "4",
+        url: "../assets/images/travel-agency-website-dubai-image.jpg",
+        text: "Lorem Ipsum Dolen sit.",
+        price: "£339",
+      },
+      {
+        id: "5",
+        url: "../assets/images/travel-agency-website-singapore-image.jpg",
+        text: "Lorem Ipsum Dolen sit.",
+        price: "£339",
+      },
+      {
+        id: "6",
+        url: "../assets/images/travel-agency-website-toronto-image.jpg",
+        text: "Lorem Ipsum Dolen sit.",
+        price: "£339",
+      },
+    ],
   },
 ];
-export const prices = [
+export const filterNav = [
   {
-    id: 1,
-    title: "$399 - $499",
-  },
-  {
-    id: 2,
-    title: "$499 - $599",
-  },
-  {
-    id: 3,
-    title: "$599 - $699",
-  },
-  {
-    id: 4,
-    title: "$699 - $999",
-  },
-  {
-    id: 5,
-    title: "$999 +",
-  },
-];
-export const ratings = [
-  {
-    id: 1,
-    title: "one",
-  },
-  {
-    id: 2,
-    title: "two",
-  },
-  {
-    id: 3,
-    title: "three",
-  },
-  {
-    id: 4,
-    title: "four",
-  },
-  {
-    id: 5,
-    title: "five",
-  },
-];
-export const seasons = [
-  {
-    id: 1,
-    title: "winter",
-  },
-  {
-    id: 2,
-    title: "summer",
-  },
-  {
-    id: 3,
-    title: "spring",
-  },
-  {
-    id: 4,
-    title: "autumn",
+    locations: [
+      {
+        id: 1,
+        title: "london",
+      },
+      {
+        id: 2,
+        title: "paris",
+      },
+      {
+        id: 3,
+        title: "madrid",
+      },
+      {
+        id: 4,
+        title: "rome",
+      },
+      {
+        id: 5,
+        title: "dubai",
+      },
+    ],
+    prices: [
+      {
+        id: 1,
+        title: "$399 - $499",
+      },
+      {
+        id: 2,
+        title: "$499 - $599",
+      },
+      {
+        id: 3,
+        title: "$599 - $699",
+      },
+      {
+        id: 4,
+        title: "$699 - $999",
+      },
+      {
+        id: 5,
+        title: "$999 +",
+      },
+    ],
+    ratings: [
+      {
+        id: 1,
+        title: "one",
+      },
+      {
+        id: 2,
+        title: "two",
+      },
+      {
+        id: 3,
+        title: "three",
+      },
+      {
+        id: 4,
+        title: "four",
+      },
+      {
+        id: 5,
+        title: "five",
+      },
+    ],
+    seasons: [
+      {
+        id: 1,
+        title: "winter",
+      },
+      {
+        id: 2,
+        title: "summer",
+      },
+      {
+        id: 3,
+        title: "spring",
+      },
+      {
+        id: 4,
+        title: "autumn",
+      },
+    ],
   },
 ];
 export const languageselectitems = [

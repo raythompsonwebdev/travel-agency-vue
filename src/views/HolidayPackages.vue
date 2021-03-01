@@ -29,8 +29,9 @@
 
 <script>
 
-
-import { holidaypackageitems,seasons,ratings,locations, prices  } from '../data-json.json';
+import axios from "axios";
+import {seasons,ratings,locations, prices  } from '../data-json.json';
+//import { holidaypackageitems } from '../data-json.json';
 import HolidayPackageItem from "../components/HolidayPackageItem.vue";
 import FilterNav from "../components/FilterNav.vue";
 
@@ -47,21 +48,21 @@ export default {
       locations, 
       prices,
       selected: " ",
-      holidaypackageitems,
+      holidaypackageitems:[],
       count: 10
     };
   },  
   computed: {
     filteredPacks: function() {
       if (!this.selected) {
-        return holidaypackageitems;
+        return this.holidaypackageitems;
       } else if (
         "winter" === this.selected ||
         "summer" === this.selected ||
         "spring" === this.selected ||
         "autumn" === this.selected
       ) {
-        return holidaypackageitems.filter(
+        return this.holidaypackageitems.filter(
           holidaypackageitem => holidaypackageitem.season === this.selected
         );
       } else if (
@@ -71,7 +72,7 @@ export default {
         "dubai" == this.selected ||
         "rome" == this.selected
       ) {
-        return holidaypackageitems.filter(
+        return this.holidaypackageitems.filter(
           holidaypackageitem => holidaypackageitem.location == this.selected
         );
       } else if (
@@ -81,7 +82,7 @@ export default {
         "four" == this.selected ||
         "five" === this.selected
       ) {
-        return holidaypackageitems.filter(
+        return this.holidaypackageitems.filter(
           holidaypackageitem => holidaypackageitem.rating === this.selected
         );
       } else if (
@@ -91,13 +92,18 @@ export default {
         "$699 - $999" == this.selected ||
         "$999 +" == this.selected
       ) {
-        return holidaypackageitems.filter(
+        return this.holidaypackageitems.filter(
           holidaypackageitem => holidaypackageitem.price === this.selected
         );
       } else {
-        return holidaypackageitems;
+        return this.holidaypackageitems;
       }
     }
+  },
+  async created(){
+    const result = await axios.get('/api/holidaypackages');
+    const holidaypackageitems = result.data;
+    this.holidaypackageitems = holidaypackageitems;
   },
   methods: {
     itemsSearched: function(id) {

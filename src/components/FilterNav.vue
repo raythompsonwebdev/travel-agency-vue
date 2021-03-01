@@ -87,8 +87,7 @@ export default {
       type: Array,
       default: null
     }
-  },
-
+  },  
   methods: {
     searchFilterFunction: function(event) {
       event.preventDefault();

@@ -27,7 +27,7 @@ export default {
   //props: ["destinationitems"]
   props: {
     destinationitems: {
-      type: Object,
+      type: Array,
       default: null
     }
   }

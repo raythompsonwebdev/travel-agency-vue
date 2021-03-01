@@ -4,11 +4,11 @@
 
 @media only screen and (max-width: 1920px) {
   #wrapper {
-    width: 75%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     background-color: $color3;
-    padding: 0 2%;
+    padding: 0 0.25em;
     font-family: $font-style1;
     min-height: 1220px;
 
@@ -124,7 +124,7 @@
       flex-direction: row;
       border-bottom: 1px solid $colorgry2;
 
-      #navi {
+      ul#navi {
         height: 100%;
         display: block;
         margin: 0 0.25em 0 0;
@@ -199,17 +199,25 @@
             }
           }
         }
+        li:nth-of-type(2) {
+          padding-top: 0;
+          a {
+            font-size: 70%;
+            line-height: 40px;
+            height: auto;
+          }
+        }
       }
 
       aside#language-box {
         width: 16%;
 
-        form {
+        form#languagebox {
           height: 40px;
           display: flex;
           label {
             width: 35%;
-            font-size: 0.8em;
+            font-size: 0.75em;
             display: block;
             line-height: 35px;
             height: 35px;
@@ -623,7 +631,7 @@
 
       /*banner*/
       #banner {
-        width: 96%;
+        width: 98%;
         height: auto;
         margin: 0 auto;
         display: block;
@@ -717,6 +725,10 @@
     .BestDealsItem,
     .HolidayPackagesItem {
       /*Holiday details packages page*/
+      h1 {
+        text-align: center;
+        line-height: 40px;
+      }
       .holiday_item_details {
         border: 2px $sideboxbordercolvar solid;
         margin: 0.5em auto;
@@ -1166,7 +1178,7 @@
 
 @media only screen and (max-width: 1440px) {
   #wrapper {
-    width: 80%;
+    width: 85%;
 
     header {
       figure#logo {
@@ -1174,7 +1186,7 @@
       }
 
       aside.contact {
-        width: 14%;
+        width: 13%;
 
         span.tele {
           margin: 0;
@@ -1206,10 +1218,16 @@
               font-size: 0.7em;
             }
           }
+          li:nth-of-type(2) {
+            padding-top: 0;
+            a {
+              font-size: 65%;
+            }
+          }
         }
         aside#language-box {
           width: 18%;
-          form {
+          form#languagebox {
             label {
               font-size: 0.75em;
             }
@@ -1425,7 +1443,7 @@
         font-weight: bold;
       }
       #banner {
-        width: 96%;
+        width: 98%;
 
         img {
           width: 100%;
@@ -1603,13 +1621,13 @@
 
 @media only screen and (max-width: 1280px) {
   #wrapper {
-    width: 85%;
+    width: 90%;
     header {
       figure#logo {
         height: auto;
       }
       aside.contact {
-        width: 14%;
+        width: 13%;
 
         span.tele {
           margin: 0;
@@ -1643,19 +1661,19 @@
           }
           li:nth-of-type(2) {
             a {
-              font-size: 0.6em;
+              font-size: 65%;
             }
           }
         }
-        aside#language-box {
-          width: 18%;
-          form {
-            label {
-              font-size: 0.7em;
-            }
-            select {
-              font-size: 0.7em;
-            }
+      }
+      aside#language-box {
+        width: 18%;
+        form#languagebox {
+          label {
+            font-size: 0.75em;
+          }
+          select {
+            font-size: 0.75em;
           }
         }
       }
@@ -1824,7 +1842,7 @@
         font-weight: bold;
       }
       #banner {
-        width: 96%;
+        width: 98%;
 
         img {
           width: 100%;
@@ -2019,7 +2037,7 @@
       }
 
       aside.contact {
-        width: 16%;
+        width: 15%;
         span.tele {
           margin: 0;
 
@@ -2056,14 +2074,12 @@
         li:nth-of-type(2) {
           padding-top: 0;
           a {
-            font-size: 60%;
-            line-height: 40px;
-            height: auto;
+            font-size: 65%;
           }
         }
       }
       aside#language-box {
-        form {
+        form#languagebox {
           label {
             font-size: 0.7em;
           }
@@ -2230,7 +2246,7 @@
         font-weight: bold;
       }
       #banner {
-        width: 96%;
+        width: 98%;
 
         img {
           width: 100%;
@@ -2423,7 +2439,7 @@
       }
 
       aside.contact {
-        width: 16%;
+        width: 15%;
 
         span.tele {
           margin: 0;
@@ -2433,7 +2449,7 @@
           }
 
           a#contact-number {
-            font-size: 0.8em;
+            font-size: 0.9em;
 
             &:active {
               color: #fff;
@@ -2461,13 +2477,12 @@
         li:nth-of-type(2) {
           padding-top: 0;
           a {
-            font-size: 50%;
-            height: auto;
+            font-size: 65%;
           }
         }
       }
       aside#language-box {
-        form {
+        form#languagebox {
           label {
             font-size: 0.65em;
           }
@@ -2622,7 +2637,7 @@
         font-weight: bold;
       }
       #banner {
-        width: 96%;
+        width: 98%;
 
         img {
           width: 100%;
@@ -2812,7 +2827,7 @@
         height: auto;
       }
       aside.contact {
-        width: 17%;
+        width: 16%;
 
         span.tele {
           margin: 0;
@@ -2842,7 +2857,7 @@
         height: 100%;
         li {
           width: 16.5%;
-          height: 40px;
+
           a {
             font-size: 0.65em;
           }
@@ -2851,12 +2866,11 @@
           padding-top: 0em;
           a {
             font-size: 45%;
-            height: auto;
           }
         }
       }
       aside#language-box {
-        form {
+        form#languagebox {
           label {
             font-size: 0.65em;
           }
@@ -3013,7 +3027,7 @@
         font-weight: bold;
       }
       #banner {
-        width: 96%;
+        width: 98%;
 
         img {
           width: 100%;
@@ -3205,7 +3219,7 @@
       }
 
       aside.contact {
-        width: 18%;
+        width: 17%;
 
         span.tele {
           margin: 0;
@@ -3236,7 +3250,7 @@
         height: 100%;
         li {
           width: 16.5%;
-          height: 40px;
+
           a {
             font-size: 0.65em;
           }
@@ -3245,12 +3259,11 @@
           padding-top: 0em;
           a {
             font-size: 45%;
-            height: auto;
           }
         }
       }
       aside#language-box {
-        form {
+        form#languagebox {
           label {
             font-size: 0.55em;
           }
@@ -3415,7 +3428,7 @@
         font-weight: bold;
       }
       #banner {
-        width: 96%;
+        width: 98%;
 
         img {
           width: 100%;
@@ -3599,7 +3612,7 @@
 //mobile
 @media only screen and (max-width: 667px) {
   #wrapper {
-    width: 94%;
+    width: 96%;
 
     .fade-enter-active,
     .fade-leave-active {
@@ -3645,7 +3658,7 @@
       }
 
       aside.contact {
-        width: 20%;
+        width: 19%;
 
         span.tele {
           margin: 0;
@@ -3736,7 +3749,7 @@
       aside#language-box {
         width: 27%;
         height: auto;
-        form {
+        form#languagebox {
           height: 25px;
           label {
             width: 35%;
@@ -3988,8 +4001,7 @@
         font-weight: bold;
       }
       #banner {
-        width: 96%;
-        height: auto;
+        width: 98%;
         img {
           width: 100%;
         }
@@ -4177,7 +4189,7 @@
 
 @media only screen and (max-width: 640px) {
   #wrapper {
-    width: 94%;
+    width: 96%;
     header {
       figure#logo {
         height: auto;
@@ -4227,7 +4239,7 @@
         }
       }
       aside#language-box {
-        form {
+        form#languagebox {
           label {
             font-size: 0.6em;
           }
@@ -4371,8 +4383,7 @@
         font-weight: bold;
       }
       #banner {
-        width: 96%;
-        height: auto;
+        width: 100%;
         img {
           width: 100%;
         }
@@ -4619,7 +4630,7 @@
           }
         }
         aside#language-box {
-          form {
+          form#languagebox {
             label {
               font-size: 0.65em;
             }
@@ -4785,8 +4796,7 @@
         font-weight: bold;
       }
       #banner {
-        width: 96%;
-        height: auto;
+        width: 100%;
         img {
           width: 100%;
         }
@@ -5018,7 +5028,7 @@
       }
       aside#language-box {
         width: 35%;
-        form {
+        form#languagebox {
           label {
             font-size: 0.65em;
           }
@@ -5183,7 +5193,7 @@
         font-weight: bold;
       }
       #banner {
-        width: 96%;
+        width: 100%;
 
         img {
           width: 100%;
@@ -5437,7 +5447,7 @@
       aside#language-box {
         width: 40%;
 
-        form {
+        form#languagebox {
           span {
             font-size: 0.6em;
           }
@@ -5602,7 +5612,7 @@
         font-weight: bold;
       }
       #banner {
-        width: 96%;
+        width: 100%;
 
         img {
           width: 100%;
@@ -5813,7 +5823,7 @@
 
 @media only screen and (max-width: 414px) {
   #wrapper {
-    width: 94%;
+    width: 98%;
 
     #toggle-menu {
       left: 85vw;
@@ -5870,7 +5880,7 @@
       }
       aside#language-box {
         width: 45%;
-        form {
+        form#languagebox {
           span {
             font-size: 0.6em;
           }
@@ -6033,7 +6043,7 @@
         font-weight: bold;
       }
       #banner {
-        width: 96%;
+        width: 100%;
 
         img {
           width: 100%;
@@ -6288,7 +6298,7 @@
       }
       aside#language-box {
         width: 45%;
-        form {
+        form#languagebox {
           label {
             font-size: 0.6em;
           }
@@ -6450,7 +6460,7 @@
         font-weight: bold;
       }
       #banner {
-        width: 96%;
+        width: 100%;
 
         img {
           width: 100%;
@@ -6706,7 +6716,7 @@
         }
       }
       aside#language-box {
-        form {
+        form#languagebox {
           label {
             font-size: 0.6em;
           }
@@ -6870,7 +6880,7 @@
         font-weight: bold;
       }
       #banner {
-        width: 96%;
+        width: 100%;
 
         img {
           width: 100%;
@@ -7134,7 +7144,7 @@
       }
       aside#language-box {
         width: 50%;
-        form {
+        form#languagebox {
           label {
             font-size: 0.6em;
           }
@@ -7293,7 +7303,7 @@
         font-weight: bold;
       }
       #banner {
-        width: 96%;
+        width: 100%;
 
         img {
           width: 100%;

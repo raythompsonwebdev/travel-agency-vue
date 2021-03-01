@@ -1,8 +1,8 @@
 
 <template>
   <aside id="language-box">
-    <form>
-      <label for="langs">Language:</label>
+    <form id="languagebox">
+      <label for="langs">Language</label>
       <div id="flagImg">
         <img
           :src="'/assets/images/flags/' + selected + '.jpg'"

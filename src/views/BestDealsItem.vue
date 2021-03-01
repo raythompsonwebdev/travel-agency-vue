@@ -4,23 +4,23 @@
     v-if="bestdealitem"
     class="BestDealsItem"
   >
-    <h1>{{ bestdealitem[0].id }}</h1>
+    <h1>{{ bestdealitem.title }}</h1>
     <article        
       class="holiday_item_details"
     >
-      <h1>{{ bestdealitem[0].title }}</h1>
+      <h1>{{ bestdealitem.title }}</h1>
       <span class="holidayprice">
         From
-        <span class="offerbox-price">{{ bestdealitem[0].price }}</span>
+        <span class="offerbox-price">{{ bestdealitem.price }}</span>
       </span>
       <figure>
         <img
-          :src="bestdealitem[0].url"
-          :alt="bestdealitem[0].title"
+          :src="bestdealitem.url"
+          :alt="bestdealitem.title"
         >
 
         <figcaption>
-          <h3>Location: {{ bestdealitem[0].location }}.</h3>
+          <h3>Location: {{ bestdealitem.location }}.</h3>
           
           <button>Book Holiday</button>
         </figcaption>
@@ -33,25 +33,24 @@
 
 <script>
 
-import { bestdealitems } from '../data-json.js';
-import NotFoundpage from '../views/NotFoundpage'
+//import { bestdealitems } from '../data-json.js';
+import NotFoundpage from '../views/NotFoundpage';
+import axios from "axios";
 
 export default {
   name: "BestDealsItem",  
   components: {
     NotFoundpage
   },
-  props:{
-    bestdealitems:{
-      type: Array,
-      default: null
-    }
-  },
   data(){
     return{
-      //.find((b) => b.id === this.$route.params.id),
-      bestdealitem: bestdealitems.filter( element => element.id == this.$route.params.id ),
+      bestdealitem: {},
     }
+  },
+  async created(){
+    const result = await axios.get(`/api/bestdeals/${this.$route.params.id}`);
+    const bestdealitem = result.data;
+    this.bestdealitem = bestdealitem;
   }
     
 };

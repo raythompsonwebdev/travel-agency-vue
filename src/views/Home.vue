@@ -14,7 +14,7 @@
       >
         <!---Search form-->
         <SearchForm />
-        <!--Destinations-->
+        <!-- Destinations -->
         <Destinations :destinationitems="destinationitems" /> 
         <br>
         <br>
@@ -30,7 +30,7 @@
           >
         </figure>
 
-        <!--Featured Holiday Packages-->
+        <!-- Featured Holiday Packages -->
         <FeaturedHolidays
           :featuredholidayitems="featuredholidayitems"
         />
@@ -41,14 +41,13 @@
   </div>
 </template>
 
-<!--scripting-->
+
 <script>
 
 import SearchForm from "../components/SearchForm.vue";
 import Destinations from "../components/Destinations.vue";
 import FeaturedHolidays from "../components/FeaturedHolidays.vue";
-
-import { destinationitems, featuredholidayitems  } from '../data-json.json';
+import axios from "axios";
 
 export default {
   name: "Home",
@@ -59,11 +58,17 @@ export default {
   },
   data() {
     return {
-      destinationitems, 
-      featuredholidayitems,
-      data: [],
+      destinationitems:[], 
+      featuredholidayitems:[],
+      //homepageitems:[],
       show: true
     };
+  }, 
+  async created(){
+    const result = await axios.get('/api/home');
+    const homepageitems = result.data[0];
+    this.destinationitems = homepageitems.destinationitems;
+    this.featuredholidayitems = homepageitems.featuredholidayitems;
   },
   methods: {
     sideBarFunction: function(event) {
@@ -76,8 +81,9 @@ export default {
         el.setAttribute("class", "hide");
       }
     }
-  },  
-   
+  }, 
+  
+     
 };
 </script>
 

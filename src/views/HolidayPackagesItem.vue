@@ -3,22 +3,22 @@
     v-if="holidaypackageitem" 
     class="HolidayPackagesItem"
   >
-    <h1>{{ holidaypackageitem[0].id }}</h1>
+    <h1>{{ holidaypackageitem.title }}</h1>
     <article class="holiday_item_details">
-      <h1>{{ holidaypackageitem[0].title }}</h1>
+      <h1>{{ holidaypackageitem.title }}</h1>
       <span class="holidayprice">
         from
-        <span class="offerbox-price">{{ holidaypackageitem[0].price }}</span>
+        <span class="offerbox-price">{{ holidaypackageitem.price }}</span>
       </span>
       <figure>
         <img
-          :src="holidaypackageitem[0].url"
-          :alt="holidaypackageitem[0].title"
+          :src="holidaypackageitem.url"
+          :alt="holidaypackageitem.title"
         >
         <figcaption>
-          <h3>Location : {{ holidaypackageitem[0].location }}</h3>
+          <h3>Location : {{ holidaypackageitem.location }}</h3>
    
-          <router-link :to="'/bestdeals/' + holidaypackageitem[0].id">
+          <router-link :to="'/bestdeals/' + holidaypackageitem.id">
             <button>Book Holiday</button>
           </router-link>
         </figcaption>
@@ -30,8 +30,8 @@
 
 <script>
 
-import { holidaypackageitems } from '../data-json.js';
 import NotFoundpage from '../views/NotFoundpage'
+import axios from "axios";
 
 export default {
   name: "HolidayPackagesItem",
@@ -40,9 +40,14 @@ export default {
     NotFoundpage
   },
   data(){
-    return{      
-      holidaypackageitem: holidaypackageitems.filter( element => element.id == this.$route.params.id ),
+    return{
+      holidaypackageitem: {},
     }
+  },
+  async created(){
+    const result = await axios.get(`/api/holidaypackages/${this.$route.params.id}`);
+    const holidaypackageitem = result.data;
+    this.holidaypackageitem = holidaypackageitem;
   }
  
 };
