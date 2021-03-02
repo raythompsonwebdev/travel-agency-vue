@@ -1,8 +1,9 @@
+
 <template>
   <nav>
     <button 
       id="toggle-menu" 
-      @:click="naviFunction"
+      @click="naviFunction"
     >
       Menu
     </button>
@@ -14,6 +15,7 @@
         <router-link
           to="/"
           class="nav-item r-item"
+          @click.native="InlineButtonClickHandler"
         >
           Home
         </router-link>
@@ -22,14 +24,17 @@
         <router-link
           to="/holidaypackages"
           class="nav-item r-item"
+          @click.native="InlineButtonClickHandler"
         >
-          HolidayPackages
+          Holiday
+          Packages
         </router-link>
       </li>
       <li>
         <router-link
           to="/bestdeals"
           class="nav-item r-item"
+          @click.native="InlineButtonClickHandler"
         >
           BestDeal
         </router-link>
@@ -38,6 +43,7 @@
         <router-link
           to="/services"
           class="nav-item r-item"
+          @click.native="InlineButtonClickHandler"
         >
           Services
         </router-link>
@@ -46,6 +52,7 @@
         <router-link
           to="/about"
           class="nav-item r-item"
+          @click.native="InlineButtonClickHandler"
         >
           AboutUs
         </router-link>
@@ -54,6 +61,7 @@
         <router-link
           to="/contact"
           class="nav-item r-item"
+          @click.native="InlineButtonClickHandler"
         >
           Contact
         </router-link>
@@ -71,28 +79,29 @@ export default {
   components: {
     LanguageSelect,
   },
-  methods: {  
+  methods: {
     InlineButtonClickHandler: function(e) {
       e.preventDefault();
-
       var slideoutMenu = document.querySelector("#navi");
-
+      
       if (slideoutMenu.classList.contains("show")) {
         slideoutMenu.setAttribute("class", "hide");
       } else {
         slideoutMenu.setAttribute("class", "show");
       }
-    },  
-    naviFunction: function(e) {
-      e.preventDefault();
-      var el = document.querySelector("#navi");
-      var box = el.getAttribute("class");
-      if (box == "hide") {
-        el.setAttribute("class", "show");
-      } else {
-        el.setAttribute("class", "hide");
-      }
     },    
+    naviFunction: function(event) {
+      event.preventDefault();
+      var slideoutNav = document.querySelector("#navi");
+      if (slideoutNav.classList.contains("show")) {
+        slideoutNav.setAttribute("class", "hide");
+      } else {
+        slideoutNav.setAttribute("class", "show");
+      }      
+    },
+    
+    
+       
   }, 
    
 }

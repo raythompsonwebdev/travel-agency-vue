@@ -1,6 +1,15 @@
 <template>
   <div class="AboutUs page">
-    <aside id="about-page-banner">
+    <button
+      id="side-bar-btn"
+      @click="aboutPageFunction"
+    >
+      SIDE
+    </button>
+    <aside
+      id="about-page-banner"
+      class="hide"
+    >
       <figure>
         <figcaption>
           <h1>Lorem ipsum dolor sit amet</h1>
@@ -64,6 +73,20 @@ export default {
     return {
       show: "true"
     };
+  },
+  methods: {
+    aboutPageFunction: function(event) {
+      event.preventDefault();
+
+      var el = document.getElementById("about-page-banner");
+      var box = el.getAttribute("class");
+
+      if (box == "hide") {
+        el.setAttribute("class", "show");
+      } else  {
+        el.setAttribute("class", "hide");
+      }
+    }
   }
 };
 </script>

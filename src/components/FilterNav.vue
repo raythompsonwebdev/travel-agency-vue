@@ -18,7 +18,10 @@
           v-for="season in seasons"
           :key="season.id"
         >
-          <button @click="SearchItemBtn(season.title)">
+          <button
+            @click="SearchItemBtn(season.title)"
+            @mouseup="InlineButtonClickHandler()"
+          >
             {{ season.title }}
           </button> 
         </li>
@@ -31,7 +34,10 @@
           v-for="location in locations"
           :key="location.id"
         >
-          <button @click="SearchItemBtn(location.title)">
+          <button
+            @click="SearchItemBtn(location.title)"
+            @mouseup="InlineButtonClickHandler()"
+          >
             {{ location.title }}
           </button>
         </li>
@@ -44,7 +50,10 @@
           v-for="price in prices"
           :key="price.id"
         >
-          <button @click="SearchItemBtn(price.title)">
+          <button
+            @click="SearchItemBtn(price.title)"
+            @mouseup="InlineButtonClickHandler()"
+          >
             {{ price.title }}
           </button>
         </li>
@@ -57,7 +66,10 @@
           v-for="rating in ratings"
           :key="rating.id"
         >
-          <button @click="SearchItemBtn(rating.title)">
+          <button
+            @click="SearchItemBtn(rating.title)"
+            @mouseup="InlineButtonClickHandler()"
+          >
             {{ rating.title }}
           </button>
         </li>
@@ -89,6 +101,16 @@ export default {
     }
   },  
   methods: {
+    InlineButtonClickHandler: function() {
+      //e.preventDefault();
+      var slideoutMenu = document.querySelector("#filter-nav-sidebar");
+      
+      if (slideoutMenu.classList.contains("show")) {
+        slideoutMenu.setAttribute("class", "hide");
+      } else {
+        slideoutMenu.setAttribute("class", "show");
+      }
+    },
     searchFilterFunction: function(event) {
       event.preventDefault();
 
@@ -104,6 +126,7 @@ export default {
     },
     SearchItemBtn(item) {
       this.$emit("seasonClick", item);
+      
     }
   }
 };

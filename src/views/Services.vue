@@ -1,7 +1,16 @@
 <template>
   <div class="Services">
     <!---Leftside3-->
-    <aside id="about-page-banner">
+    <button
+      id="side-bar-btn"
+      @click="servicePageFunction"
+    >
+      SIDE
+    </button>
+    <aside
+      id="about-page-banner"
+      class="hide"
+    >
       <figure>
         <figcaption>
           <h1>Lorem ipsum dolor sit amet</h1>
@@ -24,6 +33,7 @@
         >
       </figure>
     </aside>
+
 
     <main id="content2">
       <h1>Lorem ipsum dolor sit amet, consectetur</h1>
@@ -107,11 +117,26 @@ export default {
     return {
       show: "true"
     };
+  },
+  methods: {
+    servicePageFunction: function(event) {
+      event.preventDefault();
+
+      var el = document.getElementById("about-page-banner");
+      var box = el.getAttribute("class");
+
+      if (box == "hide") {
+        el.setAttribute("class", "show");
+      } else  {
+        el.setAttribute("class", "hide");
+      }
+    }
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+
 
 <style lang="scss" >
 </style>

@@ -71,10 +71,9 @@ export default {
     };
   },
   methods: {
-    contactFunction: function() {
-      //console.log(event);
-      event.preventDefault();
-      var el = document.getElementById("contactside");
+    contactFunction: function(e) {
+        e.preventDefault();
+      var el = document.getElementById("contact-page-sidebar");
       var box = el.getAttribute("class");
       if (box == "hide") {
         el.setAttribute("class", "show");

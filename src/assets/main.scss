@@ -79,9 +79,9 @@
             padding: 0;
             display: inline-block;
             line-height: 27px;
-            letter-spacing: 0.01em;
+
             font-weight: bold;
-            font-size: 0.9em;
+            font-size: 1em;
             text-align: center;
             text-shadow: 1px 1px 1px #000;
             text-decoration: none;
@@ -728,6 +728,7 @@
       h1 {
         text-align: center;
         line-height: 40px;
+        font-size: 1.3em;
       }
       .holiday_item_details {
         border: 2px $sideboxbordercolvar solid;
@@ -763,7 +764,7 @@
           width: 100%;
           margin: 0;
           img {
-            width: 90%;
+            width: 75%;
             display: block;
             margin: 0.5em auto;
           }
@@ -857,8 +858,10 @@
         display: block;
       }
       p {
-        font-size: 0.85em;
+        font-size: 0.9em;
         margin: 0;
+        line-height: 25px;
+        letter-spacing: 0.01em;
       }
       /*contact form*/
       #contactform {
@@ -1002,7 +1005,7 @@
           margin: 0px;
           line-height: 40px;
           height: auto;
-          font-size: 1em;
+          font-size: 1.1em;
           display: block;
           color: $heading;
           font-weight: bold;
@@ -1047,7 +1050,7 @@
               text-transform: capitalize;
               width: 100%;
               margin: 0;
-              line-height: 30px;
+              line-height: 25px;
               color: $colorgry2;
             }
             button {
@@ -1195,7 +1198,7 @@
           }
 
           a#contact-number {
-            font-size: 0.9em;
+            font-size: 0.95em;
 
             &:active {
               color: #fff;
@@ -1360,7 +1363,7 @@
     }
     #about-page-banner {
       width: 20%;
-      margin: 1% 1% 0 0;
+
       #contact-details {
         width: 96%;
         padding: 10% 0;
@@ -1482,6 +1485,7 @@
     label.error {
       font-size: 0.9em;
     }
+
     #content2,
     #holiday-items {
       h1 {
@@ -1494,7 +1498,6 @@
         font-size: 1em;
       }
       p {
-        font-size: 0.85em;
         margin: 0;
       }
       #contactform {
@@ -1627,7 +1630,7 @@
         height: auto;
       }
       aside.contact {
-        width: 13%;
+        width: 14%;
 
         span.tele {
           margin: 0;
@@ -1637,7 +1640,7 @@
           }
 
           a#contact-number {
-            font-size: 0.9em;
+            font-size: 0.95em;
 
             &:active {
               color: #fff;
@@ -1645,7 +1648,7 @@
           }
         }
         span#opening-time {
-          font-size: 70%;
+          font-size: 75%;
         }
       }
 
@@ -1657,11 +1660,6 @@
             height: 40px;
             a {
               font-size: 0.7em;
-            }
-          }
-          li:nth-of-type(2) {
-            a {
-              font-size: 65%;
             }
           }
         }
@@ -1784,8 +1782,6 @@
 
     #about-page-banner {
       width: 20%;
-      margin: 1% 1% 0 0;
-
       figure {
         margin: 0;
         figcaption {
@@ -1894,7 +1890,6 @@
         font-size: 0.95em;
       }
       p {
-        font-size: 0.8em;
         margin: 0;
       }
       #contactform {
@@ -1960,7 +1955,6 @@
 
       .holiday_details_small {
         h1 {
-          font-size: 0.9em;
           width: 67%;
         }
         span.holidayprice {
@@ -2054,7 +2048,7 @@
           }
         }
         span#opening-time {
-          font-size: 65%;
+          font-size: 70%;
         }
       }
     }
@@ -2064,6 +2058,7 @@
       margin-bottom: 0px;
       ul#navi {
         height: 100%;
+        width: 82%;
         li {
           width: 16.5%;
           height: 40px;
@@ -2072,13 +2067,15 @@
           }
         }
         li:nth-of-type(2) {
-          padding-top: 0;
           a {
-            font-size: 65%;
+            font-size: 75%;
+            line-height: 20px;
+            height: 100%;
           }
         }
       }
       aside#language-box {
+        width: 18%;
         form#languagebox {
           label {
             font-size: 0.7em;
@@ -2191,7 +2188,6 @@
 
     #about-page-banner {
       width: 20%;
-      margin: 1% 1% 0 0;
       figure {
         margin: 0;
         figcaption {
@@ -2285,6 +2281,52 @@
     label.error {
       font-size: 0.9em;
     }
+    .BestDealsItem,
+    .HolidayPackagesItem {
+      /*Holiday details packages page*/
+      h1 {
+        font-size: 1.2em;
+      }
+      .holiday_item_details {
+        width: 50%;
+        h1 {
+          font-size: 1.1em;
+        }
+        span.holidayprice {
+          font-size: 0.9em;
+
+          .offerbox-price {
+            display: inline-block;
+          }
+        }
+        figure {
+          margin: 0;
+          img {
+            width: 75%;
+          }
+          figcaption {
+            width: 100%;
+
+            h3 {
+              margin: 0;
+            }
+
+            p {
+              font-size: 0.9em;
+            }
+            button {
+              width: 80%;
+              font-size: 1em;
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+
     #content2,
     #holiday-items {
       h1 {
@@ -2297,7 +2339,7 @@
         font-size: 0.9em;
       }
       p {
-        font-size: 0.75em;
+        font-size: 0.85em;
         margin: 0;
       }
       #contactform {
@@ -2439,7 +2481,7 @@
       }
 
       aside.contact {
-        width: 15%;
+        width: 16%;
 
         span.tele {
           margin: 0;
@@ -2449,7 +2491,7 @@
           }
 
           a#contact-number {
-            font-size: 0.9em;
+            font-size: 0.85em;
 
             &:active {
               color: #fff;
@@ -2457,7 +2499,7 @@
           }
         }
         span#opening-time {
-          font-size: 65%;
+          font-size: 70%;
         }
       }
     }
@@ -2466,7 +2508,7 @@
       height: 40px;
       margin-bottom: 0px;
       ul#navi {
-        width: 82%;
+        width: 80%;
         height: 100%;
         li {
           height: 40px;
@@ -2477,14 +2519,15 @@
         li:nth-of-type(2) {
           padding-top: 0;
           a {
-            font-size: 65%;
+            font-size: 70%;
           }
         }
       }
       aside#language-box {
+        width: 19%;
         form#languagebox {
           label {
-            font-size: 0.65em;
+            font-size: 0.7em;
           }
           select {
             font-size: 0.65em;
@@ -2590,7 +2633,6 @@
     }
     #about-page-banner {
       width: 20%;
-      margin: 1% 1% 0 0;
 
       figure {
         margin: 0;
@@ -2688,7 +2730,7 @@
         font-size: 0.9em;
       }
       p {
-        font-size: 0.75em;
+        font-size: 0.85em;
         margin: 0;
       }
       #contactform {
@@ -2732,7 +2774,7 @@
         figure {
           width: 100%;
           img {
-            width: 31%;
+            width: 21%;
           }
           figcaption {
             width: 65%;
@@ -2742,7 +2784,7 @@
             }
             button {
               width: 35%;
-              font-size: 0.85em;
+              font-size: 1em;
             }
           }
         }
@@ -2837,7 +2879,7 @@
           }
 
           a#contact-number {
-            font-size: 0.8em;
+            font-size: 0.85em;
 
             &:active {
               color: #fff;
@@ -2865,11 +2907,12 @@
         li:nth-of-type(2) {
           padding-top: 0em;
           a {
-            font-size: 45%;
+            font-size: 65%;
           }
         }
       }
       aside#language-box {
+        width: 21%;
         form#languagebox {
           label {
             font-size: 0.65em;
@@ -2982,7 +3025,6 @@
     }
     #about-page-banner {
       width: 20%;
-      margin: 1% 1% 0 0;
 
       figure {
         margin: 0;
@@ -3078,7 +3120,7 @@
         font-size: 0.9em;
       }
       p {
-        font-size: 0.7em;
+        font-size: 0.85em;
       }
       #contactform {
         margin: auto;
@@ -3122,7 +3164,7 @@
         figure {
           width: 100%;
           img {
-            width: 31%;
+            width: 26%;
           }
           figcaption {
             width: 65%;
@@ -3131,7 +3173,7 @@
               font-size: 0.85em;
             }
             button {
-              font-size: 0.85em;
+              font-size: 1em;
             }
           }
         }
@@ -3230,6 +3272,7 @@
 
           a#contact-number {
             width: 84%;
+            font-size: 0.85em;
 
             &:active {
               color: #fff;
@@ -3258,14 +3301,15 @@
         li:nth-of-type(2) {
           padding-top: 0em;
           a {
-            font-size: 45%;
+            font-size: 65%;
           }
         }
       }
       aside#language-box {
+        width: 21%;
         form#languagebox {
           label {
-            font-size: 0.55em;
+            font-size: 0.6em;
           }
           select {
             font-size: 0.6em;
@@ -3384,17 +3428,16 @@
     }
     #about-page-banner {
       width: 20%;
-      margin: 1% 1% 0 0;
 
       figure {
         margin: 0;
         figcaption {
           padding: 5%;
           h1 {
-            font-size: 0.9em;
+            font-size: 0.8em;
           }
           p {
-            font-size: 0.65em;
+            font-size: 0.7em;
             line-height: 1.6em;
           }
         }
@@ -3479,7 +3522,7 @@
         font-size: 0.9em;
       }
       p {
-        font-size: 0.75em;
+        font-size: 0.8em;
         margin: 0;
       }
       #contactform {
@@ -3511,10 +3554,10 @@
 
       .holiday_details {
         h1 {
-          font-size: 0.95em;
+          font-size: 1em;
         }
         span.holidayprice {
-          font-size: 0.8em;
+          font-size: 0.85em;
 
           .offerbox-price {
             font-weight: bold;
@@ -3523,15 +3566,15 @@
         figure {
           width: 100%;
           img {
-            width: 29%;
+            width: 27%;
           }
           figcaption {
             width: 65%;
             p {
-              font-size: 0.8em;
+              font-size: 0.85em;
             }
             button {
-              font-size: 0.8em;
+              font-size: 1em;
             }
           }
         }
@@ -3630,6 +3673,16 @@
       opacity: 0;
     }
 
+    .hide {
+      left: -100%;
+      @include TranSition(all 1s ease);
+    }
+    .show {
+      left: 0;
+      opacity: 1;
+      @include TranSition(all 1s ease);
+    }
+
     #toggle-menu {
       display: block;
       height: 100px;
@@ -3668,11 +3721,7 @@
           }
 
           a#contact-number {
-            font-size: 0.8em;
-
-            &:active {
-              color: #fff;
-            }
+            font-size: 0.85em;
           }
         }
         span#opening-time {
@@ -3712,6 +3761,7 @@
         height: auto;
         float: none;
         padding: 0.5em;
+        top: 0;
         background-color: $colorbg;
         -webkit-flex-flow: column;
         -ms-flex-flow: column;
@@ -3791,7 +3841,6 @@
         color: $colorbg;
       }
     }
-
     #contact-bar-btn {
       position: fixed;
       display: block;
@@ -3809,7 +3858,6 @@
         color: $colorbg;
       }
     }
-
     #home-page-sidebar {
       position: fixed;
       top: 0;
@@ -3894,16 +3942,6 @@
       }
     }
 
-    .show {
-      left: 0;
-      opacity: 1;
-      @include TranSition(all 1s ease);
-    }
-    .hide {
-      left: -100%;
-      @include TranSition(all 1s ease);
-    }
-
     #filter-nav-sidebar {
       position: fixed;
       -webkit-flex-flow: row wrap;
@@ -3911,7 +3949,7 @@
       flex-flow: row wrap;
       z-index: 100;
       bottom: 0;
-      width: 100%;
+      width: 70%;
       margin-top: 0;
       @include TranSition(all 1s ease);
       height: auto;
@@ -3948,19 +3986,26 @@
       width: 200px;
       margin-top: 1%;
       @include TranSition(all 1s ease);
-
+      .hide {
+        left: -650px;
+        @include TranSition(all 1s ease);
+      }
+      .show {
+        left: 0;
+        opacity: 1;
+        @include TranSition(all 1s ease);
+      }
       figure {
         margin: 0;
         figcaption {
           top: -254px;
           padding: 5%;
           h1 {
-            font-size: 0.6em;
+            font-size: 0.9em;
             margin: 18% 0;
             line-height: 1.5em;
           }
           p {
-            font-size: 0.45em;
             line-height: 1.3em;
           }
         }
@@ -3970,7 +4015,7 @@
     #contact-page-sidebar {
       position: fixed;
       bottom: 0;
-      width: 100%;
+      width: 45%;
       margin: 0;
       #contact-details {
         width: 100%;
@@ -3982,7 +4027,7 @@
           span {
             width: 25%;
             img {
-              width: 13%;
+              width: 25%;
               margin: 2% auto;
             }
           }
@@ -4021,7 +4066,7 @@
             }
             figcaption {
               p {
-                font-size: 0.9em;
+                font-size: 0.8em;
               }
               p:nth-of-type(2) {
                 font-weight: bold;
@@ -4039,6 +4084,51 @@
     label.error {
       font-size: 0.9em;
     }
+    .BestDealsItem,
+    .HolidayPackagesItem {
+      /*Holiday details packages page*/
+      h1 {
+        font-size: 1em;
+      }
+      .holiday_item_details {
+        width: 70%;
+        h1 {
+          font-size: 1.1em;
+        }
+        span.holidayprice {
+          font-size: 0.9em;
+
+          .offerbox-price {
+            display: inline-block;
+          }
+        }
+        figure {
+          margin: 0;
+          img {
+            width: 75%;
+          }
+          figcaption {
+            width: 100%;
+
+            h3 {
+              margin: 0;
+            }
+
+            p {
+              font-size: 0.9em;
+            }
+            button {
+              width: 80%;
+              font-size: 1em;
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
 
     #content2,
     #holiday-items {
@@ -4053,9 +4143,8 @@
         font-size: 0.9em;
       }
       p {
-        font-size: 0.7em;
+        font-size: 0.8em;
         margin: 0;
-        letter-spacing: 0.01em;
       }
       #contactform {
         margin: auto;
@@ -4087,10 +4176,10 @@
 
       .holiday_details {
         h1 {
-          font-size: 1em;
+          font-size: 1.1em;
         }
         span.holidayprice {
-          font-size: 0.8em;
+          font-size: 0.85em;
           left: 11%;
           .offerbox-price {
             font-weight: bold;
@@ -4105,7 +4194,7 @@
             width: 77%;
 
             p {
-              font-size: 0.8em;
+              font-size: 0.9em;
             }
             button {
               width: 40%;
@@ -4141,7 +4230,7 @@
               font-size: 0.9em;
             }
             button {
-              width: 100%;
+              width: 75%;
             }
           }
         }
@@ -4196,7 +4285,7 @@
       }
 
       aside.contact {
-        width: 22%;
+        width: 21%;
         span.tele {
           margin: 0;
 
@@ -4205,7 +4294,7 @@
           }
 
           a#contact-number {
-            font-size: 0.75em;
+            font-size: 0.85em;
 
             &:active {
               color: #fff;
@@ -4213,7 +4302,7 @@
           }
         }
         span#opening-time {
-          font-size: 65%;
+          font-size: 70%;
         }
       }
       #toggle-menu,
@@ -4366,7 +4455,7 @@
           span {
             width: 25%;
             img {
-              width: 13%;
+              width: 25%;
             }
           }
           a {
@@ -4403,7 +4492,7 @@
             }
             figcaption {
               p {
-                font-size: 0.85em;
+                font-size: 0.8em;
               }
               p:nth-of-type(2) {
                 font-weight: bold;
@@ -4435,7 +4524,7 @@
         font-size: 0.9em;
       }
       p {
-        font-size: 0.7em;
+        font-size: 0.8em;
         margin: 0;
         letter-spacing: 0.01em;
       }
@@ -4468,10 +4557,10 @@
 
       .holiday_details {
         h1 {
-          font-size: 1em;
+          font-size: 1.1em;
         }
         span.holidayprice {
-          font-size: 0.8em;
+          font-size: 0.85em;
           left: 11%;
           .offerbox-price {
             font-weight: bold;
@@ -4486,10 +4575,10 @@
             width: 70%;
 
             p {
-              font-size: 0.8em;
+              font-size: 0.85em;
             }
             button {
-              font-size: 0.85em;
+              font-size: 1em;
             }
           }
         }
@@ -4778,7 +4867,7 @@
           span {
             width: 30%;
             img {
-              width: 12%;
+              width: 22%;
             }
           }
           a {
@@ -4816,7 +4905,7 @@
             }
             figcaption {
               p {
-                font-size: 0.85em;
+                font-size: 0.75em;
               }
               p:nth-of-type(2) {
                 font-weight: bold;
@@ -4849,7 +4938,7 @@
         font-size: 0.9em;
       }
       p {
-        font-size: 0.7em;
+        font-size: 0.8em;
         margin: 0;
         letter-spacing: 0.01em;
       }
@@ -4882,7 +4971,7 @@
 
       .holiday_details {
         h1 {
-          font-size: 0.95em;
+          font-size: 1.1em;
         }
         span.holidayprice {
           .offerbox-price {
@@ -4898,10 +4987,10 @@
             width: 70%;
 
             p {
-              font-size: 0.7em;
+              font-size: 0.85em;
             }
             button {
-              font-size: 0.85em;
+              font-size: 1em;
             }
           }
         }
@@ -4928,8 +5017,8 @@
             p {
               font-size: 0.85em;
             }
-            a {
-              width: 100%;
+            button {
+              width: 60%;
             }
           }
         }
@@ -4988,7 +5077,7 @@
       }
 
       aside.contact {
-        width: 22%;
+        width: 24%;
 
         span.tele {
           margin: 0;
@@ -4999,7 +5088,7 @@
 
           a#contact-number {
             width: 85%;
-            font-size: 0.7em;
+            font-size: 0.9em;
 
             &:active {
               color: #fff;
@@ -5007,7 +5096,7 @@
           }
         }
         span#opening-time {
-          font-size: 60%;
+          font-size: 70%;
         }
       }
     }
@@ -5175,7 +5264,7 @@
           span {
             width: 30%;
             img {
-              width: 12%;
+              width: 22%;
             }
           }
           a {
@@ -5214,7 +5303,7 @@
             }
             figcaption {
               p {
-                font-size: 0.85em;
+                font-size: 0.75em;
               }
               p:nth-of-type(2) {
                 font-weight: bold;
@@ -5246,7 +5335,7 @@
         font-size: 0.85em;
       }
       p {
-        font-size: 0.7em;
+        font-size: 0.75em;
         margin: 0;
         letter-spacing: 0.01em;
       }
@@ -5279,7 +5368,7 @@
 
       .holiday_details {
         h1 {
-          font-size: 0.95em;
+          font-size: 1.05em;
           width: 70%;
         }
         span.holidayprice {
@@ -5298,10 +5387,10 @@
             width: 70%;
 
             p {
-              font-size: 0.8em;
+              font-size: 0.85em;
             }
             button {
-              font-size: 0.85em;
+              font-size: 1em;
             }
           }
         }
@@ -5326,7 +5415,7 @@
           width: 100%;
 
           img {
-            width: 47%;
+            width: 31%;
           }
 
           figcaption {
@@ -5335,7 +5424,7 @@
               font-size: 0.85em;
             }
             button {
-              width: 100%;
+              width: 60%;
             }
           }
         }
@@ -5414,7 +5503,7 @@
 
           a#contact-number {
             line-height: 28px;
-            font-size: 0.75em;
+            font-size: 0.8em;
 
             &:active {
               color: #fff;
@@ -5594,7 +5683,7 @@
           span {
             width: 30%;
             img {
-              width: 12%;
+              width: 22%;
             }
           }
           a {
@@ -5649,7 +5738,7 @@
             figcaption {
               padding: 0.5em 0;
               p {
-                font-size: 0.9em;
+                font-size: 0.8em;
               }
               p:nth-of-type(2) {
                 font-weight: bold;
@@ -5667,6 +5756,51 @@
     label.error {
       font-size: 0.9em;
     }
+    .BestDealsItem,
+    .HolidayPackagesItem {
+      /*Holiday details packages page*/
+      h1 {
+        font-size: 1em;
+      }
+      .holiday_item_details {
+        width: 90%;
+        h1 {
+          font-size: 1.1em;
+        }
+        span.holidayprice {
+          font-size: 0.9em;
+
+          .offerbox-price {
+            display: inline-block;
+          }
+        }
+        figure {
+          margin: 0;
+          img {
+            width: 75%;
+          }
+          figcaption {
+            width: 100%;
+
+            h3 {
+              margin: 0;
+            }
+
+            p {
+              font-size: 0.9em;
+            }
+            button {
+              width: 80%;
+              font-size: 1em;
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
 
     #content2,
     #holiday-items {
@@ -5680,7 +5814,7 @@
         font-size: 0.8em;
       }
       p {
-        font-size: 0.7em;
+        font-size: 0.75em;
         margin: 0;
         letter-spacing: 0.01em;
       }
@@ -5714,10 +5848,10 @@
 
       .holiday_details {
         h1 {
-          font-size: 0.95em;
+          font-size: 1em;
         }
         span.holidayprice {
-          font-size: 0.8em;
+          font-size: 0.85em;
 
           .offerbox-price {
             font-weight: bold;
@@ -5726,16 +5860,17 @@
         figure {
           width: 100%;
           img {
-            width: 47%;
+            width: 28%;
+            margin-right: 0.25em;
           }
           figcaption {
-            width: 49%;
+            width: 70%;
 
             p {
-              font-size: 0.8em;
+              font-size: 0.85em;
             }
             button {
-              font-size: 0.85em;
+              font-size: 1em;
             }
           }
         }
@@ -5757,11 +5892,11 @@
           width: 100%;
 
           img {
-            width: 47%;
+            width: 34%;
           }
 
           figcaption {
-            width: 48%;
+            width: 64%;
 
             p {
               font-size: 0.8em;
@@ -5835,13 +5970,13 @@
       }
 
       aside.contact {
-        width: 30%;
+        width: 28%;
 
         span.tele {
           margin: 0;
 
           img {
-            width: 19%;
+            width: auto;
           }
 
           a#contact-number {
@@ -6025,7 +6160,7 @@
           span {
             width: 30%;
             img {
-              width: 12%;
+              width: 22%;
             }
           }
           a {
@@ -6131,7 +6266,7 @@
       }
 
       .holiday_details {
-        padding: 0.5%;
+        padding: 0.25em;
 
         h1 {
           width: 70%;
@@ -6141,8 +6276,8 @@
         }
         span.holidayprice {
           font-size: 0.7em;
-          line-height: 35px;
-          height: 35px;
+          line-height: 30px;
+          height: 30px;
 
           .offerbox-price {
             font-weight: bold;
@@ -6157,11 +6292,11 @@
             width: 61%;
 
             p {
-              font-size: 0.8em;
+              font-size: 0.75em;
             }
             button {
               width: 50%;
-              font-size: 0.85em;
+              font-size: 1em;
             }
           }
         }
@@ -6169,10 +6304,14 @@
 
       .holiday_details_small {
         h1 {
-          font-size: 0.9em;
+          font-size: 0.95em;
+          line-height: 30px;
+          height: 30px;
         }
         span.holidayprice {
-          font-size: 0.75em;
+          font-size: 0.7em;
+          line-height: 30px;
+          height: 30px;
           .offerbox-price {
             display: inline-block;
           }
@@ -6181,17 +6320,17 @@
           width: 100%;
 
           img {
-            width: 47%;
+            width: 38%;
           }
 
           figcaption {
-            width: 49%;
+            width: 60%;
 
             p {
               font-size: 0.75em;
             }
             button {
-              font-size: 0.8em;
+              font-size: 1em;
             }
           }
         }
@@ -6255,24 +6394,24 @@
       }
 
       aside.contact {
-        width: 30%;
+        width: 32%;
         span.tele {
           margin: 0;
 
           img {
-            width: 20%;
+            width: auto;
           }
 
           a#contact-number {
             width: 84%;
-            font-size: 0.7em;
+            font-size: 0.75em;
             &:active {
               color: #fff;
             }
           }
         }
         span#opening-time {
-          font-size: 60%;
+          font-size: 65%;
         }
       }
     }
@@ -6442,7 +6581,7 @@
           span {
             width: 30%;
             img {
-              width: 12%;
+              width: 22%;
             }
           }
           a {
@@ -6572,8 +6711,8 @@
               font-size: 0.75em;
             }
             button {
-              width: 100%;
-              font-size: 0.85em;
+              width: 70%;
+              font-size: 0.9em;
             }
           }
         }
@@ -6595,17 +6734,18 @@
           width: 100%;
 
           img {
-            width: 48%;
+            width: 46%;
           }
 
           figcaption {
-            width: 48%;
+            width: 44%;
 
             p {
               font-size: 0.75em;
             }
             button {
-              font-size: 0.8em;
+              font-size: 1em;
+              width: 80%;
             }
           }
         }
@@ -6676,16 +6816,16 @@
       }
 
       aside.contact {
-        width: 30%;
+        width: 32%;
         span.tele {
           margin: 0;
 
           img {
-            width: 18%;
+            width: auto;
           }
 
           a#contact-number {
-            font-size: 0.6em;
+            font-size: 0.7em;
 
             &:active {
               color: #fff;
@@ -6693,7 +6833,6 @@
           }
         }
         span#opening-time {
-          line-height: 25px;
           font-size: 55%;
         }
       }
@@ -6862,7 +7001,7 @@
           span {
             width: 30%;
             img {
-              width: 12%;
+              width: 22%;
             }
           }
           a {
@@ -6901,7 +7040,7 @@
             }
             figcaption {
               p {
-                font-size: 0.8em;
+                font-size: 0.75em;
               }
               p:nth-of-type(2) {
                 font-weight: bold;
@@ -6968,16 +7107,16 @@
 
       .holiday_details {
         h1 {
-          width: 55%;
-          font-size: 0.8em;
+          width: 65%;
+          font-size: 0.85em;
           line-height: 25px;
           height: 25px;
         }
 
         span.holidayprice {
           font-size: 0.7em;
-          width: 44%;
-          line-height: 30px;
+          width: 35%;
+          line-height: 25px;
 
           .offerbox-price {
             font-weight: bold;
@@ -6986,13 +7125,13 @@
         figure {
           width: 100%;
           img {
-            width: 35%;
+            width: 41%;
           }
           figcaption {
-            width: 60%;
+            width: 55%;
 
             p {
-              font-size: 0.85em;
+              font-size: 0.75em;
             }
             button {
               font-size: 0.9em;
@@ -7005,12 +7144,16 @@
         width: 100%;
 
         h1 {
-          font-size: 0.85em;
+          font-size: 0.9em;
           width: 65%;
+          line-height: 25px;
+          height: 25px;
         }
         span.holidayprice {
           font-size: 0.7em;
           width: 34%;
+          line-height: 25px;
+          height: 25px;
           .offerbox-price {
             display: inline-block;
           }
@@ -7029,7 +7172,7 @@
               font-size: 0.75em;
             }
             button {
-              font-size: 0.8em;
+              font-size: 0.9em;
             }
           }
         }
@@ -7102,16 +7245,16 @@
       }
 
       aside.contact {
-        width: 30%;
+        width: 32%;
         span.tele {
           margin: 0;
 
           img {
-            width: 18%;
+            width: auto;
           }
 
           a#contact-number {
-            font-size: 0.6em;
+            font-size: 0.7em;
 
             &:active {
               color: #fff;
@@ -7286,7 +7429,7 @@
           span {
             width: 30%;
             img {
-              width: 12%;
+              width: 22%;
             }
           }
           a {
@@ -7325,7 +7468,7 @@
             }
             figcaption {
               p {
-                font-size: 0.8em;
+                font-size: 0.75em;
               }
               p:nth-of-type(2) {
                 font-weight: bold;
@@ -7391,11 +7534,11 @@
 
       .holiday_details {
         h1 {
-          width: 55%;
-          font-size: 0.75em;
+          width: 65%;
+          font-size: 0.85em;
         }
         span.holidayprice {
-          font-size: 0.7em;
+          font-size: 0.65em;
           .offerbox-price {
             font-weight: bold;
           }
@@ -7403,10 +7546,10 @@
         figure {
           width: 100%;
           img {
-            width: 33%;
+            width: 43%;
           }
           figcaption {
-            width: 60%;
+            width: 53%;
 
             p {
               font-size: 0.75em;
@@ -7442,7 +7585,7 @@
               font-size: 0.75em;
             }
             button {
-              font-size: 0.8em;
+              font-size: 0.9em;
             }
           }
         }
