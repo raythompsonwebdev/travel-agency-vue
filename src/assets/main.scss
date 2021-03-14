@@ -156,7 +156,7 @@
             text-decoration: none;
             text-transform: uppercase;
             width: 100%;
-            font-size: 0.75em;
+            font-size: 0.85em;
             text-align: center;
             @include borderRaduis(5px 5px 0px 0px);
             height: 40px;
@@ -202,9 +202,9 @@
         li:nth-of-type(2) {
           padding-top: 0;
           a {
-            font-size: 70%;
-            line-height: 40px;
-            height: auto;
+            font-size: 85%;
+            line-height: 20px;
+            height: 100%;
           }
         }
       }
@@ -477,7 +477,7 @@
           text-indent: 1em;
           color: $colorbgvar;
           display: block;
-          font-size: 0.85em;
+          font-size: 0.95em;
           line-height: 30px;
           margin: 0 auto;
         }
@@ -497,7 +497,7 @@
             button {
               display: block;
               height: 100%;
-              font-size: 0.8em;
+              font-size: 0.85em;
               text-transform: capitalize;
               @include TranSition(all 0.2s linear ease-in-out);
               width: 100%;
@@ -512,7 +512,6 @@
               &:hover {
                 cursor: pointer;
                 font-weight: bold;
-                font-size: 0.8em;
                 @include gradient($sideboxbordercolvar, $colorpw2);
               }
             }
@@ -743,7 +742,7 @@
           width: 100%;
           line-height: 40px;
           font-size: 1.1em;
-          color: #1485c9;
+          color: $colorpw1a;
           align-self: flex-start;
           text-align: center;
         }
@@ -777,7 +776,7 @@
               width: 100%;
               line-height: 40px;
               font-size: 1em;
-              color: #1485c9;
+              color: $colorpw1a;
               text-align: center;
             }
 
@@ -927,8 +926,9 @@
           width: 80%;
           line-height: 40px;
           font-size: 1.1em;
-          color: #1485c9;
+          color: $colorpw1a;
           align-self: flex-start;
+          text-indent: 0.2em;
         }
         span.holidayprice {
           font-size: 0.9em;
@@ -950,7 +950,7 @@
             width: 19%;
             float: left;
             display: block;
-            margin-right: 0.5em;
+            margin-right: 0.25em;
           }
           figcaption {
             width: 78%;
@@ -1341,20 +1341,20 @@
       section#prices,
       section#ratings {
         h1 {
-          font-size: 0.85em;
+          font-size: 0.9em;
         }
         ul {
           width: 90%;
 
           li {
             button {
-              font-size: 0.8em;
+              font-size: 0.85em;
 
               &::before {
                 content: "<   ";
               }
               &:hover {
-                font-size: 0.8em;
+                font-weight: bold;
               }
             }
           }
@@ -1545,7 +1545,7 @@
         figure {
           width: 100%;
           img {
-            width: 21%;
+            width: 18%;
           }
           figcaption {
             width: 77%;
@@ -1583,7 +1583,7 @@
               font-size: 0.85em;
             }
             button {
-              width: 100%;
+              width: 20%;
             }
           }
         }
@@ -1630,7 +1630,7 @@
         height: auto;
       }
       aside.contact {
-        width: 14%;
+        width: 13%;
 
         span.tele {
           margin: 0;
@@ -1640,7 +1640,7 @@
           }
 
           a#contact-number {
-            font-size: 0.95em;
+            font-size: 0.9em;
 
             &:active {
               color: #fff;
@@ -1759,20 +1759,20 @@
       section#prices,
       section#ratings {
         h1 {
-          font-size: 0.85em;
+          font-size: 0.9em;
         }
         ul {
           width: 90%;
 
           li {
             button {
-              font-size: 0.75em;
+              font-size: 0.85em;
 
               &::before {
                 content: "<   ";
               }
               &:hover {
-                font-size: 0.8em;
+                font-weight: bold;
               }
             }
           }
@@ -1938,7 +1938,7 @@
         figure {
           width: 100%;
           img {
-            width: 21%;
+            width: 18%;
           }
           figcaption {
             width: 77%;
@@ -1947,7 +1947,7 @@
               font-size: 0.9em;
             }
             button {
-              font-size: 0.9em;
+              font-size: 1em;
             }
           }
         }
@@ -2031,7 +2031,7 @@
       }
 
       aside.contact {
-        width: 15%;
+        width: 14%;
         span.tele {
           margin: 0;
 
@@ -2168,17 +2168,17 @@
       section#prices,
       section#ratings {
         h1 {
-          font-size: 0.85em;
+          font-size: 0.9em;
         }
         ul {
           width: 90%;
 
           li {
             button {
-              font-size: 0.7em;
+              font-size: 0.8em;
 
               &:hover {
-                font-size: 0.8em;
+                font-weight: bold;
               }
             }
           }
@@ -2396,7 +2396,7 @@
               font-size: 0.75em;
             }
             button {
-              width: 30%;
+              width: 25%;
             }
           }
         }
@@ -2621,10 +2621,10 @@
 
           li {
             button {
-              font-size: 0.7em;
+              font-size: 0.75em;
 
               &:hover {
-                font-size: 0.8em;
+                font-weight: bold;
               }
             }
           }
@@ -2783,7 +2783,7 @@
               font-size: 0.85em;
             }
             button {
-              width: 35%;
+              width: 30%;
               font-size: 1em;
             }
           }
@@ -3006,17 +3006,17 @@
       section#prices,
       section#ratings {
         h1 {
-          font-size: 0.8em;
+          font-size: 0.85em;
         }
         ul {
           width: 90%;
 
           li {
             button {
-              font-size: 0.7em;
+              font-size: 0.75em;
 
               &:hover {
-                font-size: 0.8em;
+                font-weight: bold;
               }
             }
           }
@@ -3406,20 +3406,20 @@
       section#prices,
       section#ratings {
         h1 {
-          font-size: 0.8em;
+          font-size: 0.85em;
         }
         ul {
           width: 90%;
 
           li {
             button {
-              font-size: 0.7em;
+              font-size: 0.75em;
 
               &::before {
                 content: "<   ";
               }
               &:hover {
-                font-size: 0.8em;
+                font-weight: bold;
               }
             }
           }
@@ -3756,7 +3756,6 @@
         position: fixed;
         z-index: 100;
         opacity: 0;
-        bottom: 0;
         width: 100%;
         height: auto;
         float: none;
@@ -3766,6 +3765,7 @@
         -webkit-flex-flow: column;
         -ms-flex-flow: column;
         flex-flow: column;
+        justify-content: flex-start;
         li {
           width: 100%;
           height: auto;
@@ -3786,10 +3786,11 @@
           margin-bottom: 0.2em;
           a {
             font-size: 1em;
-            line-height: 45px;
+            line-height: 50px;
+            height: auto;
             &:hover {
-              height: 45px;
-              line-height: 45px;
+              height: 50px;
+              line-height: 50px;
               box-shadow: none;
             }
           }
@@ -3961,6 +3962,7 @@
         h1 {
           text-indent: 0;
           text-align: center;
+          font-size: 0.85em;
         }
         ul {
           width: 90%;
@@ -3971,7 +3973,7 @@
               font-size: 0.8em;
 
               &:hover {
-                font-size: 0.85em;
+                font-weight: bold;
               }
             }
           }
@@ -4424,7 +4426,7 @@
       section#ratings {
         width: 50%;
         h1 {
-          font-size: 0.75em;
+          font-size: 0.85em;
         }
         ul {
           width: 90%;
@@ -4434,7 +4436,7 @@
               font-size: 0.8em;
 
               &:hover {
-                font-size: 0.85em;
+                font-weight: bold;
               }
             }
           }
@@ -4711,8 +4713,6 @@
           }
           li:nth-of-type(2) {
             margin-bottom: 0.2em;
-            height: 45px;
-            line-height: 45px;
             a {
               font-size: 0.9em;
             }
@@ -4819,17 +4819,17 @@
       section#prices,
       section#ratings {
         h1 {
-          font-size: 0.75em;
+          font-size: 0.8em;
         }
         ul {
           width: 90%;
 
           li {
             button {
-              font-size: 0.75em;
+              font-size: 0.8em;
 
               &:hover {
-                font-size: 0.8em;
+                font-weight: bold;
               }
             }
           }
@@ -5220,17 +5220,17 @@
       section#prices,
       section#ratings {
         h1 {
-          font-size: 0.75em;
+          font-size: 0.8em;
         }
         ul {
           width: 90%;
 
           li {
             button {
-              font-size: 0.75em;
+              font-size: 0.8em;
 
               &:hover {
-                font-size: 0.8em;
+                font-weight: bold;
               }
             }
           }
@@ -5635,20 +5635,19 @@
       section#prices,
       section#ratings {
         h1 {
-          font-size: 0.75em;
+          font-size: 0.8em;
         }
         ul {
           width: 90%;
 
           li {
             button {
-              font-size: 0.7em;
+              font-size: 0.75em;
               line-height: 30px;
               &::before {
                 content: "<   ";
               }
               &:hover {
-                font-size: 0.75em;
                 line-height: 30px;
               }
             }
@@ -6115,7 +6114,7 @@
       section#prices,
       section#ratings {
         h1 {
-          font-size: 0.75em;
+          font-size: 0.8em;
         }
         ul {
           width: 90%;
@@ -6125,7 +6124,7 @@
               font-size: 0.75em;
 
               &:hover {
-                font-size: 0.8em;
+                font-weight: bold;
               }
             }
           }
@@ -6547,7 +6546,7 @@
               font-size: 0.7em;
 
               &:hover {
-                font-size: 0.75em;
+                font-weight: bold;
               }
             }
           }
@@ -6954,7 +6953,7 @@
       section#prices,
       section#ratings {
         h1 {
-          font-size: 0.7em;
+          font-size: 0.75em;
         }
         ul {
           width: 90%;
@@ -6967,7 +6966,7 @@
                 content: "<   ";
               }
               &:hover {
-                font-size: 0.75em;
+                font-weight: bold;
               }
             }
           }
@@ -7385,17 +7384,17 @@
       section#prices,
       section#ratings {
         h1 {
-          font-size: 0.7em;
+          font-size: 0.75em;
         }
         ul {
           width: 90%;
 
           li {
             button {
-              font-size: 0.65em;
+              font-size: 0.7em;
 
               &:hover {
-                font-size: 0.7em;
+                font-weight: bold;
               }
             }
           }
