@@ -190,7 +190,6 @@
               text-decoration: none;
               width: 100%;
               text-align: center;
-              height: 40px;
               color: $colorsearchbtn;
               @include gradient($colorpw2, $colorpw);
               font-weight: bold;
@@ -202,8 +201,7 @@
         li:nth-of-type(2) {
           padding-top: 0;
           a {
-            font-size: 85%;
-            line-height: 20px;
+            font-size: 80%;
             height: 100%;
           }
         }
@@ -1035,7 +1033,7 @@
           padding: 0;
           display: inline-block;
           img {
-            width: 48%;
+            width: 35%;
             display: block;
             float: left;
             margin: 0 0.25em 0 0;
@@ -1184,6 +1182,7 @@
     width: 85%;
 
     header {
+      margin: 0;
       figure#logo {
         height: auto;
       }
@@ -1209,34 +1208,33 @@
           font-size: 80%;
         }
       }
+    }
+    nav {
+      height: 40px;
 
-      nav {
-        height: 40px;
-
-        ul#navi {
-          width: 82%;
-          li {
-            width: 16.5%;
-            a {
-              font-size: 0.7em;
-            }
-          }
-          li:nth-of-type(2) {
-            padding-top: 0;
-            a {
-              font-size: 65%;
-            }
+      ul#navi {
+        width: 82%;
+        li {
+          width: 16.5%;
+          a {
+            font-size: 0.7em;
           }
         }
-        aside#language-box {
-          width: 18%;
-          form#languagebox {
-            label {
-              font-size: 0.75em;
-            }
-            select {
-              font-size: 0.75em;
-            }
+        li:nth-of-type(2) {
+          padding-top: 0;
+          a {
+            font-size: 75%;
+          }
+        }
+      }
+      aside#language-box {
+        width: 18%;
+        form#languagebox {
+          label {
+            font-size: 0.75em;
+          }
+          select {
+            font-size: 0.75em;
           }
         }
       }
@@ -1573,7 +1571,7 @@
           width: 100%;
 
           img {
-            width: 43%;
+            width: 35%;
           }
 
           figcaption {
@@ -1583,7 +1581,7 @@
               font-size: 0.85em;
             }
             button {
-              width: 20%;
+              width: 100%;
             }
           }
         }
@@ -1651,16 +1649,23 @@
           font-size: 75%;
         }
       }
+    }
 
-      nav {
-        height: 40px;
-        ul#navi {
-          height: 100%;
-          li {
-            height: 40px;
-            a {
-              font-size: 0.7em;
-            }
+    nav {
+      height: 40px;
+      ul#navi {
+        height: 100%;
+        li {
+          height: 40px;
+          a {
+            font-size: 0.7em;
+          }
+        }
+        li:nth-of-type(2) {
+          padding: 0;
+          a {
+            font-size: 70%;
+            height: 100%;
           }
         }
       }
@@ -1967,7 +1972,7 @@
           width: 100%;
 
           img {
-            width: 48%;
+            width: 41%;
           }
 
           figcaption {
@@ -2794,10 +2799,11 @@
         width: 48%;
 
         h1 {
-          font-size: 0.8em;
+          font-size: 0.85em;
+          width: 68%;
         }
         span.holidayprice {
-          font-size: 0.65em;
+          font-size: 0.7em;
           .offerbox-price {
             display: inline-block;
           }
