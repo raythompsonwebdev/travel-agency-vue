@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "6042a763d19e1419b4552e93"
+  },
+  "id": 2,
+  "value": "United_Kingdom",
+  "text": "United_Kingdom",
+  "url": "../assets/images/flags/United_Kingdom.jpg"
+},{
+  "_id": {
+    "$oid": "6042a763d19e1419b4552e95"
+  },
+  "id": 4,
+  "value": "United_States",
+  "text": "United_States",
+  "url": "../assets/images/flags/USA.gif"
+},{
+  "_id": {
+    "$oid": "6042a763d19e1419b4552e98"
+  },
+  "id": 7,
+  "value": "Spain",
+  "text": "Spain",
+  "url": "../assets/images/flags/Spain.jpg"
+},{
+  "_id": {
+    "$oid": "6042a763d19e1419b4552e92"
+  },
+  "id": 1,
+  "value": "nothing",
+  "text": " ",
+  "url": "../assets/images/flags/United_Kingdom.jpg"
+},{
+  "_id": {
+    "$oid": "6042a763d19e1419b4552e94"
+  },
+  "id": 3,
+  "value": "Germany",
+  "text": "Germany",
+  "url": "../assets/images/flags/Germany.jpg"
+},{
+  "_id": {
+    "$oid": "6042a763d19e1419b4552e97"
+  },
+  "id": 6,
+  "value": "France",
+  "text": "France",
+  "url": "../assets/images/flags/France.jpg"
+},{
+  "_id": {
+    "$oid": "6042a763d19e1419b4552e96"
+  },
+  "id": 5,
+  "value": "Jamaica",
+  "text": "Jamaica",
+  "url": "../assets/images/flags/Jamaica.jpg"
+}]

@@ -1,0 +1,97 @@
+[{
+  "_id": {
+    "$oid": "6042a48cd19e1419b4552e80"
+  },
+  "id": "1",
+  "url": "../assets/images/travel-agency-website-tower-of-london-image.jpg",
+  "title": "Lorem ipsum dolor sit amet.",
+  "price": "$399 - $499",
+  "month": "june",
+  "season": "summer",
+  "location": "london",
+  "rating": "two"
+},{
+  "_id": {
+    "$oid": "6042a48cd19e1419b4552e82"
+  },
+  "id": "3",
+  "url": "../assets/images/travel-agency-website-gold-coast-image.jpg",
+  "title": "Lorem ipsum dolor sit amet.",
+  "price": "$699 - $999",
+  "month": "may",
+  "season": "spring",
+  "location": "paris",
+  "rating": "five"
+},{
+  "_id": {
+    "$oid": "6042a48cd19e1419b4552e84"
+  },
+  "id": "5",
+  "url": "../assets/images/travel-agency-website-toronto-image.jpg",
+  "title": "Lorem ipsum dolor sit amet.",
+  "price": "$499 - $599",
+  "month": "august",
+  "season": "autumn",
+  "location": "rome",
+  "rating": "three"
+},{
+  "_id": {
+    "$oid": "6042a48cd19e1419b4552e85"
+  },
+  "id": "6",
+  "url": "../assets/images/travel-agency-website-taj-mahal-image.jpg",
+  "title": "Lorem ipsum dolor sit amet.",
+  "price": "$999 +",
+  "month": "april",
+  "season": "spring",
+  "location": "dubai",
+  "rating": "one"
+},{
+  "_id": {
+    "$oid": "6042a48cd19e1419b4552e81"
+  },
+  "id": "2",
+  "url": "../assets/images/travel-agency-website-dubai-image.jpg",
+  "title": "Lorem ipsum dolor sit amet.",
+  "price": "$399 - $499",
+  "month": "november",
+  "season": "winter",
+  "location": "dubai",
+  "rating": "five"
+},{
+  "_id": {
+    "$oid": "6042a48cd19e1419b4552e83"
+  },
+  "id": "4",
+  "url": "../assets/images/travel-agency-website-singapore-image.jpg",
+  "title": "Lorem ipsum dolor sit amet.",
+  "price": "$699 - $999",
+  "month": "september",
+  "season": "autumn",
+  "location": "madrid",
+  "rating": "four"
+},{
+  "_id": {
+    "$oid": "6042a48cd19e1419b4552e87"
+  },
+  "id": "8",
+  "url": "../assets/images/travel-agency-website-grand-canyon-image.jpg",
+  "title": "Lorem ipsum dolor sit amet.",
+  "price": "$499 - $599",
+  "month": "july",
+  "season": "summer",
+  "location": "paris",
+  "rating": "four"
+},{
+  "_id": {
+    "$oid": "6042a48cd19e1419b4552e86"
+  },
+  "id": "7",
+  "url": "../assets/images/travel-agency-website-spanish-villa-image.jpg",
+  "title": "Lorem ipsum dolor sit amet.",
+  "price": "$599 - $699",
+  "month": "june",
+  "season": "summer",
+  "location": "madrid",
+  "rating": "two"
+}]

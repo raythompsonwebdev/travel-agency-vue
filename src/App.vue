@@ -24,9 +24,7 @@ export default {
     NavBar,
     Header,
     Footer
-  },
-  
-  
+  }, 
 }
 </script>
 
