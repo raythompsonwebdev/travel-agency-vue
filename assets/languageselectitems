@@ -13,7 +13,7 @@
   "id": 4,
   "value": "United_States",
   "text": "United_States",
-  "url": "../assets/images/flags/USA.gif"
+  "url": "../assets/images/flags/United_States.jpg"
 },{
   "_id": {
     "$oid": "6042a763d19e1419b4552e98"
@@ -29,7 +29,7 @@
   "id": 1,
   "value": "nothing",
   "text": " ",
-  "url": "../assets/images/flags/United_Kingdom.jpg"
+  "url": "../assets/images/flags/default.jpg"
 },{
   "_id": {
     "$oid": "6042a763d19e1419b4552e94"

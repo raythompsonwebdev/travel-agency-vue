@@ -27,5 +27,6 @@ public/
 _assets/filter.txt
 spare/
 .sass-cache/1*
+assets/
 
 src/components/data-json/*

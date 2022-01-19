@@ -3,7 +3,7 @@
     "$oid": "6042a48cd19e1419b4552e80"
   },
   "id": "1",
-  "url": "../assets/images/travel-agency-website-tower-of-london-image.jpg",
+  "url": "../assets/images/travel-agency-website-tower-of-london-image-1.jpg",
   "title": "Lorem ipsum dolor sit amet.",
   "price": "$399 - $499",
   "month": "june",
@@ -15,7 +15,7 @@
     "$oid": "6042a48cd19e1419b4552e82"
   },
   "id": "3",
-  "url": "../assets/images/travel-agency-website-gold-coast-image.jpg",
+  "url": "../assets/images/travel-agency-website-eiffel-tower-image-1.jpg",
   "title": "Lorem ipsum dolor sit amet.",
   "price": "$699 - $999",
   "month": "may",
@@ -27,7 +27,7 @@
     "$oid": "6042a48cd19e1419b4552e84"
   },
   "id": "5",
-  "url": "../assets/images/travel-agency-website-toronto-image.jpg",
+  "url": "../assets/images/travel-agency-website-rome-image.jpg",
   "title": "Lorem ipsum dolor sit amet.",
   "price": "$499 - $599",
   "month": "august",
@@ -39,7 +39,7 @@
     "$oid": "6042a48cd19e1419b4552e85"
   },
   "id": "6",
-  "url": "../assets/images/travel-agency-website-taj-mahal-image.jpg",
+  "url": "../assets/images/travel-agency-website-dubai-image.jpg",
   "title": "Lorem ipsum dolor sit amet.",
   "price": "$999 +",
   "month": "april",
@@ -63,7 +63,7 @@
     "$oid": "6042a48cd19e1419b4552e83"
   },
   "id": "4",
-  "url": "../assets/images/travel-agency-website-singapore-image.jpg",
+  "url": "../assets/images/travel-agency-website-spanish-villa-image.jpg",
   "title": "Lorem ipsum dolor sit amet.",
   "price": "$699 - $999",
   "month": "september",
@@ -75,7 +75,7 @@
     "$oid": "6042a48cd19e1419b4552e87"
   },
   "id": "8",
-  "url": "../assets/images/travel-agency-website-grand-canyon-image.jpg",
+  "url": "../assets/images/travel-agency-website-eiffel-tower-image-1.jpg",
   "title": "Lorem ipsum dolor sit amet.",
   "price": "$499 - $599",
   "month": "july",
