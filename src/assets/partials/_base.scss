@@ -142,8 +142,8 @@ a {
 	text-decoration: none;
 		@include TranSition(all 0.2s linear);
 		&:link {
-        background-color: $colorpw1;
-        color: $colorpw;
+        background-color: $colorblue6;
+        color: $colorwhite1;
 
     }
 
@@ -154,20 +154,20 @@ a {
 
     &:focus {
         //background-color: $color1;
-        outline: 1px dotted $colorpw2;
-        color: $colorpw;
+        outline: 1px dotted $colorblue6;
+        color: $colorwhite1;
     }
 
     &:hover {
         background-color: $colorblue1;
         font-weight: bold;
-		color: $colorpw;
+		color: $colorwhite1;
 		@include TransScale(scale(1.00));
     }
 
     &:active {
         background-color: $colorblue2;
-        color: $colorpw;
+        color: $colorwhite1;
     }
 }
 
@@ -199,7 +199,7 @@ body {
 	-o-background-size: cover;
 	background-size: cover;
 	margin: 0px;
-	background-color: $color2;
+	background-color: $colorblue5;
 	padding: 0px;
 	font-size: 100%;
 	line-height: 1;
