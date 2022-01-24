@@ -16,7 +16,7 @@
           <p>{{ featuredholiday.text }}</p>
           <p>
             from only
-            <span class="offerbox-price">£{{ featuredholiday.price }}</span> per person
+            <span class="offerbox-price">{{ featuredholiday.price }}</span> per person
           </p>
         </figcaption>
       </figure>
