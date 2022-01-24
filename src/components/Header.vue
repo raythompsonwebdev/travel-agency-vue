@@ -3,9 +3,10 @@
   <header>
     <!---logo-->
     <figure id="logo">
-      <img :src="'../assets/images/travel-agency-website-logo.png'">
+      <img :src="image">
+      <h1><span>Travel</span><span>AGENCY</span></h1>
     </figure>    
-    <!---contact number-->
+    <!---contact number--> 
     <aside class="contact">
       <span class="tele">
         <img :src="`${phoneImg}`">
@@ -28,7 +29,8 @@ export default {
     return {
       phoneNumber: "0208-365-1452",
       openTime: "Everyday 8am - 9pm",
-      phoneImg : "assets/images/Telephone.png"      
+      phoneImg : "assets/images/Telephone.png",
+      image: require('@/assets/images/travel-agency-website-logo-copy.png')     
     };
   },
 }

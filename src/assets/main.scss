@@ -28,59 +28,93 @@
     /*Logo*/
     figure#logo {
       height: auto;
-      width: 55%;
-      margin: 0px;
-      text-indent: -9999px;
-      -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+      width: auto;
+      margin: 0;
+      display:flex;
+      align-items: end;
+      -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+      h1{
+        display:block;
+        color:#000;
+        margin:0;
+        font-size:1.1em;
+        text-indent:-1px;
+        span:first-of-type{
+          font-size:0.7em;
+          width:100%;
+          color:$sideboxcolor1a;
+          display:block;
+          text-indent:-10px;
+          line-height: 20px
+
+        }
+        span:last-of-type{
+          font-size:1em;
+          width:100%;
+          color:$colorbtn1;
+          display:block;
+          font-weight:normal;
+          letter-spacing:0.1em;
+          margin-bottom:5px;
+
+        }
+        
+      }
       img {
+        
         display: block;
         margin: 0;
         padding: 0;
         height: auto;
+        width:auto;
       }
     }
+
+    
 
     aside.contact {
       -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
       flex: 0 0 auto;
-      width: 35%;
+      width: auto;
       height: auto;
-      margin: 1% 0 0 0;
+      margin: 0.25em 0 0 0;
       display: block;
       line-height: 25px;
-      font-size: 0.65em;
+      font-size: 0.6em;
       span.tele {
         margin: 0;
-        padding: 0;
+        padding: 3px;
         width: 100%;
-        display: block;
         display: flex;
         text-align: left;
         background-color: $colorbg;
 
         img {
-          -webkit-flex: 0 0 auto;
-          -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+          -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
           width: auto;
           display: block;
-          margin: 0.2em;
+          width:auto;
         }
 
         a#contact-number {
-          width: 87%;
+          width: 82px;
           padding: 0;
           display: inline-block;
-          line-height: 27px;
+          line-height: 21px;
           font-weight: bold;
           font-size: 1em;
           text-align: center;
           text-shadow: 1px 1px 1px $colorblk;
           text-decoration: none;
           color: $colorwhite3;
+          -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
           &:active {
             color: $colorwhite2;
           }
@@ -92,16 +126,13 @@
       }
       span#opening-time {
         display: block;
-        line-height: 27px;
         color: $colorblk;
         font-size: 85%;
         text-transform: uppercase;
-        text-align: center;
         text-indent: 0;
         color: $colorgry;
         clear: both;
         text-align: center;
-        text-indent: unset;
       }
     }
   }
@@ -608,8 +639,7 @@
   /*#contact page details sidebar*/
   #contact-page-sidebar {
     position: fixed;
-    bottom: 0;
-    width: 45%;
+    width: 100%;
     margin: 0;
     #contact-details {
       background-color: $colorwhite1;
@@ -956,14 +986,14 @@
       margin: 0.25em auto;
       padding: 0.25em;
       @include borderRaduis(5px);
-      width: 80%;
+      width: 90%;
       display: flex;
       flex-flow: row wrap;
       h1 {
         margin: 0;
         width: 100%;
         line-height: 40px;
-        font-size: 0.9em;
+        font-size: 1em;
         color: $colorblue2;
         align-self: flex-start;
         text-indent: 0.2em;
@@ -1011,7 +1041,7 @@
             text-align: center;
             color: $colorwhite1;
             height: auto;
-            font-size: 1.1em;
+            font-size: 1.2em;
             text-decoration: none;
             padding: 0;
             margin: 0 auto;
@@ -1229,29 +1259,26 @@ footer {
       /*Logo*/
       figure#logo {
 
-        width: 55%;
+        width: auto;
         img {
           display: block;
         }
       }
   
       aside.contact {
-        width: 32%;
+        width: auto;
         line-height: 25px;
-        font-size: 0.7em;
         span.tele {
           display: block;
           display: flex;
  
           img {
             display: block;
-            margin: 0.2em;
           }
   
           a#contact-number {
-            width: 87%;
-            line-height: 27px;
-            font-size: 1em;
+            width: 82px;
+            font-size: 1.05em;
             &:active {
               color: $colorwhite2;
             }
@@ -1307,7 +1334,7 @@ footer {
       }    
   
       aside#language-box {
-        width: 50%;
+        width: 40%;
   
         form#languagebox {
           height: 40px;
@@ -1360,7 +1387,7 @@ footer {
     #toggle-menu {
       height: 100px;
       width: 60px;
-      left: 83vw;
+      left: 91vw;
       top: 135px;
       font-size: 0.9em;
       &:hover {
@@ -1371,7 +1398,7 @@ footer {
     #side-bar-btn {
       height: 100px;
       width: 60px;
-      left: 83vw;
+      left: 91vw;
       top: 240px;
       &:hover {
         cursor: pointer;
@@ -1538,9 +1565,7 @@ footer {
     /*#contact page details sidebar*/
     #contact-page-sidebar {
       position: fixed;
-      width: 45%;
       #contact-details {
-        width: 98%;
         font-size: 0.8em;
         li {
           width: 97%;
@@ -1586,13 +1611,13 @@ footer {
         height: auto;
        
         h2 {
-          font-size: 1em;
+          font-size: 1.4em;
           height: 60px;
           line-height: 65px;
         }
         div.offerbox {
           padding: 0;
-          width: 80%;
+          width: 60%;
           @include borderRaduis(5px);
           figure {
             margin: 2% 0;
@@ -1604,7 +1629,7 @@ footer {
               padding: 0.5em 0;
 
               p {
-                font-size: 0.85em;
+                font-size: 0.95em;
                 height: 25px;
                 line-height: 25px;
               }
@@ -1679,14 +1704,14 @@ footer {
 
       padding: 0.25em;
       h1 {
-        font-size: 0.9em;
+        font-size: 1em;
 
       }
       h2 {
-        font-size: 0.8em;
+        font-size: 0.9em;
       }
       h3 {
-        font-size: 0.9em;
+        font-size: 0.8em;
       }
       p {
         font-size: 0.75em;
@@ -1728,10 +1753,10 @@ footer {
         display: flex;
         flex-flow: row wrap;
         h1 {
-          font-size: 0.85em;
+          font-size: 1.1em;
         }
         span.holidayprice {
-          font-size: 0.6em;
+          font-size: 0.9em;
 
   
           .offerbox-price {
@@ -1748,7 +1773,7 @@ footer {
             width: 100%;
   
             p {
-              font-size: 0.85em;
+              font-size: 0.9em;
             }
             button {
               width: 70%;
@@ -1870,29 +1895,26 @@ footer {
       /*Logo*/
       figure#logo {
 
-        width:45%;
+        width:auto
         img {
           display: block;
         }
       }
   
       aside.contact {
-        width: 28%;
+        width: auto;
         line-height: 25px;
-        font-size: 0.75em;
         span.tele {
           display: block;
           display: flex;
  
           img {
             display: block;
-            margin: 0.2em;
           }
   
           a#contact-number {
-            width: 87%;
-            line-height: 27px;
-            font-size: 1em;
+            width: 82px;
+            font-size: 1.05em;
             &:active {
               color: $colorwhite2;
             }
@@ -2179,9 +2201,7 @@ footer {
     /*#contact page details sidebar*/
     #contact-page-sidebar {
       position: fixed;
-      width: 45%;
       #contact-details {
-        width: 98%;
         font-size: 0.8em;
         li {
           width: 97%;
@@ -2227,7 +2247,7 @@ footer {
         height: auto;
        
         h2 {
-          font-size: 1em;
+          font-size: 1.3em;
           height: 60px;
           line-height: 65px;
         }
@@ -2320,14 +2340,14 @@ footer {
 
       padding: 0.25em;
       h1 {
-        font-size: 0.9em;
+        font-size: 1em;
 
       }
       h2 {
-        font-size: 0.8em;
+        font-size: 0.9em;
       }
       h3 {
-        font-size: 0.9em;
+        font-size: 0.8em;
       }
       p {
         font-size: 0.75em;
@@ -2369,10 +2389,10 @@ footer {
         display: flex;
         flex-flow: row wrap;
         h1 {
-          font-size: 0.85em;
+          font-size: 1.1em;
         }
         span.holidayprice {
-          font-size: 0.6em;
+          font-size: 0.9em;
 
   
           .offerbox-price {
@@ -2389,7 +2409,7 @@ footer {
             width: 100%;
   
             p {
-              font-size: 0.85em;
+              font-size: 0.09em;
             }
             button {
               width: 70%;
@@ -2511,29 +2531,26 @@ footer {
       /*Logo*/
       figure#logo {
 
-        width: 55%;
+        width: auto;
         img {
           display: block;
         }
       }
   
       aside.contact {
-        width: 32%;
+        width: auto;
         line-height: 25px;
-        font-size: 0.7em;
         span.tele {
           display: block;
           display: flex;
  
           img {
             display: block;
-            margin: 0.2em;
           }
   
           a#contact-number {
-            width: 87%;
-            line-height: 27px;
-            font-size: 1em;
+            width: 82px;
+            font-size: 1.05em;
             &:active {
               color: $colorwhite2;
             }
@@ -2820,9 +2837,7 @@ footer {
     /*#contact page details sidebar*/
     #contact-page-sidebar {
       position: fixed;
-      width: 45%;
       #contact-details {
-        width: 98%;
         font-size: 0.8em;
         li {
           width: 97%;
@@ -2868,7 +2883,7 @@ footer {
         height: auto;
        
         h2 {
-          font-size: 1em;
+          font-size: 1.2em;
           height: 60px;
           line-height: 65px;
         }
@@ -2961,14 +2976,14 @@ footer {
 
       padding: 0.25em;
       h1 {
-        font-size: 0.9em;
+        font-size: 1em;
 
       }
       h2 {
-        font-size: 0.8em;
+        font-size: 0.9em;
       }
       h3 {
-        font-size: 0.9em;
+        font-size: 0.8em;
       }
       p {
         font-size: 0.75em;
@@ -3010,10 +3025,10 @@ footer {
         display: flex;
         flex-flow: row wrap;
         h1 {
-          font-size: 0.85em;
+          font-size: 1em;
         }
         span.holidayprice {
-          font-size: 0.6em;
+          font-size: 0.85em;
 
   
           .offerbox-price {
@@ -3030,7 +3045,7 @@ footer {
             width: 100%;
   
             p {
-              font-size: 0.85em;
+              font-size: 0.9em;
             }
             button {
               width: 70%;
