@@ -103,7 +103,7 @@
         }
 
         a#contact-number {
-          width: 82px;
+          width: 100%;
           padding: 0;
           display: inline-block;
           line-height: 21px;
@@ -128,7 +128,6 @@
       span#opening-time {
         display: block;
         color: $colorblk;
-        font-size: 85%;
         text-transform: uppercase;
         text-indent: 0;
         color: $colorgry;
@@ -166,6 +165,7 @@
 
     ul#navi {
       @include TranSition(all 1s ease);
+      @include borderRaduis(5px 5px 0px 0px);
       position: fixed;
       z-index: 100;
       opacity: 0;
@@ -180,7 +180,14 @@
       -ms-flex-flow: column;
       flex-flow: column;
       justify-content: flex-start;
+      padding:0;
       li {
+        list-style: none;
+        padding: 0;
+        height: 40px;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
         width: 100%;
         height: auto;
         float: none;
@@ -312,60 +319,65 @@
 
   #toggle-menu {
     display: block;
-    height: 100px;
-    width: 60px;
-    position: fixed;
     z-index: 500;
-    left: 83vw;
-    top: 135px;
     background-color: $colorbg;
     border: 0;
     outline: none;
-    color: $colorwhite1;
-    font-size: 0.9em;
+    color: $colorwhite2;
     text-align: center;
-    line-height: 40px;
+    line-height: 40px;      
+    height: 100px;
+    width: 60px;
+    position: fixed;
+    left: 83vw;
+    top: 135px;
+    font-size: 0.9em; 
     &:hover {
       cursor: pointer;
-      background-color: $colorblue5;
-      color: $colorwhite1;
-    }
+      background-color: $colorwhite2;
+      color: $colorbg;
+      border:1px solid $colorblue1;
+    }   
   }
 
   #side-bar-btn {
+    left: 83vw;
     position: fixed;
     display: block;
     background-color: $colorbg;
-    color: $colorwhite1;
+    color: $colorwhite2;
     z-index: 100;
     height: 100px;
     width: 60px;
-    left: 83vw;
     top: 240px;
     border: none;
     outline: none;
     &:hover {
       cursor: pointer;
-      background-color: $colorwhite1;
+      background-color: $colorwhite2;
       color: $colorbg;
+      border:1px solid $colorblue1;
     }
+    
   }
   #contact-bar-btn {
     position: fixed;
+    left: 83vw;
     display: block;
     background-color: $colorbg;
-    color: $colorwhite1;
+    color: $colorwhite2;
     z-index: 100;
     height: 100px;
-    left: 83vw;
     top: 240px;
     border: none;
     outline: none;
     &:hover {
       cursor: pointer;
-      background-color: $colorwhite1;
+      background-color: $colorwhite2;
       color: $colorbg;
+      border:1px solid $colorblue1;
     }
+   
   }
   
   /*#home page sidebar*/
@@ -750,7 +762,7 @@
       font-weight: bold;
     }
 
-    /*banner*/
+     /*banner*/
     #banner {
       width: 98%;
       height: auto;
@@ -1249,7 +1261,6 @@
     }
   }
 }
-
 /*footer*/
 footer {
   width: 100%;
@@ -1302,37 +1313,23 @@ footer {
 @media only screen and (min-width: 1920px) {
   #wrapper {
     min-height: 1220px; 
-    width:65%; 
-    /*header*/
+    width:55%; 
+    
     header {
-      height: 70px;
-      -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: space-between;
-      justify-content: space-between;
-  
+      height: 60px;
       /*Logo*/
       figure#logo {
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: start;
-        width: auto;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: end;
         img {
           display: block;
         }
       }
   
       aside.contact {
-        width: auto;
-        line-height: 25px;
-        width: 13%;
-        height: auto;
-        margin: 1% 0 0 0;
-        display: block;
-        line-height: 25px;
-        font-size: 0.7em;
+        width: 10%;
+        font-size: 0.8em;
         span.tele {
           display: block;
           display: flex;
@@ -1342,8 +1339,7 @@ footer {
           }
   
           a#contact-number {
-            width: 82px;
-            font-size: 1.05em;
+            width: 100%;
             &:active {
               color: $colorwhite2;
             }
@@ -1354,40 +1350,21 @@ footer {
         }
         span#opening-time {
           line-height: 27px;
-          font-size: 85%;
+
         }
       }
     }
-    /*navigation*/
+    
     nav {
-      width: 100%;
-      height: 40px;
-      margin-bottom: 0px;
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-      border-bottom: 1px solid $colorgry2;
-      ul#navi.show {
-        left: 0;
-        opacity: 1;
-        @include TranSition(all 1s ease);
-      }
-      ul#navi.hide {
-        left: -650px;
-        @include TranSition(all 1s ease);
-      }
+      
   
       ul#navi {
-        height: 100%;
-        display: block;
-        margin: 0 0.25em 0 0;
-        padding: 0;
         width: 84%;
         float: left;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
         flex-direction: row;
@@ -1396,21 +1373,14 @@ footer {
         justify-content: space-between;
         position: unset;
         opacity: 1;
+        padding:0;
         li {
-          list-style: none;
-          display: block;
-          width: 16.71%;
+          width: 16%;
           float: left;
-          padding: 0px;
-          height: 40px;
-          @include borderRaduis(5px 5px 0px 0px);
           margin-right: 0.1em;
-          -webkit-flex: 0 1 auto;
-          -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
           margin-bottom: 0;
           a {
-            font-size: 0.7em;
+            font-size: 0.85em;
             line-height:40px;
             height:auto;
             &:hover {
@@ -1423,13 +1393,12 @@ footer {
         li:nth-of-type(2) {
           padding-top: 0;
           a {
-            padding-top:0.45em;
-            font-size: 60%;
-            height: 100%;
-            line-height:15px;
+            padding-top:0;
+            font-size: 70%;
+            height: 40px;
+            line-height:40px;
             &:hover {
-
-              line-height:15px;
+              line-height:40px;
               height: 40px;
             }
           }
@@ -1494,7 +1463,7 @@ footer {
     }
 
     
-    /*#home page sidebar*/
+    
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -1568,7 +1537,7 @@ footer {
           figure {
             width: 100%;
             img {
-              width: 47%;
+              width: 30%;
               margin-right: 2%;
             }
             figcaption {
@@ -1623,7 +1592,7 @@ footer {
       }
     }
   
-    /*#about page sidebar*/
+    
     #about-page-banner {
       width: 20%;      
       position: unset;
@@ -1658,7 +1627,7 @@ footer {
         }
       }
     }
-    /*#contact page details sidebar*/
+    
     #contact-page-sidebar {
       width: 20%;
       height: auto;
@@ -1722,7 +1691,7 @@ footer {
         font-weight: bold;
       }
 
-      /*banner*/
+      
       #banner {
         width: 98%;
         height: auto;
@@ -1733,7 +1702,7 @@ footer {
         }
       }
 
-      /*home page offers*/
+      
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -1753,7 +1722,7 @@ footer {
         }
         div.offerbox {
           margin: 0.25em;
-          width: 47%;
+          width: 32%;
           figure {
             display: block;
             width: 100%;
@@ -1792,7 +1761,7 @@ footer {
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      /*Holiday details packages page*/
+      
       h1 {
         text-align: center;
         line-height: 40px;
@@ -1936,7 +1905,7 @@ footer {
         }
       }
 
-      /*Holiday details packages page*/
+      
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -2064,7 +2033,7 @@ footer {
     }
   }
   
-  /*footer*/
+  
   footer {
     height: 40px;
     ul {
@@ -2095,37 +2064,21 @@ footer {
 @media only screen and (min-width: 1440px) and (max-width: 1919px) {
   #wrapper {
     min-height: 1220px; 
-    width:70%; 
-    /*header*/
+    width:60%; 
     header {
-      height: 70px;
-      -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: space-between;
-      justify-content: space-between;
-  
-      /*Logo*/
+      height: 60px;
       figure#logo {
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: start;
-        width: auto;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: end;
         img {
           display: block;
         }
       }
   
       aside.contact {
-        width: auto;
-        line-height: 25px;
-        width: 13%;
-        height: auto;
-        margin: 1% 0 0 0;
-        display: block;
-        line-height: 25px;
-        font-size: 0.7em;
+        width: 12%;
+        font-size: 0.8em;
         span.tele {
           display: block;
           display: flex;
@@ -2135,8 +2088,7 @@ footer {
           }
   
           a#contact-number {
-            width: 82px;
-            font-size: 1.05em;
+            width: 100%;
             &:active {
               color: $colorwhite2;
             }
@@ -2147,39 +2099,20 @@ footer {
         }
         span#opening-time {
           line-height: 27px;
-          font-size: 85%;
-        }
+         }
       }
     }
-    /*navigation*/
+    
     nav {
-      width: 100%;
-      height: 40px;
-      margin-bottom: 0px;
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-      border-bottom: 1px solid $colorgry2;
-      ul#navi.show {
-        left: 0;
-        opacity: 1;
-        @include TranSition(all 1s ease);
-      }
-      ul#navi.hide {
-        left: -650px;
-        @include TranSition(all 1s ease);
-      }
+      
   
       ul#navi {
-        height: 100%;
-        display: block;
-        margin: 0 0.25em 0 0;
-        padding: 0;
         width: 84%;
         float: left;
-        display: -webkit-flex;
-        display: -ms-flexbox;
         display: flex;
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
@@ -2189,18 +2122,10 @@ footer {
         justify-content: space-between;
         position: unset;
         opacity: 1;
+        padding:0;
         li {
-          list-style: none;
-          display: block;
-          width: 16.71%;
+          width: 16%;
           float: left;
-          padding: 0px;
-          height: 40px;
-          @include borderRaduis(5px 5px 0px 0px);
-          margin-right: 0.1em;
-          -webkit-flex: 0 1 auto;
-          -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
           margin-bottom: 0;
           a {
             font-size: 0.7em;
@@ -2216,13 +2141,13 @@ footer {
         li:nth-of-type(2) {
           padding-top: 0;
           a {
-            padding-top:0.45em;
-            font-size: 60%;
-            height: 100%;
-            line-height:15px;
+            padding-top:0;
+            font-size: 70%;
+            height: 40px;
+            line-height:40px;
             &:hover {
 
-              line-height:15px;
+              line-height:40px;
               height: 40px;
             }
           }
@@ -2270,24 +2195,24 @@ footer {
       opacity: 0;
     }  
       
-    /*mobile menu button*/
+    
     #toggle-menu,
     button {
       display: none;
     }
 
-    /*mobile filter nav button*/
+    
     #side-bar-btn {
       display: none;
     }
 
-    /*mobile contact page side bar button*/
+    
     #contact-bar-btn {
       display: none;
     }
 
     
-    /*#home page sidebar*/
+    
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -2361,7 +2286,7 @@ footer {
           figure {
             width: 100%;
             img {
-              width: 47%;
+              width: 30%;
               margin-right: 2%;
             }
             figcaption {
@@ -2416,7 +2341,7 @@ footer {
       }
     }
   
-    /*#about page sidebar*/
+    
     #about-page-banner {
       width: 20%;      
       position: unset;
@@ -2451,7 +2376,7 @@ footer {
         }
       }
     }
-    /*#contact page details sidebar*/
+    
     #contact-page-sidebar {
       width: 20%;
       height: auto;
@@ -2515,7 +2440,7 @@ footer {
         font-weight: bold;
       }
 
-      /*banner*/
+      
       #banner {
         width: 98%;
         height: auto;
@@ -2526,7 +2451,7 @@ footer {
         }
       }
 
-      /*home page offers*/
+      
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -2546,7 +2471,7 @@ footer {
         }
         div.offerbox {
           margin: 0.25em;
-          width: 47%;
+          width: 32%;
           figure {
             display: block;
             width: 100%;
@@ -2585,7 +2510,7 @@ footer {
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      /*Holiday details packages page*/
+      
       h1 {
         text-align: center;
         line-height: 40px;
@@ -2729,7 +2654,7 @@ footer {
         }
       }
 
-      /*Holiday details packages page*/
+      
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -2857,7 +2782,7 @@ footer {
     }
   }
   
-  /*footer*/
+  
   footer {
     height: 40px;
     ul {
@@ -2888,22 +2813,16 @@ footer {
 @media only screen and (min-width: 1280px) and (max-width: 1439px) {
   #wrapper {
     min-height: 1220px; 
-    width:75%; 
-    /*header*/
+    width:65%; 
+
     header {
-      height: 70px;
-      -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: space-between;
-      justify-content: space-between;
-  
-      /*Logo*/
+      height: 60px;
+ 
+
       figure#logo {
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: start;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: end;
         width: auto;
         img {
           display: block;
@@ -2911,14 +2830,8 @@ footer {
       }
   
       aside.contact {
-        width: auto;
-        line-height: 25px;
         width: 13%;
-        height: auto;
-        margin: 1% 0 0 0;
-        display: block;
-        line-height: 25px;
-        font-size: 0.7em;
+        font-size: 0.8em;
         span.tele {
           display: block;
           display: flex;
@@ -2928,8 +2841,7 @@ footer {
           }
   
           a#contact-number {
-            width: 82px;
-            font-size: 1.05em;
+            width: 100%;
             &:active {
               color: $colorwhite2;
             }
@@ -2940,39 +2852,20 @@ footer {
         }
         span#opening-time {
           line-height: 27px;
-          font-size: 85%;
+
         }
       }
     }
-    /*navigation*/
+    
     nav {
-      width: 100%;
-      height: 40px;
-      margin-bottom: 0px;
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-      border-bottom: 1px solid $colorgry2;
-      ul#navi.show {
-        left: 0;
-        opacity: 1;
-        @include TranSition(all 1s ease);
-      }
-      ul#navi.hide {
-        left: -650px;
-        @include TranSition(all 1s ease);
-      }
-  
+        
       ul#navi {
-        height: 100%;
-        display: block;
-        margin: 0 0.25em 0 0;
-        padding: 0;
         width: 84%;
         float: left;
-        display: -webkit-flex;
-        display: -ms-flexbox;
         display: flex;
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
@@ -2982,18 +2875,12 @@ footer {
         justify-content: space-between;
         position: unset;
         opacity: 1;
+        padding:0;
         li {
-          list-style: none;
-          display: block;
-          width: 16.71%;
+          width: 16%;
           float: left;
-          padding: 0px;
           height: 40px;
-          @include borderRaduis(5px 5px 0px 0px);
           margin-right: 0.1em;
-          -webkit-flex: 0 1 auto;
-          -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
           margin-bottom: 0;
           a {
             font-size: 0.7em;
@@ -3009,13 +2896,13 @@ footer {
         li:nth-of-type(2) {
           padding-top: 0;
           a {
-            padding-top:0.45em;
+            padding-top:0;
             font-size: 60%;
-            height: 100%;
-            line-height:15px;
+            height: 40px;
+            line-height:40px;
             &:hover {
 
-              line-height:15px;
+              line-height:40px;
               height: 40px;
             }
           }
@@ -3063,24 +2950,24 @@ footer {
       opacity: 0;
     }  
       
-    /*mobile menu button*/
+    
     #toggle-menu,
     button {
       display: none;
     }
 
-    /*mobile filter nav button*/
+    
     #side-bar-btn {
       display: none;
     }
 
-    /*mobile contact page side bar button*/
+    
     #contact-bar-btn {
       display: none;
     }
 
     
-    /*#home page sidebar*/
+    
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -3154,7 +3041,7 @@ footer {
           figure {
             width: 100%;
             img {
-              width: 47%;
+              width: 30%;
               margin-right: 2%;
             }
             figcaption {
@@ -3209,7 +3096,7 @@ footer {
       }
     }
   
-    /*#about page sidebar*/
+    
     #about-page-banner {
       width: 20%;      
       position: unset;
@@ -3244,7 +3131,7 @@ footer {
         }
       }
     }
-    /*#contact page details sidebar*/
+    
     #contact-page-sidebar {
       width: 20%;
       height: auto;
@@ -3308,7 +3195,7 @@ footer {
         font-weight: bold;
       }
 
-      /*banner*/
+      
       #banner {
         width: 98%;
         height: auto;
@@ -3319,7 +3206,7 @@ footer {
         }
       }
 
-      /*home page offers*/
+      
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -3339,7 +3226,7 @@ footer {
         }
         div.offerbox {
           margin: 0.25em;
-          width: 47%;
+          width: 32%;
           figure {
             display: block;
             width: 100%;
@@ -3378,7 +3265,7 @@ footer {
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      /*Holiday details packages page*/
+      
       h1 {
         text-align: center;
         line-height: 40px;
@@ -3522,7 +3409,7 @@ footer {
         }
       }
 
-      /*Holiday details packages page*/
+      
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -3650,7 +3537,7 @@ footer {
     }
   }
   
-  /*footer*/
+  
   footer {
     height: 40px;
     ul {
@@ -3681,22 +3568,13 @@ footer {
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
   #wrapper {
     min-height: 1220px; 
-    width:80%; 
-    /*header*/
+    width:70%; 
     header {
-      height: 70px;
-      -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: space-between;
-      justify-content: space-between;
-  
-      /*Logo*/
+      height: 60px;  
       figure#logo {
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: start;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: end;
         width: auto;
         img {
           display: block;
@@ -3704,14 +3582,8 @@ footer {
       }
   
       aside.contact {
-        width: auto;
-        line-height: 25px;
-        width: 13%;
-        height: auto;
-        margin: 1% 0 0 0;
-        display: block;
-        line-height: 25px;
-        font-size: 0.7em;
+        width: 14%;
+        font-size: 0.8em;
         span.tele {
           display: block;
           display: flex;
@@ -3721,8 +3593,7 @@ footer {
           }
   
           a#contact-number {
-            width: 82px;
-            font-size: 1.05em;
+            width: 100%;
             &:active {
               color: $colorwhite2;
             }
@@ -3733,39 +3604,19 @@ footer {
         }
         span#opening-time {
           line-height: 27px;
-          font-size: 85%;
         }
       }
     }
-    /*navigation*/
+    
     nav {
-      width: 100%;
-      height: 40px;
-      margin-bottom: 0px;
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-      border-bottom: 1px solid $colorgry2;
-      ul#navi.show {
-        left: 0;
-        opacity: 1;
-        @include TranSition(all 1s ease);
-      }
-      ul#navi.hide {
-        left: -650px;
-        @include TranSition(all 1s ease);
-      }
-  
+        
       ul#navi {
-        height: 100%;
-        display: block;
-        margin: 0 0.25em 0 0;
-        padding: 0;
         width: 84%;
         float: left;
-        display: -webkit-flex;
-        display: -ms-flexbox;
         display: flex;
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
@@ -3775,18 +3626,12 @@ footer {
         justify-content: space-between;
         position: unset;
         opacity: 1;
+        padding:0;
         li {
-          list-style: none;
-          display: block;
           width: 16.71%;
           float: left;
-          padding: 0px;
           height: 40px;
-          @include borderRaduis(5px 5px 0px 0px);
           margin-right: 0.1em;
-          -webkit-flex: 0 1 auto;
-          -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
           margin-bottom: 0;
           a {
             font-size: 0.7em;
@@ -3802,13 +3647,13 @@ footer {
         li:nth-of-type(2) {
           padding-top: 0;
           a {
-            padding-top:0.45em;
+            padding-top:0;
             font-size: 60%;
-            height: 100%;
-            line-height:15px;
+            height: 40px;
+            line-height:40px;
             &:hover {
 
-              line-height:15px;
+              line-height:40px;
               height: 40px;
             }
           }
@@ -3856,24 +3701,24 @@ footer {
       opacity: 0;
     }  
       
-    /*mobile menu button*/
+    
     #toggle-menu,
     button {
       display: none;
     }
 
-    /*mobile filter nav button*/
+    
     #side-bar-btn {
       display: none;
     }
 
-    /*mobile contact page side bar button*/
+    
     #contact-bar-btn {
       display: none;
     }
 
     
-    /*#home page sidebar*/
+    
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -4002,7 +3847,7 @@ footer {
       }
     }
   
-    /*#about page sidebar*/
+    
     #about-page-banner {
       width: 20%;      
       position: unset;
@@ -4037,7 +3882,7 @@ footer {
         }
       }
     }
-    /*#contact page details sidebar*/
+    
     #contact-page-sidebar {
       width: 20%;
       height: auto;
@@ -4101,7 +3946,7 @@ footer {
         font-weight: bold;
       }
 
-      /*banner*/
+      
       #banner {
         width: 98%;
         height: auto;
@@ -4112,7 +3957,7 @@ footer {
         }
       }
 
-      /*home page offers*/
+      
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -4171,7 +4016,7 @@ footer {
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      /*Holiday details packages page*/
+      
       h1 {
         text-align: center;
         line-height: 40px;
@@ -4315,7 +4160,7 @@ footer {
         }
       }
 
-      /*Holiday details packages page*/
+      
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -4443,7 +4288,7 @@ footer {
     }
   }
   
-  /*footer*/
+  
   footer {
     height: 40px;
     ul {
@@ -4474,37 +4319,21 @@ footer {
 @media only screen and (min-width: 860px) and (max-width: 1023px) {
   #wrapper {
     min-height: 1220px; 
-    width:90%; 
-    /*header*/
+    width:80%; 
     header {
-      height: 70px;
-      -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: space-between;
-      justify-content: space-between;
-  
-      /*Logo*/
+      height: 60px;
       figure#logo {
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: start;
-        width: auto;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: end;
         img {
           display: block;
         }
       }
   
       aside.contact {
-        width: auto;
-        line-height: 25px;
         width: 15%;
-        height: auto;
-        margin: 1% 0 0 0;
-        display: block;
-        line-height: 25px;
-        font-size: 0.7em;
+        font-size: 0.8em;
         span.tele {
           display: block;
           display: flex;
@@ -4514,8 +4343,7 @@ footer {
           }
   
           a#contact-number {
-            width: 82px;
-            font-size: 1.05em;
+            width: 100%;
             &:active {
               color: $colorwhite2;
             }
@@ -4526,39 +4354,20 @@ footer {
         }
         span#opening-time {
           line-height: 27px;
-          font-size: 85%;
+
         }
       }
     }
-    /*navigation*/
+    
     nav {
-      width: 100%;
-      height: 40px;
-      margin-bottom: 0px;
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-      border-bottom: 1px solid $colorgry2;
-      ul#navi.show {
-        left: 0;
-        opacity: 1;
-        @include TranSition(all 1s ease);
-      }
-      ul#navi.hide {
-        left: -650px;
-        @include TranSition(all 1s ease);
-      }
-  
+        
       ul#navi {
-        height: 100%;
-        display: block;
-        margin: 0 0.25em 0 0;
-        padding: 0;
         width: 84%;
         float: left;
-        display: -webkit-flex;
-        display: -ms-flexbox;
         display: flex;
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
@@ -4568,18 +4377,11 @@ footer {
         justify-content: space-between;
         position: unset;
         opacity: 1;
+        padding:0;
         li {
-          list-style: none;
-          display: block;
           width: 16.71%;
           float: left;
-          padding: 0px;
-          height: 40px;
-          @include borderRaduis(5px 5px 0px 0px);
           margin-right: 0.1em;
-          -webkit-flex: 0 1 auto;
-          -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
           margin-bottom: 0;
           a {
             font-size: 0.7em;
@@ -4649,24 +4451,24 @@ footer {
       opacity: 0;
     }  
       
-    /*mobile menu button*/
+    
     #toggle-menu,
     button {
       display: none;
     }
 
-    /*mobile filter nav button*/
+    
     #side-bar-btn {
       display: none;
     }
 
-    /*mobile contact page side bar button*/
+    
     #contact-bar-btn {
       display: none;
     }
 
     
-    /*#home page sidebar*/
+    
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -4795,7 +4597,7 @@ footer {
       }
     }
   
-    /*#about page sidebar*/
+    
     #about-page-banner {
       width: 20%;      
       position: unset;
@@ -4830,7 +4632,7 @@ footer {
         }
       }
     }
-    /*#contact page details sidebar*/
+    
     #contact-page-sidebar {
       width: 20%;
       height: auto;
@@ -4894,7 +4696,7 @@ footer {
         font-weight: bold;
       }
 
-      /*banner*/
+      
       #banner {
         width: 98%;
         height: auto;
@@ -4905,7 +4707,7 @@ footer {
         }
       }
 
-      /*home page offers*/
+      
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -4964,7 +4766,7 @@ footer {
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      /*Holiday details packages page*/
+      
       h1 {
         text-align: center;
         line-height: 40px;
@@ -5108,7 +4910,7 @@ footer {
         }
       }
 
-      /*Holiday details packages page*/
+      
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -5236,7 +5038,7 @@ footer {
     }
   }
   
-  /*footer*/
+  
   footer {
     height: 40px;
     ul {
@@ -5267,37 +5069,21 @@ footer {
 @media only screen and (min-width: 736px) and (max-width: 859px) {
   #wrapper {
     min-height: 1220px;
-    width:96%;  
-    /*header*/
+    width:90%;  
     header {
-      height: 70px;
-      -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: space-between;
-      justify-content: space-between;
-  
-      /*Logo*/
+      height: 60px;
       figure#logo {
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: start;
-        width: auto;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: end;
         img {
           display: block;
         }
       }
   
       aside.contact {
-        width: auto;
-        line-height: 25px;
         width: 17%;
-        height: auto;
-        margin: 1% 0 0 0;
-        display: block;
-        line-height: 25px;
-        font-size: 0.7em;
+        font-size: 0.6em;
         span.tele {
           display: block;
           display: flex;
@@ -5307,8 +5093,7 @@ footer {
           }
   
           a#contact-number {
-            width: 82px;
-            font-size: 1.05em;
+            width: 100%;
             &:active {
               color: $colorwhite2;
             }
@@ -5319,39 +5104,21 @@ footer {
         }
         span#opening-time {
           line-height: 27px;
-          font-size: 85%;
+
         }
       }
     }
-    /*navigation*/
+    
     nav {
-      width: 100%;
-      height: 40px;
-      margin-bottom: 0px;
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-      border-bottom: 1px solid $colorgry2;
-      ul#navi.show {
-        left: 0;
-        opacity: 1;
-        @include TranSition(all 1s ease);
-      }
-      ul#navi.hide {
-        left: -650px;
-        @include TranSition(all 1s ease);
-      }
+     
   
       ul#navi {
-        height: 100%;
-        display: block;
-        margin: 0 0.25em 0 0;
-        padding: 0;
         width: 84%;
         float: left;
-        display: -webkit-flex;
-        display: -ms-flexbox;
         display: flex;
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
@@ -5361,18 +5128,11 @@ footer {
         justify-content: space-between;
         position: unset;
         opacity: 1;
+        padding:0;
         li {
-          list-style: none;
-          display: block;
           width: 16.71%;
           float: left;
-          padding: 0px;
-          height: 40px;
-          @include borderRaduis(5px 5px 0px 0px);
           margin-right: 0.1em;
-          -webkit-flex: 0 1 auto;
-          -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
           margin-bottom: 0;
           a {
             font-size: 0.7em;
@@ -5442,24 +5202,24 @@ footer {
       opacity: 0;
     }  
       
-    /*mobile menu button*/
+    
     #toggle-menu,
     button {
       display: none;
     }
 
-    /*mobile filter nav button*/
+    
     #side-bar-btn {
       display: none;
     }
 
-    /*mobile contact page side bar button*/
+    
     #contact-bar-btn {
       display: none;
     }
 
     
-    /*#home page sidebar*/
+    
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -5588,7 +5348,7 @@ footer {
       }
     }
   
-    /*#about page sidebar*/
+    
     #about-page-banner {
       width: 20%;      
       position: unset;
@@ -5623,7 +5383,7 @@ footer {
         }
       }
     }
-    /*#contact page details sidebar*/
+    
     #contact-page-sidebar {
       width: 20%;
       height: auto;
@@ -5687,7 +5447,7 @@ footer {
         font-weight: bold;
       }
 
-      /*banner*/
+      
       #banner {
         width: 98%;
         height: auto;
@@ -5698,7 +5458,7 @@ footer {
         }
       }
 
-      /*home page offers*/
+      
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -5757,7 +5517,7 @@ footer {
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      /*Holiday details packages page*/
+      
       h1 {
         text-align: center;
         line-height: 40px;
@@ -5901,7 +5661,7 @@ footer {
         }
       }
 
-      /*Holiday details packages page*/
+      
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -6029,7 +5789,7 @@ footer {
     }
   }
   
-  /*footer*/
+  
   footer {
     height: 40px;
     ul {
@@ -6059,37 +5819,22 @@ footer {
 
 @media only screen and (min-width: 600px) and (max-width: 735px) {
   #wrapper {
-    min-height: 1220px;  
-    /*header*/
+    min-height: 1220px; 
+    width:96%;
     header {
-      height: 70px;
-      -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: space-between;
-      justify-content: space-between;
-  
-      /*Logo*/
+      height: 60px;
       figure#logo {
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: start;
-        width: auto;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: end;
         img {
           display: block;
         }
       }
   
       aside.contact {
-        width: auto;
-        line-height: 25px;
         width: 18%;
-        height: auto;
-        margin: 1% 0 0 0;
-        display: block;
-        line-height: 25px;
-        font-size: 0.7em;
+        font-size: 0.6em;
         span.tele {
           display: block;
           display: flex;
@@ -6099,8 +5844,7 @@ footer {
           }
   
           a#contact-number {
-            width: 82px;
-            font-size: 1.05em;
+            width: 100%;
             &:active {
               color: $colorwhite2;
             }
@@ -6111,40 +5855,20 @@ footer {
         }
         span#opening-time {
           line-height: 27px;
-          font-size: 85%;
+
         }
       }
     }
-    /*navigation*/
+    
     nav {
-      width: 100%;
-      height: 40px;
-      margin-bottom: 0px;
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-      border-bottom: 1px solid $colorgry2;
-      ul#navi.show {
-        left: 0;
-        opacity: 1;
-        @include TranSition(all 1s ease);
-      }
-      ul#navi.hide {
-        left: -650px;
-        @include TranSition(all 1s ease);
-      }
-  
+        
       ul#navi {
-        height: 100%;
-        display: block;
-        margin: 0 0.25em 0 0;
-        padding: 0;
         width: 84%;
         float: left;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
         flex-direction: row;
@@ -6153,18 +5877,11 @@ footer {
         justify-content: space-between;
         position: unset;
         opacity: 1;
+        padding:0;
         li {
-          list-style: none;
-          display: block;
           width: 16.71%;
           float: left;
-          padding: 0px;
-          height: 40px;
-          @include borderRaduis(5px 5px 0px 0px);
           margin-right: 0.1em;
-          -webkit-flex: 0 1 auto;
-          -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
           margin-bottom: 0;
           a {
             font-size: 0.7em;
@@ -6234,24 +5951,24 @@ footer {
       opacity: 0;
     }  
       
-    /*mobile menu button*/
+    
     #toggle-menu,
     button {
       display: none;
     }
 
-    /*mobile filter nav button*/
+    
     #side-bar-btn {
       display: none;
     }
 
-    /*mobile contact page side bar button*/
+    
     #contact-bar-btn {
       display: none;
     }
 
     
-    /*#home page sidebar*/
+    
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -6380,7 +6097,7 @@ footer {
       }
     }
   
-    /*#about page sidebar*/
+    
     #about-page-banner {
       width: 20%;      
       position: unset;
@@ -6415,7 +6132,7 @@ footer {
         }
       }
     }
-    /*#contact page details sidebar*/
+    
     #contact-page-sidebar {
       width: 20%;
       height: auto;
@@ -6479,7 +6196,7 @@ footer {
         font-weight: bold;
       }
 
-      /*banner*/
+      
       #banner {
         width: 98%;
         height: auto;
@@ -6490,7 +6207,7 @@ footer {
         }
       }
 
-      /*home page offers*/
+      
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -6549,7 +6266,7 @@ footer {
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      /*Holiday details packages page*/
+      
       h1 {
         text-align: center;
         line-height: 40px;
@@ -6693,7 +6410,7 @@ footer {
         }
       }
 
-      /*Holiday details packages page*/
+      
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -6821,7 +6538,7 @@ footer {
     }
   }
   
-  /*footer*/
+  
   footer {
     height: 40px;
     ul {
@@ -6854,16 +6571,13 @@ footer {
     width: 100%;
     padding: 0 0.25em;
     min-height: 1220px;
-  
-    /*header*/
     header {
       height: 60px;
       margin-bottom: 0.5em;
-  
-      /*Logo*/
       figure#logo {
-
-        width: auto;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: end;
         img {
           display: block;
         }
@@ -6881,8 +6595,7 @@ footer {
           }
   
           a#contact-number {
-            width: 82px;
-            font-size: 1.05em;
+            width: 100%;
             &:active {
               color: $colorwhite2;
             }
@@ -6893,11 +6606,11 @@ footer {
         }
         span#opening-time {
           line-height: 27px;
-          font-size: 85%;
+
         }
       }
     }
-    /*navigation*/
+    
     nav {
       height: 40px;
       opacity: 1;
@@ -7017,7 +6730,7 @@ footer {
       }
     }
     
-    /*#home page sidebar*/
+    
     #home-page-sidebar {
       width: 250px;
       .leftsidebox {
@@ -7098,7 +6811,7 @@ footer {
       }
     }
   
-    /*#best deal/holiday packages page sidebar*/
+    
     #filter-nav-sidebar {
       position: fixed;    
       width: 70%;
@@ -7129,7 +6842,7 @@ footer {
       }
     }
   
-    /*#about page sidebar*/
+    
     #about-page-banner {
       position: fixed;
       width: 200px;
@@ -7166,7 +6879,7 @@ footer {
         }
       }
     }
-    /*#contact page details sidebar*/
+    
     #contact-page-sidebar {
       position: fixed;
       #contact-details {
@@ -7201,7 +6914,7 @@ footer {
         font-weight: bold;
       }
   
-      /*banner*/
+      
       #banner {
         width: 98%;
         img {
@@ -7209,7 +6922,7 @@ footer {
         }
       }
   
-      /*home page offers*/
+      
       #offers {
         width: 100%;
         height: auto;
@@ -7255,7 +6968,7 @@ footer {
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      /*Holiday details packages page*/
+      
       h1 {
         font-size: 1em;
       }
@@ -7456,7 +7169,7 @@ footer {
     }
   }
   
-  /*footer*/
+  
   footer {
     height: 40px;
     ul {
@@ -7490,16 +7203,13 @@ footer {
     width: 100%;
     padding: 0 0.25em;
     min-height: 1220px;
-  
-    /*header*/
     header {
       height: 60px;
       margin-bottom: 0.5em;
-  
-      /*Logo*/
       figure#logo {
-
-        width:auto
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: end;
         img {
           display: block;
         }
@@ -7517,8 +7227,7 @@ footer {
           }
   
           a#contact-number {
-            width: 82px;
-            font-size: 1.05em;
+            width: 100%;
             &:active {
               color: $colorwhite2;
             }
@@ -7529,11 +7238,11 @@ footer {
         }
         span#opening-time {
           line-height: 27px;
-          font-size: 85%;
+
         }
       }
     }
-    /*navigation*/
+    
     nav {
       height: 40px;
       opacity: 1;
@@ -7653,7 +7362,7 @@ footer {
       }
     }
     
-    /*#home page sidebar*/
+    
     #home-page-sidebar {
       width: 250px;
       .leftsidebox {
@@ -7734,7 +7443,7 @@ footer {
       }
     }
   
-    /*#best deal/holiday packages page sidebar*/
+    
     #filter-nav-sidebar {
       position: fixed;    
       width: 70%;
@@ -7765,7 +7474,7 @@ footer {
       }
     }
   
-    /*#about page sidebar*/
+    
     #about-page-banner {
       position: fixed;
       width: 200px;
@@ -7802,7 +7511,7 @@ footer {
         }
       }
     }
-    /*#contact page details sidebar*/
+    
     #contact-page-sidebar {
       position: fixed;
       #contact-details {
@@ -7837,7 +7546,7 @@ footer {
         font-weight: bold;
       }
   
-      /*banner*/
+      
       #banner {
         width: 98%;
         img {
@@ -7845,7 +7554,7 @@ footer {
         }
       }
   
-      /*home page offers*/
+      
       #offers {
         width: 100%;
         height: auto;
@@ -7891,7 +7600,7 @@ footer {
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      /*Holiday details packages page*/
+      
       h1 {
         font-size: 1em;
       }
@@ -8092,7 +7801,7 @@ footer {
     }
   }
   
-  /*footer*/
+  
   footer {
     height: 40px;
     ul {
@@ -8126,16 +7835,13 @@ footer {
     width: 100%;
     padding: 0 0.25em;
     min-height: 1220px;
-  
-    /*header*/
     header {
       height: 60px;
       margin-bottom: 0.5em;
-  
-      /*Logo*/
       figure#logo {
-
-        width: auto;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: end;
         img {
           display: block;
         }
@@ -8153,8 +7859,7 @@ footer {
           }
   
           a#contact-number {
-            width: 82px;
-            font-size: 1.05em;
+            width: 100%;
             &:active {
               color: $colorwhite2;
             }
@@ -8165,11 +7870,11 @@ footer {
         }
         span#opening-time {
           line-height: 27px;
-          font-size: 85%;
+
         }
       }
     }
-    /*navigation*/
+    
     nav {
       height: 40px;
       opacity: 1;
@@ -8289,7 +7994,7 @@ footer {
       }
     }
     
-    /*#home page sidebar*/
+    
     #home-page-sidebar {
       width: 250px;
       .leftsidebox {
@@ -8370,7 +8075,7 @@ footer {
       }
     }
   
-    /*#best deal/holiday packages page sidebar*/
+    
     #filter-nav-sidebar {
       position: fixed;    
       width: 70%;
@@ -8401,7 +8106,7 @@ footer {
       }
     }
   
-    /*#about page sidebar*/
+    
     #about-page-banner {
       position: fixed;
       width: 200px;
@@ -8438,7 +8143,7 @@ footer {
         }
       }
     }
-    /*#contact page details sidebar*/
+    
     #contact-page-sidebar {
       position: fixed;
       #contact-details {
@@ -8473,7 +8178,7 @@ footer {
         font-weight: bold;
       }
   
-      /*banner*/
+      
       #banner {
         width: 98%;
         img {
@@ -8481,7 +8186,7 @@ footer {
         }
       }
   
-      /*home page offers*/
+      
       #offers {
         width: 100%;
         height: auto;
@@ -8527,7 +8232,7 @@ footer {
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      /*Holiday details packages page*/
+      
       h1 {
         font-size: 1em;
       }
@@ -8728,7 +8433,7 @@ footer {
     }
   }
   
-  /*footer*/
+  
   footer {
     height: 40px;
     ul {
