@@ -1025,16 +1025,15 @@
         list-style: none;
         padding: 0;
         li {
-          margin: 5px 0 10px 0;
-          display:flex;
-          justify-content: space-between ;
+          margin: 5px 0 10px 0;          
           label {
-            width: 16%;
+            width: 100%;
             height: auto;
             font-weight: bold;
             line-height: 15px;
             font-size: 0.7em;
-            display:block;
+            display:flex;
+            justify-content: space-between ;
           }
           input {
             width: 75%;
@@ -1043,13 +1042,11 @@
             margin: 0;
             line-height: 35px;
             border: 1px solid $colorgry2;
-            display:block;
           }
           textarea {
             width: 75%;
             line-height: 1.5em;
             border: 1px solid $colorgry2;
-            display:block;
           }
           #contactbtn {
             width: 50%;
@@ -1917,7 +1914,6 @@ footer {
           li {
             margin: 5px 0 10px 0;
             label {
-              line-height: 35px;
               font-size: 0.75em;
             }
             input {
@@ -2515,7 +2511,7 @@ footer {
         }
         div.offerbox {
           margin: 0.25em;
-          width: 32%;
+          width: 31%;
           figure {
             display: block;
             width: 100%;
@@ -2678,7 +2674,6 @@ footer {
           li {
             margin: 5px 0 10px 0;
             label {
-              line-height: 35px;
               font-size: 0.75em;
             }
             input {
@@ -3278,7 +3273,7 @@ footer {
         }
         div.offerbox {
           margin: 0.25em;
-          width: 32%;
+          width: 31%;
           figure {
             display: block;
             width: 100%;
@@ -3441,7 +3436,6 @@ footer {
           li {
             margin: 5px 0 10px 0;
             label {
-              line-height: 35px;
               font-size: 0.75em;
             }
             input {
@@ -4040,7 +4034,7 @@ footer {
         }
         div.offerbox {
           margin: 0.25em;
-          width: 32%;
+          width: 30%;
           figure {
             display: block;
             width: 100%;
@@ -4203,7 +4197,6 @@ footer {
           li {
             margin: 5px 0 10px 0;
             label {
-              line-height: 35px;
               font-size: 0.75em;
             }
             input {
@@ -4964,7 +4957,6 @@ footer {
           li {
             margin: 5px 0 10px 0;
             label {
-              line-height: 35px;
               font-size: 0.75em;
             }
             input {
@@ -5727,7 +5719,6 @@ footer {
           li {
             margin: 5px 0 10px 0;
             label {
-              line-height: 35px;
               font-size: 0.75em;
             }
             input {
@@ -6484,7 +6475,6 @@ footer {
           li {
             margin: 5px 0 10px 0;
             label {
-              line-height: 35px;
               font-size: 0.75em;
             }
             input {
@@ -7146,7 +7136,6 @@ footer {
             margin: 5px 0 10px 0;
   
             label {
-              width: 16%;
               font-size: 0.7em;
             }
             input {
@@ -7787,7 +7776,6 @@ footer {
             margin: 5px 0 10px 0;
   
             label {
-              width: 16%;
               font-size: 0.7em;
             }
             input {
@@ -8430,7 +8418,6 @@ footer {
             margin: 5px 0 10px 0;
   
             label {
-              width: 16%;
               font-size: 0.7em;
             }
             input {

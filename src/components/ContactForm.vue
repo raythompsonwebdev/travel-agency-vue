@@ -18,49 +18,49 @@
     >
       <ul>
         <li>
-          <label for="firstname"> 
+          <label for="firstname">First name 
             <input
               id="firstname"
               v-model="firstname"
               type="text"
               name="firstname"
-            >First name</label>
+            ></label>
         </li>
         <li>
-          <label for="lastname">
+          <label for="lastname">Last name
             <input
               id="lastname"
               v-model="lastname"
               type="text"
               name="lastname"
-            >Last name</label>
+            ></label>
         </li>
         <li>
-          <label for="email">
+          <label for="email">Email
             <input
               id="email"
               v-model="email"
               type="text"
               name="email"
-            >Email</label>
+            ></label>
         </li>
         <li>
-          <label for="phone">
+          <label for="phone">Phone
             <input
               id="phone"
               type="text"
               name="phone"
-            >Phone</label>
+            ></label>
         </li>
         <li>
-          <label for="message">
+          <label for="message">Message
             <textarea
               id="message"
               name="message"
               class="required"
               cols="50"
               rows="10"
-            > ..</textarea>Message</label>
+            > ..</textarea></label>
         </li>
         <li>
           <input
