@@ -3,13 +3,19 @@
   <header>
     <!---logo-->
     <figure id="logo">
-      <img :src="image">
+      <img
+        :src="image"
+        :alt="logo"
+      >
       <h1><span>Travel</span><span>AGENCY</span></h1>
     </figure>    
     <!---contact number--> 
     <aside class="contact">
       <span class="tele">
-        <img :src="`${phoneImg}`">
+        <img
+          :src="`${phoneImg}`"
+          :alt="logo2"
+        >
         <a 
           id="contact-number"
           :href="`tel:${phoneNumber}`"

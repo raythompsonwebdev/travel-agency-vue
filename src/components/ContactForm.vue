@@ -18,49 +18,49 @@
     >
       <ul>
         <li>
-          <label>First name</label>
-          <input
-            id="firstname"
-            v-model="firstname"
-            type="text"
-            name="firstname"
-          >
+          <label for="firstname"> 
+            <input
+              id="firstname"
+              v-model="firstname"
+              type="text"
+              name="firstname"
+            >First name</label>
         </li>
         <li>
-          <label>Last name</label>
-          <input
-            id="lastname"
-            v-model="lastname"
-            type="text"
-            name="lastname"
-          >
+          <label for="lastname">
+            <input
+              id="lastname"
+              v-model="lastname"
+              type="text"
+              name="lastname"
+            >Last name</label>
         </li>
         <li>
-          <label>Email</label>
-          <input
-            id="email"
-            v-model="email"
-            type="text"
-            name="email"
-          >
+          <label for="email">
+            <input
+              id="email"
+              v-model="email"
+              type="text"
+              name="email"
+            >Email</label>
         </li>
         <li>
-          <label>Phone</label>
-          <input
-            id="phone"
-            type="text"
-            name="phone"
-          >
+          <label for="phone">
+            <input
+              id="phone"
+              type="text"
+              name="phone"
+            >Phone</label>
         </li>
         <li>
-          <label>Message</label>
-          <textarea
-            id="message"
-            name="message"
-            class="required"
-            cols="50"
-            rows="10"
-          > ..</textarea>
+          <label for="message">
+            <textarea
+              id="message"
+              name="message"
+              class="required"
+              cols="50"
+              rows="10"
+            > ..</textarea>Message</label>
         </li>
         <li>
           <input

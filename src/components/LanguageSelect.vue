@@ -2,26 +2,26 @@
 <template>
   <aside id="language-box">
     <form id="languagebox">
-      <label for="langs">Language</label>
-      <div id="flagImg">
+      <label for="languageselectitems">Language :
         <img
+          id="flagImg"
           :src="'/assets/images/flags/' + selected + '.jpg'"
+          :alt="newimage"
           @error="imgUrlAlt"
         >
-      </div>
-      <select
-        v-model="selected"
-        name="languageselectitems"
-        @click="itemsSearched($event.target.value);"
-      >
-        <option
-          v-for="(languageselectitem, i) in onChangeImg" 
-          :key="i"
-          :value="languageselectitem.value"
+        <select
+          v-model="selected"
+          name="languageselectitems"
+          @click="itemsSearched($event.target.value);"
         >
-          {{ languageselectitem.text }}
-        </option>
-      </select>
+          <option
+            v-for="(languageselectitem, i) in onChangeImg" 
+            :key="i"
+            :value="languageselectitem.value"
+          >
+            {{ languageselectitem.text }}
+          </option>
+        </select></label>
     </form>
   </aside>
 </template>

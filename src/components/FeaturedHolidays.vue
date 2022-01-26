@@ -10,7 +10,10 @@
       class="offerbox"
     >
       <figure>
-        <img :src="featuredholiday.url"> 
+        <img
+          :src="featuredholiday.url"
+          :alt="images"
+        > 
 
         <figcaption>
           <p>{{ featuredholiday.text }}</p>

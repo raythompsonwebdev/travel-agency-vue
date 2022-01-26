@@ -34,12 +34,17 @@
     "env": {
       "node": true
     },
+      
+    "plugins": ["vuejs-accessibility"],
     "extends": [
       "plugin:vue/recommended",
       "plugin:vue/essential",
-      "eslint:recommended"
+      "eslint:recommended",
+      "plugin:vuejs-accessibility/recommended"
     ],
-    "rules": {},
+    "rules": {
+
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }

@@ -8,7 +8,10 @@
     >
       <div class="destinations">
         <figure>
-          <img :src="destination.url">
+          <img
+            :src="destination.url"
+            :alt="images"
+          >
 
           <figcaption>
             <h3>{{ destination.city }}</h3>
