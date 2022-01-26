@@ -16,21 +16,30 @@
       <ul id="contact-details">
         <li>
           <span>
-            <img :src="'../assets/images/Telephone.png'">
+            <img
+              :src="'../assets/images/Telephone.png'"
+              :alt="'telephone-image'"
+            >
           </span>
           Phone:
           <a href="tel:123 436 7890">123 436 7890</a>
         </li>
         <li>
           <span>
-            <img :src="'../assets/images/envelope.png'">
+            <img
+              :src="'../assets/images/envelope.png'"
+              :alt="'envelope-image'"
+            >
           </span>
           Mail:
           <a href="mailto:info@travelagency.com">info@travelagency.com</a>
         </li>
         <li>
           <span>
-            <img :src="'../assets/images/Address.png'">
+            <img
+              :src="'../assets/images/Address.png'"
+              :alt="'address-image'"
+            >
           </span>
           Address:
           <br>Lorem Ipsum 1234 Dolo Sit Amet

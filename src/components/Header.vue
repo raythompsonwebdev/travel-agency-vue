@@ -5,7 +5,7 @@
     <figure id="logo">
       <img
         :src="image"
-        :alt="logo"
+        :alt="'website logo'"
       >
       <h1><span>Travel</span><span>AGENCY</span></h1>
     </figure>    
@@ -14,7 +14,7 @@
       <span class="tele">
         <img
           :src="`${phoneImg}`"
-          :alt="logo2"
+          :alt="'image of phone'"
         >
         <a 
           id="contact-number"
