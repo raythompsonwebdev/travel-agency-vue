@@ -1,6 +1,5 @@
 <template>
   <!--Featured Holiday Package-->
-
   <section id="offers">
     <h2>Featured Holiday Package</h2>
 
@@ -12,7 +11,7 @@
       <figure>
         <img
           :src="featuredholiday.url"
-          :alt="images"
+          :alt="'images'"
         > 
 
         <figcaption>
@@ -32,7 +31,6 @@
 <script>
 export default {
   name: "FeaturedHolidays",
-  //props: ["featuredholidayitems"]
   props: {
     featuredholidayitems: {
       type: Array,
@@ -43,6 +41,5 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-
 <style lang="scss" >
 </style>

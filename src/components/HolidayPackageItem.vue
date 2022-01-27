@@ -14,7 +14,7 @@
         <p>Location : {{ holidaypackageitem.location }}</p>
         <p>{{ holidaypackageitem.text }}</p>
         <router-link :to="'/holidaypackages/' + holidaypackageitem.id">
-          <button>View Details</button>
+          View Details
         </router-link>
       </figcaption>
     </figure>

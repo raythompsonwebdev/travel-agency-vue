@@ -16,34 +16,15 @@
           name="locations"
           class="select_wide"
         >
-          <option value="Dubai">
-            Dubai
-          </option>
-          <option value="Jamaica">
-            Jamaica
+          <option
+            v-for="(location) in searchform[0].locations"
+            :key="location.id"
+            :value="location"
+          >
+            {{ location }}
           </option> 
-          <option value="Paris">
-            Paris
-          </option>
-          <option value="Spain">
-            Spain
-          </option>
-          <option value="France">
-            France
-          </option>
-          <option value="London">
-            London
-          </option>
-          <option value="Rome">
-            Rome
-          </option>
-          <option value="Madrid">
-            Madrid
-          </option>
         </select>
       </label> 
-
-
 
       <label
         for="date"
@@ -54,83 +35,42 @@
           name="date"
           class="select_date_year"
         >
-          <option value="1">
-            1
+          <option
+            v-for="(date) in searchform[0].date"
+            :key="date.id"
+            :value="date"
+          >
+            {{ date }}
           </option>
-          <option value="2">
-            2
-          </option>
-          <option value="3">
-            3
-          </option>
-          <option value="4">
-            4
-          </option>
-          <option value="5">
-            5
-          </option>
-        </select>    
-     
+
+        </select> 
         <select
           id="select_month"
           v-model="month"
           name="month"
         >
-          <option value="January">
-            January
-          </option>
-          <option value="February">
-            February
-          </option>
-          <option value="March">
-            March
-          </option>
-          <option value="April">
-            April
-          </option>
-          <option value="May">
-            May
-          </option>
-          <option value="June">
-            June
-          </option>
-          <option value="July">
-            July
-          </option>
-          <option value="August">
-            August
-          </option>
-          <option value="September">
-            September
-          </option>
-          <option value="October">
-            October
-          </option>
-          <option value="November">
-            November
-          </option>
-          <option value="December">
-            December
-          </option>
+          <option
+            v-for="(month) in searchform[0].month"
+            :key="month.id"
+            :value="month"
+          >
+            {{ month }}
+          </option>         
         </select>
         <select
           v-model="year"
           name="year"
           class="select_date_year"
         >
-          <option value="2020">
-            2020
-          </option>
-          <option value="2021">
-            2021
-          </option>
-          <option value="2022">
-            2022
+          <option
+            v-for="(year) in searchform[0].year"
+            :key="year.id"
+            :value="year"
+          >
+            {{ year }}
           </option>
         </select>
       </label>
-
-
 
       <label
         class="label_wide"
@@ -143,24 +83,16 @@
           name="duration"
           class="select_wide"
         >
-          <option value="Day Trip">
-            Day Trip
+          <option
+            v-for="(duration) in searchform[0].duration"
+            :key="duration.id"
+            :value="duration"
+          >
+            {{ duration }}
           </option>
-          <option value="Seven Days">
-            Two Days
-          </option>
-          <option value="Three Days">
-            Three Days
-          </option>
-          <option value="Seven Days">
-            Seven Days
-          </option>
-          <option value="One Month">
-            One Month
-          </option>
+          
         </select>
       </label>
-
 
       <label
         class="label_half"
@@ -171,12 +103,14 @@
           name="board"
           class="select_half"            
         >
-          <option value="Half">
-            Half
+          <option
+            v-for="(board) in searchform[0].board"
+            :key="board.id"
+            :value="board"
+          >
+            {{ board }}
           </option>
-          <option value="Full">
-            Full
-          </option>
+          
         </select>
       </label>
 
@@ -189,24 +123,16 @@
           name="star"
           class="select_half"
         >
-          <option value="1 Star">
-            1 Star
+          <option
+            v-for="(star) in searchform[0].star"
+            :key="star.id"
+            :value="star"
+          >
+            {{ star }}
           </option>
-          <option value="2 Star">
-            2 Star
-          </option>
-          <option value="3 Star">
-            3 Star
-          </option>
-          <option value="4 Star">
-            4 Star
-          </option>
-          <option value="5 Star">
-            5 Star
-          </option>
+         
         </select>
       </label>
-
 
       <label
         class="label_half"
@@ -217,21 +143,13 @@
           name="adults" 
           class="select_half"           
         >
-          <option value="1">
-            1
-          </option>
-          <option value="2">
-            2
-          </option>
-          <option value="3">
-            3
-          </option>
-          <option value="4">
-            5
-          </option>
-          <option value="5">
-            6
-          </option>
+          <option
+            v-for="(adult) in searchform[0].adults"
+            :key="adult.id"
+            :value="adult"
+          >
+            {{ adult }}
+          </option>          
         </select>
       </label>
       <label
@@ -243,25 +161,17 @@
           name="children"
           class="select_half"
         >
-          <option value="1">
-            1
-          </option>
-          <option value="2">
-            2
-          </option>
-          <option value="3">
-            3
-          </option>
-          <option value="4">
-            4
-          </option>
-          <option value="5">
-            5
-          </option>
+          <option
+            v-for="(child) in searchform[0].children"
+            :key="child.id"
+            :value="child"
+          >
+            {{ child }}
+          </option> 
+          
         </select>
       </label>
-
-
+      
       <input
         id="searchbtn"
         type="submit"
@@ -272,13 +182,15 @@
 </template>
 
 <script>
+
+import { searchform } from '../data-json.json';
+
+
 export default {
-  name: "SearchForm",  
-
+  name: "SearchForm", 
   data: () => {
-
     return {
-
+      searchform,
       destinations:' ',
       locations:' ',
       date:' ',
@@ -289,20 +201,14 @@ export default {
       star:' ',
       adults:' ',
       children:' '
-
     }
-
-
   },
 
   methods: {
-
     onSubmit() {
-
       if(this.destinations && this.locations && this.date && this.month && this.year && this.duration && this.board && this.star && this.adults && this.children ){
 
         let findHoliday = {
-
           destinations: this.destinations,
           locations: this.locations,
           date: this.date,
@@ -313,11 +219,9 @@ export default {
           star:this.star,
           adults:this.adults,
           children:this.children
-
         }
         
         this.$emit('review-submitted', findHoliday)
-
         this.destinations = null
         this.locations = null
         this.date = null
@@ -328,17 +232,12 @@ export default {
         this.star = null
         this.adults = null
         this.children = null
-
       }
     }
-
-    
   }
-
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-
 <style lang="scss" >
 </style>

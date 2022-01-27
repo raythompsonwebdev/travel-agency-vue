@@ -10,7 +10,7 @@
         <figure>
           <img
             :src="destination.url"
-            :alt="images"
+            :alt="'images'"
           >
 
           <figcaption>
@@ -27,7 +27,6 @@
 <script>
 export default {
   name: "Destinations",
-  //props: ["destinationitems"]
   props: {
     destinationitems: {
       type: Array,
@@ -38,6 +37,5 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-
 <style lang="scss" >
 </style>

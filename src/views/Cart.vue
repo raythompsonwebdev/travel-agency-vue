@@ -2,6 +2,9 @@
   <div>
     <h1>{{ title }}</h1> 
     <p>Text:</p> 
+    <!-- <CartList
+      :products="cartItems"
+      v-on:remove-from-cart="removeFromCart($event)"/> -->
     <button>Remove</button>
     <!-- <p>Total: ${{ totalPrice }}</p>  -->
     <button>Proceed to checkout</button>
@@ -10,8 +13,12 @@
 
 <script>
 import axios from "axios";
+//import CartsList from '../components/CartsList.vue';
 export default {
   name: "Cart",
+  // components: {
+  //     CartList,
+  // },
   data(){
     return{
       title: "Shopping Cart page",
@@ -29,18 +36,19 @@ export default {
     }
   },
   async created () {
-    const result = await axios.get('/api/users/12335/cart');
+    const result = await axios.get(`/api/holidaypackages/${this.$route.params.id}/cart`);
     const cartItems = result.data;
     this.cartItems = cartItems;
-
-
   },
-  
+  // methods: {
+  //   async removeFromCart(productId) {
+  //     const result = await axios.delete(`/api/users/12345/cart/${productId}`);
+  //     this.cartItems = result.data;
+  //   }
+  // },  
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-
 <style lang="scss" scoped>
-
 </style>

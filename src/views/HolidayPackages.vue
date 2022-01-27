@@ -11,7 +11,6 @@
     <!---main content-->
     <main id="holiday-items">
       <!--HolidayPackage Item component -->
-
       <transition-group 
         name="fade" 
         tag="div"
@@ -31,7 +30,6 @@
 
 import axios from "axios";
 import {seasons,ratings,locations, prices  } from '../data-json.json';
-//import { holidaypackageitems } from '../data-json.json';
 import HolidayPackageItem from "../components/HolidayPackageItem.vue";
 import FilterNav from "../components/FilterNav.vue";
 
@@ -114,7 +112,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-
 <style lang="scss">
   .fade-enter-active {
     animation: coming 1s;

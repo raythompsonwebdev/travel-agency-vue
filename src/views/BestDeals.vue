@@ -9,7 +9,6 @@
     />
 
     <main id="holiday-items">
-      <!--BestDeal Item component v-for="bestdealitem in filteredPacks"-->
       <transition-group 
         name="fade" 
         tag="div"

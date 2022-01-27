@@ -6,7 +6,7 @@
         <img
           id="flagImg"
           :src="'/assets/images/flags/' + selected + '.jpg'"
-          :alt="newimage"
+          :alt="'newimage'"
           @error="imgUrlAlt"
         >
         <select
@@ -70,6 +70,5 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-
 <style lang="scss" >
 </style>

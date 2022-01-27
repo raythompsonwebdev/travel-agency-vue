@@ -18,10 +18,8 @@
           :src="bestdealitem.url"
           :alt="bestdealitem.title"
         >
-
         <figcaption>
           <h3>Location: {{ bestdealitem.location }}.</h3>
-
           <!-- add @click="addToCart" to button -->
           <!-- add v-if="!showSuccessmessage" to button if false -->          
           <button>

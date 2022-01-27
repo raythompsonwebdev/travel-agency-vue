@@ -126,5 +126,110 @@
       "text": "Spain",
       "url": "../assets/images/flags/Spain.jpg"
     }
+  ],
+  "searchform":[
+    {
+      "locations":[
+        "Dubai",
+        "Jamaica",
+        "Paris",
+        "Spain",
+        "France",
+        "London",
+        "Rome",
+        "Madrid"
+      ],
+      "date":[
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31"
+      ],
+      "month":[       
+        "January",      
+        "February",      
+        "March",     
+        "April",      
+        "May",      
+        "June",      
+        "July",      
+        "August",      
+        "September",      
+        "October",      
+        "November",      
+        "December"      
+      ],
+      "year":[
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "duration":[
+        "Day Trip",
+        "Two Days",
+        "Three Days",
+        "Four Days",
+        "Five Days",
+        "Six Days",
+        "One Week",
+        "One Month",
+        "3 Months",
+        "Six Months"
+      ],
+      "board":[
+        "half",
+        "full"
+      ],
+      "star":[
+        "1 Star",
+        "2 Star",
+        "3 Star",
+        "4 Star",
+        "5 Star"
+      ],
+      "adults":[
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "children":[
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    }
   ]
 }

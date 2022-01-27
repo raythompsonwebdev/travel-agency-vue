@@ -80,17 +80,12 @@ export default {
   name: 'ContactForm',
 
   data() {
-
     return {
-
       show: 'true',
       firstname:null,
       lastname: null,
       email:null, 
-      errors: []
-
-
-      
+      errors: []      
     }
   },
 
@@ -104,13 +99,11 @@ export default {
           firstname: this.firstname,
           lastname: this.lastname,
           email: this.email
-
         }
         this.$emit('review-submitted', productReview)
         this.firstname = null
         this.lastname = null
         this.email = null
-
       }else{
 
         if(!this.firstname) this.errors.push("FirstName required")
@@ -127,9 +120,5 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-
 <style lang="scss" >
-
-
-
 </style>
