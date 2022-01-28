@@ -1,7 +1,8 @@
 {
-  "name": "holiday-site-vue",
+  "name": "travel-agency-vue",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8000",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -17,48 +18,37 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.15",
     "@vue/cli-plugin-eslint": "^4.5.15",
-    "@vue/cli-service": "4.5.13",
+    "@vue/cli-service": "^4.5.13",
     "axios": "^0.25.0",
     "babel-eslint": "^10.0.1",
     "css-loader": "^6.5.1",
-    "eslint": "6.8.0",
-    "eslint-plugin-vue": "6.2.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^7.0.1",
     "postcss-svgo": "^5.0.3",
     "sass": "^1.49.0",
-    "sass-loader": "10",
-    "vue-template-compiler": "^2.6.14"
-  },
-  "optionalDependencies": {
-    "fsevents": "2.1.2"
+    "sass-loader": "^10.2.1",
+    "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
     "root": true,
     "env": {
       "node": true
     },
-      
     "plugins": ["vuejs-accessibility"],
     "extends": [
-      "plugin:vue/recommended",
       "plugin:vue/essential",
       "eslint:recommended",
       "plugin:vuejs-accessibility/recommended"
     ],
-    "rules": {
-
-    },
     "parserOptions": {
       "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
+    },
+    "rules": {}
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions"
+    "last 2 versions",
+    "not dead"
   ]
 }

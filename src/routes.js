@@ -1,21 +1,21 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
-import BestDeals from "./views/BestDeals";
-import BestDealsItem from "./views/BestDealsItem";
-import About from "./views/AboutUs";
-import HolidayPackages from "./views/HolidayPackages";
-import HolidayPackagesItem from "./views/HolidayPackagesItem";
-import Contact from "./views/Contact";
-import Services from "./views/Services";
-import NotFoundpage from "./views/NotFoundpage";
+import Home from "@/views/Home.vue";
+import BestDeals from "@/views/BestDeals";
+import BestDealsItem from "@/views/BestDealsItem";
+import About from "@/views/AboutUs";
+import HolidayPackages from "@/views/HolidayPackages";
+import HolidayPackagesItem from "@/views/HolidayPackagesItem";
+import Contact from "@/views/Contact";
+import Services from "@/views/Services";
+import NotFoundpage from "@/views/NotFoundpage";
 
 Vue.use(Router);
 
 export default new Router({
   mode: "history",
   base: process.env.BASE_URL,
-  routes: [
+  routes : [
     {
       path: "/",
       name: "home",
@@ -67,5 +67,6 @@ export default new Router({
       name: "NotFoundpage",
       component: NotFoundpage,
     },
-  ],
+],
 });
+

@@ -81,10 +81,10 @@
           margin-bottom:5px;
 
         }
-        
+
       }
       img {
-        
+
         display: block;
         margin: 0;
         padding: 0;
@@ -93,7 +93,7 @@
       }
     }
 
-    
+
 
     aside.contact {
       -webkit-flex: 0 0 auto;
@@ -274,7 +274,7 @@
           }
         }
       }
-    }    
+    }
 
     aside#language-box {
       width: 30%;
@@ -287,7 +287,7 @@
           font-size: 0.6em;
           line-height: 35px;
           height: 35px;
-          border: solid 1px $colorgry2;          
+          border: solid 1px $colorgry2;
           display: flex;
           text-indent: 0.2em;
         }
@@ -348,19 +348,19 @@
     outline: none;
     color: $colorwhite2;
     text-align: center;
-    line-height: 40px;      
+    line-height: 40px;
     height: 100px;
     width: 60px;
     position: fixed;
     left: 83vw;
     top: 135px;
-    font-size: 0.9em; 
+    font-size: 0.9em;
     &:hover {
       cursor: pointer;
       background-color: $colorwhite2;
       color: $colorbg;
       border:1px solid $colorblue1;
-    }   
+    }
   }
 
   #side-bar-btn {
@@ -381,7 +381,7 @@
       color: $colorbg;
       border:1px solid $colorblue1;
     }
-    
+
   }
   #contact-bar-btn {
     position: fixed;
@@ -400,9 +400,9 @@
       color: $colorbg;
       border:1px solid $colorblue1;
     }
-   
+
   }
-  
+
   /*#home page sidebar*/
   #home-page-sidebar {
     position: fixed;
@@ -450,14 +450,14 @@
         flex-flow:row wrap;
         justify-content: space-between;
         align-items: flex-start;
-        
+
         .label_wide{
           width: 100%;
           color: $colorblk;
           padding: 0;
           margin: 0;
           font-size: 0.85em;
-          line-height:35px;          
+          line-height:35px;
           display:flex;
           flex-flow: row wrap;
           span{
@@ -473,9 +473,9 @@
           float:left;
           font-size:0.85em;
           line-height:35px;
-          
+
         }
-        
+
         .select_wide {
           width: 100%;
           height: 35px;
@@ -499,14 +499,14 @@
           margin: 0 0.15em;
           border: 1px solid $colorgry2;
           clear:both;
-        }       
+        }
 
         .select_half {
           width: 100%;
           height: 35px;
           display: inline-block;
           border: 1px solid $colorgry2;
-        }        
+        }
 
         #searchbtn {
           @include gradient($colorsearchbtn, $colorsearchbtnroll);
@@ -625,7 +625,7 @@
         margin: 0 auto;
 
         li {
-          display: block;            
+          display: block;
           font-size: 0.8em;
           width:100%;
           text-transform: capitalize;
@@ -657,7 +657,7 @@
             line-height: 25px;
             color: $colorblue2;
             letter-spacing: 0.02em;
-            border: none;            
+            border: none;
             &:hover {
               cursor: pointer;
               font-weight: bold;
@@ -810,7 +810,7 @@
       -webkit-justify-content: flex-start;
       -ms-flex-pack: flex-start;
       justify-content: flex-start;
-     
+
       h2 {
         font-size: 1em;
         color: $sideboxcolor1;
@@ -1026,7 +1026,7 @@
         list-style: none;
         padding: 0;
         li {
-          margin: 5px 0 10px 0;          
+          margin: 5px 0 10px 0;
           label {
             width: 100%;
             height: auto;
@@ -1051,18 +1051,20 @@
           }
           #contactbtn {
             width: 50%;
-            margin: auto;
+            margin: 0.5em auto;
             height: 30px;
             @include TranSition(all 0.2s linear ease-in-out);
             line-height: 30px;
             @include gradient($colorbtn2, $colorbtn3);
+            display: block;
             border: 0;
             &:hover {
               color: $colorwhite1;
               border: 0;
               @include gradient($colorbtn3, $colorbtn2);
+              cursor:pointer;
             }
-          }          
+          }
         }
       }
     }
@@ -1103,7 +1105,7 @@
         width: 100%;
         margin: 0;
         img {
-          width: 50%;            
+          width: 50%;
           display: block;
           margin:auto;
           height:auto;
@@ -1332,9 +1334,9 @@ footer {
 
 @media only screen and (min-width: 1920px) {
   #wrapper {
-    min-height: 1220px; 
-    width:55%; 
-    
+    min-height: 1220px;
+    width:55%;
+
     header {
       height: 60px;
       margin-bottom: 0.5em;
@@ -1355,18 +1357,18 @@ footer {
           }
         }
       }
-  
+
       aside.contact {
         width: 12%;
         font-size: 0.8em;
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
             &:active {
@@ -1383,14 +1385,14 @@ footer {
         }
       }
     }
-    
+
     nav {
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-      
-  
+
+
       ul#navi {
         width: 84%;
         float: left;
@@ -1418,7 +1420,7 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           padding-top: 0;
           a {
@@ -1432,23 +1434,23 @@ footer {
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
         width: 20%;
         padding-left: 0.25em;
-  
+
         form#languagebox {
           height: 40px;
 
           label {
             font-size: 0.6em;
           }
-  
+
           img#flagImg {
             width: 25%;
           }
-  
+
           select {
             line-height: 35px;
             font-size: 1em;
@@ -1459,14 +1461,14 @@ footer {
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -1474,8 +1476,8 @@ footer {
       @include TranSition(all 1s ease);
       left: -650px;
       opacity: 0;
-    }  
-      
+    }
+
     /*mobile menu button*/
     #toggle-menu,
     button {
@@ -1492,8 +1494,8 @@ footer {
       display: none;
     }
 
-    
-    
+
+
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -1516,12 +1518,12 @@ footer {
           }
         }
         h2 {
-          font-size: 1em; 
+          font-size: 1em;
           width: 100%;
         }
         #search_form {
           padding: 2%;
-          
+
           .label_wide{
             font-size: 0.9em;
             span{
@@ -1529,33 +1531,33 @@ footer {
 
             }
           }
-  
+
           .label_half{
             width: 48%;
             font-size:0.9em;
-            
+
           }
-          
+
           .select_wide {
             height: 35px;
             line-height: 35px;
           }
-  
+
           .select_date_year {
             width: 29%;
             height: 35px;
           }
-  
+
           #select_month {
             width: 39%;
             height: 35px;
             margin: 0 0.15em;
-          }       
-  
+          }
+
           .select_half {
             height: 35px;
-          }        
-  
+          }
+
           #searchbtn {
             width: 85%;
             height: 35px;
@@ -1594,7 +1596,7 @@ footer {
         }
       }
     }
-  
+
     #filter-nav-sidebar {
       position:unset;
       bottom:unset;
@@ -1622,17 +1624,17 @@ footer {
             height: 25px;
             margin: 0 0 2% 0;
             button {
-              font-size: 0.85em;             
-              
+              font-size: 0.85em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
-      width: 20%;      
+      width: 20%;
       position: unset;
       float: left;
 
@@ -1665,59 +1667,34 @@ footer {
         }
       }
     }
-    
+
     #contact-page-sidebar {
       width: 20%;
-      height: auto;
-      float: left;
-      margin: 1% 1% 0 0;
       position:unset;
       #contact-details {
-        background-color: #ffffff;
-        display: block;
-        width: 98%;
-        height: auto;
-        border: 4px $sideboxbg1 solid;
-        margin: 0;
-        padding: 10% 0;
-        list-style: none;
         font-size: 0.8em;
-        @include borderRaduis(5px);
         li {
           width: 97%;
-          line-height: 20px;
-          height: 80px;
-          color: $colorgry;
-          padding-right: 0.5em;
           font-size: 0.7em;
 
           &:first-line {
-            color: $sideboxcolor1a;
+
             font-weight: bold;
           }
           span {
-            float: left;
-            width: 15%;
-            display: block;
-            background-color: $colorwhite2;
+            width: 20%;
             height: 5rem;
             img {
               width: 41%;
-              height: auto;
-              display: block;
-              margin: 11% auto;
             }
           }
           a {
-            display: block;
-            line-height: 20px;            
-            background-color: unset;
-            color: $colorgry;
+            line-height: 20px;
           }
         }
       }
     }
-  
+
     #home-page-content {
       width: 70%;
       height: auto;
@@ -1729,7 +1706,7 @@ footer {
         font-weight: bold;
       }
 
-      
+
       #banner {
         width: 98%;
         height: auto;
@@ -1740,7 +1717,7 @@ footer {
         }
       }
 
-      
+
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -1793,13 +1770,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         text-align: center;
         line-height: 40px;
@@ -1916,14 +1893,14 @@ footer {
       #contactform {
         width: 90%;
         margin: 1em auto;
-       
+
         ul {
           list-style: none;
           padding: 0;
           li {
             margin: 5px 0 10px 0;
             label {
-              font-size: 0.75em;
+              font-size: 0.9em;
             }
             input {
               padding: 0;
@@ -1934,15 +1911,13 @@ footer {
             }
             #contactbtn {
               width: 50%;
-            }
-            #contactbtn:hover {
-              border: 0;
+              font-size:1.1em;
             }
           }
         }
       }
 
-      
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -1981,8 +1956,8 @@ footer {
               line-height: 45px;
               margin: 0;
               &:hover {
-                font-weight: bold; 
-                margin: 0; 
+                font-weight: bold;
+                margin: 0;
               }
             }
           }
@@ -2069,14 +2044,15 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+      width: 60%;
+
       li {
         width: 16.570684%;
         a {
@@ -2100,8 +2076,8 @@ footer {
 
 @media only screen and (min-width: 1440px) and (max-width: 1919px) {
   #wrapper {
-    min-height: 1220px; 
-    width:60%; 
+    min-height: 1220px;
+    width:60%;
     header {
       height: 60px;
       margin-bottom: 0.5em;
@@ -2121,21 +2097,21 @@ footer {
           }
         }
       }
-  
+
       aside.contact {
         width: 12%;
         font-size: 0.65em;
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
-            
+
             &:active {
               color: $colorwhite2;
             }
@@ -2150,14 +2126,14 @@ footer {
          }
       }
     }
-    
+
     nav {
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-      
-  
+
+
       ul#navi {
         width: 84%;
         float: left;
@@ -2185,7 +2161,7 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           padding-top: 0;
           a {
@@ -2200,23 +2176,23 @@ footer {
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
         width: 15%;
         padding-left: 0.25em;
-  
+
         form#languagebox {
           height: 40px;
 
           label {
             font-size: 0.6em;
           }
-  
+
           img#flagImg {
             width: 25%;
           }
-  
+
           select {
             line-height: 35px;
             font-size: 1em;
@@ -2227,14 +2203,14 @@ footer {
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -2242,26 +2218,26 @@ footer {
       @include TranSition(all 1s ease);
       left: -650px;
       opacity: 0;
-    }  
-      
-    
+    }
+
+
     #toggle-menu,
     button {
       display: none;
     }
 
-    
+
     #side-bar-btn {
       display: none;
     }
 
-    
+
     #contact-bar-btn {
       display: none;
     }
 
-    
-    
+
+
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -2284,12 +2260,12 @@ footer {
           }
         }
         h2 {
-          font-size: 1em; 
+          font-size: 1em;
           width: 100%;
         }
         #search_form {
           padding: 2%;
-          
+
           .label_wide{
             font-size: 0.9em;
             span{
@@ -2297,33 +2273,33 @@ footer {
 
             }
           }
-  
+
           .label_half{
             width: 48%;
             font-size:0.9em;
-            
+
           }
-          
+
           .select_wide {
             height: 35px;
             line-height: 35px;
           }
-  
+
           .select_date_year {
             width: 29%;
             height: 35px;
           }
-  
+
           #select_month {
             width: 39%;
             height: 35px;
             margin: 0 0.15em;
-          }       
-  
+          }
+
           .select_half {
             height: 35px;
-          }        
-  
+          }
+
           #searchbtn {
             width: 85%;
             height: 35px;
@@ -2362,7 +2338,7 @@ footer {
         }
       }
     }
-  
+
     #filter-nav-sidebar {
       position:unset;
       bottom:unset;
@@ -2390,17 +2366,17 @@ footer {
             height: 25px;
             margin: 0 0 2% 0;
             button {
-              font-size: 0.85em;             
-              
+              font-size: 0.85em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
-      width: 20%;      
+      width: 20%;
       position: unset;
       float: left;
 
@@ -2433,59 +2409,35 @@ footer {
         }
       }
     }
-    
+
     #contact-page-sidebar {
       width: 20%;
-      height: auto;
-      float: left;
-      margin: 1% 1% 0 0;
       position:unset;
+      float: left;
       #contact-details {
-        background-color: #ffffff;
-        display: block;
-        width: 98%;
-        height: auto;
-        border: 4px $sideboxbg1 solid;
-        margin: 0;
-        padding: 10% 0;
-        list-style: none;
+
         font-size: 0.8em;
-        @include borderRaduis(5px);
         li {
-          width: 97%;
-          line-height: 20px;
-          height: 80px;
-          color: $colorgry;
-          padding-right: 0.5em;
           font-size: 0.7em;
 
           &:first-line {
-            color: $sideboxcolor1a;
             font-weight: bold;
           }
           span {
-            float: left;
-            width: 15%;
-            display: block;
-            background-color: $colorwhite2;
-            height: 5rem;
+            width: 20%;
             img {
               width: 41%;
-              height: auto;
-              display: block;
-              margin: 11% auto;
             }
           }
           a {
             display: block;
-            line-height: 20px;            
+
             background-color: unset;
-            color: $colorgry;
           }
         }
       }
     }
-  
+
     #home-page-content {
       width: 70%;
       height: auto;
@@ -2497,7 +2449,7 @@ footer {
         font-weight: bold;
       }
 
-      
+
       #banner {
         width: 98%;
         height: auto;
@@ -2508,7 +2460,7 @@ footer {
         }
       }
 
-      
+
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -2561,13 +2513,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         text-align: center;
         line-height: 40px;
@@ -2684,14 +2636,14 @@ footer {
       #contactform {
         width: 90%;
         margin: 1em auto;
-       
+
         ul {
           list-style: none;
           padding: 0;
           li {
             margin: 5px 0 10px 0;
             label {
-              font-size: 0.75em;
+              font-size: 0.9em;
             }
             input {
               padding: 0;
@@ -2702,15 +2654,14 @@ footer {
             }
             #contactbtn {
               width: 50%;
+              font-size:1.1em;
             }
-            #contactbtn:hover {
-              border: 0;
-            }
+
           }
         }
       }
 
-      
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -2749,8 +2700,8 @@ footer {
               line-height: 45px;
               margin: 0;
               &:hover {
-                font-weight: bold; 
-                margin: 0; 
+                font-weight: bold;
+                margin: 0;
               }
             }
           }
@@ -2837,14 +2788,15 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+      width: 60%;
+
       li {
         width: 16.570684%;
         a {
@@ -2868,8 +2820,8 @@ footer {
 
 @media only screen and (min-width: 1280px) and (max-width: 1439px) {
   #wrapper {
-    min-height: 1220px; 
-    width:65%; 
+    min-height: 1220px;
+    width:65%;
 
     header {
       height: 60px;
@@ -2891,18 +2843,18 @@ footer {
           }
         }
       }
-  
+
       aside.contact {
         width: 13%;
         font-size: 0.8em;
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
             font-size: 0.8em;
@@ -2920,13 +2872,13 @@ footer {
         }
       }
     }
-    
+
     nav {
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-        
+
       ul#navi {
         width: 84%;
         float: left;
@@ -2956,7 +2908,7 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           padding-top: 0;
           a {
@@ -2971,23 +2923,23 @@ footer {
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
         width: 16%;
         padding-left: 0.25em;
-  
+
         form#languagebox {
           height: 40px;
 
           label {
             font-size: 0.6em;
           }
-  
+
           img#flagImg {
             width: 25%;
           }
-  
+
           select {
             line-height: 35px;
             option {
@@ -2997,14 +2949,14 @@ footer {
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -3012,26 +2964,26 @@ footer {
       @include TranSition(all 1s ease);
       left: -650px;
       opacity: 0;
-    }  
-      
-    
+    }
+
+
     #toggle-menu,
     button {
       display: none;
     }
 
-    
+
     #side-bar-btn {
       display: none;
     }
 
-    
+
     #contact-bar-btn {
       display: none;
     }
 
-    
-    
+
+
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -3054,12 +3006,12 @@ footer {
           }
         }
         h2 {
-          font-size: 1em; 
+          font-size: 1em;
           width: 100%;
         }
         #search_form {
           padding: 2%;
-          
+
           .label_wide{
             font-size: 0.9em;
             span{
@@ -3067,33 +3019,33 @@ footer {
 
             }
           }
-  
+
           .label_half{
             width: 48%;
             font-size:0.9em;
-            
+
           }
-          
+
           .select_wide {
             height: 35px;
             line-height: 35px;
           }
-  
+
           .select_date_year {
             width: 29%;
             height: 35px;
           }
-  
+
           #select_month {
             width: 39%;
             height: 35px;
             margin: 0 0.15em;
-          }       
-  
+          }
+
           .select_half {
             height: 35px;
-          }        
-  
+          }
+
           #searchbtn {
             width: 85%;
             height: 35px;
@@ -3132,7 +3084,7 @@ footer {
         }
       }
     }
-  
+
     #filter-nav-sidebar {
       position:unset;
       bottom:unset;
@@ -3160,17 +3112,17 @@ footer {
             height: 25px;
             margin: 0 0 2% 0;
             button {
-              font-size: 0.85em;             
-              
+              font-size: 0.85em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
-      width: 20%;      
+      width: 20%;
       position: unset;
       float: left;
 
@@ -3203,59 +3155,36 @@ footer {
         }
       }
     }
-    
+
     #contact-page-sidebar {
       width: 20%;
-      height: auto;
-      float: left;
-      margin: 1% 1% 0 0;
       position:unset;
+      float: left;
       #contact-details {
-        background-color: #ffffff;
-        display: block;
         width: 98%;
-        height: auto;
-        border: 4px $sideboxbg1 solid;
-        margin: 0;
-        padding: 10% 0;
-        list-style: none;
         font-size: 0.8em;
-        @include borderRaduis(5px);
+
         li {
           width: 97%;
-          line-height: 20px;
-          height: 80px;
-          color: $colorgry;
-          padding-right: 0.5em;
           font-size: 0.7em;
 
           &:first-line {
-            color: $sideboxcolor1a;
             font-weight: bold;
           }
           span {
-            float: left;
-            width: 15%;
-            display: block;
-            background-color: $colorwhite2;
-            height: 5rem;
+            width: 20%;
             img {
               width: 41%;
-              height: auto;
-              display: block;
-              margin: 11% auto;
             }
           }
           a {
-            display: block;
-            line-height: 20px;            
+
             background-color: unset;
-            color: $colorgry;
           }
         }
       }
     }
-  
+
     #home-page-content {
       width: 70%;
       height: auto;
@@ -3267,7 +3196,7 @@ footer {
         font-weight: bold;
       }
 
-      
+
       #banner {
         width: 98%;
         height: auto;
@@ -3278,7 +3207,7 @@ footer {
         }
       }
 
-      
+
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -3331,13 +3260,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         text-align: center;
         line-height: 40px;
@@ -3454,14 +3383,14 @@ footer {
       #contactform {
         width: 90%;
         margin: 1em auto;
-       
+
         ul {
           list-style: none;
           padding: 0;
           li {
             margin: 5px 0 10px 0;
             label {
-              font-size: 0.75em;
+              font-size: 0.9em;
             }
             input {
               padding: 0;
@@ -3473,14 +3402,12 @@ footer {
             #contactbtn {
               width: 50%;
             }
-            #contactbtn:hover {
-              border: 0;
-            }
+
           }
         }
       }
 
-      
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -3519,8 +3446,8 @@ footer {
               line-height: 45px;
               margin: 0;
               &:hover {
-                font-weight: bold; 
-                margin: 0; 
+                font-weight: bold;
+                margin: 0;
               }
             }
           }
@@ -3607,14 +3534,15 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+      width: 60%;
+
       li {
         width: 16.570684%;
         a {
@@ -3638,10 +3566,10 @@ footer {
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
   #wrapper {
-    min-height: 1220px; 
-    width:70%; 
+    min-height: 1220px;
+    width:70%;
     header {
-      height: 60px;  
+      height: 60px;
       margin-bottom: 0.5em;
       figure#logo {
         -webkit-box-align: flex-end;
@@ -3660,18 +3588,18 @@ footer {
           }
         }
       }
-  
+
       aside.contact {
         width: 14%;
         font-size: 0.8em;
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
             font-size:0.75em;
@@ -3689,13 +3617,13 @@ footer {
         }
       }
     }
-    
+
     nav {
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-        
+
       ul#navi {
         width: 84%;
         float: left;
@@ -3725,7 +3653,7 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           padding-top: 0;
           a {
@@ -3740,23 +3668,23 @@ footer {
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
         width: 18%;
         padding-left: 0.25em;
-  
+
         form#languagebox {
           height: 40px;
 
           label {
             font-size: 0.5em;
           }
-  
+
           img#flagImg {
             width: 30%;
           }
-  
+
           select {
             line-height: 35px;
             option {
@@ -3766,14 +3694,14 @@ footer {
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -3781,26 +3709,26 @@ footer {
       @include TranSition(all 1s ease);
       left: -650px;
       opacity: 0;
-    }  
-      
-    
+    }
+
+
     #toggle-menu,
     button {
       display: none;
     }
 
-    
+
     #side-bar-btn {
       display: none;
     }
 
-    
+
     #contact-bar-btn {
       display: none;
     }
 
-    
-    
+
+
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -3823,12 +3751,12 @@ footer {
           }
         }
         h2 {
-          font-size: 1em; 
+          font-size: 1em;
           width: 100%;
         }
         #search_form {
           padding: 2%;
-          
+
           .label_wide{
             font-size: 0.9em;
             span{
@@ -3836,33 +3764,33 @@ footer {
 
             }
           }
-  
+
           .label_half{
             width: 48%;
             font-size:0.9em;
-            
+
           }
-          
+
           .select_wide {
             height: 35px;
             line-height: 35px;
           }
-  
+
           .select_date_year {
             width: 29%;
             height: 35px;
           }
-  
+
           #select_month {
             width: 39%;
             height: 35px;
             margin: 0 0.15em;
-          }       
-  
+          }
+
           .select_half {
             height: 35px;
-          }        
-  
+          }
+
           #searchbtn {
             width: 85%;
             font-size:1em;
@@ -3899,7 +3827,7 @@ footer {
         }
       }
     }
-  
+
     #filter-nav-sidebar {
       position:unset;
       bottom:unset;
@@ -3927,17 +3855,17 @@ footer {
             height: 25px;
             margin: 0 0 2% 0;
             button {
-              font-size: 0.85em;             
-              
+              font-size: 0.85em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
-      width: 20%;      
+      width: 20%;
       position: unset;
       float: left;
 
@@ -3970,59 +3898,35 @@ footer {
         }
       }
     }
-    
+
     #contact-page-sidebar {
       width: 20%;
-      height: auto;
-      float: left;
-      margin: 1% 1% 0 0;
       position:unset;
+      float: left;
       #contact-details {
-        background-color: #ffffff;
-        display: block;
-        width: 98%;
-        height: auto;
-        border: 4px $sideboxbg1 solid;
-        margin: 0;
-        padding: 10% 0;
-        list-style: none;
+
         font-size: 0.8em;
-        @include borderRaduis(5px);
         li {
           width: 97%;
-          line-height: 20px;
-          height: 80px;
-          color: $colorgry;
-          padding-right: 0.5em;
           font-size: 0.7em;
 
           &:first-line {
-            color: $sideboxcolor1a;
             font-weight: bold;
           }
           span {
-            float: left;
-            width: 15%;
-            display: block;
-            background-color: $colorwhite2;
-            height: 5rem;
+            width: 20%;
             img {
               width: 41%;
-              height: auto;
-              display: block;
-              margin: 11% auto;
             }
           }
           a {
-            display: block;
-            line-height: 20px;            
+
             background-color: unset;
-            color: $colorgry;
           }
         }
       }
     }
-  
+
     #home-page-content {
       width: 70%;
       height: auto;
@@ -4034,7 +3938,7 @@ footer {
         font-weight: bold;
       }
 
-      
+
       #banner {
         width: 98%;
         height: auto;
@@ -4045,7 +3949,7 @@ footer {
         }
       }
 
-      
+
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -4098,13 +4002,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         text-align: center;
         line-height: 40px;
@@ -4221,14 +4125,14 @@ footer {
       #contactform {
         width: 90%;
         margin: 1em auto;
-       
+
         ul {
           list-style: none;
           padding: 0;
           li {
             margin: 5px 0 10px 0;
             label {
-              font-size: 0.75em;
+              font-size: 0.9em;
             }
             input {
               padding: 0;
@@ -4240,14 +4144,12 @@ footer {
             #contactbtn {
               width: 50%;
             }
-            #contactbtn:hover {
-              border: 0;
-            }
+
           }
         }
       }
 
-      
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -4286,8 +4188,8 @@ footer {
               line-height: 45px;
               margin: 0;
               &:hover {
-                font-weight: bold; 
-                margin: 0; 
+                font-weight: bold;
+                margin: 0;
               }
             }
           }
@@ -4374,14 +4276,15 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+      width: 80%;
+
       li {
         width: 16.570684%;
         a {
@@ -4405,8 +4308,8 @@ footer {
 
 @media only screen and (min-width: 860px) and (max-width: 1023px) {
   #wrapper {
-    min-height: 1220px; 
-    width:80%; 
+    min-height: 1220px;
+    width:80%;
     header {
       height: 60px;
       margin-bottom: 0.5em;
@@ -4426,18 +4329,18 @@ footer {
           }
         }
       }
-  
+
       aside.contact {
         width: 15%;
         font-size: 0.75em;
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
             font-size:0.8em;
@@ -4456,13 +4359,13 @@ footer {
         }
       }
     }
-    
+
     nav {
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-        
+
       ul#navi {
         width: 84%;
         float: left;
@@ -4491,7 +4394,7 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           padding-top: 0;
           a {
@@ -4505,23 +4408,23 @@ footer {
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
         width: 18%;
         padding-left: 0.25em;
-  
+
         form#languagebox {
           height: 40px;
 
           label {
             font-size: 0.5em;
           }
-  
+
           img#flagImg {
             width: 30%;
           }
-  
+
           select {
             line-height: 35px;
 
@@ -4532,14 +4435,14 @@ footer {
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -4547,26 +4450,26 @@ footer {
       @include TranSition(all 1s ease);
       left: -650px;
       opacity: 0;
-    }  
-      
-    
+    }
+
+
     #toggle-menu,
     button {
       display: none;
     }
 
-    
+
     #side-bar-btn {
       display: none;
     }
 
-    
+
     #contact-bar-btn {
       display: none;
     }
 
-    
-    
+
+
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -4589,12 +4492,12 @@ footer {
           }
         }
         h2 {
-          font-size: 1em; 
+          font-size: 1em;
           width: 100%;
         }
         #search_form {
           padding: 2%;
-          
+
           .label_wide{
             font-size: 0.85em;
             span{
@@ -4602,33 +4505,33 @@ footer {
 
             }
           }
-  
+
           .label_half{
             width: 48%;
             font-size:0.85em;
-            
+
           }
-          
+
           .select_wide {
             height: 35px;
             line-height: 35px;
           }
-  
+
           .select_date_year {
             width: 29%;
             height: 35px;
           }
-  
+
           #select_month {
             width: 39%;
             height: 35px;
             margin: 0 0.15em;
-          }       
-  
+          }
+
           .select_half {
             height: 35px;
-          }        
-  
+          }
+
           #searchbtn {
             width: 85%;
             height: 35px;
@@ -4667,7 +4570,7 @@ footer {
         }
       }
     }
-  
+
     #filter-nav-sidebar {
       position:unset;
       bottom:unset;
@@ -4695,17 +4598,17 @@ footer {
             height: 25px;
             margin: 0 0 2% 0;
             button {
-              font-size: 0.85em;             
-              
+              font-size: 0.85em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
-      width: 20%;      
+      width: 20%;
       position: unset;
       float: left;
 
@@ -4738,59 +4641,37 @@ footer {
         }
       }
     }
-    
+
     #contact-page-sidebar {
       width: 20%;
-      height: auto;
-      float: left;
-      margin: 1% 1% 0 0;
       position:unset;
+      float: left;
       #contact-details {
-        background-color: #ffffff;
-        display: block;
-        width: 98%;
-        height: auto;
-        border: 4px $sideboxbg1 solid;
-        margin: 0;
-        padding: 10% 0;
-        list-style: none;
+
         font-size: 0.8em;
-        @include borderRaduis(5px);
+
         li {
           width: 97%;
-          line-height: 20px;
-          height: 80px;
-          color: $colorgry;
-          padding-right: 0.5em;
           font-size: 0.7em;
 
           &:first-line {
-            color: $sideboxcolor1a;
             font-weight: bold;
           }
           span {
-            float: left;
             width: 15%;
-            display: block;
-            background-color: $colorwhite2;
-            height: 5rem;
             img {
               width: 41%;
-              height: auto;
-              display: block;
-              margin: 11% auto;
             }
           }
           a {
             display: block;
-            line-height: 20px;            
+
             background-color: unset;
-            color: $colorgry;
           }
         }
       }
     }
-  
+
     #home-page-content {
       width: 70%;
       height: auto;
@@ -4802,7 +4683,7 @@ footer {
         font-weight: bold;
       }
 
-      
+
       #banner {
         width: 98%;
         height: auto;
@@ -4813,7 +4694,7 @@ footer {
         }
       }
 
-      
+
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -4866,13 +4747,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         text-align: center;
         line-height: 40px;
@@ -4989,14 +4870,14 @@ footer {
       #contactform {
         width: 90%;
         margin: 1em auto;
-       
+
         ul {
           list-style: none;
           padding: 0;
           li {
             margin: 5px 0 10px 0;
             label {
-              font-size: 0.75em;
+              font-size: 0.9em;
             }
             input {
               padding: 0;
@@ -5008,14 +4889,12 @@ footer {
             #contactbtn {
               width: 50%;
             }
-            #contactbtn:hover {
-              border: 0;
-            }
+
           }
         }
       }
 
-      
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -5054,8 +4933,8 @@ footer {
               line-height: 45px;
               margin: 0;
               &:hover {
-                font-weight: bold; 
-                margin: 0; 
+                font-weight: bold;
+                margin: 0;
               }
             }
           }
@@ -5142,14 +5021,15 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+      width: 100%;
+
       li {
         width: 16.570684%;
         a {
@@ -5174,7 +5054,7 @@ footer {
 @media only screen and (min-width: 736px) and (max-width: 859px) {
   #wrapper {
     min-height: 1220px;
-    width:90%;  
+    width:90%;
     header {
       height: 60px;
       margin-bottom: 0.5em;
@@ -5194,18 +5074,18 @@ footer {
           }
         }
       }
-  
+
       aside.contact {
         width: 16%;
         font-size: 0.65em;
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
             &:active {
@@ -5223,14 +5103,14 @@ footer {
         }
       }
     }
-    
+
     nav {
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-     
-  
+
+
       ul#navi {
         width: 84%;
         float: left;
@@ -5259,7 +5139,7 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           padding-top: 0;
           a {
@@ -5274,12 +5154,12 @@ footer {
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
         width: 20%;
         padding-left: 0.25em;
-  
+
         form#languagebox {
           height: 40px;
 
@@ -5287,11 +5167,11 @@ footer {
             font-size: 0.5em;
             font-weight:bold;
           }
-  
+
           img#flagImg {
             width: 30%;
           }
-  
+
           select {
             line-height: 35px;
             font-size: 0.8em;
@@ -5302,14 +5182,14 @@ footer {
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -5317,26 +5197,26 @@ footer {
       @include TranSition(all 1s ease);
       left: -650px;
       opacity: 0;
-    }  
-      
-    
+    }
+
+
     #toggle-menu,
     button {
       display: none;
     }
 
-    
+
     #side-bar-btn {
       display: none;
     }
 
-    
+
     #contact-bar-btn {
       display: none;
     }
 
-    
-    
+
+
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -5359,12 +5239,12 @@ footer {
           }
         }
         h2 {
-          font-size: 1em; 
+          font-size: 1em;
           width: 100%;
         }
         #search_form {
           padding: 2%;
-          
+
           .label_wide{
             font-size: 0.8em;
             span{
@@ -5372,33 +5252,33 @@ footer {
 
             }
           }
-  
+
           .label_half{
             width: 48%;
             font-size:0.8em;
-            
+
           }
-          
+
           .select_wide {
             height: 35px;
             line-height: 35px;
           }
-  
+
           .select_date_year {
             width: 29%;
             height: 35px;
           }
-  
+
           #select_month {
             width: 39%;
             height: 35px;
             margin: 0 0.15em;
-          }       
-  
+          }
+
           .select_half {
             height: 35px;
-          }        
-  
+          }
+
           #searchbtn {
             width: 85%;
             font-size:1em;
@@ -5435,7 +5315,7 @@ footer {
         }
       }
     }
-  
+
     #filter-nav-sidebar {
       position:unset;
       bottom:unset;
@@ -5463,17 +5343,17 @@ footer {
             height: 25px;
             margin: 0 0 2% 0;
             button {
-              font-size: 0.85em;             
-              
+              font-size: 0.85em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
-      width: 20%;      
+      width: 20%;
       position: unset;
       float: left;
 
@@ -5506,59 +5386,37 @@ footer {
         }
       }
     }
-    
+
     #contact-page-sidebar {
       width: 20%;
-      height: auto;
-      float: left;
-      margin: 1% 1% 0 0;
       position:unset;
+      float: left;
       #contact-details {
-        background-color: #ffffff;
-        display: block;
         width: 98%;
-        height: auto;
-        border: 4px $sideboxbg1 solid;
-        margin: 0;
-        padding: 10% 0;
-        list-style: none;
         font-size: 0.8em;
-        @include borderRaduis(5px);
         li {
           width: 97%;
           line-height: 20px;
-          height: 80px;
-          color: $colorgry;
-          padding-right: 0.5em;
           font-size: 0.7em;
 
           &:first-line {
-            color: $sideboxcolor1a;
             font-weight: bold;
           }
           span {
-            float: left;
             width: 15%;
-            display: block;
-            background-color: $colorwhite2;
-            height: 5rem;
             img {
               width: 41%;
-              height: auto;
-              display: block;
-              margin: 11% auto;
             }
           }
           a {
-            display: block;
-            line-height: 20px;            
+
             background-color: unset;
-            color: $colorgry;
+
           }
         }
       }
     }
-  
+
     #home-page-content {
       width: 70%;
       height: auto;
@@ -5570,7 +5428,7 @@ footer {
         font-weight: bold;
       }
 
-      
+
       #banner {
         width: 98%;
         height: auto;
@@ -5581,7 +5439,7 @@ footer {
         }
       }
 
-      
+
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -5634,13 +5492,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         text-align: center;
         line-height: 40px;
@@ -5757,14 +5615,14 @@ footer {
       #contactform {
         width: 90%;
         margin: 1em auto;
-       
+
         ul {
           list-style: none;
           padding: 0;
           li {
             margin: 5px 0 10px 0;
             label {
-              font-size: 0.75em;
+              font-size: 0.85em;
             }
             input {
               padding: 0;
@@ -5776,14 +5634,12 @@ footer {
             #contactbtn {
               width: 50%;
             }
-            #contactbtn:hover {
-              border: 0;
-            }
+
           }
         }
       }
 
-      
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -5822,8 +5678,8 @@ footer {
               line-height: 45px;
               margin: 0;
               &:hover {
-                font-weight: bold; 
-                margin: 0; 
+                font-weight: bold;
+                margin: 0;
               }
             }
           }
@@ -5910,14 +5766,14 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+
       li {
         width: 16.570684%;
         a {
@@ -5941,7 +5797,7 @@ footer {
 
 @media only screen and (min-width: 600px) and (max-width: 735px) {
   #wrapper {
-    min-height: 1220px; 
+    min-height: 1220px;
     width:96%;
     header {
       height: 60px;
@@ -5961,18 +5817,18 @@ footer {
           }
         }
       }
-  
+
       aside.contact {
         width: 18%;
         font-size: 0.65em;
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
             &:active {
@@ -5990,13 +5846,13 @@ footer {
         }
       }
     }
-    
+
     nav {
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-        
+
       ul#navi {
         width: 84%;
         float: left;
@@ -6024,7 +5880,7 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           padding-top: 0;
           a {
@@ -6037,23 +5893,23 @@ footer {
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
         width: 23%;
         padding-left: 0.25em;
-  
+
         form#languagebox {
           height: 40px;
 
           label {
             font-size: 0.6em;
           }
-  
+
           img#flagImg {
             width: 30%;
           }
-  
+
           select {
             line-height: 35px;
             font-size: 0.75em;
@@ -6064,14 +5920,14 @@ footer {
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -6079,26 +5935,26 @@ footer {
       @include TranSition(all 1s ease);
       left: -650px;
       opacity: 0;
-    }  
-      
-    
+    }
+
+
     #toggle-menu,
     button {
       display: none;
     }
 
-    
+
     #side-bar-btn {
       display: none;
     }
 
-    
+
     #contact-bar-btn {
       display: none;
     }
 
-    
-    
+
+
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -6121,12 +5977,12 @@ footer {
           }
         }
         h2 {
-          font-size: 1em; 
+          font-size: 1em;
           width: 100%;
         }
         #search_form {
           padding: 2%;
-          
+
           .label_wide{
             font-size: 0.75em;
             span{
@@ -6134,33 +5990,33 @@ footer {
 
             }
           }
-  
+
           .label_half{
             width: 48%;
             font-size:0.7em;
-            
+
           }
-          
+
           .select_wide {
             height: 35px;
             line-height: 35px;
           }
-  
+
           .select_date_year {
             width: 29%;
             height: 35px;
           }
-  
+
           #select_month {
             width: 39%;
             height: 35px;
             margin: 0 0.15em;
-          }       
-  
+          }
+
           .select_half {
             height: 35px;
-          }        
-  
+          }
+
           #searchbtn {
             width: 85%;
             font-size:1em;
@@ -6197,7 +6053,7 @@ footer {
         }
       }
     }
-  
+
     #filter-nav-sidebar {
       position:unset;
       bottom:unset;
@@ -6225,17 +6081,17 @@ footer {
             height: 25px;
             margin: 0 0 2% 0;
             button {
-              font-size: 0.85em;             
-              
+              font-size: 0.85em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
-      width: 20%;      
+      width: 20%;
       position: unset;
       float: left;
 
@@ -6268,30 +6124,15 @@ footer {
         }
       }
     }
-    
+
     #contact-page-sidebar {
       width: 20%;
-      height: auto;
-      float: left;
-      margin: 1% 1% 0 0;
       position:unset;
+      float: left;
       #contact-details {
-        background-color: #ffffff;
-        display: block;
-        width: 98%;
-        height: auto;
-        border: 4px $sideboxbg1 solid;
-        margin: 0;
-        padding: 10% 0;
-        list-style: none;
         font-size: 0.8em;
-        @include borderRaduis(5px);
         li {
           width: 97%;
-          line-height: 20px;
-          height: 80px;
-          color: $colorgry;
-          padding-right: 0.5em;
           font-size: 0.7em;
 
           &:first-line {
@@ -6299,28 +6140,19 @@ footer {
             font-weight: bold;
           }
           span {
-            float: left;
             width: 15%;
-            display: block;
-            background-color: $colorwhite2;
-            height: 5rem;
             img {
               width: 41%;
-              height: auto;
-              display: block;
-              margin: 11% auto;
             }
           }
           a {
-            display: block;
-            line-height: 20px;            
+
             background-color: unset;
-            color: $colorgry;
           }
         }
       }
     }
-  
+
     #home-page-content {
       width: 70%;
       height: auto;
@@ -6332,7 +6164,7 @@ footer {
         font-weight: bold;
       }
 
-      
+
       #banner {
         width: 98%;
         height: auto;
@@ -6343,7 +6175,7 @@ footer {
         }
       }
 
-      
+
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -6396,13 +6228,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         text-align: center;
         line-height: 40px;
@@ -6519,14 +6351,14 @@ footer {
       #contactform {
         width: 90%;
         margin: 1em auto;
-       
+
         ul {
           list-style: none;
           padding: 0;
           li {
             margin: 5px 0 10px 0;
             label {
-              font-size: 0.75em;
+              font-size: 0.85em;
             }
             input {
               padding: 0;
@@ -6538,14 +6370,12 @@ footer {
             #contactbtn {
               width: 50%;
             }
-            #contactbtn:hover {
-              border: 0;
-            }
+
           }
         }
       }
 
-      
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -6584,8 +6414,8 @@ footer {
               line-height: 45px;
               margin: 0;
               &:hover {
-                font-weight: bold; 
-                margin: 0; 
+                font-weight: bold;
+                margin: 0;
               }
             }
           }
@@ -6672,14 +6502,14 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+
       li {
         width: 16.570684%;
         a {
@@ -6724,7 +6554,7 @@ footer {
           }
         }
       }
-  
+
       aside.contact {
         width: 20%;
         line-height: 25px;
@@ -6732,11 +6562,11 @@ footer {
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
             &:active {
@@ -6754,7 +6584,7 @@ footer {
         }
       }
     }
-    
+
     nav {
       height: 40px;
       opacity: 1;
@@ -6767,7 +6597,7 @@ footer {
         left: -650px;
         @include TranSition(all 1s ease);
       }
-  
+
       ul#navi {
         @include TranSition(all 1s ease);
         position: fixed;
@@ -6782,7 +6612,7 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           margin-bottom: 0.2em;
           a {
@@ -6792,22 +6622,22 @@ footer {
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
         width: 25%;
-  
+
         form#languagebox {
           height: 40px;
 
           label {
             font-size: 0.6em;
           }
-  
+
           img#flagImg {
             width: 30%;
           }
-  
+
           select {
             line-height: 35px;
             option {
@@ -6817,14 +6647,14 @@ footer {
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -6833,7 +6663,7 @@ footer {
       left: -650px;
       opacity: 0;
     }
-  
+
     .hide {
       left: -100%;
       @include TranSition(all 1s ease);
@@ -6843,7 +6673,7 @@ footer {
       opacity: 1;
       @include TranSition(all 1s ease);
     }
-  
+
     #toggle-menu {
       height: 100px;
       width: 60px;
@@ -6854,7 +6684,7 @@ footer {
         cursor: pointer;
       }
     }
-  
+
     #side-bar-btn {
       height: 100px;
       width: 60px;
@@ -6872,8 +6702,8 @@ footer {
         cursor: pointer;
       }
     }
-    
-    
+
+
     #home-page-sidebar {
       width: 250px;
       .leftsidebox {
@@ -6889,7 +6719,7 @@ footer {
         }
         #search_form {
           padding: 2%;
-          
+
           .label_wide{
             font-size: 0.9em;
             span{
@@ -6897,33 +6727,33 @@ footer {
 
             }
           }
-  
+
           .label_half{
             width: 48%;
             font-size:0.9em;
-            
+
           }
-          
+
           .select_wide {
             height: 35px;
             line-height: 35px;
           }
-  
+
           .select_date_year {
             width: 29%;
             height: 35px;
           }
-  
+
           #select_month {
             width: 39%;
             height: 35px;
             margin: 0 0.15em;
-          }       
-  
+          }
+
           .select_half {
             height: 35px;
-          }        
-  
+          }
+
           #searchbtn {
             width: 85%;
             height: 35px;
@@ -6935,7 +6765,7 @@ footer {
             }
           }
         }
-  
+
         div.destinations {
           width: 91%;
           figure {
@@ -6957,10 +6787,10 @@ footer {
         }
       }
     }
-  
-    
+
+
     #filter-nav-sidebar {
-      position: fixed;    
+      position: fixed;
       width: 70%;
       height: auto;
       section#seasons,
@@ -6974,22 +6804,22 @@ footer {
         ul {
           width: 90%;
           padding: 1%;
-  
+
           li {
-            
+
             font-size: 0.8em;
-            
+
             button {
 
-              font-size: 0.8em;              
-              
+              font-size: 0.8em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
       position: fixed;
       width: 200px;
@@ -7002,7 +6832,7 @@ footer {
         opacity: 1;
         @include TranSition(all 1s ease);
       }
-  
+
       figure {
         margin: 0;
         padding: 0;
@@ -7012,21 +6842,21 @@ footer {
             font-size: 1.28em;
             line-height: 1.5em;
           }
-  
+
           span {
             margin-bottom: 1em;
             img {
               display: block;
             }
           }
-  
+
           p {
             font-size: 0.9em;
           }
         }
       }
     }
-    
+
     #contact-page-sidebar {
       position: fixed;
       #contact-details {
@@ -7034,7 +6864,7 @@ footer {
         li {
           width: 97%;
           line-height: 20px;
-  
+
           &:first-line {
 
             font-weight: bold;
@@ -7054,26 +6884,26 @@ footer {
         }
       }
     }
-  
+
     #home-page-content {
       width: 100%;
       h1 {
         font-weight: bold;
       }
-  
-      
+
+
       #banner {
         width: 98%;
         img {
           width: 100%;
         }
       }
-  
-      
+
+
       #offers {
         width: 100%;
         height: auto;
-       
+
         h2 {
           font-size: 1.4em;
           height: 60px;
@@ -7109,13 +6939,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         font-size: 1em;
       }
@@ -7128,7 +6958,7 @@ footer {
         span.holidayprice {
           font-size: 0.9em;
           line-height: 40px;
-  
+
           .offerbox-price {
             display: inline-block;
           }
@@ -7141,11 +6971,11 @@ footer {
           }
           figcaption {
             margin-bottom: 0.5em;
-  
+
             h3 {
               font-size: 1em;
             }
-  
+
             p {
               font-size: 0.9em;
               line-height: 35px;
@@ -7162,7 +6992,7 @@ footer {
         }
       }
     }
-  
+
     #content2,
     #holiday-items {
       float: none;
@@ -7189,9 +7019,9 @@ footer {
           padding: 0;
           li {
             margin: 5px 0 10px 0;
-  
+
             label {
-              font-size: 0.7em;
+              font-size: 0.8em;
             }
             input {
               width: 75%;
@@ -7207,11 +7037,11 @@ footer {
               &:hover {
                 border: 0;
               }
-            }          
+            }
           }
         }
       }
-  
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -7221,7 +7051,7 @@ footer {
         span.holidayprice {
           font-size: 0.9em;
 
-  
+
           .offerbox-price {
             display: inline-block;
           }
@@ -7230,11 +7060,11 @@ footer {
           width: 100%;
           margin: 0;
           img {
-            width: 50%;            
+            width: 50%;
           }
           figcaption {
             width: 100%;
-  
+
             p {
               font-size: 0.9em;
             }
@@ -7248,19 +7078,19 @@ footer {
           }
         }
       }
-  
+
       .holiday_details_small {
 
         margin: 0.25em;
         padding: 0.25em;
-  
+
         h1 {
           font-size: 0.85em;
           width: 70%;
         }
         span.holidayprice {
           font-size: 0.6em;
-  
+
           .offerbox-price {
             font-size: 90%;
             line-height: 40px;
@@ -7268,12 +7098,12 @@ footer {
         }
         figure {
           display: inline-block;
-  
+
           img {
             width: 50%;
 
           }
-  
+
           figcaption {
 
             margin-bottom: 0.5em;
@@ -7289,7 +7119,7 @@ footer {
           }
         }
       }
-  
+
       .servicebox {
         width: 32%;
         h1 {
@@ -7297,7 +7127,7 @@ footer {
         }
         figure {
           width: 90%;
-  
+
           figcaption {
             p {
               font-size: 0.65em;
@@ -7314,14 +7144,14 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+
       li {
 
         width: 16.570684%;
@@ -7368,7 +7198,7 @@ footer {
           }
         }
       }
-  
+
       aside.contact {
         width: 23%;
         line-height: 25px;
@@ -7376,11 +7206,11 @@ footer {
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
             &:active {
@@ -7397,7 +7227,7 @@ footer {
         }
       }
     }
-    
+
     nav {
       height: 40px;
       opacity: 1;
@@ -7410,7 +7240,7 @@ footer {
         left: -650px;
         @include TranSition(all 1s ease);
       }
-  
+
       ul#navi {
         @include TranSition(all 1s ease);
         position: fixed;
@@ -7425,7 +7255,7 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           margin-bottom: 0.2em;
           a {
@@ -7435,22 +7265,22 @@ footer {
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
         width: 26%;
-  
+
         form#languagebox {
           height: 40px;
 
           label {
             font-size: 0.6em;
           }
-  
+
           img#flagImg {
             width: 30%;
           }
-  
+
           select {
             line-height: 35px;
             font-size: 1em;
@@ -7461,14 +7291,14 @@ footer {
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -7477,7 +7307,7 @@ footer {
       left: -650px;
       opacity: 0;
     }
-  
+
     .hide {
       left: -100%;
       @include TranSition(all 1s ease);
@@ -7487,7 +7317,7 @@ footer {
       opacity: 1;
       @include TranSition(all 1s ease);
     }
-  
+
     #toggle-menu {
       height: 100px;
       width: 60px;
@@ -7498,7 +7328,7 @@ footer {
         cursor: pointer;
       }
     }
-  
+
     #side-bar-btn {
       height: 100px;
       width: 60px;
@@ -7516,8 +7346,8 @@ footer {
         cursor: pointer;
       }
     }
-    
-    
+
+
     #home-page-sidebar {
       width: 250px;
       .leftsidebox {
@@ -7533,7 +7363,7 @@ footer {
         }
         #search_form {
           padding: 2%;
-          
+
           .label_wide{
             font-size: 0.85em;
             span{
@@ -7541,33 +7371,33 @@ footer {
 
             }
           }
-  
+
           .label_half{
             width: 48%;
             font-size:0.85em;
-            
+
           }
-          
+
           .select_wide {
             height: 35px;
             line-height: 35px;
           }
-  
+
           .select_date_year {
             width: 29%;
             height: 35px;
           }
-  
+
           #select_month {
             width: 39%;
             height: 35px;
             margin: 0 0.15em;
-          }       
-  
+          }
+
           .select_half {
             height: 35px;
-          }        
-  
+          }
+
           #searchbtn {
             width: 85%;
             height: 35px;
@@ -7579,7 +7409,7 @@ footer {
             }
           }
         }
-  
+
         div.destinations {
           width: 91%;
           figure {
@@ -7601,10 +7431,10 @@ footer {
         }
       }
     }
-  
-    
+
+
     #filter-nav-sidebar {
-      position: fixed;    
+      position: fixed;
       width: 70%;
       height: auto;
       section#seasons,
@@ -7618,22 +7448,22 @@ footer {
         ul {
           width: 90%;
           padding: 1%;
-  
+
           li {
-            
+
             font-size: 0.8em;
-            
+
             button {
 
-              font-size: 0.75em;              
-              
+              font-size: 0.75em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
       position: fixed;
       width: 200px;
@@ -7646,7 +7476,7 @@ footer {
         opacity: 1;
         @include TranSition(all 1s ease);
       }
-  
+
       figure {
         margin: 0;
         padding: 0;
@@ -7656,21 +7486,21 @@ footer {
             font-size: 1.28em;
             line-height: 1.5em;
           }
-  
+
           span {
             margin-bottom: 1em;
             img {
               display: block;
             }
           }
-  
+
           p {
             font-size: 0.9em;
           }
         }
       }
     }
-    
+
     #contact-page-sidebar {
       position: fixed;
       #contact-details {
@@ -7678,7 +7508,7 @@ footer {
         li {
           width: 97%;
           line-height: 20px;
-  
+
           &:first-line {
 
             font-weight: bold;
@@ -7698,26 +7528,26 @@ footer {
         }
       }
     }
-  
+
     #home-page-content {
       width: 100%;
       h1 {
         font-weight: bold;
       }
-  
-      
+
+
       #banner {
         width: 98%;
         img {
           width: 100%;
         }
       }
-  
-      
+
+
       #offers {
         width: 100%;
         height: auto;
-       
+
         h2 {
           font-size: 1.3em;
           height: 60px;
@@ -7753,13 +7583,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         font-size: 1em;
       }
@@ -7772,7 +7602,7 @@ footer {
         span.holidayprice {
           font-size: 0.9em;
           line-height: 40px;
-  
+
           .offerbox-price {
             display: inline-block;
           }
@@ -7785,11 +7615,11 @@ footer {
           }
           figcaption {
             margin-bottom: 0.5em;
-  
+
             h3 {
               font-size: 1em;
             }
-  
+
             p {
               font-size: 0.9em;
               line-height: 35px;
@@ -7806,7 +7636,7 @@ footer {
         }
       }
     }
-  
+
     #content2,
     #holiday-items {
       float: none;
@@ -7833,9 +7663,9 @@ footer {
           padding: 0;
           li {
             margin: 5px 0 10px 0;
-  
+
             label {
-              font-size: 0.7em;
+              font-size: 0.8em;
             }
             input {
               width: 75%;
@@ -7851,11 +7681,11 @@ footer {
               &:hover {
                 border: 0;
               }
-            }          
+            }
           }
         }
       }
-  
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -7865,7 +7695,7 @@ footer {
         span.holidayprice {
           font-size: 0.9em;
 
-  
+
           .offerbox-price {
             display: inline-block;
           }
@@ -7874,11 +7704,11 @@ footer {
           width: 100%;
           margin: 0;
           img {
-            width: 50%;            
+            width: 50%;
           }
           figcaption {
             width: 100%;
-  
+
             p {
               font-size: 0.09em;
             }
@@ -7892,19 +7722,19 @@ footer {
           }
         }
       }
-  
+
       .holiday_details_small {
 
         margin: 0.25em;
         padding: 0.25em;
-  
+
         h1 {
           font-size: 0.85em;
           width: 70%;
         }
         span.holidayprice {
           font-size: 0.6em;
-  
+
           .offerbox-price {
             font-size: 90%;
             line-height: 40px;
@@ -7912,12 +7742,12 @@ footer {
         }
         figure {
           display: inline-block;
-  
+
           img {
             width: 50%;
 
           }
-  
+
           figcaption {
 
             margin-bottom: 0.5em;
@@ -7933,7 +7763,7 @@ footer {
           }
         }
       }
-  
+
       .servicebox {
         width: 32%;
         h1 {
@@ -7941,7 +7771,7 @@ footer {
         }
         figure {
           width: 90%;
-  
+
           figcaption {
             p {
               font-size: 0.65em;
@@ -7958,14 +7788,14 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+
       li {
 
         width: 16.570684%;
@@ -7995,7 +7825,7 @@ footer {
     min-height: 1220px;
     header {
       height: 60px;
-      
+
       figure#logo {
         -webkit-box-align: flex-end;
         -ms-flex-align: flex-end;
@@ -8011,9 +7841,9 @@ footer {
             font-size:1.1em;
           }
         }
-        
+
       }
-  
+
       aside.contact {
         width: 29%;
         line-height: 25px;
@@ -8021,11 +7851,11 @@ footer {
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
             &:active {
@@ -8044,7 +7874,7 @@ footer {
         }
       }
     }
-    
+
     nav {
       height: 40px;
       opacity: 1;
@@ -8057,7 +7887,7 @@ footer {
         left: -650px;
         @include TranSition(all 1s ease);
       }
-  
+
       ul#navi {
         @include TranSition(all 1s ease);
         position: fixed;
@@ -8072,7 +7902,7 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           margin-bottom: 0.2em;
           a {
@@ -8082,22 +7912,22 @@ footer {
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
         width: 32%;
-  
+
         form#languagebox {
           height: 35px;
 
           label {
             font-size: 0.6em;
           }
-  
+
           img#flagImg {
             width: 25%;
           }
-  
+
           select {
             line-height: 35px;
             option {
@@ -8107,14 +7937,14 @@ footer {
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -8123,7 +7953,7 @@ footer {
       left: -650px;
       opacity: 0;
     }
-  
+
     .hide {
       left: -100%;
       @include TranSition(all 1s ease);
@@ -8133,7 +7963,7 @@ footer {
       opacity: 1;
       @include TranSition(all 1s ease);
     }
-  
+
     #toggle-menu {
       height: 100px;
       width: 60px;
@@ -8144,7 +7974,7 @@ footer {
         cursor: pointer;
       }
     }
-  
+
     #side-bar-btn {
       height: 100px;
       width: 60px;
@@ -8162,8 +7992,8 @@ footer {
         cursor: pointer;
       }
     }
-    
-    
+
+
     #home-page-sidebar {
       width: 250px;
       .leftsidebox {
@@ -8179,7 +8009,7 @@ footer {
         }
         #search_form {
           padding: 2%;
-          
+
           .label_wide{
             font-size: 0.85em;
             span{
@@ -8187,33 +8017,33 @@ footer {
 
             }
           }
-  
+
           .label_half{
             width: 48%;
             font-size:0.85em;
-            
+
           }
-          
+
           .select_wide {
             height: 35px;
             line-height: 35px;
           }
-  
+
           .select_date_year {
             width: 29%;
             height: 35px;
           }
-  
+
           #select_month {
             width: 39%;
             height: 35px;
             margin: 0 0.15em;
-          }       
-  
+          }
+
           .select_half {
             height: 35px;
-          }        
-  
+          }
+
           #searchbtn {
             width: 85%;
             height: 35px;
@@ -8225,7 +8055,7 @@ footer {
             }
           }
         }
-  
+
         div.destinations {
           display:none;
           width: 91%;
@@ -8248,10 +8078,10 @@ footer {
         }
       }
     }
-  
-    
+
+
     #filter-nav-sidebar {
-      position: fixed;    
+      position: fixed;
       width: 70%;
       height: auto;
       section#seasons,
@@ -8265,22 +8095,22 @@ footer {
         ul {
           width: 90%;
           padding: 1%;
-  
+
           li {
-            
+
             font-size: 0.8em;
-            
+
             button {
 
-              font-size: 0.7em;              
-              
+              font-size: 0.7em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
       position: fixed;
       width: 200px;
@@ -8293,7 +8123,7 @@ footer {
         opacity: 1;
         @include TranSition(all 1s ease);
       }
-  
+
       figure {
         margin: 0;
         padding: 0;
@@ -8303,21 +8133,21 @@ footer {
             font-size: 1.28em;
             line-height: 1.5em;
           }
-  
+
           span {
             margin-bottom: 1em;
             img {
               display: block;
             }
           }
-  
+
           p {
             font-size: 0.9em;
           }
         }
       }
     }
-    
+
     #contact-page-sidebar {
       position: fixed;
       #contact-details {
@@ -8325,7 +8155,7 @@ footer {
         li {
           width: 97%;
           line-height: 20px;
-  
+
           &:first-line {
 
             font-weight: bold;
@@ -8345,26 +8175,26 @@ footer {
         }
       }
     }
-  
+
     #home-page-content {
       width: 100%;
       h1 {
         font-weight: bold;
       }
-  
-      
+
+
       #banner {
         width: 98%;
         img {
           width: 100%;
         }
       }
-  
-      
+
+
       #offers {
         width: 100%;
         height: auto;
-       
+
         h2 {
           font-size: 1.2em;
           height: 60px;
@@ -8400,13 +8230,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         font-size: 1em;
       }
@@ -8419,7 +8249,7 @@ footer {
         span.holidayprice {
           font-size: 0.9em;
           line-height: 40px;
-  
+
           .offerbox-price {
             display: inline-block;
           }
@@ -8432,11 +8262,11 @@ footer {
           }
           figcaption {
             margin-bottom: 0.5em;
-  
+
             h3 {
               font-size: 1em;
             }
-  
+
             p {
               font-size: 0.9em;
               line-height: 35px;
@@ -8453,7 +8283,7 @@ footer {
         }
       }
     }
-  
+
     #content2,
     #holiday-items {
       float: none;
@@ -8480,7 +8310,7 @@ footer {
           padding: 0;
           li {
             margin: 5px 0 10px 0;
-  
+
             label {
               font-size: 0.7em;
             }
@@ -8498,11 +8328,11 @@ footer {
               &:hover {
                 border: 0;
               }
-            }          
+            }
           }
         }
       }
-  
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -8512,7 +8342,7 @@ footer {
         span.holidayprice {
           font-size: 0.85em;
 
-  
+
           .offerbox-price {
             display: inline-block;
           }
@@ -8521,11 +8351,11 @@ footer {
           width: 100%;
           margin: 0;
           img {
-            width: 50%;            
+            width: 50%;
           }
           figcaption {
             width: 100%;
-  
+
             p {
               font-size: 0.9em;
             }
@@ -8539,19 +8369,19 @@ footer {
           }
         }
       }
-  
+
       .holiday_details_small {
 
         margin: 0.25em;
         padding: 0.25em;
-  
+
         h1 {
           font-size: 0.85em;
           width: 70%;
         }
         span.holidayprice {
           font-size: 0.6em;
-  
+
           .offerbox-price {
             font-size: 90%;
             line-height: 40px;
@@ -8559,12 +8389,12 @@ footer {
         }
         figure {
           display: inline-block;
-  
+
           img {
             width: 50%;
 
           }
-  
+
           figcaption {
 
             margin-bottom: 0.5em;
@@ -8580,7 +8410,7 @@ footer {
           }
         }
       }
-  
+
       .servicebox {
         width: 32%;
         h1 {
@@ -8588,7 +8418,7 @@ footer {
         }
         figure {
           width: 90%;
-  
+
           figcaption {
             p {
               font-size: 0.65em;
@@ -8605,14 +8435,14 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+
       li {
 
         width: 16.570684%;

@@ -15,7 +15,7 @@
         <router-link
           to="/"
           class="nav-item r-item"
-          @click.native="InlineButtonClickHandler"
+          @click="InlineButtonClickHandler"
         >
           Home
         </router-link>
@@ -24,7 +24,7 @@
         <router-link
           to="/holidaypackages"
           class="nav-item r-item"
-          @click.native="InlineButtonClickHandler"
+          @click="InlineButtonClickHandler"
         >
           Holiday
           Packages
@@ -34,7 +34,7 @@
         <router-link
           to="/bestdeals"
           class="nav-item r-item"
-          @click.native="InlineButtonClickHandler"
+          @click="InlineButtonClickHandler"
         >
           BestDeal
         </router-link>
@@ -43,7 +43,7 @@
         <router-link
           to="/services"
           class="nav-item r-item"
-          @click.native="InlineButtonClickHandler"
+          @click="InlineButtonClickHandler"
         >
           Services
         </router-link>
@@ -52,7 +52,7 @@
         <router-link
           to="/about"
           class="nav-item r-item"
-          @click.native="InlineButtonClickHandler"
+          @click="InlineButtonClickHandler"
         >
           AboutUs
         </router-link>
@@ -61,7 +61,7 @@
         <router-link
           to="/contact"
           class="nav-item r-item"
-          @click.native="InlineButtonClickHandler"
+          @click="InlineButtonClickHandler"
         >
           Contact
         </router-link>
