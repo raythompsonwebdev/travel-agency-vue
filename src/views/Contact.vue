@@ -8,10 +8,10 @@
     </button>
 
     <!--contact details box-->
-    <aside 
+    <aside
       v-if="contactFunction"
-      id="contact-page-sidebar"      
-      class="hide" 
+      id="contact-page-sidebar"
+      class="hide"
     >
       <ul id="contact-details">
         <li>
@@ -50,15 +50,12 @@
     <main id="content2">
       <h1>Lorem ipsum dolor sit amet, consectetur</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        <br>Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi. Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit.
-        <br>Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
       </p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        <br>Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.
-      </p>      
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.
+      </p>
       <br>
       <ContactForm @review-submitted="addReview" />
     </main>

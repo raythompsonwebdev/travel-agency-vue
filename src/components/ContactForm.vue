@@ -18,7 +18,7 @@
     >
       <ul>
         <li>
-          <label for="firstname">First name 
+          <label for="firstname">First name
             <input
               id="firstname"
               v-model="firstname"
@@ -76,7 +76,7 @@
 
 <script>
 export default {
-  
+
   name: 'ContactForm',
 
   data() {
@@ -84,13 +84,13 @@ export default {
       show: 'true',
       firstname:null,
       lastname: null,
-      email:null, 
-      errors: []      
+      email:null,
+      errors: []
     }
   },
 
   methods: {
-    
+
     onSubmit() {
 
       if(this.firstname && this.lastname && this.email){
@@ -114,7 +114,7 @@ export default {
     }
 
 
-  }  
+  }
 
 }
 </script>

@@ -23,7 +23,7 @@
             @mouseup="InlineButtonClickHandler()"
           >
             {{ season.title }}
-          </button> 
+          </button>
         </li>
       </ul>
     </section>
@@ -81,7 +81,7 @@
 
 <script>
 export default {
-  name: "FilterNav",  
+  name: "FilterNav",
   props: {
     seasons: {
       type: Array,
@@ -99,12 +99,11 @@ export default {
       type: Array,
       default: null
     }
-  },  
+  },
   methods: {
     InlineButtonClickHandler: function() {
       //e.preventDefault();
       var slideoutMenu = document.querySelector("#filter-nav-sidebar");
-      
       if (slideoutMenu.classList.contains("show")) {
         slideoutMenu.setAttribute("class", "hide");
       } else {
@@ -114,9 +113,9 @@ export default {
     searchFilterFunction: function(event) {
       event.preventDefault();
 
-      var el = document.getElementById("filter-nav-sidebar");
+      let el = document.getElementById("filter-nav-sidebar");
 
-      var box = el.getAttribute("class");
+      let box = el.getAttribute("class");
 
       if (box == "hide") {
         el.setAttribute("class", "show");
@@ -126,7 +125,7 @@ export default {
     },
     SearchItemBtn(item) {
       this.$emit("seasonClick", item);
-      
+
     }
   }
 };

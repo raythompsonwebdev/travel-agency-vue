@@ -18,6 +18,18 @@
   border: 1px solid black;
 }
 
+#contact-form-errors{
+  width:50%;
+  display:block;
+  margin:auto;
+  list-style:none;
+  li{
+    line-height:30px;
+    display:block;
+    width:100%;
+  }
+}
+
 #wrapper {
   width: 100%;
   margin-left: auto;
@@ -730,6 +742,7 @@
     position: fixed;
     width: 100%;
     margin: 0;
+    font-size:1em;
     #contact-details {
       background-color: $colorwhite1;
       display: block;
@@ -1016,7 +1029,10 @@
       margin: 0;
       line-height: 25px;
       letter-spacing: 0.01em;
+
     }
+
+
     #contactform {
       width: 90%;
       margin: auto;
@@ -1886,7 +1902,7 @@ footer {
 
       }
       p {
-        font-size: 0.8em;
+        font-size: 0.85em;
 
       }
       /*contact form*/
@@ -2415,10 +2431,9 @@ footer {
       position:unset;
       float: left;
       #contact-details {
-
-        font-size: 0.8em;
+        font-size: 1em;
         li {
-          font-size: 0.7em;
+          font-size: 0.75em;
 
           &:first-line {
             font-weight: bold;
@@ -2629,7 +2644,7 @@ footer {
 
       }
       p {
-        font-size: 0.8em;
+        font-size: 0.85em;
 
       }
       /*contact form*/
@@ -2673,7 +2688,7 @@ footer {
 
         }
         span.holidayprice {
-          font-size: 0.7em;
+          font-size: 0.8em;
           width: 30%;
           text-align: left;
           .offerbox-price {
@@ -2684,7 +2699,7 @@ footer {
           width: 100%;
           margin: 0;
           img {
-            width: 29%;
+            width: 20%;
             float: left;
             margin-right: 0.25em;
           }
@@ -2699,6 +2714,7 @@ footer {
               font-size: 1em;
               line-height: 45px;
               margin: 0;
+              width:50%;
               &:hover {
                 font-weight: bold;
                 margin: 0;
@@ -3162,11 +3178,10 @@ footer {
       float: left;
       #contact-details {
         width: 98%;
-        font-size: 0.8em;
 
         li {
           width: 97%;
-          font-size: 0.7em;
+          font-size: 0.75em;
 
           &:first-line {
             font-weight: bold;
@@ -3376,7 +3391,7 @@ footer {
 
       }
       p {
-        font-size: 0.8em;
+        font-size: 0.85em;
 
       }
       /*contact form*/
@@ -3905,7 +3920,7 @@ footer {
       float: left;
       #contact-details {
 
-        font-size: 0.8em;
+
         li {
           width: 97%;
           font-size: 0.7em;
@@ -4118,7 +4133,7 @@ footer {
 
       }
       p {
-        font-size: 0.8em;
+        font-size: 0.85em;
 
       }
       /*contact form*/
@@ -4648,8 +4663,6 @@ footer {
       float: left;
       #contact-details {
 
-        font-size: 0.8em;
-
         li {
           width: 97%;
           font-size: 0.7em;
@@ -4863,7 +4876,7 @@ footer {
 
       }
       p {
-        font-size: 0.8em;
+        font-size: 0.85em;
 
       }
       /*contact form*/
@@ -5393,7 +5406,6 @@ footer {
       float: left;
       #contact-details {
         width: 98%;
-        font-size: 0.8em;
         li {
           width: 97%;
           line-height: 20px;
@@ -6130,7 +6142,7 @@ footer {
       position:unset;
       float: left;
       #contact-details {
-        font-size: 0.8em;
+
         li {
           width: 97%;
           font-size: 0.7em;
@@ -6860,7 +6872,7 @@ footer {
     #contact-page-sidebar {
       position: fixed;
       #contact-details {
-        font-size: 0.8em;
+
         li {
           width: 97%;
           line-height: 20px;
@@ -7200,7 +7212,7 @@ footer {
       }
 
       aside.contact {
-        width: 23%;
+        width: 25%;
         line-height: 25px;
         font-size: 0.6em;
         span.tele {
@@ -7268,7 +7280,7 @@ footer {
       }
 
       aside#language-box {
-        width: 26%;
+        width: 28%;
 
         form#languagebox {
           height: 40px;
@@ -7504,7 +7516,7 @@ footer {
     #contact-page-sidebar {
       position: fixed;
       #contact-details {
-        font-size: 0.8em;
+
         li {
           width: 97%;
           line-height: 20px;
@@ -7845,9 +7857,9 @@ footer {
       }
 
       aside.contact {
-        width: 29%;
+        width: 30%;
         line-height: 25px;
-        font-size: 0.6em;
+        font-size: 0.65em;
         span.tele {
           display: block;
           display: flex;
@@ -7915,7 +7927,7 @@ footer {
       }
 
       aside#language-box {
-        width: 32%;
+        width: 35%;
 
         form#languagebox {
           height: 35px;
@@ -8151,7 +8163,7 @@ footer {
     #contact-page-sidebar {
       position: fixed;
       #contact-details {
-        font-size: 0.8em;
+
         li {
           width: 97%;
           line-height: 20px;

@@ -1,13 +1,13 @@
 
 <template>
   <nav>
-    <button 
-      id="toggle-menu" 
+    <button
+      id="toggle-menu"
       @click="naviFunction"
     >
       Menu
     </button>
-    <ul      
+    <ul
       id="navi"
       class="hide"
     >
@@ -15,7 +15,7 @@
         <router-link
           to="/"
           class="nav-item r-item"
-          @click="InlineButtonClickHandler"
+          @click="InlineMenuButtonClickHandler()"
         >
           Home
         </router-link>
@@ -24,7 +24,7 @@
         <router-link
           to="/holidaypackages"
           class="nav-item r-item"
-          @click="InlineButtonClickHandler"
+          @mouseup="InlineMenuButtonClickHandler()"
         >
           Holiday
           Packages
@@ -34,7 +34,7 @@
         <router-link
           to="/bestdeals"
           class="nav-item r-item"
-          @click="InlineButtonClickHandler"
+          @mouseup="InlineMenuButtonClickHandler()"
         >
           BestDeal
         </router-link>
@@ -43,7 +43,7 @@
         <router-link
           to="/services"
           class="nav-item r-item"
-          @click="InlineButtonClickHandler"
+          @mouseup="InlineMenuButtonClickHandler()"
         >
           Services
         </router-link>
@@ -52,7 +52,7 @@
         <router-link
           to="/about"
           class="nav-item r-item"
-          @click="InlineButtonClickHandler"
+          @mouseup="InlineMenuButtonClickHandler()"
         >
           AboutUs
         </router-link>
@@ -61,7 +61,7 @@
         <router-link
           to="/contact"
           class="nav-item r-item"
-          @click="InlineButtonClickHandler"
+          @mouseup="InlineMenuButtonClickHandler()"
         >
           Contact
         </router-link>
@@ -80,26 +80,30 @@ export default {
     LanguageSelect,
   },
   methods: {
-    InlineButtonClickHandler: function(e) {
+
+    naviFunction: function(e) {
       e.preventDefault();
-      var slideoutMenu = document.querySelector("#navi");
-      
-      if (slideoutMenu.classList.contains("show")) {
-        slideoutMenu.setAttribute("class", "hide");
-      } else {
-        slideoutMenu.setAttribute("class", "show");
-      }
-    },    
-    naviFunction: function(event) {
-      event.preventDefault();
-      var slideoutNav = document.querySelector("#navi");
+      let slideoutNav = document.getElementById("navi");
       if (slideoutNav.classList.contains("show")) {
         slideoutNav.setAttribute("class", "hide");
       } else {
         slideoutNav.setAttribute("class", "show");
-      }      
-    }, 
-  }, 
+      }
+    },
+    InlineMenuButtonClickHandler: function(e) {
+
+      console.log(e);
+      //e.preventDefault();
+      // let slideoutMenu = document.getElementById("navi");
+
+      // let box = slideoutMenu.getAttribute("class");
+      // if (box == "hide") {
+      //   slideoutMenu.setAttribute("class", "show");
+      // } else {
+      //   slideoutMenu.setAttribute("class", "hide");
+      // }
+    },
+  },
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
