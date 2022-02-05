@@ -81,17 +81,18 @@ export default {
   },
   methods: {
 
-    naviFunction: function(e) {
+    naviFunction (e) {
       e.preventDefault();
-      let slideoutNav = document.getElementById("navi");
+      const slideoutNav = document.getElementById("navi");
       if (slideoutNav.classList.contains("show")) {
         slideoutNav.setAttribute("class", "hide");
       } else {
         slideoutNav.setAttribute("class", "show");
       }
     },
-    InlineMenuButtonClickHandler: function(e) {
+    InlineMenuButtonClickHandler (e) {
 
+      // eslint-disable-next-line no-console
       console.log(e);
       //e.preventDefault();
       // let slideoutMenu = document.getElementById("navi");

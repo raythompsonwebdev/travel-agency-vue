@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="holidaypackageitem" 
+    v-if="holidaypackageitem"
     class="HolidayPackagesItem"
   >
     <h1>{{ holidaypackageitem.title }}</h1>
@@ -17,7 +17,7 @@
         >
         <figcaption>
           <h3>Location : {{ holidaypackageitem.location }}</h3>
-   
+
           <router-link :to="'/bestdeals/' + holidaypackageitem.id">
             <button>Book Holiday</button>
           </router-link>
@@ -46,15 +46,15 @@ export default {
   },
   async created(){
     const result = await axios.get(`/api/holidaypackages/${this.$route.params.id}`);
-    const holidaypackageitem = result.data;
-    this.holidaypackageitem = holidaypackageitem;
+    const {data} = result;
+    this.holidaypackageitem = data;
   }
- 
+
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style lang="scss" >
- 
+
 </style>

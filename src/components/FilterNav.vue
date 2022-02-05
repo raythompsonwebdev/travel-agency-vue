@@ -101,23 +101,23 @@ export default {
     }
   },
   methods: {
-    InlineButtonClickHandler: function() {
+    InlineButtonClickHandler () {
       //e.preventDefault();
-      var slideoutMenu = document.querySelector("#filter-nav-sidebar");
+      const slideoutMenu = document.querySelector("#filter-nav-sidebar");
       if (slideoutMenu.classList.contains("show")) {
         slideoutMenu.setAttribute("class", "hide");
       } else {
         slideoutMenu.setAttribute("class", "show");
       }
     },
-    searchFilterFunction: function(event) {
+    searchFilterFunction (event) {
       event.preventDefault();
 
-      let el = document.getElementById("filter-nav-sidebar");
+      const el = document.getElementById("filter-nav-sidebar");
 
-      let box = el.getAttribute("class");
+      const box = el.getAttribute("class");
 
-      if (box == "hide") {
+      if (box === "hide") {
         el.setAttribute("class", "show");
       } else {
         el.setAttribute("class", "hide");

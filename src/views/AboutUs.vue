@@ -75,13 +75,13 @@ export default {
     };
   },
   methods: {
-    aboutPageFunction: function(event) {
+    aboutPageFunction (event) {
       event.preventDefault();
 
-      var el = document.getElementById("about-page-banner");
-      var box = el.getAttribute("class");
+      const el = document.getElementById("about-page-banner");
+      const box = el.getAttribute("class");
 
-      if (box == "hide") {
+      if (box === "hide") {
         el.setAttribute("class", "show");
       } else  {
         el.setAttribute("class", "hide");

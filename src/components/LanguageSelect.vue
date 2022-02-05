@@ -15,7 +15,7 @@
           @click="itemsSearched($event.target.value);"
         >
           <option
-            v-for="(languageselectitem, i) in onChangeImg" 
+            v-for="(languageselectitem, i) in onChangeImg"
             :key="i"
             :value="languageselectitem.value"
           >
@@ -30,7 +30,7 @@
 import { languageselectitems } from '../data-json.json';
 export default {
   name: "LanguageSelect",
-  data: () => {
+  data () {
     return {
       selected: " ",
       defaultImage: "../assets/images/flags/default.jpg",
@@ -38,7 +38,7 @@ export default {
     };
   },
   computed: {
-    onChangeImg: function() {
+    onChangeImg () {
       if (this.selected === "nothing") {
         return this.languageselectitems;
       } else if (this.selected === "United_Kingdom") {
@@ -59,7 +59,7 @@ export default {
     }
   },
   methods: {
-    itemsSearched: function(id) {
+    itemsSearched (id) {
       this.selected = id;
     },
     imgUrlAlt(e) {

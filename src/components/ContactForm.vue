@@ -95,7 +95,7 @@ export default {
 
       if(this.firstname && this.lastname && this.email){
 
-        let productReview = {
+        const productReview = {
           firstname: this.firstname,
           lastname: this.lastname,
           email: this.email

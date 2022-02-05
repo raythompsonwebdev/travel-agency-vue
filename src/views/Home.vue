@@ -1,21 +1,22 @@
+/* eslint-disable prefer-destructuring */
 <template>
   <div class="Home page">
     <div class="Home page">
-      <button 
+      <button
         id="side-bar-btn"
-        @click="sideBarFunction"        
+        @click="sideBarFunction"
       >
         SIDE
       </button>
       <!--Leftside-->
-      <aside        
+      <aside
         id="home-page-sidebar"
         class="hide"
       >
         <!---Search form-->
         <SearchForm />
         <!-- Destinations -->
-        <Destinations :destinationitems="destinationitems" /> 
+        <Destinations :destinationitems="destinationitems" />
         <br>
         <br>
         <br>
@@ -58,30 +59,34 @@ export default {
   },
   data() {
     return {
-      destinationitems:[], 
+      destinationitems:[],
       featuredholidayitems:[],
       //homepageitems:[],
       show: true
     };
-  }, 
+  },
   async created(){
     const result = await axios.get('/api/home');
-    const homepageitems = result.data[0];
-    this.destinationitems = homepageitems.destinationitems;
-    this.featuredholidayitems = homepageitems.featuredholidayitems;
+
+    const {data} = result;
+
+    // eslint-disable-next-line prefer-destructuring
+    this.destinationitems = data[0].destinationitems;
+    // eslint-disable-next-line prefer-destructuring
+    this.featuredholidayitems = data[0].featuredholidayitems;
   },
   methods: {
-    sideBarFunction: function(event) {
+    sideBarFunction(event) {
       event.preventDefault();
-      var el = document.getElementById("home-page-sidebar");
-      var box = el.getAttribute("class");
-      if (box == "hide") {
+      const el = document.getElementById("home-page-sidebar");
+      const box = el.getAttribute("class");
+      if (box === "hide") {
         el.setAttribute("class", "show");
       } else {
         el.setAttribute("class", "hide");
       }
     }
-  },  
+  },
 };
 </script>
 

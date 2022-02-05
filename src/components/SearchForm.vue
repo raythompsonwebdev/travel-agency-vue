@@ -10,8 +10,8 @@
         class="label_wide"
         for="locations"
       >
-        Where are you going ?                 
-        <select 
+        Where are you going ?
+        <select
           v-model="locations"
           name="locations"
           class="select_wide"
@@ -22,14 +22,14 @@
             :value="location"
           >
             {{ location }}
-          </option> 
+          </option>
         </select>
-      </label> 
+      </label>
 
       <label
         for="date"
         class="label_wide"
-      ><span> When are you going ? </span>                
+      ><span> When are you going ? </span>
         <select
           v-model="date"
           name="date"
@@ -43,7 +43,7 @@
             {{ date }}
           </option>
 
-        </select> 
+        </select>
         <select
           id="select_month"
           v-model="month"
@@ -55,7 +55,7 @@
             :value="month"
           >
             {{ month }}
-          </option>         
+          </option>
         </select>
         <select
           v-model="year"
@@ -77,7 +77,7 @@
         for="duration"
       >
         Duration
- 
+
         <select
           v-model="duration"
           name="duration"
@@ -90,7 +90,7 @@
           >
             {{ duration }}
           </option>
-          
+
         </select>
       </label>
 
@@ -101,7 +101,7 @@
         <select
           v-model="board"
           name="board"
-          class="select_half"            
+          class="select_half"
         >
           <option
             v-for="(board) in searchform[0].board"
@@ -110,7 +110,7 @@
           >
             {{ board }}
           </option>
-          
+
         </select>
       </label>
 
@@ -130,7 +130,7 @@
           >
             {{ star }}
           </option>
-         
+
         </select>
       </label>
 
@@ -140,8 +140,8 @@
       >Adults
         <select
           v-model="adults"
-          name="adults" 
-          class="select_half"           
+          name="adults"
+          class="select_half"
         >
           <option
             v-for="(adult) in searchform[0].adults"
@@ -149,7 +149,7 @@
             :value="adult"
           >
             {{ adult }}
-          </option>          
+          </option>
         </select>
       </label>
       <label
@@ -167,11 +167,11 @@
             :value="child"
           >
             {{ child }}
-          </option> 
-          
+          </option>
+
         </select>
       </label>
-      
+
       <input
         id="searchbtn"
         type="submit"
@@ -187,8 +187,8 @@ import { searchform } from '../data-json.json';
 
 
 export default {
-  name: "SearchForm", 
-  data: () => {
+  name: "SearchForm",
+  data() {
     return {
       searchform,
       destinations:' ',
@@ -208,7 +208,7 @@ export default {
     onSubmit() {
       if(this.destinations && this.locations && this.date && this.month && this.year && this.duration && this.board && this.star && this.adults && this.children ){
 
-        let findHoliday = {
+        const findHoliday = {
           destinations: this.destinations,
           locations: this.locations,
           date: this.date,
@@ -220,7 +220,7 @@ export default {
           adults:this.adults,
           children:this.children
         }
-        
+
         this.$emit('review-submitted', findHoliday)
         this.destinations = null
         this.locations = null

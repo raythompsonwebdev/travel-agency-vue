@@ -11,11 +11,11 @@
     <!---main content-->
     <main id="holiday-items">
       <!--HolidayPackage Item component -->
-      <transition-group 
-        name="fade" 
+      <transition-group
+        name="fade"
         tag="div"
       >
-        <div          
+        <div
           v-for="holidaypackageitem in filteredPacks"
           :key="holidaypackageitem.id"
         >
@@ -38,20 +38,20 @@ export default {
   components: {
     FilterNav,
     HolidayPackageItem
-  }, 
-  data: () => {
+  },
+  data () {
     return {
       seasons,
       ratings,
-      locations, 
+      locations,
       prices,
       selected: " ",
       holidaypackageitems:[],
       count: 10
     };
-  },  
+  },
   computed: {
-    filteredPacks: function() {
+    filteredPacks () {
       if (!this.selected) {
         return this.holidaypackageitems;
       } else if (
@@ -61,37 +61,37 @@ export default {
         "autumn" === this.selected
       ) {
         return this.holidaypackageitems.filter(
-          holidaypackageitem => holidaypackageitem.season === this.selected
+          (holidaypackageitem) => holidaypackageitem.season === this.selected
         );
       } else if (
         "london" === this.selected ||
         "paris" === this.selected ||
         "madrid" === this.selected ||
-        "dubai" == this.selected ||
-        "rome" == this.selected
+        "dubai" === this.selected ||
+        "rome" === this.selected
       ) {
         return this.holidaypackageitems.filter(
-          holidaypackageitem => holidaypackageitem.location == this.selected
+          (holidaypackageitem) => holidaypackageitem.location === this.selected
         );
       } else if (
         "one" === this.selected ||
         "two" === this.selected ||
         "three" === this.selected ||
-        "four" == this.selected ||
+        "four" === this.selected ||
         "five" === this.selected
       ) {
         return this.holidaypackageitems.filter(
-          holidaypackageitem => holidaypackageitem.rating === this.selected
+          (holidaypackageitem) => holidaypackageitem.rating === this.selected
         );
       } else if (
-        "$399 - $499" == this.selected ||
-        "$499 - $599" == this.selected ||
-        "$599 - $699" == this.selected ||
-        "$699 - $999" == this.selected ||
-        "$999 +" == this.selected
+        "$399 - $499" === this.selected ||
+        "$499 - $599" === this.selected ||
+        "$599 - $699" === this.selected ||
+        "$699 - $999" === this.selected ||
+        "$999 +" === this.selected
       ) {
         return this.holidaypackageitems.filter(
-          holidaypackageitem => holidaypackageitem.price === this.selected
+          (holidaypackageitem) => holidaypackageitem.price === this.selected
         );
       } else {
         return this.holidaypackageitems;
@@ -100,11 +100,11 @@ export default {
   },
   async created(){
     const result = await axios.get('/api/holidaypackages');
-    const holidaypackageitems = result.data;
-    this.holidaypackageitems = holidaypackageitems;
+    const { data } = result;
+    this.holidaypackageitems = data;
   },
   methods: {
-    itemsSearched: function(id) {
+    itemsSearched (id) {
       this.selected = id;
     }
   },

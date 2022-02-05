@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>{{ title }}</h1> 
-    <p>Text:</p> 
+    <h1>{{ title }}</h1>
+    <p>Text:</p>
     <!-- <CartList
       :products="cartItems"
       v-on:remove-from-cart="removeFromCart($event)"/> -->
@@ -23,7 +23,7 @@ export default {
     return{
       title: "Shopping Cart page",
       cartItems: {},
-      
+
     }
   },
   computed:{
@@ -37,15 +37,15 @@ export default {
   },
   async created () {
     const result = await axios.get(`/api/holidaypackages/${this.$route.params.id}/cart`);
-    const cartItems = result.data;
-    this.cartItems = cartItems;
+    const {data} = result;
+    this.cartItems = data;
   },
   // methods: {
   //   async removeFromCart(productId) {
   //     const result = await axios.delete(`/api/users/12345/cart/${productId}`);
   //     this.cartItems = result.data;
   //   }
-  // },  
+  // },
 };
 </script>
 

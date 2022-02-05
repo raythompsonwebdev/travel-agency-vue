@@ -42,9 +42,35 @@
       "plugin:vuejs-accessibility/recommended"
     ],
     "parserOptions": {
-      "parser": "babel-eslint"
+      "parser": "babel-eslint",
+      "sourceType": "module"
     },
-    "rules": {}
+    "rules": {
+      "strict" : ["error","global"],
+      "func-style":["error", "expression"],
+      "no-new-func":"error",
+      "no-param-reassign": "error",
+      "prefer-arrow-callback": "warn",
+      "arrow-parens": ["error", "always"],
+      "arrow-body-style": ["error", "as-needed"],
+      "new-cap": "error",
+      "no-invalid-this": "error",
+      "prefer-const":"error",
+      "prefer-destructuring":["error",{"array":true, "object":true},{"enforceForRenamedProperties":true}],
+      "no-unused-vars": "warn",
+      "no-console": "warn",
+      "func-names": "warn",
+      "no-process-exit": "warn",
+      "object-shorthand": "warn",
+      "class-methods-use-this": "error",
+      "no-var": "error",
+      "prefer-rest-params": "warn",
+      "no-eval":"error",
+      "no-implied-eval":"error",
+      "eqeqeq":"error",
+      "no-with":"error",
+      "no-plusplus":"error"
+    }
   },
   "browserslist": [
     "> 1%",

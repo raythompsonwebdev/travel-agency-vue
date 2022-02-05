@@ -77,11 +77,11 @@ export default {
     };
   },
   methods: {
-    contactFunction: function(e) {
+    contactFunction (e) {
         e.preventDefault();
-      var el = document.getElementById("contact-page-sidebar");
-      var box = el.getAttribute("class");
-      if (box == "hide") {
+      const el = document.getElementById("contact-page-sidebar");
+      const box = el.getAttribute("class");
+      if (box === "hide") {
         el.setAttribute("class", "show");
       } else {
         el.setAttribute("class", "hide");
