@@ -1,7 +1,5 @@
 <template>
-  <article 
-    class="holiday_details_small"
-  >
+  <article class="holiday_details_small">
     <h1>{{ bestdealitem.title }}</h1>
 
     <span class="holidayprice">
@@ -9,11 +7,8 @@
       <span class="offerbox-price">{{ bestdealitem.price }}</span>
     </span>
     <figure>
-      <img
-        :src="bestdealitem.url"
-        :alt="bestdealitem.title"
-      >
-      <figcaption>        
+      <img :src="bestdealitem.url" :alt="bestdealitem.title" />
+      <figcaption>
         <p>Location: {{ bestdealitem.location }}.</p>
         <p>Available: {{ bestdealitem.month }}.</p>
         <router-link :to="'/bestdeals/' + bestdealitem.id">
@@ -30,13 +25,11 @@ export default {
   props: {
     bestdealitem: {
       type: Object,
-      default: null
-    }
-  }
-  
+      default: null,
+    },
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" >
-</style>
+<style lang="scss"></style>

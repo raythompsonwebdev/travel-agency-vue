@@ -1,16 +1,7 @@
-
 <template>
   <nav>
-    <button
-      id="toggle-menu"
-      @click="naviFunction"
-    >
-      Menu
-    </button>
-    <ul
-      id="navi"
-      class="hide"
-    >
+    <button id="toggle-menu" @click="naviFunction">Menu</button>
+    <ul id="navi" class="hide">
       <li>
         <router-link
           to="/"
@@ -26,8 +17,7 @@
           class="nav-item r-item"
           @mouseup="InlineMenuButtonClickHandler()"
         >
-          Holiday
-          Packages
+          Holiday Packages
         </router-link>
       </li>
       <li>
@@ -75,13 +65,12 @@
 <script>
 import LanguageSelect from "../components/LanguageSelect.vue";
 export default {
-  name:'NavBar',
+  name: "NavBar",
   components: {
     LanguageSelect,
   },
   methods: {
-
-    naviFunction (e) {
+    naviFunction(e) {
       e.preventDefault();
       const slideoutNav = document.getElementById("navi");
       if (slideoutNav.classList.contains("show")) {
@@ -90,8 +79,7 @@ export default {
         slideoutNav.setAttribute("class", "show");
       }
     },
-    InlineMenuButtonClickHandler (e) {
-
+    InlineMenuButtonClickHandler(e) {
       // eslint-disable-next-line no-console
       console.log(e);
       //e.preventDefault();
@@ -105,9 +93,8 @@ export default {
       // }
     },
   },
-}
+};
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
-<style lang="scss" >
-</style>
+<style lang="scss"></style>

@@ -1,35 +1,38 @@
 <template>
-  <div id="app">
-    <!--wrapper-->
-    <div id="wrapper">
-      <Header />
-      <NavBar />
-      <transition name="router-anim">
+  <!--wrapper-->
+  <div id="wrapper">
+    <Header />
+    <NavBar />
+    <!-- <transition name="router-anim">
         <router-view />
+      </transition> -->
+    <router-view v-slot="{ Component }">
+      <transition name="router-anim">
+        <keep-alive>
+          <component :is="Component" />
+        </keep-alive>
       </transition>
-      <div class="clearfix" />
-    </div>
-
-    <Footer />
+    </router-view>
+    <div class="clearfix" />
   </div>
+
+  <Footer />
 </template>
 <script>
-  import NavBar from './components/NavBar';
-  import Header from './components/Header';
-  import Footer from './components/Footer';
+import NavBar from "./components/NavBar";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-  export default {
-    name: 'App',
-    components:{
-      NavBar,
-      Header,
-      Footer
-    },
-  }
+export default {
+  name: "App",
+  components: {
+    NavBar,
+    Header,
+    Footer,
+  },
+};
 </script>
-
-<style lang='scss'>
-
+<style lang="scss">
 @import "assets/main";
 .router-anim-enter-active {
   animation: coming 0.5s;
@@ -58,5 +61,4 @@
     opacity: 0;
   }
 }
-
 </style>

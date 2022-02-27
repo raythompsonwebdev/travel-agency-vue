@@ -19,25 +19,23 @@ export default {
   // components: {
   //     CartList,
   // },
-  data(){
-    return{
+  data() {
+    return {
       title: "Shopping Cart page",
       cartItems: {},
-
-    }
+    };
   },
-  computed:{
+  computed: {
     //adds cart item prices
-    totalPrice(){
-      return this.cartItems.reduce(
-        (sum, item) => sum + Number(item.price),
-        0,
-      );
-    }
+    totalPrice() {
+      return this.cartItems.reduce((sum, item) => sum + Number(item.price), 0);
+    },
   },
-  async created () {
-    const result = await axios.get(`/api/holidaypackages/${this.$route.params.id}/cart`);
-    const {data} = result;
+  async created() {
+    const result = await axios.get(
+      `/api/holidaypackages/${this.$route.params.id}/cart`
+    );
+    const { data } = result;
     this.cartItems = data;
   },
   // methods: {
@@ -50,5 +48,4 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

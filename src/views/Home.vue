@@ -2,39 +2,26 @@
 <template>
   <div class="Home page">
     <div class="Home page">
-      <button
-        id="side-bar-btn"
-        @click="sideBarFunction"
-      >
-        SIDE
-      </button>
+      <button id="side-bar-btn" @click="sideBarFunction">SIDE</button>
       <!--Leftside-->
-      <aside
-        id="home-page-sidebar"
-        class="hide"
-      >
+      <aside id="home-page-sidebar" class="hide">
         <!---Search form-->
         <SearchForm />
         <!-- Destinations -->
         <Destinations :destinationitems="destinationitems" />
-        <br>
-        <br>
-        <br>
+        <br />
+        <br />
+        <br />
       </aside>
 
       <main id="home-page-content">
         <!--Banner Image-->
         <figure id="banner">
-          <img
-            :src="'../assets/images/travel-agency-website-banner-image.jpg'"
-            :alt="'banner-image'"
-          >
+          <img :src="bannerImage" :alt="'banner-image'" />
         </figure>
 
         <!-- Featured Holiday Packages -->
-        <FeaturedHolidays
-          :featuredholidayitems="featuredholidayitems"
-        />
+        <FeaturedHolidays :featuredholidayitems="featuredholidayitems" />
       </main>
 
       <div class="clearfix" />
@@ -42,12 +29,11 @@
   </div>
 </template>
 
-
 <script>
-
 import SearchForm from "../components/SearchForm.vue";
 import Destinations from "../components/Destinations.vue";
 import FeaturedHolidays from "../components/FeaturedHolidays.vue";
+import bannerImage from "../assets/images/travel-agency-website-banner-image.jpg";
 import axios from "axios";
 
 export default {
@@ -55,20 +41,21 @@ export default {
   components: {
     Destinations,
     FeaturedHolidays,
-    SearchForm
+    SearchForm,
   },
   data() {
     return {
-      destinationitems:[],
-      featuredholidayitems:[],
+      destinationitems: [],
+      featuredholidayitems: [],
       //homepageitems:[],
-      show: true
+      show: true,
+      bannerImage: bannerImage,
     };
   },
-  async created(){
-    const result = await axios.get('/api/home');
+  async created() {
+    const result = await axios.get("/api/home");
 
-    const {data} = result;
+    const { data } = result;
 
     // eslint-disable-next-line prefer-destructuring
     this.destinationitems = data[0].destinationitems;
@@ -85,11 +72,10 @@ export default {
       } else {
         el.setAttribute("class", "hide");
       }
-    }
+    },
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss">
-</style>
+<style lang="scss"></style>

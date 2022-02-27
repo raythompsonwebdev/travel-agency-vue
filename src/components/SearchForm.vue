@@ -2,22 +2,12 @@
   <section class="leftsidebox">
     <h2>Holiday Search</h2>
 
-    <form
-      id="search_form"
-      @submit.prevent="onSubmit"
-    >
-      <label
-        class="label_wide"
-        for="locations"
-      >
+    <form id="search_form" @submit.prevent="onSubmit">
+      <label class="label_wide" for="locations">
         Where are you going ?
-        <select
-          v-model="locations"
-          name="locations"
-          class="select_wide"
-        >
+        <select v-model="locations" name="locations" class="select_wide">
           <option
-            v-for="(location) in searchform[0].locations"
+            v-for="location in searchform[0].locations"
             :key="location.id"
             :value="location"
           >
@@ -26,44 +16,29 @@
         </select>
       </label>
 
-      <label
-        for="date"
-        class="label_wide"
-      ><span> When are you going ? </span>
-        <select
-          v-model="date"
-          name="date"
-          class="select_date_year"
-        >
+      <label for="date" class="label_wide"
+        ><span> When are you going ? </span>
+        <select v-model="date" name="date" class="select_date_year">
           <option
-            v-for="(date) in searchform[0].date"
+            v-for="date in searchform[0].date"
             :key="date.id"
             :value="date"
           >
             {{ date }}
           </option>
-
         </select>
-        <select
-          id="select_month"
-          v-model="month"
-          name="month"
-        >
+        <select id="select_month" v-model="month" name="month">
           <option
-            v-for="(month) in searchform[0].month"
+            v-for="month in searchform[0].month"
             :key="month.id"
             :value="month"
           >
             {{ month }}
           </option>
         </select>
-        <select
-          v-model="year"
-          name="year"
-          class="select_date_year"
-        >
+        <select v-model="year" name="year" class="select_date_year">
           <option
-            v-for="(year) in searchform[0].year"
+            v-for="year in searchform[0].year"
             :key="year.id"
             :value="year"
           >
@@ -72,79 +47,51 @@
         </select>
       </label>
 
-      <label
-        class="label_wide"
-        for="duration"
-      >
+      <label class="label_wide" for="duration">
         Duration
 
-        <select
-          v-model="duration"
-          name="duration"
-          class="select_wide"
-        >
+        <select v-model="duration" name="duration" class="select_wide">
           <option
-            v-for="(duration) in searchform[0].duration"
+            v-for="duration in searchform[0].duration"
             :key="duration.id"
             :value="duration"
           >
             {{ duration }}
           </option>
-
         </select>
       </label>
 
-      <label
-        class="label_half"
-        for="board"
-      >Board
-        <select
-          v-model="board"
-          name="board"
-          class="select_half"
-        >
+      <label class="label_half" for="board"
+        >Board
+        <select v-model="board" name="board" class="select_half">
           <option
-            v-for="(board) in searchform[0].board"
+            v-for="board in searchform[0].board"
             :key="board.id"
             :value="board"
           >
             {{ board }}
           </option>
-
         </select>
       </label>
 
-      <label
-        class="label_half"
-        for="star"
-      >Star
-        <select
-          v-model="star"
-          name="star"
-          class="select_half"
-        >
+      <label class="label_half" for="star"
+        >Star
+        <select v-model="star" name="star" class="select_half">
           <option
-            v-for="(star) in searchform[0].star"
+            v-for="star in searchform[0].star"
             :key="star.id"
             :value="star"
           >
             {{ star }}
           </option>
-
         </select>
       </label>
 
-      <label
-        class="label_half"
-        for="adults"
-      >Adults
-        <select
-          v-model="adults"
-          name="adults"
-          class="select_half"
-        >
+      <label class="label_half" for="adults"
+        >Adults
+        <select v-model="adults" name="adults" class="select_half">
           <option
-            v-for="(adult) in searchform[0].adults"
+            v-for="adult in searchform[0].adults"
             :key="adult.id"
             :value="adult"
           >
@@ -152,92 +99,88 @@
           </option>
         </select>
       </label>
-      <label
-        class="label_half"
-        for="children"
-      >Children 0-17
-        <select
-          v-model="children"
-          name="children"
-          class="select_half"
-        >
+      <label class="label_half" for="children"
+        >Children 0-17
+        <select v-model="children" name="children" class="select_half">
           <option
-            v-for="(child) in searchform[0].children"
+            v-for="child in searchform[0].children"
             :key="child.id"
             :value="child"
           >
             {{ child }}
           </option>
-
         </select>
       </label>
 
-      <input
-        id="searchbtn"
-        type="submit"
-        value="Find Holiday"
-      >
+      <input id="searchbtn" type="submit" value="Find Holiday" />
     </form>
   </section>
 </template>
 
 <script>
-
-import { searchform } from '../data-json.json';
-
+import { searchform } from "../data-json.json";
 
 export default {
   name: "SearchForm",
   data() {
     return {
       searchform,
-      destinations:' ',
-      locations:' ',
-      date:' ',
-      month:' ',
-      year:' ',
-      duration:' ',
-      board:' ',
-      star:' ',
-      adults:' ',
-      children:' '
-    }
+      destinations: " ",
+      locations: " ",
+      date: " ",
+      month: " ",
+      year: " ",
+      duration: " ",
+      board: " ",
+      star: " ",
+      adults: " ",
+      children: " ",
+    };
   },
 
   methods: {
     onSubmit() {
-      if(this.destinations && this.locations && this.date && this.month && this.year && this.duration && this.board && this.star && this.adults && this.children ){
-
+      if (
+        this.destinations &&
+        this.locations &&
+        this.date &&
+        this.month &&
+        this.year &&
+        this.duration &&
+        this.board &&
+        this.star &&
+        this.adults &&
+        this.children
+      ) {
         const findHoliday = {
           destinations: this.destinations,
           locations: this.locations,
           date: this.date,
-          month:this.month,
-          year:this.year,
-          duration:this.duration,
-          board:this.board,
-          star:this.star,
-          adults:this.adults,
-          children:this.children
-        }
+          month: this.month,
+          year: this.year,
+          duration: this.duration,
+          board: this.board,
+          star: this.star,
+          adults: this.adults,
+          children: this.children,
+        };
 
-        this.$emit('review-submitted', findHoliday)
-        this.destinations = null
-        this.locations = null
-        this.date = null
-        this.month = null
-        this.year = null
-        this.duration = null
-        this.board = null
-        this.star = null
-        this.adults = null
-        this.children = null
+        this.$emit("review-submitted", findHoliday);
+        this.destinations = null;
+        this.locations = null;
+        this.date = null;
+        this.month = null;
+        this.year = null;
+        this.duration = null;
+        this.board = null;
+        this.star = null;
+        this.adults = null;
+        this.children = null;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" >
-</style>
+<style lang="scss"></style>

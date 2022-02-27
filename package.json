@@ -1,80 +1,34 @@
 {
-  "name": "travel-agency-vue",
+  "name": "travel-agency-vue-2",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8000",
+  
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^3.20.3",
-    "is-svg": "^4.3.2",
-    "vue": "^2.6.14",
-    "vue-router": "^3.5.3",
-    "vue-style-loader": "^4.1.3"
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.15",
-    "@vue/cli-plugin-eslint": "^4.5.15",
-    "@vue/cli-service": "^4.5.13",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
     "axios": "^0.25.0",
-    "babel-eslint": "^10.0.1",
-    "css-loader": "^6.5.1",
-    "eslint": "^6.8.0",
-    "eslint-plugin-vue": "^6.2.2",
-    "node-sass": "^7.0.1",
-    "postcss-svgo": "^5.0.3",
-    "sass": "^1.49.0",
+    "babel-eslint": "^10.1.0",
+    "css-loader": "^6.6.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.0.0",
+    "node-sass": "^6.0.1",
+    "prettier": "^2.2.1",
     "sass-loader": "^10.2.1",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "plugins": ["vuejs-accessibility"],
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended",
-      "plugin:vuejs-accessibility/recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint",
-      "sourceType": "module"
-    },
-    "rules": {
-      "strict" : ["error","global"],
-      "func-style":["error", "expression"],
-      "no-new-func":"error",
-      "no-param-reassign": "error",
-      "prefer-arrow-callback": "warn",
-      "arrow-parens": ["error", "always"],
-      "arrow-body-style": ["error", "as-needed"],
-      "new-cap": "error",
-      "no-invalid-this": "error",
-      "prefer-const":"error",
-      "prefer-destructuring":["error",{"array":true, "object":true},{"enforceForRenamedProperties":true}],
-      "no-unused-vars": "warn",
-      "no-console": "warn",
-      "func-names": "warn",
-      "no-process-exit": "warn",
-      "object-shorthand": "warn",
-      "class-methods-use-this": "error",
-      "no-var": "error",
-      "prefer-rest-params": "warn",
-      "no-eval":"error",
-      "no-implied-eval":"error",
-      "eqeqeq":"error",
-      "no-with":"error",
-      "no-plusplus":"error"
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "vue-style-loader": "^4.1.3"
+  }
 }

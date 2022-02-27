@@ -11,10 +11,7 @@
     <!---main content-->
     <main id="holiday-items">
       <!--HolidayPackage Item component -->
-      <transition-group
-        name="fade"
-        tag="div"
-      >
+      <transition-group name="fade" tag="div">
         <div
           v-for="holidaypackageitem in filteredPacks"
           :key="holidaypackageitem.id"
@@ -27,9 +24,8 @@
 </template>
 
 <script>
-
 import axios from "axios";
-import {seasons,ratings,locations, prices  } from '../data-json.json';
+import { seasons, ratings, locations, prices } from "../data-json.json";
 import HolidayPackageItem from "../components/HolidayPackageItem.vue";
 import FilterNav from "../components/FilterNav.vue";
 
@@ -37,21 +33,21 @@ export default {
   name: "HolidayPackages",
   components: {
     FilterNav,
-    HolidayPackageItem
+    HolidayPackageItem,
   },
-  data () {
+  data() {
     return {
       seasons,
       ratings,
       locations,
       prices,
       selected: " ",
-      holidaypackageitems:[],
-      count: 10
+      holidaypackageitems: [],
+      count: 10,
     };
   },
   computed: {
-    filteredPacks () {
+    filteredPacks() {
       if (!this.selected) {
         return this.holidaypackageitems;
       } else if (
@@ -96,48 +92,48 @@ export default {
       } else {
         return this.holidaypackageitems;
       }
-    }
+    },
   },
-  async created(){
-    const result = await axios.get('/api/holidaypackages');
+  async created() {
+    const result = await axios.get("/api/holidaypackages");
     const { data } = result;
     this.holidaypackageitems = data;
   },
   methods: {
-    itemsSearched (id) {
+    itemsSearched(id) {
       this.selected = id;
-    }
+    },
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-  .fade-enter-active {
-    animation: coming 1s;
-    animation-delay: 1s;
+.fade-enter-active {
+  animation: coming 1s;
+  animation-delay: 1s;
+  opacity: 0;
+}
+.fade-leave-active {
+  animation: going 1s;
+}
+@keyframes coming {
+  from {
+    transform: translateX(-50px);
     opacity: 0;
   }
-  .fade-leave-active {
-    animation: going 1s;
+  to {
+    transform: translateX(0px);
+    opacity: 1;
   }
-  @keyframes coming {
-    from {
-      transform: translateX(-50px);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0px);
-      opacity: 1;
-    }
+}
+@keyframes going {
+  from {
+    transform: translateX(0);
   }
-  @keyframes going {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50px);
-      opacity: 0;
-    }
+  to {
+    transform: translateX(-50px);
+    opacity: 0;
   }
+}
 </style>

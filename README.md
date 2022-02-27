@@ -1,4 +1,4 @@
-# travel-agency-vue
+# travel-agency-vue-2
 
 ## Project setup
 ```

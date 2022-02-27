@@ -6,10 +6,7 @@
       <span class="offerbox-price">{{ holidaypackageitem.price }}</span>
     </span>
     <figure>
-      <img
-        :src="holidaypackageitem.url"
-        :alt="holidaypackageitem.title"
-      >
+      <img :src="holidaypackageitem.url" :alt="holidaypackageitem.title" />
       <figcaption>
         <p>Location : {{ holidaypackageitem.location }}</p>
         <p>{{ holidaypackageitem.text }}</p>
@@ -28,13 +25,12 @@ export default {
   props: {
     holidaypackageitem: {
       type: Object,
-      default: null
-    }
+      default: null,
+    },
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
-<style lang="scss" >
-</style>
+<style lang="scss"></style>

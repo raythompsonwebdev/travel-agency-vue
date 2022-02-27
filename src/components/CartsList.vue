@@ -19,11 +19,9 @@
 
 <script>
 export default {
-    name: 'CartsListItem',
-    //props: ['products'],
-}
+  name: "CartsListItem",
+  //props: ['products'],
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

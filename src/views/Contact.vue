@@ -1,48 +1,30 @@
 <template>
   <div class="Contact">
-    <button
-      id="side-bar-btn"
-      @click="contactFunction"
-    >
-      Contact
-    </button>
+    <button id="side-bar-btn" @click="contactFunction">Contact</button>
 
     <!--contact details box-->
-    <aside
-      v-if="contactFunction"
-      id="contact-page-sidebar"
-      class="hide"
-    >
+    <aside v-if="contactFunction" id="contact-page-sidebar" class="hide">
       <ul id="contact-details">
         <li>
           <span>
-            <img
-              :src="'../assets/images/Telephone.png'"
-              :alt="'telephone-image'"
-            >
+            <img :src="telephoneImage" :alt="'telephone-image'" />
           </span>
           Phone:
           <a href="tel:123 436 7890">123 436 7890</a>
         </li>
         <li>
           <span>
-            <img
-              :src="'../assets/images/envelope.png'"
-              :alt="'envelope-image'"
-            >
+            <img :src="envelopeImage" :alt="'envelope-image'" />
           </span>
           Mail:
           <a href="mailto:info@travelagency.com">info@travelagency.com</a>
         </li>
         <li>
           <span>
-            <img
-              :src="'../assets/images/Address.png'"
-              :alt="'address-image'"
-            >
+            <img :src="addressImage" :alt="'address-image'" />
           </span>
           Address:
-          <br>Lorem Ipsum 1234 Dolo Sit Amet
+          <br />Lorem Ipsum 1234 Dolo Sit Amet
         </li>
       </ul>
     </aside>
@@ -50,13 +32,18 @@
     <main id="content2">
       <h1>Lorem ipsum dolor sit amet, consectetur</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
+        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
+        nostrum odio velit impedit vitae tenetur voluptates vero beatae
+        excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       </p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur voluptates vero beatae excepturi.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
+        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
+        nostrum odio velit impedit vitae tenetur voluptates vero beatae
+        excepturi.
       </p>
-      <br>
+      <br />
       <ContactForm @review-submitted="addReview" />
     </main>
     <div class="clearfix" />
@@ -65,20 +52,26 @@
 
 <script>
 import ContactForm from "../components/ContactForm.vue";
+import addressImage from "../assets/images/Address.png";
+import envelopeImage from "../assets/images/envelope.png";
+import telephoneImage from "../assets/images/Telephone.png";
 export default {
   name: "Contact",
   components: {
-    ContactForm
+    ContactForm,
   },
   data() {
     return {
       show: "true",
-      reviews: []
+      reviews: [],
+      addressImage: addressImage,
+      envelopeImage: envelopeImage,
+      telephoneImage: telephoneImage,
     };
   },
   methods: {
-    contactFunction (e) {
-        e.preventDefault();
+    contactFunction(e) {
+      e.preventDefault();
       const el = document.getElementById("contact-page-sidebar");
       const box = el.getAttribute("class");
       if (box === "hide") {
@@ -89,11 +82,10 @@ export default {
     },
     addReview(productReview) {
       this.reviews.push(productReview);
-    }
-  }
+    },
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" >
-</style>
+<style lang="scss"></style>

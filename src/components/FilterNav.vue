@@ -1,23 +1,11 @@
 <template>
-  <aside
-    v-if="searchFilterFunction"
-    id="filter-nav-sidebar"
-    class="hide"
-  >
-    <button
-      id="side-bar-btn"
-      @click="searchFilterFunction"
-    >
-      SIDE
-    </button>
+  <aside v-if="searchFilterFunction" id="filter-nav-sidebar" class="hide">
+    <button id="side-bar-btn" @click="searchFilterFunction">SIDE</button>
 
     <section id="seasons">
       <h1>Filter By Season</h1>
       <ul>
-        <li
-          v-for="season in seasons"
-          :key="season.id"
-        >
+        <li v-for="season in seasons" :key="season.id">
           <button
             @click="SearchItemBtn(season.title)"
             @mouseup="InlineButtonClickHandler()"
@@ -30,10 +18,7 @@
     <section id="locations">
       <h1>Filter By Location</h1>
       <ul>
-        <li
-          v-for="location in locations"
-          :key="location.id"
-        >
+        <li v-for="location in locations" :key="location.id">
           <button
             @click="SearchItemBtn(location.title)"
             @mouseup="InlineButtonClickHandler()"
@@ -46,10 +31,7 @@
     <section id="prices">
       <h1>Filter By Price</h1>
       <ul>
-        <li
-          v-for="price in prices"
-          :key="price.id"
-        >
+        <li v-for="price in prices" :key="price.id">
           <button
             @click="SearchItemBtn(price.title)"
             @mouseup="InlineButtonClickHandler()"
@@ -62,10 +44,7 @@
     <section id="ratings">
       <h1>Filter By Rating</h1>
       <ul>
-        <li
-          v-for="rating in ratings"
-          :key="rating.id"
-        >
+        <li v-for="rating in ratings" :key="rating.id">
           <button
             @click="SearchItemBtn(rating.title)"
             @mouseup="InlineButtonClickHandler()"
@@ -75,7 +54,7 @@
         </li>
       </ul>
     </section>
-    <br>
+    <br />
   </aside>
 </template>
 
@@ -85,23 +64,23 @@ export default {
   props: {
     seasons: {
       type: Array,
-      default: null
+      default: null,
     },
     prices: {
       type: Array,
-      default: null
+      default: null,
     },
     locations: {
       type: Array,
-      default: null
+      default: null,
     },
     ratings: {
       type: Array,
-      default: null
-    }
+      default: null,
+    },
   },
   methods: {
-    InlineButtonClickHandler () {
+    InlineButtonClickHandler() {
       //e.preventDefault();
       const slideoutMenu = document.querySelector("#filter-nav-sidebar");
       if (slideoutMenu.classList.contains("show")) {
@@ -110,7 +89,7 @@ export default {
         slideoutMenu.setAttribute("class", "show");
       }
     },
-    searchFilterFunction (event) {
+    searchFilterFunction(event) {
       event.preventDefault();
 
       const el = document.getElementById("filter-nav-sidebar");
@@ -125,12 +104,10 @@ export default {
     },
     SearchItemBtn(item) {
       this.$emit("seasonClick", item);
-
-    }
-  }
+    },
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" >
-</style>
+<style lang="scss"></style>
