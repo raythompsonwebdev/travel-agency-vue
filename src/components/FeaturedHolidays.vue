@@ -1,6 +1,5 @@
 <template>
   <!--Featured Holiday Package-->
-
   <section id="offers">
     <h2>Featured Holiday Package</h2>
 
@@ -10,13 +9,14 @@
       class="offerbox"
     >
       <figure>
-        <img :src="featuredholiday.url"> 
+        <img :src="featuredholiday.url" :alt="'images'" />
 
         <figcaption>
           <p>{{ featuredholiday.text }}</p>
           <p>
             from only
-            <span class="offerbox-price">{{ featuredholiday.price }}</span> per person
+            <span class="offerbox-price">{{ featuredholiday.price }}</span> per
+            person
           </p>
         </figcaption>
       </figure>
@@ -29,17 +29,14 @@
 <script>
 export default {
   name: "FeaturedHolidays",
-  //props: ["featuredholidayitems"]
   props: {
     featuredholidayitems: {
       type: Array,
-      default: null
-    }
-  }
+      default: null,
+    },
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-
-<style lang="scss" >
-</style>
+<style lang="scss"></style>

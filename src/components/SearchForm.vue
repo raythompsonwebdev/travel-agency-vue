@@ -2,320 +2,185 @@
   <section class="leftsidebox">
     <h2>Holiday Search</h2>
 
-    <form
-      id="search_form"
-      @submit.prevent="onSubmit"
-    >
-      <ul>
-        <li>
-          <label>Where are you going?</label>
-          <select 
-            v-model="locations" 
-            name="locations" 
-            class="destination1"            
+    <form id="search_form" @submit.prevent="onSubmit">
+      <label class="label_wide" for="locations">
+        Where are you going ?
+        <select v-model="locations" name="locations" class="select_wide">
+          <option
+            v-for="location in searchform[0].locations"
+            :key="location.id"
+            :value="location"
           >
-            <option value="Dubai">
-              Dubai
-            </option>
-            <option value="Jamaica">
-              Jamaica
-            </option> 
-            <option value="Paris">
-              Paris
-            </option>
-            <option value="Spain">
-              Spain
-            </option>
-            <option value="France">
-              France
-            </option>
-            <option value="London">
-              London
-            </option>
-            <option value="Rome">
-              Rome
-            </option>
-            <option value="Madrid">
-              Madrid
-            </option>
-          </select>
-        </li>
+            {{ location }}
+          </option>
+        </select>
+      </label>
 
-        <li class="time">
-          <label>When are you going?</label>
-          <select
-            v-model="date"
-            name="date"
-            class="time_1"
+      <label for="date" class="label_wide"
+        ><span> When are you going ? </span>
+        <select v-model="date" name="date" class="select_date_year">
+          <option
+            v-for="date in searchform[1].date"
+            :key="date.id"
+            :value="date"
           >
-            <option value="1">
-              1
-            </option>
-            <option value="2">
-              2
-            </option>
-            <option value="3">
-              3
-            </option>
-            <option value="4">
-              4
-            </option>
-            <option value="5">
-              5
-            </option>
-          </select>
+            {{ date }}
+          </option>
+        </select>
+        <select id="select_month" v-model="month" name="month">
+          <option
+            v-for="month in searchform[2].month"
+            :key="month.id"
+            :value="month"
+          >
+            {{ month }}
+          </option>
+        </select>
+        <select v-model="year" name="year" class="select_date_year">
+          <option
+            v-for="year in searchform[3].year"
+            :key="year.id"
+            :value="year"
+          >
+            {{ year }}
+          </option>
+        </select>
+      </label>
 
-          <select
-            id="time_2"
-            v-model="month"
-            name="month"
-          >
-            <option value="January">
-              January
-            </option>
-            <option value="February">
-              February
-            </option>
-            <option value="March">
-              March
-            </option>
-            <option value="April">
-              April
-            </option>
-            <option value="May">
-              May
-            </option>
-            <option value="June">
-              June
-            </option>
-            <option value="July">
-              July
-            </option>
-            <option value="August">
-              August
-            </option>
-            <option value="September">
-              September
-            </option>
-            <option value="October">
-              October
-            </option>
-            <option value="November">
-              November
-            </option>
-            <option value="December">
-              December
-            </option>
-          </select>
+      <label class="label_wide" for="duration">
+        Duration
 
-          <select
-            v-model="year"
-            name="year"
-            class="time_1"
+        <select v-model="duration" name="duration" class="select_wide">
+          <option
+            v-for="duration in searchform[4].duration"
+            :key="duration.id"
+            :value="duration"
           >
-            <option value="2020">
-              2020
-            </option>
-            <option value="2021">
-              2021
-            </option>
-            <option value="2022">
-              2022
-            </option>
-          </select>
-        </li>
+            {{ duration }}
+          </option>
+        </select>
+      </label>
 
-        <li>
-          <label>Duration</label>
-          <select
-            v-model="duration"
-            name="duration"
-            class="destination1"
+      <label class="label_half" for="board"
+        >Board
+        <select v-model="board" name="board" class="select_half">
+          <option
+            v-for="board in searchform[5].board"
+            :key="board.id"
+            :value="board"
           >
-            <option value="Day Trip">
-              Day Trip
-            </option>
-            <option value="Seven Days">
-              Two Days
-            </option>
-            <option value="Three Days">
-              Three Days
-            </option>
-            <option value="Seven Days">
-              Seven Days
-            </option>
-            <option value="One Month">
-              One Month
-            </option>
-          </select>
-        </li>
+            {{ board }}
+          </option>
+        </select>
+      </label>
 
-        <li class="misc_inner">
-          <label>Board</label>
-          <select
-            v-model="board"
-            name="board"
-            class="misc"
+      <label class="label_half" for="star"
+        >Star
+        <select v-model="star" name="star" class="select_half">
+          <option
+            v-for="star in searchform[6].star"
+            :key="star.id"
+            :value="star"
           >
-            <option value="Half">
-              Half
-            </option>
-            <option value="Full">
-              Full
-            </option>
-          </select>
-        </li>
-        <li class="misc_inner">
-          <label>Star</label>
-          <select
-            v-model="star"
-            name="star"
-            class="misc"
-          >
-            <option value="1 Star">
-              1 Star
-            </option>
-            <option value="2 Star">
-              2 Star
-            </option>
-            <option value="3 Star">
-              3 Star
-            </option>
-            <option value="4 Star">
-              4 Star
-            </option>
-            <option value="5 Star">
-              5 Star
-            </option>
-          </select>
-        </li>
+            {{ star }}
+          </option>
+        </select>
+      </label>
 
-        <li class="misc_inner">
-          <label>Adults</label>
-          <select
-            v-model="adults"
-            name="adults"
-            class="misc"
+      <label class="label_half" for="adults"
+        >Adults
+        <select v-model="adults" name="adults" class="select_half">
+          <option
+            v-for="adult in searchform[7].adults"
+            :key="adult.id"
+            :value="adult"
           >
-            <option value="1">
-              1
-            </option>
-            <option value="2">
-              2
-            </option>
-            <option value="3">
-              3
-            </option>
-            <option value="4">
-              5
-            </option>
-            <option value="5">
-              6
-            </option>
-          </select>
-        </li>
-        <li class="misc_inner">
-          <label>Children 0-17</label>
-          <select
-            v-model="children"
-            name="children"
-            class="misc"
+            {{ adult }}
+          </option>
+        </select>
+      </label>
+      <label class="label_half" for="children"
+        >Children 0-17
+        <select v-model="children" name="children" class="select_half">
+          <option
+            v-for="child in searchform[8].children"
+            :key="child.id"
+            :value="child"
           >
-            <option value="1">
-              1
-            </option>
-            <option value="2">
-              2
-            </option>
-            <option value="3">
-              3
-            </option>
-            <option value="4">
-              4
-            </option>
-            <option value="5">
-              5
-            </option>
-          </select>
-        </li>
-      </ul>
-      <input
-        id="searchbtn"
-        type="submit"
-        value="Find Holiday"
-      >
+            {{ child }}
+          </option>
+        </select>
+      </label>
+
+      <input id="searchbtn" type="submit" value="Find Holiday" />
     </form>
   </section>
 </template>
 
 <script>
+import { searchform } from "../data-json.json";
+
 export default {
-  name: "SearchForm",  
-
-  data: () => {
-
+  name: "SearchForm",
+  data() {
     return {
-
-      destinations:' ',
-      locations:' ',
-      date:' ',
-      month:' ',
-      year:' ',
-      duration:' ',
-      board:' ',
-      star:' ',
-      adults:' ',
-      children:' '
-
-    }
-
-
+      searchform,
+      destinations: " ",
+      locations: " ",
+      date: " ",
+      month: " ",
+      year: " ",
+      duration: " ",
+      board: " ",
+      star: " ",
+      adults: " ",
+      children: " ",
+    };
   },
 
   methods: {
-
     onSubmit() {
-
-      if(this.destinations && this.locations && this.date && this.month && this.year && this.duration && this.board && this.star && this.adults && this.children ){
-
-        let findHoliday = {
-
+      if (
+        this.destinations &&
+        this.locations &&
+        this.date &&
+        this.month &&
+        this.year &&
+        this.duration &&
+        this.board &&
+        this.star &&
+        this.adults &&
+        this.children
+      ) {
+        const findHoliday = {
           destinations: this.destinations,
           locations: this.locations,
           date: this.date,
-          month:this.month,
-          year:this.year,
-          duration:this.duration,
-          board:this.board,
-          star:this.star,
-          adults:this.adults,
-          children:this.children
+          month: this.month,
+          year: this.year,
+          duration: this.duration,
+          board: this.board,
+          star: this.star,
+          adults: this.adults,
+          children: this.children,
+        };
 
-        }
-        
-        this.$emit('review-submitted', findHoliday)
-
-        this.destinations = null
-        this.locations = null
-        this.date = null
-        this.month = null
-        this.year = null
-        this.duration = null
-        this.board = null
-        this.star = null
-        this.adults = null
-        this.children = null
-
+        this.$emit("review-submitted", findHoliday);
+        this.destinations = null;
+        this.locations = null;
+        this.date = null;
+        this.month = null;
+        this.year = null;
+        this.duration = null;
+        this.board = null;
+        this.star = null;
+        this.adults = null;
+        this.children = null;
       }
-    }
-
-    
-  }
-
+    },
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-
-<style lang="scss" >
-</style>
+<style lang="scss"></style>

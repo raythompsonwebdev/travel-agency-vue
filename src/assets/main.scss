@@ -2,6 +2,34 @@
 @import "partials/variables";
 @import "partials/mixins";
 
+.skipLink {
+  white-space: nowrap;
+  margin: 1em auto;
+  top: 0;
+  position: fixed;
+  left: 50%;
+  margin-left: -72px;
+  opacity: 0;
+}
+.skipLink:focus {
+  opacity: 1;
+  background-color: white;
+  padding: .5em;
+  border: 1px solid black;
+}
+
+#contact-form-errors{
+  width:50%;
+  display:block;
+  margin:auto;
+  list-style:none;
+  li{
+    line-height:30px;
+    display:block;
+    width:100%;
+  }
+}
+
 #wrapper {
   width: 100%;
   margin-left: auto;
@@ -16,7 +44,7 @@
     width: 100%;
     height: 60px;
     background-color: $colorwhite3;
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
     display: flex;
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
@@ -31,13 +59,14 @@
       width: auto;
       margin: 0;
       display:flex;
-      -webkit-box-align: end;
-      -ms-flex-align: end;
-      align-items: end;
+      -webkit-box-align: flex-end;
+      -ms-flex-align: flex-end;
+      align-items: flex-end;
       -webkit-flex: 0 1 auto;
       -ms-flex: 0 1 auto;
       flex: 0 1 auto;
       height: 60px;
+      margin-left:0.25em;
       h1{
         display:block;
         color:#000;
@@ -64,10 +93,10 @@
           margin-bottom:5px;
 
         }
-        
+
       }
       img {
-        
+
         display: block;
         margin: 0;
         padding: 0;
@@ -76,13 +105,13 @@
       }
     }
 
-    
+
 
     aside.contact {
       -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
       flex: 0 0 auto;
-      width: auto;
+      width: 33%;
       height: auto;
       margin: 0.25em 0 0 0;
       display: block;
@@ -137,7 +166,7 @@
         color: $colorgry;
         clear: both;
         text-align: center;
-        font-size:70%;
+        font-size:80%;
       }
     }
   }
@@ -257,39 +286,40 @@
           }
         }
       }
-    }    
+    }
 
     aside#language-box {
-      width: 50%;
+      width: 30%;
 
       form#languagebox {
         height: 40px;
         display: flex;
         label {
-          width: 35%;
+          width: 100%;
           font-size: 0.6em;
           line-height: 35px;
           height: 35px;
-          border: solid 1px $colorgry2;          
+          border: solid 1px $colorgry2;
           display: flex;
           text-indent: 0.2em;
         }
 
-        div#flagImg {
+        img#flagImg {
           width: 25%;
-          margin: 0;
-          height: 35px;
-          padding: 0.25em;
+          margin: 0.5em;
+          height: auto;
+          padding: 0;
         }
 
         select {
-          height: 35px;
           line-height: 35px;
           width: 40%;
           background-repeat: no-repeat;
           background-position: 5% 50%;
+          border:none;
+          font-size: 1em;
           option {
-            font-size: 0.75em;
+            font-size: 0.9em;
           }
         }
       }
@@ -330,19 +360,19 @@
     outline: none;
     color: $colorwhite2;
     text-align: center;
-    line-height: 40px;      
+    line-height: 40px;
     height: 100px;
     width: 60px;
     position: fixed;
     left: 83vw;
     top: 135px;
-    font-size: 0.9em; 
+    font-size: 0.9em;
     &:hover {
       cursor: pointer;
       background-color: $colorwhite2;
       color: $colorbg;
       border:1px solid $colorblue1;
-    }   
+    }
   }
 
   #side-bar-btn {
@@ -363,7 +393,7 @@
       color: $colorbg;
       border:1px solid $colorblue1;
     }
-    
+
   }
   #contact-bar-btn {
     position: fixed;
@@ -382,9 +412,9 @@
       color: $colorbg;
       border:1px solid $colorblue1;
     }
-   
+
   }
-  
+
   /*#home page sidebar*/
   #home-page-sidebar {
     position: fixed;
@@ -428,69 +458,68 @@
         width: 100%;
         margin-top: 5px;
         padding: 2%;
-        label {
-          width: 96%;
-          color: $colorblk;
-          height: 30px;
-          line-height: 30px;
-          padding: 0;
-          float: left;
-          margin: 0;
-          font-size: 0.9em;
-          font-weight: bold;
-        }
-        ul {
-          margin: 0;
-          padding: 0;
+        display:flex;
+        flex-flow:row wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .label_wide{
           width: 100%;
-          margin: auto;
-          li {
-            list-style: none;
-            margin: 0px;
-            height: auto;
-            width: 96%;
-            select.destination1 {
-              width: 100%;
-              height: 35px;
-              line-height: 35px;
-              border: 1px solid $colorgry2;
-            }
-            select.time_1 {
-              width: 27%;
-              height: 35px;
-              display: block;
-              float: left;
-              margin: 1% 1% 1% 0;
-              border: 1px solid $colorgry2;
-            }
-            select#time_2 {
-              width: 43%;
-              height: 35px;
-              display: inline-block;
-              float: none;
-              margin: 1% 0;
-              border: 1px solid $colorgry2;
-            }
-          }
-          li.misc_inner {
-            width: 48%;
-            display: inline-block;
-            select.misc {
-              width: 98%;
-              height: 35px;
-              display: block;
-              border: 1px solid $colorgry2;
-            }
-            label {
-              width: 96%;
-              height: 30px;
-              line-height: 30px;
-              font-size: 0.8em;
-              margin: 0;
-              padding: 0;
-            }
+          color: $colorblk;
+          padding: 0;
+          margin: 0;
+          font-size: 0.85em;
+          line-height:35px;
+          display:flex;
+          flex-flow: row wrap;
+          span{
+            display:block;
+            width:100%;
+            height:auto;
           }
         }
+
+        .label_half{
+          width: 48%;
+          display: block;
+          float:left;
+          font-size:0.85em;
+          line-height:35px;
+
+        }
+
+        .select_wide {
+          width: 100%;
+          height: 35px;
+          line-height: 35px;
+          border: 1px solid $colorgry2;
+        }
+
+        .select_date_year {
+          width: 29%;
+          height: 35px;
+          display: block;
+          float:left;
+          margin: 0;
+          border: 1px solid $colorgry2;
+        }
+
+        #select_month {
+          width: 39%;
+          height: 35px;
+          display: block;
+          margin: 0 0.15em;
+          border: 1px solid $colorgry2;
+          clear:both;
+        }
+
+        .select_half {
+          width: 100%;
+          height: 35px;
+          display: inline-block;
+          border: 1px solid $colorgry2;
+        }
+
         #searchbtn {
           @include gradient($colorsearchbtn, $colorsearchbtnroll);
           @include TranSition(all 0.2s linear ease-in-out);
@@ -514,6 +543,7 @@
       }
 
       div.destinations {
+        display:none;
         width: 91%;
         height: auto;
         background-color: $sideboxbordercolvar;
@@ -607,7 +637,7 @@
         margin: 0 auto;
 
         li {
-          display: block;            
+          display: block;
           font-size: 0.8em;
           width:100%;
           text-transform: capitalize;
@@ -639,7 +669,7 @@
             line-height: 25px;
             color: $colorblue2;
             letter-spacing: 0.02em;
-            border: none;            
+            border: none;
             &:hover {
               cursor: pointer;
               font-weight: bold;
@@ -712,6 +742,7 @@
     position: fixed;
     width: 100%;
     margin: 0;
+    font-size:1em;
     #contact-details {
       background-color: $colorwhite1;
       display: block;
@@ -792,7 +823,7 @@
       -webkit-justify-content: flex-start;
       -ms-flex-pack: flex-start;
       justify-content: flex-start;
-     
+
       h2 {
         font-size: 1em;
         color: $sideboxcolor1;
@@ -998,7 +1029,10 @@
       margin: 0;
       line-height: 25px;
       letter-spacing: 0.01em;
+
     }
+
+
     #contactform {
       width: 90%;
       margin: auto;
@@ -1009,15 +1043,14 @@
         padding: 0;
         li {
           margin: 5px 0 10px 0;
-          display:flex;
-          justify-content: space-between ;
           label {
-            width: 16%;
+            width: 100%;
             height: auto;
             font-weight: bold;
             line-height: 15px;
             font-size: 0.7em;
-            display:block;
+            display:flex;
+            justify-content: space-between ;
           }
           input {
             width: 75%;
@@ -1026,28 +1059,28 @@
             margin: 0;
             line-height: 35px;
             border: 1px solid $colorgry2;
-            display:block;
           }
           textarea {
             width: 75%;
             line-height: 1.5em;
             border: 1px solid $colorgry2;
-            display:block;
           }
           #contactbtn {
             width: 50%;
-            margin: auto;
+            margin: 0.5em auto;
             height: 30px;
             @include TranSition(all 0.2s linear ease-in-out);
             line-height: 30px;
             @include gradient($colorbtn2, $colorbtn3);
+            display: block;
             border: 0;
             &:hover {
               color: $colorwhite1;
               border: 0;
               @include gradient($colorbtn3, $colorbtn2);
+              cursor:pointer;
             }
-          }          
+          }
         }
       }
     }
@@ -1088,7 +1121,7 @@
         width: 100%;
         margin: 0;
         img {
-          width: 50%;            
+          width: 50%;
           display: block;
           margin:auto;
           height:auto;
@@ -1106,7 +1139,7 @@
             text-transform: capitalize;
             text-align:center;
           }
-          button {
+          a {
             width: 70%;
             @include borderRaduis(5px);
             text-align: center;
@@ -1317,16 +1350,17 @@ footer {
 
 @media only screen and (min-width: 1920px) {
   #wrapper {
-    min-height: 1220px; 
-    width:55%; 
-    
+    min-height: 1220px;
+    width:60%;
+
     header {
       height: 60px;
+      margin-bottom: 0.5em;
       /*Logo*/
       figure#logo {
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: end;
+        -webkit-box-align: flex-end;
+      -ms-flex-align: flex-end;
+      align-items: flex-end;
         img {
           display: block;
         }
@@ -1339,18 +1373,18 @@ footer {
           }
         }
       }
-  
+
       aside.contact {
         width: 12%;
         font-size: 0.8em;
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
             &:active {
@@ -1367,14 +1401,14 @@ footer {
         }
       }
     }
-    
+
     nav {
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-      
-  
+
+
       ul#navi {
         width: 84%;
         float: left;
@@ -1402,7 +1436,7 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           padding-top: 0;
           a {
@@ -1416,41 +1450,41 @@ footer {
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
         width: 20%;
         padding-left: 0.25em;
-  
+
         form#languagebox {
           height: 40px;
 
           label {
-            width: 35%;
             font-size: 0.6em;
           }
-  
-          div#flagImg {
-            width: auto;
+
+          img#flagImg {
+            width: 25%;
           }
-  
+
           select {
             line-height: 35px;
+            font-size: 1em;
             option {
-              font-size: 0.75em;
+              font-size: 0.9em;
             }
           }
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -1458,8 +1492,8 @@ footer {
       @include TranSition(all 1s ease);
       left: -650px;
       opacity: 0;
-    }  
-      
+    }
+
     /*mobile menu button*/
     #toggle-menu,
     button {
@@ -1476,8 +1510,8 @@ footer {
       display: none;
     }
 
-    
-    
+
+
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -1500,47 +1534,55 @@ footer {
           }
         }
         h2 {
-          font-size: 1em; 
+          font-size: 1em;
           width: 100%;
         }
         #search_form {
           padding: 2%;
-          label {
-            float: left;
-            font-size: 0.7em;
 
-          }
-          ul {
-            margin: 0;
-            li {
-              list-style: none;
+          .label_wide{
+            font-size: 0.9em;
+            span{
+              display:block;
 
-              select.destination1 {
-                width: 100%;
-              }
-              select.time_1 {
-                width: 27%;
-                float: left;
-              }
-              select#time_2 {
-                width: 43%;
-                margin: 1% 0;
-              }
-            }
-            li.misc_inner {
-              width: 48%;
-              select.misc {
-                width: 98%;
-              }
-              label {
-                width: 96%;
-                font-size: 0.7em;
-              }
             }
           }
+
+          .label_half{
+            width: 48%;
+            font-size:0.9em;
+
+          }
+
+          .select_wide {
+            height: 35px;
+            line-height: 35px;
+          }
+
+          .select_date_year {
+            width: 29%;
+            height: 35px;
+          }
+
+          #select_month {
+            width: 39%;
+            height: 35px;
+            margin: 0 0.15em;
+          }
+
+          .select_half {
+            height: 35px;
+          }
+
           #searchbtn {
-            width: 70%;
-            
+            width: 85%;
+            height: 35px;
+            line-height: 35px;
+            font-size:1.1em;
+            &:hover {
+              color: $colorwhite1;
+              border: 0;
+            }
           }
         }
 
@@ -1551,18 +1593,18 @@ footer {
           figure {
             width: 100%;
             img {
-              width: 30%;
+              width: 45%;
               margin-right: 2%;
             }
             figcaption {
               width: 50%;
               display: inline-block;
               h3 {
-                font-size: 0.7em;
+                font-size: 0.9em;
                 line-height:20px;
               }
               p {
-                font-size: 0.6em;
+                font-size: 0.8em;
                 float: none;
               }
             }
@@ -1570,7 +1612,7 @@ footer {
         }
       }
     }
-  
+
     #filter-nav-sidebar {
       position:unset;
       bottom:unset;
@@ -1598,17 +1640,17 @@ footer {
             height: 25px;
             margin: 0 0 2% 0;
             button {
-              font-size: 0.85em;             
-              
+              font-size: 0.85em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
-      width: 20%;      
+      width: 20%;
       position: unset;
       float: left;
 
@@ -1641,59 +1683,34 @@ footer {
         }
       }
     }
-    
+
     #contact-page-sidebar {
       width: 20%;
-      height: auto;
-      float: left;
-      margin: 1% 1% 0 0;
       position:unset;
       #contact-details {
-        background-color: #ffffff;
-        display: block;
-        width: 98%;
-        height: auto;
-        border: 4px $sideboxbg1 solid;
-        margin: 0;
-        padding: 10% 0;
-        list-style: none;
         font-size: 0.8em;
-        @include borderRaduis(5px);
         li {
           width: 97%;
-          line-height: 20px;
-          height: 80px;
-          color: $colorgry;
-          padding-right: 0.5em;
           font-size: 0.7em;
 
           &:first-line {
-            color: $sideboxcolor1a;
+
             font-weight: bold;
           }
           span {
-            float: left;
-            width: 15%;
-            display: block;
-            background-color: $colorwhite2;
+            width: 20%;
             height: 5rem;
             img {
               width: 41%;
-              height: auto;
-              display: block;
-              margin: 11% auto;
             }
           }
           a {
-            display: block;
-            line-height: 20px;            
-            background-color: unset;
-            color: $colorgry;
+            line-height: 20px;
           }
         }
       }
     }
-  
+
     #home-page-content {
       width: 70%;
       height: auto;
@@ -1705,7 +1722,7 @@ footer {
         font-weight: bold;
       }
 
-      
+
       #banner {
         width: 98%;
         height: auto;
@@ -1716,7 +1733,7 @@ footer {
         }
       }
 
-      
+
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -1769,13 +1786,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         text-align: center;
         line-height: 40px;
@@ -1885,22 +1902,21 @@ footer {
 
       }
       p {
-        font-size: 0.8em;
+        font-size: 0.85em;
 
       }
       /*contact form*/
       #contactform {
         width: 90%;
         margin: 1em auto;
-       
+
         ul {
           list-style: none;
           padding: 0;
           li {
             margin: 5px 0 10px 0;
             label {
-              line-height: 35px;
-              font-size: 0.75em;
+              font-size: 0.9em;
             }
             input {
               padding: 0;
@@ -1911,15 +1927,13 @@ footer {
             }
             #contactbtn {
               width: 50%;
-            }
-            #contactbtn:hover {
-              border: 0;
+              font-size:1.1em;
             }
           }
         }
       }
 
-      
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -1953,13 +1967,13 @@ footer {
               font-size: 0.9em;
               text-align:left;
             }
-            button {
+            a{
               font-size: 1em;
               line-height: 45px;
               margin: 0;
               &:hover {
-                font-weight: bold; 
-                margin: 0; 
+                font-weight: bold;
+                margin: 0;
               }
             }
           }
@@ -2046,14 +2060,15 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+      width: 60%;
+
       li {
         width: 16.570684%;
         a {
@@ -2077,14 +2092,15 @@ footer {
 
 @media only screen and (min-width: 1440px) and (max-width: 1919px) {
   #wrapper {
-    min-height: 1220px; 
-    width:60%; 
+    min-height: 1220px;
+    width:65%;
     header {
       height: 60px;
+      margin-bottom: 0.5em;
       figure#logo {
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: end;
+        -webkit-box-align: flex-end;
+      -ms-flex-align: flex-end;
+      align-items: flex-end;
         img {
           display: block;
         }
@@ -2097,21 +2113,21 @@ footer {
           }
         }
       }
-  
+
       aside.contact {
         width: 12%;
         font-size: 0.65em;
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
-            
+
             &:active {
               color: $colorwhite2;
             }
@@ -2126,14 +2142,14 @@ footer {
          }
       }
     }
-    
+
     nav {
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-      
-  
+
+
       ul#navi {
         width: 84%;
         float: left;
@@ -2161,7 +2177,7 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           padding-top: 0;
           a {
@@ -2176,41 +2192,41 @@ footer {
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
-        width: 18%;
+        width: 15%;
         padding-left: 0.25em;
-  
+
         form#languagebox {
           height: 40px;
 
           label {
-            width: 35%;
             font-size: 0.6em;
           }
-  
-          div#flagImg {
-            width: auto;
+
+          img#flagImg {
+            width: 25%;
           }
-  
+
           select {
             line-height: 35px;
+            font-size: 1em;
             option {
-              font-size: 0.75em;
+              font-size: 0.9em;
             }
           }
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -2218,26 +2234,26 @@ footer {
       @include TranSition(all 1s ease);
       left: -650px;
       opacity: 0;
-    }  
-      
-    
+    }
+
+
     #toggle-menu,
     button {
       display: none;
     }
 
-    
+
     #side-bar-btn {
       display: none;
     }
 
-    
+
     #contact-bar-btn {
       display: none;
     }
 
-    
-    
+
+
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -2260,47 +2276,55 @@ footer {
           }
         }
         h2 {
-          font-size: 1em; 
+          font-size: 1em;
           width: 100%;
         }
         #search_form {
           padding: 2%;
-          label {
-            float: left;
-            font-size: 0.7em;
 
-          }
-          ul {
-            margin: 0;
-            li {
-              list-style: none;
+          .label_wide{
+            font-size: 0.9em;
+            span{
+              display:block;
 
-              select.destination1 {
-                width: 100%;
-              }
-              select.time_1 {
-                width: 27%;
-                float: left;
-              }
-              select#time_2 {
-                width: 43%;
-                margin: 1% 0;
-              }
-            }
-            li.misc_inner {
-              width: 48%;
-              select.misc {
-                width: 98%;
-              }
-              label {
-                width: 96%;
-                font-size: 0.7em;
-              }
             }
           }
+
+          .label_half{
+            width: 48%;
+            font-size:0.9em;
+
+          }
+
+          .select_wide {
+            height: 35px;
+            line-height: 35px;
+          }
+
+          .select_date_year {
+            width: 29%;
+            height: 35px;
+          }
+
+          #select_month {
+            width: 39%;
+            height: 35px;
+            margin: 0 0.15em;
+          }
+
+          .select_half {
+            height: 35px;
+          }
+
           #searchbtn {
-            width: 70%;
-            
+            width: 85%;
+            height: 35px;
+            line-height: 35px;
+            font-size:1.1em;
+            &:hover {
+              color: $colorwhite1;
+              border: 0;
+            }
           }
         }
 
@@ -2311,18 +2335,18 @@ footer {
           figure {
             width: 100%;
             img {
-              width: 30%;
+              width: 40%;
               margin-right: 2%;
             }
             figcaption {
               width: 50%;
               display: inline-block;
               h3 {
-                font-size: 0.7em;
+                font-size: 0.9em;
                 line-height:20px;
               }
               p {
-                font-size: 0.6em;
+                font-size: 0.8em;
                 float: none;
               }
             }
@@ -2330,7 +2354,7 @@ footer {
         }
       }
     }
-  
+
     #filter-nav-sidebar {
       position:unset;
       bottom:unset;
@@ -2358,17 +2382,17 @@ footer {
             height: 25px;
             margin: 0 0 2% 0;
             button {
-              font-size: 0.85em;             
-              
+              font-size: 0.85em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
-      width: 20%;      
+      width: 20%;
       position: unset;
       float: left;
 
@@ -2401,59 +2425,34 @@ footer {
         }
       }
     }
-    
+
     #contact-page-sidebar {
       width: 20%;
-      height: auto;
-      float: left;
-      margin: 1% 1% 0 0;
       position:unset;
+      float: left;
       #contact-details {
-        background-color: #ffffff;
-        display: block;
-        width: 98%;
-        height: auto;
-        border: 4px $sideboxbg1 solid;
-        margin: 0;
-        padding: 10% 0;
-        list-style: none;
-        font-size: 0.8em;
-        @include borderRaduis(5px);
+        font-size: 1em;
         li {
-          width: 97%;
-          line-height: 20px;
-          height: 80px;
-          color: $colorgry;
-          padding-right: 0.5em;
-          font-size: 0.7em;
+          font-size: 0.75em;
 
           &:first-line {
-            color: $sideboxcolor1a;
             font-weight: bold;
           }
           span {
-            float: left;
-            width: 15%;
-            display: block;
-            background-color: $colorwhite2;
-            height: 5rem;
+            width: 20%;
             img {
               width: 41%;
-              height: auto;
-              display: block;
-              margin: 11% auto;
             }
           }
           a {
             display: block;
-            line-height: 20px;            
+
             background-color: unset;
-            color: $colorgry;
           }
         }
       }
     }
-  
+
     #home-page-content {
       width: 70%;
       height: auto;
@@ -2465,7 +2464,7 @@ footer {
         font-weight: bold;
       }
 
-      
+
       #banner {
         width: 98%;
         height: auto;
@@ -2476,7 +2475,7 @@ footer {
         }
       }
 
-      
+
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -2496,7 +2495,7 @@ footer {
         }
         div.offerbox {
           margin: 0.25em;
-          width: 32%;
+          width: 31%;
           figure {
             display: block;
             width: 100%;
@@ -2529,13 +2528,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         text-align: center;
         line-height: 40px;
@@ -2645,22 +2644,21 @@ footer {
 
       }
       p {
-        font-size: 0.8em;
+        font-size: 0.85em;
 
       }
       /*contact form*/
       #contactform {
         width: 90%;
         margin: 1em auto;
-       
+
         ul {
           list-style: none;
           padding: 0;
           li {
             margin: 5px 0 10px 0;
             label {
-              line-height: 35px;
-              font-size: 0.75em;
+              font-size: 0.9em;
             }
             input {
               padding: 0;
@@ -2671,15 +2669,14 @@ footer {
             }
             #contactbtn {
               width: 50%;
+              font-size:1.1em;
             }
-            #contactbtn:hover {
-              border: 0;
-            }
+
           }
         }
       }
 
-      
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -2691,7 +2688,7 @@ footer {
 
         }
         span.holidayprice {
-          font-size: 0.7em;
+          font-size: 0.8em;
           width: 30%;
           text-align: left;
           .offerbox-price {
@@ -2702,7 +2699,7 @@ footer {
           width: 100%;
           margin: 0;
           img {
-            width: 29%;
+            width: 20%;
             float: left;
             margin-right: 0.25em;
           }
@@ -2713,13 +2710,14 @@ footer {
               font-size: 0.9em;
               text-align:left;
             }
-            button {
+              a{
               font-size: 1em;
               line-height: 45px;
               margin: 0;
+              width:50%;
               &:hover {
-                font-weight: bold; 
-                margin: 0; 
+                font-weight: bold;
+                margin: 0;
               }
             }
           }
@@ -2806,14 +2804,15 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+      width: 60%;
+
       li {
         width: 16.570684%;
         a {
@@ -2837,17 +2836,16 @@ footer {
 
 @media only screen and (min-width: 1280px) and (max-width: 1439px) {
   #wrapper {
-    min-height: 1220px; 
-    width:65%; 
+    min-height: 1220px;
+    width:70%;
 
     header {
       height: 60px;
- 
-
+      margin-bottom: 0.5em;
       figure#logo {
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: end;
+        -webkit-box-align: flex-end;
+        -ms-flex-align: flex-end;
+        align-items: flex-end;
         width: auto;
         img {
           display: block;
@@ -2861,18 +2859,18 @@ footer {
           }
         }
       }
-  
+
       aside.contact {
         width: 13%;
         font-size: 0.8em;
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
             font-size: 0.8em;
@@ -2890,13 +2888,13 @@ footer {
         }
       }
     }
-    
+
     nav {
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-        
+
       ul#navi {
         width: 84%;
         float: left;
@@ -2926,12 +2924,12 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           padding-top: 0;
           a {
             padding-top:0;
-            font-size: 50%;
+            font-size: 60%;
             height: 40px;
             line-height:40px;
             &:hover {
@@ -2941,41 +2939,40 @@ footer {
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
-        width: 20%;
+        width: 16%;
         padding-left: 0.25em;
-  
+
         form#languagebox {
           height: 40px;
 
           label {
-            width: 35%;
             font-size: 0.6em;
           }
-  
-          div#flagImg {
-            width: auto;
+
+          img#flagImg {
+            width: 25%;
           }
-  
+
           select {
             line-height: 35px;
             option {
-              font-size: 0.75em;
+              font-size: 0.9em;
             }
           }
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -2983,26 +2980,26 @@ footer {
       @include TranSition(all 1s ease);
       left: -650px;
       opacity: 0;
-    }  
-      
-    
+    }
+
+
     #toggle-menu,
     button {
       display: none;
     }
 
-    
+
     #side-bar-btn {
       display: none;
     }
 
-    
+
     #contact-bar-btn {
       display: none;
     }
 
-    
-    
+
+
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -3025,47 +3022,55 @@ footer {
           }
         }
         h2 {
-          font-size: 1em; 
+          font-size: 1em;
           width: 100%;
         }
         #search_form {
           padding: 2%;
-          label {
-            float: left;
-            font-size: 0.7em;
 
-          }
-          ul {
-            margin: 0;
-            li {
-              list-style: none;
+          .label_wide{
+            font-size: 0.9em;
+            span{
+              display:block;
 
-              select.destination1 {
-                width: 100%;
-              }
-              select.time_1 {
-                width: 27%;
-                float: left;
-              }
-              select#time_2 {
-                width: 43%;
-                margin: 1% 0;
-              }
-            }
-            li.misc_inner {
-              width: 48%;
-              select.misc {
-                width: 98%;
-              }
-              label {
-                width: 96%;
-                font-size: 0.7em;
-              }
             }
           }
+
+          .label_half{
+            width: 48%;
+            font-size:0.9em;
+
+          }
+
+          .select_wide {
+            height: 35px;
+            line-height: 35px;
+          }
+
+          .select_date_year {
+            width: 29%;
+            height: 35px;
+          }
+
+          #select_month {
+            width: 39%;
+            height: 35px;
+            margin: 0 0.15em;
+          }
+
+          .select_half {
+            height: 35px;
+          }
+
           #searchbtn {
-            width: 70%;
-            
+            width: 85%;
+            height: 35px;
+            line-height: 35px;
+            font-size:1.1em;
+            &:hover {
+              color: $colorwhite1;
+              border: 0;
+            }
           }
         }
 
@@ -3076,18 +3081,18 @@ footer {
           figure {
             width: 100%;
             img {
-              width: 30%;
+              width: 45%;
               margin-right: 2%;
             }
             figcaption {
               width: 50%;
               display: inline-block;
               h3 {
-                font-size: 0.7em;
+                font-size: 0.85em;
                 line-height:20px;
               }
               p {
-                font-size: 0.6em;
+                font-size: 0.75em;
                 float: none;
               }
             }
@@ -3095,7 +3100,7 @@ footer {
         }
       }
     }
-  
+
     #filter-nav-sidebar {
       position:unset;
       bottom:unset;
@@ -3123,17 +3128,17 @@ footer {
             height: 25px;
             margin: 0 0 2% 0;
             button {
-              font-size: 0.85em;             
-              
+              font-size: 0.85em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
-      width: 20%;      
+      width: 20%;
       position: unset;
       float: left;
 
@@ -3166,59 +3171,35 @@ footer {
         }
       }
     }
-    
+
     #contact-page-sidebar {
       width: 20%;
-      height: auto;
-      float: left;
-      margin: 1% 1% 0 0;
       position:unset;
+      float: left;
       #contact-details {
-        background-color: #ffffff;
-        display: block;
         width: 98%;
-        height: auto;
-        border: 4px $sideboxbg1 solid;
-        margin: 0;
-        padding: 10% 0;
-        list-style: none;
-        font-size: 0.8em;
-        @include borderRaduis(5px);
+
         li {
           width: 97%;
-          line-height: 20px;
-          height: 80px;
-          color: $colorgry;
-          padding-right: 0.5em;
-          font-size: 0.7em;
+          font-size: 0.75em;
 
           &:first-line {
-            color: $sideboxcolor1a;
             font-weight: bold;
           }
           span {
-            float: left;
-            width: 15%;
-            display: block;
-            background-color: $colorwhite2;
-            height: 5rem;
+            width: 20%;
             img {
               width: 41%;
-              height: auto;
-              display: block;
-              margin: 11% auto;
             }
           }
           a {
-            display: block;
-            line-height: 20px;            
+
             background-color: unset;
-            color: $colorgry;
           }
         }
       }
     }
-  
+
     #home-page-content {
       width: 70%;
       height: auto;
@@ -3230,7 +3211,7 @@ footer {
         font-weight: bold;
       }
 
-      
+
       #banner {
         width: 98%;
         height: auto;
@@ -3241,7 +3222,7 @@ footer {
         }
       }
 
-      
+
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -3261,7 +3242,7 @@ footer {
         }
         div.offerbox {
           margin: 0.25em;
-          width: 32%;
+          width: 31%;
           figure {
             display: block;
             width: 100%;
@@ -3294,13 +3275,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         text-align: center;
         line-height: 40px;
@@ -3410,22 +3391,21 @@ footer {
 
       }
       p {
-        font-size: 0.8em;
+        font-size: 0.85em;
 
       }
       /*contact form*/
       #contactform {
         width: 90%;
         margin: 1em auto;
-       
+
         ul {
           list-style: none;
           padding: 0;
           li {
             margin: 5px 0 10px 0;
             label {
-              line-height: 35px;
-              font-size: 0.75em;
+              font-size: 0.9em;
             }
             input {
               padding: 0;
@@ -3437,14 +3417,12 @@ footer {
             #contactbtn {
               width: 50%;
             }
-            #contactbtn:hover {
-              border: 0;
-            }
+
           }
         }
       }
 
-      
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -3478,13 +3456,13 @@ footer {
               font-size: 0.9em;
               text-align:left;
             }
-            button {
+            a {
               font-size: 1em;
               line-height: 45px;
               margin: 0;
               &:hover {
-                font-weight: bold; 
-                margin: 0; 
+                font-weight: bold;
+                margin: 0;
               }
             }
           }
@@ -3571,14 +3549,15 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+      width: 60%;
+
       li {
         width: 16.570684%;
         a {
@@ -3602,14 +3581,15 @@ footer {
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
   #wrapper {
-    min-height: 1220px; 
-    width:70%; 
+    min-height: 1220px;
+    width:75%;
     header {
-      height: 60px;  
+      height: 60px;
+      margin-bottom: 0.5em;
       figure#logo {
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: end;
+        -webkit-box-align: flex-end;
+        -ms-flex-align: flex-end;
+        align-items: flex-end;
         width: auto;
         img {
           display: block;
@@ -3623,18 +3603,18 @@ footer {
           }
         }
       }
-  
+
       aside.contact {
         width: 14%;
         font-size: 0.8em;
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
             font-size:0.75em;
@@ -3652,13 +3632,13 @@ footer {
         }
       }
     }
-    
+
     nav {
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-        
+
       ul#navi {
         width: 84%;
         float: left;
@@ -3688,7 +3668,7 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           padding-top: 0;
           a {
@@ -3703,41 +3683,40 @@ footer {
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
-        width: 20%;
+        width: 18%;
         padding-left: 0.25em;
-  
+
         form#languagebox {
           height: 40px;
 
           label {
-            width: 35%;
             font-size: 0.5em;
           }
-  
-          div#flagImg {
-            width: auto;
+
+          img#flagImg {
+            width: 30%;
           }
-  
+
           select {
             line-height: 35px;
             option {
-              font-size: 0.75em;
+              font-size: 0.9em;
             }
           }
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -3745,26 +3724,26 @@ footer {
       @include TranSition(all 1s ease);
       left: -650px;
       opacity: 0;
-    }  
-      
-    
+    }
+
+
     #toggle-menu,
     button {
       display: none;
     }
 
-    
+
     #side-bar-btn {
       display: none;
     }
 
-    
+
     #contact-bar-btn {
       display: none;
     }
 
-    
-    
+
+
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -3787,47 +3766,53 @@ footer {
           }
         }
         h2 {
-          font-size: 1em; 
+          font-size: 1em;
           width: 100%;
         }
         #search_form {
           padding: 2%;
-          label {
-            float: left;
-            font-size: 0.7em;
 
-          }
-          ul {
-            margin: 0;
-            li {
-              list-style: none;
+          .label_wide{
+            font-size: 0.9em;
+            span{
+              display:block;
 
-              select.destination1 {
-                width: 100%;
-              }
-              select.time_1 {
-                width: 27%;
-                float: left;
-              }
-              select#time_2 {
-                width: 43%;
-                margin: 1% 0;
-              }
-            }
-            li.misc_inner {
-              width: 48%;
-              select.misc {
-                width: 98%;
-              }
-              label {
-                width: 96%;
-                font-size: 0.7em;
-              }
             }
           }
+
+          .label_half{
+            width: 48%;
+            font-size:0.9em;
+
+          }
+
+          .select_wide {
+            height: 35px;
+            line-height: 35px;
+          }
+
+          .select_date_year {
+            width: 29%;
+            height: 35px;
+          }
+
+          #select_month {
+            width: 39%;
+            height: 35px;
+            margin: 0 0.15em;
+          }
+
+          .select_half {
+            height: 35px;
+          }
+
           #searchbtn {
-            width: 70%;
-            
+            width: 85%;
+            font-size:1em;
+            &:hover {
+              color: $colorwhite1;
+              border: 0;
+            }
           }
         }
 
@@ -3838,18 +3823,18 @@ footer {
           figure {
             width: 100%;
             img {
-              width: 47%;
+              width: 45%;
               margin-right: 2%;
             }
             figcaption {
               width: 50%;
               display: inline-block;
               h3 {
-                font-size: 0.7em;
+                font-size: 0.8em;
                 line-height:20px;
               }
               p {
-                font-size: 0.6em;
+                font-size: 0.75em;
                 float: none;
               }
             }
@@ -3857,7 +3842,7 @@ footer {
         }
       }
     }
-  
+
     #filter-nav-sidebar {
       position:unset;
       bottom:unset;
@@ -3885,17 +3870,17 @@ footer {
             height: 25px;
             margin: 0 0 2% 0;
             button {
-              font-size: 0.85em;             
-              
+              font-size: 0.85em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
-      width: 20%;      
+      width: 20%;
       position: unset;
       float: left;
 
@@ -3928,59 +3913,35 @@ footer {
         }
       }
     }
-    
+
     #contact-page-sidebar {
       width: 20%;
-      height: auto;
-      float: left;
-      margin: 1% 1% 0 0;
       position:unset;
+      float: left;
       #contact-details {
-        background-color: #ffffff;
-        display: block;
-        width: 98%;
-        height: auto;
-        border: 4px $sideboxbg1 solid;
-        margin: 0;
-        padding: 10% 0;
-        list-style: none;
-        font-size: 0.8em;
-        @include borderRaduis(5px);
+
+
         li {
           width: 97%;
-          line-height: 20px;
-          height: 80px;
-          color: $colorgry;
-          padding-right: 0.5em;
           font-size: 0.7em;
 
           &:first-line {
-            color: $sideboxcolor1a;
             font-weight: bold;
           }
           span {
-            float: left;
-            width: 15%;
-            display: block;
-            background-color: $colorwhite2;
-            height: 5rem;
+            width: 20%;
             img {
               width: 41%;
-              height: auto;
-              display: block;
-              margin: 11% auto;
             }
           }
           a {
-            display: block;
-            line-height: 20px;            
+
             background-color: unset;
-            color: $colorgry;
           }
         }
       }
     }
-  
+
     #home-page-content {
       width: 70%;
       height: auto;
@@ -3992,7 +3953,7 @@ footer {
         font-weight: bold;
       }
 
-      
+
       #banner {
         width: 98%;
         height: auto;
@@ -4003,7 +3964,7 @@ footer {
         }
       }
 
-      
+
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -4023,7 +3984,7 @@ footer {
         }
         div.offerbox {
           margin: 0.25em;
-          width: 32%;
+          width: 30%;
           figure {
             display: block;
             width: 100%;
@@ -4056,13 +4017,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         text-align: center;
         line-height: 40px;
@@ -4172,22 +4133,21 @@ footer {
 
       }
       p {
-        font-size: 0.8em;
+        font-size: 0.85em;
 
       }
       /*contact form*/
       #contactform {
         width: 90%;
         margin: 1em auto;
-       
+
         ul {
           list-style: none;
           padding: 0;
           li {
             margin: 5px 0 10px 0;
             label {
-              line-height: 35px;
-              font-size: 0.75em;
+              font-size: 0.9em;
             }
             input {
               padding: 0;
@@ -4199,14 +4159,12 @@ footer {
             #contactbtn {
               width: 50%;
             }
-            #contactbtn:hover {
-              border: 0;
-            }
+
           }
         }
       }
 
-      
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -4240,13 +4198,13 @@ footer {
               font-size: 0.9em;
               text-align:left;
             }
-            button {
+            a{
               font-size: 1em;
               line-height: 45px;
               margin: 0;
               &:hover {
-                font-weight: bold; 
-                margin: 0; 
+                font-weight: bold;
+                margin: 0;
               }
             }
           }
@@ -4333,14 +4291,15 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+      width: 80%;
+
       li {
         width: 16.570684%;
         a {
@@ -4364,14 +4323,15 @@ footer {
 
 @media only screen and (min-width: 860px) and (max-width: 1023px) {
   #wrapper {
-    min-height: 1220px; 
-    width:80%; 
+    min-height: 1220px;
+    width:85%;
     header {
       height: 60px;
+      margin-bottom: 0.5em;
       figure#logo {
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: end;
+        -webkit-box-align: flex-end;
+        -ms-flex-align: flex-end;
+        align-items: flex-end;
         img {
           display: block;
         }
@@ -4384,18 +4344,18 @@ footer {
           }
         }
       }
-  
+
       aside.contact {
         width: 15%;
         font-size: 0.75em;
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
             font-size:0.8em;
@@ -4414,13 +4374,13 @@ footer {
         }
       }
     }
-    
+
     nav {
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-        
+
       ul#navi {
         width: 84%;
         float: left;
@@ -4449,7 +4409,7 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           padding-top: 0;
           a {
@@ -4463,41 +4423,41 @@ footer {
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
-        width: 20%;
+        width: 18%;
         padding-left: 0.25em;
-  
+
         form#languagebox {
           height: 40px;
 
           label {
-            width: 35%;
             font-size: 0.5em;
           }
-  
-          div#flagImg {
-            width: auto;
+
+          img#flagImg {
+            width: 30%;
           }
-  
+
           select {
             line-height: 35px;
+
             option {
-              font-size: 0.75em;
+              font-size: 0.9em;
             }
           }
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -4505,26 +4465,26 @@ footer {
       @include TranSition(all 1s ease);
       left: -650px;
       opacity: 0;
-    }  
-      
-    
+    }
+
+
     #toggle-menu,
     button {
       display: none;
     }
 
-    
+
     #side-bar-btn {
       display: none;
     }
 
-    
+
     #contact-bar-btn {
       display: none;
     }
 
-    
-    
+
+
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -4547,47 +4507,55 @@ footer {
           }
         }
         h2 {
-          font-size: 1em; 
+          font-size: 1em;
           width: 100%;
         }
         #search_form {
           padding: 2%;
-          label {
-            float: left;
-            font-size: 0.7em;
 
-          }
-          ul {
-            margin: 0;
-            li {
-              list-style: none;
+          .label_wide{
+            font-size: 0.85em;
+            span{
+              display:block;
 
-              select.destination1 {
-                width: 100%;
-              }
-              select.time_1 {
-                width: 27%;
-                float: left;
-              }
-              select#time_2 {
-                width: 43%;
-                margin: 1% 0;
-              }
-            }
-            li.misc_inner {
-              width: 48%;
-              select.misc {
-                width: 98%;
-              }
-              label {
-                width: 96%;
-                font-size: 0.7em;
-              }
             }
           }
+
+          .label_half{
+            width: 48%;
+            font-size:0.85em;
+
+          }
+
+          .select_wide {
+            height: 35px;
+            line-height: 35px;
+          }
+
+          .select_date_year {
+            width: 29%;
+            height: 35px;
+          }
+
+          #select_month {
+            width: 39%;
+            height: 35px;
+            margin: 0 0.15em;
+          }
+
+          .select_half {
+            height: 35px;
+          }
+
           #searchbtn {
-            width: 70%;
-            
+            width: 85%;
+            height: 35px;
+            line-height: 35px;
+            font-size:1.1em;
+            &:hover {
+              color: $colorwhite1;
+              border: 0;
+            }
           }
         }
 
@@ -4598,18 +4566,18 @@ footer {
           figure {
             width: 100%;
             img {
-              width: 47%;
+              width: 45%;
               margin-right: 2%;
             }
             figcaption {
               width: 50%;
               display: inline-block;
               h3 {
-                font-size: 0.7em;
+                font-size: 0.8em;
                 line-height:20px;
               }
               p {
-                font-size: 0.6em;
+                font-size: 0.75em;
                 float: none;
               }
             }
@@ -4617,7 +4585,7 @@ footer {
         }
       }
     }
-  
+
     #filter-nav-sidebar {
       position:unset;
       bottom:unset;
@@ -4645,17 +4613,17 @@ footer {
             height: 25px;
             margin: 0 0 2% 0;
             button {
-              font-size: 0.85em;             
-              
+              font-size: 0.85em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
-      width: 20%;      
+      width: 20%;
       position: unset;
       float: left;
 
@@ -4688,59 +4656,35 @@ footer {
         }
       }
     }
-    
+
     #contact-page-sidebar {
       width: 20%;
-      height: auto;
-      float: left;
-      margin: 1% 1% 0 0;
       position:unset;
+      float: left;
       #contact-details {
-        background-color: #ffffff;
-        display: block;
-        width: 98%;
-        height: auto;
-        border: 4px $sideboxbg1 solid;
-        margin: 0;
-        padding: 10% 0;
-        list-style: none;
-        font-size: 0.8em;
-        @include borderRaduis(5px);
+
         li {
           width: 97%;
-          line-height: 20px;
-          height: 80px;
-          color: $colorgry;
-          padding-right: 0.5em;
           font-size: 0.7em;
 
           &:first-line {
-            color: $sideboxcolor1a;
             font-weight: bold;
           }
           span {
-            float: left;
             width: 15%;
-            display: block;
-            background-color: $colorwhite2;
-            height: 5rem;
             img {
               width: 41%;
-              height: auto;
-              display: block;
-              margin: 11% auto;
             }
           }
           a {
             display: block;
-            line-height: 20px;            
+
             background-color: unset;
-            color: $colorgry;
           }
         }
       }
     }
-  
+
     #home-page-content {
       width: 70%;
       height: auto;
@@ -4752,7 +4696,7 @@ footer {
         font-weight: bold;
       }
 
-      
+
       #banner {
         width: 98%;
         height: auto;
@@ -4763,7 +4707,7 @@ footer {
         }
       }
 
-      
+
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -4816,13 +4760,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         text-align: center;
         line-height: 40px;
@@ -4932,22 +4876,21 @@ footer {
 
       }
       p {
-        font-size: 0.8em;
+        font-size: 0.85em;
 
       }
       /*contact form*/
       #contactform {
         width: 90%;
         margin: 1em auto;
-       
+
         ul {
           list-style: none;
           padding: 0;
           li {
             margin: 5px 0 10px 0;
             label {
-              line-height: 35px;
-              font-size: 0.75em;
+              font-size: 0.9em;
             }
             input {
               padding: 0;
@@ -4959,14 +4902,12 @@ footer {
             #contactbtn {
               width: 50%;
             }
-            #contactbtn:hover {
-              border: 0;
-            }
+
           }
         }
       }
 
-      
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -5000,13 +4941,13 @@ footer {
               font-size: 0.9em;
               text-align:left;
             }
-            button {
+            a {
               font-size: 1em;
               line-height: 45px;
               margin: 0;
               &:hover {
-                font-weight: bold; 
-                margin: 0; 
+                font-weight: bold;
+                margin: 0;
               }
             }
           }
@@ -5093,14 +5034,15 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+      width: 100%;
+
       li {
         width: 16.570684%;
         a {
@@ -5125,13 +5067,14 @@ footer {
 @media only screen and (min-width: 736px) and (max-width: 859px) {
   #wrapper {
     min-height: 1220px;
-    width:90%;  
+    width:90%;
     header {
       height: 60px;
+      margin-bottom: 0.5em;
       figure#logo {
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: end;
+        -webkit-box-align: flex-end;
+        -ms-flex-align: flex-end;
+        align-items: flex-end;
         img {
           display: block;
         }
@@ -5144,18 +5087,18 @@ footer {
           }
         }
       }
-  
+
       aside.contact {
         width: 16%;
         font-size: 0.65em;
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
             &:active {
@@ -5173,14 +5116,14 @@ footer {
         }
       }
     }
-    
+
     nav {
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-     
-  
+
+
       ul#navi {
         width: 84%;
         float: left;
@@ -5209,7 +5152,7 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           padding-top: 0;
           a {
@@ -5224,42 +5167,42 @@ footer {
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
-        width: 25%;
+        width: 20%;
         padding-left: 0.25em;
-  
+
         form#languagebox {
           height: 40px;
 
           label {
-            width: 35%;
             font-size: 0.5em;
             font-weight:bold;
           }
-  
-          div#flagImg {
-            width: auto;
+
+          img#flagImg {
+            width: 30%;
           }
-  
+
           select {
             line-height: 35px;
+            font-size: 0.8em;
             option {
-              font-size: 0.75em;
+              font-size: 0.8em;
             }
           }
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -5267,26 +5210,26 @@ footer {
       @include TranSition(all 1s ease);
       left: -650px;
       opacity: 0;
-    }  
-      
-    
+    }
+
+
     #toggle-menu,
     button {
       display: none;
     }
 
-    
+
     #side-bar-btn {
       display: none;
     }
 
-    
+
     #contact-bar-btn {
       display: none;
     }
 
-    
-    
+
+
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -5309,47 +5252,53 @@ footer {
           }
         }
         h2 {
-          font-size: 1em; 
+          font-size: 1em;
           width: 100%;
         }
         #search_form {
           padding: 2%;
-          label {
-            float: left;
-            font-size: 0.7em;
 
-          }
-          ul {
-            margin: 0;
-            li {
-              list-style: none;
+          .label_wide{
+            font-size: 0.8em;
+            span{
+              display:block;
 
-              select.destination1 {
-                width: 100%;
-              }
-              select.time_1 {
-                width: 27%;
-                float: left;
-              }
-              select#time_2 {
-                width: 43%;
-                margin: 1% 0;
-              }
-            }
-            li.misc_inner {
-              width: 48%;
-              select.misc {
-                width: 98%;
-              }
-              label {
-                width: 96%;
-                font-size: 0.7em;
-              }
             }
           }
+
+          .label_half{
+            width: 48%;
+            font-size:0.8em;
+
+          }
+
+          .select_wide {
+            height: 35px;
+            line-height: 35px;
+          }
+
+          .select_date_year {
+            width: 29%;
+            height: 35px;
+          }
+
+          #select_month {
+            width: 39%;
+            height: 35px;
+            margin: 0 0.15em;
+          }
+
+          .select_half {
+            height: 35px;
+          }
+
           #searchbtn {
-            width: 70%;
-            
+            width: 85%;
+            font-size:1em;
+            &:hover {
+              color: $colorwhite1;
+              border: 0;
+            }
           }
         }
 
@@ -5360,18 +5309,18 @@ footer {
           figure {
             width: 100%;
             img {
-              width: 47%;
+              width: 49%;
               margin-right: 2%;
             }
             figcaption {
-              width: 50%;
+              width: 48%;
               display: inline-block;
               h3 {
-                font-size: 0.7em;
+                font-size: 0.75em;
                 line-height:20px;
               }
               p {
-                font-size: 0.6em;
+                font-size: 0.7em;
                 float: none;
               }
             }
@@ -5379,7 +5328,7 @@ footer {
         }
       }
     }
-  
+
     #filter-nav-sidebar {
       position:unset;
       bottom:unset;
@@ -5407,17 +5356,17 @@ footer {
             height: 25px;
             margin: 0 0 2% 0;
             button {
-              font-size: 0.85em;             
-              
+              font-size: 0.85em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
-      width: 20%;      
+      width: 20%;
       position: unset;
       float: left;
 
@@ -5450,59 +5399,36 @@ footer {
         }
       }
     }
-    
+
     #contact-page-sidebar {
       width: 20%;
-      height: auto;
-      float: left;
-      margin: 1% 1% 0 0;
       position:unset;
+      float: left;
       #contact-details {
-        background-color: #ffffff;
-        display: block;
         width: 98%;
-        height: auto;
-        border: 4px $sideboxbg1 solid;
-        margin: 0;
-        padding: 10% 0;
-        list-style: none;
-        font-size: 0.8em;
-        @include borderRaduis(5px);
         li {
           width: 97%;
           line-height: 20px;
-          height: 80px;
-          color: $colorgry;
-          padding-right: 0.5em;
           font-size: 0.7em;
 
           &:first-line {
-            color: $sideboxcolor1a;
             font-weight: bold;
           }
           span {
-            float: left;
             width: 15%;
-            display: block;
-            background-color: $colorwhite2;
-            height: 5rem;
             img {
               width: 41%;
-              height: auto;
-              display: block;
-              margin: 11% auto;
             }
           }
           a {
-            display: block;
-            line-height: 20px;            
+
             background-color: unset;
-            color: $colorgry;
+
           }
         }
       }
     }
-  
+
     #home-page-content {
       width: 70%;
       height: auto;
@@ -5514,7 +5440,7 @@ footer {
         font-weight: bold;
       }
 
-      
+
       #banner {
         width: 98%;
         height: auto;
@@ -5525,7 +5451,7 @@ footer {
         }
       }
 
-      
+
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -5578,13 +5504,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         text-align: center;
         line-height: 40px;
@@ -5701,15 +5627,14 @@ footer {
       #contactform {
         width: 90%;
         margin: 1em auto;
-       
+
         ul {
           list-style: none;
           padding: 0;
           li {
             margin: 5px 0 10px 0;
             label {
-              line-height: 35px;
-              font-size: 0.75em;
+              font-size: 0.85em;
             }
             input {
               padding: 0;
@@ -5721,14 +5646,12 @@ footer {
             #contactbtn {
               width: 50%;
             }
-            #contactbtn:hover {
-              border: 0;
-            }
+
           }
         }
       }
 
-      
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -5762,13 +5685,13 @@ footer {
               font-size: 0.9em;
               text-align:left;
             }
-            button {
+            a {
               font-size: 1em;
               line-height: 45px;
               margin: 0;
               &:hover {
-                font-weight: bold; 
-                margin: 0; 
+                font-weight: bold;
+                margin: 0;
               }
             }
           }
@@ -5855,14 +5778,14 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+
       li {
         width: 16.570684%;
         a {
@@ -5886,14 +5809,14 @@ footer {
 
 @media only screen and (min-width: 600px) and (max-width: 735px) {
   #wrapper {
-    min-height: 1220px; 
+    min-height: 1220px;
     width:96%;
     header {
       height: 60px;
       figure#logo {
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: end;
+        -webkit-box-align: flex-end;
+        -ms-flex-align: flex-end;
+        align-items: flex-end;
         img {
           display: block;
         }
@@ -5906,18 +5829,18 @@ footer {
           }
         }
       }
-  
+
       aside.contact {
         width: 18%;
         font-size: 0.65em;
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
             &:active {
@@ -5930,18 +5853,18 @@ footer {
         }
         span#opening-time {
           line-height: 27px;
-          font-size:70%;
+          font-size:90%;
 
         }
       }
     }
-    
+
     nav {
       opacity: 1;
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-        
+
       ul#navi {
         width: 84%;
         float: left;
@@ -5955,7 +5878,7 @@ footer {
         opacity: 1;
         padding:0;
         li {
-          width: 16%;
+          width: 16.3%;
           float: left;
           margin-right: 0.1em;
           margin-bottom: 0;
@@ -5969,39 +5892,39 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           padding-top: 0;
           a {
-            padding-top:0.5em;
-            font-size: 50%;
+            padding-top:0;
+            font-size: 45%;
             height: 40px;
-            line-height: 15px;
+            line-height: 40px;
             &:hover {
               height: 40px;
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
-        width: 32%;
+        width: 23%;
         padding-left: 0.25em;
-  
+
         form#languagebox {
           height: 40px;
 
           label {
-            width: 35%;
-            font-size: 0.5em;
+            font-size: 0.6em;
           }
-  
-          div#flagImg {
-            width: auto;
+
+          img#flagImg {
+            width: 30%;
           }
-  
+
           select {
             line-height: 35px;
+            font-size: 0.75em;
             option {
               font-size: 0.75em;
             }
@@ -6009,14 +5932,14 @@ footer {
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -6024,26 +5947,26 @@ footer {
       @include TranSition(all 1s ease);
       left: -650px;
       opacity: 0;
-    }  
-      
-    
+    }
+
+
     #toggle-menu,
     button {
       display: none;
     }
 
-    
+
     #side-bar-btn {
       display: none;
     }
 
-    
+
     #contact-bar-btn {
       display: none;
     }
 
-    
-    
+
+
     #home-page-sidebar {
       width: 30%;
       height: auto;
@@ -6066,47 +5989,53 @@ footer {
           }
         }
         h2 {
-          font-size: 1em; 
+          font-size: 1em;
           width: 100%;
         }
         #search_form {
           padding: 2%;
-          label {
-            float: left;
-            font-size: 0.7em;
 
-          }
-          ul {
-            margin: 0;
-            li {
-              list-style: none;
+          .label_wide{
+            font-size: 0.75em;
+            span{
+              display:block;
 
-              select.destination1 {
-                width: 100%;
-              }
-              select.time_1 {
-                width: 27%;
-                float: left;
-              }
-              select#time_2 {
-                width: 43%;
-                margin: 1% 0;
-              }
-            }
-            li.misc_inner {
-              width: 48%;
-              select.misc {
-                width: 98%;
-              }
-              label {
-                width: 96%;
-                font-size: 0.7em;
-              }
             }
           }
+
+          .label_half{
+            width: 48%;
+            font-size:0.7em;
+
+          }
+
+          .select_wide {
+            height: 35px;
+            line-height: 35px;
+          }
+
+          .select_date_year {
+            width: 29%;
+            height: 35px;
+          }
+
+          #select_month {
+            width: 39%;
+            height: 35px;
+            margin: 0 0.15em;
+          }
+
+          .select_half {
+            height: 35px;
+          }
+
           #searchbtn {
-            width: 70%;
-            
+            width: 85%;
+            font-size:1em;
+            &:hover {
+              color: $colorwhite1;
+              border: 0;
+            }
           }
         }
 
@@ -6117,18 +6046,18 @@ footer {
           figure {
             width: 100%;
             img {
-              width: 47%;
+              width: 49%;
               margin-right: 2%;
             }
             figcaption {
-              width: 50%;
+              width: 48%;
               display: inline-block;
               h3 {
-                font-size: 0.7em;
+                font-size: 0.75em;
                 line-height:20px;
               }
               p {
-                font-size: 0.6em;
+                font-size: 0.7em;
                 float: none;
               }
             }
@@ -6136,7 +6065,7 @@ footer {
         }
       }
     }
-  
+
     #filter-nav-sidebar {
       position:unset;
       bottom:unset;
@@ -6164,17 +6093,17 @@ footer {
             height: 25px;
             margin: 0 0 2% 0;
             button {
-              font-size: 0.85em;             
-              
+              font-size: 0.85em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
-      width: 20%;      
+      width: 20%;
       position: unset;
       float: left;
 
@@ -6207,30 +6136,15 @@ footer {
         }
       }
     }
-    
+
     #contact-page-sidebar {
       width: 20%;
-      height: auto;
-      float: left;
-      margin: 1% 1% 0 0;
       position:unset;
+      float: left;
       #contact-details {
-        background-color: #ffffff;
-        display: block;
-        width: 98%;
-        height: auto;
-        border: 4px $sideboxbg1 solid;
-        margin: 0;
-        padding: 10% 0;
-        list-style: none;
-        font-size: 0.8em;
-        @include borderRaduis(5px);
+
         li {
           width: 97%;
-          line-height: 20px;
-          height: 80px;
-          color: $colorgry;
-          padding-right: 0.5em;
           font-size: 0.7em;
 
           &:first-line {
@@ -6238,28 +6152,19 @@ footer {
             font-weight: bold;
           }
           span {
-            float: left;
             width: 15%;
-            display: block;
-            background-color: $colorwhite2;
-            height: 5rem;
             img {
               width: 41%;
-              height: auto;
-              display: block;
-              margin: 11% auto;
             }
           }
           a {
-            display: block;
-            line-height: 20px;            
+
             background-color: unset;
-            color: $colorgry;
           }
         }
       }
     }
-  
+
     #home-page-content {
       width: 70%;
       height: auto;
@@ -6271,7 +6176,7 @@ footer {
         font-weight: bold;
       }
 
-      
+
       #banner {
         width: 98%;
         height: auto;
@@ -6282,7 +6187,7 @@ footer {
         }
       }
 
-      
+
       #offers {
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -6335,13 +6240,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         text-align: center;
         line-height: 40px;
@@ -6458,15 +6363,14 @@ footer {
       #contactform {
         width: 90%;
         margin: 1em auto;
-       
+
         ul {
           list-style: none;
           padding: 0;
           li {
             margin: 5px 0 10px 0;
             label {
-              line-height: 35px;
-              font-size: 0.75em;
+              font-size: 0.85em;
             }
             input {
               padding: 0;
@@ -6478,14 +6382,12 @@ footer {
             #contactbtn {
               width: 50%;
             }
-            #contactbtn:hover {
-              border: 0;
-            }
+
           }
         }
       }
 
-      
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -6519,13 +6421,13 @@ footer {
               font-size: 0.9em;
               text-align:left;
             }
-            button {
+            a {
               font-size: 1em;
               line-height: 45px;
               margin: 0;
               &:hover {
-                font-weight: bold; 
-                margin: 0; 
+                font-weight: bold;
+                margin: 0;
               }
             }
           }
@@ -6612,14 +6514,14 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+
       li {
         width: 16.570684%;
         a {
@@ -6648,11 +6550,10 @@ footer {
     min-height: 1220px;
     header {
       height: 60px;
-      margin-bottom: 0.5em;
       figure#logo {
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: end;
+        -webkit-box-align: flex-end;
+        -ms-flex-align: flex-end;
+        align-items: flex-end;
         img {
           display: block;
         }
@@ -6665,19 +6566,19 @@ footer {
           }
         }
       }
-  
+
       aside.contact {
-        width: auto;
+        width: 20%;
         line-height: 25px;
-        font-size: 0.65em;
+        font-size: 0.6em;
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
             &:active {
@@ -6690,11 +6591,12 @@ footer {
         }
         span#opening-time {
           line-height: 27px;
-          font-size:70%;
+          font-size:90%;
+          font-weight:bold;
         }
       }
     }
-    
+
     nav {
       height: 40px;
       opacity: 1;
@@ -6707,7 +6609,7 @@ footer {
         left: -650px;
         @include TranSition(all 1s ease);
       }
-  
+
       ul#navi {
         @include TranSition(all 1s ease);
         position: fixed;
@@ -6722,7 +6624,7 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           margin-bottom: 0.2em;
           a {
@@ -6732,40 +6634,39 @@ footer {
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
-        width: 30%;
-  
+        width: 25%;
+
         form#languagebox {
           height: 40px;
 
           label {
-            width: 35%;
             font-size: 0.6em;
           }
-  
-          div#flagImg {
-            width: auto;
+
+          img#flagImg {
+            width: 30%;
           }
-  
+
           select {
             line-height: 35px;
             option {
-              font-size: 0.75em;
+              font-size: 1em;
             }
           }
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -6774,7 +6675,7 @@ footer {
       left: -650px;
       opacity: 0;
     }
-  
+
     .hide {
       left: -100%;
       @include TranSition(all 1s ease);
@@ -6784,7 +6685,7 @@ footer {
       opacity: 1;
       @include TranSition(all 1s ease);
     }
-  
+
     #toggle-menu {
       height: 100px;
       width: 60px;
@@ -6795,7 +6696,7 @@ footer {
         cursor: pointer;
       }
     }
-  
+
     #side-bar-btn {
       height: 100px;
       width: 60px;
@@ -6813,8 +6714,8 @@ footer {
         cursor: pointer;
       }
     }
-    
-    
+
+
     #home-page-sidebar {
       width: 250px;
       .leftsidebox {
@@ -6829,50 +6730,54 @@ footer {
           font-size: 1.15em;
         }
         #search_form {
-          width: 100%;
+          padding: 2%;
 
-          label {
-            width: 96%;
+          .label_wide{
             font-size: 0.9em;
-          }
-          ul {
-            margin: 0;
-            padding: 0;
-            li {
+            span{
+              display:block;
 
-              width: 96%;
-              select.destination1 {
-                border: 1px solid $colorgry2;
-              }
-              select.time_1 {
-                width: 27%;
-
-              }
-              select#time_2 {
-                width: 43%;
-              }
-            }
-            li.misc_inner {
-              width: 48%;
-              display: inline-block;
-              select.misc {
-                width: 98%;
-              }
-              label {
-                width: 96%;
-                font-size: 0.8em;
-              }
             }
           }
+
+          .label_half{
+            width: 48%;
+            font-size:0.9em;
+
+          }
+
+          .select_wide {
+            height: 35px;
+            line-height: 35px;
+          }
+
+          .select_date_year {
+            width: 29%;
+            height: 35px;
+          }
+
+          #select_month {
+            width: 39%;
+            height: 35px;
+            margin: 0 0.15em;
+          }
+
+          .select_half {
+            height: 35px;
+          }
+
           #searchbtn {
             width: 85%;
+            height: 35px;
+            line-height: 35px;
             font-size:1.1em;
             &:hover {
               color: $colorwhite1;
+              border: 0;
             }
           }
         }
-  
+
         div.destinations {
           width: 91%;
           figure {
@@ -6894,10 +6799,10 @@ footer {
         }
       }
     }
-  
-    
+
+
     #filter-nav-sidebar {
-      position: fixed;    
+      position: fixed;
       width: 70%;
       height: auto;
       section#seasons,
@@ -6911,22 +6816,22 @@ footer {
         ul {
           width: 90%;
           padding: 1%;
-  
+
           li {
-            
+
             font-size: 0.8em;
-            
+
             button {
 
-              font-size: 0.8em;              
-              
+              font-size: 0.8em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
       position: fixed;
       width: 200px;
@@ -6939,7 +6844,7 @@ footer {
         opacity: 1;
         @include TranSition(all 1s ease);
       }
-  
+
       figure {
         margin: 0;
         padding: 0;
@@ -6949,29 +6854,29 @@ footer {
             font-size: 1.28em;
             line-height: 1.5em;
           }
-  
+
           span {
             margin-bottom: 1em;
             img {
               display: block;
             }
           }
-  
+
           p {
             font-size: 0.9em;
           }
         }
       }
     }
-    
+
     #contact-page-sidebar {
       position: fixed;
       #contact-details {
-        font-size: 0.8em;
+
         li {
           width: 97%;
           line-height: 20px;
-  
+
           &:first-line {
 
             font-weight: bold;
@@ -6991,26 +6896,26 @@ footer {
         }
       }
     }
-  
+
     #home-page-content {
       width: 100%;
       h1 {
         font-weight: bold;
       }
-  
-      
+
+
       #banner {
         width: 98%;
         img {
           width: 100%;
         }
       }
-  
-      
+
+
       #offers {
         width: 100%;
         height: auto;
-       
+
         h2 {
           font-size: 1.4em;
           height: 60px;
@@ -7046,13 +6951,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         font-size: 1em;
       }
@@ -7065,7 +6970,7 @@ footer {
         span.holidayprice {
           font-size: 0.9em;
           line-height: 40px;
-  
+
           .offerbox-price {
             display: inline-block;
           }
@@ -7078,11 +6983,11 @@ footer {
           }
           figcaption {
             margin-bottom: 0.5em;
-  
+
             h3 {
               font-size: 1em;
             }
-  
+
             p {
               font-size: 0.9em;
               line-height: 35px;
@@ -7099,7 +7004,7 @@ footer {
         }
       }
     }
-  
+
     #content2,
     #holiday-items {
       float: none;
@@ -7126,10 +7031,9 @@ footer {
           padding: 0;
           li {
             margin: 5px 0 10px 0;
-  
+
             label {
-              width: 16%;
-              font-size: 0.7em;
+              font-size: 0.8em;
             }
             input {
               width: 75%;
@@ -7145,11 +7049,11 @@ footer {
               &:hover {
                 border: 0;
               }
-            }          
+            }
           }
         }
       }
-  
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -7159,7 +7063,7 @@ footer {
         span.holidayprice {
           font-size: 0.9em;
 
-  
+
           .offerbox-price {
             display: inline-block;
           }
@@ -7168,15 +7072,15 @@ footer {
           width: 100%;
           margin: 0;
           img {
-            width: 50%;            
+            width: 50%;
           }
           figcaption {
             width: 100%;
-  
+
             p {
               font-size: 0.9em;
             }
-            button {
+            a {
               width: 70%;
               font-size: 1em;
               &:hover {
@@ -7186,19 +7090,19 @@ footer {
           }
         }
       }
-  
+
       .holiday_details_small {
 
         margin: 0.25em;
         padding: 0.25em;
-  
+
         h1 {
           font-size: 0.85em;
           width: 70%;
         }
         span.holidayprice {
           font-size: 0.6em;
-  
+
           .offerbox-price {
             font-size: 90%;
             line-height: 40px;
@@ -7206,12 +7110,12 @@ footer {
         }
         figure {
           display: inline-block;
-  
+
           img {
             width: 50%;
 
           }
-  
+
           figcaption {
 
             margin-bottom: 0.5em;
@@ -7227,7 +7131,7 @@ footer {
           }
         }
       }
-  
+
       .servicebox {
         width: 32%;
         h1 {
@@ -7235,7 +7139,7 @@ footer {
         }
         figure {
           width: 90%;
-  
+
           figcaption {
             p {
               font-size: 0.65em;
@@ -7252,14 +7156,14 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+
       li {
 
         width: 16.570684%;
@@ -7289,11 +7193,11 @@ footer {
     min-height: 1220px;
     header {
       height: 60px;
-      margin-bottom: 0.5em;
+
       figure#logo {
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: end;
+        -webkit-box-align: flex-end;
+        -ms-flex-align: flex-end;
+        align-items: flex-end;
         img {
           display: block;
         }
@@ -7306,19 +7210,19 @@ footer {
           }
         }
       }
-  
+
       aside.contact {
-        width: auto;
+        width: 25%;
         line-height: 25px;
         font-size: 0.6em;
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
             &:active {
@@ -7331,11 +7235,11 @@ footer {
         }
         span#opening-time {
           line-height: 27px;
-          font-size:70%;
+          font-size:85%;
         }
       }
     }
-    
+
     nav {
       height: 40px;
       opacity: 1;
@@ -7348,7 +7252,7 @@ footer {
         left: -650px;
         @include TranSition(all 1s ease);
       }
-  
+
       ul#navi {
         @include TranSition(all 1s ease);
         position: fixed;
@@ -7363,7 +7267,7 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           margin-bottom: 0.2em;
           a {
@@ -7373,40 +7277,40 @@ footer {
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
-        width: 35%;
-  
+        width: 28%;
+
         form#languagebox {
           height: 40px;
 
           label {
-            width: 35%;
             font-size: 0.6em;
           }
-  
-          div#flagImg {
-            width: auto;
+
+          img#flagImg {
+            width: 30%;
           }
-  
+
           select {
             line-height: 35px;
+            font-size: 1em;
             option {
-              font-size: 0.75em;
+              font-size: 0.7em;
             }
           }
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -7415,7 +7319,7 @@ footer {
       left: -650px;
       opacity: 0;
     }
-  
+
     .hide {
       left: -100%;
       @include TranSition(all 1s ease);
@@ -7425,7 +7329,7 @@ footer {
       opacity: 1;
       @include TranSition(all 1s ease);
     }
-  
+
     #toggle-menu {
       height: 100px;
       width: 60px;
@@ -7436,7 +7340,7 @@ footer {
         cursor: pointer;
       }
     }
-  
+
     #side-bar-btn {
       height: 100px;
       width: 60px;
@@ -7454,8 +7358,8 @@ footer {
         cursor: pointer;
       }
     }
-    
-    
+
+
     #home-page-sidebar {
       width: 250px;
       .leftsidebox {
@@ -7470,50 +7374,54 @@ footer {
           font-size: 1.15em;
         }
         #search_form {
-          width: 100%;
+          padding: 2%;
 
-          label {
-            width: 96%;
-            font-size: 0.9em;
-          }
-          ul {
-            margin: 0;
-            padding: 0;
-            li {
+          .label_wide{
+            font-size: 0.85em;
+            span{
+              display:block;
 
-              width: 96%;
-              select.destination1 {
-                border: 1px solid $colorgry2;
-              }
-              select.time_1 {
-                width: 27%;
-
-              }
-              select#time_2 {
-                width: 43%;
-              }
-            }
-            li.misc_inner {
-              width: 48%;
-              display: inline-block;
-              select.misc {
-                width: 98%;
-              }
-              label {
-                width: 96%;
-                font-size: 0.8em;
-              }
             }
           }
+
+          .label_half{
+            width: 48%;
+            font-size:0.85em;
+
+          }
+
+          .select_wide {
+            height: 35px;
+            line-height: 35px;
+          }
+
+          .select_date_year {
+            width: 29%;
+            height: 35px;
+          }
+
+          #select_month {
+            width: 39%;
+            height: 35px;
+            margin: 0 0.15em;
+          }
+
+          .select_half {
+            height: 35px;
+          }
+
           #searchbtn {
             width: 85%;
+            height: 35px;
+            line-height: 35px;
             font-size:1.1em;
             &:hover {
               color: $colorwhite1;
+              border: 0;
             }
           }
         }
-  
+
         div.destinations {
           width: 91%;
           figure {
@@ -7535,10 +7443,10 @@ footer {
         }
       }
     }
-  
-    
+
+
     #filter-nav-sidebar {
-      position: fixed;    
+      position: fixed;
       width: 70%;
       height: auto;
       section#seasons,
@@ -7552,22 +7460,22 @@ footer {
         ul {
           width: 90%;
           padding: 1%;
-  
+
           li {
-            
+
             font-size: 0.8em;
-            
+
             button {
 
-              font-size: 0.75em;              
-              
+              font-size: 0.75em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
       position: fixed;
       width: 200px;
@@ -7580,7 +7488,7 @@ footer {
         opacity: 1;
         @include TranSition(all 1s ease);
       }
-  
+
       figure {
         margin: 0;
         padding: 0;
@@ -7590,29 +7498,29 @@ footer {
             font-size: 1.28em;
             line-height: 1.5em;
           }
-  
+
           span {
             margin-bottom: 1em;
             img {
               display: block;
             }
           }
-  
+
           p {
             font-size: 0.9em;
           }
         }
       }
     }
-    
+
     #contact-page-sidebar {
       position: fixed;
       #contact-details {
-        font-size: 0.8em;
+
         li {
           width: 97%;
           line-height: 20px;
-  
+
           &:first-line {
 
             font-weight: bold;
@@ -7632,26 +7540,26 @@ footer {
         }
       }
     }
-  
+
     #home-page-content {
       width: 100%;
       h1 {
         font-weight: bold;
       }
-  
-      
+
+
       #banner {
         width: 98%;
         img {
           width: 100%;
         }
       }
-  
-      
+
+
       #offers {
         width: 100%;
         height: auto;
-       
+
         h2 {
           font-size: 1.3em;
           height: 60px;
@@ -7687,13 +7595,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         font-size: 1em;
       }
@@ -7706,7 +7614,7 @@ footer {
         span.holidayprice {
           font-size: 0.9em;
           line-height: 40px;
-  
+
           .offerbox-price {
             display: inline-block;
           }
@@ -7719,11 +7627,11 @@ footer {
           }
           figcaption {
             margin-bottom: 0.5em;
-  
+
             h3 {
               font-size: 1em;
             }
-  
+
             p {
               font-size: 0.9em;
               line-height: 35px;
@@ -7740,7 +7648,7 @@ footer {
         }
       }
     }
-  
+
     #content2,
     #holiday-items {
       float: none;
@@ -7767,10 +7675,9 @@ footer {
           padding: 0;
           li {
             margin: 5px 0 10px 0;
-  
+
             label {
-              width: 16%;
-              font-size: 0.7em;
+              font-size: 0.8em;
             }
             input {
               width: 75%;
@@ -7786,11 +7693,11 @@ footer {
               &:hover {
                 border: 0;
               }
-            }          
+            }
           }
         }
       }
-  
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -7800,7 +7707,7 @@ footer {
         span.holidayprice {
           font-size: 0.9em;
 
-  
+
           .offerbox-price {
             display: inline-block;
           }
@@ -7809,15 +7716,15 @@ footer {
           width: 100%;
           margin: 0;
           img {
-            width: 50%;            
+            width: 50%;
           }
           figcaption {
             width: 100%;
-  
+
             p {
               font-size: 0.09em;
             }
-            button {
+            a {
               width: 70%;
               font-size: 1em;
               &:hover {
@@ -7827,19 +7734,19 @@ footer {
           }
         }
       }
-  
+
       .holiday_details_small {
 
         margin: 0.25em;
         padding: 0.25em;
-  
+
         h1 {
           font-size: 0.85em;
           width: 70%;
         }
         span.holidayprice {
           font-size: 0.6em;
-  
+
           .offerbox-price {
             font-size: 90%;
             line-height: 40px;
@@ -7847,12 +7754,12 @@ footer {
         }
         figure {
           display: inline-block;
-  
+
           img {
             width: 50%;
 
           }
-  
+
           figcaption {
 
             margin-bottom: 0.5em;
@@ -7868,7 +7775,7 @@ footer {
           }
         }
       }
-  
+
       .servicebox {
         width: 32%;
         h1 {
@@ -7876,7 +7783,7 @@ footer {
         }
         figure {
           width: 90%;
-  
+
           figcaption {
             p {
               font-size: 0.65em;
@@ -7893,14 +7800,14 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+
       li {
 
         width: 16.570684%;
@@ -7930,11 +7837,11 @@ footer {
     min-height: 1220px;
     header {
       height: 60px;
-      margin-bottom: 0.5em;
+
       figure#logo {
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: end;
+        -webkit-box-align: flex-end;
+        -ms-flex-align: flex-end;
+        align-items: flex-end;
         img {
           display: block;
         }
@@ -7946,21 +7853,21 @@ footer {
             font-size:1.1em;
           }
         }
-        
+
       }
-  
+
       aside.contact {
-        width: auto;
+        width: 30%;
         line-height: 25px;
-        font-size: 0.6em;
+        font-size: 0.65em;
         span.tele {
           display: block;
           display: flex;
- 
+
           img {
             display: block;
           }
-  
+
           a#contact-number {
             width: 100%;
             &:active {
@@ -7973,12 +7880,13 @@ footer {
         }
         span#opening-time {
           line-height: 27px;
-          font-size:70%;
+          font-size:80%;
+          font-weight:bold;
 
         }
       }
     }
-    
+
     nav {
       height: 40px;
       opacity: 1;
@@ -7991,7 +7899,7 @@ footer {
         left: -650px;
         @include TranSition(all 1s ease);
       }
-  
+
       ul#navi {
         @include TranSition(all 1s ease);
         position: fixed;
@@ -8006,7 +7914,7 @@ footer {
             }
           }
         }
-  
+
         li:nth-of-type(2) {
           margin-bottom: 0.2em;
           a {
@@ -8016,40 +7924,39 @@ footer {
             }
           }
         }
-      }    
-  
+      }
+
       aside#language-box {
-        width: 45%;
-  
+        width: 35%;
+
         form#languagebox {
-          height: 40px;
+          height: 35px;
 
           label {
-            width: 35%;
             font-size: 0.6em;
           }
-  
-          div#flagImg {
+
+          img#flagImg {
             width: 25%;
           }
-  
+
           select {
             line-height: 35px;
             option {
-              font-size: 0.75em;
+              font-size: 0.9em;
             }
           }
         }
       }
     }
-  
+
     .fade-enter-active,
     .fade-leave-active {
       @include TranSition(all 1s ease);
     }
     .fade-enter {
       @include TranSition(all 5s ease-in-out);
-  
+
       left: 10px;
     }
     .fade-leave-to,
@@ -8058,7 +7965,7 @@ footer {
       left: -650px;
       opacity: 0;
     }
-  
+
     .hide {
       left: -100%;
       @include TranSition(all 1s ease);
@@ -8068,7 +7975,7 @@ footer {
       opacity: 1;
       @include TranSition(all 1s ease);
     }
-  
+
     #toggle-menu {
       height: 100px;
       width: 60px;
@@ -8079,7 +7986,7 @@ footer {
         cursor: pointer;
       }
     }
-  
+
     #side-bar-btn {
       height: 100px;
       width: 60px;
@@ -8097,8 +8004,8 @@ footer {
         cursor: pointer;
       }
     }
-    
-    
+
+
     #home-page-sidebar {
       width: 250px;
       .leftsidebox {
@@ -8113,51 +8020,56 @@ footer {
           font-size: 1.15em;
         }
         #search_form {
-          width: 100%;
+          padding: 2%;
 
-          label {
-            width: 96%;
-            font-size: 0.9em;
-          }
-          ul {
-            margin: 0;
-            padding: 0;
-            li {
+          .label_wide{
+            font-size: 0.85em;
+            span{
+              display:block;
 
-              width: 96%;
-              select.destination1 {
-                border: 1px solid $colorgry2;
-              }
-              select.time_1 {
-                width: 27%;
-
-              }
-              select#time_2 {
-                width: 43%;
-              }
-            }
-            li.misc_inner {
-              width: 48%;
-              display: inline-block;
-              select.misc {
-                width: 98%;
-              }
-              label {
-                width: 96%;
-                font-size: 0.8em;
-              }
             }
           }
+
+          .label_half{
+            width: 48%;
+            font-size:0.85em;
+
+          }
+
+          .select_wide {
+            height: 35px;
+            line-height: 35px;
+          }
+
+          .select_date_year {
+            width: 29%;
+            height: 35px;
+          }
+
+          #select_month {
+            width: 39%;
+            height: 35px;
+            margin: 0 0.15em;
+          }
+
+          .select_half {
+            height: 35px;
+          }
+
           #searchbtn {
             width: 85%;
+            height: 35px;
+            line-height: 35px;
             font-size:1.1em;
             &:hover {
               color: $colorwhite1;
+              border: 0;
             }
           }
         }
-  
+
         div.destinations {
+          display:none;
           width: 91%;
           figure {
             margin: 0;
@@ -8178,10 +8090,10 @@ footer {
         }
       }
     }
-  
-    
+
+
     #filter-nav-sidebar {
-      position: fixed;    
+      position: fixed;
       width: 70%;
       height: auto;
       section#seasons,
@@ -8195,22 +8107,22 @@ footer {
         ul {
           width: 90%;
           padding: 1%;
-  
+
           li {
-            
+
             font-size: 0.8em;
-            
+
             button {
 
-              font-size: 0.7em;              
-              
+              font-size: 0.7em;
+
             }
           }
         }
       }
     }
-  
-    
+
+
     #about-page-banner {
       position: fixed;
       width: 200px;
@@ -8223,7 +8135,7 @@ footer {
         opacity: 1;
         @include TranSition(all 1s ease);
       }
-  
+
       figure {
         margin: 0;
         padding: 0;
@@ -8233,29 +8145,29 @@ footer {
             font-size: 1.28em;
             line-height: 1.5em;
           }
-  
+
           span {
             margin-bottom: 1em;
             img {
               display: block;
             }
           }
-  
+
           p {
             font-size: 0.9em;
           }
         }
       }
     }
-    
+
     #contact-page-sidebar {
       position: fixed;
       #contact-details {
-        font-size: 0.8em;
+
         li {
           width: 97%;
           line-height: 20px;
-  
+
           &:first-line {
 
             font-weight: bold;
@@ -8275,26 +8187,26 @@ footer {
         }
       }
     }
-  
+
     #home-page-content {
       width: 100%;
       h1 {
         font-weight: bold;
       }
-  
-      
+
+
       #banner {
         width: 98%;
         img {
           width: 100%;
         }
       }
-  
-      
+
+
       #offers {
         width: 100%;
         height: auto;
-       
+
         h2 {
           font-size: 1.2em;
           height: 60px;
@@ -8330,13 +8242,13 @@ footer {
         /*offerboxend*/
       }
     }
-  
+
     label.error {
       font-size: 0.9em;
     }
     .BestDealsItem,
     .HolidayPackagesItem {
-      
+
       h1 {
         font-size: 1em;
       }
@@ -8349,7 +8261,7 @@ footer {
         span.holidayprice {
           font-size: 0.9em;
           line-height: 40px;
-  
+
           .offerbox-price {
             display: inline-block;
           }
@@ -8362,11 +8274,11 @@ footer {
           }
           figcaption {
             margin-bottom: 0.5em;
-  
+
             h3 {
               font-size: 1em;
             }
-  
+
             p {
               font-size: 0.9em;
               line-height: 35px;
@@ -8383,7 +8295,7 @@ footer {
         }
       }
     }
-  
+
     #content2,
     #holiday-items {
       float: none;
@@ -8410,9 +8322,8 @@ footer {
           padding: 0;
           li {
             margin: 5px 0 10px 0;
-  
+
             label {
-              width: 16%;
               font-size: 0.7em;
             }
             input {
@@ -8429,11 +8340,11 @@ footer {
               &:hover {
                 border: 0;
               }
-            }          
+            }
           }
         }
       }
-  
+
       .holiday_details {
         display: flex;
         flex-flow: row wrap;
@@ -8443,7 +8354,7 @@ footer {
         span.holidayprice {
           font-size: 0.85em;
 
-  
+
           .offerbox-price {
             display: inline-block;
           }
@@ -8452,15 +8363,15 @@ footer {
           width: 100%;
           margin: 0;
           img {
-            width: 50%;            
+            width: 50%;
           }
           figcaption {
             width: 100%;
-  
+
             p {
               font-size: 0.9em;
             }
-            button {
+            a {
               width: 70%;
               font-size: 1em;
               &:hover {
@@ -8470,19 +8381,19 @@ footer {
           }
         }
       }
-  
+
       .holiday_details_small {
 
         margin: 0.25em;
         padding: 0.25em;
-  
+
         h1 {
           font-size: 0.85em;
           width: 70%;
         }
         span.holidayprice {
           font-size: 0.6em;
-  
+
           .offerbox-price {
             font-size: 90%;
             line-height: 40px;
@@ -8490,12 +8401,12 @@ footer {
         }
         figure {
           display: inline-block;
-  
+
           img {
             width: 50%;
 
           }
-  
+
           figcaption {
 
             margin-bottom: 0.5em;
@@ -8511,7 +8422,7 @@ footer {
           }
         }
       }
-  
+
       .servicebox {
         width: 32%;
         h1 {
@@ -8519,7 +8430,7 @@ footer {
         }
         figure {
           width: 90%;
-  
+
           figcaption {
             p {
               font-size: 0.65em;
@@ -8536,14 +8447,14 @@ footer {
       }
     }
   }
-  
-  
+
+
   footer {
     height: 40px;
     ul {
       margin: 0 auto;
       padding: 0;
-  
+
       li {
 
         width: 16.570684%;

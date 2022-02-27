@@ -1,45 +1,42 @@
-
 <template>
   <aside id="language-box">
     <form id="languagebox">
-      <label for="langs">Language</label>
-      <div id="flagImg">
-        <img
-          :src="'/assets/images/flags/' + selected + '.jpg'"
-          @error="imgUrlAlt"
+      <label for="languageselectitems"
+        >Language :
+        <img id="flagImg" v-bind:src="defaultImage" :alt="'newimage'" />
+        <select
+          v-model="selected"
+          name="languageselectitems"
+          @click="itemsSearched($event.target.value)"
         >
-      </div>
-      <select
-        v-model="selected"
-        name="languageselectitems"
-        @click="itemsSearched($event.target.value);"
-      >
-        <option
-          v-for="(languageselectitem, i) in onChangeImg" 
-          :key="i"
-          :value="languageselectitem.value"
-        >
-          {{ languageselectitem.text }}
-        </option>
-      </select>
+          <option
+            v-for="(languageselectitem, i) in onChangeImg"
+            :key="i"
+            :value="languageselectitem.value"
+          >
+            {{ languageselectitem.text }}
+          </option>
+        </select>
+      </label>
     </form>
   </aside>
 </template>
 
 <script>
-import { languageselectitems } from '../data-json.json';
+import { languageselectitems } from "../data-json.json";
+//import defaultImage from "../assets/images/flags/default.jpg";
 export default {
   name: "LanguageSelect",
-  data: () => {
+  data() {
     return {
       selected: " ",
-      defaultImage: "../assets/images/flags/default.jpg",
+      defaultImage: require(`../assets/images/flags/default.jpg`),
       languageselectitems,
     };
   },
   computed: {
-    onChangeImg: function() {
-      if (this.selected === "nothing") {
+    onChangeImg() {
+      if (this.selected === "default") {
         return this.languageselectitems;
       } else if (this.selected === "United_Kingdom") {
         return this.languageselectitems;
@@ -56,20 +53,22 @@ export default {
       } else {
         return this.languageselectitems;
       }
-    }
+    },
   },
   methods: {
-    itemsSearched: function(id) {
+    itemsSearched(id) {
       this.selected = id;
     },
     imgUrlAlt(e) {
-      e.target.src = "../assets/images/flags/default.jpg";
-    }
-  }
+      e.target.src = `../assets/images/flags/default.jpg`;
+    },
+    getImgUrl(image) {
+      const g = require(`../assets/images/flags/${image}.jpg`);
+      return g;
+    },
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-
-<style lang="scss" >
-</style>
+<style lang="scss"></style>

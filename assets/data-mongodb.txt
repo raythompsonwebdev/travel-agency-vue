@@ -1,5 +1,0 @@
-db.products.save
-
-db.products.insert([   
-     
-])

@@ -1,0 +1,81 @@
+/* eslint-disable prefer-destructuring */
+<template>
+  <div class="Home page">
+    <div class="Home page">
+      <button id="side-bar-btn" @click="sideBarFunction">SIDE</button>
+      <!--Leftside-->
+      <aside id="home-page-sidebar" class="hide">
+        <!---Search form-->
+        <SearchForm />
+        <!-- Destinations -->
+        <Destinations :destinationitems="destinationitems" />
+        <br />
+        <br />
+        <br />
+      </aside>
+
+      <main id="home-page-content">
+        <!--Banner Image-->
+        <figure id="banner">
+          <img :src="bannerImage" :alt="'banner-image'" />
+        </figure>
+
+        <!-- Featured Holiday Packages -->
+        <FeaturedHolidays :featuredholidayitems="featuredholidayitems" />
+      </main>
+
+      <div class="clearfix" />
+    </div>
+  </div>
+</template>
+
+<script>
+import SearchForm from "../components/SearchForm.vue";
+import Destinations from "../components/Destinations.vue";
+import FeaturedHolidays from "../components/FeaturedHolidays.vue";
+import bannerImage from "../assets/images/travel-agency-website-banner-image.jpg";
+import axios from "axios";
+
+export default {
+  name: "HomePage",
+  components: {
+    Destinations,
+    FeaturedHolidays,
+    SearchForm,
+  },
+  data() {
+    return {
+      destinationitems: [],
+      featuredholidayitems: [],
+      //homepageitems:[],
+      show: true,
+      bannerImage: bannerImage,
+    };
+  },
+  async created() {
+    const result = await axios.get("/api/home");
+
+    const { data } = result;
+
+    // eslint-disable-next-line prefer-destructuring
+    this.destinationitems = data[0].destinationitems;
+    // eslint-disable-next-line prefer-destructuring
+    this.featuredholidayitems = data[0].featuredholidayitems;
+  },
+  methods: {
+    sideBarFunction(event) {
+      event.preventDefault();
+      const el = document.getElementById("home-page-sidebar");
+      const box = el.getAttribute("class");
+      if (box === "hide") {
+        el.setAttribute("class", "show");
+      } else {
+        el.setAttribute("class", "hide");
+      }
+    },
+  },
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style lang="scss"></style>

@@ -1,21 +1,12 @@
-
 <template>
   <nav>
-    <button 
-      id="toggle-menu" 
-      @click="naviFunction"
-    >
-      Menu
-    </button>
-    <ul      
-      id="navi"
-      class="hide"
-    >
+    <button id="toggle-menu" @click="naviFunction">Menu</button>
+    <ul id="navi" class="hide">
       <li>
         <router-link
           to="/"
           class="nav-item r-item"
-          @click.native="InlineButtonClickHandler"
+          @click="InlineMenuButtonClickHandler()"
         >
           Home
         </router-link>
@@ -24,17 +15,16 @@
         <router-link
           to="/holidaypackages"
           class="nav-item r-item"
-          @click.native="InlineButtonClickHandler"
+          @mouseup="InlineMenuButtonClickHandler()"
         >
-          Holiday
-          Packages
+          Holiday Packages
         </router-link>
       </li>
       <li>
         <router-link
           to="/bestdeals"
           class="nav-item r-item"
-          @click.native="InlineButtonClickHandler"
+          @mouseup="InlineMenuButtonClickHandler()"
         >
           BestDeal
         </router-link>
@@ -43,7 +33,7 @@
         <router-link
           to="/services"
           class="nav-item r-item"
-          @click.native="InlineButtonClickHandler"
+          @mouseup="InlineMenuButtonClickHandler()"
         >
           Services
         </router-link>
@@ -52,7 +42,7 @@
         <router-link
           to="/about"
           class="nav-item r-item"
-          @click.native="InlineButtonClickHandler"
+          @mouseup="InlineMenuButtonClickHandler()"
         >
           AboutUs
         </router-link>
@@ -61,7 +51,7 @@
         <router-link
           to="/contact"
           class="nav-item r-item"
-          @click.native="InlineButtonClickHandler"
+          @mouseup="InlineMenuButtonClickHandler()"
         >
           Contact
         </router-link>
@@ -75,38 +65,36 @@
 <script>
 import LanguageSelect from "../components/LanguageSelect.vue";
 export default {
-  name:'NavBar',
+  name: "TravelNav",
   components: {
     LanguageSelect,
   },
   methods: {
-    InlineButtonClickHandler: function(e) {
+    naviFunction(e) {
       e.preventDefault();
-      var slideoutMenu = document.querySelector("#navi");
-      
-      if (slideoutMenu.classList.contains("show")) {
-        slideoutMenu.setAttribute("class", "hide");
-      } else {
-        slideoutMenu.setAttribute("class", "show");
-      }
-    },    
-    naviFunction: function(event) {
-      event.preventDefault();
-      var slideoutNav = document.querySelector("#navi");
+      const slideoutNav = document.getElementById("navi");
       if (slideoutNav.classList.contains("show")) {
         slideoutNav.setAttribute("class", "hide");
       } else {
         slideoutNav.setAttribute("class", "show");
-      }      
+      }
     },
-    
-    
-       
-  }, 
-   
-}
+    InlineMenuButtonClickHandler(e) {
+      // eslint-disable-next-line no-console
+      console.log(e);
+      //e.preventDefault();
+      // let slideoutMenu = document.getElementById("navi");
+
+      // let box = slideoutMenu.getAttribute("class");
+      // if (box == "hide") {
+      //   slideoutMenu.setAttribute("class", "show");
+      // } else {
+      //   slideoutMenu.setAttribute("class", "hide");
+      // }
+    },
+  },
+};
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
-<style lang="scss" >
-</style>
+<style lang="scss"></style>
