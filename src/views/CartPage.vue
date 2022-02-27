@@ -15,7 +15,7 @@
 import axios from "axios";
 //import CartsList from '../components/CartsList.vue';
 export default {
-  name: "Cart",
+  name: "CartPage",
   // components: {
   //     CartList,
   // },

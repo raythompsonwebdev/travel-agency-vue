@@ -166,7 +166,7 @@ import customerService from "../assets/images/travel-agency-website-customer-ser
 import busTours from "../assets/images/travel-agency-website-bus-tours-image.jpg";
 import hotelRoom from "../assets/images/travel-agency-website-hotel-room-image.jpg";
 export default {
-  name: "Services",
+  name: "ServicePage",
   data() {
     return {
       show: "true",

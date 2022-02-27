@@ -16,7 +16,7 @@
           v-for="holidaypackageitem in filteredPacks"
           :key="holidaypackageitem.id"
         >
-          <HolidayPackageItem :holidaypackageitem="holidaypackageitem" />
+          <HolidayPackagesItem :holidaypackageitem="holidaypackageitem" />
         </div>
       </transition-group>
     </main>
@@ -25,15 +25,20 @@
 
 <script>
 import axios from "axios";
-import { seasons, ratings, locations, prices } from "../data-json.json";
-import HolidayPackageItem from "../components/HolidayPackageItem.vue";
+//import { seasons, ratings, locations, prices } from "../data-json.json";
+import { seasons } from "../data-json.json";
+import { ratings } from "../data-json.json";
+import { locations } from "../data-json.json";
+import { prices } from "../data-json.json";
+
+import HolidayPackagesItem from "../components/HolidayPackagesItem.vue";
 import FilterNav from "../components/FilterNav.vue";
 
 export default {
   name: "HolidayPackages",
   components: {
     FilterNav,
-    HolidayPackageItem,
+    HolidayPackagesItem,
   },
   data() {
     return {

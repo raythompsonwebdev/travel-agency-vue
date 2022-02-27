@@ -29,4 +29,4 @@ spare/
 .sass-cache/1*
 assets/
 
-src/components/data-json/*
+src/components/spare-components/*

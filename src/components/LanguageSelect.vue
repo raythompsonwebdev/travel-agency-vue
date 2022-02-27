@@ -3,11 +3,7 @@
     <form id="languagebox">
       <label for="languageselectitems"
         >Language :
-        <img
-          id="flagImg"
-          v-bind:src="'../assets/images/flags/default.jpg'"
-          :alt="'newimage'"
-        />
+        <img id="flagImg" v-bind:src="defaultImage" :alt="'newimage'" />
         <select
           v-model="selected"
           name="languageselectitems"
@@ -28,13 +24,13 @@
 
 <script>
 import { languageselectitems } from "../data-json.json";
-import defaultImage from "../assets/images/flags/default.jpg";
+//import defaultImage from "../assets/images/flags/default.jpg";
 export default {
   name: "LanguageSelect",
   data() {
     return {
       selected: " ",
-      defaultImage: defaultImage,
+      defaultImage: require(`../assets/images/flags/default.jpg`),
       languageselectitems,
     };
   },
@@ -67,7 +63,8 @@ export default {
       e.target.src = `../assets/images/flags/default.jpg`;
     },
     getImgUrl(image) {
-      require("../assets/images/flags/" + image + ".jpg");
+      const g = require(`../assets/images/flags/${image}.jpg`);
+      return g;
     },
   },
 };

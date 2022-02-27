@@ -56,7 +56,7 @@ import addressImage from "../assets/images/Address.png";
 import envelopeImage from "../assets/images/envelope.png";
 import telephoneImage from "../assets/images/Telephone.png";
 export default {
-  name: "Contact",
+  name: "ContactPage",
   components: {
     ContactForm,
   },

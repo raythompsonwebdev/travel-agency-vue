@@ -36,7 +36,7 @@
 
 <script>
 export default {
-  name: "Header",
+  name: "TravelFooter",
 };
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->

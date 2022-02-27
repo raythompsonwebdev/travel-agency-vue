@@ -1,8 +1,8 @@
 <template>
   <!--wrapper-->
   <div id="wrapper">
-    <Header />
-    <NavBar />
+    <TravelHeader />
+    <TravelNav />
     <!-- <transition name="router-anim">
         <router-view />
       </transition> -->
@@ -16,19 +16,19 @@
     <div class="clearfix" />
   </div>
 
-  <Footer />
+  <TravelFooter />
 </template>
 <script>
-import NavBar from "./components/NavBar";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import TravelNav from "./components/travel-nav";
+import TravelHeader from "./components/travel-header";
+import TravelFooter from "./components/travel-footer";
 
 export default {
   name: "App",
   components: {
-    NavBar,
-    Header,
-    Footer,
+    TravelNav,
+    TravelHeader,
+    TravelFooter,
   },
 };
 </script>

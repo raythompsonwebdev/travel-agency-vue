@@ -1,29 +1,24 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
+import HomePage from "../views/home-page.vue";
 import BestDeals from "../views/BestDeals";
-import BestDealsItem from "../views/BestDealsItem";
-import About from "../views/AboutUs";
+import BestDealsItem from "../components/BestDealsItem";
+import AboutPage from "../views/about-page";
 import HolidayPackages from "../views/HolidayPackages";
-import HolidayPackagesItem from "../views/HolidayPackagesItem";
-import Contact from "../views/Contact";
-import Services from "../views/Services";
+import HolidayPackagesItem from "../components/HolidayPackagesItem";
+import ContactPage from "../views/contact-page";
+import ServicePage from "../views/service-page";
 import NotFoundpage from "../views/NotFoundpage";
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "HomePage",
+    component: HomePage,
   },
   {
     path: "/about",
-    name: "aboutus",
-    component: About,
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    // component: () =>
-    //   import(/* webpackChunkName: "about" */ "./views/AboutUs.vue"),
+    name: "AboutPage",
+    component: AboutPage,
   },
   {
     path: "/bestdeals",
@@ -47,14 +42,14 @@ const routes = [
   },
   {
     path: "/contact",
-    name: "Contact",
-    component: Contact,
+    name: "ContactPage",
+    component: ContactPage,
   },
 
   {
     path: "/services",
-    name: "Services",
-    component: Services,
+    name: "ServicePage",
+    component: ServicePage,
   },
   {
     path: "/:pathMatch(.*)*",

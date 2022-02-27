@@ -65,7 +65,7 @@
 <script>
 import LanguageSelect from "../components/LanguageSelect.vue";
 export default {
-  name: "NavBar",
+  name: "TravelNav",
   components: {
     LanguageSelect,
   },

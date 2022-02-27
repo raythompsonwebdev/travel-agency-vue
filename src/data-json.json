@@ -138,7 +138,9 @@
         "London",
         "Rome",
         "Madrid"
-      ],
+      ]
+    },
+    {
       "date":[
         "1",
         "2",
@@ -171,7 +173,9 @@
         "29",
         "30",
         "31"
-      ],
+      ]
+    },
+    {
       "month":[       
         "January",      
         "February",      
@@ -185,15 +189,19 @@
         "October",      
         "November",      
         "December"      
-      ],
+      ]
+    },
+    {
       "year":[
         "2022",
         "2023",
         "2024",
         "2025",
         "2026"
-      ],
-      "duration":[
+      ]
+    },
+    {
+     "duration":[
         "Day Trip",
         "Two Days",
         "Three Days",
@@ -204,25 +212,33 @@
         "One Month",
         "3 Months",
         "Six Months"
-      ],
-      "board":[
+      ] 
+    },
+    {
+     "board":[
         "half",
         "full"
-      ],
+      ] 
+    },
+    {
       "star":[
         "1 Star",
         "2 Star",
         "3 Star",
         "4 Star",
         "5 Star"
-      ],
+      ] 
+    },
+    {
       "adults":[
         "1",
         "2",
         "3",
         "4",
         "5"
-      ],
+      ]
+    },
+    {
       "children":[
         "1",
         "2",

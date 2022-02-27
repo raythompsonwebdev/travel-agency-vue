@@ -20,7 +20,7 @@
         ><span> When are you going ? </span>
         <select v-model="date" name="date" class="select_date_year">
           <option
-            v-for="date in searchform[0].date"
+            v-for="date in searchform[1].date"
             :key="date.id"
             :value="date"
           >
@@ -29,7 +29,7 @@
         </select>
         <select id="select_month" v-model="month" name="month">
           <option
-            v-for="month in searchform[0].month"
+            v-for="month in searchform[2].month"
             :key="month.id"
             :value="month"
           >
@@ -38,7 +38,7 @@
         </select>
         <select v-model="year" name="year" class="select_date_year">
           <option
-            v-for="year in searchform[0].year"
+            v-for="year in searchform[3].year"
             :key="year.id"
             :value="year"
           >
@@ -52,7 +52,7 @@
 
         <select v-model="duration" name="duration" class="select_wide">
           <option
-            v-for="duration in searchform[0].duration"
+            v-for="duration in searchform[4].duration"
             :key="duration.id"
             :value="duration"
           >
@@ -65,7 +65,7 @@
         >Board
         <select v-model="board" name="board" class="select_half">
           <option
-            v-for="board in searchform[0].board"
+            v-for="board in searchform[5].board"
             :key="board.id"
             :value="board"
           >
@@ -78,7 +78,7 @@
         >Star
         <select v-model="star" name="star" class="select_half">
           <option
-            v-for="star in searchform[0].star"
+            v-for="star in searchform[6].star"
             :key="star.id"
             :value="star"
           >
@@ -91,7 +91,7 @@
         >Adults
         <select v-model="adults" name="adults" class="select_half">
           <option
-            v-for="adult in searchform[0].adults"
+            v-for="adult in searchform[7].adults"
             :key="adult.id"
             :value="adult"
           >
@@ -103,7 +103,7 @@
         >Children 0-17
         <select v-model="children" name="children" class="select_half">
           <option
-            v-for="child in searchform[0].children"
+            v-for="child in searchform[8].children"
             :key="child.id"
             :value="child"
           >

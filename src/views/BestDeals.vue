@@ -21,10 +21,14 @@
 </template>
 
 <script>
-import BestDealItem from "../components/BestDealItem.vue";
+import BestDealItem from "../components/BestDealsItem.vue";
 import FilterNav from "../components/FilterNav.vue";
 import axios from "axios";
-import { seasons, ratings, locations, prices } from "../data-json.json";
+//import { seasons, ratings, locations, prices } from "../data-json.json";
+import { seasons } from "../data-json.json";
+import { ratings } from "../data-json.json";
+import { locations } from "../data-json.json";
+import { prices } from "../data-json.json";
 
 export default {
   name: "BestDeals",

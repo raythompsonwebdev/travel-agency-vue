@@ -22,7 +22,7 @@
 <script>
 import phoneImage from "../assets/images/Telephone.png";
 export default {
-  name: "Header",
+  name: "TravelHeader",
   data() {
     return {
       phoneNumber: "0208-365-1452",

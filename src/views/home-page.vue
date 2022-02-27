@@ -37,7 +37,7 @@ import bannerImage from "../assets/images/travel-agency-website-banner-image.jpg
 import axios from "axios";
 
 export default {
-  name: "Home",
+  name: "HomePage",
   components: {
     Destinations,
     FeaturedHolidays,
