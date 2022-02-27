@@ -1,4 +1,6 @@
-# travel-agency-vue-2
+# travel-agency-vue
+
+Travel Agency website - design by phpjabber.com
 
 ## Project setup
 ```
