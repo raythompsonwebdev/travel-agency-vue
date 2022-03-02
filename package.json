@@ -1,8 +1,7 @@
 {
   "name": "travel-agency-vue",
   "version": "0.1.0",
-  "private": true,
-  "proxy": "http://localhost:8000/",
+  "private": true,  
   "browserslist": {
     "production": [
       ">0.2%",

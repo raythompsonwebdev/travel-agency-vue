@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import BestDealItem from "../components/BestDealsItem.vue";
+import BestDealItem from "../components/BestDealItem.vue";
 import FilterNav from "../components/FilterNav.vue";
 import axios from "axios";
 //import { seasons, ratings, locations, prices } from "../data-json.json";

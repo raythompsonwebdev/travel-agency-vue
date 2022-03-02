@@ -47,7 +47,7 @@ export default {
     return {
       destinationitems: [],
       featuredholidayitems: [],
-      //homepageitems:[],
+      //searchformdata:[],
       show: true,
       bannerImage: bannerImage,
     };
@@ -57,10 +57,11 @@ export default {
 
     const { data } = result;
 
-    // eslint-disable-next-line prefer-destructuring
-    this.destinationitems = data[0].destinationitems;
-    // eslint-disable-next-line prefer-destructuring
-    this.featuredholidayitems = data[0].featuredholidayitems;
+    const { destinationitems } = data[0];
+    const { featuredholidayitems } = data[0];
+
+    this.destinationitems = destinationitems;
+    this.featuredholidayitems = featuredholidayitems;
   },
   methods: {
     sideBarFunction(event) {

@@ -16,7 +16,7 @@
           v-for="holidaypackageitem in filteredPacks"
           :key="holidaypackageitem.id"
         >
-          <HolidayPackagesItem :holidaypackageitem="holidaypackageitem" />
+          <HolidayPackageItem :holidaypackageitem="holidaypackageitem" />
         </div>
       </transition-group>
     </main>
@@ -31,14 +31,14 @@ import { ratings } from "../data-json.json";
 import { locations } from "../data-json.json";
 import { prices } from "../data-json.json";
 
-import HolidayPackagesItem from "../components/HolidayPackagesItem.vue";
+import HolidayPackageItem from "../components/HolidayPackageItem.vue";
 import FilterNav from "../components/FilterNav.vue";
 
 export default {
   name: "HolidayPackages",
   components: {
     FilterNav,
-    HolidayPackagesItem,
+    HolidayPackageItem,
   },
   data() {
     return {
