@@ -8,7 +8,11 @@
     <figure>
       <img :src="holidaypackageitem.url" :alt="holidaypackageitem.title" />
       <figcaption>
-        <p>Location : {{ holidaypackageitem.location }}</p>
+        <p>
+          Location :
+          {{ holidaypackageitem.location }} &nbsp;&nbsp;&nbsp;&nbsp;Available :
+          {{ holidaypackageitem.available }}
+        </p>
         <p>{{ holidaypackageitem.text }}</p>
         <router-link :to="'/holidaypackages/' + holidaypackageitem.id">
           View Details

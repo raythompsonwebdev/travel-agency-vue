@@ -112,7 +112,7 @@
 
 <script>
 import bannerImage from "../assets/images/travel-agency-website-sidebar-banner-image-small.jpg";
-import bannerImageSmall from "../assets/images/travel-agency-website-sidebar-banner-image-small.jpg";
+import bannerImageSmall from "../assets/images/travel-agency-website-sidebar-banner-image.jpg";
 export default {
   name: "AboutPage",
   data() {

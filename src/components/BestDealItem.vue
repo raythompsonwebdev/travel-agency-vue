@@ -1,14 +1,14 @@
 <template>
   <article class="holiday_details_small">
-    <h1>{{ bestdealitem.title }}</h1>
-
-    <span class="holidayprice">
-      From
-      <span class="offerbox-price">{{ bestdealitem.price }}</span>
-    </span>
     <figure>
       <img :src="bestdealitem.url" :alt="bestdealitem.title" />
       <figcaption>
+        <h1>{{ bestdealitem.title }}</h1>
+
+        <span class="holidayprice">
+          From
+          <span class="offerbox-price">{{ bestdealitem.price }}</span>
+        </span>
         <p>Location: {{ bestdealitem.location }}.</p>
         <p>Available: {{ bestdealitem.month }}.</p>
         <router-link :to="'/bestdeals/' + bestdealitem.id">
