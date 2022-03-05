@@ -2,8 +2,16 @@
   <aside id="language-box">
     <form id="languagebox">
       <label for="languageselectitems"
-        >Language :
-        <img id="flagImg" v-bind:src="defaultImage" :alt="'newimage'" />
+        >Language :&nbsp;
+        <img
+          id="flagImg"
+          v-bind:src="
+            selected === ' '
+              ? defaultImage
+              : `./assets/images/flags/png/${selected}.png`
+          "
+          :alt="'newimage'"
+        />
         <select
           v-model="selected"
           name="languageselectitems"
@@ -61,10 +69,6 @@ export default {
     },
     imgUrlAlt(e) {
       e.target.src = `../assets/images/flags/default.jpg`;
-    },
-    getImgUrl(image) {
-      const g = require(`../assets/images/flags/${image}.jpg`);
-      return g;
     },
   },
 };

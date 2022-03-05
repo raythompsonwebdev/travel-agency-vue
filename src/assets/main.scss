@@ -610,7 +610,7 @@
     align-content: flex-start;
     z-index: 100;
     bottom: 0;
-    width: 70%;
+    width: 80%;
     margin-top: 0;
     @include TranSition(all 1s ease);
     height: auto;
@@ -1099,8 +1099,8 @@
       h1 {
         margin: 0;
         width: 100%;
-        line-height: 40px;
-        font-size: 0.9em;
+        line-height: 30px;
+        font-size: 1em;
         color: $colorblue2;
         align-self: flex-start;
         text-indent: 0.2em;
@@ -1124,9 +1124,9 @@
         width: 100%;
         margin: 0;
         img {
-          width: 50%;
+          width: 70%;
           display: block;
-          margin:auto;
+          margin:0.5em auto;
           height:auto;
         }
         figcaption {
@@ -1136,10 +1136,10 @@
 
           p {
             font-size: 0.75em;
-            line-height: 25px;
+            line-height: 20px;
             color: $colorgry2;
             text-transform: capitalize;
-            text-align:center;
+            text-align:left;
             margin-bottom: 0.2em;
           }
           a {
@@ -1169,13 +1169,12 @@
     }
 
     .holiday_details_small {
-      width: 100%;
       border: 2px $sideboxborder solid;
       @include borderRaduis(5px);
-      margin: 0.25em;
       padding: 0.25em;
-      float: left;
-      display: block;
+      float: none;
+      margin: 1em auto;
+      width:80%;
 
       h1 {
         margin: 0px;
@@ -1186,7 +1185,7 @@
         color: $colorblue3;
         font-weight: bold;
         width: 100%;
-        float: left;
+        text-align: center;
       }
       span.holidayprice {
         font-size: 0.6em;
@@ -1194,8 +1193,8 @@
         color: $colorgry2;
         font-weight: bold;
         width: 100%;
-        display: inline-block;
-        text-align: left;
+        display: block;
+        text-align: center;
 
         .offerbox-price {
           display: inline-block;
@@ -1209,20 +1208,20 @@
         width: 100%;
         margin: 0;
         padding: 0;
-        display: inline-block;
+        display: block;
 
         img {
-          width: 50%;
+
           display: block;
           margin: 0 auto;
         }
 
         figcaption {
           width: 100%;
-          display: inline-block;
+          display: block;
        
           p {
-            font-size: 0.9em;
+            font-size: 0.8em;
             text-transform: capitalize;
             width: 100%;
             margin: 0;
@@ -1231,7 +1230,7 @@
             text-align:center;
           }
           button {
-            width: 100%;
+            width: 50%;
             @include borderRaduis(5px);
             display: block;
             text-align: center;
@@ -1242,7 +1241,7 @@
             line-height: 35px;
             border: none;
             outline: none;
-            margin: 0.5em 0;
+            margin: 0.5em auto;
             @include gradient($colorbtn2, $colorbtn3);
             &:hover {
               color: $colorwhite1;
@@ -1354,7 +1353,7 @@ footer {
 @media only screen and (min-width: 1920px) {
   #wrapper {
     min-height: 1220px;
-    width:60%;
+    width:50%;
 
     header {
       height: 60px;
@@ -1414,7 +1413,7 @@ footer {
 
 
       ul#navi {
-        width: 84%;
+        width: 85%;
         float: left;
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
@@ -1457,7 +1456,7 @@ footer {
       }
 
       aside#language-box {
-        width: 20%;
+        width: 15%;
         padding-left: 0.25em;
 
         form#languagebox {
@@ -1465,15 +1464,17 @@ footer {
 
           label {
             font-size: 0.6em;
+            
           }
 
           img#flagImg {
-            width: 25%;
+            width: 20%;
           }
 
           select {
             line-height: 35px;
             font-size: 1em;
+            width:53%;
             option {
               font-size: 0.9em;
             }
@@ -1545,7 +1546,7 @@ footer {
           padding: 2%;
 
           .label_wide{
-            font-size: 0.9em;
+            font-size: 0.85em;
             span{
               display:block;
 
@@ -1987,14 +1988,37 @@ footer {
 
       /*Holiday best deals packages page*/
       .holiday_details_small {
-        width: 49%;
+        width: 48%;
         float: left;
+        // display: grid;
+        // grid-template-columns: repeat(5, 1fr);
+        // grid-template-rows: repeat(5, 1fr);
+        // grid-column-gap: 10px;
+        // grid-row-gap: 10px;
+
+        // .div1 { grid-area: 1 / 1 / 6 / 3; }
+        // .div2 { grid-area: 5 / 3 / 6 / 6; }
+        // .div3 { grid-area: 4 / 3 / 5 / 6; }
+        // .div4 { grid-area: 3 / 3 / 4 / 6; }
+        // .div5 { grid-area: 2 / 3 / 3 / 6; }
+        // .div6 { grid-area: 1 / 3 / 2 / 6; }
+        // <div class="parent">
+        // <div class="div1"> </div>
+        // <div class="div2"> </div>
+        // <div class="div3"> </div>
+        // <div class="div4"> </div>
+        // <div class="div5"> </div>
+        // <div class="div6"> </div>
+        // </div>
+
         h1 {
           line-height: 25px;
           font-size: 0.9em;
+          text-align:left;
+          
         }
-        span.holidayprice {
-
+        span.holidayprice {          
+          text-align:left;
           font-size: 0.85em;
           width: 100%;
           .offerbox-price {
@@ -2006,7 +2030,8 @@ footer {
         figure {
           width: 100%;
           img {
-            width: 45%;
+            width: 188px;
+            height:152px;
             float: left;
             margin: 0 0.25em 0 0;
           }
@@ -2287,7 +2312,7 @@ footer {
           padding: 2%;
 
           .label_wide{
-            font-size: 0.9em;
+            font-size: 0.85em;
             span{
               display:block;
 
@@ -2730,18 +2755,19 @@ footer {
 
       /*Holiday best deals packages page*/
       .holiday_details_small {
-        width: 49%;
+        width: 48%;
         float: left;
         h1 {
           line-height: 25px;
           font-size: 0.9em;
           width: 100%;
+          text-align:left;
 
         }
         span.holidayprice {
           line-height: 25px;
           font-size: 0.8em;
-
+          text-align:left;
           .offerbox-price {
             color: $colorbtn4;
             font-size: 90%;
@@ -2751,9 +2777,11 @@ footer {
         figure {
           width: 100%;
           img {
-            width: 45%;
+            width: 178px;
+            height:142px;
             float: left;
             margin: 0 0.25em 0 0;
+
           }
 
           figcaption {
@@ -2764,9 +2792,10 @@ footer {
               text-align:left;
             }
             button {
-              font-size: 1em;
+              font-size: 0.9em;
               line-height: 35px;
               margin: 0.5em 0;
+              width:70%;
               &:hover {
                 cursor: pointer;
               }
@@ -3479,9 +3508,11 @@ footer {
         float: left;
         h1 {
           font-size: 0.85em;
+          text-align:left;
         }
         span.holidayprice {
-          font-size: 0.65em;
+          font-size: 0.8em;
+          text-align:left;
           .offerbox-price {
             color: $colorbtn4;
             font-size: 90%;
@@ -3490,7 +3521,8 @@ footer {
         figure {
           width: 100%;
           img {
-            width: 45%;
+            width: 168px;
+            height:132px;
             float: left;
             margin: 0 0.25em 0 0;
           }
@@ -3500,13 +3532,14 @@ footer {
             display: inline-block;
 
             p {
-              font-size: 0.85em;
+              font-size: 0.8em;
               text-align:left;
             }
             button {
-              font-size: 1em;
+              font-size: 0.9em;
               line-height: 35px;
               margin: 0.5em 0;
+              width: 75%;
               &:hover {
                 cursor: pointer;
               }
@@ -4215,26 +4248,26 @@ footer {
         width: 48%;
         float: left;
         h1 {
-          line-height: 40px;
-          font-size: 0.75em;
+
+          font-size: 0.85em;
+          text-align:left;
           
         }
         span.holidayprice {
-          line-height: 40px;
-          font-size: 0.6em;
+          text-align:left;
+          font-size: 0.85em;
           
           .offerbox-price {
             color: $colorbtn4;
             font-size: 90%;
-            line-height: 40px;
           }
         }
         figure {
           width: 100%;
           img {
-            width: 45%;
+
             float: left;
-            margin: 0 0.25em 0 0;
+
           }
 
           figcaption {
@@ -4249,6 +4282,7 @@ footer {
               font-size: 1em;
               line-height: 35px;
               margin: 0.5em 0;
+              width: 75%;
               &:hover {
                 cursor: pointer;
               }
@@ -4956,29 +4990,28 @@ footer {
 
       /*Holiday best deals packages page*/
       .holiday_details_small {
-        width: 100%;
-        float: left;
+        width: 90%;
+        float: none;
         h1 {
-          line-height: 40px;
           font-size: 1em;
+          text-align:left;
           
         }
         span.holidayprice {
-          line-height: 40px;
-          font-size: 0.8em;
+          font-size: 0.85em;
+          text-align:left;
           
           .offerbox-price {
             color: $colorbtn4;
             font-size: 90%;
-            line-height: 40px;
           }
         }
         figure {
           width: 100%;
           img {
-            width: 20%;
+
             float: left;
-            margin: 0 0.25em 0 0;
+
           }
 
           figcaption {
@@ -5702,29 +5735,28 @@ footer {
 
       /*Holiday best deals packages page*/
       .holiday_details_small {
-        width: 100%;
-        float: left;
+        width: 90%;
+        float: none;
         h1 {
-          line-height: 40px;
-          font-size: 1em;
+          font-size: 0.9em;
+          text-align:left;
           
         }
         span.holidayprice {
-          line-height: 40px;
-          font-size: 0.8em;
+          font-size: 0.85em;
+          text-align:left;
           
           .offerbox-price {
             color: $colorbtn4;
             font-size: 90%;
-            line-height: 40px;
           }
         }
         figure {
           width: 100%;
           img {
-            width: 20%;
+
             float: left;
-            margin: 0 0.25em 0 0;
+
           }
 
           figcaption {
@@ -6440,29 +6472,28 @@ footer {
 
       /*Holiday best deals packages page*/
       .holiday_details_small {
-        width: 100%;
+        width: 90%;
         float: left;
         h1 {
-          line-height: 40px;
-          font-size: 1.1em;
+          font-size: 0.9em;
+          text-align:left;
           
         }
         span.holidayprice {
-          line-height: 40px;
-          font-size: 0.8em;
+          font-size: 0.85em;
+          text-align:left;
           
           .offerbox-price {
             color: $colorbtn4;
             font-size: 90%;
-            line-height: 40px;
           }
         }
         figure {
           width: 100%;
           img {
-            width: 20%;
+
             float: left;
-            margin: 0 0.25em 0 0;
+
           }
 
           figcaption {
@@ -6808,7 +6839,7 @@ footer {
 
     #filter-nav-sidebar {
       position: fixed;
-      width: 70%;
+      width: 80%;
       height: auto;
       section#seasons,
       section#locations,
@@ -7099,26 +7130,27 @@ footer {
 
       .holiday_details_small {
 
-        margin: 0.25em;
+        width:80%;
         padding: 0.25em;
 
         h1 {
-          font-size: 0.85em;
+          font-size: 1em;
+          text-align:center;
           
         }
         span.holidayprice {
-          font-size: 0.6em;
+          font-size: 0.8em;
+          text-align:center;
 
           .offerbox-price {
             font-size: 90%;
-            line-height: 40px;
           }
         }
         figure {
-          display: inline-block;
+          display: block;
 
           img {
-            width: 50%;
+            width: 40%;
 
           }
 
@@ -7454,7 +7486,7 @@ footer {
 
     #filter-nav-sidebar {
       position: fixed;
-      width: 70%;
+      width: 80%;
       height: auto;
       section#seasons,
       section#locations,
@@ -7745,26 +7777,27 @@ footer {
 
       .holiday_details_small {
 
-        margin: 0.25em;
+        width:80%;
         padding: 0.25em;
 
         h1 {
           font-size: 0.85em;
+          text-align:center;
           
         }
         span.holidayprice {
-          font-size: 0.6em;
+          font-size: 0.8em;
+          text-align:center;
 
           .offerbox-price {
             font-size: 90%;
-            line-height: 40px;
           }
         }
         figure {
           display: inline-block;
 
           img {
-            width: 50%;
+            width: 45%;
 
           }
 
@@ -7772,7 +7805,7 @@ footer {
 
             
             p {
-              font-size: 0.9em;
+              font-size: 0.8em;
             }
             button {
               font-size: 1em;
@@ -8103,7 +8136,7 @@ footer {
 
     #filter-nav-sidebar {
       position: fixed;
-      width: 70%;
+      width: 80%;
       height: auto;
       section#seasons,
       section#locations,
@@ -8359,10 +8392,10 @@ footer {
         flex-flow: column;
         width:80%;
         h1 {
-          font-size: 0.9em;
+          font-size: 1em;
         }
         span.holidayprice {
-          font-size: 0.8em;
+          font-size: 0.85em;
 
 
           .offerbox-price {
@@ -8373,13 +8406,13 @@ footer {
           width: 100%;
           margin: 0;
           img {
-            width: 50%;
+            width: 70%;
           }
           figcaption {
             width: 100%;
 
             p {
-              font-size: 0.8em;
+              font-size: 0.75em;
             }
             a {
               width: 50%;
@@ -8394,7 +8427,7 @@ footer {
 
       .holiday_details_small {
 
-        margin: 0.25em;
+        width:80%;
         padding: 0.25em;
 
         h1 {
@@ -8402,11 +8435,10 @@ footer {
           
         }
         span.holidayprice {
-          font-size: 0.6em;
+          font-size: 0.8em;
 
           .offerbox-price {
             font-size: 90%;
-            line-height: 40px;
           }
         }
         figure {
@@ -8420,10 +8452,10 @@ footer {
           figcaption {
             
             p {
-              font-size: 0.9em;
+              font-size: 0.8em;
             }
             button {
-              font-size: 1em;
+              font-size: 0.9em;
               &:hover {
                   cursor: pointer;
               }
