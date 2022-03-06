@@ -8,11 +8,11 @@
     </figure>
     <!---contact number-->
     <aside class="contact">
-      <span class="tele">
+      <address class="tele">
         <a id="contact-number" :href="`tel:${phoneNumber}`">
           {{ phoneNumber }}
         </a>
-      </span>
+      </address>
       <span id="opening-time">{{ openTime }}</span>
     </aside>
   </header>
