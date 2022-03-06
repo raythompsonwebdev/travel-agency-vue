@@ -18,7 +18,7 @@
         </figcaption>
 
         <img
-          :src="bannerImageSmall"
+          :src="bannerImage"
           :alt="'travel-agency-website-sidebar-banner-image'"
         />
       </figure>
@@ -160,8 +160,7 @@
 </template>
 
 <script>
-import bannerImage from "../assets/images/travel-agency-website-sidebar-banner-image-small.jpg";
-import bannerImageSmall from "../assets/images/travel-agency-website-sidebar-banner-image-small.jpg";
+import bannerImage from "../assets/images/travel-agency-website-sidebar-banner-image.jpg";
 import customerService from "../assets/images/travel-agency-website-customer-service-image.jpg";
 import busTours from "../assets/images/travel-agency-website-bus-tours-image.jpg";
 import hotelRoom from "../assets/images/travel-agency-website-hotel-room-image.jpg";
@@ -170,7 +169,7 @@ export default {
   data() {
     return {
       show: "true",
-      bannerImageSmall: bannerImageSmall,
+
       bannerImage: bannerImage,
       customerService: customerService,
       busTours: busTours,

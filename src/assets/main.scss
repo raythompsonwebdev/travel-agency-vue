@@ -1279,21 +1279,21 @@
     }
 
     .servicebox {
-      width: 32%;
+      width: 90%;
       height: auto;
       border: 4px $sideboxborder solid;
-      margin: 0.25em 0 0 0.25em;
+      margin: 0.5em auto;
       padding: 0;
-      float: left;
+      float: none;
       display: block;
       h1 {
-        font-size: 0.7em;
-        height: 30px;
+        font-size: 0.8em;
         margin: 0;
         width: 100%;
         background-color: $sideboxborder;
-        color: $colorblue2;;
-        text-indent: 0.25em;
+        color: $colorblue2;
+        height: auto;
+        text-indent: 0;
         line-height: 30px;
       }
       figure {
@@ -2110,12 +2110,14 @@ footer {
       /*about page services boxes*/
       .servicebox {
         width: 31%;
+        float:left;
+        margin :0.1em;
 
         h1 {
-          font-size: 0.7em;
-          height: 40px;
+          font-size: 0.9em;
+          height: 30px;
           text-indent: 0;
-          line-height: 20px;
+          line-height: 30px;
         }
         figure {
           width: 90%;
@@ -2881,12 +2883,14 @@ footer {
       /*about page services boxes*/
       .servicebox {
         width: 31%;
+        float:left;
+        margin :0.1em;
 
         h1 {
-          font-size: 0.7em;
-          height: 40px;
+          font-size: 0.85em;
+          height: auto;
           text-indent: 0;
-          line-height: 20px;
+          line-height: 25px;
         }
         figure {
           width: 90%;
@@ -3266,6 +3270,7 @@ footer {
           h1 {
 
             font-size: 0.8em;
+            margin: 45px 0;
 
           }
 
@@ -3642,12 +3647,14 @@ footer {
       /*about page services boxes*/
       .servicebox {
         width: 31%;
+        float:left;
+        margin :0.1em;
 
         h1 {
-          font-size: 0.7em;
-          height: 40px;
+          font-size: 0.85em;
+          height: auto;
           text-indent: 0;
-          line-height: 20px;
+          line-height: 25px;
         }
         figure {
           width: 90%;
@@ -4023,6 +4030,7 @@ footer {
           h1 {
 
             font-size: 0.8em;
+            margin: 60px 0;
 
           }
 
@@ -4404,12 +4412,14 @@ footer {
       /*about page services boxes*/
       .servicebox {
         width: 31%;
+        float:left;
+        margin :0.1em;
 
         h1 {
-          font-size: 0.7em;
-          height: 40px;
+          font-size: 0.8em;
+          height: auto;
           text-indent: 0;
-          line-height: 20px;
+          line-height: 25px;
         }
         figure {
           width: 90%;
@@ -4787,6 +4797,7 @@ footer {
           h1 {
 
             font-size: 0.8em;
+            margin: 60px 0;
 
           }
 
@@ -5163,13 +5174,15 @@ footer {
 
       /*about page services boxes*/
       .servicebox {
-        width: 31%;
+        width: 32%;
+        float:left;
+        margin :0.1em;
 
         h1 {
-          font-size: 0.7em;
-          height: 40px;
+          font-size: 0.8em;
+          height: auto;
           text-indent: 0;
-          line-height: 20px;
+          line-height: 25px;
         }
         figure {
           width: 90%;
@@ -5546,6 +5559,7 @@ footer {
           h1 {
 
             font-size: 0.8em;
+            margin: 45px 0;
 
           }
 
@@ -5921,13 +5935,14 @@ footer {
 
       /*about page services boxes*/
       .servicebox {
-        width: 31%;
-
+        width: 32%;
+        float:left;
+        margin :0.1em;
         h1 {
-          font-size: 0.7em;
-          height: 40px;
+          font-size: 0.75em;
+          height: auto;
           text-indent: 0;
-          line-height: 20px;
+          line-height: 25px;
         }
         figure {
           width: 90%;
@@ -6670,13 +6685,15 @@ footer {
 
       /*about page services boxes*/
       .servicebox {
-        width: 31%;
+        width: 32%;
+        float:left;
+        margin :0.1em;
 
         h1 {
-          font-size: 0.7em;
-          height: 40px;
+          font-size: 0.75em;
+          height: auto;
           text-indent: 0;
-          line-height: 20px;
+          line-height: 25px;
         }
         figure {
           width: 90%;
@@ -7331,16 +7348,21 @@ footer {
       }
 
       .servicebox {
-        width: 32%;
+        width: 47%;
+        float:left;
+        margin :0.2em;
         h1 {
-          font-size: 0.7em;
+          font-size: 0.85em;
+          height: auto;
+          text-indent: 0;
+          line-height: 30px;
         }
         figure {
           width: 90%;
 
           figcaption {
             p {
-              font-size: 0.65em;
+              font-size: 0.75em;
               width: 96%;
             }
             a {
@@ -7984,16 +8006,19 @@ footer {
       }
 
       .servicebox {
-        width: 32%;
+        width: 80%;
         h1 {
-          font-size: 0.7em;
+          font-size: 0.85em;
+          height: auto;
+          text-indent: 0;
+          line-height: 30px;
         }
         figure {
           width: 90%;
 
           figcaption {
             p {
-              font-size: 0.65em;
+              font-size: 0.75em;
               width: 96%;
             }
             a {
@@ -8639,16 +8664,20 @@ footer {
       }
 
       .servicebox {
-        width: 32%;
+        width: 90%;
+        float:none;
         h1 {
-          font-size: 0.7em;
+          font-size: 0.85em;
+          height: auto;
+          text-indent: 0;
+          line-height: 30px;
         }
         figure {
           width: 90%;
 
           figcaption {
             p {
-              font-size: 0.65em;
+              font-size: 0.7em;
               width: 96%;
             }
             a {

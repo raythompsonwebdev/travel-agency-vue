@@ -17,7 +17,7 @@
         </figcaption>
 
         <img
-          :src="bannerImageSmall"
+          :src="bannerImage"
           :alt="'travel-agency-website-sidebar-banner-image-small'"
         />
       </figure>
@@ -79,15 +79,14 @@
 </template>
 
 <script>
-import bannerImage from "../assets/images/travel-agency-website-sidebar-banner-image-small.jpg";
-import bannerImageSmall from "../assets/images/travel-agency-website-sidebar-banner-image.jpg";
+import bannerImage from "../assets/images/travel-agency-website-sidebar-banner-image.jpg";
+
 export default {
   name: "AboutPage",
   data() {
     return {
       show: "true",
       bannerImage: bannerImage,
-      bannerImageSmall: bannerImageSmall,
     };
   },
   methods: {
