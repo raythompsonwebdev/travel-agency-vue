@@ -111,44 +111,30 @@
       -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
       flex: 0 0 auto;
-      width: 35%;
-      height: auto;
+      width: 36%;
       margin: 0.25em 0 0 0;
       display: block;
-      line-height: 25px;
+      
       
       span.tele {
         margin: 0;
-        padding: 3px;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        text-align: left;
+        width: 100%;                      
         background-color: $colorbg;
-
-        img {
-          -webkit-flex: 0 1 auto;
-          -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-          width: auto;
-          display: block;
-          width:auto;
-        }
-
+        line-height:25px;
+        height: 30px;
+        display: block;
+        
+        
         a#contact-number {
           width: 100%;
           padding: 0;
           display: inline-block;
-          line-height: 21px;
           font-weight: bold;
-          font-size: 0.7em;
-          text-align: center;
+          font-size: 0.65em;
           text-shadow: 1px 1px 1px $colorblk;
           text-decoration: none;
           color: $colorwhite3;
-          -webkit-flex: 0 1 auto;
-          -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+          text-align: left;
           &:active {
             color: $colorwhite2;
           }
@@ -157,16 +143,24 @@
             background-color: unset;
           }
         }
+
+        a#contact-number::before{
+          content:url("./assets/images/Telephone.png");
+          float:left;
+          display:block;          
+          margin:0.2em;
+
+        }
       }
       span#opening-time {
         display: block;
         color: $colorblk;
         text-transform: uppercase;
-        text-indent: 0;
         color: $colorgry;
         clear: both;
         text-align: center;
-        font-size:60%;
+        font-size:0.5em;
+        line-height: 27px;
       }
     }
   }
@@ -297,7 +291,7 @@
         display: flex;
         label {
           width: 100%;
-          font-size: 0.6em;
+          font-size: 0.7em;
           line-height: 35px;
           height: 35px;
           border: solid 1px $sideboxbordercolvar;
@@ -314,7 +308,7 @@
 
         select {
           line-height: 35px;
-          width: 40%;
+          width: 20px;
           background-repeat: no-repeat;
           background-position: 5% 50%;
           border:none;
@@ -1406,27 +1400,35 @@ footer {
       }
 
       aside.contact {
-        width: 12%;
-        
+        width: 12%;        
+        margin: 0.25em 0 0 0;
+        display: block;
+      
+      
+      
         span.tele {
-          display: block;
-          display: flex;
-
-          img {
-            display: block;
-          }
-
+          line-height:25px;
+          height: 30px;  
+          display: block;        
+          
           a#contact-number {
-            width: 100%;
-            font-size: 0.8em;
+            font-size: 0.7em;
+
             &:active {
               color: $colorwhite2;
             }
             &:link {
               color: $colorwhite2;
+              background-color: unset;
             }
           }
+
+          a#contact-number::before{
+            content:url("./assets/images/Telephone.png");
+            margin:0.2em;
+          }
         }
+
         span#opening-time {
           line-height: 27px;
           font-size:85%;
@@ -1439,6 +1441,7 @@ footer {
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
+      justify-content: flex-start;
 
 
       ul#navi {
@@ -2192,30 +2195,37 @@ footer {
       }
 
       aside.contact {
-        width: 15%;
+        width: 14%;
+        margin: 0.25em 0 0 0;
+        display: block;
         
         span.tele {
+          line-height:25px;
+          height: 30px; 
           display: block;
-          display: flex;
-
-          img {
-            display: block;
-          }
-
+          
           a#contact-number {
-            width: 100%;
-            font-size: 0.85em;
+            text-indent:0.2em;
+
+            font-size: 0.8em;
+
             &:active {
               color: $colorwhite2;
             }
             &:link {
               color: $colorwhite2;
+              background-color: unset;
             }
+          }
+
+          a#contact-number::before{
+            content:url("./assets/images/Telephone.png");
+            margin:0.2em;
           }
         }
         span#opening-time {
           line-height: 27px;
-          font-size:70%;
+          font-size:0.65em;
          }
       }
     }
@@ -2225,10 +2235,11 @@ footer {
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
+      justify-content: flex-start;
 
 
       ul#navi {
-        width: 87%;
+        width: 84%;
         float: left;
         display: flex;
         -webkit-flex-direction: row;
@@ -2957,30 +2968,36 @@ footer {
       }
 
       aside.contact {
-        width: 16%;
+        width: 14%;
+        margin: 0.25em 0 0 0;
+        display: block;
         
         span.tele {
+          line-height:25px;
+          height: 30px;
           display: block;
-          display: flex;
-
-          img {
-            display: block;
-          }
-
+          
           a#contact-number {
-            width: 100%;
-            font-size: 0.85em;
+            text-indent:0.2em;
+            font-size: 0.75em;
+
             &:active {
               color: $colorwhite2;
             }
             &:link {
               color: $colorwhite2;
+              background-color: unset;
             }
+          }
+
+          a#contact-number::before{
+            content:url("./assets/images/Telephone.png");
+            margin:0.2em;
           }
         }
         span#opening-time {
           line-height: 27px;
-          font-size:70%;
+          font-size:0.65em;
         }
       }
     }
@@ -2990,6 +3007,8 @@ footer {
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
+      justify-content: space-between;
+      
 
       ul#navi {
         width: 84%;
@@ -3045,7 +3064,7 @@ footer {
           height: 40px;
 
           label {
-            font-size: 0.6em;
+            font-size: 0.75em;
           }
 
           img#flagImg {
@@ -3054,6 +3073,7 @@ footer {
 
           select {
             line-height: 35px;
+            width:20px;
             option {
               font-size: 0.9em;
             }
@@ -3708,24 +3728,31 @@ footer {
       }
 
       aside.contact {
-        width: 17%;
+        width: 14%;
+        margin: 0.25em 0 0 0;
+        display: block;
+        
         span.tele {
+          line-height:25px;
+          height: 30px;
           display: block;
-          display: flex;
-
-          img {
-            display: block;
-          }
-
+          
           a#contact-number {
-            width: 100%;
-            font-size:0.8em;
+
+            font-size: 0.75em;
+
             &:active {
               color: $colorwhite2;
             }
             &:link {
               color: $colorwhite2;
+              background-color: unset;
             }
+          }
+
+          a#contact-number::before{
+            content:url("./assets/images/Telephone.png");
+            margin:0.2em;
           }
         }
         span#opening-time {
@@ -3788,14 +3815,14 @@ footer {
       }
 
       aside#language-box {
-        width: 18%;
+        width: 16%;
         padding-left: 0.25em;
 
         form#languagebox {
           height: 40px;
 
           label {
-            font-size: 0.5em;
+            font-size: 0.7em;
           }
 
           img#flagImg {
@@ -3804,6 +3831,7 @@ footer {
 
           select {
             line-height: 35px;
+            width:20px;
             option {
               font-size: 0.9em;
             }
@@ -4461,27 +4489,34 @@ footer {
       }
 
       aside.contact {
-        width: 17%;
+        width: 15%;        
+        margin: 0.25em 0 0 0;
+        display: block;
         
         span.tele {
+          line-height:25px;
+          height: 30px;
           display: block;
-          display: flex;
-
-          img {
-            display: block;
-          }
-
+          
           a#contact-number {
-            width: 100%;
-            font-size:0.85em;
+
+            font-size: 0.7em;
+
             &:active {
               color: $colorwhite2;
             }
             &:link {
               color: $colorwhite2;
+              background-color: unset;
             }
           }
+
+          a#contact-number::before{
+            content:url("./assets/images/Telephone.png");
+            margin:0.2em;
+          }
         }
+
         span#opening-time {
           line-height: 27px;
           font-size:70%;
@@ -4541,14 +4576,14 @@ footer {
       }
 
       aside#language-box {
-        width: 18%;
+        width: 16%;
         padding-left: 0.25em;
 
         form#languagebox {
           height: 40px;
 
           label {
-            font-size: 0.5em;
+            font-size: 0.65em;
           }
 
           img#flagImg {
@@ -4557,6 +4592,7 @@ footer {
 
           select {
             line-height: 35px;
+            width:20px;
 
             option {
               font-size: 0.9em;
@@ -5213,30 +5249,37 @@ footer {
       }
 
       aside.contact {
-        width: 18%;
+        width: 17%;
+        margin: 0.25em 0 0 0;
+        display: block;
         
         span.tele {
+          line-height:25px;
+          height: 30px;
           display: block;
-          display: flex;
-
-          img {
-            display: block;
-          }
-
+          
           a#contact-number {
-            width: 100%;
-            font-size:0.8em;
+
+            font-size: 0.75em;
+
             &:active {
               color: $colorwhite2;
             }
             &:link {
               color: $colorwhite2;
+              background-color: unset;
             }
           }
+
+          a#contact-number::before{
+            content:url("./assets/images/Telephone.png");
+            margin:0.2em;
+          }
         }
+
         span#opening-time {
           line-height: 27px;
-          font-size:65%;
+          font-size:0.6em;
 
         }
       }
@@ -5302,8 +5345,7 @@ footer {
           height: 40px;
 
           label {
-            font-size: 0.5em;
-            font-weight:bold;
+            font-size: 0.65em;
           }
 
           img#flagImg {
@@ -5312,7 +5354,7 @@ footer {
 
           select {
             line-height: 35px;
-            font-size: 0.8em;
+            width:20px;
             option {
               font-size: 0.8em;
             }
@@ -5966,8 +6008,10 @@ footer {
         width: 20%;
         
         span.tele {
+          line-height:25px;
+          height: 30px;
           display: block;
-          display: flex;
+
 
           img {
             display: block;
@@ -5975,7 +6019,7 @@ footer {
 
           a#contact-number {
             width: 100%;
-            font-size: 0.8em;
+            font-size: 0.75em;
             &:active {
               color: $colorwhite2;
             }
@@ -5986,7 +6030,7 @@ footer {
         }
         span#opening-time {
           line-height: 27px;
-          font-size:70%;
+          font-size:0.6em;
 
         }
       }
@@ -6041,8 +6085,8 @@ footer {
       }
 
       aside#language-box {
-        width: 23%;
-        padding-left: 0.25em;
+        width: 20%;
+        padding-left: 0.15em;
 
         form#languagebox {
           height: 40px;
@@ -6057,7 +6101,7 @@ footer {
 
           select {
             line-height: 35px;
-            font-size: 0.75em;
+            width:15px;
             option {
               font-size: 0.75em;
             }
@@ -6712,11 +6756,11 @@ footer {
 
       aside.contact {
         width: 24%;
-        line-height: 25px;
         
         span.tele {
+          line-height:25px;
+          height: 30px;
           display: block;
-          display: flex;
 
           img {
             display: block;
@@ -6735,7 +6779,7 @@ footer {
         }
         span#opening-time {
           line-height: 27px;
-          font-size:60%;
+          font-size:0.65em;
           font-weight:bold;
         }
       }
@@ -6781,13 +6825,13 @@ footer {
       }
 
       aside#language-box {
-        width: 25%;
+        width: 26%;
 
         form#languagebox {
           height: 40px;
 
           label {
-            font-size: 0.6em;
+            font-size: 0.75em;
           }
 
           img#flagImg {
@@ -6796,6 +6840,7 @@ footer {
 
           select {
             line-height: 35px;
+            width:20px;
             option {
               font-size: 1em;
             }
@@ -7365,12 +7410,13 @@ footer {
       }
 
       aside.contact {
-        width: 25%;
-        line-height: 25px;
+        width: 27%;
+
         
         span.tele {
+          line-height:25px;
+          height: 30px;
           display: block;
-          display: flex;
 
           img {
             display: block;
@@ -7378,7 +7424,7 @@ footer {
 
           a#contact-number {
             width: 100%;
-            font-size: 0.7em;
+            font-size: 0.75em;
             &:active {
               color: $colorwhite2;
             }
@@ -7389,7 +7435,7 @@ footer {
         }
         span#opening-time {
           line-height: 27px;
-          font-size:55%;
+          font-size:0.6em;
         }
       }
     }
@@ -7434,13 +7480,13 @@ footer {
       }
 
       aside#language-box {
-        width: 28%;
+        width: 30%;
 
         form#languagebox {
           height: 40px;
 
           label {
-            font-size: 0.6em;
+            font-size: 0.7em;
           }
 
           img#flagImg {
@@ -7449,7 +7495,7 @@ footer {
 
           select {
             line-height: 35px;
-            font-size: 1em;
+            width:20px;
             option {
               font-size: 0.7em;
             }
@@ -8018,12 +8064,13 @@ footer {
       }
 
       aside.contact {
-        width: 34%;
-        line-height: 25px;
+        width: 32%;
+
         
         span.tele {
+          line-height:25px;
+          height: 30px;
           display: block;
-          display: flex;
 
           img {
             display: block;
@@ -8031,7 +8078,7 @@ footer {
 
           a#contact-number {
             width: 100%;
-            font-size: 0.75em;
+            font-size: 0.7em;
             &:active {
               color: $colorwhite2;
             }
@@ -8042,7 +8089,7 @@ footer {
         }
         span#opening-time {
           line-height: 27px;
-          font-size:60%;
+          font-size:0.55em;
           font-weight:bold;
 
         }
@@ -8095,7 +8142,7 @@ footer {
           height: 35px;
 
           label {
-            font-size: 0.6em;
+            font-size: 0.7em;
           }
 
           img#flagImg {
@@ -8104,6 +8151,7 @@ footer {
 
           select {
             line-height: 35px;
+            width:20px;
             option {
               font-size: 0.9em;
             }

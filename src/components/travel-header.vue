@@ -9,7 +9,6 @@
     <!---contact number-->
     <aside class="contact">
       <span class="tele">
-        <img :src="phoneImg" :alt="'image of phone'" />
         <a id="contact-number" :href="`tel:${phoneNumber}`">
           {{ phoneNumber }}
         </a>
