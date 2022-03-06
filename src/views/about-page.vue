@@ -18,57 +18,26 @@
 
         <img
           :src="bannerImageSmall"
-          :alt="'travel-agency-website-sidebar-banner-image'"
+          :alt="'travel-agency-website-sidebar-banner-image-small'"
         />
       </figure>
     </aside>
 
     <main id="content2">
-      <h1>Lorem ipsum dolor sit amet, consectetur</h1>
+      <h1>Lorem Ipsum Dolor Sit Amet</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.Enim odit dolor
         sequi voluptatem esse doloribus libero commodi ea debitis id nostrum
         odio velit impedit vitae tenetur voluptates vero beatae excepturi.
       </p>
-
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
         dolor sequi voluptatem esse doloribus libero commodi ea debitis id
         nostrum odio velit impedit vitae tenetur voluptates vero beatae
         excepturi.
       </p>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-        nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
-      </p>
-
-      <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-        nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
-      </p>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-        nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
-      </p>
-
-      <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-        nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
-      </p>
-
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
         dolor sequi voluptatem esse doloribus libero commodi ea debitis id
@@ -84,7 +53,7 @@
         nostrum odio velit impedit vitae tenetur voluptates vero beatae
         excepturi.
       </p>
-
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
         dolor sequi voluptatem esse doloribus libero commodi ea debitis id
@@ -99,7 +68,6 @@
         nostrum odio velit impedit vitae tenetur voluptates vero beatae
         excepturi.
       </p>
-
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
         dolor sequi voluptatem esse doloribus libero commodi ea debitis id

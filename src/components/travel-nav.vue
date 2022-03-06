@@ -79,18 +79,18 @@ export default {
         slideoutNav.setAttribute("class", "show");
       }
     },
-    InlineMenuButtonClickHandler(e) {
+    InlineMenuButtonClickHandler() {
       // eslint-disable-next-line no-console
-      console.log(e);
+      console.log("mouseup");
       //e.preventDefault();
-      // let slideoutMenu = document.getElementById("navi");
+      let slideoutMenu = document.getElementById("navi");
 
-      // let box = slideoutMenu.getAttribute("class");
-      // if (box == "hide") {
-      //   slideoutMenu.setAttribute("class", "show");
-      // } else {
-      //   slideoutMenu.setAttribute("class", "hide");
-      // }
+      let box = slideoutMenu.getAttribute("class");
+      if (box == "hide") {
+        slideoutMenu.setAttribute("class", "show");
+      } else {
+        slideoutMenu.setAttribute("class", "hide");
+      }
     },
   },
 };

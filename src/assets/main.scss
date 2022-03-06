@@ -256,8 +256,9 @@
             text-shadow: none;
           }
           &:active {
-            color: $colorwhite3;
-            @include gradient($colorblue2, $colorblue1);
+            color: $colorbtn5;
+            @include gradient($colorwhite3, $colorwhite2);
+            background-color: $colorwhite3;
             text-shadow: none;
           }
           &:hover {
@@ -292,14 +293,14 @@
       width: 40%;
 
       form#languagebox {
-        height: 40px;
+        height: 35px;
         display: flex;
         label {
           width: 100%;
           font-size: 0.6em;
           line-height: 35px;
           height: 35px;
-          border: solid 1px $colorgry2;
+          border: solid 1px $sideboxbordercolvar;
           display: flex;
           text-indent: 0.2em;
         }
@@ -705,20 +706,24 @@
     figure {
       margin: 0;
       padding: 0;
+      position:relative;
       figcaption {
         display: block;
         margin: 0;
         padding: 5%;
+        position:absolute;
+        flex-flow: column;
+        justify-content: space-between;
         h1 {
           text-indent: 0;
           width: 100%;
           color: $colorwhite1;
           display: block;
           font-size: 1.28em;
-          margin-top: 25%;
           text-transform: uppercase;
           line-height: 1.5em;
           letter-spacing: 0.02em;
+          margin: 60px 0;
         }
 
         span {
@@ -742,50 +747,73 @@
   /*#contact page details sidebar*/
   #contact-page-sidebar {
     position: fixed;
-    width: 100%;
+    width: 80%;
     margin: 0;
     font-size:1em;
     #contact-details {
       background-color: $colorwhite1;
-      display: block;
+      display: flex;
+      flex-flow:row wrap;
+      justify-content: center;
+      gap:0.25em;
       width: 98%;
       height: auto;
       border: 4px $sideboxbg1 solid;
       margin: 0;
-      padding: 10% 0;
-      list-style: none;
-      font-size: 0.8em;
+      padding: 0.5em;
       @include borderRaduis(5px);
-      li {
-        width: 97%;
-        line-height: 20px;
-        height: 80px;
-        color: $colorgry;
-        padding-right: 0.5em;
 
-        &:first-line {
-          color: $sideboxcolor1a;
-          font-weight: bold;
-        }
-        span {
-          float: left;
-          width: 15%;
+      p.addr_title {
+        width: 100%;
+        line-height: 20px;
+        height: auto;
+        color: $sideboxcolor1a;
+        font-size:0.8em;
+        margin:0; 
+        font-weight:bold;       
+        &::before { 
+          content: url("./assets/images/Address.png"); 
+          float:left;
+          width: auto;
           display: block;
-          background-color: $colorwhite1;
-          height: 5rem;
-          img {
-            width: 41%;
-            height: auto;
-            display: block;
-            margin: 11% auto;
-          }
+          font-size:2em;
+          height: 100%;
+          margin-right:0.25em;          
+        }                
+      }
+
+      p.addr_title:nth-child(1){
+        &::before {        
+          content: url("./assets/images/Telephone.png"); 
         }
-        a {
-          display: block;
-          line-height: 20px;
-          font-size: 1em;
-          background-color: unset;
-          color: $colorgry;
+      }
+
+      p.addr_title:nth-child(3n){
+        &::before {        
+          content: url("./assets/images/envelope.png"); 
+        }
+      }    
+
+      a {
+        display: block;
+        line-height: 20px;
+        background-color: unset;
+        color: $colorgry;
+        font-size:0.75em;
+        text-align:left;
+        width: 76%;
+        margin-bottom:0.25em;
+      }
+      p{
+        color: $colorgry;
+        font-weight:normal; 
+        font-size:0.75em;
+        margin:0;
+        padding:0;   
+        width:76%;    
+        &::before {        
+          content: "";         
+          height: 100%;          
         }
       }
     }
@@ -1213,7 +1241,8 @@
         img {
 
           display: block;
-          margin: 0 auto;
+          margin: 0.5em auto;
+          width:auto;
         }
 
         figcaption {
@@ -1301,7 +1330,7 @@
     }
   }
 }
-/*footer*/
+
 footer {
   width: 100%;
   height: 40px;
@@ -1353,7 +1382,7 @@ footer {
 @media only screen and (min-width: 1920px) {
   #wrapper {
     min-height: 1220px;
-    width:50%;
+    width:60%;
 
     header {
       height: 60px;
@@ -1460,7 +1489,7 @@ footer {
         padding-left: 0.25em;
 
         form#languagebox {
-          height: 40px;
+          height: 35px;
 
           label {
             font-size: 0.6em;
@@ -1474,7 +1503,7 @@ footer {
           select {
             line-height: 35px;
             font-size: 1em;
-            width:53%;
+            width:10%;
             option {
               font-size: 0.9em;
             }
@@ -1667,7 +1696,7 @@ footer {
           padding: 5%;
           h1 {
 
-            font-size: 0.8em;
+            font-size: 1.28em;
 
           }
 
@@ -1690,27 +1719,33 @@ footer {
     }
 
     #contact-page-sidebar {
-      width: 20%;
+      width: 50%;
       position:unset;
       #contact-details {
-        font-size: 0.8em;
-        li {
-          width: 97%;
-          font-size: 0.7em;
+        gap:0.25em;
+        padding: 0.5em;
+        p.addr_title {
+          line-height: 20px;
+          font-size:0.9em;    
+          &::before { 
+            font-size:2em;
+            margin-right:0.25em;          
+          }                
+        }
+     
+  
+        a {
+          line-height: 20px;
+          font-size:0.85em;
+          width: 76%;
 
-          &:first-line {
-
-            font-weight: bold;
-          }
-          span {
-            width: 20%;
-            height: 5rem;
-            img {
-              width: 41%;
-            }
-          }
-          a {
-            line-height: 20px;
+        }
+        p{
+          font-size:0.8em;
+          width:76%;    
+          &::before {        
+            content: "";         
+            height: 100%;          
           }
         }
       }
@@ -1908,6 +1943,7 @@ footer {
       }
       p {
         font-size: 0.85em;
+        line-height:1.8em;
 
       }
       /*contact form*/
@@ -1990,11 +2026,23 @@ footer {
       .holiday_details_small {
         width: 48%;
         float: left;
+        margin: 0.25em 0.25em;
         // display: grid;
         // grid-template-columns: repeat(5, 1fr);
         // grid-template-rows: repeat(5, 1fr);
         // grid-column-gap: 10px;
         // grid-row-gap: 10px;
+
+        // .parent {
+        //   display: grid;
+        //   grid-template-columns: repeat(5, 1fr);
+        //   grid-template-rows: repeat(5, 1fr);
+        //   grid-column-gap: 10px;
+        //   grid-row-gap: 0px;
+        // }
+
+        // .div1 { grid-area: 1 / 1 / 6 / 3; }
+        // .div2 { grid-area: 1 / 3 / 6 / 6; }
 
         // .div1 { grid-area: 1 / 1 / 6 / 3; }
         // .div2 { grid-area: 5 / 3 / 6 / 6; }
@@ -2013,13 +2061,13 @@ footer {
 
         h1 {
           line-height: 25px;
-          font-size: 0.9em;
+          font-size: 1em;
           text-align:left;
           
         }
         span.holidayprice {          
           text-align:left;
-          font-size: 0.85em;
+          font-size: 0.9em;
           width: 100%;
           .offerbox-price {
             color: $colorbtn4;
@@ -2029,15 +2077,15 @@ footer {
         }
         figure {
           width: 100%;
+          display:flex;
+          align-items: center;
+          justify-content: space-around;
           img {
-            width: 188px;
-            height:152px;
-            float: left;
-            margin: 0 0.25em 0 0;
+            width: 45%;           
           }
 
           figcaption {
-            width: 52%;
+            width: 50%;
             display: inline-block;
             margin-bottom: 0.5em;
             p {
@@ -2180,7 +2228,7 @@ footer {
 
 
       ul#navi {
-        width: 84%;
+        width: 87%;
         float: left;
         display: flex;
         -webkit-flex-direction: row;
@@ -2211,7 +2259,7 @@ footer {
           padding-top: 0;
           a {
             padding-top:0;
-            font-size:65%;
+            font-size: 0.7em;
             height: 40px;
             line-height:40px;
             &:hover {
@@ -2224,14 +2272,15 @@ footer {
       }
 
       aside#language-box {
-        width: 15%;
+        width: 13%;
         padding-left: 0.25em;
 
         form#languagebox {
-          height: 40px;
+          height: 35px;
 
           label {
-            font-size: 0.6em;
+            font-size: 0.8em;
+            width: 100%;
           }
 
           img#flagImg {
@@ -2241,6 +2290,7 @@ footer {
           select {
             line-height: 35px;
             font-size: 1em;
+            width:20px;
             option {
               font-size: 0.9em;
             }
@@ -2427,13 +2477,14 @@ footer {
 
       figure {
         margin: 0;
+        position:relative;
 
         figcaption {
 
           padding: 5%;
           h1 {
 
-            font-size: 0.8em;
+            font-size: 1.28em;
 
           }
 
@@ -2448,7 +2499,8 @@ footer {
 
           p {
 
-            font-size: 0.7em;
+            font-size: 0.9em;
+            line-height:25px;
 
           }
         }
@@ -2456,27 +2508,35 @@ footer {
     }
 
     #contact-page-sidebar {
-      width: 20%;
+      width: 21%;
       position:unset;
       float: left;
       #contact-details {
-        font-size: 1em;
-        li {
-          font-size: 0.75em;
+        gap:0.25em;
+        padding: 0.5em;
 
-          &:first-line {
-            font-weight: bold;
-          }
-          span {
-            width: 20%;
-            img {
-              width: 41%;
-            }
-          }
-          a {
-            display: block;
+        p.addr_title {
+          line-height: 20px;
+          font-size:0.85em;    
+          &::before { 
+            font-size:2em;
+            margin-right:0.25em;          
+          }                
+        }
+     
+  
+        a {
+          line-height: 20px;
+          font-size:0.8em;
+          width: 76%;
 
-            background-color: unset;
+        }
+        p{
+          font-size:0.8em;
+          width:76%;    
+          &::before {        
+            content: "";         
+            height: 100%;          
           }
         }
       }
@@ -2674,6 +2734,7 @@ footer {
       }
       p {
         font-size: 0.85em;
+        line-height:1.8em;
 
       }
       /*contact form*/
@@ -2757,16 +2818,17 @@ footer {
       .holiday_details_small {
         width: 48%;
         float: left;
+        margin: 0.25em 0.25em;
         h1 {
           line-height: 25px;
-          font-size: 0.9em;
+          font-size: 1em;
           width: 100%;
           text-align:left;
 
         }
         span.holidayprice {
           line-height: 25px;
-          font-size: 0.8em;
+          font-size: 0.9em;
           text-align:left;
           .offerbox-price {
             color: $colorbtn4;
@@ -2776,16 +2838,17 @@ footer {
         }
         figure {
           width: 100%;
+          display:flex;
+          align-items: center;
+          justify-content: space-around;
           img {
-            width: 178px;
-            height:142px;
-            float: left;
-            margin: 0 0.25em 0 0;
+            width: 44%;
+           
 
           }
 
           figcaption {
-            width: 52%;
+            width: 50%;
             display: inline-block;  
             p {
               font-size: 0.85em;
@@ -3205,28 +3268,35 @@ footer {
     }
 
     #contact-page-sidebar {
-      width: 20%;
+      width: 21%;
       position:unset;
       float: left;
       #contact-details {
-        width: 98%;
+        gap:0.25em;
+        padding: 0.5em;
 
-        li {
-          width: 97%;
-          font-size: 0.75em;
+        p.addr_title {
+          line-height: 20px;
+          font-size:0.8em;    
+          &::before { 
+            font-size:2em;
+            margin-right:0.25em;          
+          }                
+        }
+     
+  
+        a {
+          line-height: 20px;
+          font-size:0.75em;
+          width: 70%;
 
-          &:first-line {
-            font-weight: bold;
-          }
-          span {
-            width: 20%;
-            img {
-              width: 41%;
-            }
-          }
-          a {
-
-            background-color: unset;
+        }
+        p{
+          font-size:0.75em;
+          width:70%;    
+          &::before {        
+            content: "";         
+            height: 100%;          
           }
         }
       }
@@ -3506,12 +3576,13 @@ footer {
       .holiday_details_small {
         width: 48%;
         float: left;
+        margin: 0.25em 0.25em;
         h1 {
           font-size: 0.85em;
           text-align:left;
         }
         span.holidayprice {
-          font-size: 0.8em;
+          font-size: 0.85em;
           text-align:left;
           .offerbox-price {
             color: $colorbtn4;
@@ -3520,15 +3591,15 @@ footer {
         }
         figure {
           width: 100%;
+          display:flex;
+          align-items: center;
+          justify-content: space-around;
           img {
-            width: 168px;
-            height:132px;
-            float: left;
-            margin: 0 0.25em 0 0;
+            width: 44%;
           }
 
           figcaption {
-            width: 52%;
+            width: 50%;
             display: inline-block;
 
             p {
@@ -3946,28 +4017,35 @@ footer {
     }
 
     #contact-page-sidebar {
-      width: 20%;
+      width: 21%;
       position:unset;
       float: left;
       #contact-details {
+        gap:0.25em;
+        padding: 0.5em;
 
+        p.addr_title {
+          line-height: 20px;
+          font-size:0.8em;    
+          &::before { 
+            font-size:2em;
+            margin-right:0.25em;          
+          }                
+        }
+     
+  
+        a {
+          line-height: 20px;
+          font-size:0.7em;
+          width: 70%;
 
-        li {
-          width: 97%;
-          font-size: 0.7em;
-
-          &:first-line {
-            font-weight: bold;
-          }
-          span {
-            width: 20%;
-            img {
-              width: 41%;
-            }
-          }
-          a {
-
-            background-color: unset;
+        }
+        p{
+          font-size:0.7em;
+          width:70%;    
+          &::before {        
+            content: "";         
+            height: 100%;          
           }
         }
       }
@@ -4247,6 +4325,7 @@ footer {
       .holiday_details_small {
         width: 48%;
         float: left;
+        margin: 0.25em 0.25em;
         h1 {
 
           font-size: 0.85em;
@@ -4264,14 +4343,17 @@ footer {
         }
         figure {
           width: 100%;
+          display:flex;
+          align-items: center;
+          justify-content: space-around;
           img {
 
-            float: left;
+            width:42%;
 
           }
 
           figcaption {
-            width: 52%;
+            width: 54%;
             display: inline-block;
 
             p {
@@ -4691,28 +4773,35 @@ footer {
     }
 
     #contact-page-sidebar {
-      width: 20%;
+      width: 21%;
       position:unset;
       float: left;
       #contact-details {
+        gap:0.25em;
+        padding: 0.5em;
+ 
+        p.addr_title {
+          line-height: 20px;
+          font-size:0.8em;    
+          &::before { 
+            font-size:2em;
+            margin-right:0.25em;          
+          }                
+        }
+     
+  
+        a {
+          line-height: 20px;
+          font-size:0.7em;
+          width: 68%;
 
-        li {
-          width: 97%;
-          font-size: 0.7em;
-
-          &:first-line {
-            font-weight: bold;
-          }
-          span {
-            width: 15%;
-            img {
-              width: 41%;
-            }
-          }
-          a {
-            display: block;
-
-            background-color: unset;
+        }
+        p{
+          font-size:0.7em;
+          width:68%;    
+          &::before {        
+            content: "";         
+            height: 100%;          
           }
         }
       }
@@ -5008,14 +5097,16 @@ footer {
         }
         figure {
           width: 100%;
+          display:flex;
+          align-items: center;
+          justify-content: space-around;
           img {
-
-            float: left;
+            width:35%;           
 
           }
 
           figcaption {
-            width: 49%;
+            width: 60%;
             display: inline-block;
 
             p {
@@ -5435,29 +5526,33 @@ footer {
     }
 
     #contact-page-sidebar {
-      width: 20%;
+      width: 21%;
       position:unset;
       float: left;
       #contact-details {
-        width: 98%;
-        li {
-          width: 97%;
+        gap:0.25em;
+        padding: 0.25em;
+        p.addr_title {
           line-height: 20px;
-          font-size: 0.7em;
+          font-size:0.75em;    
+          &::before { 
+            font-size:2em;
+            margin-right:0.25em;          
+          }                
+        }     
+  
+        a {
+          line-height: 20px;
+          font-size:0.7em;
+          width: 80%;
 
-          &:first-line {
-            font-weight: bold;
-          }
-          span {
-            width: 15%;
-            img {
-              width: 41%;
-            }
-          }
-          a {
-
-            background-color: unset;
-
+        }
+        p{
+          font-size:0.7em;
+          width:80%;    
+          &::before {        
+            content: "";         
+            height: 100%;          
           }
         }
       }
@@ -5738,12 +5833,12 @@ footer {
         width: 90%;
         float: none;
         h1 {
-          font-size: 0.9em;
+          font-size: 1em;
           text-align:left;
           
         }
         span.holidayprice {
-          font-size: 0.85em;
+          font-size: 0.9em;
           text-align:left;
           
           .offerbox-price {
@@ -5753,14 +5848,17 @@ footer {
         }
         figure {
           width: 100%;
+          display:flex;
+          align-items: center;
+          justify-content: space-around;
           img {
 
-            float: left;
+            width:35%;
 
           }
 
           figcaption {
-            width: 49%;
+            width: 60%;
             display: inline-block;
 
             p {
@@ -6173,28 +6271,35 @@ footer {
     }
 
     #contact-page-sidebar {
-      width: 20%;
+      width: 21%;
       position:unset;
       float: left;
       #contact-details {
+        gap:0.25em;
+        padding: 0.5em;
 
-        li {
-          width: 97%;
-          font-size: 0.7em;
+        p.addr_title {
+          line-height: 20px;
+          font-size:0.75em;    
+          &::before { 
+            font-size:2em;
+            margin-right:0.25em;          
+          }                
+        }
+     
+  
+        a {
+          line-height: 20px;
+          font-size:0.6em;
+          width: 90%;
 
-          &:first-line {
-            color: $sideboxcolor1a;
-            font-weight: bold;
-          }
-          span {
-            width: 15%;
-            img {
-              width: 41%;
-            }
-          }
-          a {
-
-            background-color: unset;
+        }
+        p{
+          font-size:0.7em;
+          width:90%;    
+          &::before {        
+            content: "";         
+            height: 100%;          
           }
         }
       }
@@ -6490,14 +6595,17 @@ footer {
         }
         figure {
           width: 100%;
+          display:flex;
+          align-items: center;
+          justify-content: space-around;
           img {
 
-            float: left;
+            width:40%;
 
           }
 
           figcaption {
-            width: 49%;
+            width: 55%;
             display: inline-block;
 
             p {
@@ -6907,27 +7015,32 @@ footer {
 
     #contact-page-sidebar {
       position: fixed;
+      width:40%;
       #contact-details {
-
-        li {
-          width: 97%;
+        gap:0.25em;
+        padding: 0.5em;
+        p.addr_title {
           line-height: 20px;
+          font-size:0.85em;    
+          &::before { 
+            font-size:2em;
+            margin-right:0.25em;          
+          }                
+        }
+     
+  
+        a {
+          line-height: 20px;
+          font-size:0.8em;
+          width: 76%;
 
-          &:first-line {
-
-            font-weight: bold;
-          }
-          span {
-            width: 15%;
-            height: 5rem;
-            img {
-              width: 41%;
-              margin: 11% auto;
-            }
-          }
-          a {
-            line-height: 20px;
-            font-size: 1em;
+        }
+        p{
+          font-size:0.8em;
+          width:76%;    
+          &::before {        
+            content: "";         
+            height: 100%;          
           }
         }
       }
@@ -7129,18 +7242,19 @@ footer {
       }
 
       .holiday_details_small {
-
         width:80%;
         padding: 0.25em;
 
         h1 {
           font-size: 1em;
           text-align:center;
+          line-height:35px;
           
         }
         span.holidayprice {
-          font-size: 0.8em;
+          font-size: 0.9em;
           text-align:center;
+          line-height:35px;
 
           .offerbox-price {
             font-size: 90%;
@@ -7151,6 +7265,7 @@ footer {
 
           img {
             width: 40%;
+            
 
           }
 
@@ -7554,27 +7669,32 @@ footer {
 
     #contact-page-sidebar {
       position: fixed;
+      width:40%;
       #contact-details {
-
-        li {
-          width: 97%;
+        gap:0.25em;
+        padding: 0.5em;
+        p.addr_title {
           line-height: 20px;
+          font-size:0.85em;    
+          &::before { 
+            font-size:2em;
+            margin-right:0.25em;          
+          }                
+        }
+     
+  
+        a {
+          line-height: 20px;
+          font-size:0.8em;
+          width: 76%;
 
-          &:first-line {
-
-            font-weight: bold;
-          }
-          span {
-            width: 15%;
-            height: 5rem;
-            img {
-              width: 41%;
-              margin: 11% auto;
-            }
-          }
-          a {
-            line-height: 20px;
-            font-size: 1em;
+        }
+        p{
+          font-size:0.8em;
+          width:76%;    
+          &::before {        
+            content: "";         
+            height: 100%;          
           }
         }
       }
@@ -8204,27 +8324,33 @@ footer {
 
     #contact-page-sidebar {
       position: fixed;
+      width:50%;
       #contact-details {
+        gap:0.25em;
+        padding: 0.5em;
 
-        li {
-          width: 97%;
+        p.addr_title {
           line-height: 20px;
+          font-size:0.85em;    
+          &::before { 
+            font-size:2em;
+            margin-right:0.25em;          
+          }                
+        }
+     
+  
+        a {
+          line-height: 20px;
+          font-size:0.8em;
+          width: 76%;
 
-          &:first-line {
-
-            font-weight: bold;
-          }
-          span {
-            width: 15%;
-            height: 5rem;
-            img {
-              width: 41%;
-              margin: 11% auto;
-            }
-          }
-          a {
-            line-height: 20px;
-            font-size: 1em;
+        }
+        p{
+          font-size:0.8em;
+          width:76%;    
+          &::before {        
+            content: "";         
+            height: 100%;          
           }
         }
       }

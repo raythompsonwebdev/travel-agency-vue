@@ -4,8 +4,14 @@
 
     <!--contact details box-->
     <aside v-if="contactFunction" id="contact-page-sidebar" class="hide">
-      <ul id="contact-details">
-        <li>
+      <address id="contact-details">
+        <p class="addr_title" style="">Phone:</p>
+        <a href="tel:123-436-7890">123-436-7890 </a>
+        <p class="addr_title">Mail :</p>
+        <a href="mailto:info@travelagency.com">info@travelagency.com</a>
+        <p class="addr_title">Address:</p>
+        <p>Lorem Ipsum 1234 Dolo Sit Amet</p>
+        <!-- <li>
           <span>
             <img :src="telephoneImage" :alt="'telephone-image'" />
           </span>
@@ -25,8 +31,8 @@
           </span>
           Address:
           <br />Lorem Ipsum 1234 Dolo Sit Amet
-        </li>
-      </ul>
+        </li> -->
+      </address>
     </aside>
 
     <main id="content2">
@@ -82,6 +88,11 @@ export default {
     },
     addReview(productReview) {
       this.reviews.push(productReview);
+    },
+
+    imageFunc() {
+      const addrTitles = document.getElementsByClassName("addr_title");
+      console.log(addrTitles);
     },
   },
 };

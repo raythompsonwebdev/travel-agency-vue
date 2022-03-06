@@ -6,11 +6,11 @@
         <img
           id="flagImg"
           v-bind:src="
-            selected === ' '
-              ? defaultImage
-              : `./assets/images/flags/png/${selected}.png`
+            selected !== ' '
+              ? `./assets/images/flags/png/${selected}.png`
+              : defaultImage
           "
-          :alt="'newimage'"
+          :alt="'lag image'"
         />
         <select
           v-model="selected"
@@ -68,7 +68,7 @@ export default {
       this.selected = id;
     },
     imgUrlAlt(e) {
-      e.target.src = `../assets/images/flags/default.jpg`;
+      e.target.src = `./assets/images/flags/default.jpg`;
     },
   },
 };
