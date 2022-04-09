@@ -14,7 +14,7 @@
       <transition-group name="fade" tag="div">
         <div
           v-for="holidaypackageitem in filteredPacks"
-          :key="holidaypackageitem.id"
+          :key="holidaypackageitem.itemid"
         >
           <HolidayPackageItem :holidaypackageitem="holidaypackageitem" />
         </div>

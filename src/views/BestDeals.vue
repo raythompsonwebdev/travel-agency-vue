@@ -10,7 +10,7 @@
 
     <main id="holiday-items">
       <transition-group name="fade" tag="div">
-        <div v-for="bestdealitem in filteredPacks" :key="bestdealitem.id">
+        <div v-for="bestdealitem in filteredPacks" :key="bestdealitem.itemid">
           <BestDealItem :bestdealitem="bestdealitem" />
         </div>
       </transition-group>

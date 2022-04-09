@@ -1,12 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "../views/home-page.vue";
 import BestDeals from "../views/BestDeals";
-import BestDealsItem from "../components/BestDealsItem";
+import BestDeal from "../views/BestDeal";
 import AboutPage from "../views/about-page";
 import HolidayPackages from "../views/HolidayPackages";
-import HolidayPackagesItem from "../components/HolidayPackagesItem";
+import HolidayPackage from "../views/HolidayPackage";
 import ContactPage from "../views/contact-page";
 import ServicePage from "../views/service-page";
+//import CartPage from "../views/Cartpage";
 import NotFoundpage from "../views/NotFoundpage";
 
 const routes = [
@@ -27,8 +28,8 @@ const routes = [
   },
   {
     path: "/bestdeals/:id",
-    name: "BestDealsItem",
-    component: BestDealsItem,
+    name: "BestDeal",
+    component: BestDeal,
   },
   {
     path: "/holidaypackages",
@@ -37,8 +38,8 @@ const routes = [
   },
   {
     path: "/holidaypackages/:id",
-    name: "HolidayPackage Item",
-    component: HolidayPackagesItem,
+    name: "HolidayPackage",
+    component: HolidayPackage,
   },
   {
     path: "/contact",
@@ -56,6 +57,11 @@ const routes = [
     name: "NotFoundpage",
     component: NotFoundpage,
   },
+  // {
+  //   path: "/cart",
+  //   name: "CartPage",
+  //   component: CartPage,
+  // },
 ];
 
 const router = createRouter({

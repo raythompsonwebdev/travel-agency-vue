@@ -296,6 +296,7 @@
           height: 35px;
           border: solid 1px $sideboxbordercolvar;
           display: flex;
+          justify-content: space-between;
           text-indent: 0.2em;
         }
 
@@ -686,6 +687,7 @@
     width: 200px;
     margin-top: 1%;
     background-color: #014188;
+    background-repeat: none;
     @include TranSition(all 1s ease);
     .hide {
       left: -650px;
@@ -701,11 +703,17 @@
       margin: 0;
       padding: 0;
       position:relative;
+      img {
+        display: block;
+        border: none;
+        width:100%;        
+        margin:0;
+      }
       figcaption {
         display: block;
         margin: 0;
         padding: 5%;
-        position:absolute;
+       
         flex-flow: column;
         justify-content: space-between;
         h1 {
@@ -726,6 +734,7 @@
           img {
             display: block;
             border: none;
+            width:100%;
           }
         }
 
@@ -1236,7 +1245,7 @@
 
           display: block;
           margin: 0.5em auto;
-          width:auto;
+          width:100%;
         }
 
         figcaption {
@@ -1252,7 +1261,7 @@
             color: $colorgry2;
             text-align:center;
           }
-          button {
+          a {
             width: 50%;
             @include borderRaduis(5px);
             display: block;
@@ -1441,7 +1450,7 @@ footer {
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-      justify-content: flex-start;
+      justify-content: space-between;
 
 
       ul#navi {
@@ -1690,9 +1699,17 @@ footer {
       width: 20%;
       position: unset;
       float: left;
+      height: 565px;
+      background-image: url('./assets/images/travel-agency-website-sidebar-banner-image.jpg');
+      background-repeat: none;
 
       figure {
         margin: 0;
+        img {
+          display: block;
+          border: none;
+          width:100%;
+        }
 
         figcaption {
 
@@ -1700,7 +1717,7 @@ footer {
           h1 {
 
             font-size: 1.28em;
-
+            margin: 40px 0;
           }
 
           span {
@@ -2095,7 +2112,7 @@ footer {
               font-size: 0.85em;
               text-align:left;
             }
-            button {
+            a{
               font-size: 1em;
               line-height: 35px;
               margin: 0.5em 0;
@@ -2197,7 +2214,7 @@ footer {
       }
 
       aside.contact {
-        width: 14%;
+        width: 12.5%;
         margin: 0.25em 0 0 0;
         display: block;
         
@@ -2237,7 +2254,7 @@ footer {
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-      justify-content: flex-start;
+      justify-content: space-between;
 
 
       ul#navi {
@@ -2487,17 +2504,28 @@ footer {
       width: 20%;
       position: unset;
       float: left;
+      height: 560px;
+      background-image: url('./assets/images/travel-agency-website-sidebar-banner-image.jpg');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+
 
       figure {
         margin: 0;
         position:relative;
-
+        img {
+          display: block;
+          border: none;
+          width:100%;
+        }
         figcaption {
 
           padding: 5%;
           h1 {
 
             font-size: 1.28em;
+            margin: 40px 0;
 
           }
 
@@ -2512,7 +2540,7 @@ footer {
 
           p {
 
-            font-size: 0.9em;
+            font-size: 0.8em;
             line-height:25px;
 
           }
@@ -2867,7 +2895,7 @@ footer {
               font-size: 0.85em;
               text-align:left;
             }
-            button {
+            a {
               font-size: 0.9em;
               line-height: 35px;
               margin: 0.5em 0;
@@ -2972,7 +3000,7 @@ footer {
       }
 
       aside.contact {
-        width: 14%;
+        width: 13%;
         margin: 0.25em 0 0 0;
         display: block;
         
@@ -3260,7 +3288,10 @@ footer {
       width: 20%;
       position: unset;
       float: left;
-
+      img {
+        display: block;
+        border: none;
+      }
       figure {
         margin: 0;
 
@@ -3285,7 +3316,7 @@ footer {
 
           p {
 
-            font-size: 0.7em;
+            font-size: 0.75em;
 
           }
         }
@@ -3631,7 +3662,7 @@ footer {
               font-size: 0.8em;
               text-align:left;
             }
-            button {
+            a {
               font-size: 0.9em;
               line-height: 35px;
               margin: 0.5em 0;
@@ -3774,7 +3805,7 @@ footer {
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
-
+      justify-content: space-between;
       ul#navi {
         width: 84%;
         float: left;
@@ -4023,7 +4054,10 @@ footer {
 
       figure {
         margin: 0;
-
+        img {
+          display: block;
+          border: none;
+        }
         figcaption {
 
           padding: 5%;
@@ -4396,7 +4430,7 @@ footer {
               font-size: 0.8em;
               text-align:left;
             }
-            button {
+            a {
               font-size: 1em;
               line-height: 35px;
               margin: 0.5em 0;
@@ -4540,6 +4574,7 @@ footer {
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
+      justify-content: space-between;
 
       ul#navi {
         width: 84%;
@@ -4790,7 +4825,10 @@ footer {
 
       figure {
         margin: 0;
-
+        img {
+          display: block;
+          border: none;
+        }
         figcaption {
 
           padding: 5%;
@@ -5160,7 +5198,7 @@ footer {
               font-size: 0.8em;
               text-align:left;
             }
-            button {
+            a {
               font-size: 1em;
               line-height: 35px;
               margin: 0.5em 0;
@@ -5552,7 +5590,10 @@ footer {
 
       figure {
         margin: 0;
-
+        img {
+          display: block;
+          border: none;
+        }
         figcaption {
 
           padding: 5%;
@@ -5921,7 +5962,7 @@ footer {
               font-size: 0.85em;
               text-align:left;
             }
-            button {
+            a {
               font-size: 1em;
               line-height: 35px;
               margin: 0.5em 0;
@@ -6301,7 +6342,10 @@ footer {
 
       figure {
         margin: 0;
-
+        img {
+          display: block;
+          border: none;
+        }
         figcaption {
 
           padding: 5%;
@@ -6671,7 +6715,7 @@ footer {
               font-size: 0.8em;
               text-align:left;
             }
-            button {
+            a {
               font-size: 1em;
               line-height: 35px;
               margin: 0.5em 0;
@@ -7054,6 +7098,10 @@ footer {
       figure {
         margin: 0;
         padding: 0;
+        img {
+          display: block;
+          border: none;
+        }
         figcaption {
           display: block;
           h1 {
@@ -7337,7 +7385,7 @@ footer {
             p {
               font-size: 0.9em;
             }
-            button {
+            a {
               font-size: 1em;
               &:hover {
                   cursor: pointer;
@@ -7714,6 +7762,10 @@ footer {
       figure {
         margin: 0;
         padding: 0;
+        img {
+          display: block;
+          border: none;
+        }
         figcaption {
           display: block;
           h1 {
@@ -7995,7 +8047,7 @@ footer {
             p {
               font-size: 0.8em;
             }
-            button {
+            a {
               font-size: 1em;
               &:hover {
                   cursor: pointer;
@@ -8374,6 +8426,10 @@ footer {
       figure {
         margin: 0;
         padding: 0;
+        img {
+          display: block;
+          border: none;
+        }
         figcaption {
           display: block;
           h1 {
@@ -8653,7 +8709,7 @@ footer {
             p {
               font-size: 0.8em;
             }
-            button {
+            a {
               font-size: 0.9em;
               &:hover {
                   cursor: pointer;

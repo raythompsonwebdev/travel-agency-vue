@@ -1,8 +1,13 @@
 <template>
   <div class="AboutUs page">
     <button id="side-bar-btn" @click="aboutPageFunction">SIDE</button>
+
     <aside id="about-page-banner" class="hide">
       <figure>
+        <!-- <img
+          :src="bannerImage"
+          :alt="'travel-agency-website-sidebar-banner-image-small'"
+        /> -->
         <figcaption>
           <h1>Lorem ipsum dolor sit amet</h1>
 
@@ -15,11 +20,6 @@
             rillo cupiditate deleniti expedita. Maxime minima magnam iure libero
           </p>
         </figcaption>
-
-        <img
-          :src="bannerImage"
-          :alt="'travel-agency-website-sidebar-banner-image-small'"
-        />
       </figure>
     </aside>
 

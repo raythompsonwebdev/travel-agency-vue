@@ -14,7 +14,7 @@
           {{ holidaypackageitem.available }}
         </p>
         <p>{{ holidaypackageitem.text }}</p>
-        <router-link :to="'/holidaypackages/' + holidaypackageitem.id">
+        <router-link :to="'/holidaypackages/' + holidaypackageitem.itemid">
           View Details
         </router-link>
       </figcaption>
@@ -25,7 +25,6 @@
 <script>
 export default {
   name: "HolidayPackageItem",
-  //props: ["holidaypackageitems"],
   props: {
     holidaypackageitem: {
       type: Object,
