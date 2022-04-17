@@ -25,21 +25,25 @@ const routes = [
     path: "/bestdeals",
     name: "BestDeals",
     component: BestDeals,
+    props: true,
   },
   {
-    path: "/bestdeals/:id",
+    path: "/bestdeal/:itemid",
     name: "BestDeal",
     component: BestDeal,
+    props: true,
   },
   {
     path: "/holidaypackages",
     name: "HolidayPackages",
     component: HolidayPackages,
+    props: true,
   },
   {
-    path: "/holidaypackages/:id",
+    path: "/holidaypackage/:itemid",
     name: "HolidayPackage",
     component: HolidayPackage,
+    props: true,
   },
   {
     path: "/contact",

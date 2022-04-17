@@ -6,6 +6,11 @@
       <figure>
         <figcaption>
           <h1>Lorem ipsum dolor sit amet</h1>
+          <span
+            ><img
+              :src="bannerImageLabel"
+              :alt="'travel-agency-website-sidebar-banner-image-label'"
+          /></span>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           <p>
@@ -16,7 +21,6 @@
             rillo cupiditate deleniti expedita. Maxime minima magnam iure libero
           </p>
         </figcaption>
-
         <img
           :src="bannerImage"
           :alt="'travel-agency-website-sidebar-banner-image'"
@@ -161,6 +165,7 @@
 
 <script>
 import bannerImage from "../assets/images/travel-agency-website-sidebar-banner-image.jpg";
+import bannerImageLabel from "../assets/images/travel-agency-website-sidebar-banner-image-label.jpg";
 import customerService from "../assets/images/travel-agency-website-customer-service-image.jpg";
 import busTours from "../assets/images/travel-agency-website-bus-tours-image.jpg";
 import hotelRoom from "../assets/images/travel-agency-website-hotel-room-image.jpg";
@@ -171,6 +176,7 @@ export default {
       show: "true",
 
       bannerImage: bannerImage,
+      bannerImageLabel: bannerImageLabel,
       customerService: customerService,
       busTours: busTours,
       hotelRoom: hotelRoom,

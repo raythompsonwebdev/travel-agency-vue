@@ -3,9 +3,6 @@
   <div id="wrapper">
     <TravelHeader />
     <TravelNav />
-    <!-- <transition name="router-anim">
-        <router-view />
-      </transition> -->
     <router-view v-slot="{ Component }">
       <transition name="router-anim">
         <keep-alive>
@@ -33,7 +30,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "assets/main";
+@import "assets/sass/main";
 .router-anim-enter-active {
   animation: coming 0.5s;
   animation-delay: 0.5s;

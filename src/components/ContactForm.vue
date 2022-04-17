@@ -34,13 +34,14 @@
         </li>
         <li>
           <label for="phone"
-            >Phone <input id="phone" type="text" name="phone"
+            >Phone <input id="phone" v-model="phone" type="text" name="phone"
           /></label>
         </li>
         <li>
           <label for="message"
             >Message
             <textarea
+              v-model="message"
               id="message"
               name="message"
               class="required"

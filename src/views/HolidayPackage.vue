@@ -1,6 +1,6 @@
 <template>
   <div v-if="singleholidaypackage" class="singleholidaypackage">
-    <article class="holiday_item_details">
+    <article class="single_item_details">
       <h1>{{ singleholidaypackage.title }}</h1>
       <span class="holidayprice">
         from
@@ -24,12 +24,14 @@
 </template>
 
 <script>
-import NotFoundpage from "../views/NotFoundpage";
+import NotFoundpage from "./NotFoundpage";
 import axios from "axios";
+import { useRoute } from "vue-router";
 
 export default {
   name: "HolidayPackage",
   title: "Holiday Package Page",
+  props: ["itemid"],
   components: {
     NotFoundpage,
   },
@@ -39,10 +41,12 @@ export default {
     };
   },
   async created() {
+    const route = useRoute();
     const result = await axios.get(
-      `/api/holidaypackages/${this.$route.params.id}`
+      `/api/holidaypackage/${route.params.itemid}`
     );
     const { data } = result;
+    console.log(data.itemid);
     this.singleholidaypackage = data;
   },
 };
@@ -67,12 +71,12 @@ export default {
   font-size: 1.4em;
   margin: 0;
 }
-.holiday_item_details {
+.single_item_details {
   margin: 0 auto;
   display: flex;
   flex-flow: column;
 }
-.holiday_item_details p {
+.single_item_details p {
   margin: 0;
   width: 100%;
   line-height: 1.6em;
@@ -97,7 +101,7 @@ figure {
   margin: 0;
 }
 figure img {
-  width: 75%;
+  width: 45%;
   display: block;
   margin: 0.5em auto;
 }

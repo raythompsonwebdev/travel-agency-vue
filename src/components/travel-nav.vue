@@ -81,7 +81,6 @@ export default {
     },
     InlineMenuButtonClickHandler() {
       // eslint-disable-next-line no-console
-      console.log("mouseup");
       //e.preventDefault();
       let slideoutMenu = document.getElementById("navi");
 

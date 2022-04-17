@@ -1,6 +1,6 @@
 <template>
   <div v-if="singlebestdeal" class="singlebestdeal">
-    <article class="holiday_item_details">
+    <article class="single_item_details">
       <h1>{{ singlebestdeal.title }}</h1>
       <span class="holidayprice">
         from
@@ -21,11 +21,13 @@
 </template>
 
 <script>
-import NotFoundpage from "../views/NotFoundpage";
+import NotFoundpage from "./NotFoundpage";
 import axios from "axios";
+import { useRoute } from "vue-router";
 
 export default {
   name: "BestDeal",
+  prop: ["itemid", "name"],
   components: {
     NotFoundpage,
   },
@@ -34,9 +36,13 @@ export default {
       singlebestdeal: {},
     };
   },
+
   async created() {
-    const result = await axios.get(`/api/bestdeals/${this.$route.params.id}`);
+    this.singlebestdeal = null;
+    const route = useRoute();
+    const result = await axios.get(`/api/bestdeal/${route.params.itemid}`);
     const { data } = result;
+    console.log(result);
     this.singlebestdeal = data;
   },
 };
@@ -61,12 +67,12 @@ export default {
   font-size: 1.4em;
   margin: 0;
 }
-.holiday_item_details {
+.single_item_details {
   margin: 0 auto;
   display: flex;
   flex-flow: column;
 }
-.holiday_item_details p {
+.single_item_details p {
   margin: 0;
   width: 100%;
   line-height: 1.6em;
@@ -91,7 +97,7 @@ figure {
   margin: 0;
 }
 figure img {
-  width: 25%;
+  width: 45%;
   display: block;
   margin: 0.5em auto;
 }

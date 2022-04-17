@@ -4,12 +4,13 @@
 
     <aside id="about-page-banner" class="hide">
       <figure>
-        <!-- <img
-          :src="bannerImage"
-          :alt="'travel-agency-website-sidebar-banner-image-small'"
-        /> -->
         <figcaption>
           <h1>Lorem ipsum dolor sit amet</h1>
+          <span
+            ><img
+              :src="bannerImageLabel"
+              :alt="'travel-agency-website-sidebar-banner-image-label'"
+          /></span>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           <p>
@@ -20,6 +21,10 @@
             rillo cupiditate deleniti expedita. Maxime minima magnam iure libero
           </p>
         </figcaption>
+        <img
+          :src="bannerImage"
+          :alt="'travel-agency-website-sidebar-banner-image'"
+        />
       </figure>
     </aside>
 
@@ -80,6 +85,7 @@
 
 <script>
 import bannerImage from "../assets/images/travel-agency-website-sidebar-banner-image.jpg";
+import bannerImageLabel from "../assets/images/travel-agency-website-sidebar-banner-image-label.jpg";
 
 export default {
   name: "AboutPage",
@@ -87,6 +93,7 @@ export default {
     return {
       show: "true",
       bannerImage: bannerImage,
+      bannerImageLabel: bannerImageLabel,
     };
   },
   methods: {
