@@ -23,11 +23,10 @@
 <script>
 import NotFoundpage from "./NotFoundpage";
 import axios from "axios";
-import { useRoute } from "vue-router";
 
 export default {
   name: "BestDeal",
-  prop: ["itemid", "name"],
+  prop: ["itemid"],
   components: {
     NotFoundpage,
   },
@@ -37,13 +36,18 @@ export default {
     };
   },
 
+  methods: {
+    async initData() {
+      const result = await axios.get(
+        `/api/bestdeal/${this.$route.params.itemid}`
+      );
+      const { data } = result;
+      this.singlebestdeal = data;
+    },
+  },
+
   async created() {
-    this.singlebestdeal = null;
-    const route = useRoute();
-    const result = await axios.get(`/api/bestdeal/${route.params.itemid}`);
-    const { data } = result;
-    console.log(result);
-    this.singlebestdeal = data;
+    this.$watch(() => this.$route.params.itemid, this.initData());
   },
 };
 </script>

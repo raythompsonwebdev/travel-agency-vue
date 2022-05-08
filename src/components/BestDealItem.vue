@@ -1,6 +1,6 @@
 <template>
   <article class="holiday_details_small">
-    <figure>
+    <figure v-if="bestdealitem">
       <img :src="bestdealitem.url" :alt="bestdealitem.title" />
       <figcaption>
         <h1>{{ bestdealitem.title }}</h1>
@@ -18,8 +18,7 @@
           :to="{
             name: 'BestDeal',
             params: {
-              itemid: bestdealitem.itemid,
-              name: bestdealitem.location,
+              itemid: bestdealitem.location,
             },
           }"
         >

@@ -11,27 +11,6 @@
         <a href="mailto:info@travelagency.com">info@travelagency.com</a>
         <p class="addr_title">Address:</p>
         <p>Lorem Ipsum 1234 Dolo Sit Amet</p>
-        <!-- <li>
-          <span>
-            <img :src="telephoneImage" :alt="'telephone-image'" />
-          </span>
-          Phone:
-          <a href="tel:123 436 7890">123 436 7890</a>
-        </li>
-        <li>
-          <span>
-            <img :src="envelopeImage" :alt="'envelope-image'" />
-          </span>
-          Mail:
-          <a href="mailto:info@travelagency.com">info@travelagency.com</a>
-        </li>
-        <li>
-          <span>
-            <img :src="addressImage" :alt="'address-image'" />
-          </span>
-          Address:
-          <br />Lorem Ipsum 1234 Dolo Sit Amet
-        </li> -->
       </address>
     </aside>
 
@@ -92,7 +71,7 @@ export default {
 
     imageFunc() {
       const addrTitles = document.getElementsByClassName("addr_title");
-      console.log(addrTitles);
+      console.error(addrTitles);
     },
   },
 };

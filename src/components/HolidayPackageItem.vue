@@ -2,7 +2,6 @@
   <article class="holiday_details">
     <h1>{{ holidaypackageitem.title }}</h1>
     <span class="holidayprice">
-      from
       <span class="offerbox-price">{{ holidaypackageitem.price }}</span>
     </span>
     <figure>
@@ -40,6 +39,9 @@ export default {
       type: Object,
       default: null,
     },
+  },
+  flushCom: function () {
+    this.$router.go();
   },
 };
 </script>

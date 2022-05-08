@@ -3,7 +3,7 @@
   <div id="wrapper">
     <TravelHeader />
     <TravelNav />
-    <router-view v-slot="{ Component }">
+    <router-view v-slot="{ Component }" :key="$route.path">
       <transition name="router-anim">
         <keep-alive>
           <component :is="Component" />

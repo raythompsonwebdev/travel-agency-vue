@@ -26,7 +26,6 @@
 <script>
 import NotFoundpage from "./NotFoundpage";
 import axios from "axios";
-import { useRoute } from "vue-router";
 
 export default {
   name: "HolidayPackage",
@@ -40,14 +39,19 @@ export default {
       singleholidaypackage: {},
     };
   },
+  methods: {
+    async initData() {
+      const result = await axios.get(
+        `/api/holidaypackage/${this.$route.params.itemid}`
+      );
+
+      const { data } = result;
+      this.singleholidaypackage = data;
+    },
+  },
+
   async created() {
-    const route = useRoute();
-    const result = await axios.get(
-      `/api/holidaypackage/${route.params.itemid}`
-    );
-    const { data } = result;
-    console.log(data.itemid);
-    this.singleholidaypackage = data;
+    this.$watch(() => this.$route.params.itemid, this.initData());
   },
 };
 </script>

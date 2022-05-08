@@ -1,14 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomePage from "../views/home-page.vue";
-import BestDeals from "../views/BestDeals";
-import BestDeal from "../views/BestDeal";
-import AboutPage from "../views/about-page";
-import HolidayPackages from "../views/HolidayPackages";
-import HolidayPackage from "../views/HolidayPackage";
-import ContactPage from "../views/contact-page";
-import ServicePage from "../views/service-page";
-//import CartPage from "../views/Cartpage";
-import NotFoundpage from "../views/NotFoundpage";
+import HomePage from "@/views/home-page";
+import BestDeals from "@/views/BestDeals";
+import BestDeal from "@/views/BestDeal";
+import AboutPage from "@/views/about-page";
+import HolidayPackages from "@/views/HolidayPackages";
+import HolidayPackage from "@/views/HolidayPackage";
+import ContactPage from "@/views/contact-page";
+import ServicePage from "@/views/service-page";
+import NotFoundpage from "@/views/NotFoundpage";
 
 const routes = [
   {
@@ -50,7 +49,6 @@ const routes = [
     name: "ContactPage",
     component: ContactPage,
   },
-
   {
     path: "/services",
     name: "ServicePage",
