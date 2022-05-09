@@ -39,19 +39,24 @@ export default {
       singleholidaypackage: {},
     };
   },
-  methods: {
-    async initData() {
-      const result = await axios.get(
-        `/api/holidaypackage/${this.$route.params.itemid}`
-      );
+  // methods: {
+  //   async initData() {
+  //     const result = await axios.get(
+  //       `/api/holidaypackage/${this.$route.params.itemid}`
+  //     );
 
-      const { data } = result;
-      this.singleholidaypackage = data;
-    },
-  },
+  //     const { data } = result;
+  //     this.singleholidaypackage = data;
+  //   },
+  // },
 
   async created() {
-    this.$watch(() => this.$route.params.itemid, this.initData());
+    //this.$watch(() => this.$route.params.itemid, this.initData());
+    const result = await axios.get(
+      `/api/holidaypackage/${this.$route.params.itemid}`
+    );
+    const { data } = result;
+    this.singleholidaypackage = data;
   },
 };
 </script>
@@ -63,7 +68,7 @@ export default {
   border: 2px #ededeb solid;
   margin: 2em auto;
   display: block;
-  width: 50%;
+  width: 90%;
   padding: 0.5em;
 }
 /*Holiday details packages page*/
@@ -105,7 +110,7 @@ figure {
   margin: 0;
 }
 figure img {
-  width: 45%;
+  width: auto;
   display: block;
   margin: 0.5em auto;
 }

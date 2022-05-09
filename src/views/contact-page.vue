@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import ContactForm from "../components/ContactForm.vue";
+import ContactForm from "@/components/ContactForm";
 import addressImage from "../assets/images/Address.png";
 import envelopeImage from "../assets/images/envelope.png";
 import telephoneImage from "../assets/images/Telephone.png";

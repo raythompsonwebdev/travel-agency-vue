@@ -113,12 +113,12 @@ export default {
 
 <style lang="scss">
 .fade-enter-active {
-  animation: coming 1s;
-  animation-delay: 1s;
+  animation: coming 0.5s;
+  animation-delay: 0.5s;
   opacity: 0;
 }
 .fade-leave-active {
-  animation: going 1s;
+  animation: going 0.5s;
 }
 @keyframes coming {
   from {

@@ -18,7 +18,7 @@
           :to="{
             name: 'BestDeal',
             params: {
-              itemid: bestdealitem.location,
+              itemid: bestdealitem.itemid,
             },
           }"
         >

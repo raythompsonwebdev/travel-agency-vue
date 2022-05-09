@@ -36,18 +36,31 @@ export default {
     };
   },
 
-  methods: {
-    async initData() {
-      const result = await axios.get(
-        `/api/bestdeal/${this.$route.params.itemid}`
-      );
-      const { data } = result;
-      this.singlebestdeal = data;
-    },
-  },
+  // methods: {
+  //   async initData() {
+  //     const result = await axios.get(
+  //       `/api/bestdeal/${this.$route.params.itemid}`
+  //     );
+  //     const { data } = result;
+  //     this.singlebestdeal = data;
+  //   },
+  // },
 
   async created() {
-    this.$watch(() => this.$route.params.itemid, this.initData());
+    const result = await axios.get(
+      `/api/bestdeal/${this.$route.params.itemid}`
+    );
+    const { data } = result;
+    this.singlebestdeal = data;
+    //this.$watch(() => this.$route.params.itemid, this.initData());
+    //this.initData;
+    // try {
+    //   this.$watch(() => this.$route.params.itemid, this.initData());
+    // } catch (e) {
+    //   console.error(e);
+    // } finally {
+    //   console.log("We do cleanup here");
+    //}
   },
 };
 </script>
@@ -59,7 +72,7 @@ export default {
   border: 2px #ededeb solid;
   margin: 2em auto;
   display: block;
-  width: 50%;
+  width: 90%;
   padding: 0.5em;
 }
 /*Holiday details packages page*/
@@ -101,7 +114,7 @@ figure {
   margin: 0;
 }
 figure img {
-  width: 45%;
+  width: auto;
   display: block;
   margin: 0.5em auto;
 }
@@ -110,7 +123,7 @@ figcaption {
   display: inline-block;
   margin-bottom: 0.5em;
 }
-figcaption h3 {
+figcaption > h3 {
   margin: 0;
   width: 100%;
   line-height: 40px;
@@ -119,14 +132,14 @@ figcaption h3 {
   color: #1485c9;
 }
 
-figcaption p {
+figcaption > p {
   font-size: 0.9em;
   margin: 0;
   line-height: 35px;
   color: #9e9e9e;
   text-transform: capitalize;
 }
-figcaption button {
+figcaption > button {
   width: 80%;
   text-align: center;
   color: #fff;
@@ -139,7 +152,7 @@ figcaption button {
   border: 1px solid #fff;
   display: block;
 }
-figcaption button:hover {
+figcaption > button:hover {
   color: #fff;
   text-align: center;
   font-weight: bold;
