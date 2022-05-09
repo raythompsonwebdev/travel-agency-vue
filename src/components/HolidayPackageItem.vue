@@ -21,6 +21,7 @@
             name: 'HolidayPackage',
             params: {
               itemid: holidaypackageitem.itemid,
+              slug: holidaypackageitem.location,
             },
           }"
         >

@@ -19,6 +19,7 @@
             name: 'BestDeal',
             params: {
               itemid: bestdealitem.itemid,
+              slug: bestdealitem.location,
             },
           }"
         >

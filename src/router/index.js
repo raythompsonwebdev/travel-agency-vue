@@ -2,11 +2,11 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "@/views/home-page";
 import BestDeals from "@/views/BestDeals";
 import BestDeal from "@/views/BestDeal";
-import AboutPage from "@/views/about-page";
+//import AboutPage from "@/views/about-page";
 import HolidayPackages from "@/views/HolidayPackages";
 import HolidayPackage from "@/views/HolidayPackage";
 import ContactPage from "@/views/contact-page";
-import ServicePage from "@/views/service-page";
+//import ServicePage from "@/views/service-page";
 import NotFoundpage from "@/views/NotFoundpage";
 
 const routes = [
@@ -18,7 +18,7 @@ const routes = [
   {
     path: "/about",
     name: "AboutPage",
-    component: AboutPage,
+    component: () => import("@/views/about-page"),
   },
   {
     path: "/bestdeals",
@@ -27,7 +27,7 @@ const routes = [
     props: true,
   },
   {
-    path: "/bestdeal/:itemid",
+    path: "/bestdeal/:itemid/:slug",
     name: "BestDeal",
     component: BestDeal,
     props: true,
@@ -39,7 +39,7 @@ const routes = [
     props: true,
   },
   {
-    path: "/holidaypackage/:itemid",
+    path: "/holidaypackage/:itemid/:slug",
     name: "HolidayPackage",
     component: HolidayPackage,
     props: true,
@@ -52,7 +52,8 @@ const routes = [
   {
     path: "/services",
     name: "ServicePage",
-    component: ServicePage,
+    //component: ServicePage,
+    component: () => import("@/views/service-page"),
   },
   {
     path: "/:pathMatch(.*)*",
