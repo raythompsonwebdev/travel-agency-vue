@@ -3,6 +3,7 @@
   <div id="wrapper">
     <TravelHeader />
     <TravelNav />
+    <!--:key="$route.path"-->
     <router-view v-slot="{ Component }" :key="$route.path">
       <transition name="router-anim">
         <keep-alive>
@@ -10,6 +11,7 @@
         </keep-alive>
       </transition>
     </router-view>
+
     <div class="clearfix" />
   </div>
 

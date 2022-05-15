@@ -13,9 +13,6 @@
           {{ holidaypackageitem.available }}
         </p>
         <p>{{ holidaypackageitem.text }}</p>
-        <!-- <router-link :to="'/holidaypackage/' + holidaypackageitem.itemid">
-          View Details
-        </router-link> -->
         <router-link
           :to="{
             name: 'HolidayPackage',

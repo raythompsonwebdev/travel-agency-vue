@@ -61,35 +61,50 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "ContactForm",
 
   data() {
     return {
       show: "true",
-      firstname: null,
-      lastname: null,
-      email: null,
+      firstname: " ",
+      lastname: " ",
+      email: " ",
+      phone: " ",
+      message: " ",
       errors: [],
     };
   },
 
   methods: {
-    onSubmit() {
+    async onSubmit() {
       if (this.firstname && this.lastname && this.email) {
-        const productReview = {
+        const contactData = {
           firstname: this.firstname,
           lastname: this.lastname,
           email: this.email,
+          phone: this.phone,
+          message: this.message,
         };
-        this.$emit("review-submitted", productReview);
-        this.firstname = null;
-        this.lastname = null;
-        this.email = null;
+
+        const result = await axios.post("/api/contact", contactData);
+
+        console.log(result);
+
+        this.$emit("review-submitted", result);
+
+        this.firstname = " ";
+        this.lastname = " ";
+        this.email = " ";
+        this.phone = " ";
+        this.message = " ";
       } else {
         if (!this.firstname) this.errors.push("FirstName required");
         if (!this.lastname) this.errors.push("LastName required");
         if (!this.email) this.errors.push("e-mail required");
+        if (!this.phone) this.errors.push("Phone required");
+        if (!this.message) this.errors.push("message required");
       }
     },
   },

@@ -2,31 +2,8 @@
   <div class="Services">
     <!---Leftside3-->
     <button id="side-bar-btn" @click="servicePageFunction">SIDE</button>
-    <aside id="about-page-banner" class="hide">
-      <figure>
-        <figcaption>
-          <h1>Lorem ipsum dolor sit amet</h1>
-          <span
-            ><img
-              :src="bannerImageLabel"
-              :alt="'travel-agency-website-sidebar-banner-image-label'"
-          /></span>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <p>
-            Maxime minima magnam iure libero, laboriosam. Vitae magnam earum,
-            quae
-          </p>
-          <p>
-            rillo cupiditate deleniti expedita. Maxime minima magnam iure libero
-          </p>
-        </figcaption>
-        <img
-          :src="bannerImage"
-          :alt="'travel-agency-website-sidebar-banner-image'"
-        />
-      </figure>
-    </aside>
+    <SideBanner />
 
     <main id="content2">
       <h1>Lorem ipsum dolor sit amet, consectetur</h1>
@@ -35,20 +12,19 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
         dolor sequi voluptatem esse doloribus libero commodi ea debitis id
         nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
-      </p>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-        nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
+        excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Enim odit dolor sequi voluptatem esse doloribus libero commodi ea
+        debitis id nostrum odio velit impedit vitae tenetur voluptates vero
+        beatae excepturi.
       </p>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
         dolor sequi voluptatem esse doloribus libero commodi ea debitis id
         nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
+        excepturi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
+        odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id
+        nostrum odio velit impedit vitae tenetur voluptates vero beatae
+        excepturi
       </p>
       <br />
       <div class="servicebox">
@@ -119,44 +95,21 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
         dolor sequi voluptatem esse doloribus libero commodi ea debitis id
         nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
+        excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Enim odit dolor sequi voluptatem esse doloribus libero commodi ea
+        debitis id nostrum odio velit impedit vitae tenetur voluptates vero
+        beatae excepturi.
       </p>
-      <br />
+
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
         dolor sequi voluptatem esse doloribus libero commodi ea debitis id
         nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
+        excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Enim odit dolor sequi voluptatem esse doloribus libero commodi ea
+        debitis id nostrum odio velit impedit vitae tenetur voluptates vero
+        beatae excepturi
       </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-        nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-        nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-        nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-        nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
-      </p>
-      <br />
     </main>
 
     <div class="clearfix" />
@@ -164,28 +117,24 @@
 </template>
 
 <script>
-import bannerImage from "../assets/images/travel-agency-website-sidebar-banner-image.jpg";
-import bannerImageLabel from "../assets/images/travel-agency-website-sidebar-banner-image-label.jpg";
-import customerService from "../assets/images/travel-agency-website-customer-service-image.jpg";
-import busTours from "../assets/images/travel-agency-website-bus-tours-image.jpg";
-import hotelRoom from "../assets/images/travel-agency-website-hotel-room-image.jpg";
+import SideBanner from "@/components/SideBanner.vue";
+
 export default {
   name: "ServicePage",
+  components: {
+    SideBanner,
+  },
   data() {
     return {
       show: "true",
-
-      bannerImage: bannerImage,
-      bannerImageLabel: bannerImageLabel,
-      customerService: customerService,
-      busTours: busTours,
-      hotelRoom: hotelRoom,
+      customerService: require("@/assets/images/travel-agency-website-customer-service-image.jpg"),
+      busTours: require("@/assets/images/travel-agency-website-bus-tours-image.jpg"),
+      hotelRoom: require("@/assets/images/travel-agency-website-hotel-room-image.jpg"),
     };
   },
   methods: {
     servicePageFunction(event) {
       event.preventDefault();
-
       const el = document.getElementById("about-page-banner");
       const box = el.getAttribute("class");
 

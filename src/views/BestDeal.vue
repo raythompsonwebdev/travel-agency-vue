@@ -1,23 +1,25 @@
 <template>
-  <div v-if="singlebestdeal" class="singlebestdeal">
-    <article class="single_item_details">
-      <h1>{{ singlebestdeal.title }}</h1>
-      <span class="holidayprice">
-        from
-        <span class="offerbox-price">{{ singlebestdeal.price }}</span>
-      </span>
-      <p>{{ singlebestdeal.text }}</p>
+  <transition name="fade" tag="div">
+    <div v-if="singlebestdeal" class="singlebestdeal" key="/best">
+      <article class="single_item_details">
+        <h1>{{ singlebestdeal.title }}</h1>
+        <span class="holidayprice">
+          from
+          <span class="offerbox-price">{{ singlebestdeal.price }}</span>
+        </span>
+        <p>{{ singlebestdeal.text }}</p>
 
-      <figure>
-        <img :src="singlebestdeal.url" :alt="singlebestdeal.title" />
-        <figcaption>
-          <h3>Location : {{ singlebestdeal.location }}</h3>
-          <p>Rating: {{ singlebestdeal.rating }} Star</p>
-        </figcaption>
-      </figure>
-    </article>
-  </div>
-  <NotFoundpage v-else />
+        <figure>
+          <img :src="singlebestdeal.url" :alt="singlebestdeal.title" />
+          <figcaption>
+            <h3>Location : {{ singlebestdeal.location }}</h3>
+            <p>Rating: {{ singlebestdeal.rating }} Star</p>
+          </figcaption>
+        </figure>
+      </article>
+    </div>
+    <NotFoundpage v-else />
+  </transition>
 </template>
 
 <script>
@@ -26,7 +28,9 @@ import axios from "axios";
 
 export default {
   name: "BestDeal",
-  prop: ["itemid"],
+  props: {
+    itemid: { type: String, required: true },
+  },
   components: {
     NotFoundpage,
   },
@@ -35,32 +39,21 @@ export default {
       singlebestdeal: {},
     };
   },
-
-  // methods: {
-  //   async initData() {
-  //     const result = await axios.get(
-  //       `/api/bestdeal/${this.$route.params.itemid}`
-  //     );
-  //     const { data } = result;
-  //     this.singlebestdeal = data;
-  //   },
-  // },
+  methods: {
+    async initData() {
+      const result = await axios.get(`/api/bestdeal/${parseInt(this.itemid)}`);
+      const { data } = result;
+      this.singlebestdeal = data;
+    },
+  },
 
   async created() {
-    const result = await axios.get(
-      `/api/bestdeal/${this.$route.params.itemid}`
-    );
-    const { data } = result;
-    this.singlebestdeal = data;
-    //this.$watch(() => this.$route.params.itemid, this.initData());
-    //this.initData;
-    // try {
-    //   this.$watch(() => this.$route.params.itemid, this.initData());
-    // } catch (e) {
-    //   console.error(e);
-    // } finally {
-    //   console.log("We do cleanup here");
-    //}
+    this.initData();
+  },
+
+  beforeRouteUpdate(to, from, next) {
+    this.initData();
+    next();
   },
 };
 </script>
@@ -68,6 +61,33 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style>
+.fade-enter-active {
+  animation: coming 0.5s;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+.fade-leave-active {
+  animation: going 0.5s;
+}
+@keyframes coming {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes going {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
 .singlebestdeal {
   border: 2px #ededeb solid;
   margin: 2em auto;

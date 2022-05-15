@@ -30,10 +30,10 @@
 </template>
 
 <script>
-import SearchForm from "../components/SearchForm.vue";
-import Destinations from "../components/Destinations.vue";
-import FeaturedHolidays from "../components/FeaturedHolidays.vue";
-import bannerImage from "../assets/images/travel-agency-website-banner-image.jpg";
+import SearchForm from "@/components/SearchForm.vue";
+import Destinations from "@/components/Destinations.vue";
+import FeaturedHolidays from "@/components/FeaturedHolidays.vue";
+import bannerImage from "@/assets/images/travel-agency-website-banner-image.jpg";
 import axios from "axios";
 
 export default {

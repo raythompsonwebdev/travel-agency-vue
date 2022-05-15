@@ -30,7 +30,9 @@ import axios from "axios";
 export default {
   name: "HolidayPackage",
   title: "Holiday Package Page",
-  props: ["itemid"],
+  props: {
+    itemid: { type: String, required: true },
+  },
   components: {
     NotFoundpage,
   },
@@ -39,21 +41,10 @@ export default {
       singleholidaypackage: {},
     };
   },
-  // methods: {
-  //   async initData() {
-  //     const result = await axios.get(
-  //       `/api/holidaypackage/${this.$route.params.itemid}`
-  //     );
-
-  //     const { data } = result;
-  //     this.singleholidaypackage = data;
-  //   },
-  // },
-
   async created() {
     //this.$watch(() => this.$route.params.itemid, this.initData());
     const result = await axios.get(
-      `/api/holidaypackage/${this.$route.params.itemid}`
+      `/api/holidaypackage/${parseInt(this.itemid)}`
     );
     const { data } = result;
     this.singleholidaypackage = data;

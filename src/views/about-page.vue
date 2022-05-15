@@ -1,99 +1,90 @@
 <template>
-  <div class="AboutUs page">
-    <button id="side-bar-btn" @click="aboutPageFunction">SIDE</button>
+  <transition name="fade">
+    <div class="AboutUs page">
+      <button id="side-bar-btn" @click="aboutPageFunction">SIDE</button>
 
-    <aside id="about-page-banner" class="hide">
-      <figure>
-        <figcaption>
-          <h1>Lorem ipsum dolor sit amet</h1>
-          <span
-            ><img
-              :src="bannerImageLabel"
-              :alt="'travel-agency-website-sidebar-banner-image-label'"
-          /></span>
+      <SideBanner />
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <p>
-            Maxime minima magnam iure libero, laboriosam. Vitae magnam earum,
-            quae
-          </p>
-          <p>
-            rillo cupiditate deleniti expedita. Maxime minima magnam iure libero
-          </p>
-        </figcaption>
-        <img
-          :src="bannerImage"
-          :alt="'travel-agency-website-sidebar-banner-image'"
-        />
-      </figure>
-    </aside>
+      <main id="content2">
+        <h1>Lorem Ipsum Dolor Sit Amet</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.Enim odit
+          dolor sequi voluptatem esse doloribus libero commodi ea debitis id
+          nostrum odio velit impedit vitae tenetur voluptates vero beatae
+          excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit.Enim odit dolor sequi voluptatem esse doloribus libero commodi ea
+          debitis id nostrum odio velit impedit vitae tenetur voluptates vero
+          beatae excepturi.
+        </p>
+        <h2>Lorem Ipsum Dolor Sit Amet</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
+          dolor sequi voluptatem esse doloribus libero commodi ea debitis id
+          nostrum odio velit impedit vitae tenetur voluptates vero beatae
+          excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit.Enim odit dolor sequi voluptatem esse doloribus libero commodi ea
+          debitis id nostrum odio velit impedit vitae tenetur voluptates vero
+          beatae excepturi.
+        </p>
+        <h2>Lorem Ipsum Dolor Sit Amet</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
+          dolor sequi voluptatem esse doloribus libero commodi ea debitis id
+          nostrum odio velit impedit vitae tenetur voluptates vero beatae
+          excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit.Enim odit dolor sequi voluptatem esse doloribus libero commodi ea
+          debitis id nostrum odio velit impedit vitae tenetur voluptates vero
+          beatae excepturi.
+        </p>
 
-    <main id="content2">
-      <h1>Lorem Ipsum Dolor Sit Amet</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.Enim odit dolor
-        sequi voluptatem esse doloribus libero commodi ea debitis id nostrum
-        odio velit impedit vitae tenetur voluptates vero beatae excepturi.
-      </p>
-      <h2>Lorem Ipsum Dolor Sit Amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-        nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
-      </p>
-      <h2>Lorem Ipsum Dolor Sit Amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-        nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
-      </p>
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
 
-      <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
+          dolor sequi voluptatem esse doloribus libero commodi ea debitis id
+          nostrum odio velit impedit vitae tenetur voluptates vero beatae
+          excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit.Enim odit dolor sequi voluptatem esse doloribus libero commodi ea
+          debitis id nostrum odio velit impedit vitae tenetur voluptates vero
+          beatae excepturi.
+        </p>
+        <h2>Lorem Ipsum Dolor Sit Amet</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
+          dolor sequi voluptatem esse doloribus libero commodi ea debitis id
+          nostrum odio velit impedit vitae tenetur voluptates vero beatae
+          excepturi.
+        </p>
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-        nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
-      </p>
-      <h2>Lorem Ipsum Dolor Sit Amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-        nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
-      </p>
-
-      <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-        nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-        nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
-      </p>
-    </main>
-  </div>
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
+          dolor sequi voluptatem esse doloribus libero commodi ea debitis id
+          nostrum odio velit impedit vitae tenetur voluptates vero beatae
+          excepturi.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
+          dolor sequi voluptatem esse doloribus libero commodi ea debitis id
+          nostrum odio velit impedit vitae tenetur voluptates vero beatae
+          excepturi.
+        </p>
+      </main>
+    </div>
+  </transition>
 </template>
 
 <script>
-import bannerImage from "../assets/images/travel-agency-website-sidebar-banner-image.jpg";
-import bannerImageLabel from "../assets/images/travel-agency-website-sidebar-banner-image-label.jpg";
+import SideBanner from "@/components/SideBanner.vue";
 
 export default {
   name: "AboutPage",
+  components: {
+    SideBanner,
+  },
   data() {
     return {
       show: "true",
-      bannerImage: bannerImage,
-      bannerImageLabel: bannerImageLabel,
     };
   },
   methods: {
@@ -114,4 +105,32 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss"></style>
+<style>
+.fade-enter-active {
+  animation: coming 0.5s;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+.fade-leave-active {
+  animation: going 0.5s;
+}
+@keyframes coming {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes going {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+</style>

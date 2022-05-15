@@ -11,9 +11,6 @@
         </span>
         <p>Location: {{ bestdealitem.location }}.</p>
         <p>Available: {{ bestdealitem.month }}.</p>
-        <!-- <router-link :to="'/bestdeal/' + bestdealitem.itemid">
-          View Details
-        </router-link> -->
         <router-link
           :to="{
             name: 'BestDeal',

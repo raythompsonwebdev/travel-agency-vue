@@ -2,7 +2,7 @@
   <aside id="language-box">
     <form id="languagebox">
       <label for="languageselectitems"
-        >Language :&nbsp;
+        >Language:
         <img
           id="flagImg"
           v-bind:src="
@@ -31,14 +31,13 @@
 </template>
 
 <script>
-import { languageselectitems } from "../data-json.json";
-//import defaultImage from "../assets/images/flags/default.jpg";
+import { languageselectitems } from "@/data-json.json";
 export default {
   name: "LanguageSelect",
   data() {
     return {
       selected: " ",
-      defaultImage: require(`../assets/images/flags/default.jpg`),
+      defaultImage: require(`@/assets/images/flags/default.jpg`),
       languageselectitems,
     };
   },

@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import LanguageSelect from "../components/LanguageSelect.vue";
+import LanguageSelect from "@/components/LanguageSelect.vue";
 export default {
   name: "TravelNav",
   components: {

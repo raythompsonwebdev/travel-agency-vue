@@ -26,13 +26,13 @@
 <script>
 import axios from "axios";
 //import { seasons, ratings, locations, prices } from "../data-json.json";
-import { seasons } from "../data-json.json";
-import { ratings } from "../data-json.json";
-import { locations } from "../data-json.json";
-import { prices } from "../data-json.json";
+import { seasons } from "@/data-json.json";
+import { ratings } from "@/data-json.json";
+import { locations } from "@/data-json.json";
+import { prices } from "@/data-json.json";
 
-import HolidayPackageItem from "../components/HolidayPackageItem.vue";
-import FilterNav from "../components/FilterNav.vue";
+import HolidayPackageItem from "@/components/HolidayPackageItem.vue";
+import FilterNav from "@/components/FilterNav.vue";
 
 export default {
   name: "HolidayPackages",

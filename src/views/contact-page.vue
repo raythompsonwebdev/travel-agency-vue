@@ -21,8 +21,6 @@
         dolor sequi voluptatem esse doloribus libero commodi ea debitis id
         nostrum odio velit impedit vitae tenetur voluptates vero beatae
         excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      </p>
-      <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
         dolor sequi voluptatem esse doloribus libero commodi ea debitis id
         nostrum odio velit impedit vitae tenetur voluptates vero beatae
@@ -37,9 +35,9 @@
 
 <script>
 import ContactForm from "@/components/ContactForm";
-import addressImage from "../assets/images/Address.png";
-import envelopeImage from "../assets/images/envelope.png";
-import telephoneImage from "../assets/images/Telephone.png";
+import addressImage from "@/assets/images/Address.png";
+import envelopeImage from "@/assets/images/envelope.png";
+import telephoneImage from "@/assets/images/Telephone.png";
 export default {
   name: "ContactPage",
   components: {

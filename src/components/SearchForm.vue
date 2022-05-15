@@ -1,7 +1,6 @@
 <template>
   <section class="leftsidebox">
     <h2>Holiday Search</h2>
-
     <form id="search_form" @submit.prevent="onSubmit">
       <label class="label_wide" for="locations">
         Where are you going ?
