@@ -1,7 +1,7 @@
 <template>
   <div>
-    <span v-if="errors.length">
-      <p>please correct following errors:</p>
+    <span v-if="errors.length" id="contact-form-errors">
+      <h2>Please Correct the Following Errors:</h2>
       <ul>
         <li v-for="error in errors" :key="error">
           {{ error }}
@@ -61,7 +61,7 @@
 </template>
 
 <script>
-import axios from "axios";
+//import axios from "axios";
 export default {
   name: "ContactForm",
 
@@ -79,7 +79,11 @@ export default {
 
   methods: {
     async onSubmit() {
-      if (this.firstname && this.lastname && this.email) {
+      if (
+        this.firstname !== " " &&
+        this.lastname !== " " &&
+        this.email !== " "
+      ) {
         const contactData = {
           firstname: this.firstname,
           lastname: this.lastname,
@@ -88,11 +92,9 @@ export default {
           message: this.message,
         };
 
-        const result = await axios.post("/api/contact", contactData);
+        console.error(contactData);
 
-        console.log(result);
-
-        this.$emit("review-submitted", result);
+        //await axios.post("/api/contact", contactData);
 
         this.firstname = " ";
         this.lastname = " ";
@@ -100,11 +102,9 @@ export default {
         this.phone = " ";
         this.message = " ";
       } else {
-        if (!this.firstname) this.errors.push("FirstName required");
-        if (!this.lastname) this.errors.push("LastName required");
-        if (!this.email) this.errors.push("e-mail required");
-        if (!this.phone) this.errors.push("Phone required");
-        if (!this.message) this.errors.push("message required");
+        this.errors.push("FirstName required");
+        this.errors.push("LastName required");
+        this.errors.push("e-mail required");
       }
     },
   },
