@@ -88,7 +88,7 @@
 
       <label class="label_half" for="adults"
         >Adults
-        <select v-model="adults" name="adults" class="select_half">
+        <select v-model.number="adults" name="adults" class="select_half">
           <option
             v-for="adult in searchform[7].adults"
             :key="adult.id"
@@ -100,7 +100,7 @@
       </label>
       <label class="label_half" for="children"
         >Children 0-17
-        <select v-model="children" name="children" class="select_half">
+        <select v-model.number="children" name="children" class="select_half">
           <option
             v-for="child in searchform[8].children"
             :key="child.id"
@@ -164,7 +164,10 @@ export default {
           children: this.children,
         };
 
+        console.log(findHoliday);
+
         this.$emit("review-submitted", findHoliday);
+
         this.destinations = null;
         this.locations = null;
         this.date = null;

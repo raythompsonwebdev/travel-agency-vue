@@ -16,6 +16,7 @@
 
       <main id="home-page-content">
         <!--Banner Image-->
+
         <figure id="banner">
           <img :src="bannerImage" :alt="'banner-image'" />
         </figure>

@@ -41,13 +41,21 @@ export default {
       singleholidaypackage: {},
     };
   },
-  async created() {
-    //this.$watch(() => this.$route.params.itemid, this.initData());
-    const result = await axios.get(
-      `/api/holidaypackage/${parseInt(this.itemid)}`
-    );
-    const { data } = result;
-    this.singleholidaypackage = data;
+  methods: {
+    async initData() {
+      const result = await axios.get(
+        `/api/holidaypackage/${parseInt(this.itemid)}`
+      );
+      const { data } = result;
+      this.singleholidaypackage = data;
+    },
+  },
+  created() {
+    this.initData();
+  },
+  beforeRouteUpdate(to, from, next) {
+    this.initData();
+    next();
   },
 };
 </script>

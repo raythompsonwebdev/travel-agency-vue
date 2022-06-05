@@ -46,8 +46,7 @@ export default {
       this.singlebestdeal = data;
     },
   },
-
-  async created() {
+  created() {
     this.initData();
   },
 

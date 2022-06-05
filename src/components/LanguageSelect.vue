@@ -16,6 +16,7 @@
           v-model="selected"
           name="languageselectitems"
           @click="itemsSearched($event.target.value)"
+          aria-label="select country"
         >
           <option
             v-for="(languageselectitem, i) in onChangeImg"

@@ -76,4 +76,30 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss"></style>
+<style lang="scss">
+.v-enter-from {
+  transform: translateX(-200px);
+  opacity: 0;
+}
+
+.v-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.v-enter-to {
+  opacity: 1;
+}
+
+.v-leave-from {
+  opacity: 1;
+}
+
+.v-leave-active {
+  transition: all 0.5s ease-in;
+}
+
+.v-leave-to {
+  transform: translateX(200px);
+  opacity: 0;
+}
+</style>

@@ -8,7 +8,10 @@
       class="destinations"
     >
       <figure>
-        <img :src="destination.url" :alt="'images'" />
+        <img
+          :src="destination.url"
+          :alt="`Destination : ${destination.country}`"
+        />
 
         <figcaption>
           <h3>{{ destination.city }}</h3>

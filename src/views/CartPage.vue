@@ -13,6 +13,7 @@
 </template>
 
 <script>
+//import { cartItems } from "./fake-data";
 import axios from "axios";
 import CartList from "@/components/CartList.vue";
 export default {
@@ -27,24 +28,21 @@ export default {
     };
   },
   computed: {
-    //adds cart item prices
     totalPrice() {
       return this.cartItems.reduce((sum, item) => sum + Number(item.price), 0);
     },
   },
-  async created() {
-    const result = await axios.get(
-      `/api/holidaypackages/${this.$route.params.id}/cart`
-    );
-    const { data } = result;
-    this.cartItems = data;
+  methods: {
+    async removeFromCart(productId) {
+      const result = await axios.delete(`/api/users/12345/cart/${productId}`);
+      this.cartItems = result.data;
+    },
   },
-  // methods: {
-  //   async removeFromCart(productId) {
-  //     const result = await axios.delete(`/api/users/12345/cart/${productId}`);
-  //     this.cartItems = result.data;
-  //   }
-  // },
+  async created() {
+    const result = await axios.get("/api/users/12345/cart");
+    const cartItems = result.data;
+    this.cartItems = cartItems;
+  },
 };
 </script>
 

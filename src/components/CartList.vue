@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import CartListItem from "./CartListItem.vue";
+import CartListItem from "@/components/CartListItem.vue";
 
 export default {
   name: "ProductsList",

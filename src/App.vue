@@ -3,11 +3,11 @@
   <div id="wrapper">
     <TravelHeader />
     <TravelNav />
-    <!--:key="$route.path"-->
-    <router-view v-slot="{ Component }" :key="$route.path">
-      <transition name="router-anim">
+    <!--:key="$route.path" :key="$route.fullPath"-->
+    <router-view v-slot="{ Component, route }">
+      <transition name="anim" mode="out-in">
         <keep-alive>
-          <component :is="Component" />
+          <component :is="Component" :key="route.path" />
         </keep-alive>
       </transition>
     </router-view>
@@ -32,15 +32,6 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "assets/sass/main";
-.router-anim-enter-active {
-  animation: coming 0.5s;
-  animation-delay: 0.5s;
-  opacity: 0;
-}
-.router-anim-leave-active {
-  animation: going 0.5s;
-}
 @keyframes coming {
   from {
     transform: translateX(-200px);
@@ -54,10 +45,20 @@ export default {
 @keyframes going {
   from {
     transform: translateX(0);
+    opacity: 1;
   }
   to {
     transform: translateX(-200px);
     opacity: 0;
   }
 }
+.anim-enter-active {
+  animation: coming 0.5s;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+.anim-leave-active {
+  animation: going 0.5s;
+}
+@import "assets/sass/main";
 </style>

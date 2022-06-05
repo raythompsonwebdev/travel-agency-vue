@@ -116,7 +116,7 @@ export default {
 <style lang="scss">
 .fade-enter-active {
   animation: coming 0.5s;
-  animation-delay: 0.5s;
+  animation-delay: 0.7s;
   opacity: 0;
 }
 .fade-leave-active {
