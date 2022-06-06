@@ -65,7 +65,11 @@ export default {
         "paris" === this.selected ||
         "madrid" === this.selected ||
         "dubai" === this.selected ||
-        "rome" === this.selected
+        "rome" === this.selected ||
+        "goldcoast" === this.selected ||
+        "singapore" === this.selected ||
+        "toronto" === this.selected ||
+        "tajmahal" === this.selected
       ) {
         return this.bestdealitems.filter(
           (bestdealitem) => bestdealitem.location === this.selected

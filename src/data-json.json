@@ -19,6 +19,22 @@
     {
       "id": 5,
       "title": "dubai"
+    },
+    {
+      "id": 6,
+      "title": "tajmahal"
+    },
+    {
+      "id": 7,
+      "title": "singapore"
+    },
+    {
+      "id": 8,
+      "title": "toronto"
+    },
+    {
+      "id": 9,
+      "title": "goldcoast"
     }
   ],
   "prices": [
@@ -176,19 +192,19 @@
       ]
     },
     {
-      "month":[       
-        "January",      
-        "February",      
-        "March",     
-        "April",      
-        "May",      
-        "June",      
-        "July",      
-        "August",      
-        "September",      
-        "October",      
-        "November",      
-        "December"      
+      "month":[
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
       ]
     },
     {
@@ -212,13 +228,13 @@
         "One Month",
         "3 Months",
         "Six Months"
-      ] 
+      ]
     },
     {
      "board":[
         "half",
         "full"
-      ] 
+      ]
     },
     {
       "star":[
@@ -227,7 +243,7 @@
         "3 Star",
         "4 Star",
         "5 Star"
-      ] 
+      ]
     },
     {
       "adults":[

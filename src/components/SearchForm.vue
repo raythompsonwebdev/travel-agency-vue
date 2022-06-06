@@ -124,7 +124,6 @@ export default {
   data() {
     return {
       searchform,
-      destinations: " ",
       locations: " ",
       date: " ",
       month: " ",
@@ -140,7 +139,6 @@ export default {
   methods: {
     onSubmit() {
       if (
-        this.destinations &&
         this.locations &&
         this.date &&
         this.month &&
@@ -152,7 +150,6 @@ export default {
         this.children
       ) {
         const findHoliday = {
-          destinations: this.destinations,
           locations: this.locations,
           date: this.date,
           month: this.month,
@@ -168,7 +165,6 @@ export default {
 
         this.$emit("review-submitted", findHoliday);
 
-        this.destinations = null;
         this.locations = null;
         this.date = null;
         this.month = null;
