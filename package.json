@@ -43,16 +43,11 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.8.0",
     "postcss": "^8.4.19",
-    "postcss-loader": "^7.0.1",
     "postcss-preset-env": "^7.8.3",
     "postcss-scss": "^4.0.5",
     "prettier": "^2.8.0",
     "sass-loader": "^13.2.0",
     "stylelint": "^14.15.0",
-    "stylelint-config-prettier": "^9.0.4",
-    "stylelint-config-standard-scss": "^6.1.0",
-    "stylelint-prettier": "^2.0.0",
-    "stylelint-scss": "^4.3.0",
     "vue-style-loader": "^4.1.3"
   }
 }

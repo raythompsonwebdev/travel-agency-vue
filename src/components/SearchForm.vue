@@ -118,29 +118,19 @@
 
 <script>
 import { searchform } from "../data-json.json";
+//import axios from "axios";
 
 export default {
   name: "SearchForm",
   data() {
     return {
       searchform,
-      destinations: " ",
-      locations: " ",
-      date: " ",
-      month: " ",
-      year: " ",
-      duration: " ",
-      board: " ",
-      star: " ",
-      adults: " ",
-      children: " ",
     };
   },
 
   methods: {
     onSubmit() {
       if (
-        this.destinations &&
         this.locations &&
         this.date &&
         this.month &&
@@ -152,7 +142,6 @@ export default {
         this.children
       ) {
         const findHoliday = {
-          destinations: this.destinations,
           locations: this.locations,
           date: this.date,
           month: this.month,
@@ -166,9 +155,6 @@ export default {
 
         console.log(findHoliday);
 
-        this.$emit("review-submitted", findHoliday);
-
-        this.destinations = null;
         this.locations = null;
         this.date = null;
         this.month = null;
@@ -180,6 +166,9 @@ export default {
         this.children = null;
       }
     },
+    // SearchItemBtn(item) {
+    //   this.$emit("seasonClick", item);
+    // },
   },
 };
 </script>
