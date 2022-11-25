@@ -1,6 +1,6 @@
 <template>
   <!--header-->
-  <header>
+  <header id="site-header">
     <!---logo-->
     <figure id="logo">
       <img :src="image" :alt="'website logo'" />

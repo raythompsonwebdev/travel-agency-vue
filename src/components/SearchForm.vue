@@ -1,7 +1,7 @@
 <template>
-  <section class="leftsidebox">
+  <section class="holiday-search-sidebar">
     <h2>Holiday Search</h2>
-    <form id="search_form" @submit.prevent="onSubmit">
+    <form id="holiday-search-form" @submit.prevent="onSubmit">
       <label class="label_wide" for="locations">
         Where are you going ?
         <select v-model="locations" name="locations" class="select_wide">

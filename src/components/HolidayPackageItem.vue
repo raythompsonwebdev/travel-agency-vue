@@ -1,7 +1,7 @@
 <template>
-  <article class="holiday_details">
+  <article class="holiday-details">
     <h1>{{ holidaypackageitem.title }}</h1>
-    <span class="holidayprice">
+    <span class="holiday-price">
       <span class="offerbox-price">{{ holidaypackageitem.price }}</span>
     </span>
     <figure>
@@ -38,7 +38,7 @@ export default {
       default: null,
     },
   },
-  flushCom: function () {
+  flushCom() {
     this.$router.go();
   },
 };

@@ -105,7 +105,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style lang="scss">
 .fade-enter-active {
   animation: coming 0.5s;
   animation-delay: 0.5s;

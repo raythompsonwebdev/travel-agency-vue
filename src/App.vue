@@ -32,6 +32,7 @@ export default {
 };
 </script>
 <style lang="scss">
+@import "assets/sass/main";
 @keyframes coming {
   from {
     transform: translateX(-200px);
@@ -60,5 +61,4 @@ export default {
 .anim-leave-active {
   animation: going 0.5s;
 }
-@import "assets/sass/main";
 </style>

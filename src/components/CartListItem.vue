@@ -21,7 +21,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss">
 .product-container {
   align-content: "center";
   border-bottom: 1px solid #ddd;

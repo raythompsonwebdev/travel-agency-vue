@@ -1,6 +1,6 @@
 <template>
-  <aside id="language-box">
-    <form id="languagebox">
+  <aside id="language-select">
+    <form id="language-selector">
       <label for="languageselectitems"
         >Language:
         <img

@@ -62,7 +62,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
-<style>
+<style lang="scss">
 .singleholidaypackage {
   border: 2px #ededeb solid;
   margin: 2em auto;

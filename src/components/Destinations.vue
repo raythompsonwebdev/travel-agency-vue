@@ -1,6 +1,6 @@
 <template>
   <!--Destinations-->
-  <section class="leftsidebox">
+  <section class="holiday-search-sidebar">
     <h2>Top Destinations</h2>
     <div
       v-for="destination in destinationitems"

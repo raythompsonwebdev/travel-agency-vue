@@ -1,7 +1,7 @@
 <template>
-  <nav>
+  <nav id="site-navigation">
     <button id="toggle-menu" @click="naviFunction">Menu</button>
-    <ul id="navi" class="hide">
+    <ul id="site-inner-nav" class="hide">
       <li>
         <router-link
           to="/"
@@ -82,10 +82,10 @@ export default {
     InlineMenuButtonClickHandler() {
       // eslint-disable-next-line no-console
       //e.preventDefault();
-      let slideoutMenu = document.getElementById("navi");
+      const slideoutMenu = document.getElementById("navi");
 
-      let box = slideoutMenu.getAttribute("class");
-      if (box == "hide") {
+      const box = slideoutMenu.getAttribute("class");
+      if (box === "hide") {
         slideoutMenu.setAttribute("class", "show");
       } else {
         slideoutMenu.setAttribute("class", "hide");

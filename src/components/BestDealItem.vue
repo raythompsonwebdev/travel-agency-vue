@@ -1,13 +1,13 @@
 <template>
-  <article class="holiday_details_small">
+  <article class="holiday-details-small">
     <figure v-if="bestdealitem">
       <img :src="bestdealitem.url" :alt="bestdealitem.title" />
       <figcaption>
         <h1>{{ bestdealitem.title }}</h1>
 
-        <span class="holidayprice">
+        <span class="holiday-price-small">
           From
-          <span class="offerbox-price">{{ bestdealitem.price }}</span>
+          <span class="offerbox-price-small">{{ bestdealitem.price }}</span>
         </span>
         <p>Location: {{ bestdealitem.location }}.</p>
         <p>Available: {{ bestdealitem.month }}.</p>
