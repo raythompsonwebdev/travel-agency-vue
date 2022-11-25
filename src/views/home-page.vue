@@ -55,12 +55,9 @@ export default {
   },
   async created() {
     const result = await axios.get("/api/home");
-
     const { data } = result;
-
     const { destinationitems } = data[0];
     const { featuredholidayitems } = data[0];
-
     this.destinationitems = destinationitems;
     this.featuredholidayitems = featuredholidayitems;
   },

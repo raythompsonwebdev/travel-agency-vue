@@ -44,7 +44,6 @@ export default {
       prices,
       selected: " ",
       bestdealitems: [],
-      count: 10,
     };
   },
   computed: {

@@ -118,21 +118,13 @@
 
 <script>
 import { searchform } from "../data-json.json";
+//import axios from "axios";
 
 export default {
   name: "SearchForm",
   data() {
     return {
       searchform,
-      locations: " ",
-      date: " ",
-      month: " ",
-      year: " ",
-      duration: " ",
-      board: " ",
-      star: " ",
-      adults: " ",
-      children: " ",
     };
   },
 
@@ -163,8 +155,6 @@ export default {
 
         console.log(findHoliday);
 
-        this.$emit("review-submitted", findHoliday);
-
         this.locations = null;
         this.date = null;
         this.month = null;
@@ -176,6 +166,9 @@ export default {
         this.children = null;
       }
     },
+    // SearchItemBtn(item) {
+    //   this.$emit("seasonClick", item);
+    // },
   },
 };
 </script>
