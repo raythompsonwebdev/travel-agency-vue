@@ -1,10 +1,11 @@
 <template>
   <aside id="about-page-banner" class="hide">
-    <figure>
-      <figcaption>
-        <h1>Lorem ipsum dolor sit amet</h1>
+    <figure class="page-banner">
+      <figcaption class="page-banner-caption">
+        <h1 class="page-banner-title">Lorem ipsum dolor sit amet</h1>
         <span
           ><img
+            class="page-banner-img-label"
             :src="bannerImageLabel"
             :alt="'travel-agency-website-sidebar-banner-image-label'"
         /></span>
@@ -18,6 +19,7 @@
         </p>
       </figcaption>
       <img
+        class="page-banner-img"
         :src="bannerImage"
         :alt="'travel-agency-website-sidebar-banner-image'"
       />

@@ -8,7 +8,7 @@
     </figure>
     <!---contact number-->
     <aside class="contact">
-      <address class="tele">
+      <address class="telephone-number">
         <a id="contact-number" :href="`tel:${phoneNumber}`">
           {{ phoneNumber }}
         </a>

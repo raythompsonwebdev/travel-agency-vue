@@ -2,7 +2,7 @@
   <nav id="site-navigation">
     <button id="toggle-menu" @click="naviFunction">Menu</button>
     <ul id="site-inner-nav" class="hide">
-      <li>
+      <li class="site-inner-nav-item">
         <router-link
           to="/"
           class="nav-item r-item"
@@ -11,7 +11,7 @@
           Home
         </router-link>
       </li>
-      <li>
+      <li class="site-inner-nav-item">
         <router-link
           to="/holidaypackages"
           class="nav-item r-item"
@@ -20,7 +20,7 @@
           Holiday Packages
         </router-link>
       </li>
-      <li>
+      <li class="site-inner-nav-item">
         <router-link
           to="/bestdeals"
           class="nav-item r-item"
@@ -29,7 +29,7 @@
           BestDeal
         </router-link>
       </li>
-      <li>
+      <li class="site-inner-nav-item">
         <router-link
           to="/services"
           class="nav-item r-item"
@@ -38,7 +38,7 @@
           Services
         </router-link>
       </li>
-      <li>
+      <li class="site-inner-nav-item">
         <router-link
           to="/about"
           class="nav-item r-item"
@@ -47,7 +47,7 @@
           AboutUs
         </router-link>
       </li>
-      <li>
+      <li class="site-inner-nav-item">
         <router-link
           to="/contact"
           class="nav-item r-item"

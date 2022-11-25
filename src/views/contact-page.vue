@@ -5,7 +5,7 @@
     <!--contact details box-->
     <aside v-if="contactFunction" id="contact-page-sidebar" class="hide">
       <address id="contact-details">
-        <p class="addr_title" style="">Phone:</p>
+        <p class="addr-title" style="">Phone:</p>
         <a href="tel:123-436-7890">123-436-7890 </a>
         <p class="addr_title">Mail :</p>
         <a href="mailto:info@travelagency.com">info@travelagency.com</a>
@@ -47,9 +47,9 @@ export default {
     return {
       show: "true",
       reviews: [],
-      addressImage: addressImage,
-      envelopeImage: envelopeImage,
-      telephoneImage: telephoneImage,
+      addressImage,
+      envelopeImage,
+      telephoneImage,
     };
   },
   methods: {

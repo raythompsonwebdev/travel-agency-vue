@@ -15,7 +15,7 @@
         </select>
       </label>
 
-      <label for="date" class="label_wide"
+      <label for="date" class="label-wide"
         ><span> When are you going ? </span>
         <select v-model="date" name="date" class="select_date_year">
           <option
@@ -26,7 +26,7 @@
             {{ date }}
           </option>
         </select>
-        <select id="select_month" v-model="month" name="month">
+        <select id="select-month" v-model="month" name="month">
           <option
             v-for="month in searchform[2].month"
             :key="month.id"
@@ -35,7 +35,7 @@
             {{ month }}
           </option>
         </select>
-        <select v-model="year" name="year" class="select_date_year">
+        <select v-model="year" name="year" class="select-date-year">
           <option
             v-for="year in searchform[3].year"
             :key="year.id"
@@ -46,10 +46,10 @@
         </select>
       </label>
 
-      <label class="label_wide" for="duration">
+      <label class="label-wide" for="duration">
         Duration
 
-        <select v-model="duration" name="duration" class="select_wide">
+        <select v-model="duration" name="duration" class="select-wide">
           <option
             v-for="duration in searchform[4].duration"
             :key="duration.id"
@@ -60,9 +60,9 @@
         </select>
       </label>
 
-      <label class="label_half" for="board"
+      <label class="label-half" for="board"
         >Board
-        <select v-model="board" name="board" class="select_half">
+        <select v-model="board" name="board" class="select-half">
           <option
             v-for="board in searchform[5].board"
             :key="board.id"
@@ -73,9 +73,9 @@
         </select>
       </label>
 
-      <label class="label_half" for="star"
+      <label class="label-half" for="star"
         >Star
-        <select v-model="star" name="star" class="select_half">
+        <select v-model="star" name="star" class="select-half">
           <option
             v-for="star in searchform[6].star"
             :key="star.id"
@@ -86,9 +86,9 @@
         </select>
       </label>
 
-      <label class="label_half" for="adults"
+      <label class="label-half" for="adults"
         >Adults
-        <select v-model.number="adults" name="adults" class="select_half">
+        <select v-model.number="adults" name="adults" class="select-half">
           <option
             v-for="adult in searchform[7].adults"
             :key="adult.id"
@@ -98,9 +98,9 @@
           </option>
         </select>
       </label>
-      <label class="label_half" for="children"
+      <label class="label-half" for="children"
         >Children 0-17
-        <select v-model.number="children" name="children" class="select_half">
+        <select v-model.number="children" name="children" class="select-half">
           <option
             v-for="child in searchform[8].children"
             :key="child.id"
@@ -111,7 +111,7 @@
         </select>
       </label>
 
-      <input id="searchbtn" type="submit" value="Find Holiday" />
+      <input id="holiday-search-btn" type="submit" value="Find Holiday" />
     </form>
   </section>
 </template>

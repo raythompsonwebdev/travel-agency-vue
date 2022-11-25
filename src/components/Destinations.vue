@@ -7,16 +7,17 @@
       :key="destination.id"
       class="destinations"
     >
-      <figure>
+      <figure class="destination">
         <img
+          class="destination-img"
           :src="destination.url"
           :alt="`Destination : ${destination.country}`"
         />
 
-        <figcaption>
-          <h3>{{ destination.city }}</h3>
-          <p>{{ destination.country }}</p>
-          <p>{{ destination.hotels }}</p>
+        <figcaption class="destination-caption">
+          <h3 class="destination-title">{{ destination.city }}</h3>
+          <p class="destination-txt">{{ destination.country }}</p>
+          <p class="destination-txt">{{ destination.hotels }}</p>
         </figcaption>
       </figure>
     </div>
