@@ -5,6 +5,18 @@
     <section id="seasons">
       <h1>Filter By Season</h1>
       <ul>
+        <li>
+          <button
+            @click="SearchItemBtn()"
+            @mouseup="InlineButtonClickHandler()"
+            id="reset"
+            type="submit"
+          >
+            RESET ALL
+          </button>
+        </li>
+      </ul>
+      <ul>
         <li v-for="season in seasons" :key="season.id">
           <button
             @click="SearchItemBtn(season.title)"

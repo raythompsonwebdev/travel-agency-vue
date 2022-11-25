@@ -69,7 +69,11 @@ export default {
         "paris" === this.selected ||
         "madrid" === this.selected ||
         "dubai" === this.selected ||
-        "rome" === this.selected
+        "rome" === this.selected ||
+        "goldcoast" === this.selected ||
+        "singapore" === this.selected ||
+        "toronto" === this.selected ||
+        "tajmahal" === this.selected
       ) {
         return this.holidaypackageitems.filter(
           (holidaypackageitem) => holidaypackageitem.location === this.selected
