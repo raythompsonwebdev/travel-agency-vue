@@ -27,9 +27,9 @@
         excepturi
       </p>
       <br />
-      <div class="servicebox">
-        <h1>Enim odit dolor sequi voluptatem</h1>
-        <figure>
+      <div class="services-card">
+        <h2 class="services-card-title">Enim odit dolor sequi voluptatem</h2>
+        <figure class="services-card-item">
           <img
             class="service-box-img"
             :src="customerService"
@@ -47,9 +47,9 @@
         </figure>
       </div>
 
-      <div class="servicebox">
-        <h1>Enim odit dolor sequi voluptatem</h1>
-        <figure>
+      <div class="services-card">
+        <h2 class="services-card-title">Enim odit dolor sequi voluptatem</h2>
+        <figure class="services-card-item">
           <img
             class="service-box-img"
             :src="busTours"
@@ -69,22 +69,24 @@
         </figure>
       </div>
 
-      <div class="servicebox">
-        <h1>Enim odit dolor sequi voluptatem</h1>
-        <figure>
+      <div class="services-card">
+        <h2 class="services-card-title">Enim odit dolor sequi voluptatem</h2>
+        <figure class="services-card-item">
           <img
             class="service-box-img"
             :src="hotelRoom"
             :alt="'travel-agency-website-hotel-room-image'"
           />
-          <figcaption>
-            <p>
+          <figcaption class="services-card-caption">
+            <p class="services-card-text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
               odit dolor sequi voluptatem esse doloribus libero commodi ea
               debitis id nostrum odio velit impedit vitae tenetur voluptates
               vero beatae excepturi.
             </p>
-            <a :href="'http://www.google.com'">Learn More</a>
+            <a :href="'http://www.google.com'" class="services-card-link"
+              >Learn More</a
+            >
           </figcaption>
         </figure>
       </div>

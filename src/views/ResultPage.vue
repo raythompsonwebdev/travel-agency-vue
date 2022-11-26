@@ -25,9 +25,7 @@ export default {
   computed: {
     searchResult() {
       if (this.cartItems) {
-        return this.cartItems.filter((item) => {
-          return item;
-        });
+        return this.cartItems.filter((item) => item);
       } else {
         return this.cartItems;
       }

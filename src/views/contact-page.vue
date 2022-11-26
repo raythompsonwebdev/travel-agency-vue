@@ -6,10 +6,12 @@
     <aside v-if="contactFunction" id="contact-page-sidebar" class="hide">
       <address id="contact-details">
         <p class="addr-title" style="">Phone:</p>
-        <a href="tel:123-436-7890">123-436-7890 </a>
-        <p class="addr_title">Mail :</p>
-        <a href="mailto:info@travelagency.com">info@travelagency.com</a>
-        <p class="addr_title">Address:</p>
+        <a href="tel:123-436-7890" class="addr-link">123-436-7890 </a>
+        <p class="addr-title">Mail :</p>
+        <a href="mailto:info@travelagency.com" class="addr-link"
+          >info@travelagency.com</a
+        >
+        <p class="addr-title">Address:</p>
         <p>Lorem Ipsum 1234 Dolo Sit Amet</p>
       </address>
     </aside>
