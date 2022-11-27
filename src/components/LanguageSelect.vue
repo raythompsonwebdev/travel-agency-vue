@@ -32,14 +32,14 @@
 </template>
 
 <script>
-import languageselectitems from "@/data-json.json";
+import navdata from "@/data-json.json";
 export default {
   name: "LanguageSelect",
   data() {
     return {
       selected: " ",
       defaultImage: require(`@/assets/images/flags/default.jpg`),
-      languageselectitems,
+      languageselectitems: navdata.languageselectitems,
     };
   },
   computed: {

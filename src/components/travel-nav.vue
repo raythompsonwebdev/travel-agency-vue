@@ -72,7 +72,7 @@ export default {
   methods: {
     naviFunction(e) {
       e.preventDefault();
-      const slideoutNav = document.getElementById("navi");
+      const slideoutNav = document.getElementById("site-inner-nav");
       if (slideoutNav.classList.contains("show")) {
         slideoutNav.setAttribute("class", "hide");
       } else {
@@ -80,7 +80,7 @@ export default {
       }
     },
     InlineMenuButtonClickHandler() {
-      const slideoutMenu = document.getElementById("navi");
+      const slideoutMenu = document.getElementById("site-inner-nav");
 
       const box = slideoutMenu.getAttribute("class");
       if (box === "hide") {
