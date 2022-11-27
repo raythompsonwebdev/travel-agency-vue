@@ -12,7 +12,7 @@
     <form id="contact-form" @submit.prevent="onSubmit">
       <ul id="contact-form-fields">
         <li class="contact-form-field">
-          <label for="firstname"
+          <label for="firstname" class="contact-label"
             >First name
             <input
               id="firstname"
@@ -22,23 +22,23 @@
           /></label>
         </li>
         <li class="contact-form-field">
-          <label for="lastname"
+          <label for="lastname" class="contact-label"
             >Last name
             <input id="lastname" v-model="lastname" type="text" name="lastname"
           /></label>
         </li>
         <li class="contact-form-field">
-          <label for="email"
+          <label for="email" class="contact-label"
             >Email <input id="email" v-model="email" type="text" name="email"
           /></label>
         </li>
         <li class="contact-form-field">
-          <label for="phone"
+          <label for="phone" class="contact-label"
             >Phone <input id="phone" v-model="phone" type="text" name="phone"
           /></label>
         </li>
         <li class="contact-form-field">
-          <label for="message"
+          <label for="message" class="contact-label"
             >Message
             <textarea
               v-model="message"

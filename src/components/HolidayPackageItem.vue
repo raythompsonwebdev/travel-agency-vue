@@ -11,12 +11,12 @@
         class="holiday-pkg-img"
       />
       <figcaption class="holiday-pkg-caption">
-        <p class="holiday-pkg-text">
+        <p class="holiday-pkg-txt">
           Location :
           {{ holidaypackageitem.location }} &nbsp;&nbsp;&nbsp;&nbsp;Available :
           {{ holidaypackageitem.available }}
         </p>
-        <p class="holiday-pkg-text">{{ holidaypackageitem.text }}</p>
+        <p class="holiday-pkg-txt">{{ holidaypackageitem.text }}</p>
         <router-link
           class="holiday-pkg-link"
           :to="{

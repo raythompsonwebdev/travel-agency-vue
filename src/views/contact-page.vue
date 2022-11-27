@@ -16,8 +16,8 @@
       </address>
     </aside>
 
-    <main id="content2">
-      <h1>Lorem ipsum dolor sit amet, consectetur</h1>
+    <main id="page-content">
+      <h2>Lorem ipsum dolor sit amet, consectetur</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
         dolor sequi voluptatem esse doloribus libero commodi ea debitis id

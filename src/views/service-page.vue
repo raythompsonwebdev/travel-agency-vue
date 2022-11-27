@@ -5,7 +5,7 @@
 
     <SideBanner />
 
-    <main id="content2">
+    <main id="page-content">
       <h2>Lorem ipsum dolor sit amet, consectetur</h2>
 
       <p>

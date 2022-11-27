@@ -65,8 +65,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-
 <style lang="scss" scoped>
 .fade-enter-active {
   animation: coming 0.5s;
@@ -102,7 +100,8 @@ export default {
   width: 90%;
   padding: 0.5em;
 }
-/*Holiday details packages page*/
+
+/* best deals item */
 .single-best-details {
   margin: 0 auto;
   display: flex;
@@ -158,7 +157,6 @@ export default {
   text-align: center;
   color: #1485c9;
 }
-
 .single-best-rating {
   font-size: 0.9em;
   margin: 0;
@@ -169,7 +167,7 @@ export default {
 .single-best-submit {
   width: 80%;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
   height: auto;
   font-size: 1em;
   text-decoration: none;

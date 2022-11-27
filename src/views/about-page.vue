@@ -5,8 +5,8 @@
 
       <SideBanner />
 
-      <main id="content2">
-        <h1>Lorem Ipsum Dolor Sit Amet</h1>
+      <main id="page-content">
+        <h2>Lorem Ipsum Dolor Sit Amet</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.Enim odit
           dolor sequi voluptatem esse doloribus libero commodi ea debitis id
@@ -16,7 +16,7 @@
           debitis id nostrum odio velit impedit vitae tenetur voluptates vero
           beatae excepturi.
         </p>
-        <h2>Lorem Ipsum Dolor Sit Amet</h2>
+        <h3>Lorem Ipsum Dolor Sit Amet</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
           dolor sequi voluptatem esse doloribus libero commodi ea debitis id
@@ -26,7 +26,7 @@
           debitis id nostrum odio velit impedit vitae tenetur voluptates vero
           beatae excepturi.
         </p>
-        <h2>Lorem Ipsum Dolor Sit Amet</h2>
+        <h3>Lorem Ipsum Dolor Sit Amet</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
           dolor sequi voluptatem esse doloribus libero commodi ea debitis id
@@ -37,7 +37,7 @@
           beatae excepturi.
         </p>
 
-        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
 
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
@@ -48,7 +48,7 @@
           debitis id nostrum odio velit impedit vitae tenetur voluptates vero
           beatae excepturi.
         </p>
-        <h2>Lorem Ipsum Dolor Sit Amet</h2>
+        <h3>Lorem Ipsum Dolor Sit Amet</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
           dolor sequi voluptatem esse doloribus libero commodi ea debitis id
@@ -56,7 +56,7 @@
           excepturi.
         </p>
 
-        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
           dolor sequi voluptatem esse doloribus libero commodi ea debitis id

@@ -65,8 +65,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-
 <style lang="scss">
 .fade-enter-active {
   animation: coming 0.5s;
@@ -102,7 +100,8 @@ export default {
   width: 90%;
   padding: 0.5em;
 }
-/*Holiday details packages page*/
+
+/* single holiday packages item */
 .single-item-details {
   margin: 0 auto;
   display: flex;
@@ -167,17 +166,17 @@ export default {
 .single-item-button {
   width: 80%;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
   height: auto;
   font-size: 1em;
   text-decoration: none;
   padding: 0;
   margin: 0 auto;
   line-height: 45px;
-  border: 1px solid #fff;
+  border: 1px solid #ffffff;
   display: block;
   &:hover {
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     font-weight: bold;
     cursor: pointer;

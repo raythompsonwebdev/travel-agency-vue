@@ -19,7 +19,7 @@ export default {
 <style lang="scss">
 .product-container {
   align-content: "center";
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #dddddd;
   display: flex;
   padding: 16px;
   width: 100%;
