@@ -5,7 +5,6 @@
 </template>
 
 <script>
-//import { cartItems } from "./fake-data";
 import axios from "axios";
 import ResultList from "@/components/ResultList.vue";
 export default {
@@ -46,5 +45,4 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped></style>

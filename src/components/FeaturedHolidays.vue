@@ -41,7 +41,7 @@ export default {
   },
   computed: {
     holidayImage(url) {
-      return require(`${url}`); // the module request
+      return require(`${url}`);
     },
   },
 };

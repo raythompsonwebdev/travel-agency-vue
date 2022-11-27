@@ -101,7 +101,6 @@ export default {
   },
   methods: {
     InlineButtonClickHandler() {
-      //e.preventDefault();
       const slideoutMenu = document.querySelector("#filter-nav-sidebar");
       if (slideoutMenu.classList.contains("show")) {
         slideoutMenu.setAttribute("class", "hide");
@@ -129,5 +128,4 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss"></style>

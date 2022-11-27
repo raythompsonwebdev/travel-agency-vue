@@ -100,8 +100,6 @@ export default {
   width: 90%;
   padding: 0.5em;
 }
-
-/* best deals item */
 .single-best-details {
   margin: 0 auto;
   display: flex;

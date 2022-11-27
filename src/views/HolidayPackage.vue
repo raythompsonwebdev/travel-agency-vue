@@ -101,7 +101,6 @@ export default {
   padding: 0.5em;
 }
 
-/* single holiday packages item */
 .single-item-details {
   margin: 0 auto;
   display: flex;

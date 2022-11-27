@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import { languageselectitems } from "@/data-json.json";
+import languageselectitems from "@/data-json.json";
 export default {
   name: "LanguageSelect",
   data() {
@@ -74,5 +74,4 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss"></style>

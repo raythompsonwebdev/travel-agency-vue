@@ -1,6 +1,5 @@
 <template>
   <div class="Services">
-    <!---Leftside3-->
     <button id="side-bar-btn" @click="servicePageFunction">SIDE</button>
 
     <SideBanner />
@@ -154,5 +153,4 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss"></style>

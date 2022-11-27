@@ -2,22 +2,17 @@
 <template>
   <div class="Home page">
     <button id="side-bar-btn" @click="sideBarFunction">SIDE</button>
-    <!--Leftside-->
+
     <aside id="home-page-sidebar" class="hide">
-      <!---Search form-->
       <SearchForm />
-      <!-- Destinations -->
       <Destinations :destinationitems="destinationitems" />
     </aside>
 
     <main id="home-page-content">
-      <!--Banner Image-->
-
       <figure id="banner">
         <img :src="bannerImage" :alt="'banner-image'" id="banner-img" />
       </figure>
 
-      <!-- Featured Holiday Packages -->
       <FeaturedHolidays :featuredholidayitems="featuredholidayitems" />
     </main>
 
@@ -43,7 +38,6 @@ export default {
     return {
       destinationitems: [],
       featuredholidayitems: [],
-      //searchformdata:[],
       show: true,
       bannerImage,
     };
@@ -71,5 +65,4 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss"></style>

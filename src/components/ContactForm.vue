@@ -1,7 +1,7 @@
 <template>
   <div>
     <span v-if="errors.length" id="contact-form-errors">
-      <h2>Please Correct the Following Errors:</h2>
+      <h2 id="error-message">Please Correct the Following Errors:</h2>
       <ul id="errors-list">
         <li v-for="error in errors" :key="error" id="errors-item">
           {{ error }}
@@ -110,5 +110,4 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss"></style>

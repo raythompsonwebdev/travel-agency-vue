@@ -57,7 +57,7 @@
         </router-link>
       </li>
     </ul>
-    <!--LanguageSelect Item component -->
+
     <LanguageSelect />
   </nav>
 </template>
@@ -80,8 +80,6 @@ export default {
       }
     },
     InlineMenuButtonClickHandler() {
-      // eslint-disable-next-line no-console
-      //e.preventDefault();
       const slideoutMenu = document.getElementById("navi");
 
       const box = slideoutMenu.getAttribute("class");
@@ -94,6 +92,5 @@ export default {
   },
 };
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style lang="scss"></style>
