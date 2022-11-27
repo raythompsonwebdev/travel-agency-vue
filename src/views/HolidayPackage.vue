@@ -1,21 +1,26 @@
 <template>
   <div v-if="singleholidaypackage" class="singleholidaypackage">
-    <article class="single_item_details">
-      <h1>{{ singleholidaypackage.title }}</h1>
-      <span class="holidayprice">
+    <article class="single-item-details">
+      <h2 class="single-item-title">{{ singleholidaypackage.title }}</h2>
+      <span class="single-item-price">
         from
-        <span class="offerbox-price">{{ singleholidaypackage.price }}</span>
+        <span class="single-item-offer">{{ singleholidaypackage.price }}</span>
       </span>
-      <p>{{ singleholidaypackage.text }}</p>
+      <p class="single-item-text">{{ singleholidaypackage.text }}</p>
 
-      <figure>
+      <figure class="single-item">
         <img
+          class="single-item-img"
           :src="singleholidaypackage.url"
           :alt="singleholidaypackage.title"
         />
-        <figcaption>
-          <h3>Location : {{ singleholidaypackage.location }}</h3>
-          <p>Rating: {{ singleholidaypackage.rating }} Star</p>
+        <figcaption class="single-item-caption">
+          <h3 class="single-item-location">
+            Location : {{ singleholidaypackage.location }}
+          </h3>
+          <p class="single-item-rating">
+            Rating: {{ singleholidaypackage.rating }} Star
+          </p>
         </figcaption>
       </figure>
     </article>
@@ -63,6 +68,33 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style lang="scss">
+.fade-enter-active {
+  animation: coming 0.5s;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+.fade-leave-active {
+  animation: going 0.5s;
+}
+@keyframes coming {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes going {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
 .singleholidaypackage {
   border: 2px #ededeb solid;
   margin: 2em auto;
@@ -71,7 +103,12 @@ export default {
   padding: 0.5em;
 }
 /*Holiday details packages page*/
-.singleholidaypackage h1 {
+.single-item-details {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+}
+.single-item-title {
   text-align: center;
   display: block;
   line-height: 50px;
@@ -79,12 +116,7 @@ export default {
   font-size: 1.4em;
   margin: 0;
 }
-.single_item_details {
-  margin: 0 auto;
-  display: flex;
-  flex-flow: column;
-}
-.single_item_details p {
+.single-item-text {
   margin: 0;
   width: 100%;
   line-height: 1.6em;
@@ -92,33 +124,32 @@ export default {
   align-self: flex-start;
   text-align: center;
 }
-span.holidayprice {
+.single-item-price {
   font-size: 1.1em;
   width: 100%;
   line-height: 40px;
   text-align: center;
   color: #9e9e9e;
 }
-span.holidayprice .offerbox-price {
+.single-item-offer {
   display: inline-block;
   font-weight: bold;
   color: #ff6d00;
 }
-
-figure {
+.single-item {
   margin: 0;
 }
-figure img {
+.single-item-img {
   width: auto;
   display: block;
   margin: 0.5em auto;
 }
-figcaption {
+.single-item-caption {
   width: 100%;
   display: inline-block;
   margin-bottom: 0.5em;
 }
-figcaption h3 {
+.single-item-location {
   margin: 0;
   width: 100%;
   line-height: 40px;
@@ -126,15 +157,14 @@ figcaption h3 {
   text-align: center;
   color: #1485c9;
 }
-
-figcaption p {
+.single-item-rating {
   font-size: 0.9em;
   margin: 0;
   line-height: 35px;
   color: #9e9e9e;
   text-transform: capitalize;
 }
-figcaption button {
+.single-item-button {
   width: 80%;
   text-align: center;
   color: #fff;
@@ -146,11 +176,11 @@ figcaption button {
   line-height: 45px;
   border: 1px solid #fff;
   display: block;
-}
-figcaption button:hover {
-  color: #fff;
-  text-align: center;
-  font-weight: bold;
-  cursor: pointer;
+  &:hover {
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
 }
 </style>

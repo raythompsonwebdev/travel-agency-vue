@@ -2,7 +2,7 @@
   <aside id="about-page-banner" class="hide">
     <figure class="page-banner">
       <figcaption class="page-banner-caption">
-        <h1 class="page-banner-title">Lorem ipsum dolor sit amet</h1>
+        <h3 class="page-banner-title">Lorem ipsum dolor sit amet</h3>
         <span
           ><img
             class="page-banner-img-label"

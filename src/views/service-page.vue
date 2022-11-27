@@ -6,7 +6,7 @@
     <SideBanner />
 
     <main id="content2">
-      <h1>Lorem ipsum dolor sit amet, consectetur</h1>
+      <h2>Lorem ipsum dolor sit amet, consectetur</h2>
 
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
@@ -28,27 +28,29 @@
       </p>
       <br />
       <div class="services-card">
-        <h2 class="services-card-title">Enim odit dolor sequi voluptatem</h2>
+        <h3 class="services-card-title">Enim odit dolor sequi voluptatem</h3>
         <figure class="services-card-item">
           <img
             class="service-box-img"
             :src="customerService"
             :alt="'travel-agency-website-customer-service-image'"
           />
-          <figcaption>
-            <p>
+          <figcaption class="services-card-caption">
+            <p class="services-card-text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
               odit dolor sequi voluptatem esse doloribus libero commodi ea
               debitis id nostrum odio velit impedit vitae tenetur voluptates
               vero beatae excepturi.
             </p>
-            <a :href="'http://www.google.com'">Learn More</a>
+            <a :href="'http://www.google.com'" class="services-card-link"
+              >Learn More</a
+            >
           </figcaption>
         </figure>
       </div>
 
       <div class="services-card">
-        <h2 class="services-card-title">Enim odit dolor sequi voluptatem</h2>
+        <h3 class="services-card-title">Enim odit dolor sequi voluptatem</h3>
         <figure class="services-card-item">
           <img
             class="service-box-img"
@@ -56,21 +58,23 @@
             :alt="'travel-agency-website-bus-tours-image'"
           />
 
-          <figcaption>
-            <p>
+          <figcaption class="services-card-caption">
+            <p class="services-card-text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
               odit dolor sequi voluptatem esse doloribus libero commodi ea
               debitis id nostrum odio velit impedit vitae tenetur voluptates
               vero beatae excepturi.
             </p>
 
-            <a :href="'http://www.google.com'">Learn More</a>
+            <a :href="'http://www.google.com'" class="services-card-link"
+              >Learn More</a
+            >
           </figcaption>
         </figure>
       </div>
 
       <div class="services-card">
-        <h2 class="services-card-title">Enim odit dolor sequi voluptatem</h2>
+        <h3 class="services-card-title">Enim odit dolor sequi voluptatem</h3>
         <figure class="services-card-item">
           <img
             class="service-box-img"

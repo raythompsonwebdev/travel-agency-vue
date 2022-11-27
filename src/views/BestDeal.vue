@@ -1,19 +1,27 @@
 <template>
   <transition name="fade" tag="div">
     <div v-if="singlebestdeal" class="singlebestdeal" key="/best">
-      <article class="single_item_details">
-        <h1>{{ singlebestdeal.title }}</h1>
-        <span class="holidayprice">
+      <article class="single-best-details">
+        <h1 class="single-best-title">{{ singlebestdeal.title }}</h1>
+        <span class="single-best-price">
           from
-          <span class="offerbox-price">{{ singlebestdeal.price }}</span>
+          <span class="single-best-offer">{{ singlebestdeal.price }}</span>
         </span>
-        <p>{{ singlebestdeal.text }}</p>
+        <p class="single-best-txt">{{ singlebestdeal.text }}</p>
 
-        <figure>
-          <img :src="singlebestdeal.url" :alt="singlebestdeal.title" />
-          <figcaption>
-            <h3>Location : {{ singlebestdeal.location }}</h3>
-            <p>Rating: {{ singlebestdeal.rating }} Star</p>
+        <figure class="single-best-item">
+          <img
+            :src="singlebestdeal.url"
+            :alt="singlebestdeal.title"
+            class="single-best-img"
+          />
+          <figcaption class="single-best-caption">
+            <h3 class="single-best-location">
+              Location : {{ singlebestdeal.location }}
+            </h3>
+            <p class="single-best-rating">
+              Rating: {{ singlebestdeal.rating }} Star
+            </p>
           </figcaption>
         </figure>
       </article>
@@ -59,7 +67,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
-<style scoped>
+<style lang="scss" scoped>
 .fade-enter-active {
   animation: coming 0.5s;
   animation-delay: 0.5s;
@@ -95,7 +103,12 @@ export default {
   padding: 0.5em;
 }
 /*Holiday details packages page*/
-.singlebestdeal h1 {
+.single-best-details {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+}
+.single-best-title {
   text-align: center;
   display: block;
   line-height: 50px;
@@ -103,12 +116,7 @@ export default {
   font-size: 1.4em;
   margin: 0;
 }
-.single_item_details {
-  margin: 0 auto;
-  display: flex;
-  flex-flow: column;
-}
-.single_item_details p {
+.single-best-txt {
   margin: 0;
   width: 100%;
   line-height: 1.6em;
@@ -116,33 +124,33 @@ export default {
   align-self: flex-start;
   text-align: center;
 }
-span.holidayprice {
+.single-best-price {
   font-size: 1.1em;
   width: 100%;
   line-height: 40px;
   text-align: center;
   color: #9e9e9e;
 }
-span.holidayprice .offerbox-price {
+.single-best-offer {
   display: inline-block;
   font-weight: bold;
   color: #ff6d00;
 }
 
-figure {
+.single-best-item {
   margin: 0;
 }
-figure img {
+.single-best-img {
   width: auto;
   display: block;
   margin: 0.5em auto;
 }
-figcaption {
+.single-best-caption {
   width: 100%;
   display: inline-block;
   margin-bottom: 0.5em;
 }
-figcaption > h3 {
+.single-best-location {
   margin: 0;
   width: 100%;
   line-height: 40px;
@@ -151,14 +159,14 @@ figcaption > h3 {
   color: #1485c9;
 }
 
-figcaption > p {
+.single-best-rating {
   font-size: 0.9em;
   margin: 0;
   line-height: 35px;
   color: #9e9e9e;
   text-transform: capitalize;
 }
-figcaption > button {
+.single-best-submit {
   width: 80%;
   text-align: center;
   color: #fff;
@@ -168,13 +176,13 @@ figcaption > button {
   padding: 0;
   margin: 0 auto;
   line-height: 45px;
-  border: 1px solid #fff;
+  border: 1px solid #ffffff;
   display: block;
-}
-figcaption > button:hover {
-  color: #fff;
-  text-align: center;
-  font-weight: bold;
-  cursor: pointer;
+  &:hover {
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
 }
 </style>

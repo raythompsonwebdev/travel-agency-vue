@@ -1,17 +1,22 @@
 <template>
-  <article class="holiday-details-small">
-    <figure v-if="bestdealitem">
-      <img :src="bestdealitem.url" :alt="bestdealitem.title" />
-      <figcaption>
-        <h1>{{ bestdealitem.title }}</h1>
+  <article class="bestdeal-details">
+    <figure v-if="bestdealitem" class="bestdeal-details-item">
+      <img
+        :src="bestdealitem.url"
+        :alt="bestdealitem.title"
+        class="bestdeal-details-img"
+      />
+      <figcaption class="bestdeal-details-caption">
+        <h1 class="bestdeal-details-title">{{ bestdealitem.title }}</h1>
 
-        <span class="holiday-price-small">
+        <span class="bestdeal-details-price">
           From
-          <span class="offerbox-price-small">{{ bestdealitem.price }}</span>
+          <span class="bestdeal-offer">{{ bestdealitem.price }}</span>
         </span>
-        <p>Location: {{ bestdealitem.location }}.</p>
-        <p>Available: {{ bestdealitem.month }}.</p>
+        <p class="bestdeal-text">Location: {{ bestdealitem.location }}.</p>
+        <p class="bestdeal-text">Available: {{ bestdealitem.month }}.</p>
         <router-link
+          class="bestdeal-link"
           :to="{
             name: 'BestDeal',
             params: {

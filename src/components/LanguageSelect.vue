@@ -4,13 +4,13 @@
       <label for="languageselectitems"
         >Language:
         <img
-          id="flagImg"
+          id="flag-img"
           v-bind:src="
             selected !== ' '
               ? `./assets/images/flags/png/${selected}.png`
               : defaultImage
           "
-          :alt="'lag image'"
+          :alt="'flag image'"
         />
         <select
           v-model="selected"

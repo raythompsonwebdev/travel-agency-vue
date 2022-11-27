@@ -3,9 +3,9 @@
     <button id="side-bar-btn" @click="searchFilterFunction">SIDE</button>
 
     <section id="seasons">
-      <h1>Filter By Season</h1>
-      <ul>
-        <li>
+      <h1 class="filter-title">Filter By Season</h1>
+      <ul class="filter-list">
+        <li class="filter-list-item">
           <button
             @click="SearchItemBtn()"
             @mouseup="InlineButtonClickHandler()"
@@ -16,11 +16,12 @@
           </button>
         </li>
       </ul>
-      <ul>
-        <li v-for="season in seasons" :key="season.id">
+      <ul class="filter-list">
+        <li v-for="season in seasons" :key="season.id" class="filter-list-item">
           <button
             @click="SearchItemBtn(season.title)"
             @mouseup="InlineButtonClickHandler()"
+            class="filter-list-btn"
           >
             {{ season.title }}
           </button>
@@ -28,12 +29,17 @@
       </ul>
     </section>
     <section id="locations">
-      <h1>Filter By Location</h1>
-      <ul>
-        <li v-for="location in locations" :key="location.id">
+      <h1 class="filter-title">Filter By Location</h1>
+      <ul class="filter-list">
+        <li
+          v-for="location in locations"
+          :key="location.id"
+          class="filter-list-item"
+        >
           <button
             @click="SearchItemBtn(location.title)"
             @mouseup="InlineButtonClickHandler()"
+            class="filter-list-btn"
           >
             {{ location.title }}
           </button>
@@ -41,12 +47,13 @@
       </ul>
     </section>
     <section id="prices">
-      <h1>Filter By Price</h1>
-      <ul>
-        <li v-for="price in prices" :key="price.id">
+      <h1 class="filter-title">Filter By Price</h1>
+      <ul class="filter-list">
+        <li v-for="price in prices" :key="price.id" class="filter-list-item">
           <button
             @click="SearchItemBtn(price.title)"
             @mouseup="InlineButtonClickHandler()"
+            class="filter-list-btn"
           >
             {{ price.title }}
           </button>
@@ -54,12 +61,13 @@
       </ul>
     </section>
     <section id="ratings">
-      <h1>Filter By Rating</h1>
-      <ul>
-        <li v-for="rating in ratings" :key="rating.id">
+      <h1 class="filter-title">Filter By Rating</h1>
+      <ul class="filter-list">
+        <li v-for="rating in ratings" :key="rating.id" class="filter-list-item">
           <button
             @click="SearchItemBtn(rating.title)"
             @mouseup="InlineButtonClickHandler()"
+            class="filter-list-btn"
           >
             {{ rating.title }}
           </button>

@@ -2,9 +2,9 @@
   <section class="holiday-search-sidebar">
     <h2>Holiday Search</h2>
     <form id="holiday-search-form" @submit.prevent="onSubmit">
-      <label class="label_wide" for="locations">
+      <label class="label-wide" for="locations">
         Where are you going ?
-        <select v-model="locations" name="locations" class="select_wide">
+        <select v-model="locations" name="locations" class="select-wide">
           <option
             v-for="location in searchform[0].locations"
             :key="location.id"
@@ -17,7 +17,7 @@
 
       <label for="date" class="label-wide"
         ><span> When are you going ? </span>
-        <select v-model="date" name="date" class="select_date_year">
+        <select v-model="date" name="date" class="select-date-year">
           <option
             v-for="date in searchform[1].date"
             :key="date.id"
