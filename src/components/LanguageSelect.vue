@@ -4,13 +4,13 @@
       <label for="languageselectitems"
         >Language:
         <img
-          id="flagImg"
+          id="flag-img"
           v-bind:src="
             selected !== ' '
               ? `./assets/images/flags/png/${selected}.png`
               : defaultImage
           "
-          :alt="'lag image'"
+          :alt="'flag image'"
         />
         <select
           v-model="selected"
@@ -32,14 +32,14 @@
 </template>
 
 <script>
-import { languageselectitems } from "@/data-json.json";
+import navdata from "@/data-json.json";
 export default {
   name: "LanguageSelect",
   data() {
     return {
       selected: " ",
       defaultImage: require(`@/assets/images/flags/default.jpg`),
-      languageselectitems,
+      languageselectitems: navdata.languageselectitems,
     };
   },
   computed: {
@@ -74,5 +74,4 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss"></style>

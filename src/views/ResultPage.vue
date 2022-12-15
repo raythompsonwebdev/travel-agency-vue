@@ -5,7 +5,6 @@
 </template>
 
 <script>
-//import { cartItems } from "./fake-data";
 import axios from "axios";
 import ResultList from "@/components/ResultList.vue";
 export default {
@@ -25,9 +24,7 @@ export default {
   computed: {
     searchResult() {
       if (this.cartItems) {
-        return this.cartItems.filter((item) => {
-          return item;
-        });
+        return this.cartItems.filter((item) => item);
       } else {
         return this.cartItems;
       }
@@ -48,5 +45,4 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped></style>

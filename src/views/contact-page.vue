@@ -6,16 +6,18 @@
     <aside v-if="contactFunction" id="contact-page-sidebar" class="hide">
       <address id="contact-details">
         <p class="addr-title" style="">Phone:</p>
-        <a href="tel:123-436-7890">123-436-7890 </a>
-        <p class="addr_title">Mail :</p>
-        <a href="mailto:info@travelagency.com">info@travelagency.com</a>
-        <p class="addr_title">Address:</p>
+        <a href="tel:123-436-7890" class="addr-link">123-436-7890 </a>
+        <p class="addr-title">Mail :</p>
+        <a href="mailto:info@travelagency.com" class="addr-link"
+          >info@travelagency.com</a
+        >
+        <p class="addr-title">Address:</p>
         <p>Lorem Ipsum 1234 Dolo Sit Amet</p>
       </address>
     </aside>
 
-    <main id="content2">
-      <h1>Lorem ipsum dolor sit amet, consectetur</h1>
+    <main id="page-content">
+      <h2>Lorem ipsum dolor sit amet, consectetur</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
         dolor sequi voluptatem esse doloribus libero commodi ea debitis id
@@ -75,7 +77,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 .v-enter-from {
   transform: translateX(-200px);

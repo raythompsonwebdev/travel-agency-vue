@@ -1,32 +1,22 @@
 /* eslint-disable prefer-destructuring */
 <template>
   <div class="Home page">
-    <div class="Home page">
-      <button id="side-bar-btn" @click="sideBarFunction">SIDE</button>
-      <!--Leftside-->
-      <aside id="home-page-sidebar" class="hide">
-        <!---Search form-->
-        <SearchForm />
-        <!-- Destinations -->
-        <Destinations :destinationitems="destinationitems" />
-        <br />
-        <br />
-        <br />
-      </aside>
+    <button id="side-bar-btn" @click="sideBarFunction">SIDE</button>
 
-      <main id="home-page-content">
-        <!--Banner Image-->
+    <aside id="home-page-sidebar" class="hide">
+      <SearchForm />
+      <Destinations :destinationitems="destinationitems" />
+    </aside>
 
-        <figure id="banner">
-          <img :src="bannerImage" :alt="'banner-image'" />
-        </figure>
+    <main id="home-page-content">
+      <figure id="banner">
+        <img :src="bannerImage" :alt="'banner-image'" id="banner-img" />
+      </figure>
 
-        <!-- Featured Holiday Packages -->
-        <FeaturedHolidays :featuredholidayitems="featuredholidayitems" />
-      </main>
+      <FeaturedHolidays :featuredholidayitems="featuredholidayitems" />
+    </main>
 
-      <div class="clearfix" />
-    </div>
+    <div class="clearfix" />
   </div>
 </template>
 
@@ -48,9 +38,8 @@ export default {
     return {
       destinationitems: [],
       featuredholidayitems: [],
-      //searchformdata:[],
       show: true,
-      bannerImage: bannerImage,
+      bannerImage,
     };
   },
   async created() {
@@ -76,5 +65,4 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss"></style>

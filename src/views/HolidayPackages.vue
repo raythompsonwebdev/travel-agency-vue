@@ -25,12 +25,7 @@
 
 <script>
 import axios from "axios";
-//import { seasons, ratings, locations, prices } from "../data-json.json";
-import { seasons } from "@/data-json.json";
-import { ratings } from "@/data-json.json";
-import { locations } from "@/data-json.json";
-import { prices } from "@/data-json.json";
-
+import navdata from "@/data-json.json";
 import HolidayPackageItem from "@/components/HolidayPackageItem.vue";
 import FilterNav from "@/components/FilterNav.vue";
 
@@ -42,10 +37,10 @@ export default {
   },
   data() {
     return {
-      seasons,
-      ratings,
-      locations,
-      prices,
+      seasons: navdata.seasons,
+      ratings: navdata.ratings,
+      locations: navdata.locations,
+      prices: navdata.prices,
       selected: " ",
       holidaypackageitems: [],
       count: 10,
@@ -116,7 +111,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 .fade-enter-active {
   animation: coming 0.5s;

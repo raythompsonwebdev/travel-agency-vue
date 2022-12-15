@@ -1,12 +1,11 @@
 <template>
   <div class="Services">
-    <!---Leftside3-->
     <button id="side-bar-btn" @click="servicePageFunction">SIDE</button>
 
     <SideBanner />
 
-    <main id="content2">
-      <h1>Lorem ipsum dolor sit amet, consectetur</h1>
+    <main id="page-content">
+      <h2>Lorem ipsum dolor sit amet, consectetur</h2>
 
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
@@ -27,64 +26,70 @@
         excepturi
       </p>
       <br />
-      <div class="servicebox">
-        <h1>Enim odit dolor sequi voluptatem</h1>
-        <figure>
+      <div class="services-card">
+        <h3 class="services-card-title">Enim odit dolor sequi voluptatem</h3>
+        <figure class="services-card-item">
           <img
             class="service-box-img"
             :src="customerService"
             :alt="'travel-agency-website-customer-service-image'"
           />
-          <figcaption>
-            <p>
+          <figcaption class="services-card-caption">
+            <p class="services-card-text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
               odit dolor sequi voluptatem esse doloribus libero commodi ea
               debitis id nostrum odio velit impedit vitae tenetur voluptates
               vero beatae excepturi.
             </p>
-            <a :href="'http://www.google.com'">Learn More</a>
+            <a :href="'http://www.google.com'" class="services-card-link"
+              >Learn More</a
+            >
           </figcaption>
         </figure>
       </div>
 
-      <div class="servicebox">
-        <h1>Enim odit dolor sequi voluptatem</h1>
-        <figure>
+      <div class="services-card">
+        <h3 class="services-card-title">Enim odit dolor sequi voluptatem</h3>
+        <figure class="services-card-item">
           <img
             class="service-box-img"
             :src="busTours"
             :alt="'travel-agency-website-bus-tours-image'"
           />
 
-          <figcaption>
-            <p>
+          <figcaption class="services-card-caption">
+            <p class="services-card-text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
               odit dolor sequi voluptatem esse doloribus libero commodi ea
               debitis id nostrum odio velit impedit vitae tenetur voluptates
               vero beatae excepturi.
             </p>
 
-            <a :href="'http://www.google.com'">Learn More</a>
+            <a :href="'http://www.google.com'" class="services-card-link"
+              >Learn More</a
+            >
           </figcaption>
         </figure>
       </div>
 
-      <div class="servicebox">
-        <h1>Enim odit dolor sequi voluptatem</h1>
-        <figure>
+      <div class="services-card">
+        <h3 class="services-card-title">Enim odit dolor sequi voluptatem</h3>
+        <figure class="services-card-item">
           <img
             class="service-box-img"
             :src="hotelRoom"
             :alt="'travel-agency-website-hotel-room-image'"
           />
-          <figcaption>
-            <p>
+          <figcaption class="services-card-caption">
+            <p class="services-card-text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
               odit dolor sequi voluptatem esse doloribus libero commodi ea
               debitis id nostrum odio velit impedit vitae tenetur voluptates
               vero beatae excepturi.
             </p>
-            <a :href="'http://www.google.com'">Learn More</a>
+            <a :href="'http://www.google.com'" class="services-card-link"
+              >Learn More</a
+            >
           </figcaption>
         </figure>
       </div>
@@ -148,5 +153,4 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss"></style>

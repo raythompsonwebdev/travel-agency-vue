@@ -3,8 +3,11 @@
   <header id="site-header">
     <!---logo-->
     <figure id="logo">
-      <img :src="image" :alt="'website logo'" />
-      <h1><span>Travel</span><span>AGENCY</span></h1>
+      <img :src="image" :alt="'website logo'" id="logo-img" />
+      <h1 id="logo-title">
+        <span class="logo-span">Travel</span
+        ><span class="logo-span">AGENCY</span>
+      </h1>
     </figure>
     <!---contact number-->
     <aside class="contact">
@@ -32,5 +35,5 @@ export default {
   },
 };
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style lang="scss"></style>

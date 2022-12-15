@@ -1,7 +1,7 @@
 <template>
   <!--Destinations-->
   <section class="holiday-search-sidebar">
-    <h2>Top Destinations</h2>
+    <h2 id="holiday-search-title">Top Destinations</h2>
     <div
       v-for="destination in destinationitems"
       :key="destination.id"
@@ -36,5 +36,4 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss"></style>

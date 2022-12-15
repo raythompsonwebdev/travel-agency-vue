@@ -1,22 +1,26 @@
 <template>
   <!--Featured Holiday Package-->
-  <section id="offers">
-    <h2>Featured Holiday Package</h2>
+  <section id="holiday-offers">
+    <h2 id="holiday-offers-title">Featured Holiday Package</h2>
 
     <div
       v-for="featuredholiday in featuredholidayitems"
       :key="featuredholiday.id"
-      class="offerbox"
+      class="offer-item-div"
     >
-      <figure>
-        <img :src="featuredholiday.url" :alt="'images'" />
+      <figure class="offer-item">
+        <img
+          :src="featuredholiday.url"
+          :alt="'images'"
+          class="offer-item-img"
+        />
 
-        <figcaption>
-          <p>{{ featuredholiday.text }}</p>
-          <p>
+        <figcaption class="offer-item-caption">
+          <p class="offer-item-text">{{ featuredholiday.text }}</p>
+          <p class="offer-item-text">
             from only
-            <span class="offerbox-price">{{ featuredholiday.price }}</span> per
-            person
+            <span class="offer-item-price">{{ featuredholiday.price }}</span>
+            per person
           </p>
         </figcaption>
       </figure>
@@ -37,7 +41,7 @@ export default {
   },
   computed: {
     holidayImage(url) {
-      return require(`${url}`); // the module request
+      return require(`${url}`);
     },
   },
 };

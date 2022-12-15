@@ -1,18 +1,18 @@
 <template>
   <div>
     <span v-if="errors.length" id="contact-form-errors">
-      <h2>Please Correct the Following Errors:</h2>
-      <ul>
-        <li v-for="error in errors" :key="error">
+      <h2 id="error-message">Please Correct the Following Errors:</h2>
+      <ul id="errors-list">
+        <li v-for="error in errors" :key="error" id="errors-item">
           {{ error }}
         </li>
       </ul>
     </span>
 
-    <form id="contactform" @submit.prevent="onSubmit">
-      <ul>
-        <li>
-          <label for="firstname"
+    <form id="contact-form" @submit.prevent="onSubmit">
+      <ul id="contact-form-fields">
+        <li class="contact-form-field">
+          <label for="firstname" class="contact-label"
             >First name
             <input
               id="firstname"
@@ -21,24 +21,24 @@
               name="firstname"
           /></label>
         </li>
-        <li>
-          <label for="lastname"
+        <li class="contact-form-field">
+          <label for="lastname" class="contact-label"
             >Last name
             <input id="lastname" v-model="lastname" type="text" name="lastname"
           /></label>
         </li>
-        <li>
-          <label for="email"
+        <li class="contact-form-field">
+          <label for="email" class="contact-label"
             >Email <input id="email" v-model="email" type="text" name="email"
           /></label>
         </li>
-        <li>
-          <label for="phone"
+        <li class="contact-form-field">
+          <label for="phone" class="contact-label"
             >Phone <input id="phone" v-model="phone" type="text" name="phone"
           /></label>
         </li>
-        <li>
-          <label for="message"
+        <li class="contact-form-field">
+          <label for="message" class="contact-label"
             >Message
             <textarea
               v-model="message"
@@ -48,12 +48,11 @@
               cols="50"
               rows="10"
             >
- ..</textarea
-            >
+            </textarea>
           </label>
         </li>
-        <li>
-          <input id="contactbtn" type="submit" value="submit" />
+        <li class="contact-form-field">
+          <input id="contact-submit" type="submit" value="submit" />
         </li>
       </ul>
     </form>
@@ -111,5 +110,4 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss"></style>

@@ -57,7 +57,7 @@
         </router-link>
       </li>
     </ul>
-    <!--LanguageSelect Item component -->
+
     <LanguageSelect />
   </nav>
 </template>
@@ -72,7 +72,7 @@ export default {
   methods: {
     naviFunction(e) {
       e.preventDefault();
-      const slideoutNav = document.getElementById("navi");
+      const slideoutNav = document.getElementById("site-inner-nav");
       if (slideoutNav.classList.contains("show")) {
         slideoutNav.setAttribute("class", "hide");
       } else {
@@ -80,9 +80,7 @@ export default {
       }
     },
     InlineMenuButtonClickHandler() {
-      // eslint-disable-next-line no-console
-      //e.preventDefault();
-      const slideoutMenu = document.getElementById("navi");
+      const slideoutMenu = document.getElementById("site-inner-nav");
 
       const box = slideoutMenu.getAttribute("class");
       if (box === "hide") {
@@ -94,6 +92,5 @@ export default {
   },
 };
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style lang="scss"></style>
