@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div class="AboutUs page">
+    <div class="AboutUs page" v-if="show">
       <button id="side-bar-btn" @click="aboutPageFunction">SIDE</button>
 
       <SideBanner />
