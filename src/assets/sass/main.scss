@@ -873,27 +873,40 @@
   padding: 0.25em;
 }
 
+#page-content p {
+  font-size:0.9rem;
+}
+
+#page-content h2 {
+  font-size:1rem;
+}
 /* contact form errors */
 #contact-form-errors {
-  width: 45%;
+  width: 60%;
   display: block;
   margin: auto;
   list-style: none;
+  border:2px solid #000;
+  padding:1%;
+  text-align:center;
 }
-.error-message {
-  text-align: left;
+#error-message {
   color: $colorbg;
   font-size: 1em;
+  margin:0;
+  line-height:40px;
 }
 #errors-list {
   padding: 0;
   margin: 0;
+
 }
-.errors-item {
-  line-height: 35px;
+#errors-item {
+  line-height: 30px;
   display: block;
   width: 100%;
   font-style: italic;
+  font-size:0.9em;
 }
 
 /* contact form */
@@ -918,6 +931,7 @@
   font-size: 0.7em;
   display: flex;
   justify-content: space-between;
+  align-items:flex-start;
 }
 #firstname,
 #lastname,
@@ -1656,6 +1670,14 @@
     padding: 0.25em;
   }
 
+  #page-content p {
+    font-size:0.9rem;
+  }
+
+  #page-content h2 {
+    font-size:1.2rem;
+  }
+
   #contact-form {
     width: 60%;
     margin: 1em auto;
@@ -1683,8 +1705,9 @@
     width: 80%;
   }
   #contact-submit {
-    width: 60%;
+    width: 50%;
     font-size: 1.1em;
+    height:40px;
   }
 
   .holiday-pkg-details {
@@ -2311,6 +2334,14 @@
     padding: 0.25em;
   }
 
+  #page-content p {
+    font-size:0.9rem;
+  }
+
+  #page-content h2 {
+    font-size:1.2rem;
+  }
+
   #contact-form {
     width: 90%;
     margin: 1em auto;
@@ -2339,6 +2370,7 @@
   #contact-submit {
     width: 50%;
     font-size: 1.1em;
+    height:40px;
   }
 
   .holiday-pkg-details {
@@ -2931,6 +2963,14 @@
     padding: 0.25em;
   }
 
+  #page-content p {
+    font-size:0.9rem;
+  }
+
+  #page-content h2 {
+    font-size:1.2rem;
+  }
+
   #contact-form {
     width: 90%;
     margin: 1em auto;
@@ -2958,6 +2998,8 @@
   }
   #contact-submit {
     width: 50%;
+    font-size: 1.1em;
+    height:40px;
   }
 
   .holiday-pkg-details {
@@ -3539,6 +3581,14 @@
     padding: 0.25em;
   }
 
+  #page-content p {
+    font-size:0.9rem;
+  }
+
+  #page-content h2 {
+    font-size:1.2rem;
+  }
+
   #contact-form {
     width: 90%;
     margin: 1em auto;
@@ -3566,6 +3616,8 @@
   }
   #contact-submit {
     width: 50%;
+    font-size: 1.1em;
+    height:40px;
   }
 
   .holiday-pkg-details {
@@ -4144,6 +4196,14 @@
     padding: 0.25em;
   }
 
+  #page-content p {
+    font-size:0.9rem;
+  }
+
+  #page-content h2 {
+    font-size:1.2rem;
+  }
+
   #contact-form {
     width: 90%;
     margin: 1em auto;
@@ -4171,6 +4231,8 @@
   }
   #contact-submit {
     width: 50%;
+    font-size: 1.1em;
+    height:40px;
   }
 
   .holiday-pkg-details {
@@ -4743,6 +4805,14 @@
     padding: 0.25em;
   }
 
+  #page-content p {
+    font-size:0.9rem;
+  }
+
+  #page-content h2 {
+    font-size:1.2rem;
+  }
+
   #contact-form {
     width: 90%;
     margin: 1em auto;
@@ -4770,6 +4840,8 @@
   }
   #contact-submit {
     width: 50%;
+    font-size: 1.1em;
+    height:40px;
   }
 
   .holiday-pkg-details {
@@ -5338,6 +5410,14 @@
     padding: 0.25em;
   }
 
+  #page-content p {
+    font-size:0.9rem;
+  }
+
+  #page-content h2 {
+    font-size:1.2rem;
+  }
+
   #contact-form {
     width: 90%;
     margin: 1em auto;
@@ -5365,6 +5445,8 @@
   }
   #contact-submit {
     width: 50%;
+    font-size: 1.1em;
+    height:35px;
   }
 
   .holiday-pkg-details {
@@ -5944,6 +6026,14 @@
     padding: 0.25em;
   }
 
+  #page-content p {
+    font-size:0.9rem;
+  }
+
+  #page-content h2 {
+    font-size:1.2rem;
+  }
+
   #contact-form {
     width: 90%;
   }
@@ -5972,7 +6062,8 @@
   }
   #contact-submit {
     width: 50%;
-    border: 0;
+    font-size: 1.1em;
+    height:35px;
     &:hover {
       border: 0;
     }
@@ -6534,6 +6625,14 @@
     padding: 0.25em;
   }
 
+  #page-content p {
+    font-size:0.9rem;
+  }
+
+  #page-content h2 {
+    font-size:1.2rem;
+  }
+
   #contact-form {
     width: 90%;
   }
@@ -6562,7 +6661,8 @@
   }
   #contact-submit {
     width: 50%;
-    border: 0;
+    font-size: 1.1em;
+    height:35px;
     &:hover {
       border: 0;
     }
@@ -7117,6 +7217,14 @@
     padding: 0.25em;
   }
 
+  #page-content p {
+    font-size:0.9rem;
+  }
+
+  #page-content h2 {
+    font-size:1.2rem;
+  }
+
   #contact-form {
     width: 90%;
   }
@@ -7145,7 +7253,8 @@
   }
   #contact-submit {
     width: 50%;
-    border: 0;
+    font-size: 1.1em;
+    height:35px;
     &:hover {
       border: 0;
     }
