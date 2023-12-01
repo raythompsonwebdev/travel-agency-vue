@@ -16,11 +16,11 @@ Web application design is based on a photoshop templates downloaded from website
 
 - [node](https://nodejs.org/en)
 - [vuejs](https://vuejs.org/)
-- [mungodb](https://www.mongodb.com/)
 - [prettier](https://prettier.io/)
 - [eslint](https://eslint.org/)
 - [postcss](https://postcss.org/)
 - [stylelint](https://stylelint.io/)
+- [axios](https://axios-http.com/docs/intro/)
 
 ## Project setup
 ```
