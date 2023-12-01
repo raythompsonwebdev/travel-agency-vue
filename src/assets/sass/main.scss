@@ -37,6 +37,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-items:center;
 }
 
 /* Logo */
@@ -133,6 +134,7 @@
   text-align: center;
   font-size: 0.6em;
   line-height: 27px;
+  font-weight: bold;
 }
 
 /* navigation */
@@ -146,6 +148,7 @@
   align-content: flex-end;
   justify-content: flex-end;
   border-bottom: 2px solid $colorgry2;
+  font-family: $font-style1;
   .show {
     left: 0;
     opacity: 1;
@@ -172,6 +175,7 @@
   flex-flow: column;
   justify-content: flex-start;
   padding: 0;
+  gap: 0.2em;
 }
 .site-inner-nav-item {
   list-style: none;
@@ -181,7 +185,6 @@
   height: auto;
   float: none;
   display: block;
-  margin-bottom: 0.2em;
   .nav-item {
     text-decoration: none;
     text-transform: uppercase;
@@ -196,7 +199,6 @@
     transition: all 0.1s linear;
     display: block;
     font-weight: bold;
-    letter-spacing: 0.03em;
     &:link {
       color: $colorwhite1;
       background: linear-gradient(to bottom, $colorblue3 0%, $colorblue2 100%);
@@ -227,7 +229,7 @@
   margin-bottom: 0.2em;
 
   .nav-item {
-    font-size: 0.85em;
+    font-size: 1em;
     line-height: 40px;
     height: 40px;
     &:hover {
@@ -522,7 +524,7 @@
 }
 .destination-title {
   color: $colorblue3;
-  font-size: 0.95em;
+  font-size: 1em;
   font-weight: bold;
   width: 100%;
   height: auto;
@@ -532,7 +534,7 @@
   text-align: left;
 }
 .destination-txt {
-  font-size: 0.75em;
+  font-size: 0.8rem;
   width: 100%;
   float: none;
   height: auto;
@@ -616,7 +618,7 @@
 .filter-list-btn {
   display: block;
   height: 100%;
-  font-size: 0.75em;
+  font-size: 0.9em;
   text-transform: capitalize;
   transition: all 0.2s linear ease-in-out;
   width: 100%;
@@ -912,7 +914,7 @@
 /* contact form */
 #contact-form {
   width: 90%;
-  margin: auto;
+  margin: 0;
   display: block;
   list-style: none;
 }
@@ -1079,7 +1081,7 @@
   margin: 0;
   line-height: 25px;
   height: auto;
-  font-size: 0.9em;
+  font-size: 0.95em;
   display: block;
   color: $colorblue3;
   font-weight: bold;
@@ -1280,7 +1282,7 @@
   }
 
   .contact {
-    width: 40%;
+    width: 15%;
     margin: 0.25em 0 0;
     display: block;
   }
@@ -1291,7 +1293,7 @@
     background: $colorbg;
   }
   #contact-number {
-    font-size: 0.85em;
+    font-size: 0.9em;
     height: 30px;
     &:active {
       color: $colorwhite2;
@@ -1307,7 +1309,7 @@
   }
   #opening-time {
     line-height: 27px;
-    font-size: 85%;
+    font-size: 0.75rem;
   }
 
   #site-navigation {
@@ -1317,21 +1319,21 @@
   }
   #site-inner-nav {
     width: 85%;
-    float: left;
+    display:flex;
     flex-direction: row;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: center;
+    align-items:flex-start;
     position: unset;
     opacity: 1;
     padding: 0;
+    gap: 0.2em;
   }
   .site-inner-nav-item {
     width: 16%;
-    float: left;
-    margin-right: 0.1em;
+    flex: 1 1 auto;
     margin-bottom: 0;
     .nav-item {
-      font-size: 0.9em;
+      font-size: 1em;
       height: 38px;
       line-height: 40px;
       color: $colorwhite1;
@@ -1346,7 +1348,7 @@
     padding-top: 0;
     .nav-item {
       padding-top: 0;
-      font-size: 0.7em;
+      font-size: 0.85em;
       height: 38px;
       line-height: 40px;
       &:hover {
@@ -1357,14 +1359,14 @@
   }
 
   #language-select {
-    width: 40%;
+    width: 15%;
     padding-left: 0.25em;
   }
   #language-selector {
     height: 35px;
 
     label {
-      font-size: 0.9em;
+      font-size: 0.85em;
     }
 
     #flag-img {
@@ -1426,7 +1428,7 @@
     padding: 2%;
 
     .label-wide {
-      font-size: 0.85em;
+      font-size: 0.9em;
       span {
         display: block;
       }
@@ -1485,11 +1487,11 @@
     display: inline-block;
   }
   .destination-title {
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 20px;
   }
   .destination-txt {
-    font-size: 0.8em;
+    font-size: 0.95rem;
     float: none;
   }
 
@@ -1528,7 +1530,7 @@
   }
   #reset,
   .filter-list-btn {
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 30px;
   }
 
@@ -1649,7 +1651,7 @@
     display: block;
   }
   .offer-item-text {
-    font-size: 0.9em;
+    font-size: 1em;
     text-align: center;
     margin: 0;
     height: 30px;
@@ -1671,7 +1673,7 @@
   }
 
   #page-content p {
-    font-size:0.9rem;
+    font-size:1rem;
   }
 
   #page-content h2 {
@@ -1679,8 +1681,8 @@
   }
 
   #contact-form {
-    width: 60%;
-    margin: 1em auto;
+    width: 70%;
+
   }
   #contact-form-fields {
     list-style: none;
@@ -1705,7 +1707,7 @@
     width: 80%;
   }
   #contact-submit {
-    width: 50%;
+    width: 60%;
     font-size: 1.1em;
     height:40px;
   }
@@ -1717,10 +1719,10 @@
   }
   .holiday-pkg-title {
     width: 50%;
-    font-size: 1.2em;
     text-indent: 0;
     text-align: left;
     line-height: 40px;
+    font-size: 1.5em;
   }
   .holiday-pkg-item {
     width: 100%;
@@ -1812,7 +1814,7 @@
   }
   .bestdeal-details-title {
     line-height: 25px;
-    font-size: 0.85em;
+    font-size: 0.95em;
     text-align: left;
   }
   .bestdeal-details-item {
@@ -1822,7 +1824,7 @@
     justify-content: space-around;
   }
   .bestdeal-details-img {
-    width: auto;
+    width: 160px;
     margin: 0 0.25em 0 0;
   }
   .bestdeal-details-caption {
@@ -1831,7 +1833,7 @@
     margin-bottom: 0.5em;
   }
   .bestdeal-text {
-    font-size: 0.85em;
+    font-size: 1em;
     text-align: left;
   }
   .bestdeal-link {
@@ -1844,7 +1846,7 @@
   }
   .bestdeal-details-price {
     text-align: left;
-    font-size: 0.9em;
+    font-size: 1em;
     width: 100%;
   }
   .bestdeal-offer {
@@ -1970,7 +1972,7 @@
   }
   #opening-time {
     line-height: 27px;
-    font-size: 0.75em;
+    font-size: 0.75rem;
   }
 
   #site-navigation {
@@ -1991,7 +1993,6 @@
   }
   .site-inner-nav-item {
     width: 16%;
-    float: left;
     margin-bottom: 0;
     .nav-item {
       font-size: 0.8em;
@@ -2008,7 +2009,7 @@
     padding-top: 0;
     .nav-item {
       padding-top: 0;
-      font-size: 0.6em;
+      font-size: 0.75em;
       height: 38px;
       line-height: 40px;
       &:hover {
@@ -2089,7 +2090,7 @@
     padding: 2%;
 
     .label-wide {
-      font-size: 0.85em;
+      font-size: 0.9em;
       span {
         display: block;
       }
@@ -2148,11 +2149,11 @@
     display: inline-block;
   }
   .destination-title {
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 20px;
   }
   .destination-txt {
-    font-size: 0.8em;
+    font-size: 0.95rem;
     float: none;
   }
 
@@ -2189,7 +2190,7 @@
   }
   #reset,
   .filter-list-btn {
-    font-size: 0.85em;
+    font-size: 1em;
     line-height: 30px;
   }
 
@@ -2313,7 +2314,7 @@
     display: block;
   }
   .offer-item-text {
-    font-size: 0.9em;
+    font-size: 1em;
     text-align: center;
     margin: 0;
     height: 30px;
@@ -2335,7 +2336,7 @@
   }
 
   #page-content p {
-    font-size:0.9rem;
+    font-size:1rem;
   }
 
   #page-content h2 {
@@ -2344,7 +2345,7 @@
 
   #contact-form {
     width: 90%;
-    margin: 1em auto;
+
   }
   #contact-form-fields {
     list-style: none;
@@ -2368,7 +2369,7 @@
     border: 1px solid $colorgry2;
   }
   #contact-submit {
-    width: 50%;
+    width: 60%;
     font-size: 1.1em;
     height:40px;
   }
@@ -2380,7 +2381,6 @@
   }
   .holiday-pkg-title {
     width: 50%;
-    font-size: 1.15em;
     text-indent: 0;
     text-align: left;
     line-height: 40px;
@@ -2444,7 +2444,7 @@
   }
   .bestdeal-details-title {
     line-height: 25px;
-    font-size: 0.85em;
+    font-size: 0.95em;
     width: 100%;
     text-align: left;
   }
@@ -2455,7 +2455,7 @@
     justify-content: space-around;
   }
   .bestdeal-details-img {
-    width: 48%;
+    width: 160px;
     margin: 0 0.25em 0 0;
   }
   .bestdeal-details-caption {
@@ -2463,7 +2463,7 @@
     display: inline-block;
   }
   .bestdeal-text {
-    font-size: 0.85em;
+    font-size: 1em;
     text-align: left;
   }
   .bestdeal-link {
@@ -2477,7 +2477,7 @@
   }
   .bestdeal-details-price {
     line-height: 25px;
-    font-size: 0.9em;
+    font-size: 1em;
     text-align: left;
   }
   .bestdeal-offer {
@@ -2571,7 +2571,7 @@
     font-size: 1em;
   }
   .logo-span:last-of-type {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
 
   .contact {
@@ -2603,8 +2603,8 @@
   }
   #opening-time {
     line-height: 27px;
-    font-size: 0.75em;
-    font-weight: bold;
+    font-size: 0.75rem;
+
   }
 
   #site-navigation {
@@ -2625,9 +2625,7 @@
   }
   .site-inner-nav-item {
     width: 16%;
-    float: left;
     height: 40px;
-    margin-right: 0.1em;
     margin-bottom: 0;
     .nav-item {
       font-size: 0.85em;
@@ -2645,7 +2643,7 @@
     padding-top: 0;
     .nav-item {
       padding-top: 0;
-      font-size: 0.6em;
+      font-size: 0.75em;
       height: 38px;
       line-height: 40px;
       &:hover {
@@ -2783,11 +2781,11 @@
     display: inline-block;
   }
   .destination-title {
-    font-size: 0.85em;
+    font-size: 0.9em;
     line-height: 20px;
   }
   .destination-txt {
-    font-size: 0.75em;
+    font-size: 0.85rem;
     float: none;
   }
 
@@ -2824,7 +2822,7 @@
   }
   #reset,
   .filter-list-btn {
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 30px;
   }
 
@@ -2942,7 +2940,7 @@
     display: block;
   }
   .offer-item-text {
-    font-size: 0.9em;
+    font-size: 1em;
     text-align: center;
     margin: 0;
     height: 30px;
@@ -2964,7 +2962,7 @@
   }
 
   #page-content p {
-    font-size:0.9rem;
+    font-size:1rem;
   }
 
   #page-content h2 {
@@ -2973,7 +2971,7 @@
 
   #contact-form {
     width: 90%;
-    margin: 1em auto;
+
   }
   #contact-form-fields {
     list-style: none;
@@ -3009,8 +3007,8 @@
   }
 
   .holiday-pkg-title {
-    width: 50%;
-    font-size: 1.15em;
+    width: 60%;
+    font-size: 1.45em;
     text-indent: 0;
     text-align: left;
     line-height: 40px;
@@ -3069,7 +3067,7 @@
     margin: 0.25em;
   }
   .bestdeal-details-title {
-    font-size: 0.85em;
+    font-size: 0.95em;
     text-align: left;
   }
   .bestdeal-details-item {
@@ -3079,7 +3077,7 @@
     justify-content: space-around;
   }
   .bestdeal-details-img {
-    width: 48%;
+    width: 160px;
     margin: 0 0.25em 0 0;
   }
   .bestdeal-details-caption {
@@ -3087,7 +3085,7 @@
     display: inline-block;
   }
   .bestdeal-text {
-    font-size: 0.85em;
+    font-size: 1em;
     text-align: left;
   }
   .bestdeal-link {
@@ -3100,7 +3098,7 @@
     }
   }
   .bestdeal-details-price {
-    font-size: 0.85em;
+    font-size: 0.95em;
     text-align: left;
   }
   .bestdeal-offer {
@@ -3224,7 +3222,6 @@
   #opening-time {
     line-height: 27px;
     font-size: 0.7em;
-    font-weight: bold;
   }
 
   #site-navigation {
@@ -3244,10 +3241,8 @@
     padding: 0;
   }
   .site-inner-nav-item {
-    width: 16.71%;
-    float: left;
+    width: 16%;
     height: 40px;
-    margin-right: 0.1em;
     margin-bottom: 0;
     .nav-item {
       font-size: 0.8em;
@@ -3265,7 +3260,7 @@
     padding-top: 0;
     .nav-item {
       padding-top: 0;
-      font-size: 0.6em;
+      font-size: 0.75em;
       height: 38px;
       line-height: 40px;
       &:hover {
@@ -3402,11 +3397,11 @@
     display: inline-block;
   }
   .destination-title {
-    font-size: 0.8em;
+    font-size: 0.9em;
     line-height: 20px;
   }
   .destination-txt {
-    font-size: 0.75em;
+    font-size: 0.85rem;
     float: none;
   }
 
@@ -3442,7 +3437,7 @@
     margin: 0;
     #reset,
     .filter-list-btn {
-      font-size: 0.9em;
+      font-size: 1em;
       line-height: 30px;
     }
   }
@@ -3560,7 +3555,7 @@
     display: block;
   }
   .offer-item-text {
-    font-size: 0.9em;
+    font-size: 1em;
     text-align: center;
     margin: 0;
     height: 30px;
@@ -3582,7 +3577,7 @@
   }
 
   #page-content p {
-    font-size:0.9rem;
+    font-size:1rem;
   }
 
   #page-content h2 {
@@ -3591,7 +3586,7 @@
 
   #contact-form {
     width: 90%;
-    margin: 1em auto;
+
   }
   #contact-form-fields {
     list-style: none;
@@ -3615,7 +3610,7 @@
     border: 1px solid $colorgry2;
   }
   #contact-submit {
-    width: 50%;
+    width: 60%;
     font-size: 1.1em;
     height:40px;
   }
@@ -3627,7 +3622,7 @@
   }
   .holiday-pkg-title {
     width: 50%;
-    font-size: 1.15em;
+    font-size: 1.45em;
     text-indent: 0;
     text-align: left;
     line-height: 40px;
@@ -3684,7 +3679,7 @@
     margin: 0.25em;
   }
   .bestdeal-details-title {
-    font-size: 0.85em;
+    font-size: 0.95em;
     text-align: left;
   }
   .bestdeal-details-item {
@@ -3694,14 +3689,14 @@
     justify-content: space-around;
   }
   .bestdeal-details-img {
-    width: 48%;
+    width: 160px;
   }
   .bestdeal-details-caption {
     width: 48%;
     display: inline-block;
   }
   .bestdeal-text {
-    font-size: 0.85em;
+    font-size: 1em;
     text-align: left;
   }
   .bestdeal-link {
@@ -3715,7 +3710,7 @@
   }
   .bestdeal-details-price {
     text-align: left;
-    font-size: 0.85em;
+    font-size: 0.95em;
   }
   .bestdeal-offer {
     color: $colorbtn4;
@@ -3837,7 +3832,6 @@
   #opening-time {
     line-height: 27px;
     font-size: 0.8em;
-    font-weight: bold;
   }
 
   #site-navigation {
@@ -3857,9 +3851,7 @@
     padding: 0;
   }
   .site-inner-nav-item {
-    width: 16.71%;
-    float: left;
-    margin-right: 0.1em;
+    width: 16%;
     margin-bottom: 0;
     .nav-item {
       font-size: 0.7em;
@@ -3877,7 +3869,7 @@
     padding-top: 0;
     .nav-item {
       padding-top: 0;
-      font-size: 0.6em;
+      font-size: 0.75em;
       height: 38px;
       line-height: 40px;
       &:hover {
@@ -4016,11 +4008,11 @@
     display: inline-block;
   }
   .destination-title {
-    font-size: 0.8em;
+    font-size: 0.9em;
     line-height: 20px;
   }
   .destination-txt {
-    font-size: 0.75em;
+    font-size: 0.85rem;
     float: none;
   }
 
@@ -4057,7 +4049,7 @@
   }
   #reset,
   .filter-list-btn {
-    font-size: 0.85em;
+    font-size: 1em;
     line-height: 30px;
   }
 
@@ -4175,7 +4167,7 @@
     display: block;
   }
   .offer-item-text {
-    font-size: 0.9em;
+    font-size: 1em;
     text-align: center;
     margin: 0;
     height: 30px;
@@ -4197,7 +4189,7 @@
   }
 
   #page-content p {
-    font-size:0.9rem;
+    font-size:1rem;
   }
 
   #page-content h2 {
@@ -4206,7 +4198,7 @@
 
   #contact-form {
     width: 90%;
-    margin: 1em auto;
+
   }
   #contact-form-fields {
     list-style: none;
@@ -4242,7 +4234,7 @@
   }
   .holiday-pkg-title {
     width: 50%;
-    font-size: 1.15em;
+    font-size: 1.45em;
     text-indent: 0;
     text-align: left;
     line-height: 40px;
@@ -4299,7 +4291,7 @@
     margin: 0.25em;
   }
   .bestdeal-details-title {
-    font-size: 0.85em;
+    font-size: 0.95em;
     text-align: left;
   }
   .bestdeal-details-item {
@@ -4309,14 +4301,14 @@
     justify-content: space-around;
   }
   .bestdeal-details-img {
-    width: 35%;
+    width: 160px;
   }
   .bestdeal-details-caption {
     width: 60%;
     display: inline-block;
   }
   .bestdeal-text {
-    font-size: 0.85em;
+    font-size: 1em;
     text-align: left;
   }
   .bestdeal-link {
@@ -4328,7 +4320,7 @@
     }
   }
   .bestdeal-details-price {
-    font-size: 0.85em;
+    font-size: 0.95em;
     text-align: left;
   }
   .bestdeal-offer {
@@ -4420,7 +4412,7 @@
     font-size: 1em;
   }
   .logo-span:last-of-type {
-    font-size: 1.15em;
+    font-size: 1.2em;
   }
 
   .contact {
@@ -4432,7 +4424,7 @@
     display: block;
   }
   #contact-number {
-    font-size: 0.8em;
+    font-size: 0.85em;
 
     &:active {
       color: $colorwhite2;
@@ -4448,8 +4440,7 @@
   }
   #opening-time {
     line-height: 27px;
-    font-size: 0.7em;
-    font-weight: bold;
+    font-size: 0.75em;
   }
 
   #site-navigation {
@@ -4469,8 +4460,6 @@
   }
   .site-inner-nav-item {
     width: 16%;
-    float: left;
-    margin-right: 0.1em;
     margin-bottom: 0;
     .nav-item {
       font-size: 0.8em;
@@ -4487,7 +4476,7 @@
     padding-top: 0;
     .nav-item {
       padding-top: 0;
-      font-size: 0.6em;
+      font-size: 0.7em;
       height: 38px;
       line-height: 40px;
       &:hover {
@@ -4624,11 +4613,11 @@
     display: inline-block;
   }
   .destination-title {
-    font-size: 0.75em;
+    font-size: 0.9em;
     line-height: 20px;
   }
   .destination-txt {
-    font-size: 0.7em;
+    font-size: 0.85rem;
     float: none;
   }
 
@@ -4665,7 +4654,7 @@
   }
   #reset,
   .filter-list-btn {
-    font-size: 0.8em;
+    font-size: 1em;
     line-height: 30px;
   }
 
@@ -4784,7 +4773,7 @@
     display: block;
   }
   .offer-item-text {
-    font-size: 0.8em;
+    font-size: 0.9em;
     text-align: center;
     margin: 0;
     height: 30px;
@@ -4806,7 +4795,7 @@
   }
 
   #page-content p {
-    font-size:0.9rem;
+    font-size:1rem;
   }
 
   #page-content h2 {
@@ -4815,7 +4804,7 @@
 
   #contact-form {
     width: 90%;
-    margin: 1em auto;
+
   }
   #contact-form-fields {
     list-style: none;
@@ -4851,7 +4840,7 @@
   }
   .holiday-pkg-title {
     width: 55%;
-    font-size: 1.15em;
+    font-size: 1.35em;
     text-indent: 0;
     text-align: left;
     line-height: 40px;
@@ -4919,14 +4908,14 @@
     justify-content: space-around;
   }
   .bestdeal-details-img {
-    width: 48%;
+    width: 160px;
   }
   .bestdeal-details-caption {
     width: 60%;
     display: inline-block;
   }
   .bestdeal-text {
-    font-size: 0.85em;
+    font-size: 1em;
     text-align: left;
   }
   .bestdeal-link {
@@ -4939,7 +4928,7 @@
     }
   }
   .bestdeal-details-price {
-    font-size: 0.9em;
+    font-size: 0.95em;
     text-align: left;
   }
   .bestdeal-offer {
@@ -5030,7 +5019,7 @@
     font-size: 1em;
   }
   .logo-span:last-of-type {
-    font-size: 1.15em;
+    font-size: 1.2em;
   }
 
   .contact {
@@ -5057,7 +5046,6 @@
   #opening-time {
     line-height: 27px;
     font-size: 0.7em;
-    font-weight: bold;
   }
 
   #site-navigation {
@@ -5067,6 +5055,7 @@
   #site-inner-nav {
     width: 84%;
     float: left;
+    display: flex;
     flex-direction: row;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -5075,9 +5064,7 @@
     padding: 0;
   }
   .site-inner-nav-item {
-    width: 16.3%;
-    float: left;
-    margin-right: 0.1em;
+    width: 16%;
     margin-bottom: 0;
     .nav-item {
       font-size: 0.75em;
@@ -5231,11 +5218,11 @@
     display: inline-block;
   }
   .destination-title {
-    font-size: 0.75em;
+    font-size: 0.9em;
     line-height: 20px;
   }
   .destination-txt {
-    font-size: 0.7em;
+    font-size: 0.85rem;
     float: none;
   }
 
@@ -5272,7 +5259,7 @@
   }
   #reset,
   .filter-list-btn {
-    font-size: 0.75em;
+    font-size: 1em;
     line-height: 25px;
   }
 
@@ -5389,7 +5376,7 @@
     display: block;
   }
   .offer-item-text {
-    font-size: 0.8em;
+    font-size: 0.9em;
     text-align: center;
     margin: 0;
     height: 30px;
@@ -5411,7 +5398,7 @@
   }
 
   #page-content p {
-    font-size:0.9rem;
+    font-size:1rem;
   }
 
   #page-content h2 {
@@ -5420,7 +5407,7 @@
 
   #contact-form {
     width: 90%;
-    margin: 1em auto;
+
   }
   #contact-form-fields {
     list-style: none;
@@ -5456,7 +5443,7 @@
   }
   .holiday-pkg-title {
     width: 60%;
-    font-size: 1.1em;
+    font-size: 1.35em;
     text-indent: 0;
     text-align: left;
     line-height: 40px;
@@ -5524,14 +5511,14 @@
     justify-content: space-around;
   }
   .bestdeal-details-img {
-    width: 45%;
+    width: 160px;
   }
   .bestdeal-details-caption {
     width: 50%;
     display: inline-block;
   }
   .bestdeal-text {
-    font-size: 0.8em;
+    font-size: 1em;
     text-align: left;
   }
   .bestdeal-link {
@@ -5636,7 +5623,7 @@
     font-size: 1em;
   }
   .logo-span:last-of-type {
-    font-size: 1.15em;
+    font-size: 1.2em;
   }
 
   .contact {
@@ -5663,7 +5650,6 @@
   #opening-time {
     line-height: 27px;
     font-size: 0.7em;
-    font-weight: bold;
   }
 
   #site-navigation {
@@ -5687,7 +5673,7 @@
     padding: 0.5em;
   }
   .site-inner-nav-item {
-    margin-bottom: 0.2em;
+    width: 100%;
     .nav-item {
       font-size: 1em;
       height: 40px;
@@ -5858,10 +5844,10 @@
     display: inline-block;
   }
   .destination-title {
-    font-size: 0.95em;
+    font-size: 1em;
   }
   .destination-txt {
-    font-size: 0.75em;
+    font-size: 0.9rem;
   }
 
   #filter-nav-sidebar {
@@ -5891,7 +5877,7 @@
   #reset,
   .filter-list-btn {
     line-height: 30px;
-    font-size: 0.85em;
+    font-size: 1em;
   }
 
   #about-page-banner {
@@ -6009,7 +5995,7 @@
     padding: 0.5em 0;
   }
   .offer-item-text {
-    font-size: 0.95em;
+    font-size: 1em;
     height: 30px;
     line-height: 30px;
   }
@@ -6075,7 +6061,7 @@
     width: 55%;
   }
   .holiday-pkg-title {
-    font-size: 1.1em;
+    font-size: 1.35em;
     text-align: center;
   }
   .holiday-pkg-item {
@@ -6130,7 +6116,7 @@
     display: block;
   }
   .bestdeal-details-img {
-    width: auto;
+    width: 160px;
   }
   .bestdeal-details-caption {
     width: 100%;
@@ -6262,7 +6248,6 @@
   #opening-time {
     line-height: 27px;
     font-size: 0.75em;
-    font-weight: bold;
   }
 
   #site-navigation {
@@ -6286,7 +6271,7 @@
     }
   }
   .site-inner-nav-item {
-    margin-bottom: 0.2em;
+    width: 100%;
     .nav-item {
       font-size: 0.9em;
       height: 40px;
@@ -6457,10 +6442,10 @@
     display: inline-block;
   }
   .destination-title {
-    font-size: 0.95em;
+    font-size: 1em;
   }
   .destination-txt {
-    font-size: 0.75em;
+    font-size: 0.9rem;
   }
 
   #filter-nav-sidebar {
@@ -6491,7 +6476,7 @@
   #reset,
   .filter-list-btn {
     line-height: 25px;
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 
   #about-page-banner {
@@ -6608,7 +6593,7 @@
     padding: 0.5em 0;
   }
   .offer-item-text {
-    font-size: 0.85em;
+    font-size: 0.9em;
     height: 30px;
     line-height: 30px;
   }
@@ -6674,7 +6659,7 @@
     width: 65%;
   }
   .holiday-pkg-title {
-    font-size: 1.15em;
+    font-size: 1.35em;
   }
   .holiday-pkg-item {
     width: 100%;
@@ -6856,7 +6841,6 @@
   #opening-time {
     line-height: 27px;
     font-size: 0.65em;
-    font-weight: bold;
   }
 
   #site-navigation {
@@ -6880,7 +6864,7 @@
     }
   }
   .site-inner-nav-item {
-    margin-bottom: 0.2em;
+    width: 100%;
     .nav-item {
       font-size: 0.9em;
       height: 40px;
@@ -7051,10 +7035,10 @@
     display: inline-block;
   }
   .destination-title {
-    font-size: 0.95em;
+    font-size: 1em;
   }
   .destination-txt {
-    font-size: 0.75em;
+    font-size: 0.9rem;
   }
 
   #filter-nav-sidebar {
@@ -7084,7 +7068,7 @@
   #reset,
   .filter-list-btn {
     line-height: 25px;
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 
   #about-page-banner {
@@ -7200,7 +7184,7 @@
     padding: 0.5em 0;
   }
   .offer-item-text {
-    font-size: 1em;
+    font-size: 0.9em;
     height: 30px;
     line-height: 30px;
   }
@@ -7268,7 +7252,7 @@
     width: 70%;
   }
   .holiday-pkg-title {
-    font-size: 1em;
+    font-size: 1.35em;
   }
   .holiday-pkg-item {
     width: 100%;
