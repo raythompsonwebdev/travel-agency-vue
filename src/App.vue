@@ -1,64 +1,47 @@
-<template>
-  <!--wrapper-->
-  <div id="wrapper">
-    <TravelHeader />
-    <TravelNav />
-    <!--:key="$route.path" :key="$route.fullPath"-->
-    <router-view v-slot="{ Component, route }">
-      <transition name="anim" mode="out-in">
-        <keep-alive>
-          <component :is="Component" :key="route.path" />
-        </keep-alive>
-      </transition>
-    </router-view>
-
-    <div class="clearfix" />
-  </div>
-
-  <TravelFooter />
-</template>
-<script>
-import TravelNav from "@/components/travel-nav";
-import TravelHeader from "@/components/travel-header";
-import TravelFooter from "@/components/travel-footer";
-
-export default {
-  name: "App",
-  components: {
-    TravelNav,
-    TravelHeader,
-    TravelFooter,
-  },
-};
+<script setup lang="ts">
+import HelloWorld from './components/HelloWorld.vue'
+import TheWelcome from './components/TheWelcome.vue'
 </script>
-<style lang="scss">
-@import "assets/sass/main";
-@keyframes coming {
-  from {
-    transform: translateX(-200px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-  }
+
+<template>
+  <header>
+    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+
+    <div class="wrapper">
+      <HelloWorld msg="You did it!" />
+    </div>
+  </header>
+
+  <main>
+    <TheWelcome />
+  </main>
+</template>
+
+<style scoped>
+header {
+  line-height: 1.5;
 }
-@keyframes going {
-  from {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(-200px);
-    opacity: 0;
-  }
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
 }
-.anim-enter-active {
-  animation: coming 0.5s;
-  animation-delay: 0.5s;
-  opacity: 0;
-}
-.anim-leave-active {
-  animation: going 0.5s;
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
 }
 </style>
