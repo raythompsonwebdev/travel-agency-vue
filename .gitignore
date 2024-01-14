@@ -26,8 +26,6 @@ src/assets/images/
 
 _assets/filter.txt
 spare/
-.sass-cache/1*
+.sass-cache/
+
 .env
-
-
-src/components/spare-components/*
