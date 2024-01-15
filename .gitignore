@@ -23,9 +23,9 @@ yarn-error.log*
 src/assets/fonts/
 src/assets/icons/
 src/assets/images/
-
 _assets/filter.txt
 spare/
-.sass-cache/
-
-.env
+.sass-cache/1*
+src/components/spare-components/*
+assets/
+src/data-json.json

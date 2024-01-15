@@ -1,47 +1,64 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <!--wrapper-->
+  <div id="wrapper">
+    <TravelHeader />
+    <TravelNav />
+    <!--:key="$route.path" :key="$route.fullPath"-->
+    <router-view v-slot="{ Component, route }">
+      <transition name="anim" mode="out-in">
+        <keep-alive>
+          <component :is="Component" :key="route.path" />
+        </keep-alive>
+      </transition>
+    </router-view>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+    <div class="clearfix" />
+  </div>
 
-  <main>
-    <TheWelcome />
-  </main>
+  <TravelFooter />
 </template>
+<script>
+import TravelNav from "@/components/travel-nav";
+import TravelHeader from "@/components/travel-header";
+import TravelFooter from "@/components/travel-footer";
 
-<style scoped>
-header {
-  line-height: 1.5;
+export default {
+  name: "App",
+  components: {
+    TravelNav,
+    TravelHeader,
+    TravelFooter,
+  },
+};
+</script>
+<style lang="scss">
+@import "assets/sass/main";
+@keyframes coming {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+@keyframes going {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
 }
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.anim-enter-active {
+  animation: coming 0.5s;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+.anim-leave-active {
+  animation: going 0.5s;
 }
 </style>

@@ -1,77 +1,74 @@
 <template>
-  <transition name="fade">
-    <div class="AboutUs page" v-if="show">
-      <button id="side-bar-btn" @click="aboutPageFunction">SIDE</button>
+  <div class="AboutUs page">
+    <button id="side-bar-btn" @click="aboutPageFunction">SIDE</button>
 
-      <SideBanner />
+    <SideBanner />
 
-      <main id="page-content">
-        <h2>Lorem Ipsum Dolor Sit Amet</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.Enim odit
-          dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-          nostrum odio velit impedit vitae tenetur voluptates vero beatae
-          excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit.Enim odit dolor sequi voluptatem esse doloribus libero commodi ea
-          debitis id nostrum odio velit impedit vitae tenetur voluptates vero
-          beatae excepturi.
-        </p>
-        <h3>Lorem Ipsum Dolor Sit Amet</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-          dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-          nostrum odio velit impedit vitae tenetur voluptates vero beatae
-          excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit.Enim odit dolor sequi voluptatem esse doloribus libero commodi ea
-          debitis id nostrum odio velit impedit vitae tenetur voluptates vero
-          beatae excepturi.
-        </p>
-        <h3>Lorem Ipsum Dolor Sit Amet</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-          dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-          nostrum odio velit impedit vitae tenetur voluptates vero beatae
-          excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit.Enim odit dolor sequi voluptatem esse doloribus libero commodi ea
-          debitis id nostrum odio velit impedit vitae tenetur voluptates vero
-          beatae excepturi.
-        </p>
+    <main id="page-content">
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.Enim odit sequi
+        voluptatem esse doloribus libero commodi ea debitis id nostrum nostrum
+        odio velit impedit vitae tenetur voluptates vero beatae excepturi. Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit.Enim odit dolor sequi
+        voluptatem esse doloribus libero commodi ea debitis id nostrum odio
+        velit impedit vitae tenetur voluptates vero beatae excepturi.
+      </p>
+      <h3>Lorem Ipsum Dolor Sit Amet</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
+        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
+        nostrum odio velit impedit vitae tenetur voluptates vero beatae
+        excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Enim
+        odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id
+        nostrum odio velit impedit vitae tenetur voluptates vero beatae
+        excepturi.
+      </p>
+      <h3>Lorem Ipsum Dolor Sit Amet</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
+        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
+        nostrum odio velit impedit vitae tenetur voluptates vero beatae
+        excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Enim
+        odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id
+        nostrum odio velit impedit vitae tenetur voluptates vero beatae
+        excepturi.
+      </p>
 
-        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+      <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-          dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-          nostrum odio velit impedit vitae tenetur voluptates vero beatae
-          excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit.Enim odit dolor sequi voluptatem esse doloribus libero commodi ea
-          debitis id nostrum odio velit impedit vitae tenetur voluptates vero
-          beatae excepturi.
-        </p>
-        <h3>Lorem Ipsum Dolor Sit Amet</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-          dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-          nostrum odio velit impedit vitae tenetur voluptates vero beatae
-          excepturi.
-        </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
+        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
+        nostrum odio velit impedit vitae tenetur voluptates vero beatae
+        excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Enim
+        odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id
+        nostrum odio velit impedit vitae tenetur voluptates vero beatae
+        excepturi.
+      </p>
+      <h3>Lorem Ipsum Dolor Sit Amet</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
+        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
+        nostrum odio velit impedit vitae tenetur voluptates vero beatae
+        excepturi.
+      </p>
 
-        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-          dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-          nostrum odio velit impedit vitae tenetur voluptates vero beatae
-          excepturi.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-          dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-          nostrum odio velit impedit vitae tenetur voluptates vero beatae
-          excepturi.
-        </p>
-      </main>
-    </div>
-  </transition>
+      <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
+        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
+        nostrum odio velit impedit vitae tenetur voluptates vero beatae
+        excepturi.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
+        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
+        nostrum odio velit impedit vitae tenetur voluptates vero beatae
+        excepturi.
+      </p>
+    </main>
+  </div>
 </template>
 
 <script>

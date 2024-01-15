@@ -1,47 +1,26 @@
-# travel-agency-vue - vuejs 3
+# travel-agency-vue
 
-![travel Agency](/travel-agency-vue.png)
-
-# Introduction
-
-Web application design is based on a photoshop templates downloaded from website [php.jabber.com](https://www.phpjabbers.com/). mockup of online holiday booking website.
-
-## Technologies
-
-- Vue 3
-- Sass
-- MungoDb
-
-## Tools
-
-- [node](https://nodejs.org/en)
-- [vuejs](https://vuejs.org/)
-- [prettier](https://prettier.io/)
-- [eslint](https://eslint.org/)
-- [postcss](https://postcss.org/)
-- [stylelint](https://stylelint.io/)
-- [axios](https://axios-http.com/docs/intro/)
+Travel Agency website - design by phpjabber.com
 
 ## Project setup
-
 ```
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
+### Compiles and hot-reloads for development
+```
+npm run serve
 ```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
+### Compiles and minifies for production
+```
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
+### Lints and fixes files
+```
 npm run lint
 ```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
