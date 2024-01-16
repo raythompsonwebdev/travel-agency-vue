@@ -51,6 +51,7 @@ export default {
     async initData() {
       const result = await axios.get(`/api/bestdeal/${parseInt(this.itemid)}`);
       const { data } = result;
+
       this.singlebestdeal = data;
     },
   },

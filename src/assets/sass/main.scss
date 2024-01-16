@@ -53,7 +53,7 @@
   display: block;
   color: $colorblk;
   margin: 0;
-  font-size: 1.1em;
+  font-size:1.25em;
   text-indent: -1px;
   width: 100%;
   font-family: $font-style1;
@@ -122,8 +122,8 @@
   float: left;
   display: block;
   margin: 0.2em;
-  height: auto;
   height: 24px;
+
 }
 #opening-time {
   display: block;
@@ -167,8 +167,9 @@
   height: auto;
   float: none;
   margin: 0;
-  top: 0;
+  top:100px;
   background-color: $colorwhite3;
+  display:flex;
   flex-flow: column;
   justify-content: flex-start;
   padding: 0;
@@ -314,11 +315,11 @@
   color: $colorwhite2;
   text-align: center;
   line-height: 40px;
-  height: 100px;
-  width: 50px;
   position: fixed;
-  left: 86vw;
-  top: 135px;
+  height: 50px;
+  width: 70px;
+  left: 42vw;
+  top: 0;
   font-size: 0.9em;
   &:hover {
     cursor: pointer;
@@ -331,15 +332,15 @@
 /* left side bar button */
 #side-bar-btn {
   font-family: $font-style1;
-  left: 86vw;
   position: fixed;
   display: block;
   background-color: $colorbg;
   color: $colorwhite2;
   z-index: 100;
-  height: 100px;
-  width: 50px;
-  top: 240px;
+  height: 50px;
+  width: 70px;
+  left: 57vw;
+  top: 0;
   border: none;
   outline: none;
   &:hover {
@@ -374,7 +375,7 @@
 /* home page sidebar */
 #home-page-sidebar {
   position: fixed;
-  top: 0;
+  top: 100px;
   width: 250px;
   background-color: $colorwhite1;
   transition: all 1s ease;
@@ -688,7 +689,7 @@
   width: 100%;
   color: $colorwhite1;
   display: block;
-  font-size: 1.25em;
+  font-size: 1em;
   text-transform: uppercase;
   line-height: 1.4em;
   letter-spacing: 0.02em;
@@ -1150,11 +1151,9 @@
   background-color: $sideboxborder;
   color: $colorblue2;
   height: auto;
-  text-indent: 0.25em;
-  line-height: 25px;
+  text-align:center;
+  line-height: 30px;
   font-size: 0.9em;
-
-  // color: $sideboxcolor1;
   font-weight: bold;
   padding: 0;
   display: block;
@@ -1178,7 +1177,7 @@
   line-height: 1.8em;
 }
 .services-card-link {
-  font-size: 0.75em;
+  font-size: 0.9em;
   display: block;
   text-decoration: none;
   background-color: unset;
@@ -1242,7 +1241,7 @@
 @media screen and (min-width: 1920px) {
   #wrapper {
     min-height: 1220px;
-    width: 50%;
+    width: 940px;
   }
   #site-header {
     height: 60px;
@@ -1257,6 +1256,7 @@
   }
   #logo-title {
     width: 100%;
+    font-size: 1.25em;
   }
   .logo-span:first-of-type {
     font-size: 1em;
@@ -1266,7 +1266,7 @@
   }
 
   .contact {
-    width: 40%;
+    width: 15%;
     margin: 0.25em 0 0;
     display: block;
   }
@@ -1277,8 +1277,10 @@
     background: $colorbg;
   }
   #contact-number {
-    font-size: 0.85em;
+    font-size: 0.9em;
+    line-height: 30px;
     height: 30px;
+
     &:active {
       color: $colorwhite2;
     }
@@ -1289,7 +1291,7 @@
   }
   #contact-number::before {
     margin: 0.2em;
-    height: auto;
+
   }
   #opening-time {
     line-height: 27px;
@@ -1303,11 +1305,11 @@
   }
   #site-inner-nav {
     width: 85%;
-    float: left;
     flex-direction: row;
-    -ms-flex-pack: justify;
+    align-items: flex-start;
     justify-content: space-between;
     position: unset;
+    top:0;
     opacity: 1;
     padding: 0;
   }
@@ -1343,14 +1345,14 @@
   }
 
   #language-select {
-    width: 40%;
+    width: 16%;
     padding-left: 0.25em;
   }
   #language-selector {
     height: 35px;
 
     label {
-      font-size: 0.9em;
+      font-size: 0.8em;
     }
 
     #flag-img {
@@ -1405,14 +1407,14 @@
     width: 96%;
   }
   #holiday-search-title {
-    font-size: 1em;
+    font-size: 1.1em;
     width: 100%;
   }
   #holiday-search-form {
     padding: 2%;
 
     .label-wide {
-      font-size: 0.85em;
+      font-size: 0.9em;
       span {
         display: block;
       }
@@ -1471,11 +1473,11 @@
     display: inline-block;
   }
   .destination-title {
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 20px;
   }
   .destination-txt {
-    font-size: 0.8em;
+    font-size: 0.9em;
     float: none;
   }
 
@@ -1609,6 +1611,7 @@
     flex-flow: row wrap;
     align-items: flex-start;
     justify-content: flex-start;
+    gap: 0.25em;
   }
   #holiday-offers-title {
     font-size: 1.3em;
@@ -1635,7 +1638,7 @@
     display: block;
   }
   .offer-item-text {
-    font-size: 0.9em;
+    font-size: 1em;
     text-align: center;
     margin: 0;
     height: 30px;
@@ -1694,7 +1697,7 @@
   }
   .holiday-pkg-title {
     width: 50%;
-    font-size: 1.2em;
+    font-size: 1.25em;
     text-indent: 0;
     text-align: left;
     line-height: 40px;
@@ -1812,6 +1815,7 @@
     text-align: left;
   }
   .bestdeal-link {
+    width:90%;
     font-size: 1em;
     line-height: 35px;
     margin: 0.5em 0;
@@ -1857,7 +1861,7 @@
     line-height: 1.8em;
   }
   .services-card-link {
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 30px;
     width: auto;
     &:hover {
@@ -1892,7 +1896,7 @@
   }
 }
 
-@media screen and (min-width: 1440px) and (max-width: 1919px) {
+@media screen and (min-width: 945px) and (max-width: 1919px) {
   #wrapper {
     min-height: 1220px;
     width: 940px;
@@ -1909,6 +1913,7 @@
   }
   #logo-title {
     width: 100%;
+    font-size: 1.25em;
   }
   .logo-span:first-of-type {
     font-size: 1em;
@@ -1929,8 +1934,6 @@
     background: $colorbg;
   }
   #contact-number {
-    height: 30px;
-    line-height: 30px;
     font-size: 0.9em;
 
     &:active {
@@ -1943,7 +1946,7 @@
   }
   #contact-number::before {
     margin: 0.2em;
-    height: 24px;
+
   }
   #opening-time {
     line-height: 27px;
@@ -1963,6 +1966,7 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
     position: unset;
+    top:0;
     opacity: 1;
     padding: 0;
   }
@@ -2059,14 +2063,14 @@
     width: 96%;
   }
   #holiday-search-title {
-    font-size: 1em;
+    font-size: 1.1em;
     width: 100%;
   }
   #holiday-search-form {
     padding: 2%;
 
     .label-wide {
-      font-size: 0.85em;
+      font-size: 0.9em;
       span {
         display: block;
       }
@@ -2125,11 +2129,11 @@
     display: inline-block;
   }
   .destination-title {
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 20px;
   }
   .destination-txt {
-    font-size: 0.8em;
+    font-size: 0.9em;
     float: none;
   }
 
@@ -2220,12 +2224,12 @@
     padding: 0.5em;
 
     .addr-link {
-      line-height: 20px;
-      font-size: 0.8em;
+      line-height: 30px;
+      font-size: 0.9em;
       width: 76%;
     }
     p {
-      font-size: 0.8em;
+      font-size: 0.9em;
       width: 76%;
       &::before {
         content: "";
@@ -2233,8 +2237,8 @@
       }
     }
     .addr-title {
-      line-height: 20px;
-      font-size: 0.85em;
+      line-height: 30px;
+      font-size: 0.9em;
       &::before {
         font-size: 2em;
         margin-right: 0.25em;
@@ -2290,7 +2294,7 @@
     display: block;
   }
   .offer-item-text {
-    font-size: 0.9em;
+    font-size: 1em;
     text-align: center;
     margin: 0;
     height: 30px;
@@ -2323,7 +2327,7 @@
     margin: 5px 0 10px;
   }
   .contact-label {
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 37px;
   }
 
@@ -2338,7 +2342,7 @@
   }
   #contact-submit {
     width: 50%;
-    font-size: 1.1em;
+    font-size: 1.3em;
   }
 
   .holiday-pkg-details {
@@ -2348,7 +2352,7 @@
   }
   .holiday-pkg-title {
     width: 50%;
-    font-size: 1.15em;
+    font-size: 1.25em;
     text-indent: 0;
     text-align: left;
     line-height: 40px;
@@ -2438,7 +2442,7 @@
     font-size: 0.9em;
     line-height: 35px;
     margin: 0.5em 0;
-    width: 70%;
+    width:90%;
     &:hover {
       cursor: pointer;
     }
@@ -2481,7 +2485,7 @@
     line-height: 1.8em;
   }
   .services-card-link {
-    font-size: 0.8em;
+    font-size: 1em;
     line-height: 30px;
     width: auto;
     &:hover {
@@ -2516,10 +2520,1832 @@
   }
 }
 
-@media screen and (min-width: 1280px) and (max-width: 1439px) {
+// @media screen and (min-width: 1280px) and (max-width: 1439px) {
+//   #wrapper {
+//     min-height: 1220px;
+//     width: 945px;
+//   }
+//   #site-header {
+//     height: 60px;
+//     margin-bottom: 0.5em;
+//   }
+//   #logo {
+//     align-items: flex-end;
+//     width: auto;
+//   }
+//   #logo-img {
+//     display: block;
+//   }
+//   #logo-title {
+//     width: 100%;
+//     font-size: 1.25em;
+//   }
+//   .logo-span:first-of-type {
+//     font-size: 1em;
+//   }
+//   .logo-span:last-of-type {
+//     font-size: 1.2em;
+//   }
+
+//   .contact {
+//     width: 15%;
+//     margin: 0.25em 0 0;
+//     display: block;
+//   }
+//   .telephone-number {
+//     line-height: 30px;
+//     height: 30px;
+//     display: block;
+//     background: $colorbg;
+//   }
+//   #contact-number {
+//     font-size: 0.9em;
+
+//     &:active {
+//       color: $colorwhite2;
+//     }
+//     &:link {
+//       color: $colorwhite2;
+//       background-color: unset;
+//     }
+//   }
+//   #contact-number::before {
+//     margin: 0.2em;
+
+//   }
+//   #opening-time {
+//     line-height: 27px;
+//     font-size: 0.75em;
+//     font-weight: bold;
+//   }
+
+//   #site-navigation {
+//     opacity: 1;
+//     flex-direction: row;
+//     justify-content: space-between;
+//   }
+//   #site-inner-nav {
+//     width: 84%;
+//     float: left;
+//     display: flex;
+//     flex-direction: row;
+//     -ms-flex-pack: justify;
+//     justify-content: space-between;
+//     position: unset;
+//     opacity: 1;
+//     padding: 0;
+//   }
+//   .site-inner-nav-item {
+//     width: 16%;
+//     float: left;
+//     height: 40px;
+//     margin-right: 0.1em;
+//     margin-bottom: 0;
+//     .nav-item {
+//       font-size: 0.85em;
+//       height: 38px;
+//       line-height: 40px;
+//       &:hover {
+//         box-shadow: none;
+//         height: 38px;
+//         line-height: 40px;
+//       }
+//     }
+//   }
+
+//   .site-inner-nav-item:nth-of-type(2) {
+//     padding-top: 0;
+//     .nav-item {
+//       padding-top: 0;
+//       font-size: 0.6em;
+//       height: 38px;
+//       line-height: 40px;
+//       &:hover {
+//         line-height: 40px;
+//         height: 38px;
+//       }
+//     }
+//   }
+
+//   #language-select {
+//     width: 16%;
+//     padding-left: 0.25em;
+//   }
+//   #language-selector {
+//     height: 40px;
+
+//     label {
+//       font-size: 0.75em;
+//     }
+
+//     #flag-img {
+//       width: auto;
+//     }
+
+//     select {
+//       line-height: 35px;
+//       width: 25%;
+//       option {
+//         font-size: 1em;
+//       }
+//     }
+//   }
+
+//   .fade-enter-active,
+//   .fade-leave-active {
+//     transition: all 1s ease;
+//   }
+//   .fade-enter {
+//     transition: all 5s ease-in-out;
+//     left: 10px;
+//   }
+//   .fade-leave-to,
+//   .fade-leave {
+//     transition: all 1s ease;
+//     left: -650px;
+//     opacity: 0;
+//   }
+
+//   #toggle-menu {
+//     display: none;
+//   }
+
+//   #side-bar-btn {
+//     display: none;
+//   }
+
+//   #contact-bar-btn {
+//     display: none;
+//   }
+
+//   #home-page-sidebar {
+//     width: 30%;
+//     height: auto;
+//     float: left;
+//     padding-top: 1%;
+//     position: unset;
+//   }
+//   .holiday-search-sidebar {
+//     width: 96%;
+//   }
+//   #holiday-search-title {
+//     font-size: 1.1em;
+//     width: 100%;
+//   }
+//   #holiday-search-form {
+//     padding: 2%;
+
+//     .label-wide {
+//       font-size: 0.9em;
+//       span {
+//         display: block;
+//       }
+//     }
+
+//     .label-half {
+//       width: 48%;
+//       font-size: 0.9em;
+//     }
+
+//     .select-wide {
+//       height: 35px;
+//       line-height: 35px;
+//     }
+
+//     .select-date-year {
+//       width: 29%;
+//       height: 35px;
+//     }
+
+//     #select-month {
+//       width: 39%;
+//       height: 35px;
+//       margin: 0 0.15em;
+//     }
+
+//     .select-half {
+//       height: 35px;
+//     }
+
+//     #holiday-search-btn {
+//       width: 85%;
+//       height: 35px;
+//       font-size: 1.1em;
+//       &:hover {
+//         color: $colorwhite1;
+//         border: 0;
+//       }
+//     }
+//   }
+
+//   .destinations {
+//     width: 91%;
+//     margin: 5px auto;
+//     padding: 2.5%;
+//   }
+//   .destination {
+//     width: 100%;
+//   }
+//   .destination-img {
+//     width: 45%;
+//     margin-right: 2%;
+//   }
+//   .destination-caption {
+//     width: 50%;
+//     display: inline-block;
+//   }
+//   .destination-title {
+//     font-size: 0.95em;
+//     line-height: 20px;
+//   }
+//   .destination-txt {
+//     font-size: 0.75em;
+//     float: none;
+//   }
+
+//   #filter-nav-sidebar {
+//     position: unset;
+//     bottom: unset;
+//     width: 20%;
+//     float: left;
+//   }
+//   #seasons,
+//   #locations,
+//   #prices,
+//   #ratings {
+//     width: 100%;
+//   }
+//   .filter-title {
+//     width: 100%;
+//     text-indent: 0;
+//     color: $colorbgvar;
+//     display: block;
+//     font-size: 0.9em;
+//     line-height: 35px;
+//     margin: 0 auto;
+//   }
+//   .filter-list {
+//     padding: 0;
+//   }
+//   .filter-list-item {
+//     display: block;
+//     width: 100%;
+//     line-height: 35px;
+//     height: 35px;
+//     margin: 0;
+//   }
+//   #reset,
+//   .filter-list-btn {
+//     font-size: 0.9em;
+//     line-height: 30px;
+//   }
+
+//   #about-page-banner {
+//     width: 20%;
+//     position: unset;
+//     float: left;
+//   }
+//   .page-banner-img {
+//     display: block;
+//     border: none;
+//   }
+//   .page-banner {
+//     margin: 0;
+//   }
+//   .page-banner-caption {
+//     position: absolute;
+//     padding: 5%;
+//   }
+//   .page-banner-title {
+//     font-size: 1.3em;
+//     line-height: 1.4em;
+//     margin: 20px 0 10px;
+//   }
+//   .caption-img-span {
+//     margin-bottom: 1em;
+//     display: block;
+//   }
+//   .caption-img {
+//     display: block;
+//     border: none;
+//   }
+//   .page-banner-text {
+//     font-size: 0.9em;
+//     line-height: 1.4em;
+//   }
+
+//   #contact-page-sidebar {
+//     width: 21%;
+//     position: unset;
+//     float: left;
+//   }
+//   #contact-details {
+//     gap: 0.25em;
+//     padding: 0.5em;
+
+//     .addr-link {
+//       line-height: 20px;
+//       font-size: 0.75em;
+//       width: 70%;
+//     }
+//     p {
+//       font-size: 0.75em;
+//       width: 70%;
+//       &::before {
+//         content: "";
+//         height: 100%;
+//       }
+//     }
+//     .addr-title {
+//       line-height: 20px;
+//       font-size: 0.8em;
+//       &::before {
+//         font-size: 2em;
+//         margin-right: 0.25em;
+//       }
+//     }
+//   }
+
+//   #home-page-content {
+//     width: 70%;
+//     height: auto;
+//     display: inline-block;
+//     margin: 1% 0;
+//     min-height: 740px;
+//   }
+//   #banner {
+//     width: auto;
+//     height: auto;
+//     margin: 0 auto;
+//     display: block;
+//   }
+//   #banner-img {
+//     width: 100%;
+//   }
+
+//   #holiday-offers {
+//     flex-flow: row wrap;
+//     align-items: flex-start;
+//     justify-content: flex-start;
+//   }
+//   #holiday-offers-title {
+//     font-size: 1.1em;
+//     height: 55px;
+//     line-height: 55px;
+//     text-indent: 0;
+//   }
+
+//   .offer-item-div {
+//     margin: 0.25em;
+//     width: 31%;
+//   }
+//   .offer-item {
+//     display: block;
+//     width: 100%;
+//     margin: 2% 0;
+//   }
+//   .offer-item-img {
+//     width: auto;
+//     margin: 0 auto;
+//     display: block;
+//   }
+//   .offer-item-caption {
+//     padding: 0.5em 0;
+//     display: block;
+//   }
+//   .offer-item-text {
+//     font-size: 1em;
+//     text-align: center;
+//     margin: 0;
+//     height: 30px;
+//     line-height: 30px;
+//   }
+//   .offer-item-text:nth-of-type(2) {
+//     color: $colorblue5;
+//     font-weight: bold;
+//     .offer-item-price {
+//       color: $colorbtn1;
+//     }
+//   }
+
+//   #page-content,
+//   #holiday-items {
+//     width: 79%;
+//     float: right;
+//     padding: 0.25em;
+//   }
+
+//   #contact-form {
+//     width: 90%;
+//     margin: 1em auto;
+//   }
+//   #contact-form-fields {
+//     list-style: none;
+//     padding: 0;
+//   }
+//   .contact-form-field {
+//     margin: 5px 0 10px;
+//   }
+//   .contact-label {
+//     font-size: 0.9em;
+//     line-height: 37px;
+//   }
+
+//   #firstname,
+//   #lastname,
+//   #email,
+//   #phone {
+//     padding: 0;
+//   }
+//   #message {
+//     border: 1px solid $colorgry2;
+//   }
+//   #contact-submit {
+//     width: 50%;
+//   }
+
+//   .holiday-pkg-details {
+//     display: flex;
+//     flex-flow: row wrap;
+//     width: 98%;
+//   }
+
+//   .holiday-pkg-title {
+//     width: 50%;
+//     font-size: 1.25em;
+//     text-indent: 0;
+//     text-align: left;
+//     line-height: 40px;
+//   }
+
+//   .holiday-pkg-item {
+//     width: 100%;
+//     margin: 0;
+//   }
+//   .holiday-pkg-img {
+//     width: auto;
+//     float: left;
+//     margin-right: 0.25em;
+//   }
+//   .holiday-pkg-caption {
+//     width: 65%;
+//     display: inline-block;
+
+//     .holiday-pkg-txt {
+//       font-size: 0.9em;
+//       text-align: left;
+//       line-height: 25px;
+//     }
+//     .holiday-pkg-txt:first-of-type {
+//       text-align: left;
+//       font-weight: bold;
+//       line-height: 35px;
+//       font-size: 1em;
+//     }
+
+//     .holiday-pkg-link {
+//       font-size: 1em;
+//       line-height: 45px;
+//       width: 30%;
+//       margin: 0;
+//       &:hover {
+//         font-weight: bold;
+//         margin: 0;
+//       }
+//     }
+//   }
+
+//   .holiday-pkg-price {
+//     font-size: 1em;
+//     width: 18%;
+//     text-align: left;
+//     line-height: 40px;
+//   }
+//   .holiday-pkg-offer {
+//     font-weight: bold;
+//   }
+
+//   .bestdeal-details {
+//     width: 48%;
+//     float: left;
+//     margin: 0.25em;
+//   }
+//   .bestdeal-details-title {
+//     font-size: 0.85em;
+//     text-align: left;
+//   }
+//   .bestdeal-details-item {
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-around;
+//   }
+//   .bestdeal-details-img {
+//     width: 48%;
+//     margin: 0 0.25em 0 0;
+//   }
+//   .bestdeal-details-caption {
+//     width: 48%;
+//     display: inline-block;
+//   }
+//   .bestdeal-text {
+//     font-size: 0.85em;
+//     text-align: left;
+//   }
+//   .bestdeal-link {
+//     font-size: 0.9em;
+//     line-height: 35px;
+//     margin: 0.5em 0;
+//     width:90%;
+//     &:hover {
+//       cursor: pointer;
+//     }
+//   }
+//   .bestdeal-details-price {
+//     font-size: 0.85em;
+//     text-align: left;
+//   }
+//   .bestdeal-offer {
+//     color: $colorbtn4;
+//     font-size: 90%;
+//   }
+
+//   .services-card {
+//     width: 32%;
+//     float: left;
+//     margin: 0.1em;
+//   }
+//   .services-card-title {
+//     font-size: 0.9em;
+//     height: auto;
+//     text-indent: 0.2em;
+//     line-height: 35px;
+//   }
+//   .services-card-item {
+//     width: 100%;
+//   }
+//   .service-box-img {
+//     width: auto;
+//     margin: auto;
+//     display: block;
+//   }
+//   .services-card-caption {
+//     margin: 0;
+//   }
+//   .services-card-text {
+//     font-size: 1em;
+//     line-height: 1.8em;
+//   }
+//   .services-card-link {
+//     font-size: 0.8em;
+//     line-height: 30px;
+//     width: auto;
+//     &:hover {
+//       font-weight: bold;
+//     }
+//   }
+
+//   #site-footer {
+//     height: 40px;
+//   }
+//   #site-inner-footer {
+//     margin: 0 auto;
+//     padding: 0;
+//     width: 60%;
+//   }
+//   .inner-footer-item {
+//     width: 16.5707%;
+//   }
+//   .footer-nav-item {
+//     font-size: 0.85em;
+//     line-height: 40px;
+//     &:link {
+//       font-weight: bold;
+//     }
+//     &:active {
+//       font-weight: bold;
+//     }
+//     &:hover {
+//       cursor: pointer;
+//       font-weight: bold;
+//     }
+//   }
+// }
+
+// @media screen and (min-width: 1024px) and (max-width: 1279px) {
+//   #wrapper {
+//     min-height: 1220px;
+//     width: 945px;
+//   }
+//   #site-header {
+//     height: 60px;
+//     margin-bottom: 0.5em;
+//   }
+//   #logo {
+//     align-items: flex-end;
+//     width: auto;
+//   }
+//   #logo-img {
+//     display: block;
+//   }
+//   #logo-title {
+//     width: 100%;
+//     font-size: 1.25em;
+//   }
+//   .logo-spann:first-of-type {
+//     font-size: 1em;
+//   }
+//   .logo-span:last-of-type {
+//     font-size: 1.3em;
+//   }
+
+//   .contact {
+//     width: 15%;
+//     margin: 0.25em 0 0;
+//     display: block;
+//   }
+//   .telephone-number {
+//     line-height: 30px;
+//     height: 30px;
+//     display: block;
+//   }
+//   #contact-number {
+//     font-size: 0.9em;
+
+//     &:active {
+//       color: $colorwhite2;
+//     }
+//     &:link {
+//       color: $colorwhite2;
+//       background-color: unset;
+//     }
+//   }
+//   #contact-number::before {
+//     margin: 0.2em;
+
+//   }
+//   #opening-time {
+//     line-height: 27px;
+//     font-size: 0.7em;
+//     font-weight: bold;
+//   }
+
+//   #site-navigation {
+//     opacity: 1;
+//     flex-direction: row;
+//     justify-content: space-between;
+//   }
+//   #site-inner-nav {
+//     width: 84%;
+//     float: left;
+//     display: flex;
+//     flex-direction: row;
+//     -ms-flex-pack: justify;
+//     justify-content: space-between;
+//     position: unset;
+//     opacity: 1;
+//     padding: 0;
+//   }
+//   .site-inner-nav-item {
+//     width: 16.71%;
+//     float: left;
+//     height: 40px;
+//     margin-right: 0.1em;
+//     margin-bottom: 0;
+//     .nav-item {
+//       font-size: 0.8em;
+//       line-height: 40px;
+//       height: auto;
+//       &:hover {
+//         box-shadow: none;
+//         height: 38px;
+//         line-height: 40px;
+//       }
+//     }
+//   }
+
+//   .site-inner-nav-item:nth-of-type(2) {
+//     padding-top: 0;
+//     .nav-item {
+//       padding-top: 0;
+//       font-size: 0.6em;
+//       height: 38px;
+//       line-height: 40px;
+//       &:hover {
+//         line-height: 40px;
+//         height: 38px;
+//       }
+//     }
+//   }
+
+//   #language-select {
+//     width: 16%;
+//     padding-left: 0.25em;
+//   }
+//   #language-selector {
+//     height: 40px;
+
+//     label {
+//       font-size: 0.7em;
+//     }
+
+//     #flag-img {
+//       width: auto;
+//     }
+
+//     select {
+//       line-height: 35px;
+//       width: 30%;
+//       option {
+//         font-size: 1em;
+//       }
+//     }
+//   }
+
+//   .fade-enter-active,
+//   .fade-leave-active {
+//     transition: all 1s ease;
+//   }
+//   .fade-enter {
+//     transition: all 5s ease-in-out;
+//     left: 10px;
+//   }
+//   .fade-leave-to,
+//   .fade-leave {
+//     transition: all 1s ease;
+//     left: -650px;
+//     opacity: 0;
+//   }
+
+//   #toggle-menu {
+//     display: none;
+//   }
+
+//   #side-bar-btn {
+//     display: none;
+//   }
+
+//   #contact-bar-btn {
+//     display: none;
+//   }
+
+//   #home-page-sidebar {
+//     width: 30%;
+//     height: auto;
+//     float: left;
+//     padding-top: 1%;
+//     position: unset;
+//   }
+//   .holiday-search-sidebar {
+//     width: 96%;
+//   }
+//   #holiday-search-title {
+//     font-size: 1.1em;
+//     width: 100%;
+//   }
+//   #holiday-search-form {
+//     padding: 2%;
+
+//     .label-wide {
+//       font-size: 0.9em;
+//       span {
+//         display: block;
+//       }
+//     }
+
+//     .label-half {
+//       width: 48%;
+//       font-size: 0.9em;
+//     }
+
+//     .select-wide {
+//       height: 35px;
+//       line-height: 35px;
+//     }
+
+//     .select-date-year {
+//       width: 29%;
+//       height: 35px;
+//     }
+
+//     #select-month {
+//       width: 39%;
+//       height: 35px;
+//       margin: 0 0.15em;
+//     }
+
+//     .select-half {
+//       height: 35px;
+//     }
+
+//     #holiday-search-btn {
+//       width: 85%;
+//       font-size: 1em;
+//       &:hover {
+//         color: $colorwhite1;
+//         border: 0;
+//       }
+//     }
+//   }
+
+//   .destinations {
+//     width: 91%;
+//     margin: 5px auto;
+//     padding: 2.5%;
+//   }
+//   .destination {
+//     width: 100%;
+//   }
+//   .destination-img {
+//     width: 45%;
+//     margin-right: 2%;
+//   }
+//   .destination-caption {
+//     width: 50%;
+//     display: inline-block;
+//   }
+//   .destination-title {
+//     font-size: 0.9em;
+//     line-height: 20px;
+//   }
+//   .destination-txt {
+//     font-size: 0.75em;
+//     float: none;
+//   }
+
+//   #filter-nav-sidebar {
+//     position: unset;
+//     bottom: unset;
+//     width: 20%;
+//     float: left;
+//   }
+//   #seasons,
+//   #locations,
+//   #prices,
+//   #ratings {
+//     width: 100%;
+//   }
+//   .filter-title {
+//     width: 100%;
+//     text-indent: 0;
+//     color: $colorbgvar;
+//     display: block;
+//     font-size: 0.9em;
+//     line-height: 35px;
+//     margin: 0 auto;
+//   }
+//   .filter-list {
+//     padding: 0;
+//   }
+//   .filter-list-item {
+//     display: block;
+//     width: 100%;
+//     line-height: 35px;
+//     height: 35px;
+//     margin: 0;
+//     #reset,
+//     .filter-list-btn {
+//       font-size: 0.9em;
+//       line-height: 30px;
+//     }
+//   }
+
+//   #about-page-banner {
+//     width: 20%;
+//     position: unset;
+//     float: left;
+//   }
+//   .page-banner-img {
+//     display: block;
+//     border: none;
+//   }
+//   .page-banner {
+//     margin: 0;
+//   }
+//   .page-banner-caption {
+//     position: absolute;
+//     padding: 5%;
+//   }
+//   .page-banner-title {
+//     font-size: 1.3em;
+//     line-height: 1.4em;
+//     margin: 20px 0 10px;
+//   }
+//   .caption-img-span {
+//     margin-bottom: 1em;
+//     display: block;
+//   }
+//   .caption-img {
+//     display: block;
+//     border: none;
+//   }
+//   .page-banner-text {
+//     font-size: 0.85em;
+//     line-height: 1.4em;
+//   }
+
+//   #contact-page-sidebar {
+//     width: 21%;
+//     position: unset;
+//     float: left;
+//   }
+//   #contact-details {
+//     gap: 0.25em;
+//     padding: 0.5em;
+
+//     .addr-link {
+//       line-height: 20px;
+//       font-size: 0.7em;
+//       width: 70%;
+//     }
+//     p {
+//       font-size: 0.7em;
+//       width: 70%;
+//       &::before {
+//         content: "";
+//         height: 100%;
+//       }
+//     }
+//     .addr-title {
+//       line-height: 20px;
+//       font-size: 0.8em;
+//       &::before {
+//         font-size: 2em;
+//         margin-right: 0.25em;
+//       }
+//     }
+//   }
+
+//   #home-page-content {
+//     width: 70%;
+//     height: auto;
+//     display: inline-block;
+//     margin: 1% 0;
+//     min-height: 740px;
+//   }
+//   #banner {
+//     width: auto;
+//     height: auto;
+//     margin: 0 auto;
+//     display: block;
+//   }
+//   #banner-img {
+//     width: 100%;
+//   }
+
+//   #holiday-offers {
+//     flex-flow: row wrap;
+//     align-items: flex-start;
+//     justify-content: flex-start;
+//   }
+//   #holiday-offers-title {
+//     font-size: 1.1em;
+//     height: 55px;
+//     line-height: 55px;
+//     text-indent: 0;
+//   }
+//   .offer-item-div {
+//     margin: 0.25em;
+//     width: 30%;
+//   }
+//   .offer-item {
+//     display: block;
+//     width: 100%;
+//     margin: 2% 0;
+//   }
+//   .offer-item-img {
+//     width: auto;
+//     margin: 0 auto;
+//     display: block;
+//   }
+//   .offer-item-caption {
+//     padding: 0.5em 0;
+//     display: block;
+//   }
+//   .offer-item-text {
+//     font-size: 1em;
+//     text-align: center;
+//     margin: 0;
+//     height: 30px;
+//     line-height: 30px;
+//   }
+//   .offer-item-text:nth-of-type(2) {
+//     color: $colorblue5;
+//     font-weight: bold;
+//     .offer-item-price {
+//       color: $colorbtn1;
+//     }
+//   }
+
+//   #page-content,
+//   #holiday-items {
+//     width: 79%;
+//     float: right;
+//     padding: 0.25em;
+//   }
+
+//   #contact-form {
+//     width: 90%;
+//     margin: 1em auto;
+//   }
+//   #contact-form-fields {
+//     list-style: none;
+//     padding: 0;
+//   }
+//   .contact-form-field {
+//     margin: 5px 0 10px;
+//   }
+//   .contact-label {
+//     font-size: 0.9em;
+//     line-height: 37px;
+//   }
+
+//   #firstname,
+//   #lastname,
+//   #email,
+//   #phone {
+//     padding: 0;
+//   }
+//   #message {
+//     border: 1px solid $colorgry2;
+//   }
+//   #contact-submit {
+//     width: 50%;
+//   }
+
+//   .holiday-pkg-details {
+//     display: flex;
+//     flex-flow: row wrap;
+//     width: 98%;
+//   }
+//   .holiday-pkg-title {
+//     width: 50%;
+//     font-size: 1.25em;
+//     text-indent: 0;
+//     text-align: left;
+//     line-height: 40px;
+//   }
+//   .holiday-pkg-item {
+//     width: 100%;
+//     margin: 0;
+//   }
+//   .holiday-pkg-img {
+//     width: auto;
+//     float: left;
+//     margin-right: 0.25em;
+//   }
+//   .holiday-pkg-caption {
+//     width: 64%;
+//     display: inline-block;
+//     .holiday-pkg-txt {
+//       font-size: 0.9em;
+//       text-align: left;
+//       line-height: 25px;
+//     }
+
+//     .holiday-pkg-txt:first-of-type {
+//       text-align: left;
+//       font-weight: bold;
+//       line-height: 35px;
+//       font-size: 1em;
+//     }
+
+//     .holiday-pkg-link {
+//       font-size: 1em;
+//       line-height: 45px;
+//       margin: 0;
+//       width: 30%;
+//       &:hover {
+//         font-weight: bold;
+//         margin: 0;
+//       }
+//     }
+//   }
+
+//   .holiday-pkg-price {
+//     font-size: 1em;
+//     width: 22%;
+//     text-align: left;
+//   }
+//   .holiday-pkg-offer {
+//     font-weight: bold;
+//   }
+
+//   .bestdeal-details {
+//     width: 48%;
+//     float: left;
+//     margin: 0.25em;
+//   }
+//   .bestdeal-details-title {
+//     font-size: 0.85em;
+//     text-align: left;
+//   }
+//   .bestdeal-details-item {
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-around;
+//   }
+//   .bestdeal-details-img {
+//     width: 48%;
+//   }
+//   .bestdeal-details-caption {
+//     width: 48%;
+//     display: inline-block;
+//   }
+//   .bestdeal-text {
+//     font-size: 0.85em;
+//     text-align: left;
+//   }
+//   .bestdeal-link {
+//     font-size: 1em;
+//     line-height: 35px;
+//     margin: 0.5em 0;
+//     width:90%;
+//     &:hover {
+//       cursor: pointer;
+//     }
+//   }
+//   .bestdeal-details-price {
+//     text-align: left;
+//     font-size: 0.85em;
+//   }
+//   .bestdeal-offer {
+//     color: $colorbtn4;
+//     font-size: 90%;
+//   }
+
+//   .services-card {
+//     width: 31%;
+//     float: left;
+//     margin: 0.1em;
+//   }
+//   .services-card-title {
+//     font-size: 0.9em;
+//     height: auto;
+//     text-indent: 0.2em;
+//     line-height: 35px;
+//   }
+//   .services-card-item {
+//     width: 100%;
+//   }
+//   .service-box-img {
+//     width: auto;
+//     margin: auto;
+//     display: block;
+//   }
+//   .services-card-caption {
+//     margin: 0;
+//   }
+//   .services-card-text {
+//     font-size: 0.9em;
+//     line-height: 1.8em;
+//   }
+//   .services-card-link {
+//     font-size: 0.75em;
+//     line-height: 30px;
+//     width: auto;
+//     &:hover {
+//       font-weight: bold;
+//     }
+//   }
+
+//   #site-footer {
+//     height: 40px;
+//   }
+//   #site-inner-footer {
+//     margin: 0 auto;
+//     padding: 0;
+//     width: 80%;
+//   }
+//   .inner-footer-item {
+//     width: 16.5707%;
+//   }
+//   .footer-nav-item {
+//     font-size: 0.8em;
+//     line-height: 40px;
+//     &:link {
+//       font-weight: bold;
+//     }
+//     &:active {
+//       font-weight: bold;
+//     }
+//     &:hover {
+//       cursor: pointer;
+//       font-weight: bold;
+//     }
+//   }
+// }
+
+// @media screen and (min-width: 945px) and (max-width: 1023px) {
+//   #wrapper {
+//     min-height: 1220px;
+//     width: 940px;
+//   }
+//   #site-header {
+//     height: 60px;
+//     margin-bottom: 0.5em;
+//   }
+//   #logo {
+//     align-items: flex-end;
+//   }
+//   #logo-img {
+//     display: block;
+//   }
+//   #logo-title {
+//     width: 100%;
+//   }
+//   .logo-span:first-of-type {
+//     font-size: 1em;
+//   }
+//   .logo-span:last-of-type {
+//     font-size: 1.25em;
+//   }
+
+//   .contact {
+//     width: 15%;
+//     margin: 0.25em 0 0;
+//     display: block;
+//   }
+//   .telephone-number {
+//     line-height: 30px;
+//     height: 30px;
+//     display: block;
+//   }
+//   #contact-number {
+//     font-size: 0.85em;
+
+//     &:active {
+//       color: $colorwhite2;
+//     }
+//     &:link {
+//       color: $colorwhite2;
+//       background-color: unset;
+//     }
+//   }
+//   #contact-number::before {
+//     margin: 0.2em;
+
+//   }
+//   #opening-time {
+//     line-height: 27px;
+//     font-size: 0.8em;
+//     font-weight: bold;
+//   }
+
+//   #site-navigation {
+//     opacity: 1;
+//     flex-direction: row;
+//     justify-content: space-between;
+//   }
+//   #site-inner-nav {
+//     width: 84%;
+//     float: left;
+//     display: flex;
+//     flex-direction: row;
+//     -ms-flex-pack: justify;
+//     justify-content: space-between;
+//     position: unset;
+//     opacity: 1;
+//     padding: 0;
+//   }
+//   .site-inner-nav-item {
+//     width: 16.71%;
+//     float: left;
+//     margin-right: 0.1em;
+//     margin-bottom: 0;
+//     .nav-item {
+//       font-size: 0.7em;
+//       line-height: 40px;
+//       height: 38px;
+//       &:hover {
+//         box-shadow: none;
+//         line-height: 40px;
+//         height: 38px;
+//       }
+//     }
+//   }
+
+//   .site-inner-nav-item:nth-of-type(2) {
+//     padding-top: 0;
+//     .nav-item {
+//       padding-top: 0;
+//       font-size: 0.6em;
+//       height: 38px;
+//       line-height: 40px;
+//       &:hover {
+//         height: 38px;
+//         line-height: 40px;
+//       }
+//     }
+//   }
+
+//   #language-select {
+//     width: 16%;
+//     padding-left: 0.25em;
+//   }
+//   #language-selector {
+//     height: 40px;
+
+//     label {
+//       font-size: 0.65em;
+//     }
+
+//     #flag-img {
+//       width: auto;
+//     }
+
+//     select {
+//       line-height: 35px;
+//       width: 30%;
+//       option {
+//         font-size: 1em;
+//       }
+//     }
+//   }
+
+//   .fade-enter-active,
+//   .fade-leave-active {
+//     transition: all 1s ease;
+//   }
+//   .fade-enter {
+//     transition: all 5s ease-in-out;
+//     left: 10px;
+//   }
+//   .fade-leave-to,
+//   .fade-leave {
+//     transition: all 1s ease;
+//     left: -650px;
+//     opacity: 0;
+//   }
+
+//   #toggle-menu {
+//     display: none;
+//   }
+
+//   #side-bar-btn {
+//     display: none;
+//   }
+
+//   #contact-bar-btn {
+//     display: none;
+//   }
+
+//   #home-page-sidebar {
+//     width: 30%;
+//     height: auto;
+//     float: left;
+//     padding-top: 1%;
+//     position: unset;
+//   }
+//   .holiday-search-sidebar {
+//     width: 96%;
+//   }
+//   #holiday-search-title {
+//     font-size: 1.1em;
+//     width: 100%;
+//   }
+//   #holiday-search-form {
+//     padding: 2%;
+
+//     .label-wide {
+//       font-size: 0.9em;
+//       span {
+//         display: block;
+//       }
+//     }
+
+//     .label-half {
+//       width: 48%;
+//       font-size: 0.9em;
+//     }
+
+//     .select-wide {
+//       height: 35px;
+//       line-height: 35px;
+//     }
+
+//     .select-date-year {
+//       width: 29%;
+//       height: 35px;
+//     }
+
+//     #select-month {
+//       width: 39%;
+//       height: 35px;
+//       margin: 0 0.15em;
+//     }
+
+//     .select-half {
+//       height: 35px;
+//     }
+
+//     #holiday-search-btn {
+//       width: 85%;
+//       height: 35px;
+//       line-height: 35px;
+//       font-size: 1.1em;
+//       &:hover {
+//         color: $colorwhite1;
+//         border: 0;
+//       }
+//     }
+//   }
+
+//   .destinations {
+//     width: 91%;
+//     margin: 5px auto;
+//     padding: 2.5%;
+//   }
+//   .destination {
+//     width: 100%;
+//   }
+//   .destination-img {
+//     width: 45%;
+//     margin-right: 2%;
+//   }
+//   .destination-caption {
+//     width: 50%;
+//     display: inline-block;
+//   }
+//   .destination-title {
+//     font-size: 0.9em;
+//     line-height: 20px;
+//   }
+//   .destination-txt {
+//     font-size: 0.75em;
+//     float: none;
+//   }
+
+//   #filter-nav-sidebar {
+//     position: unset;
+//     bottom: unset;
+//     width: 20%;
+//     float: left;
+//   }
+//   #seasons,
+//   #locations,
+//   #prices,
+//   #ratings {
+//     width: 100%;
+//   }
+//   .filter-title {
+//     width: 100%;
+//     text-indent: 0;
+//     color: $colorbgvar;
+//     display: block;
+//     font-size: 0.9em;
+//     line-height: 35px;
+//     margin: 0 auto;
+//   }
+//   .filter-list {
+//     padding: 0;
+//   }
+//   .filter-list-item {
+//     display: block;
+//     width: 100%;
+//     line-height: 35px;
+//     height: 35px;
+//     margin: 0;
+//   }
+//   #reset,
+//   .filter-list-btn {
+//     font-size: 0.85em;
+//     line-height: 30px;
+//   }
+
+//   #about-page-banner {
+//     width: 20%;
+//     position: unset;
+//     float: left;
+//   }
+//   .page-banner-img {
+//     display: block;
+//     border: none;
+//   }
+//   .page-banner {
+//     margin: 0;
+//   }
+//   .page-banner-caption {
+//     position: absolute;
+//     padding: 5%;
+//   }
+//   .page-banner-title {
+//     font-size: 1.2em;
+//     line-height: 1.4em;
+//     margin: 20px 0 10px;
+//   }
+//   .caption-img-span {
+//     margin-bottom: 0.5em;
+//     display: block;
+//   }
+//   .caption-img {
+//     display: block;
+//     border: none;
+//   }
+//   .page-banner-text {
+//     font-size: 0.85em;
+//     line-height: 1.4em;
+//   }
+
+//   #contact-page-sidebar {
+//     width: 21%;
+//     position: unset;
+//     float: left;
+//   }
+//   #contact-details {
+//     gap: 0.25em;
+//     padding: 0.5em;
+
+//     .addr-link {
+//       line-height: 20px;
+//       font-size: 0.7em;
+//       width: 68%;
+//     }
+//     p {
+//       font-size: 0.7em;
+//       width: 68%;
+//       &::before {
+//         content: "";
+//         height: 100%;
+//       }
+//     }
+//     .addr-title {
+//       line-height: 20px;
+//       font-size: 0.8em;
+//       &::before {
+//         font-size: 2em;
+//         margin-right: 0.25em;
+//       }
+//     }
+//   }
+
+//   #home-page-content {
+//     width: 70%;
+//     height: auto;
+//     display: inline-block;
+//     margin: 1% 0;
+//     min-height: 740px;
+//   }
+//   #banner {
+//     width: auto;
+//     height: auto;
+//     margin: 0 auto;
+//     display: block;
+//   }
+//   #banner-img {
+//     width: 100%;
+//   }
+
+//   #holiday-offers {
+//     flex-flow: row wrap;
+//     align-items: flex-start;
+//     justify-content: flex-start;
+//   }
+//   #holiday-offers-title {
+//     font-size: 1.1em;
+//     height: 55px;
+//     line-height: 55px;
+//     text-indent: 0;
+//   }
+
+//   .offer-item-div {
+//     margin: 0.25em;
+//     width: 30%;
+//   }
+//   .offer-item {
+//     display: block;
+//     width: 100%;
+//     margin: 2% 0;
+//   }
+//   .offer-item-img {
+//     width: auto;
+//     margin: 0 auto;
+//     display: block;
+//   }
+//   .offer-item-caption {
+//     padding: 0.5em 0;
+//     display: block;
+//   }
+//   .offer-item-text {
+//     font-size: 1em;
+//     text-align: center;
+//     margin: 0;
+//     height: 30px;
+//     line-height: 30px;
+//   }
+//   .offer-item-text:nth-of-type(2) {
+//     color: $colorblue5;
+//     font-weight: bold;
+//     .offer-item-price {
+//       color: $colorbtn1;
+//     }
+//   }
+
+//   #page-content,
+//   #holiday-items {
+//     width: 79%;
+//     float: right;
+//     padding: 0.25em;
+//   }
+
+//   #contact-form {
+//     width: 90%;
+//     margin: 1em auto;
+//   }
+//   #contact-form-fields {
+//     list-style: none;
+//     padding: 0;
+//   }
+//   .contact-form-field {
+//     margin: 5px 0 10px;
+//   }
+//   .contact-label {
+//     font-size: 0.9em;
+//     line-height: 37px;
+//   }
+
+//   #firstname,
+//   #lastname,
+//   #email,
+//   #phone {
+//     padding: 0;
+//   }
+//   #message {
+//     border: 1px solid $colorgry2;
+//   }
+//   #contact-submit {
+//     width: 50%;
+//   }
+
+//   .holiday-pkg-details {
+//     display: flex;
+//     flex-flow: row wrap;
+//     width: 98%;
+//   }
+//   .holiday-pkg-title {
+//     width: 50%;
+//     font-size: 1.25em;
+//     text-indent: 0;
+//     text-align: left;
+//     line-height: 40px;
+//   }
+//   .holiday-pkg-item {
+//     width: 100%;
+//     margin: 0;
+//   }
+//   .holiday-pkg-img {
+//     width: auto;
+//     float: left;
+//     margin-right: 0.25em;
+//   }
+//   .holiday-pkg-caption {
+//     width: 60%;
+//     display: inline-block;
+//     .holiday-pkg-txt {
+//       font-size: 0.9em;
+//       text-align: left;
+//       line-height: 25px;
+//     }
+
+//     .holiday-pkg-txt:first-of-type {
+//       text-align: left;
+//       font-weight: bold;
+//       line-height: 35px;
+//       font-size: 1em;
+//     }
+
+//     .holiday-pkg-link {
+//       font-size: 1em;
+//       line-height: 45px;
+//       margin: 0;
+//       width: 30%;
+//       &:hover {
+//         font-weight: bold;
+//         margin: 0;
+//       }
+//     }
+//   }
+
+//   .holiday-pkg-price {
+//     font-size: 1em;
+//     width: 22%;
+//     text-align: left;
+//   }
+//   .holiday-pkg-offer {
+//     font-weight: bold;
+//   }
+
+//   .bestdeal-details {
+//     width: 48%;
+//     float: left;
+//     margin: 0.25em;
+//   }
+//   .bestdeal-details-title {
+//     font-size: 0.85em;
+//     text-align: left;
+//   }
+//   .bestdeal-details-item {
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-around;
+//   }
+//   .bestdeal-details-img {
+//     width: 35%;
+//   }
+//   .bestdeal-details-caption {
+//     width: 60%;
+//     display: inline-block;
+//   }
+//   .bestdeal-text {
+//     font-size: 0.85em;
+//     text-align: left;
+//   }
+//   .bestdeal-link {
+//     font-size: 1em;
+//     line-height: 35px;
+//     margin: 0.5em 0;
+//     width:90%;
+//     &:hover {
+//       cursor: pointer;
+//     }
+//   }
+//   .bestdeal-details-price {
+//     font-size: 0.85em;
+//     text-align: left;
+//   }
+//   .bestdeal-offer {
+//     color: $colorbtn4;
+//     font-size: 90%;
+//   }
+
+//   .services-card {
+//     width: 32%;
+//     float: left;
+//     margin: 0.1em;
+//   }
+//   .services-card-title {
+//     font-size: 0.9em;
+//     height: auto;
+//     text-indent: 0.2em;
+//     line-height: 35px;
+//   }
+//   .services-card-item {
+//     width: 100%;
+//   }
+//   .service-box-img {
+//     width: auto;
+//     margin: auto;
+//     display: block;
+//   }
+//   .services-card-caption {
+//     margin: 0;
+//   }
+//   .services-card-text {
+//     font-size: 0.9em;
+//     line-height: 1.8em;
+//   }
+//   .services-card-link {
+//     font-size: 0.75em;
+//     line-height: 30px;
+//     width: auto;
+//     &:hover {
+//       font-weight: bold;
+//     }
+//   }
+
+//   #site-footer {
+//     height: 40px;
+//   }
+//   #site-inner-footer {
+//     margin: 0 auto;
+//     padding: 0;
+//     width: 100%;
+//   }
+//   .inner-footer-item {
+//     width: 16.5707%;
+//   }
+//   .footer-nav-item {
+//     font-size: 0.75em;
+//     line-height: 40px;
+//     &:link {
+//       font-weight: bold;
+//     }
+//     &:active {
+//       font-weight: bold;
+//     }
+//     &:hover {
+//       cursor: pointer;
+//       font-weight: bold;
+//     }
+//   }
+// }
+
+@media screen and (min-width: 830px) and (max-width: 944px) {
   #wrapper {
     min-height: 1220px;
-    width: 945px;
+    width: 100%;
   }
   #site-header {
     height: 60px;
@@ -2527,1377 +4353,159 @@
   }
   #logo {
     align-items: flex-end;
-    width: auto;
   }
   #logo-img {
     display: block;
   }
   #logo-title {
     width: 100%;
+    font-size:1.25em;
   }
   .logo-span:first-of-type {
     font-size: 1em;
   }
   .logo-span:last-of-type {
+    font-size: 1.15em;
+  }
+
+  .contact {
+    width: 16%;
+  }
+  .telephone-number {
+    line-height: 30px;
+    height: 30px;
+    display: block;
+  }
+  #contact-number {
+    font-size: 0.9em;
+
+    &:active {
+      color: $colorwhite2;
+    }
+    &:link {
+      color: $colorwhite2;
+      background-color: unset;
+    }
+  }
+  #contact-number::before {
+    margin: 0.2em;
+
+  }
+  #opening-time {
+    line-height: 27px;
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+
+  #site-navigation {
+    opacity: 1;
+    flex-direction: row;
+  }
+  #site-inner-nav {
+    width: 84%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: unset;
+    opacity: 1;
+    padding: 0;
+    top:0;
+  }
+  .site-inner-nav-item {
+    width: 16%;
+    float: left;
+    margin-right: 0.1em;
+    margin-bottom: 0;
+    .nav-item {
+      font-size: 0.8em;
+      height: 38px;
+      line-height: 40px;
+      &:hover {
+        box-shadow: none;
+        height: 38px;
+        line-height: 40px;
+      }
+    }
+  }
+  .site-inner-nav-item:nth-of-type(2) {
+    padding-top: 0;
+    .nav-item {
+      padding-top: 0;
+      font-size: 0.6em;
+      height: 38px;
+      line-height: 40px;
+      &:hover {
+        line-height: 40px;
+        height: 38px;
+      }
+    }
+  }
+
+  #language-select {
+    width: 16%;
+    padding-left: 0.25em;
+  }
+  #language-selector {
+    height: 40px;
+
+    label {
+      font-size: 0.6em;
+    }
+
+    #flag-img {
+      width: auto;
+    }
+
+    select {
+      line-height: 35px;
+      width: 30%;
+      option {
+        font-size: 1em;
+      }
+    }
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: all 1s ease;
+  }
+  .fade-enter {
+    transition: all 5s ease-in-out;
+    left: 10px;
+  }
+  .fade-leave-to,
+  .fade-leave {
+    transition: all 1s ease;
+    left: -650px;
+    opacity: 0;
+  }
+
+  #toggle-menu {
+    display: none;
+  }
+
+  #side-bar-btn {
+    display: none;
+  }
+
+  #contact-bar-btn {
+    display: none;
+  }
+
+  #home-page-sidebar {
+    width: 30%;
+    height: auto;
+    float: left;
+    padding-top: 1%;
+    position: unset;
+  }
+  .holiday-search-sidebar {
+    width: 96%;
+  }
+  #holiday-search-title {
     font-size: 1.2em;
-  }
-
-  .contact {
-    width: 15%;
-    margin: 0.25em 0 0;
-    display: block;
-  }
-  .telephone-number {
-    line-height: 30px;
-    height: 30px;
-    display: block;
-    background: $colorbg;
-  }
-  #contact-number {
-    text-indent: 0.2em;
-    font-size: 0.9em;
-
-    &:active {
-      color: $colorwhite2;
-    }
-    &:link {
-      color: $colorwhite2;
-      background-color: unset;
-    }
-  }
-  #contact-number::before {
-    margin: 0.2em;
-    height: 24px;
-  }
-  #opening-time {
-    line-height: 27px;
-    font-size: 0.75em;
-    font-weight: bold;
-  }
-
-  #site-navigation {
-    opacity: 1;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #site-inner-nav {
-    width: 84%;
-    float: left;
-    display: flex;
-    flex-direction: row;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    position: unset;
-    opacity: 1;
-    padding: 0;
-  }
-  .site-inner-nav-item {
-    width: 16%;
-    float: left;
-    height: 40px;
-    margin-right: 0.1em;
-    margin-bottom: 0;
-    .nav-item {
-      font-size: 0.85em;
-      height: 38px;
-      line-height: 40px;
-      &:hover {
-        box-shadow: none;
-        height: 38px;
-        line-height: 40px;
-      }
-    }
-  }
-
-  .site-inner-nav-item:nth-of-type(2) {
-    padding-top: 0;
-    .nav-item {
-      padding-top: 0;
-      font-size: 0.6em;
-      height: 38px;
-      line-height: 40px;
-      &:hover {
-        line-height: 40px;
-        height: 38px;
-      }
-    }
-  }
-
-  #language-select {
-    width: 16%;
-    padding-left: 0.25em;
-  }
-  #language-selector {
-    height: 40px;
-
-    label {
-      font-size: 0.75em;
-    }
-
-    #flag-img {
-      width: auto;
-    }
-
-    select {
-      line-height: 35px;
-      width: 25%;
-      option {
-        font-size: 1em;
-      }
-    }
-  }
-
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: all 1s ease;
-  }
-  .fade-enter {
-    transition: all 5s ease-in-out;
-    left: 10px;
-  }
-  .fade-leave-to,
-  .fade-leave {
-    transition: all 1s ease;
-    left: -650px;
-    opacity: 0;
-  }
-
-  #toggle-menu {
-    display: none;
-  }
-
-  #side-bar-btn {
-    display: none;
-  }
-
-  #contact-bar-btn {
-    display: none;
-  }
-
-  #home-page-sidebar {
-    width: 30%;
-    height: auto;
-    float: left;
-    padding-top: 1%;
-    position: unset;
-  }
-  .holiday-search-sidebar {
-    width: 96%;
-  }
-  #holiday-search-title {
-    font-size: 1em;
-    width: 100%;
-  }
-  #holiday-search-form {
-    padding: 2%;
-
-    .label-wide {
-      font-size: 0.9em;
-      span {
-        display: block;
-      }
-    }
-
-    .label-half {
-      width: 48%;
-      font-size: 0.9em;
-    }
-
-    .select-wide {
-      height: 35px;
-      line-height: 35px;
-    }
-
-    .select-date-year {
-      width: 29%;
-      height: 35px;
-    }
-
-    #select-month {
-      width: 39%;
-      height: 35px;
-      margin: 0 0.15em;
-    }
-
-    .select-half {
-      height: 35px;
-    }
-
-    #holiday-search-btn {
-      width: 85%;
-      height: 35px;
-      font-size: 1.1em;
-      &:hover {
-        color: $colorwhite1;
-        border: 0;
-      }
-    }
-  }
-
-  .destinations {
-    width: 91%;
-    margin: 5px auto;
-    padding: 2.5%;
-  }
-  .destination {
-    width: 100%;
-  }
-  .destination-img {
-    width: 45%;
-    margin-right: 2%;
-  }
-  .destination-caption {
-    width: 50%;
-    display: inline-block;
-  }
-  .destination-title {
-    font-size: 0.85em;
-    line-height: 20px;
-  }
-  .destination-txt {
-    font-size: 0.75em;
-    float: none;
-  }
-
-  #filter-nav-sidebar {
-    position: unset;
-    bottom: unset;
-    width: 20%;
-    float: left;
-  }
-  #seasons,
-  #locations,
-  #prices,
-  #ratings {
-    width: 100%;
-  }
-  .filter-title {
-    width: 100%;
-    text-indent: 0;
-    color: $colorbgvar;
-    display: block;
-    font-size: 0.9em;
-    line-height: 35px;
-    margin: 0 auto;
-  }
-  .filter-list {
-    padding: 0;
-  }
-  .filter-list-item {
-    display: block;
-    width: 100%;
-    line-height: 35px;
-    height: 35px;
-    margin: 0;
-  }
-  #reset,
-  .filter-list-btn {
-    font-size: 0.9em;
-    line-height: 30px;
-  }
-
-  #about-page-banner {
-    width: 20%;
-    position: unset;
-    float: left;
-  }
-  .page-banner-img {
-    display: block;
-    border: none;
-  }
-  .page-banner {
-    margin: 0;
-  }
-  .page-banner-caption {
-    position: absolute;
-    padding: 5%;
-  }
-  .page-banner-title {
-    font-size: 1.3em;
-    line-height: 1.4em;
-    margin: 20px 0 10px;
-  }
-  .caption-img-span {
-    margin-bottom: 1em;
-    display: block;
-  }
-  .caption-img {
-    display: block;
-    border: none;
-  }
-  .page-banner-text {
-    font-size: 0.9em;
-    line-height: 1.4em;
-  }
-
-  #contact-page-sidebar {
-    width: 21%;
-    position: unset;
-    float: left;
-  }
-  #contact-details {
-    gap: 0.25em;
-    padding: 0.5em;
-
-    .addr-link {
-      line-height: 20px;
-      font-size: 0.75em;
-      width: 70%;
-    }
-    p {
-      font-size: 0.75em;
-      width: 70%;
-      &::before {
-        content: "";
-        height: 100%;
-      }
-    }
-    .addr-title {
-      line-height: 20px;
-      font-size: 0.8em;
-      &::before {
-        font-size: 2em;
-        margin-right: 0.25em;
-      }
-    }
-  }
-
-  #home-page-content {
-    width: 70%;
-    height: auto;
-    display: inline-block;
-    margin: 1% 0;
-    min-height: 740px;
-  }
-  #banner {
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
-  #banner-img {
-    width: 100%;
-  }
-
-  #holiday-offers {
-    flex-flow: row wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  #holiday-offers-title {
-    font-size: 1.1em;
-    height: 55px;
-    line-height: 55px;
-    text-indent: 0;
-  }
-
-  .offer-item-div {
-    margin: 0.25em;
-    width: 31%;
-  }
-  .offer-item {
-    display: block;
-    width: 100%;
-    margin: 2% 0;
-  }
-  .offer-item-img {
-    width: auto;
-    margin: 0 auto;
-    display: block;
-  }
-  .offer-item-caption {
-    padding: 0.5em 0;
-    display: block;
-  }
-  .offer-item-text {
-    font-size: 0.9em;
-    text-align: center;
-    margin: 0;
-    height: 30px;
-    line-height: 30px;
-  }
-  .offer-item-text:nth-of-type(2) {
-    color: $colorblue5;
-    font-weight: bold;
-    .offer-item-price {
-      color: $colorbtn1;
-    }
-  }
-
-  #page-content,
-  #holiday-items {
-    width: 79%;
-    float: right;
-    padding: 0.25em;
-  }
-
-  #contact-form {
-    width: 90%;
-    margin: 1em auto;
-  }
-  #contact-form-fields {
-    list-style: none;
-    padding: 0;
-  }
-  .contact-form-field {
-    margin: 5px 0 10px;
-  }
-  .contact-label {
-    font-size: 0.9em;
-    line-height: 37px;
-  }
-
-  #firstname,
-  #lastname,
-  #email,
-  #phone {
-    padding: 0;
-  }
-  #message {
-    border: 1px solid $colorgry2;
-  }
-  #contact-submit {
-    width: 50%;
-  }
-
-  .holiday-pkg-details {
-    display: flex;
-    flex-flow: row wrap;
-    width: 98%;
-  }
-
-  .holiday-pkg-title {
-    width: 50%;
-    font-size: 1.15em;
-    text-indent: 0;
-    text-align: left;
-    line-height: 40px;
-  }
-
-  .holiday-pkg-item {
-    width: 100%;
-    margin: 0;
-  }
-  .holiday-pkg-img {
-    width: auto;
-    float: left;
-    margin-right: 0.25em;
-  }
-  .holiday-pkg-caption {
-    width: 65%;
-    display: inline-block;
-
-    .holiday-pkg-txt {
-      font-size: 0.9em;
-      text-align: left;
-      line-height: 25px;
-    }
-    .holiday-pkg-txt:first-of-type {
-      text-align: left;
-      font-weight: bold;
-      line-height: 35px;
-      font-size: 1em;
-    }
-
-    .holiday-pkg-link {
-      font-size: 1em;
-      line-height: 45px;
-      width: 30%;
-      margin: 0;
-      &:hover {
-        font-weight: bold;
-        margin: 0;
-      }
-    }
-  }
-
-  .holiday-pkg-price {
-    font-size: 1em;
-    width: 18%;
-    text-align: left;
-    line-height: 40px;
-  }
-  .holiday-pkg-offer {
-    font-weight: bold;
-  }
-
-  .bestdeal-details {
-    width: 48%;
-    float: left;
-    margin: 0.25em;
-  }
-  .bestdeal-details-title {
-    font-size: 0.85em;
-    text-align: left;
-  }
-  .bestdeal-details-item {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .bestdeal-details-img {
-    width: 48%;
-    margin: 0 0.25em 0 0;
-  }
-  .bestdeal-details-caption {
-    width: 48%;
-    display: inline-block;
-  }
-  .bestdeal-text {
-    font-size: 0.85em;
-    text-align: left;
-  }
-  .bestdeal-link {
-    font-size: 0.9em;
-    line-height: 35px;
-    margin: 0.5em 0;
-    width: 75%;
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  .bestdeal-details-price {
-    font-size: 0.85em;
-    text-align: left;
-  }
-  .bestdeal-offer {
-    color: $colorbtn4;
-    font-size: 90%;
-  }
-
-  .services-card {
-    width: 32%;
-    float: left;
-    margin: 0.1em;
-  }
-  .services-card-title {
-    font-size: 0.9em;
-    height: auto;
-    text-indent: 0.2em;
-    line-height: 35px;
-  }
-  .services-card-item {
-    width: 100%;
-  }
-  .service-box-img {
-    width: auto;
-    margin: auto;
-    display: block;
-  }
-  .services-card-caption {
-    margin: 0;
-  }
-  .services-card-text {
-    font-size: 1em;
-    line-height: 1.8em;
-  }
-  .services-card-link {
-    font-size: 0.8em;
-    line-height: 30px;
-    width: auto;
-    &:hover {
-      font-weight: bold;
-    }
-  }
-
-  #site-footer {
-    height: 40px;
-  }
-  #site-inner-footer {
-    margin: 0 auto;
-    padding: 0;
-    width: 60%;
-  }
-  .inner-footer-item {
-    width: 16.5707%;
-  }
-  .footer-nav-item {
-    font-size: 0.85em;
-    line-height: 40px;
-    &:link {
-      font-weight: bold;
-    }
-    &:active {
-      font-weight: bold;
-    }
-    &:hover {
-      cursor: pointer;
-      font-weight: bold;
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-  #wrapper {
-    min-height: 1220px;
-    width: 945px;
-  }
-  #site-header {
-    height: 60px;
-    margin-bottom: 0.5em;
-  }
-  #logo {
-    align-items: flex-end;
-    width: auto;
-  }
-  #logo-img {
-    display: block;
-  }
-  #logo-title {
-    width: 100%;
-  }
-  .logo-spann:first-of-type {
-    font-size: 1em;
-  }
-  .logo-span:last-of-type {
-    font-size: 1.3em;
-  }
-
-  .contact {
-    width: 15%;
-    margin: 0.25em 0 0;
-    display: block;
-  }
-  .telephone-number {
-    line-height: 30px;
-    height: 30px;
-    display: block;
-  }
-  #contact-number {
-    font-size: 0.9em;
-
-    &:active {
-      color: $colorwhite2;
-    }
-    &:link {
-      color: $colorwhite2;
-      background-color: unset;
-    }
-  }
-  #contact-number::before {
-    margin: 0.2em;
-    height: 24px;
-  }
-  #opening-time {
-    line-height: 27px;
-    font-size: 0.7em;
-    font-weight: bold;
-  }
-
-  #site-navigation {
-    opacity: 1;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #site-inner-nav {
-    width: 84%;
-    float: left;
-    display: flex;
-    flex-direction: row;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    position: unset;
-    opacity: 1;
-    padding: 0;
-  }
-  .site-inner-nav-item {
-    width: 16.71%;
-    float: left;
-    height: 40px;
-    margin-right: 0.1em;
-    margin-bottom: 0;
-    .nav-item {
-      font-size: 0.8em;
-      line-height: 40px;
-      height: auto;
-      &:hover {
-        box-shadow: none;
-        height: 38px;
-        line-height: 40px;
-      }
-    }
-  }
-
-  .site-inner-nav-item:nth-of-type(2) {
-    padding-top: 0;
-    .nav-item {
-      padding-top: 0;
-      font-size: 0.6em;
-      height: 38px;
-      line-height: 40px;
-      &:hover {
-        line-height: 40px;
-        height: 38px;
-      }
-    }
-  }
-
-  #language-select {
-    width: 16%;
-    padding-left: 0.25em;
-  }
-  #language-selector {
-    height: 40px;
-
-    label {
-      font-size: 0.7em;
-    }
-
-    #flag-img {
-      width: auto;
-    }
-
-    select {
-      line-height: 35px;
-      width: 30%;
-      option {
-        font-size: 1em;
-      }
-    }
-  }
-
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: all 1s ease;
-  }
-  .fade-enter {
-    transition: all 5s ease-in-out;
-    left: 10px;
-  }
-  .fade-leave-to,
-  .fade-leave {
-    transition: all 1s ease;
-    left: -650px;
-    opacity: 0;
-  }
-
-  #toggle-menu {
-    display: none;
-  }
-
-  #side-bar-btn {
-    display: none;
-  }
-
-  #contact-bar-btn {
-    display: none;
-  }
-
-  #home-page-sidebar {
-    width: 30%;
-    height: auto;
-    float: left;
-    padding-top: 1%;
-    position: unset;
-  }
-  .holiday-search-sidebar {
-    width: 96%;
-  }
-  #holiday-search-title {
-    font-size: 1em;
-    width: 100%;
-  }
-  #holiday-search-form {
-    padding: 2%;
-
-    .label-wide {
-      font-size: 0.9em;
-      span {
-        display: block;
-      }
-    }
-
-    .label-half {
-      width: 48%;
-      font-size: 0.9em;
-    }
-
-    .select-wide {
-      height: 35px;
-      line-height: 35px;
-    }
-
-    .select-date-year {
-      width: 29%;
-      height: 35px;
-    }
-
-    #select-month {
-      width: 39%;
-      height: 35px;
-      margin: 0 0.15em;
-    }
-
-    .select-half {
-      height: 35px;
-    }
-
-    #holiday-search-btn {
-      width: 85%;
-      font-size: 1em;
-      &:hover {
-        color: $colorwhite1;
-        border: 0;
-      }
-    }
-  }
-
-  .destinations {
-    width: 91%;
-    margin: 5px auto;
-    padding: 2.5%;
-  }
-  .destination {
-    width: 100%;
-  }
-  .destination-img {
-    width: 45%;
-    margin-right: 2%;
-  }
-  .destination-caption {
-    width: 50%;
-    display: inline-block;
-  }
-  .destination-title {
-    font-size: 0.8em;
-    line-height: 20px;
-  }
-  .destination-txt {
-    font-size: 0.75em;
-    float: none;
-  }
-
-  #filter-nav-sidebar {
-    position: unset;
-    bottom: unset;
-    width: 20%;
-    float: left;
-  }
-  #seasons,
-  #locations,
-  #prices,
-  #ratings {
-    width: 100%;
-  }
-  .filter-title {
-    width: 100%;
-    text-indent: 0;
-    color: $colorbgvar;
-    display: block;
-    font-size: 0.9em;
-    line-height: 35px;
-    margin: 0 auto;
-  }
-  .filter-list {
-    padding: 0;
-  }
-  .filter-list-item {
-    display: block;
-    width: 100%;
-    line-height: 35px;
-    height: 35px;
-    margin: 0;
-    #reset,
-    .filter-list-btn {
-      font-size: 0.9em;
-      line-height: 30px;
-    }
-  }
-
-  #about-page-banner {
-    width: 20%;
-    position: unset;
-    float: left;
-  }
-  .page-banner-img {
-    display: block;
-    border: none;
-  }
-  .page-banner {
-    margin: 0;
-  }
-  .page-banner-caption {
-    position: absolute;
-    padding: 5%;
-  }
-  .page-banner-title {
-    font-size: 1.3em;
-    line-height: 1.4em;
-    margin: 20px 0 10px;
-  }
-  .caption-img-span {
-    margin-bottom: 1em;
-    display: block;
-  }
-  .caption-img {
-    display: block;
-    border: none;
-  }
-  .page-banner-text {
-    font-size: 0.85em;
-    line-height: 1.4em;
-  }
-
-  #contact-page-sidebar {
-    width: 21%;
-    position: unset;
-    float: left;
-  }
-  #contact-details {
-    gap: 0.25em;
-    padding: 0.5em;
-
-    .addr-link {
-      line-height: 20px;
-      font-size: 0.7em;
-      width: 70%;
-    }
-    p {
-      font-size: 0.7em;
-      width: 70%;
-      &::before {
-        content: "";
-        height: 100%;
-      }
-    }
-    .addr-title {
-      line-height: 20px;
-      font-size: 0.8em;
-      &::before {
-        font-size: 2em;
-        margin-right: 0.25em;
-      }
-    }
-  }
-
-  #home-page-content {
-    width: 70%;
-    height: auto;
-    display: inline-block;
-    margin: 1% 0;
-    min-height: 740px;
-  }
-  #banner {
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
-  #banner-img {
-    width: 100%;
-  }
-
-  #holiday-offers {
-    flex-flow: row wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  #holiday-offers-title {
-    font-size: 1.1em;
-    height: 55px;
-    line-height: 55px;
-    text-indent: 0;
-  }
-  .offer-item-div {
-    margin: 0.25em;
-    width: 30%;
-  }
-  .offer-item {
-    display: block;
-    width: 100%;
-    margin: 2% 0;
-  }
-  .offer-item-img {
-    width: auto;
-    margin: 0 auto;
-    display: block;
-  }
-  .offer-item-caption {
-    padding: 0.5em 0;
-    display: block;
-  }
-  .offer-item-text {
-    font-size: 0.9em;
-    text-align: center;
-    margin: 0;
-    height: 30px;
-    line-height: 30px;
-  }
-  .offer-item-text:nth-of-type(2) {
-    color: $colorblue5;
-    font-weight: bold;
-    .offer-item-price {
-      color: $colorbtn1;
-    }
-  }
-
-  #page-content,
-  #holiday-items {
-    width: 79%;
-    float: right;
-    padding: 0.25em;
-  }
-
-  #contact-form {
-    width: 90%;
-    margin: 1em auto;
-  }
-  #contact-form-fields {
-    list-style: none;
-    padding: 0;
-  }
-  .contact-form-field {
-    margin: 5px 0 10px;
-  }
-  .contact-label {
-    font-size: 0.9em;
-    line-height: 37px;
-  }
-
-  #firstname,
-  #lastname,
-  #email,
-  #phone {
-    padding: 0;
-  }
-  #message {
-    border: 1px solid $colorgry2;
-  }
-  #contact-submit {
-    width: 50%;
-  }
-
-  .holiday-pkg-details {
-    display: flex;
-    flex-flow: row wrap;
-    width: 98%;
-  }
-  .holiday-pkg-title {
-    width: 50%;
-    font-size: 1.15em;
-    text-indent: 0;
-    text-align: left;
-    line-height: 40px;
-  }
-  .holiday-pkg-item {
-    width: 100%;
-    margin: 0;
-  }
-  .holiday-pkg-img {
-    width: auto;
-    float: left;
-    margin-right: 0.25em;
-  }
-  .holiday-pkg-caption {
-    width: 64%;
-    display: inline-block;
-    .holiday-pkg-txt {
-      font-size: 0.9em;
-      text-align: left;
-      line-height: 25px;
-    }
-
-    .holiday-pkg-txt:first-of-type {
-      text-align: left;
-      font-weight: bold;
-      line-height: 35px;
-      font-size: 1em;
-    }
-
-    .holiday-pkg-link {
-      font-size: 1em;
-      line-height: 45px;
-      margin: 0;
-      width: 30%;
-      &:hover {
-        font-weight: bold;
-        margin: 0;
-      }
-    }
-  }
-
-  .holiday-pkg-price {
-    font-size: 1em;
-    width: 22%;
-    text-align: left;
-  }
-  .holiday-pkg-offer {
-    font-weight: bold;
-  }
-
-  .bestdeal-details {
-    width: 48%;
-    float: left;
-    margin: 0.25em;
-  }
-  .bestdeal-details-title {
-    font-size: 0.85em;
-    text-align: left;
-  }
-  .bestdeal-details-item {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .bestdeal-details-img {
-    width: 48%;
-  }
-  .bestdeal-details-caption {
-    width: 48%;
-    display: inline-block;
-  }
-  .bestdeal-text {
-    font-size: 0.85em;
-    text-align: left;
-  }
-  .bestdeal-link {
-    font-size: 1em;
-    line-height: 35px;
-    margin: 0.5em 0;
-    width: 75%;
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  .bestdeal-details-price {
-    text-align: left;
-    font-size: 0.85em;
-  }
-  .bestdeal-offer {
-    color: $colorbtn4;
-    font-size: 90%;
-  }
-
-  .services-card {
-    width: 31%;
-    float: left;
-    margin: 0.1em;
-  }
-  .services-card-title {
-    font-size: 0.9em;
-    height: auto;
-    text-indent: 0.2em;
-    line-height: 35px;
-  }
-  .services-card-item {
-    width: 100%;
-  }
-  .service-box-img {
-    width: auto;
-    margin: auto;
-    display: block;
-  }
-  .services-card-caption {
-    margin: 0;
-  }
-  .services-card-text {
-    font-size: 0.9em;
-    line-height: 1.8em;
-  }
-  .services-card-link {
-    font-size: 0.75em;
-    line-height: 30px;
-    width: auto;
-    &:hover {
-      font-weight: bold;
-    }
-  }
-
-  #site-footer {
-    height: 40px;
-  }
-  #site-inner-footer {
-    margin: 0 auto;
-    padding: 0;
-    width: 80%;
-  }
-  .inner-footer-item {
-    width: 16.5707%;
-  }
-  .footer-nav-item {
-    font-size: 0.8em;
-    line-height: 40px;
-    &:link {
-      font-weight: bold;
-    }
-    &:active {
-      font-weight: bold;
-    }
-    &:hover {
-      cursor: pointer;
-      font-weight: bold;
-    }
-  }
-}
-
-@media screen and (min-width: 938px) and (max-width: 1023px) {
-  #wrapper {
-    min-height: 1220px;
-    width: 940px;
-  }
-  #site-header {
-    height: 60px;
-    margin-bottom: 0.5em;
-  }
-  #logo {
-    align-items: flex-end;
-  }
-  #logo-img {
-    display: block;
-  }
-  #logo-title {
-    width: 100%;
-  }
-  .logo-span:first-of-type {
-    font-size: 1em;
-  }
-  .logo-span:last-of-type {
-    font-size: 1.25em;
-  }
-
-  .contact {
-    width: 15%;
-    margin: 0.25em 0 0;
-    display: block;
-  }
-  .telephone-number {
-    line-height: 30px;
-    height: 30px;
-    display: block;
-  }
-  #contact-number {
-    font-size: 0.85em;
-
-    &:active {
-      color: $colorwhite2;
-    }
-    &:link {
-      color: $colorwhite2;
-      background-color: unset;
-    }
-  }
-  #contact-number::before {
-    margin: 0.2em;
-    height: 24px;
-  }
-  #opening-time {
-    line-height: 27px;
-    font-size: 0.8em;
-    font-weight: bold;
-  }
-
-  #site-navigation {
-    opacity: 1;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #site-inner-nav {
-    width: 84%;
-    float: left;
-    display: flex;
-    flex-direction: row;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    position: unset;
-    opacity: 1;
-    padding: 0;
-  }
-  .site-inner-nav-item {
-    width: 16.71%;
-    float: left;
-    margin-right: 0.1em;
-    margin-bottom: 0;
-    .nav-item {
-      font-size: 0.7em;
-      line-height: 40px;
-      height: 38px;
-      &:hover {
-        box-shadow: none;
-        line-height: 40px;
-        height: 38px;
-      }
-    }
-  }
-
-  .site-inner-nav-item:nth-of-type(2) {
-    padding-top: 0;
-    .nav-item {
-      padding-top: 0;
-      font-size: 0.6em;
-      height: 38px;
-      line-height: 40px;
-      &:hover {
-        height: 38px;
-        line-height: 40px;
-      }
-    }
-  }
-
-  #language-select {
-    width: 16%;
-    padding-left: 0.25em;
-  }
-  #language-selector {
-    height: 40px;
-
-    label {
-      font-size: 0.65em;
-    }
-
-    #flag-img {
-      width: auto;
-    }
-
-    select {
-      line-height: 35px;
-      width: 30%;
-      option {
-        font-size: 1em;
-      }
-    }
-  }
-
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: all 1s ease;
-  }
-  .fade-enter {
-    transition: all 5s ease-in-out;
-    left: 10px;
-  }
-  .fade-leave-to,
-  .fade-leave {
-    transition: all 1s ease;
-    left: -650px;
-    opacity: 0;
-  }
-
-  #toggle-menu {
-    display: none;
-  }
-
-  #side-bar-btn {
-    display: none;
-  }
-
-  #contact-bar-btn {
-    display: none;
-  }
-
-  #home-page-sidebar {
-    width: 30%;
-    height: auto;
-    float: left;
-    padding-top: 1%;
-    position: unset;
-  }
-  .holiday-search-sidebar {
-    width: 96%;
-  }
-  #holiday-search-title {
-    font-size: 1em;
     width: 100%;
   }
   #holiday-search-form {
@@ -3905,606 +4513,6 @@
 
     .label-wide {
       font-size: 0.85em;
-      span {
-        display: block;
-      }
-    }
-
-    .label-half {
-      width: 48%;
-      font-size: 0.85em;
-    }
-
-    .select-wide {
-      height: 35px;
-      line-height: 35px;
-    }
-
-    .select-date-year {
-      width: 29%;
-      height: 35px;
-    }
-
-    #select-month {
-      width: 39%;
-      height: 35px;
-      margin: 0 0.15em;
-    }
-
-    .select-half {
-      height: 35px;
-    }
-
-    #holiday-search-btn {
-      width: 85%;
-      height: 35px;
-      line-height: 35px;
-      font-size: 1.1em;
-      &:hover {
-        color: $colorwhite1;
-        border: 0;
-      }
-    }
-  }
-
-  .destinations {
-    width: 91%;
-    margin: 5px auto;
-    padding: 2.5%;
-  }
-  .destination {
-    width: 100%;
-  }
-  .destination-img {
-    width: 45%;
-    margin-right: 2%;
-  }
-  .destination-caption {
-    width: 50%;
-    display: inline-block;
-  }
-  .destination-title {
-    font-size: 0.8em;
-    line-height: 20px;
-  }
-  .destination-txt {
-    font-size: 0.75em;
-    float: none;
-  }
-
-  #filter-nav-sidebar {
-    position: unset;
-    bottom: unset;
-    width: 20%;
-    float: left;
-  }
-  #seasons,
-  #locations,
-  #prices,
-  #ratings {
-    width: 100%;
-  }
-  .filter-title {
-    width: 100%;
-    text-indent: 0;
-    color: $colorbgvar;
-    display: block;
-    font-size: 0.9em;
-    line-height: 35px;
-    margin: 0 auto;
-  }
-  .filter-list {
-    padding: 0;
-  }
-  .filter-list-item {
-    display: block;
-    width: 100%;
-    line-height: 35px;
-    height: 35px;
-    margin: 0;
-  }
-  #reset,
-  .filter-list-btn {
-    font-size: 0.85em;
-    line-height: 30px;
-  }
-
-  #about-page-banner {
-    width: 20%;
-    position: unset;
-    float: left;
-  }
-  .page-banner-img {
-    display: block;
-    border: none;
-  }
-  .page-banner {
-    margin: 0;
-  }
-  .page-banner-caption {
-    position: absolute;
-    padding: 5%;
-  }
-  .page-banner-title {
-    font-size: 1.2em;
-    line-height: 1.4em;
-    margin: 20px 0 10px;
-  }
-  .caption-img-span {
-    margin-bottom: 0.5em;
-    display: block;
-  }
-  .caption-img {
-    display: block;
-    border: none;
-  }
-  .page-banner-text {
-    font-size: 0.85em;
-    line-height: 1.4em;
-  }
-
-  #contact-page-sidebar {
-    width: 21%;
-    position: unset;
-    float: left;
-  }
-  #contact-details {
-    gap: 0.25em;
-    padding: 0.5em;
-
-    .addr-link {
-      line-height: 20px;
-      font-size: 0.7em;
-      width: 68%;
-    }
-    p {
-      font-size: 0.7em;
-      width: 68%;
-      &::before {
-        content: "";
-        height: 100%;
-      }
-    }
-    .addr-title {
-      line-height: 20px;
-      font-size: 0.8em;
-      &::before {
-        font-size: 2em;
-        margin-right: 0.25em;
-      }
-    }
-  }
-
-  #home-page-content {
-    width: 70%;
-    height: auto;
-    display: inline-block;
-    margin: 1% 0;
-    min-height: 740px;
-  }
-  #banner {
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
-  #banner-img {
-    width: 100%;
-  }
-
-  #holiday-offers {
-    flex-flow: row wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  #holiday-offers-title {
-    font-size: 1.1em;
-    height: 55px;
-    line-height: 55px;
-    text-indent: 0;
-  }
-
-  .offer-item-div {
-    margin: 0.25em;
-    width: 30%;
-  }
-  .offer-item {
-    display: block;
-    width: 100%;
-    margin: 2% 0;
-  }
-  .offer-item-img {
-    width: auto;
-    margin: 0 auto;
-    display: block;
-  }
-  .offer-item-caption {
-    padding: 0.5em 0;
-    display: block;
-  }
-  .offer-item-text {
-    font-size: 0.9em;
-    text-align: center;
-    margin: 0;
-    height: 30px;
-    line-height: 30px;
-  }
-  .offer-item-text:nth-of-type(2) {
-    color: $colorblue5;
-    font-weight: bold;
-    .offer-item-price {
-      color: $colorbtn1;
-    }
-  }
-
-  #page-content,
-  #holiday-items {
-    width: 79%;
-    float: right;
-    padding: 0.25em;
-  }
-
-  #contact-form {
-    width: 90%;
-    margin: 1em auto;
-  }
-  #contact-form-fields {
-    list-style: none;
-    padding: 0;
-  }
-  .contact-form-field {
-    margin: 5px 0 10px;
-  }
-  .contact-label {
-    font-size: 0.9em;
-    line-height: 37px;
-  }
-
-  #firstname,
-  #lastname,
-  #email,
-  #phone {
-    padding: 0;
-  }
-  #message {
-    border: 1px solid $colorgry2;
-  }
-  #contact-submit {
-    width: 50%;
-  }
-
-  .holiday-pkg-details {
-    display: flex;
-    flex-flow: row wrap;
-    width: 98%;
-  }
-  .holiday-pkg-title {
-    width: 50%;
-    font-size: 1.15em;
-    text-indent: 0;
-    text-align: left;
-    line-height: 40px;
-  }
-  .holiday-pkg-item {
-    width: 100%;
-    margin: 0;
-  }
-  .holiday-pkg-img {
-    width: auto;
-    float: left;
-    margin-right: 0.25em;
-  }
-  .holiday-pkg-caption {
-    width: 60%;
-    display: inline-block;
-    .holiday-pkg-txt {
-      font-size: 0.9em;
-      text-align: left;
-      line-height: 25px;
-    }
-
-    .holiday-pkg-txt:first-of-type {
-      text-align: left;
-      font-weight: bold;
-      line-height: 35px;
-      font-size: 1em;
-    }
-
-    .holiday-pkg-link {
-      font-size: 1em;
-      line-height: 45px;
-      margin: 0;
-      width: 30%;
-      &:hover {
-        font-weight: bold;
-        margin: 0;
-      }
-    }
-  }
-
-  .holiday-pkg-price {
-    font-size: 1em;
-    width: 22%;
-    text-align: left;
-  }
-  .holiday-pkg-offer {
-    font-weight: bold;
-  }
-
-  .bestdeal-details {
-    width: 48%;
-    float: left;
-    margin: 0.25em;
-  }
-  .bestdeal-details-title {
-    font-size: 0.85em;
-    text-align: left;
-  }
-  .bestdeal-details-item {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .bestdeal-details-img {
-    width: 35%;
-  }
-  .bestdeal-details-caption {
-    width: 60%;
-    display: inline-block;
-  }
-  .bestdeal-text {
-    font-size: 0.85em;
-    text-align: left;
-  }
-  .bestdeal-link {
-    font-size: 1em;
-    line-height: 35px;
-    margin: 0.5em 0;
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  .bestdeal-details-price {
-    font-size: 0.85em;
-    text-align: left;
-  }
-  .bestdeal-offer {
-    color: $colorbtn4;
-    font-size: 90%;
-  }
-
-  .services-card {
-    width: 32%;
-    float: left;
-    margin: 0.1em;
-  }
-  .services-card-title {
-    font-size: 0.9em;
-    height: auto;
-    text-indent: 0.2em;
-    line-height: 35px;
-  }
-  .services-card-item {
-    width: 100%;
-  }
-  .service-box-img {
-    width: auto;
-    margin: auto;
-    display: block;
-  }
-  .services-card-caption {
-    margin: 0;
-  }
-  .services-card-text {
-    font-size: 0.9em;
-    line-height: 1.8em;
-  }
-  .services-card-link {
-    font-size: 0.75em;
-    line-height: 30px;
-    width: auto;
-    &:hover {
-      font-weight: bold;
-    }
-  }
-
-  #site-footer {
-    height: 40px;
-  }
-  #site-inner-footer {
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-  }
-  .inner-footer-item {
-    width: 16.5707%;
-  }
-  .footer-nav-item {
-    font-size: 0.75em;
-    line-height: 40px;
-    &:link {
-      font-weight: bold;
-    }
-    &:active {
-      font-weight: bold;
-    }
-    &:hover {
-      cursor: pointer;
-      font-weight: bold;
-    }
-  }
-}
-
-@media screen and (min-width: 830px) and (max-width: 937px) {
-  #wrapper {
-    min-height: 1220px;
-    width: 100%;
-  }
-  #site-header {
-    height: 60px;
-    margin-bottom: 0.5em;
-  }
-  #logo {
-    align-items: flex-end;
-  }
-  #logo-img {
-    display: block;
-  }
-  #logo-title {
-    width: 100%;
-  }
-  .logo-span:first-of-type {
-    font-size: 1em;
-  }
-  .logo-span:last-of-type {
-    font-size: 1.15em;
-  }
-
-  .contact {
-    width: 16%;
-  }
-  .telephone-number {
-    line-height: 30px;
-    height: 30px;
-    display: block;
-  }
-  #contact-number {
-    font-size: 0.8em;
-
-    &:active {
-      color: $colorwhite2;
-    }
-    &:link {
-      color: $colorwhite2;
-      background-color: unset;
-    }
-  }
-  #contact-number::before {
-    margin: 0.2em;
-    height: 24px;
-  }
-  #opening-time {
-    line-height: 27px;
-    font-size: 0.7em;
-    font-weight: bold;
-  }
-
-  #site-navigation {
-    opacity: 1;
-    flex-direction: row;
-  }
-  #site-inner-nav {
-    width: 84%;
-    float: left;
-    display: flex;
-    flex-direction: row;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    position: unset;
-    opacity: 1;
-    padding: 0;
-  }
-  .site-inner-nav-item {
-    width: 16%;
-    float: left;
-    margin-right: 0.1em;
-    margin-bottom: 0;
-    .nav-item {
-      font-size: 0.8em;
-      height: 38px;
-      line-height: 40px;
-      &:hover {
-        box-shadow: none;
-        height: 38px;
-        line-height: 40px;
-      }
-    }
-  }
-  .site-inner-nav-item:nth-of-type(2) {
-    padding-top: 0;
-    .nav-item {
-      padding-top: 0;
-      font-size: 0.6em;
-      height: 38px;
-      line-height: 40px;
-      &:hover {
-        line-height: 40px;
-        height: 38px;
-      }
-    }
-  }
-
-  #language-select {
-    width: 16%;
-    padding-left: 0.25em;
-  }
-  #language-selector {
-    height: 40px;
-
-    label {
-      font-size: 0.6em;
-    }
-
-    #flag-img {
-      width: auto;
-    }
-
-    select {
-      line-height: 35px;
-      width: 30%;
-      option {
-        font-size: 1em;
-      }
-    }
-  }
-
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: all 1s ease;
-  }
-  .fade-enter {
-    transition: all 5s ease-in-out;
-    left: 10px;
-  }
-  .fade-leave-to,
-  .fade-leave {
-    transition: all 1s ease;
-    left: -650px;
-    opacity: 0;
-  }
-
-  #toggle-menu {
-    display: none;
-  }
-
-  #side-bar-btn {
-    display: none;
-  }
-
-  #contact-bar-btn {
-    display: none;
-  }
-
-  #home-page-sidebar {
-    width: 30%;
-    height: auto;
-    float: left;
-    padding-top: 1%;
-    position: unset;
-  }
-  .holiday-search-sidebar {
-    width: 96%;
-  }
-  #holiday-search-title {
-    font-size: 1em;
-    width: 100%;
-  }
-  #holiday-search-form {
-    padding: 2%;
-
-    .label-wide {
-      font-size: 0.8em;
       span {
         display: block;
       }
@@ -4562,11 +4570,11 @@
     display: inline-block;
   }
   .destination-title {
-    font-size: 0.75em;
+    font-size: 0.85em;
     line-height: 20px;
   }
   .destination-txt {
-    font-size: 0.7em;
+    font-size: 0.85em;
     float: none;
   }
 
@@ -4587,7 +4595,7 @@
     text-indent: 0;
     color: $colorbgvar;
     display: block;
-    font-size: 0.85em;
+    font-size: 1em;
     line-height: 35px;
     margin: 0 auto;
   }
@@ -4598,12 +4606,12 @@
     display: block;
     width: 100%;
     line-height: 30px;
-    height: 30px;
+    height: 35px;
     margin: 0;
   }
   #reset,
   .filter-list-btn {
-    font-size: 0.8em;
+    font-size: 0.9em;
     line-height: 30px;
   }
 
@@ -4615,7 +4623,7 @@
   .page-banner-img {
     display: block;
     border: none;
-    padding-top: 60px;
+
   }
   .page-banner {
     margin: 0;
@@ -4625,7 +4633,7 @@
     padding: 5%;
   }
   .page-banner-title {
-    font-size: 1.1em;
+    font-size: 1.2em;
     line-height: 1.4em;
     margin: 20px 0 10px;
   }
@@ -4638,7 +4646,7 @@
     border: none;
   }
   .page-banner-text {
-    font-size: 0.8em;
+    font-size: 0.85em;
     line-height: 1.4em;
   }
 
@@ -4652,12 +4660,12 @@
     padding: 0.25em;
 
     .addr-link {
-      line-height: 20px;
-      font-size: 0.7em;
+      line-height: 30px;
+      font-size: 0.9em;
       width: 80%;
     }
     p {
-      font-size: 0.7em;
+      font-size: 0.9em;
       width: 80%;
       &::before {
         content: "";
@@ -4665,8 +4673,8 @@
       }
     }
     .addr-title {
-      line-height: 20px;
-      font-size: 0.75em;
+      line-height: 30px;
+      font-size: 0.9em;
       &::before {
         font-size: 2em;
         margin-right: 0.25em;
@@ -4695,6 +4703,7 @@
     flex-flow: row wrap;
     align-items: flex-start;
     justify-content: flex-start;
+    gap: 0.25em;
   }
   #holiday-offers-title {
     font-size: 1.1em;
@@ -4722,7 +4731,7 @@
     display: block;
   }
   .offer-item-text {
-    font-size: 0.8em;
+    font-size: 0.9em;
     text-align: center;
     margin: 0;
     height: 30px;
@@ -4755,7 +4764,7 @@
     margin: 5px 0 10px;
   }
   .contact-label {
-    font-size: 0.85em;
+    font-size: 1em;
     line-height: 37px;
   }
 
@@ -4770,6 +4779,7 @@
   }
   #contact-submit {
     width: 50%;
+    font-size: 1.2em;
   }
 
   .holiday-pkg-details {
@@ -4779,7 +4789,7 @@
   }
   .holiday-pkg-title {
     width: 55%;
-    font-size: 1.15em;
+    font-size: 1.25em;
     text-indent: 0;
     text-align: left;
     line-height: 40px;
@@ -4848,6 +4858,7 @@
   }
   .bestdeal-details-img {
     width: 48%;
+    margin: 0 0.25em 0 0;
   }
   .bestdeal-details-caption {
     width: 60%;
@@ -4902,7 +4913,7 @@
     line-height: 1.8em;
   }
   .services-card-link {
-    font-size: 0.7em;
+    font-size: 0.9em;
     line-height: 30px;
     width: auto;
     &:hover {
@@ -4953,6 +4964,7 @@
   }
   #logo-title {
     width: 100%;
+    font-size:1.25em;
   }
   .logo-span:first-of-type {
     font-size: 1em;
@@ -4971,7 +4983,7 @@
   }
   #contact-number {
     width: 100%;
-    font-size: 0.85em;
+    font-size: 0.95em;
     &:active {
       color: $colorwhite2;
     }
@@ -4984,7 +4996,7 @@
   }
   #opening-time {
     line-height: 27px;
-    font-size: 0.7em;
+    font-size: 0.85em;
     font-weight: bold;
   }
 
@@ -5001,6 +5013,7 @@
     position: unset;
     opacity: 1;
     padding: 0;
+    top:0;
   }
   .site-inner-nav-item {
     width: 16.3%;
@@ -5040,7 +5053,7 @@
     height: 40px;
 
     label {
-      font-size: 0.6em;
+      font-size: 0.7em;
     }
 
     #flag-img {
@@ -5094,14 +5107,14 @@
     width: 96%;
   }
   #holiday-search-title {
-    font-size: 1em;
+    font-size: 1.15em;
     width: 100%;
   }
   #holiday-search-form {
     padding: 2%;
 
     .label-wide {
-      font-size: 0.75em;
+      font-size: 0.85em;
       span {
         display: block;
       }
@@ -5109,7 +5122,7 @@
 
     .label-half {
       width: 48%;
-      font-size: 0.7em;
+      font-size: 0.85em;
     }
 
     .select-wide {
@@ -5159,11 +5172,11 @@
     display: inline-block;
   }
   .destination-title {
-    font-size: 0.75em;
+    font-size: 0.85em;
     line-height: 20px;
   }
   .destination-txt {
-    font-size: 0.7em;
+    font-size: 0.85em;
     float: none;
   }
 
@@ -5184,7 +5197,7 @@
     text-indent: 0;
     color: $colorbgvar;
     display: block;
-    font-size: 0.8em;
+    font-size: 0.9em;
     line-height: 35px;
     margin: 0 auto;
   }
@@ -5200,8 +5213,8 @@
   }
   #reset,
   .filter-list-btn {
-    font-size: 0.75em;
-    line-height: 25px;
+    font-size: 0.85em;
+    line-height: 30px;
   }
 
   #about-page-banner {
@@ -5212,7 +5225,7 @@
   .page-banner-img {
     display: block;
     border: none;
-    padding-top: 60px;
+
   }
   .page-banner {
     margin: 0;
@@ -5222,7 +5235,7 @@
     padding: 5%;
   }
   .page-banner-title {
-    font-size: 1.1em;
+    font-size: 1.05em;
     margin: 10px 0 10px;
   }
   .caption-img-span {
@@ -5291,9 +5304,10 @@
     flex-flow: row wrap;
     align-items: flex-start;
     justify-content: flex-start;
+    gap: 0.25em;
   }
   #holiday-offers-title {
-    font-size: 1.1em;
+    font-size: 1.2em;
     height: 55px;
     line-height: 55px;
     text-indent: 0;
@@ -5317,7 +5331,7 @@
     display: block;
   }
   .offer-item-text {
-    font-size: 0.8em;
+    font-size: 0.9em;
     text-align: center;
     margin: 0;
     height: 30px;
@@ -5364,7 +5378,7 @@
     border: 1px solid $colorgry2;
   }
   #contact-submit {
-    width: 50%;
+    width: 45%;
   }
 
   .holiday-pkg-details {
@@ -5374,7 +5388,7 @@
   }
   .holiday-pkg-title {
     width: 60%;
-    font-size: 1.1em;
+    font-size: 1.2em;
     text-indent: 0;
     text-align: left;
     line-height: 40px;
@@ -5443,6 +5457,7 @@
   }
   .bestdeal-details-img {
     width: 45%;
+    margin: 0 0.25em 0 0;
   }
   .bestdeal-details-caption {
     width: 50%;
@@ -5497,7 +5512,7 @@
     line-height: 1.8em;
   }
   .services-card-link {
-    font-size: 0.7em;
+    font-size: 0.9em;
     line-height: 30px;
     width: auto;
     &:hover {
@@ -5549,6 +5564,7 @@
   }
   #logo-title {
     width: 100%;
+    font-size:1.25em;
   }
   .logo-span:first-of-type {
     font-size: 1em;
@@ -5567,7 +5583,7 @@
   }
   #contact-number {
     width: 100%;
-    font-size: 0.85em;
+    font-size: 0.9em;
     &:active {
       color: $colorwhite2;
     }
@@ -5580,7 +5596,7 @@
   }
   #opening-time {
     line-height: 27px;
-    font-size: 0.7em;
+    font-size: 0.8em;
     font-weight: bold;
   }
 
@@ -5603,6 +5619,7 @@
     position: fixed;
     z-index: 100;
     padding: 0.5em;
+    top:100px;
   }
   .site-inner-nav-item {
     margin-bottom: 0.2em;
@@ -5629,13 +5646,13 @@
   }
 
   #language-select {
-    width: 25%;
+    width: 30%;
   }
   #language-selector {
     height: 40px;
 
     label {
-      font-size: 0.75em;
+      font-size: 0.85em;
     }
 
     #flag-img {
@@ -5677,10 +5694,10 @@
   }
 
   #toggle-menu {
-    height: 100px;
-    width: 60px;
-    left: 89vw;
-    top: 135px;
+    height: 50px;
+    width: 70px;
+    left: 45vw;
+    top: 0;
     font-size: 0.9em;
     &:hover {
       cursor: pointer;
@@ -5688,10 +5705,10 @@
   }
 
   #side-bar-btn {
-    height: 100px;
-    width: 60px;
-    left: 89vw;
-    top: 240px;
+    height: 50px;
+    width: 70px;
+    left: 57vw;
+    top: 0;
     &:hover {
       cursor: pointer;
     }
@@ -5769,17 +5786,17 @@
     margin: 0;
   }
   .destination-img {
-    width: 32%;
+    width: 49%;
   }
   .destination-caption {
     width: 50%;
     display: inline-block;
   }
   .destination-title {
-    font-size: 0.95em;
+    font-size: 0.9em;
   }
   .destination-txt {
-    font-size: 0.75em;
+    font-size: 0.85em;
   }
 
   #filter-nav-sidebar {
@@ -5902,9 +5919,10 @@
     width: 100%;
     height: auto;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     align-items: flex-start;
     justify-content: flex-start;
+    gap: 0.25em;
   }
   #holiday-offers-title {
     font-size: 1.4em;
@@ -5914,7 +5932,7 @@
 
   .offer-item-div {
     padding: 0;
-    width: 60%;
+    width: 48%;
     border-radius: 5px;
   }
   .offer-item {
@@ -5927,7 +5945,7 @@
     padding: 0.5em 0;
   }
   .offer-item-text {
-    font-size: 0.95em;
+    font-size: 1em;
     height: 30px;
     line-height: 30px;
   }
@@ -5984,7 +6002,7 @@
     width: 55%;
   }
   .holiday-pkg-title {
-    font-size: 1.1em;
+    font-size: 1.15em;
     text-align: center;
   }
   .holiday-pkg-item {
@@ -6049,6 +6067,7 @@
   }
   .bestdeal-link {
     font-size: 1em;
+    width:80%;
     &:hover {
       cursor: pointer;
     }
@@ -6064,15 +6083,16 @@
   }
 
   .services-card {
-    width: 43%;
+    width: 99%;
     float: left;
     margin: 0.2em;
   }
   .services-card-title {
-    font-size: 0.9em;
+    font-size: 1em;
     height: auto;
     text-indent: 0;
-    line-height: 25px;
+    text-align:center;
+    line-height: 30px;
   }
   .services-card-item {
     width: 100%;
@@ -6086,11 +6106,11 @@
     margin: 0;
   }
   .services-card-text {
-    font-size: 0.75em;
+    font-size: 0.85em;
     line-height: 1.8em;
   }
   .services-card-link {
-    font-size: 0.75em;
+    font-size: 0.9em;
     &:hover {
       font-weight: bold;
     }
@@ -6139,6 +6159,7 @@
   }
   #logo-title {
     width: 100%;
+    font-size:1.25em;
   }
   .logo-span:first-of-type {
     font-size: 1em;
@@ -6157,7 +6178,7 @@
   }
   #contact-number {
     width: 100%;
-    font-size: 0.85em;
+    font-size: 0.9em;
     &:active {
       color: $colorwhite2;
     }
@@ -6184,6 +6205,7 @@
     position: fixed;
     z-index: 100;
     padding: 0.5em;
+    top:100px;
     .show {
       left: 0;
       opacity: 1;
@@ -6267,10 +6289,10 @@
   }
 
   #toggle-menu {
-    height: 100px;
-    width: 60px;
-    left: 86vw;
-    top: 135px;
+    height: 50px;
+    width: 70px;
+    left: 44vw;
+    top: 0;
     font-size: 0.9em;
     &:hover {
       cursor: pointer;
@@ -6278,10 +6300,10 @@
   }
 
   #side-bar-btn {
-    height: 100px;
-    width: 50px;
-    left: 86vw;
-    top: 240px;
+    height: 50px;
+    width: 70px;
+    left: 57vw;
+    top: 0;
     &:hover {
       cursor: pointer;
     }
@@ -6492,9 +6514,10 @@
     width: 100%;
     height: auto;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     align-items: flex-start;
     justify-content: flex-start;
+    gap:0.2em;
   }
   #holiday-offers-title {
     font-size: 1.3em;
@@ -6504,7 +6527,7 @@
 
   .offer-item-div {
     padding: 0;
-    width: 60%;
+    width: 48%;
     border-radius: 5px;
   }
   .offer-item {
@@ -6517,7 +6540,7 @@
     padding: 0.5em 0;
   }
   .offer-item-text {
-    font-size: 0.85em;
+    font-size: 1em;
     height: 30px;
     line-height: 30px;
   }
@@ -6574,7 +6597,7 @@
     width: 65%;
   }
   .holiday-pkg-title {
-    font-size: 1.15em;
+    font-size: 1.2em;
   }
   .holiday-pkg-item {
     width: 100%;
@@ -6608,7 +6631,7 @@
   }
 
   .holiday-pkg-price {
-    font-size: 0.9em;
+    font-size: 1em;
     width: 45%;
     margin: auto;
   }
@@ -6638,6 +6661,7 @@
   }
   .bestdeal-link {
     font-size: 1em;
+    width:70%;
     &:hover {
       cursor: pointer;
     }
@@ -6651,13 +6675,14 @@
   }
 
   .services-card {
-    width: 55%;
+    width: 95%;
   }
   .services-card-title {
-    font-size: 0.9em;
+    font-size: 1em;
     height: auto;
     text-indent: 0;
-    line-height: 25px;
+    text-align:center;
+    line-height: 30px;
   }
   .services-card-item {
     width: 100%;
@@ -6671,11 +6696,11 @@
     margin: 0;
   }
   .services-card-text {
-    font-size: 0.75em;
+    font-size: 0.9em;
     line-height: 1.8em;
   }
   .services-card-link {
-    font-size: 0.75em;
+    font-size: 0.9em;
     &:hover {
       font-weight: bold;
     }
@@ -6724,6 +6749,7 @@
   }
   #logo-title {
     width: 100%;
+    font-size:1.25em;
   }
   .logo-span:first-of-type {
     font-size: 1em;
@@ -6769,6 +6795,7 @@
     position: fixed;
     z-index: 100;
     padding: 0.5em;
+    top:100px;
     .show {
       left: 0;
       opacity: 1;
@@ -6852,10 +6879,10 @@
   }
 
   #toggle-menu {
-    height: 100px;
-    width: 50px;
-    left: 86vw;
-    top: 135px;
+    height: 50px;
+    width: 70px;
+    left: 43vw;
+    top: 0;
     font-size: 0.9em;
     &:hover {
       cursor: pointer;
@@ -6863,10 +6890,10 @@
   }
 
   #side-bar-btn {
-    height: 100px;
-    width: 50px;
-    left: 86vw;
-    top: 240px;
+    height: 50px;
+    width: 70px;
+    left: 57vw;
+    top: 0;
     &:hover {
       cursor: pointer;
     }
@@ -7194,7 +7221,7 @@
   }
 
   .holiday-pkg-price {
-    font-size: 0.9em;
+    font-size: 1em;
     width: 50%;
     margin: auto;
   }
@@ -7236,14 +7263,15 @@
   }
 
   .services-card {
-    width: 60%;
+    width: 95%;
     float: none;
   }
   .services-card-title {
-    font-size: 0.85em;
+    font-size: 1em;
     height: auto;
     text-indent: 0;
-    line-height: 25px;
+    text-align:center;
+    line-height: 30px;
   }
   .services-card-item {
     width: 100%;
@@ -7257,12 +7285,12 @@
     margin: 0;
   }
   .services-card-text {
-    font-size: 0.75em;
+    font-size: 0.85em;
     width: 100%;
     line-height: 1.8em;
   }
   .services-card-link {
-    font-size: 0.75em;
+    font-size: 0.9em;
     &:hover {
       font-weight: bold;
     }
