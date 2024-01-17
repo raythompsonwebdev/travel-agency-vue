@@ -9,11 +9,7 @@
       class="offer-item-div"
     >
       <figure class="offer-item">
-        <img
-          :src="featuredholiday.url"
-          :alt="'images'"
-          class="offer-item-img"
-        />
+        <img :src="featuredholiday.url" :alt="'img'" class="offer-item-img" />
 
         <figcaption class="offer-item-caption">
           <p class="offer-item-text">{{ featuredholiday.text }}</p>

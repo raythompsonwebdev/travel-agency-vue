@@ -132,9 +132,9 @@ export default {
   data() {
     return {
       show: "true",
-      customerService: require("@/assets/images/travel-agency-website-customer-service-image.jpg"),
-      busTours: require("@/assets/images/travel-agency-website-bus-tours-image.jpg"),
-      hotelRoom: require("@/assets/images/travel-agency-website-hotel-room-image.jpg"),
+      customerService: require("@/assets/img/travel-agency-website-customer-service-image.jpg"),
+      busTours: require("@/assets/img/travel-agency-website-bus-tours-image.jpg"),
+      hotelRoom: require("@/assets/img/travel-agency-website-hotel-room-image.jpg"),
     };
   },
   methods: {

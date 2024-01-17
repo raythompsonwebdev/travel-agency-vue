@@ -22,7 +22,7 @@ yarn-error.log*
 
 src/assets/fonts/
 src/assets/icons/
-src/assets/images/
+src/assets/img/
 _assets/filter.txt
 build/
 .sass-cache/

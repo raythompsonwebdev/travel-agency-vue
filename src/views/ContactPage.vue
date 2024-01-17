@@ -37,9 +37,9 @@
 
 <script>
 import ContactForm from "@/components/ContactForm";
-import addressImage from "@/assets/images/Address.png";
-import envelopeImage from "@/assets/images/envelope.png";
-import telephoneImage from "@/assets/images/Telephone.png";
+import addressImage from "@/assets/img/Address.png";
+import envelopeImage from "@/assets/img/envelope.png";
+import telephoneImage from "@/assets/img/Telephone.png";
 export default {
   name: "ContactPage",
   components: {

@@ -35,8 +35,8 @@ export default {
   data() {
     return {
       show: "true",
-      bannerImage: require("@/assets/images/travel-agency-website-sidebar-banner-image.jpg"),
-      bannerImageLabel: require("@/assets/images/travel-agency-website-sidebar-banner-image-label.jpg"),
+      bannerImage: require("@/assets/img/travel-agency-website-sidebar-banner-image.jpg"),
+      bannerImageLabel: require("@/assets/img/travel-agency-website-sidebar-banner-image-label.jpg"),
     };
   },
 };

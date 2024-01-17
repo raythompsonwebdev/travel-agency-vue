@@ -1,10 +1,14 @@
 <template>
   <section class="holiday-search-sidebar">
     <h2 id="holiday-search-title">Holiday Search</h2>
-    <form id="holiday-search-form" @submit.prevent="onSubmit">
+    <form id="holiday-search-form">
       <label class="label-wide" for="locations">
         Where are you going ?
-        <select v-model="locations" name="locations" class="select-wide">
+        <select
+          v-model="searchform[0].locations"
+          name="locations"
+          class="select-wide"
+        >
           <option
             v-for="location in searchform[0].locations"
             :key="location.id"
@@ -17,7 +21,11 @@
 
       <label for="date" class="label-wide"
         ><span> When are you going ? </span>
-        <select v-model="date" name="date" class="select-date-year">
+        <select
+          v-model="searchform[1].date"
+          name="date"
+          class="select-date-year"
+        >
           <option
             v-for="date in searchform[1].date"
             :key="date.id"
@@ -26,7 +34,7 @@
             {{ date }}
           </option>
         </select>
-        <select id="select-month" v-model="month" name="month">
+        <select id="select-month" v-model="searchform[2].month" name="month">
           <option
             v-for="month in searchform[2].month"
             :key="month.id"
@@ -35,7 +43,11 @@
             {{ month }}
           </option>
         </select>
-        <select v-model="year" name="year" class="select-date-year">
+        <select
+          v-model="searchform[3].year"
+          name="year"
+          class="select-date-year"
+        >
           <option
             v-for="year in searchform[3].year"
             :key="year.id"
@@ -49,7 +61,11 @@
       <label class="label-wide" for="duration">
         Duration
 
-        <select v-model="duration" name="duration" class="select-wide">
+        <select
+          v-model="searchform[4].duration"
+          name="duration"
+          class="select-wide"
+        >
           <option
             v-for="duration in searchform[4].duration"
             :key="duration.id"
@@ -62,7 +78,7 @@
 
       <label class="label-half" for="board"
         >Board
-        <select v-model="board" name="board" class="select-half">
+        <select v-model="searchform[5].board" name="board" class="select-half">
           <option
             v-for="board in searchform[5].board"
             :key="board.id"
@@ -75,7 +91,7 @@
 
       <label class="label-half" for="star"
         >Star
-        <select v-model="star" name="star" class="select-half">
+        <select v-model="searchform[6].star" name="star" class="select-half">
           <option
             v-for="star in searchform[6].star"
             :key="star.id"
@@ -88,7 +104,11 @@
 
       <label class="label-half" for="adults"
         >Adults
-        <select v-model.number="adults" name="adults" class="select-half">
+        <select
+          v-model.number="searchform[7].adults"
+          name="adults"
+          class="select-half"
+        >
           <option
             v-for="adult in searchform[7].adults"
             :key="adult.id"
@@ -100,7 +120,11 @@
       </label>
       <label class="label-half" for="children"
         >Children 0-17
-        <select v-model.number="children" name="children" class="select-half">
+        <select
+          v-model.number="searchform[8].children"
+          name="children"
+          class="select-half"
+        >
           <option
             v-for="child in searchform[8].children"
             :key="child.id"

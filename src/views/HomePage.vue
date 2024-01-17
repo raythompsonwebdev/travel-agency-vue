@@ -24,7 +24,7 @@
 import SearchForm from "@/components/SearchForm.vue";
 import Destinations from "@/components/Destinations.vue";
 import FeaturedHolidays from "@/components/FeaturedHolidays.vue";
-import bannerImage from "@/assets/images/travel-agency-website-banner-image.jpg";
+import bannerImage from "@/assets/img/travel-agency-website-banner-image.jpg";
 import axios from "axios";
 
 export default {

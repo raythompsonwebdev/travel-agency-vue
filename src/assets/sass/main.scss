@@ -128,7 +128,7 @@
   }
 }
 #contact-number::before {
-  content: url("./assets/images/Telephone.png");
+  content: url("./assets/img/Telephone.png");
   float: left;
   display: block;
   margin: 0.2em;
@@ -763,7 +763,7 @@
     margin: 0;
     font-weight: bold;
     &::before {
-      content: url("./assets/images/Address.png");
+      content: url("./assets/img/Address.png");
       float: left;
       width: auto;
       display: block;
@@ -775,13 +775,13 @@
 
   .addr-title:nth-child(1) {
     &::before {
-      content: url("./assets/images/Telephone.png");
+      content: url("./assets/img/Telephone.png");
     }
   }
 
   .addr-title:nth-child(3n) {
     &::before {
-      content: url("./assets/images/envelope.png");
+      content: url("./assets/img/envelope.png");
     }
   }
 }

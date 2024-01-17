@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import phoneImage from "@/assets/images/Telephone.png";
+import phoneImage from "@/assets/img/Telephone.png";
 export default {
   name: "TravelHeader",
   data() {
@@ -30,7 +30,7 @@ export default {
       phoneNumber: "0208-365-1452",
       openTime: "Everyday 8am - 9pm",
       phoneImg: phoneImage,
-      image: require("@/assets/images/travel-agency-website-logo-copy.png"),
+      image: require("@/assets/img/travel-agency-website-logo-copy.png"),
     };
   },
 };
