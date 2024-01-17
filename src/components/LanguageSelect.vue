@@ -7,7 +7,7 @@
           id="flag-img"
           v-bind:src="
             selected !== ' '
-              ? `@/assets/img/flags/png/${selected}.png`
+              ? `../assets/img/flags/${selected}.png`
               : defaultImage
           "
           :alt="'flag image'"
@@ -38,7 +38,7 @@ export default {
   data() {
     return {
       selected: " ",
-      defaultImage: require(`@/assets/img/flags/default.jpg`),
+      defaultImage: require(`@/assets/img/flags/default.png`),
       languageselectitems: navdata.languageselectitems,
     };
   },
@@ -68,7 +68,7 @@ export default {
       this.selected = id;
     },
     imgUrlAlt(e) {
-      e.target.src = `./assets/img/flags/default.jpg`;
+      e.target.src = `./assets/img/flags/default.png`;
     },
   },
 };
