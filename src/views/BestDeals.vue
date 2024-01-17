@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import navdata from "@/data-json.json";
+import navdata from "@/assets/data-json.json";
 import BestDealItem from "@/components/BestDealItem.vue";
 import FilterNav from "@/components/FilterNav.vue";
 import axios from "axios";

@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  name: "TravelFooter",
+  name: "SideBanner",
   data() {
     return {
       show: "true",

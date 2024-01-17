@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import phoneImage from "../assets/images/Telephone.png";
+import phoneImage from "@/assets/images/Telephone.png";
 export default {
   name: "TravelHeader",
   data() {

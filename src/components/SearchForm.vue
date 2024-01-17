@@ -117,7 +117,7 @@
 </template>
 
 <script>
-import searchform from "../data-json.json";
+import searchform from "@/assets/data-json.json";
 // import axios from "axios";
 
 export default {
@@ -128,48 +128,48 @@ export default {
     };
   },
 
-  methods: {
-    onSubmit() {
-      if (
-        this.locations &&
-        this.date &&
-        this.month &&
-        this.year &&
-        this.duration &&
-        this.board &&
-        this.star &&
-        this.adults &&
-        this.children
-      ) {
-        const findHoliday = {
-          locations: this.locations,
-          date: this.date,
-          month: this.month,
-          year: this.year,
-          duration: this.duration,
-          board: this.board,
-          star: this.star,
-          adults: this.adults,
-          children: this.children,
-        };
+  // methods: {
+  //   // onSubmit() {
+  //   //   if (
+  //   //     this.locations &&
+  //   //     this.date &&
+  //   //     this.month &&
+  //   //     this.year &&
+  //   //     this.duration &&
+  //   //     this.board &&
+  //   //     this.star &&
+  //   //     this.adults &&
+  //   //     this.children
+  //   //   ) {
+  //   //     const findHoliday = {
+  //   //       locations: this.locations,
+  //   //       date: this.date,
+  //   //       month: this.month,
+  //   //       year: this.year,
+  //   //       duration: this.duration,
+  //   //       board: this.board,
+  //   //       star: this.star,
+  //   //       adults: this.adults,
+  //   //       children: this.children,
+  //   //     };
 
-        console.log(findHoliday);
+  //   //     console.log(findHoliday);
 
-        this.locations = null;
-        this.date = null;
-        this.month = null;
-        this.year = null;
-        this.duration = null;
-        this.board = null;
-        this.star = null;
-        this.adults = null;
-        this.children = null;
-      }
-    },
-    // SearchItemBtn(item) {
-    //   this.$emit("seasonClick", item);
-    // },
-  },
+  //   //     this.locations = null;
+  //   //     this.date = null;
+  //   //     this.month = null;
+  //   //     this.year = null;
+  //   //     this.duration = null;
+  //   //     this.board = null;
+  //   //     this.star = null;
+  //   //     this.adults = null;
+  //   //     this.children = null;
+  //   //   }
+  //   // },
+  //   // SearchItemBtn(item) {
+  //   //   this.$emit("seasonClick", item);
+  //   // },
+  // },
 };
 </script>
 

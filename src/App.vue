@@ -18,9 +18,9 @@
   <TravelFooter />
 </template>
 <script>
-import TravelNav from "@/components/travel-nav";
-import TravelHeader from "@/components/travel-header";
-import TravelFooter from "@/components/travel-footer";
+import TravelNav from "@/components/TravelNav";
+import TravelHeader from "@/components/TravelHeader";
+import TravelFooter from "@/components/TravelFooter";
 
 export default {
   name: "App",

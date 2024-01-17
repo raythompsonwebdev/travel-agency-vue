@@ -24,8 +24,8 @@ src/assets/fonts/
 src/assets/icons/
 src/assets/images/
 _assets/filter.txt
-spare/
-.sass-cache/1*
+build/
+.sass-cache/
 src/components/spare-components/*
 assets/
 

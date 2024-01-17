@@ -7,7 +7,7 @@
           id="flag-img"
           v-bind:src="
             selected !== ' '
-              ? `./assets/images/flags/png/${selected}.png`
+              ? `@/assets/images/flags/png/${selected}.png`
               : defaultImage
           "
           :alt="'flag image'"
@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import navdata from "@/data-json.json";
+import navdata from "@/assets/data-json.json";
 export default {
   name: "LanguageSelect",
   data() {
