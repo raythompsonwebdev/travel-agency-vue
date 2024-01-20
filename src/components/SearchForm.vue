@@ -4,13 +4,9 @@
     <form id="holiday-search-form">
       <label class="label-wide" for="locations">
         Where are you going ?
-        <select
-          v-model="searchform[0].locations"
-          name="locations"
-          class="select-wide"
-        >
+        <select name="locations" class="select-wide">
           <option
-            v-for="location in searchform[0].locations"
+            v-for="location in searchformdata[0].locations"
             :key="location.id"
             :value="location"
           >
@@ -21,35 +17,27 @@
 
       <label for="date" class="label-wide"
         ><span> When are you going ? </span>
-        <select
-          v-model="searchform[1].date"
-          name="date"
-          class="select-date-year"
-        >
+        <select name="date" class="select-date-year">
           <option
-            v-for="date in searchform[1].date"
+            v-for="date in searchformdata[1].date"
             :key="date.id"
             :value="date"
           >
             {{ date }}
           </option>
         </select>
-        <select id="select-month" v-model="searchform[2].month" name="month">
+        <select id="select-month" name="month">
           <option
-            v-for="month in searchform[2].month"
+            v-for="month in searchformdata[2].month"
             :key="month.id"
             :value="month"
           >
             {{ month }}
           </option>
         </select>
-        <select
-          v-model="searchform[3].year"
-          name="year"
-          class="select-date-year"
-        >
+        <select name="year" class="select-date-year">
           <option
-            v-for="year in searchform[3].year"
+            v-for="year in searchformdata[3].year"
             :key="year.id"
             :value="year"
           >
@@ -57,12 +45,12 @@
           </option>
         </select>
       </label>
-
+      <!--
       <label class="label-wide" for="duration">
         Duration
 
         <select
-          v-model="searchform[4].duration"
+          v-model="searchform1[4].duration"
           name="duration"
           class="select-wide"
         >
@@ -78,7 +66,7 @@
 
       <label class="label-half" for="board"
         >Board
-        <select v-model="searchform[5].board" name="board" class="select-half">
+        <select v-model="searchform1[5].board" name="board" class="select-half">
           <option
             v-for="board in searchform[5].board"
             :key="board.id"
@@ -91,7 +79,7 @@
 
       <label class="label-half" for="star"
         >Star
-        <select v-model="searchform[6].star" name="star" class="select-half">
+        <select v-model="searchform1[6].star" name="star" class="select-half">
           <option
             v-for="star in searchform[6].star"
             :key="star.id"
@@ -105,7 +93,7 @@
       <label class="label-half" for="adults"
         >Adults
         <select
-          v-model.number="searchform[7].adults"
+          v-model.number="searchform1[7].adults"
           name="adults"
           class="select-half"
         >
@@ -121,7 +109,7 @@
       <label class="label-half" for="children"
         >Children 0-17
         <select
-          v-model.number="searchform[8].children"
+          v-model.number="searchform1[8].children"
           name="children"
           class="select-half"
         >
@@ -133,7 +121,7 @@
             {{ child }}
           </option>
         </select>
-      </label>
+      </label> -->
 
       <input id="holiday-search-btn" type="submit" value="Find Holiday" />
     </form>
@@ -141,16 +129,22 @@
 </template>
 
 <script>
-import searchform from "@/assets/data-json.json";
+// import searchform1 from "@/assets/data-json.json";
 // import axios from "axios";
 
 export default {
   name: "SearchForm",
-  data() {
-    return {
-      searchform: searchform.searchform,
-    };
+  props: {
+    searchformdata: {
+      type: Array,
+      default: null,
+    },
   },
+  // data() {
+  //   return {
+  //     locations,
+  //   };
+  // },
 
   // methods: {
   //   // onSubmit() {

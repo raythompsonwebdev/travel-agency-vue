@@ -4,7 +4,7 @@
     <button id="side-bar-btn" @click="sideBarFunction">SIDE</button>
 
     <aside id="home-page-sidebar" class="hide">
-      <SearchForm />
+      <SearchForm :searchformdata="searchform" />
       <Destinations :destinationitems="destinationitems" />
     </aside>
 
@@ -38,6 +38,7 @@ export default {
     return {
       destinationitems: [],
       featuredholidayitems: [],
+      searchform: [],
       show: true,
       bannerImage,
     };
@@ -45,10 +46,14 @@ export default {
   async created() {
     const result = await axios.get("/api/home");
     const { data } = result;
+
+    console.log(data);
     const { destinationitems } = data[0];
     const { featuredholidayitems } = data[0];
+    const { searchform } = data[0];
     this.destinationitems = destinationitems;
     this.featuredholidayitems = featuredholidayitems;
+    this.searchform = searchform;
   },
   methods: {
     sideBarFunction(event) {

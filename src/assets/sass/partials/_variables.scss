@@ -1,5 +1,19 @@
 $colorwhite3: #f7f7f7;
 $colorwhite1: #ffffff;
+@font-face {
+  font-family: 'Signika-Regular';
+  font-style: normal;
+  font-display: swap;
+  src: local('Signika-Regular'), url(@/assets/fonts/Signika/static/Signika-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Signika-Variable';
+  font-style: normal;
+  font-display: swap;
+  src: local('Signika-Medium'), url(@/assets/fonts/Signika/Signika-VariableFont_GRAD,wght.ttf) format('truetype');
+}
+
 $colorwhite2: #fafafa;
 $color-base: #b3d4fc;
 $colorblue1: #4aa8f0;
@@ -28,4 +42,4 @@ $sideboxbg: #ebebe9;
 $sideboxbg1: #ecebe6;
 $sideboxborder: #ebece7;
 $sideboxbordercolvar: #ededeb;
-$font-style1: signika, "Open Sans", sans-serif;
+$font-style1: "Signika-Variable", arial, sans-serif;

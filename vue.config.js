@@ -11,6 +11,11 @@ module.exports = defineConfig({
       postcss: {
         // options here will be passed to postcss-loader
       },
+      // sass: {
+      //   data: `
+      //     @import "@/assets/css/sass/main.scss";
+      //   `,
+      // },
     },
   },
 });
