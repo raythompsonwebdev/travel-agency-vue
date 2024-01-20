@@ -1,6 +1,6 @@
 # travel-agency-vue
 
-![travel-agency-vue](/travel-agency-vue.jpg)
+![travel-agency-vue](/travel-agency-vue.png)
 
 # Description
 
