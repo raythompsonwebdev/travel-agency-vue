@@ -47,7 +47,6 @@ export default {
     const result = await axios.get("/api/home");
     const { data } = result;
 
-    console.log(data);
     const { destinationitems } = data[0];
     const { featuredholidayitems } = data[0];
     const { searchform } = data[0];

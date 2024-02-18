@@ -13,7 +13,8 @@
       <figcaption class="holiday-pkg-caption">
         <p class="holiday-pkg-txt">
           Location :
-          {{ holidaypackageitem.location }} &nbsp;&nbsp;&nbsp;&nbsp;Available :
+          {{ holidaypackageitem.location }} <br />
+          Available :
           {{ holidaypackageitem.available }}
         </p>
         <p class="holiday-pkg-txt">{{ holidaypackageitem.text }}</p>
@@ -22,8 +23,7 @@
           :to="{
             name: 'HolidayPackage',
             params: {
-              itemid: holidaypackageitem.itemid,
-              slug: holidaypackageitem.location,
+              itemid: holidaypackageitem.id,
             },
           }"
         >
@@ -40,7 +40,7 @@ export default {
   props: {
     holidaypackageitem: {
       type: Object,
-      default: null,
+      required: true,
     },
   },
   flushCom() {

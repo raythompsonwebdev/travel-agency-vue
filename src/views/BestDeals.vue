@@ -10,7 +10,7 @@
 
     <main id="holiday-items">
       <transition-group name="fade" tag="div">
-        <div v-for="bestdealitem in filteredPacks" :key="bestdealitem.itemid">
+        <div v-for="bestdealitem in filteredPacks" :key="bestdealitem.id">
           <BestDealItem :bestdealitem="bestdealitem" />
         </div>
       </transition-group>
@@ -97,6 +97,7 @@ export default {
   async created() {
     const result = await axios.get("/api/bestdeals");
     const { data } = result;
+    console.log(result);
     this.bestdealitems = data;
   },
 

@@ -22,7 +22,7 @@ const routes = [
     props: true,
   },
   {
-    path: "/holidaypackage/:itemid/:slug",
+    path: "/holidaypackage/:itemid",
     name: "HolidayPackage",
     component: HolidayPackage,
     props: true,
@@ -34,7 +34,7 @@ const routes = [
     props: true,
   },
   {
-    path: "/bestdeal/:itemid/:slug",
+    path: "/bestdeal/:itemid",
     name: "BestDeal",
     component: BestDeal,
     props: true,

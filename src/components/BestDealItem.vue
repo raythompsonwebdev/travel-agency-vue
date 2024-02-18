@@ -20,8 +20,8 @@
           :to="{
             name: 'BestDeal',
             params: {
-              itemid: bestdealitem.itemid,
-              slug: bestdealitem.location,
+              itemid: bestdealitem.id,
+              // slug: bestdealitem.location,
             },
           }"
         >

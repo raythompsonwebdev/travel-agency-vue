@@ -1,8 +1,6 @@
 @import "partials/base";
 @import "partials/variables";
 
-
-
 .skip-link {
   white-space: nowrap;
   margin: 1em auto;
@@ -130,7 +128,7 @@
   }
 }
 #contact-number::before {
-  content: url("./assets/img/Telephone.png");
+  content: url("./assets/img/contact/Telephone.png");
   float: left;
   display: block;
   margin: 0.2em;
@@ -765,7 +763,7 @@
     margin: 0;
     font-weight: bold;
     &::before {
-      content: url("./assets/img/Address.png");
+      content: url("./assets/img/contact/Address.png");
       float: left;
       width: auto;
       display: block;
@@ -777,13 +775,13 @@
 
   .addr-title:nth-child(1) {
     &::before {
-      content: url("./assets/img/Telephone.png");
+      content: url("./assets/img/contact/Telephone.png");
     }
   }
 
   .addr-title:nth-child(3n) {
     &::before {
-      content: url("./assets/img/envelope.png");
+      content: url("./assets/img/contact/envelope.png");
     }
   }
 }
@@ -983,11 +981,16 @@
 .holiday-pkg-item {
   width: 100%;
   margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5em;
 }
 .holiday-pkg-img {
   width: auto;
   display: block;
-  margin: 0.5em auto;
+  margin: 0;
   height: auto;
 }
 .holiday-pkg-caption {
@@ -1079,12 +1082,16 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  display: block;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5em;
 }
 .bestdeal-details-img {
   display: block;
-  margin: 0.5em auto;
-  width: auto;
+  margin: 0;
+  width: 48%;
 }
 .bestdeal-details-caption {
   width: 100%;
@@ -1888,10 +1895,9 @@
   .holiday-pkg-img {
     width: auto;
     float: left;
-    margin-right: 0.25em;
   }
   .holiday-pkg-caption {
-    width: 72%;
+    width: 70%;
     display: inline-block;
     .holiday-pkg-txt {
       font-size: 0.9em;
@@ -1977,17 +1983,18 @@
   .bestdeal-details-item {
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5em;
   }
   .bestdeal-details-img {
-    width: auto;
-    margin: 0 0.25em 0 0;
+    margin: 0;
+    width: 48%;
   }
   .bestdeal-details-caption {
-    width: 60%;
-    display: inline-block;
-    margin-bottom: 0.5em;
+    width: 49%;
+    margin: 0;
   }
   .bestdeal-text {
     font-size: 0.85em;
@@ -2543,7 +2550,6 @@
   .holiday-pkg-img {
     width: auto;
     float: left;
-    margin-right: 0.25em;
   }
   .holiday-pkg-caption {
     width: 65%;
@@ -2602,16 +2608,16 @@
   .bestdeal-details-item {
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
   .bestdeal-details-img {
+    margin: 0;
     width: 48%;
-    margin: 0 0.25em 0 0;
   }
   .bestdeal-details-caption {
-    width: 50%;
-    display: inline-block;
+    width: 49%;
   }
   .bestdeal-text {
     font-size: 0.85em;
@@ -3157,7 +3163,6 @@
   .holiday-pkg-img {
     width: auto;
     float: left;
-    margin-right: 0.25em;
   }
   .holiday-pkg-caption {
     width: 56%;
@@ -3209,16 +3214,16 @@
   .bestdeal-details-item {
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
   .bestdeal-details-img {
+    margin: 0;
     width: 48%;
-    margin: 0 0.25em 0 0;
   }
   .bestdeal-details-caption {
-    width: 60%;
-    display: inline-block;
+    width: 49%;
   }
   .bestdeal-text {
     font-size: 0.85em;
@@ -3756,7 +3761,6 @@
   .holiday-pkg-img {
     width: auto;
     float: left;
-    margin-right: 0.25em;
   }
   .holiday-pkg-caption {
     width: 62%;
@@ -3808,16 +3812,16 @@
   .bestdeal-details-item {
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
   .bestdeal-details-img {
-    width: 45%;
-    margin: 0 0.25em 0 0;
+    margin: 0;
+    width: 48%;
   }
   .bestdeal-details-caption {
-    width: 50%;
-    display: inline-block;
+    width: 49%;
   }
   .bestdeal-text {
     font-size: 0.8em;
@@ -4412,10 +4416,14 @@
     line-height: 35px;
   }
   .bestdeal-details-item {
-    display: block;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
   .bestdeal-details-img {
-    width: auto;
+    margin: 0;
+    width: 48%;
   }
   .bestdeal-details-caption {
     width: 100%;
@@ -5007,10 +5015,14 @@
     text-align: center;
   }
   .bestdeal-details-item {
-    display: inline-block;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
   .bestdeal-details-img {
-    width: auto;
+    margin: 0;
+    width: 48%;
   }
   .bestdeal-details-caption {
     width: 100%;
@@ -5598,10 +5610,14 @@
     font-size: 1em;
   }
   .bestdeal-details-item {
-    display: inline-block;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
   .bestdeal-details-img {
-    width: auto;
+    margin: 0;
+    width: 48%;
   }
   .bestdeal-details-caption {
     width: 100%;
