@@ -25,7 +25,7 @@
 
 <script>
 import axios from "axios";
-import navdata from "@/assets/data-json.json";
+import navdata from "@/assets/data/data-json.json";
 import HolidayPackageItem from "@/components/HolidayPackageItem.vue";
 import FilterNav from "@/components/FilterNav.vue";
 

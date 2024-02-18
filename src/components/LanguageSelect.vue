@@ -19,11 +19,11 @@
           aria-label="select country"
         >
           <option
-            v-for="(languageselectitem, i) in onChangeImg"
-            :key="i"
-            :value="languageselectitem.value"
+            v-for="languageitems in onChangeImg"
+            :key="languageitems.id"
+            :value="languageitems.value"
           >
-            {{ languageselectitem.text }}
+            {{ languageitems.text }}
           </option>
         </select>
       </label>
@@ -32,14 +32,15 @@
 </template>
 
 <script>
-import navdata from "@/assets/data-json.json";
 export default {
   name: "LanguageSelect",
+  props: {
+    languageitems: { type: Object, required: true },
+  },
   data() {
     return {
       selected: " ",
       defaultImage: require(`@/assets/img/flags/default.png`),
-      languageselectitems: navdata.languageselectitems,
     };
   },
   computed: {

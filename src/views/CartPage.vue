@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="cartItems.length > 0">
     <h1>{{ title }}</h1>
     <p>Text:</p>
     <CartList
@@ -9,6 +9,9 @@
     <button>Remove</button>
     <p>Total: ${{ totalPrice }}</p>
     <button>Proceed to checkout</button>
+  </div>
+  <div v-if="cartItems.length === 0">
+    You current have no items in your cart!
   </div>
 </template>
 

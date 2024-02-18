@@ -20,12 +20,12 @@ yarn-error.log*
 *.sln
 *.sw?
 
+public/
 src/assets/fonts/
 src/assets/icons/
 src/assets/img/
-_assets/filter.txt
+src/assets/data/
 build/
 .sass-cache/
-src/components/spare-components/*
-assets/
+
 

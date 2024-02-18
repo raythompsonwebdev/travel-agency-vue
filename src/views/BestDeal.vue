@@ -26,7 +26,9 @@
         </figure>
       </article>
     </div>
-    <NotFoundpage v-else />
+    <div v-else>
+      <NotFoundpage />
+    </div>
   </transition>
 </template>
 

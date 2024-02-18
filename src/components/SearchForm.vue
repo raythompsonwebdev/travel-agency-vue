@@ -6,7 +6,7 @@
         Where are you going ?
         <select name="locations" class="select-wide">
           <option
-            v-for="location in searchform[0].locations"
+            v-for="location in searchformdata.locations"
             :key="location.id"
             :value="location"
           >
@@ -19,7 +19,7 @@
         ><span> When are you going ? </span>
         <select name="date" class="select-date-year">
           <option
-            v-for="date in searchform[1].date"
+            v-for="date in searchformdata.date"
             :key="date.id"
             :value="date"
           >
@@ -28,7 +28,7 @@
         </select>
         <select id="select-month" name="month">
           <option
-            v-for="month in searchform[2].month"
+            v-for="month in searchformdata.month"
             :key="month.id"
             :value="month"
           >
@@ -37,7 +37,7 @@
         </select>
         <select name="year" class="select-date-year">
           <option
-            v-for="year in searchform[3].year"
+            v-for="year in searchformdata.year"
             :key="year.id"
             :value="year"
           >
@@ -49,13 +49,9 @@
       <label class="label-wide" for="duration">
         Duration
 
-        <select
-          v-model="searchform[4].duration"
-          name="duration"
-          class="select-wide"
-        >
+        <select name="duration" class="select-wide">
           <option
-            v-for="duration in searchform[4].duration"
+            v-for="duration in searchformdata.duration"
             :key="duration.id"
             :value="duration"
           >
@@ -66,9 +62,9 @@
 
       <label class="label-half" for="board"
         >Board
-        <select v-model="searchform[5].board" name="board" class="select-half">
+        <select name="board" class="select-half">
           <option
-            v-for="board in searchform[5].board"
+            v-for="board in searchformdata.board"
             :key="board.id"
             :value="board"
           >
@@ -79,9 +75,9 @@
 
       <label class="label-half" for="star"
         >Star
-        <select v-model="searchform[6].star" name="star" class="select-half">
+        <select name="star" class="select-half">
           <option
-            v-for="star in searchform[6].star"
+            v-for="star in searchformdata.star"
             :key="star.id"
             :value="star"
           >
@@ -92,13 +88,9 @@
 
       <label class="label-half" for="adults"
         >Adults
-        <select
-          v-model.number="searchform[7].adults"
-          name="adults"
-          class="select-half"
-        >
+        <select name="adults" class="select-half">
           <option
-            v-for="adult in searchform[7].adults"
+            v-for="adult in searchformdata.adults"
             :key="adult.id"
             :value="adult"
           >
@@ -108,13 +100,9 @@
       </label>
       <label class="label-half" for="children"
         >Children 0-17
-        <select
-          v-model.number="searchform[8].children"
-          name="children"
-          class="select-half"
-        >
+        <select name="children" class="select-half">
           <option
-            v-for="child in searchform[8].children"
+            v-for="child in searchformdata.children"
             :key="child.id"
             :value="child"
           >
@@ -129,22 +117,19 @@
 </template>
 
 <script>
-import data from "@/assets/data-json.json";
-// import axios from "axios";
-
 export default {
   name: "SearchForm",
-  // props: {
-  //   searchform: {
-  //     type: Array,
-  //     default: null,
-  //   },
-  // },
-  data() {
-    return {
-      searchform: data.searchform,
-    };
+  props: {
+    searchformdata: {
+      type: Object,
+      default: null,
+    },
   },
+  // data() {
+  //   return {
+  //     searchform,
+  //   };
+  // },
 
   // methods: {
   //   // onSubmit() {

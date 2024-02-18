@@ -58,16 +58,26 @@
       </li>
     </ul>
 
-    <LanguageSelect />
+    <LanguageSelect :languageitems="languageitems" />
   </nav>
 </template>
 
 <script>
 import LanguageSelect from "@/components/LanguageSelect.vue";
+import axios from "axios";
 export default {
   name: "TravelNav",
   components: {
     LanguageSelect,
+  },
+  data() {
+    return {
+      languageitems: [],
+    };
+  },
+  async created() {
+    const languagedata = await axios.get("/api/languages");
+    this.languageitems = languagedata;
   },
   methods: {
     naviFunction(e) {

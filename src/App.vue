@@ -12,7 +12,7 @@
       </transition>
     </router-view>
 
-    <div class="clearfix" />
+    <div class="clearfix"></div>
   </div>
 
   <TravelFooter />

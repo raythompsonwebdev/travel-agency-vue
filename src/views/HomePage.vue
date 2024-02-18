@@ -47,12 +47,15 @@ export default {
     const result = await axios.get("/api/home");
     const { data } = result;
 
+    const searchformdata = await axios.get("/api/searchform");
+
     const { destinationitems } = data[0];
     const { featuredholidayitems } = data[0];
-    const { searchform } = data[0];
+    const [searchformresult] = searchformdata.data;
+
     this.destinationitems = destinationitems;
     this.featuredholidayitems = featuredholidayitems;
-    this.searchform = searchform;
+    this.searchform = searchformresult;
   },
   methods: {
     sideBarFunction(event) {
