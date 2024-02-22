@@ -15,7 +15,7 @@
           Location :
           {{ holidaypackageitem.location }} <br />
           Available :
-          {{ holidaypackageitem.available }}
+          {{ holidaypackageitem.month }}
         </p>
         <p class="holiday-pkg-txt">{{ holidaypackageitem.text }}</p>
         <router-link

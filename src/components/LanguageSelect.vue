@@ -19,11 +19,11 @@
           aria-label="select country"
         >
           <option
-            v-for="languageitems in onChangeImg"
-            :key="languageitems.id"
-            :value="languageitems.value"
+            v-for="languageselectitems in onChangeImg"
+            :key="languageselectitems.id"
+            :value="languageselectitems.value"
           >
-            {{ languageitems.text }}
+            {{ languageselectitems.text }}
           </option>
         </select>
       </label>
@@ -35,7 +35,7 @@
 export default {
   name: "LanguageSelect",
   props: {
-    languageitems: { type: Object, required: true },
+    languageselectitems: { type: Array, required: true },
   },
   data() {
     return {
@@ -47,13 +47,13 @@ export default {
     onChangeImg() {
       if (this.selected === "default") {
         return this.languageselectitems;
-      } else if (this.selected === "United_Kingdom") {
+      } else if (this.selected === "Bangkok") {
         return this.languageselectitems;
       } else if (this.selected === "Germany") {
         return this.languageselectitems;
       } else if (this.selected === "United_States") {
         return this.languageselectitems;
-      } else if (this.selected === "Jamaica") {
+      } else if (this.selected === "India") {
         return this.languageselectitems;
       } else if (this.selected === "France") {
         return this.languageselectitems;

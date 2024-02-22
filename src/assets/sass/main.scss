@@ -17,16 +17,6 @@
   border: 1px solid $colorblk;
 }
 
-.hide {
-  left: -100%;
-  transition: all 1s ease;
-}
-.show {
-  left: 0;
-  opacity: 1;
-  transition: all 1s ease;
-}
-
 /* Wrapper */
 #wrapper {
   width: 100%;
@@ -42,7 +32,7 @@
 #site-header {
   width: 100%;
   height: 60px;
-  background-color: $colorwhite1;
+  background-color: $sideboxborder;
   margin-bottom: 0;
   display: flex;
   flex-flow: row wrap;
@@ -119,6 +109,8 @@
   text-decoration: none;
   color: $colorwhite3;
   text-align: center;
+  display: flex;
+  gap: 0.15em;
   &:link {
     color: $colorwhite2;
     background-color: unset;
@@ -129,7 +121,6 @@
 }
 #contact-number::before {
   content: url("./assets/img/contact/Telephone.png");
-  float: left;
   display: block;
   margin: 0.2em;
   height: 24px;
@@ -181,7 +172,17 @@
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
+  gap: 0.2em;
   padding: 0;
+  .show {
+    left: 0;
+    opacity: 1;
+    transition: all 1s ease;
+  }
+  .hide {
+    left: -650px;
+    transition: all 1s ease;
+  }
 }
 .site-inner-nav-item {
   list-style: none;
@@ -189,7 +190,6 @@
   flex: 0 1 auto;
   width: 100%;
   height: auto;
-  float: none;
   display: block;
   margin-bottom: 0.2em;
   .nav-item {
@@ -219,15 +219,15 @@
       text-decoration: none;
       width: 100%;
       text-align: center;
-      color: $colorwhite1;
-      background: linear-gradient(to bottom, $colorblue2 0%, $colorblue3 100%);
-      height: 40px;
+      color: $colorbtn1;
+      background: $colorwhite1;
+      height: 38px;
       line-height: 40px;
       font-weight: bold;
       text-shadow: none;
     }
     &:active {
-      color: $colorbtn;
+      color: $colorbtn1;
       background: $colorwhite1;
       text-shadow: none;
     }
@@ -235,13 +235,13 @@
 }
 .site-inner-nav-item:nth-of-type(2) {
   margin-bottom: 0.2em;
-
+  flex: 1 0 20%;
   .nav-item {
     font-size: 0.85em;
     line-height: 40px;
     height: 40px;
     &:hover {
-      height: 40px;
+      height: 38px;
       line-height: 40px;
       box-shadow: none;
     }
@@ -260,7 +260,7 @@
     font-size: 0.7em;
     line-height: 35px;
     height: 35px;
-    border: solid 1px $sideboxbordercolvar;
+    border: solid 2px $sideboxbordercolvar;
     display: flex;
     justify-content: space-between;
     text-indent: 0.2em;
@@ -388,7 +388,7 @@
   height: auto;
   margin-bottom: 0.5em;
   padding: 0;
-  border: solid 3px $sideboxborder;
+  border: solid 5px $sideboxborder;
   border-radius: 5px;
 }
 #holiday-search-title {
@@ -398,16 +398,31 @@
   margin: 0;
   color: $sideboxcolor1;
   padding: 0;
-  height: 40px;
-  line-height: 40px;
+  height: auto;
+  line-height: 30px;
   background-color: $sideboxborder;
   text-indent: 2%;
   width: 100%;
 }
+
+#holiday-destination-title {
+  font-size: 1.15em;
+  border-radius: 2px 2px 0 0;
+  text-align: left;
+  margin: 0;
+  color: $sideboxcolor1;
+  padding: 0;
+  height: auto;
+  line-height: 30px;
+  background-color: $colorwhite1;
+  text-indent: 2%;
+  width: 100%;
+}
+
 #holiday-search-form {
   width: 100%;
-  margin-top: 5px;
-  padding: 2%;
+  margin: 0;
+  padding: 0.5em;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -416,10 +431,11 @@
   .label-wide {
     width: 100%;
     color: $colorblk;
+    font-weight: bold;
     padding: 0;
     margin: 0;
     font-size: 0.85em;
-    line-height: 35px;
+    line-height: 30px;
     display: flex;
     flex-flow: row wrap;
     span {
@@ -434,19 +450,20 @@
     display: block;
     float: left;
     font-size: 0.85em;
-    line-height: 35px;
+    line-height: 30px;
+    font-weight: bold;
   }
 
   .select-wide {
     width: 100%;
-    height: 35px;
-    line-height: 35px;
+    height: 30px;
+    line-height: 30px;
     border: 1px solid $colorgry2;
   }
 
   .select-date-year {
     width: 29%;
-    height: 35px;
+    height: 30px;
     display: block;
     float: left;
     margin: 0;
@@ -455,7 +472,7 @@
 
   #select-month {
     width: 39%;
-    height: 35px;
+    height: 30px;
     display: block;
     margin: 0 0.15em;
     border: 1px solid $colorgry2;
@@ -476,12 +493,11 @@
       $colorsearchbtnroll 100%
     );
     transition: all 0.2s linear ease-in-out;
-    clear: left;
     border-radius: 5px;
-    margin: 5% auto;
-    width: 85%;
+    margin: 0.5em auto;
+    width: 70%;
     color: $colorwhite1;
-    height: 35px;
+    height: 45px;
     border: 1px solid $colorbtn1;
     display: block;
     font-size: 1.1em;
@@ -501,11 +517,11 @@
 
 /* home page destinations section */
 .destinations {
-  width: 91%;
+  width: 96%;
   height: auto;
   background-color: $sideboxbordercolvar;
   margin: 5px auto;
-  padding: 2.5%;
+  padding: 0.25em;
   display: block;
 }
 .destination {
@@ -513,7 +529,7 @@
   width: 100%;
 }
 .destination-img {
-  width: 32%;
+  width: 38%;
   float: left;
   display: block;
   margin: 0;
@@ -818,11 +834,11 @@
   font-size: 1em;
   color: $sideboxcolor1;
   margin: 0;
-  height: 60px;
-  line-height: 60px;
+  height: 45px;
+  line-height: 45px;
   letter-spacing: 0.05em;
   align-self: center;
-  text-align: center;
+  text-align: left;
   width: 100%;
 }
 .offer-item-div {
@@ -854,10 +870,12 @@
   margin: 0;
   height: 25px;
   line-height: 25px;
-}
-.offer-item-text:nth-of-type(2) {
   color: $colorblue3;
   font-weight: bold;
+}
+.offer-item-text:nth-of-type(2) {
+  color: $colorgry;
+  font-weight: normal;
   .offer-item-price {
     color: $colorbtn1;
   }
@@ -1466,6 +1484,8 @@
     font-size: 0.9em;
     line-height: 30px;
     height: 30px;
+    display: flex;
+    gap: 0.15em;
 
     &:active {
       color: $colorwhite2;
@@ -1490,19 +1510,18 @@
   }
   #site-inner-nav {
     width: 85%;
-    flex-direction: row;
+    flex-flow: row;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
     position: unset;
     top: 0;
     opacity: 1;
     padding: 0;
   }
   .site-inner-nav-item {
-    width: 16%;
-    float: left;
-    margin-right: 0.1em;
+    flex: 0 1 auto;
     margin-bottom: 0;
+    border-radius: 5px 5px 0 0;
     .nav-item {
       font-size: 0.9em;
       height: 38px;
@@ -1519,7 +1538,7 @@
     padding-top: 0;
     .nav-item {
       padding-top: 0;
-      font-size: 0.7em;
+      font-size: 0.9em;
       height: 38px;
       line-height: 40px;
       &:hover {
@@ -1592,11 +1611,11 @@
     width: 96%;
   }
   #holiday-search-title {
-    font-size: 1.1em;
+    font-size: 1.15em;
     width: 100%;
   }
   #holiday-search-form {
-    padding: 2%;
+    padding: 0.5em;
 
     .label-wide {
       font-size: 0.9em;
@@ -1611,29 +1630,29 @@
     }
 
     .select-wide {
-      height: 35px;
-      line-height: 35px;
+      height: 30px;
+      line-height: 30px;
     }
 
     .select-date-year {
       width: 29%;
-      height: 35px;
+      height: 30px;
     }
 
     #select-month {
       width: 39%;
-      height: 35px;
+      height: 30px;
       margin: 0 0.15em;
     }
 
     .select-half {
-      height: 35px;
+      height: 30px;
     }
 
     #holiday-search-btn {
-      width: 85%;
-      height: 35px;
-      font-size: 1.1em;
+      width: 70%;
+      height: 45px;
+      font-size: 1.2em;
       &:hover {
         color: $colorwhite1;
         border: 0;
@@ -1642,20 +1661,21 @@
   }
 
   .destinations {
-    width: 91%;
+    width: 96%;
     margin: 5px auto;
-    padding: 2.5%;
+    padding: 0.25em;
   }
   .destination {
     width: 100%;
+    display: flex;
+    gap: 0.25em;
   }
   .destination-img {
-    width: 32%;
-    margin-right: 2%;
+    width: 38%;
+    margin: 0;
   }
   .destination-caption {
     width: 50%;
-    display: inline-block;
   }
   .destination-title {
     font-size: 1em;
@@ -1801,8 +1821,8 @@
   }
   #holiday-offers-title {
     font-size: 1.3em;
-    height: 55px;
-    line-height: 55px;
+    height: 45px;
+    line-height: 45px;
     text-indent: 0;
   }
   .offer-item-div {
@@ -1829,10 +1849,12 @@
     margin: 0;
     height: 30px;
     line-height: 30px;
+    color: $colorblue3;
+    font-weight: bold;
   }
   .offer-item-text:nth-of-type(2) {
-    color: $colorblue5;
-    font-weight: bold;
+    color: $colorgry;
+
     .offer-item-price {
       color: $colorbtn1;
     }
@@ -2120,7 +2142,7 @@
     background: $colorbg;
   }
   #contact-number {
-    font-size: 0.9em;
+    font-size: 1em;
 
     &:active {
       color: $colorwhite2;
@@ -2147,20 +2169,20 @@
     width: 84%;
     float: left;
     display: flex;
-    flex-direction: row;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    flex-flow: row;
+    align-items: flex-start;
+    justify-content: flex-start;
     position: unset;
     top: 0;
     opacity: 1;
     padding: 0;
   }
   .site-inner-nav-item {
-    width: 16%;
-    float: left;
+    flex: 0 1 auto;
+    border-radius: 5px 5px 0 0;
     margin-bottom: 0;
     .nav-item {
-      font-size: 0.8em;
+      font-size: 0.85em;
       height: 38px;
       line-height: 40px;
       color: $colorwhite1;
@@ -2174,7 +2196,7 @@
     padding-top: 0;
     .nav-item {
       padding-top: 0;
-      font-size: 0.6em;
+      font-size: 0.85em;
       height: 38px;
       line-height: 40px;
       &:hover {
@@ -2248,11 +2270,11 @@
     width: 96%;
   }
   #holiday-search-title {
-    font-size: 1.1em;
+    font-size: 1.15em;
     width: 100%;
   }
   #holiday-search-form {
-    padding: 2%;
+    padding: 0.5em;
 
     .label-wide {
       font-size: 0.9em;
@@ -2267,29 +2289,29 @@
     }
 
     .select-wide {
-      height: 35px;
-      line-height: 35px;
+      height: 30px;
+      line-height: 30px;
     }
 
     .select-date-year {
       width: 29%;
-      height: 35px;
+      height: 30px;
     }
 
     #select-month {
       width: 39%;
-      height: 35px;
+      height: 30px;
       margin: 0 0.15em;
     }
 
     .select-half {
-      height: 35px;
+      height: 30px;
     }
 
     #holiday-search-btn {
-      width: 85%;
-      height: 35px;
-      font-size: 1.1em;
+      width: 70%;
+      height: 45px;
+      font-size: 1.2em;
       &:hover {
         color: $colorwhite1;
         border: 0;
@@ -2298,20 +2320,20 @@
   }
 
   .destinations {
-    width: 91%;
+    width: 96%;
     margin: 5px auto;
-    padding: 2.5%;
+    padding: 0.25em;
   }
   .destination {
     width: 100%;
+    display: flex;
+    gap: 0.25em;
   }
   .destination-img {
-    width: 35%;
-    margin-right: 2%;
+    width: 38%;
   }
   .destination-caption {
     width: 50%;
-    display: inline-block;
   }
   .destination-title {
     font-size: 1em;
@@ -2456,8 +2478,8 @@
   }
   #holiday-offers-title {
     font-size: 1.1em;
-    height: 55px;
-    line-height: 55px;
+    height: 45px;
+    line-height: 45px;
     text-indent: 0;
   }
 
@@ -2485,10 +2507,11 @@
     margin: 0;
     height: 30px;
     line-height: 30px;
+    color: $colorblue3;
+    font-weight: bold;
   }
   .offer-item-text:nth-of-type(2) {
-    color: $colorblue5;
-    font-weight: bold;
+    color: $colorgry;
     .offer-item-price {
       color: $colorbtn1;
     }
@@ -2740,7 +2763,7 @@
     display: block;
   }
   #contact-number {
-    font-size: 0.9em;
+    font-size: 1em;
 
     &:active {
       color: $colorwhite2;
@@ -2767,21 +2790,20 @@
     width: 84%;
     float: left;
     display: flex;
-    flex-direction: row;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    flex-flow: row;
+    align-items: flex-start;
+    justify-content: flex-start;
     position: unset;
     opacity: 1;
     padding: 0;
     top: 0;
   }
   .site-inner-nav-item {
-    width: 16%;
-    float: left;
-    margin-right: 0.1em;
+    flex: 0 1 auto;
+    border-radius: 5px 5px 0 0;
     margin-bottom: 0;
     .nav-item {
-      font-size: 0.8em;
+      font-size: 0.85em;
       height: 38px;
       line-height: 40px;
       &:hover {
@@ -2795,7 +2817,7 @@
     padding-top: 0;
     .nav-item {
       padding-top: 0;
-      font-size: 0.6em;
+      font-size: 0.85em;
       height: 38px;
       line-height: 40px;
       &:hover {
@@ -2871,7 +2893,7 @@
     width: 100%;
   }
   #holiday-search-form {
-    padding: 2%;
+    padding: 0.5em;
 
     .label-wide {
       font-size: 0.85em;
@@ -2886,28 +2908,29 @@
     }
 
     .select-wide {
-      height: 35px;
-      line-height: 35px;
+      height: 30px;
+      line-height: 30px;
     }
 
     .select-date-year {
       width: 29%;
-      height: 35px;
+      height: 30px;
     }
 
     #select-month {
       width: 39%;
-      height: 35px;
+      height: 30px;
       margin: 0 0.15em;
     }
 
     .select-half {
-      height: 35px;
+      height: 30px;
     }
 
     #holiday-search-btn {
-      width: 85%;
-      font-size: 1em;
+      width: 70%;
+      height: 45px;
+      font-size: 1.2em;
       &:hover {
         color: $colorwhite1;
         border: 0;
@@ -2916,20 +2939,20 @@
   }
 
   .destinations {
-    width: 91%;
+    width: 96%;
     margin: 5px auto;
-    padding: 2.5%;
+    padding: 0.25em;
   }
   .destination {
     width: 100%;
+    display: flex;
+    gap: 0.25em;
   }
   .destination-img {
     width: 49%;
-    margin-right: 2%;
   }
   .destination-caption {
     width: 48%;
-    display: inline-block;
   }
   .destination-title {
     font-size: 0.85em;
@@ -3069,8 +3092,8 @@
   }
   #holiday-offers-title {
     font-size: 1.1em;
-    height: 55px;
-    line-height: 55px;
+    height: 45px;
+    line-height: 45px;
     text-indent: 0;
   }
 
@@ -3098,10 +3121,11 @@
     margin: 0;
     height: 30px;
     line-height: 30px;
+    color: $colorblue3;
+    font-weight: bold;
   }
   .offer-item-text:nth-of-type(2) {
-    color: $colorblue5;
-    font-weight: bold;
+    color: $colorgry;
     .offer-item-price {
       color: $colorbtn1;
     }
@@ -3368,18 +3392,17 @@
   #site-inner-nav {
     width: 84%;
     float: left;
-    flex-direction: row;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    flex-flow: row;
+    align-items: flex-start;
+    justify-content: flex-start;
     position: unset;
     opacity: 1;
     padding: 0;
     top: 0;
   }
   .site-inner-nav-item {
-    width: 16.3%;
-    float: left;
-    margin-right: 0.1em;
+    flex: 0 1 auto;
+    border-radius: 5px 5px 0 0;
     margin-bottom: 0;
     .nav-item {
       font-size: 0.75em;
@@ -3397,7 +3420,7 @@
     padding-top: 0;
     .nav-item {
       padding-top: 0;
-      font-size: 0.55em;
+      font-size: 0.75em;
       height: 38px;
       line-height: 40px;
       &:hover {
@@ -3472,7 +3495,7 @@
     width: 100%;
   }
   #holiday-search-form {
-    padding: 2%;
+    padding: 0.5em;
 
     .label-wide {
       font-size: 0.85em;
@@ -3487,28 +3510,29 @@
     }
 
     .select-wide {
-      height: 35px;
-      line-height: 35px;
+      height: 30px;
+      line-height: 30px;
     }
 
     .select-date-year {
       width: 29%;
-      height: 35px;
+      height: 30px;
     }
 
     #select-month {
       width: 39%;
-      height: 35px;
+      height: 30px;
       margin: 0 0.15em;
     }
 
     .select-half {
-      height: 35px;
+      height: 30px;
     }
 
     #holiday-search-btn {
-      width: 85%;
-      font-size: 1em;
+      width: 70%;
+      height: 45px;
+      font-size: 1.2em;
       &:hover {
         color: $colorwhite1;
         border: 0;
@@ -3517,20 +3541,20 @@
   }
 
   .destinations {
-    width: 91%;
+    width: 96%;
     margin: 5px auto;
-    padding: 2.5%;
+    padding: 0.25em;
   }
   .destination {
     width: 100%;
+    display: flex;
+    gap: 0.25em;
   }
   .destination-img {
     width: 49%;
-    margin-right: 2%;
   }
   .destination-caption {
     width: 48%;
-    display: inline-block;
   }
   .destination-title {
     font-size: 0.85em;
@@ -3669,8 +3693,8 @@
   }
   #holiday-offers-title {
     font-size: 1.2em;
-    height: 55px;
-    line-height: 55px;
+    height: 45px;
+    line-height: 45px;
     text-indent: 0;
   }
   .offer-item-div {
@@ -3697,10 +3721,11 @@
     margin: 0;
     height: 30px;
     line-height: 30px;
+    color: $colorblue3;
+    font-weight: bold;
   }
   .offer-item-text:nth-of-type(2) {
-    color: $colorblue5;
-    font-weight: bold;
+    color: $colorgry;
     .offer-item-price {
       color: $colorbtn1;
     }
@@ -3991,6 +4016,18 @@
     z-index: 100;
     padding: 0.5em;
     top: 100px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    .show {
+      left: 0;
+      opacity: 1;
+      transition: all 1s ease;
+    }
+    .hide {
+      left: -650px;
+      transition: all 1s ease;
+    }
   }
   .site-inner-nav-item {
     margin-bottom: 0.2em;
@@ -4094,7 +4131,7 @@
     font-size: 1.15em;
   }
   #holiday-search-form {
-    padding: 2%;
+    padding: 0.5em;
 
     .label-wide {
       font-size: 0.9em;
@@ -4109,30 +4146,29 @@
     }
 
     .select-wide {
-      height: 35px;
-      line-height: 35px;
+      height: 30px;
+      line-height: 30px;
     }
 
     .select-date-year {
       width: 29%;
-      height: 35px;
+      height: 30px;
     }
 
     #select-month {
       width: 39%;
-      height: 35px;
+      height: 30px;
       margin: 0 0.15em;
     }
 
     .select-half {
-      height: 35px;
+      height: 30px;
     }
 
     #holiday-search-btn {
-      width: 85%;
-      height: 35px;
-      line-height: 35px;
-      font-size: 1.1em;
+      width: 70%;
+      height: 45px;
+      font-size: 1.2em;
       &:hover {
         color: $colorwhite1;
         border: 0;
@@ -4141,17 +4177,19 @@
   }
 
   .destinations {
-    width: 91%;
+    width: 96%;
+    padding: 0.25em;
   }
   .destination {
     margin: 0;
+    display: flex;
+    gap: 0.25em;
   }
   .destination-img {
     width: 49%;
   }
   .destination-caption {
     width: 50%;
-    display: inline-block;
   }
   .destination-title {
     font-size: 0.9em;
@@ -4288,8 +4326,8 @@
   }
   #holiday-offers-title {
     font-size: 1.4em;
-    height: 60px;
-    line-height: 60px;
+    height: 45px;
+    line-height: 45px;
   }
 
   .offer-item-div {
@@ -4310,9 +4348,11 @@
     font-size: 1em;
     height: 30px;
     line-height: 30px;
+    color: $colorblue3;
+    font-weight: bold;
   }
   .offer-item-text:nth-of-type(2) {
-    font-weight: bold;
+    color: $colorgry;
     .offer-item-price {
       color: $colorbtn1;
     }
@@ -4582,6 +4622,9 @@
     z-index: 100;
     padding: 0.5em;
     top: 100px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
     .show {
       left: 0;
       opacity: 1;
@@ -4694,8 +4737,7 @@
     font-size: 1.15em;
   }
   #holiday-search-form {
-    padding: 2%;
-
+    padding: 0.5em;
     .label-wide {
       font-size: 0.85em;
       span {
@@ -4709,30 +4751,29 @@
     }
 
     .select-wide {
-      height: 35px;
-      line-height: 35px;
+      height: 30px;
+      line-height: 30px;
     }
 
     .select-date-year {
       width: 29%;
-      height: 35px;
+      height: 30px;
     }
 
     #select-month {
       width: 39%;
-      height: 35px;
+      height: 30px;
       margin: 0 0.15em;
     }
 
     .select-half {
-      height: 35px;
+      height: 30px;
     }
 
     #holiday-search-btn {
-      width: 85%;
-      height: 35px;
-      line-height: 35px;
-      font-size: 1.1em;
+      width: 70%;
+      height: 45px;
+      font-size: 1.2em;
       &:hover {
         color: $colorwhite1;
         border: 0;
@@ -4741,17 +4782,19 @@
   }
 
   .destinations {
-    width: 91%;
+    width: 96%;
+    padding: 0.25em;
   }
   .destination {
     margin: 0;
+    display: flex;
+    gap: 0.25em;
   }
   .destination-img {
     width: 32%;
   }
   .destination-caption {
     width: 50%;
-    display: inline-block;
   }
   .destination-title {
     font-size: 0.95em;
@@ -4888,8 +4931,8 @@
   }
   #holiday-offers-title {
     font-size: 1.3em;
-    height: 60px;
-    line-height: 60px;
+    height: 45px;
+    line-height: 45px;
   }
 
   .offer-item-div {
@@ -4910,9 +4953,11 @@
     font-size: 1em;
     height: 30px;
     line-height: 30px;
+    color: $colorblue3;
+    font-weight: bold;
   }
   .offer-item-text:nth-of-type(2) {
-    font-weight: bold;
+    color: $colorgry;
     .offer-item-price {
       color: $colorbtn1;
     }
@@ -5176,6 +5221,9 @@
     z-index: 100;
     padding: 0.5em;
     top: 100px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
     .show {
       left: 0;
       opacity: 1;
@@ -5289,7 +5337,7 @@
     font-size: 1.15em;
   }
   #holiday-search-form {
-    padding: 2%;
+    padding: 0.5em;
 
     .label-wide {
       font-size: 0.85em;
@@ -5304,30 +5352,29 @@
     }
 
     .select-wide {
-      height: 35px;
-      line-height: 35px;
+      height: 30px;
+      line-height: 30px;
     }
 
     .select-date-year {
       width: 29%;
-      height: 35px;
+      height: 30px;
     }
 
     #select-month {
       width: 39%;
-      height: 35px;
+      height: 30px;
       margin: 0 0.15em;
     }
 
     .select-half {
-      height: 35px;
+      height: 30px;
     }
 
     #holiday-search-btn {
-      width: 85%;
-      height: 35px;
-      line-height: 35px;
-      font-size: 1.1em;
+      width: 70%;
+      height: 45px;
+      font-size: 1.2em;
       &:hover {
         color: $colorwhite1;
         border: 0;
@@ -5337,17 +5384,19 @@
 
   .destinations {
     display: none;
-    width: 91%;
+    width: 96%;
+    padding: 0.25em;
   }
   .destination {
     margin: 0;
+    display: flex;
+    gap: 0.25em;
   }
   .destination-img {
     width: 32%;
   }
   .destination-caption {
     width: 50%;
-    display: inline-block;
   }
   .destination-title {
     font-size: 0.95em;
@@ -5482,8 +5531,8 @@
   }
   #holiday-offers-title {
     font-size: 1.3em;
-    height: 60px;
-    line-height: 60px;
+    height: 45px;
+    line-height: 45px;
   }
   .offer-item-div {
     padding: 0;
@@ -5503,9 +5552,11 @@
     font-size: 1em;
     height: 30px;
     line-height: 30px;
+    color: $colorblue3;
+    font-weight: bold;
   }
   .offer-item-text:nth-of-type(2) {
-    font-weight: bold;
+    color: $colorgry;
     .offer-item-price {
       color: $colorbtn1;
     }

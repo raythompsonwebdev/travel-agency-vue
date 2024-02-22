@@ -1,7 +1,7 @@
 <template>
   <!--Destinations-->
   <section class="holiday-search-sidebar">
-    <h2 id="holiday-search-title">Top Destinations</h2>
+    <h2 id="holiday-destination-title">Top Destinations</h2>
     <div
       v-for="destination in destinationitems"
       :key="destination.id"

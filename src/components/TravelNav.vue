@@ -58,7 +58,7 @@
       </li>
     </ul>
 
-    <LanguageSelect :languageitems="languageitems" />
+    <LanguageSelect :languageselectitems="languageitems.data" />
   </nav>
 </template>
 
