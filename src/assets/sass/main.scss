@@ -572,9 +572,10 @@
   z-index: 100;
   bottom: 0;
   width: 85%;
-  margin-top: 0;
+  margin-top: 0.5em;
   transition: all 1s ease;
   height: auto;
+  padding: 0.5em;
 }
 #seasons,
 #locations,
@@ -584,7 +585,7 @@
 }
 .filter-title {
   text-indent: 0;
-  text-align: center;
+  text-align: left;
   color: $colorbgvar;
   display: block;
   font-size: 0.8em;
@@ -603,32 +604,35 @@
   text-transform: capitalize;
   transition: all 0.2s linear ease-in-out;
   width: 100%;
-  background: linear-gradient(
-    to bottom,
-    $sideboxborder,
-    0%,
-    $sideboxbordercolvar 100%
-  );
+  // background: linear-gradient(
+  //   to bottom,
+  //   $sideboxborder,
+  //   0%,
+  //   $sideboxbordercolvar 100%
+  // );
+  background: $sideboxbg;
   line-height: 25px;
   color: $colorblue2;
   letter-spacing: 0.02em;
   height: 25px;
   margin: 0;
-  &::before {
-    position: absolute;
-    content: "<<";
-    text-indent: 0.5em;
-  }
-  &:hover {
-    cursor: pointer;
-    font-weight: bold;
-    background: linear-gradient(
-      to bottom,
-      $sideboxbordercolvar,
-      0%,
-      $sideboxborder 100%
-    );
-  }
+  padding: 0.15em;
+  // &::before {
+  //   position: absolute;
+  //   content: "<<";
+  //   text-indent: 0.5em;
+  // }
+  // &:hover {
+  //   cursor: pointer;
+  //   font-weight: bold;
+  //   // background: linear-gradient(
+  //   //   to bottom,
+  //   //   $sideboxbordercolvar,
+  //   //   0%,
+  //   //   $sideboxborder 100%
+  //   // );
+  //   background: $sideboxborder;
+  // }
 }
 #reset,
 .filter-list-btn {
@@ -638,12 +642,13 @@
   text-transform: capitalize;
   transition: all 0.2s linear ease-in-out;
   width: 100%;
-  background: linear-gradient(
-    to bottom,
-    $colorwhite2,
-    0%,
-    $sideboxbordercolvar 100%
-  );
+  // background: linear-gradient(
+  //   to bottom,
+  //   $colorwhite2,
+  //   0%,
+  //   $sideboxbordercolvar 100%
+  // );
+  background: $colorwhite2;
   line-height: 25px;
   color: $colorblue2;
   letter-spacing: 0.02em;
@@ -652,12 +657,13 @@
   &:hover {
     cursor: pointer;
     font-weight: bold;
-    background: linear-gradient(
-      to bottom,
-      $sideboxbordercolvar,
-      0%,
-      $colorwhite2 100%
-    );
+    // background: linear-gradient(
+    //   to bottom,
+    //   $sideboxbordercolvar,
+    //   0%,
+    //   $colorwhite2 100%
+    // );
+    background: $sideboxborder;
   }
 }
 
@@ -973,7 +979,7 @@
 
 /* holidays packages */
 .holiday-pkg-details {
-  border: 2px $sideboxborder solid;
+  border: 5px $sideboxborder solid;
   margin: 0.5em auto;
   padding: 0.5em;
   border-radius: 5px;
@@ -1006,7 +1012,7 @@
   gap: 0.5em;
 }
 .holiday-pkg-img {
-  width: auto;
+  width: 145px;
   display: block;
   margin: 0;
   height: auto;
@@ -1078,7 +1084,7 @@
 
 /* best deals */
 .bestdeal-details {
-  border: 2px $sideboxborder solid;
+  border: 6px $sideboxborder solid;
   border-radius: 5px;
   padding: 0.25em;
   float: none;
@@ -1147,7 +1153,7 @@
 }
 .bestdeal-details-price {
   font-size: 0.9em;
-  line-height: 25px;
+  line-height: 30px;
   color: $colorgry2;
   font-weight: bold;
   width: 100%;
@@ -1159,7 +1165,7 @@
   color: $colorbtn4;
   font-weight: bold;
   font-size: 90%;
-  line-height: 25px;
+  line-height: 30px;
 }
 
 /* Services page */
@@ -1704,7 +1710,7 @@
     color: $colorbgvar;
     display: block;
     font-size: 1em;
-    line-height: 40px;
+    line-height: 30px;
     margin: 0 auto;
   }
   .filter-list {
@@ -1718,6 +1724,8 @@
     line-height: 35px;
     height: 35px;
     margin: 0;
+    margin: 0;
+    padding: 0.15em;
   }
   #reset,
   .filter-list-btn {
@@ -1915,11 +1923,11 @@
     margin: 0;
   }
   .holiday-pkg-img {
-    width: auto;
+    width: 145px;
     float: left;
   }
   .holiday-pkg-caption {
-    width: 70%;
+    width: 77%;
     display: inline-block;
     .holiday-pkg-txt {
       font-size: 0.9em;
@@ -1936,9 +1944,9 @@
 
     .holiday-pkg-link {
       font-size: 1em;
-      line-height: 45px;
+      line-height: 30px;
+      width: 25%;
       margin: 0;
-      width: 30%;
       &:hover {
         font-weight: bold;
         margin: 0;
@@ -2023,7 +2031,7 @@
     text-align: left;
   }
   .bestdeal-link {
-    width: 90%;
+    width: 65%;
     font-size: 1em;
     line-height: 35px;
     margin: 0.5em 0;
@@ -2035,11 +2043,12 @@
     text-align: left;
     font-size: 0.9em;
     width: 100%;
+    line-height: 20px;
   }
   .bestdeal-offer {
     color: $colorbtn4;
     font-size: 90%;
-    line-height: 25px;
+    line-height: 20px;
   }
 
   .services-card {
@@ -2362,7 +2371,7 @@
     color: $colorbgvar;
     display: block;
     font-size: 0.9em;
-    line-height: 40px;
+    line-height: 30px;
     margin: 0 auto;
   }
   .filter-list {
@@ -2571,11 +2580,11 @@
     margin: 0;
   }
   .holiday-pkg-img {
-    width: auto;
+    width: 145px;
     float: left;
   }
   .holiday-pkg-caption {
-    width: 65%;
+    width: 77%;
     display: inline-block;
     .holiday-pkg-txt {
       font-size: 0.9em;
@@ -2592,9 +2601,9 @@
 
     .holiday-pkg-link {
       font-size: 1em;
-      line-height: 45px;
+      line-height: 30px;
+      width: 25%;
       margin: 0;
-      width: 30%;
       &:hover {
         font-weight: bold;
         margin: 0;
@@ -2647,23 +2656,23 @@
     text-align: left;
   }
   .bestdeal-link {
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 35px;
     margin: 0.5em 0;
-    width: 90%;
+    width: 65%;
     &:hover {
       cursor: pointer;
     }
   }
   .bestdeal-details-price {
-    line-height: 25px;
+    line-height: 20px;
     font-size: 0.9em;
     text-align: left;
   }
   .bestdeal-offer {
     color: $colorbtn4;
     font-size: 90%;
-    line-height: 25px;
+    line-height: 20px;
   }
 
   .services-card {
@@ -2981,7 +2990,7 @@
     color: $colorbgvar;
     display: block;
     font-size: 1em;
-    line-height: 35px;
+    line-height: 30px;
     margin: 0 auto;
   }
   .filter-list {
@@ -3185,11 +3194,11 @@
     margin: 0;
   }
   .holiday-pkg-img {
-    width: auto;
+    width: 145px;
     float: left;
   }
   .holiday-pkg-caption {
-    width: 56%;
+    width: 77%;
     display: inline-block;
     .holiday-pkg-txt {
       font-size: 0.9em;
@@ -3206,8 +3215,8 @@
 
     .holiday-pkg-link {
       font-size: 1em;
-      line-height: 45px;
-      width: 35%;
+      line-height: 30px;
+      width: 25%;
       margin: 0;
       &:hover {
         font-weight: bold;
@@ -3233,7 +3242,7 @@
   .bestdeal-details-title {
     font-size: 0.9em;
     text-align: left;
-    line-height: 20px;
+    line-height: 25px;
   }
   .bestdeal-details-item {
     width: 100%;
@@ -3254,21 +3263,23 @@
     text-align: left;
   }
   .bestdeal-link {
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 35px;
     margin: 0.5em 0;
-    width: 80%;
+    width: 65%;
     &:hover {
       cursor: pointer;
     }
   }
   .bestdeal-details-price {
+    line-height: 20px;
     font-size: 0.9em;
     text-align: left;
   }
   .bestdeal-offer {
     color: $colorbtn4;
     font-size: 90%;
+    line-height: 20px;
   }
 
   .services-card {
@@ -3583,7 +3594,7 @@
     color: $colorbgvar;
     display: block;
     font-size: 0.9em;
-    line-height: 35px;
+    line-height: 30px;
     margin: 0 auto;
   }
   .filter-list {
@@ -3784,7 +3795,7 @@
     margin: 0;
   }
   .holiday-pkg-img {
-    width: auto;
+    width: 145px;
     float: left;
   }
   .holiday-pkg-caption {
@@ -3805,9 +3816,9 @@
 
     .holiday-pkg-link {
       font-size: 1em;
-      line-height: 45px;
+      line-height: 30px;
+      width: 25%;
       margin: 0;
-      width: 45%;
       &:hover {
         font-weight: bold;
         margin: 0;
@@ -3832,7 +3843,7 @@
   .bestdeal-details-title {
     font-size: 0.9em;
     text-align: left;
-    line-height: 20px;
+    line-height: 25px;
   }
   .bestdeal-details-item {
     width: 100%;
@@ -3856,18 +3867,20 @@
     font-size: 1em;
     line-height: 35px;
     margin: 0.5em 0;
-    width: 80%;
+    width: 65%;
     &:hover {
       cursor: pointer;
     }
   }
   .bestdeal-details-price {
+    line-height: 20px;
     font-size: 0.85em;
     text-align: left;
   }
   .bestdeal-offer {
     color: $colorbtn4;
     font-size: 90%;
+    line-height: 20px;
   }
 
   .services-card {
@@ -4211,7 +4224,7 @@
   }
   .filter-title {
     font-size: 0.85em;
-    line-height: 35px;
+    line-height: 30px;
   }
   .filter-list {
     width: 100%;
@@ -4453,7 +4466,7 @@
   .bestdeal-details-title {
     font-size: 1em;
     text-align: center;
-    line-height: 35px;
+    line-height: 25px;
   }
   .bestdeal-details-item {
     display: flex;
@@ -4473,7 +4486,7 @@
   }
   .bestdeal-link {
     font-size: 1em;
-    width: 80%;
+    width: 65%;
     &:hover {
       cursor: pointer;
     }
@@ -4481,11 +4494,12 @@
   .bestdeal-details-price {
     font-size: 0.9em;
     text-align: center;
-    line-height: 35px;
+    line-height: 30px;
   }
   .bestdeal-offer {
     color: $colorbtn4;
     font-size: 90%;
+    line-height: 30px;
   }
 
   .services-card {
@@ -4816,7 +4830,7 @@
   }
   .filter-title {
     font-size: 0.85em;
-    line-height: 35px;
+    line-height: 30px;
   }
   .filter-list {
     width: 100%;
@@ -5058,6 +5072,7 @@
   .bestdeal-details-title {
     font-size: 1em;
     text-align: center;
+    line-height: 25px;
   }
   .bestdeal-details-item {
     display: flex;
@@ -5077,7 +5092,7 @@
   }
   .bestdeal-link {
     font-size: 1em;
-    width: 70%;
+    width: 65%;
     &:hover {
       cursor: pointer;
     }
@@ -5085,9 +5100,11 @@
   .bestdeal-details-price {
     font-size: 0.8em;
     text-align: center;
+    line-height: 30px;
   }
   .bestdeal-offer {
     font-size: 90%;
+    line-height: 30px;
   }
 
   .services-card {
@@ -5659,6 +5676,7 @@
   }
   .bestdeal-details-title {
     font-size: 1em;
+    line-height: 25px;
   }
   .bestdeal-details-item {
     display: flex;
@@ -5678,16 +5696,18 @@
   }
   .bestdeal-link {
     font-size: 0.9em;
-    width: 60%;
+    width: 65%;
     &:hover {
       cursor: pointer;
     }
   }
   .bestdeal-details-price {
     font-size: 0.9em;
+    line-height: 30px;
   }
   .bestdeal-offer {
     font-size: 1em;
+    line-height: 30px;
   }
 
   .services-card {

@@ -13,8 +13,7 @@
       <figcaption class="holiday-pkg-caption">
         <p class="holiday-pkg-txt">
           Location :
-          {{ holidaypackageitem.location }} <br />
-          Available :
+          {{ holidaypackageitem.location }} Available :
           {{ holidaypackageitem.month }}
         </p>
         <p class="holiday-pkg-txt">{{ holidaypackageitem.text }}</p>
