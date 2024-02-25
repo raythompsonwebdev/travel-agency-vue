@@ -3,7 +3,7 @@
     <main id="cart-items">
       <transition-group name="fade" tag="div">
         <div v-for="cartitem in cartItems" :key="cartitem.id">
-          <CartItems :cartitem="cartitem" />
+          <!-- <CartItems :cartitem="cartitem" /> -->
         </div>
       </transition-group>
     </main>
@@ -12,18 +12,24 @@
 
 <script>
 // import axios from "axios";
-import CartItems from "@/components/CartItems";
+//import CartItems from "@/components/CartItems";
+import axios from "axios";
 
 export default {
   name: "CartPage",
   components: {
-    CartItems,
+    // CartItems,
   },
   data() {
     return {
       title: "Shopping Cart page",
       cartItems: {},
     };
+  },
+  async created() {
+    const result = await axios.get("/api/users/12345/cart");
+    const { data } = result;
+    this.cartItems = data;
   },
 };
 </script>
