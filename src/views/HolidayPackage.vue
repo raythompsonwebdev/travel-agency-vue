@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import NotFoundpage from "./NotFoundpage";
+import NotFoundpage from "../views/NotFoundpage.vue";
 import axios from "axios";
 
 export default {

@@ -8,6 +8,7 @@ import HolidayPackage from "@/views/HolidayPackage";
 import ContactPage from "@/views/ContactPage";
 import ServicePage from "@/views/ServicePage";
 import NotFoundpage from "@/views/NotFoundpage";
+import CartPage from "@/views/Cart";
 
 const routes = [
   {
@@ -60,11 +61,11 @@ const routes = [
     name: "NotFoundpage",
     component: NotFoundpage,
   },
-  // {
-  //   path: "/cart",
-  //   name: "CartPage",
-  //   component: CartPage,
-  // },
+  {
+    path: "/cart",
+    name: "CartPage",
+    component: CartPage,
+  },
 ];
 
 const router = createRouter({

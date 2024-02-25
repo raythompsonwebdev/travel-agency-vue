@@ -15,8 +15,6 @@
         </div>
       </transition-group>
     </main>
-
-    <div class="clearfix" />
   </div>
 </template>
 

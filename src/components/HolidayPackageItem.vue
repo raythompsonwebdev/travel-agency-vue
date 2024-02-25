@@ -1,5 +1,5 @@
 <template>
-  <article class="holiday-pkg-details">
+  <article v-if="holidaypackageitem" class="holiday-pkg-details">
     <h1 class="holiday-pkg-title">{{ holidaypackageitem.title }}</h1>
     <span class="holiday-pkg-price">
       <span class="holiday-pkg-offer">{{ holidaypackageitem.price }}</span>
