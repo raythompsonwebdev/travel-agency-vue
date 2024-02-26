@@ -12,10 +12,7 @@
     <main id="holiday-items">
       <!--HolidayPackage Item component -->
       <transition-group name="fade" tag="div">
-        <div
-          v-for="holidaypackageitem in filteredPacks"
-          :key="holidaypackageitem.location"
-        >
+        <div v-for="(holidaypackageitem, index) in filteredPacks" :key="index">
           <HolidayPackageItem :holidaypackageitem="holidaypackageitem" />
         </div>
       </transition-group>

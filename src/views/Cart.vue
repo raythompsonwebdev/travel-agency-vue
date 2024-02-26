@@ -1,29 +1,27 @@
 <template>
   <div class="Cart">
-    <main id="cart-items">
-      <transition-group name="fade" tag="div">
-        <div v-for="cartitem in cartItems" :key="cartitem.id">
-          <!-- <CartItems :cartitem="cartitem" /> -->
-        </div>
-      </transition-group>
-    </main>
+    <h2>{{ title }}</h2>
+    <transition-group name="fade" tag="div" id="cart-items">
+      <div v-for="(cartItem, index) in cartItems" :key="index">
+        <CartItems :cartItem="cartItem" />
+      </div>
+    </transition-group>
   </div>
 </template>
 
 <script>
-// import axios from "axios";
-//import CartItems from "@/components/CartItems";
+import CartItems from "@/components/CartItems";
 import axios from "axios";
 
 export default {
   name: "CartPage",
   components: {
-    // CartItems,
+    CartItems,
   },
   data() {
     return {
-      title: "Shopping Cart page",
-      cartItems: {},
+      title: "Cart page",
+      cartItems: [],
     };
   },
   async created() {
