@@ -52,7 +52,7 @@
           </label>
         </li>
         <li class="contact-form-field">
-          <input id="contact-submit" type="submit" value="submit" />
+          <input id="contact-submit" type="submit" value="SEND" />
         </li>
       </ul>
     </form>

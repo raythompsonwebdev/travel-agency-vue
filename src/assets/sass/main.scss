@@ -144,7 +144,7 @@
   display: flex;
   flex-direction: row;
   place-content: flex-end flex-end;
-  border-bottom: 2px solid $item-text-color;
+  border-bottom: 2px solid $text-color-two;
 }
 
 #site-navigation .show {
@@ -202,21 +202,27 @@
     height: 40px;
     line-height: 40px;
     color: $text-color-one;
-    background-image: linear-gradient($navgradient-bkg2, $navgradient-bkg1);
+    background: linear-gradient(#5bb3fd, #1180c5);
     transition: all 0.1s linear;
     display: block;
     font-weight: bold;
     letter-spacing: 0.03em;
-    &:link {
-      color: $text-color-one;
-      background-image: linear-gradient($navgradient-bkg1, $navgradient-bkg2);
-      text-shadow: none;
-    }
+    // &:link {
+    //   color: $nav-link-color;
+    //   background: $site-background;
+    //   text-shadow: none;
+    // }
     &:visited {
       font-weight: bold;
       color: $nav-link-color;
-      background-image: linear-gradient($site-background, $header-background);
+      background: $header-background;
       text-shadow: none;
+    }
+
+    &:active {
+      text-shadow: none;
+      color: $nav-link-color;
+      background: $header-background;
     }
 
     &:hover {
@@ -224,16 +230,11 @@
       width: 100%;
       text-align: center;
       color: $nav-link-color;
-      background: linear-gradient($site-background, $header-background);
+      background: $header-background;
       height: 38px;
       line-height: 40px;
       font-weight: bold;
       text-shadow: none;
-    }
-    &:active {
-      text-shadow: none;
-      color: $nav-link-color;
-      background-image: linear-gradient($site-background, $header-background);
     }
   }
 }
@@ -463,7 +464,7 @@
     width: 100%;
     height: 30px;
     line-height: 30px;
-    border: 1px solid $item-text-color;
+    border: 1px solid $text-color-two;
   }
 
   .select-date-year {
@@ -472,7 +473,7 @@
     display: block;
     float: left;
     margin: 0;
-    border: 1px solid $item-text-color;
+    border: 1px solid $text-color-two;
   }
 
   #select-month {
@@ -480,7 +481,7 @@
     height: 30px;
     display: block;
     margin: 0 0.15em;
-    border: 1px solid $item-text-color;
+    border: 1px solid $text-color-two;
     clear: both;
   }
 
@@ -488,7 +489,7 @@
     width: 100%;
     height: 35px;
     display: inline-block;
-    border: 1px solid $item-text-color;
+    border: 1px solid $text-color-two;
   }
 
   #holiday-search-btn {
@@ -745,8 +746,8 @@
   gap: 0.25em;
   width: 98%;
   height: auto;
-  border: 4px $itemborder solid;
-  margin: 0;
+  border: 7px $itemborder solid;
+  margin: 0.5em 0;
   padding: 0.5em;
   border-radius: 5px;
 
@@ -893,6 +894,15 @@
   padding: 0.25em;
 }
 
+.page-content-text {
+  color: $text-color-two;
+  font-weight: 100;
+}
+
+.page-content-title {
+  color: $header-color;
+}
+
 /* contact form errors */
 #contact-form-errors {
   width: 45%;
@@ -948,19 +958,19 @@
   padding: 0;
   margin: 0;
   line-height: 35px;
-  border: 1px solid $item-text-color;
+  border: 1px solid $text-color-two;
 }
 #message {
   width: 75%;
   line-height: 1.5em;
-  border: 1px solid $item-text-color;
+  border: 1px solid $text-color-two;
 }
 #contact-submit {
   width: 50%;
-  margin: 0.5em auto;
-  height: 30px;
+  height: 40px;
   transition: all 0.2s linear ease-in-out;
-  line-height: 30px;
+  line-height: 40px;
+  color: $site-background;
   background: linear-gradient(
     to bottom,
     $btngradient-bkg2 0%,
@@ -977,6 +987,7 @@
       $btngradient-bkg2 100%
     );
     cursor: pointer;
+    font-weight: bold;
   }
 }
 
@@ -996,7 +1007,7 @@
   margin: 0;
   width: 100%;
   line-height: 30px;
-  color: $navgradient-bkg2;
+  color: $package-title;
   align-self: flex-start;
   text-indent: 0.2em;
   text-align: center;
@@ -1027,10 +1038,11 @@
   .holiday-pkg-txt {
     font-size: 0.9em;
     line-height: 20px;
-    color: $item-text-color;
+    color: $text-color-two;
     text-transform: capitalize;
     text-align: left;
     margin: 0;
+    font-weight: 100;
   }
   .holiday-pkg-txt:first-of-type {
     font-size: 0.95em;
@@ -1048,7 +1060,7 @@
     font-size: 1em;
     text-decoration: none;
     padding: 0;
-    margin: 1em auto;
+    margin: 0.5em auto;
     line-height: 45px;
     border: 1px solid $item-price-color;
     background: linear-gradient(
@@ -1073,7 +1085,7 @@
 .holiday-pkg-price {
   font-size: 1em;
   display: block;
-  color: $item-text-color;
+  color: $text-color-two;
   line-height: 40px;
   text-align: center;
   width: 60%;
@@ -1108,7 +1120,7 @@
   height: auto;
   font-size: 0.9em;
   display: block;
-  color: $navgradient-bkg1;
+  color: $package-title;
   font-weight: bold;
   width: 100%;
   text-align: center;
@@ -1138,7 +1150,7 @@
   width: 100%;
   margin: 0;
   line-height: 25px;
-  color: $item-text-color;
+  color: $text-color-two;
   text-align: center;
 }
 .bestdeal-link {
@@ -1173,7 +1185,7 @@
 .bestdeal-details-price {
   font-size: 0.9em;
   line-height: 30px;
-  color: $item-text-color;
+  color: $text-color-two;
   font-weight: bold;
   width: 100%;
   display: block;
@@ -1201,7 +1213,7 @@
   margin: 0;
   width: 100%;
   background-color: $itemborder;
-  color: $navgradient-bkg2;
+  color: $header-color;
   height: auto;
   text-align: center;
   line-height: 30px;
@@ -1227,6 +1239,8 @@
   margin: 0.25em;
   width: 98%;
   line-height: 1.8em;
+  color: $text-color-two;
+  font-weight: 100;
 }
 .services-card-link {
   font-size: 0.9em;
@@ -1423,7 +1437,6 @@
 #site-footer {
   width: 100%;
   height: 40px;
-  color: $site-background;
   clear: both;
   display: block;
   margin: 0 auto;
@@ -1439,7 +1452,7 @@
   list-style: none;
   float: left;
   padding: 0;
-  width: 16.5707%;
+  width: 12.5707%;
   display: block;
 }
 .footer-nav-item {
@@ -1447,14 +1460,16 @@
   width: 100%;
   font-size: 0.4em;
   text-align: center;
+  font-weight: 100;
   height: 100%;
   line-height: 40px;
-  color: $colorblk;
+  color: $text-color-two;
   display: block;
+  text-shadow: 1px 1px #000;
+  letter-spacing: 0.05em;
   &:link {
     background-color: unset;
-    color: $colorblk;
-    font-weight: bold;
+    color: $text-color-two;
   }
   &:active {
     background-color: unset;
@@ -1463,7 +1478,6 @@
   &:hover {
     cursor: pointer;
     font-weight: bold;
-    color: $colorblk;
   }
 }
 
@@ -1888,7 +1902,7 @@
   }
 
   #contact-form {
-    width: 60%;
+    width: 90%;
     margin: 1em auto;
   }
   #contact-form-fields {
@@ -1914,8 +1928,9 @@
     width: 80%;
   }
   #contact-submit {
-    width: 60%;
-    font-size: 1.1em;
+    width: 20%;
+    font-size: 1.2em;
+    margin-left: 130px;
   }
 
   .holiday-pkg-details {
@@ -1958,10 +1973,9 @@
       font-size: 1em;
       line-height: 30px;
       width: 25%;
-      margin: 0;
+      margin: 0.5em 0;
       &:hover {
         font-weight: bold;
-        margin: 0;
       }
     }
   }
@@ -2069,10 +2083,11 @@
     margin: 0.1em;
   }
   .services-card-title {
-    font-size: 0.9em;
+    font-size: 1em;
     height: auto;
     text-indent: 0.2em;
     line-height: 35px;
+    text-align: left;
   }
   .services-card-item {
     width: 100%;
@@ -2161,10 +2176,10 @@
   #site-inner-footer {
     margin: 0 auto;
     padding: 0;
-    width: 60%;
+    width: 940px;
   }
   .inner-footer-item {
-    width: 16.5707%;
+    width: 12.5707%;
   }
   .footer-nav-item {
     font-size: 0.9em;
@@ -2615,11 +2630,12 @@
     padding: 0;
   }
   #message {
-    border: 1px solid $item-text-color;
+    border: 1px solid $text-color-two;
   }
   #contact-submit {
-    width: 50%;
+    width: 25%;
     font-size: 1.3em;
+    margin-left: 130px;
   }
 
   .holiday-pkg-details {
@@ -2662,10 +2678,9 @@
       font-size: 1em;
       line-height: 30px;
       width: 25%;
-      margin: 0;
+      margin: 0.5em 0;
       &:hover {
         font-weight: bold;
-        margin: 0;
       }
     }
   }
@@ -2739,10 +2754,11 @@
     margin: 0.1em;
   }
   .services-card-title {
-    font-size: 0.9em;
+    font-size: 1em;
     height: auto;
     text-indent: 0.2em;
     line-height: 35px;
+    text-align: left;
   }
   .services-card-item {
     width: 100%;
@@ -2835,10 +2851,10 @@
   #site-inner-footer {
     margin: 0 auto;
     padding: 0;
-    width: 60%;
+    width: 940px;
   }
   .inner-footer-item {
-    width: 16.5707%;
+    width: 12.5707%;
   }
   .footer-nav-item {
     font-size: 0.9em;
@@ -3279,11 +3295,12 @@
     padding: 0;
   }
   #message {
-    border: 1px solid $item-text-color;
+    border: 1px solid $text-color-two;
   }
   #contact-submit {
     width: 50%;
     font-size: 1.2em;
+    margin-left: 87px;
   }
 
   .holiday-pkg-details {
@@ -3326,10 +3343,9 @@
       font-size: 1em;
       line-height: 30px;
       width: 25%;
-      margin: 0;
+      margin: 0.5em 0;
       &:hover {
         font-weight: bold;
-        margin: 0;
       }
     }
   }
@@ -3397,10 +3413,11 @@
     margin: 0.1em;
   }
   .services-card-title {
-    font-size: 0.85em;
+    font-size: 0.9em;
     height: auto;
-    text-indent: 0.15em;
+    text-indent: 0.2em;
     line-height: 35px;
+    text-align: left;
   }
   .services-card-item {
     width: 100%;
@@ -3487,9 +3504,10 @@
   #site-inner-footer {
     margin: 0 auto;
     padding: 0;
+    width: 940px;
   }
   .inner-footer-item {
-    width: 16.5707%;
+    width: 12.5707%;
   }
   .footer-nav-item {
     font-size: 0.7em;
@@ -3926,7 +3944,7 @@
     padding: 0;
   }
   #message {
-    border: 1px solid $item-text-color;
+    border: 1px solid $text-color-two;
   }
   #contact-submit {
     width: 45%;
@@ -3972,10 +3990,9 @@
       font-size: 1em;
       line-height: 30px;
       width: 35%;
-      margin: 0;
+      margin: 0.5em 0;
       &:hover {
         font-weight: bold;
-        margin: 0;
       }
     }
   }
@@ -4043,10 +4060,11 @@
     margin: 0.1em;
   }
   .services-card-title {
-    font-size: 0.85em;
+    font-size: 0.9em;
     height: auto;
     text-indent: 0;
-    line-height: 25px;
+    line-height: 30px;
+    text-align: center;
   }
   .services-card-item {
     width: 100%;
@@ -4133,9 +4151,10 @@
   #site-inner-footer {
     margin: 0 auto;
     padding: 0;
+    width: 940px;
   }
   .inner-footer-item {
-    width: 16.5707%;
+    width: 12.5707%;
   }
   .footer-nav-item {
     font-size: 0.65em;
@@ -4650,8 +4669,10 @@
     .holiday-pkg-link {
       width: 50%;
       font-size: 1.2em;
+      margin: 0.5em 0;
       &:hover {
         cursor: pointer;
+        font-weight: bold;
       }
     }
   }
@@ -4802,9 +4823,10 @@
   #site-inner-footer {
     margin: 0 auto;
     padding: 0;
+    width: 940px;
   }
   .inner-footer-item {
-    width: 16.5707%;
+    width: 12.5707%;
   }
   .footer-nav-item {
     font-size: 0.6em;
@@ -5307,9 +5329,10 @@
     .holiday-pkg-link {
       width: 45%;
       font-size: 1.2em;
-      margin: 1em auto;
+      margin: 0.5em auto;
       &:hover {
         cursor: pointer;
+        font-weight: bold;
       }
     }
   }
@@ -5458,9 +5481,10 @@
   #site-inner-footer {
     margin: 0 auto;
     padding: 0;
+    width: 100%;
   }
   .inner-footer-item {
-    width: 16.5707%;
+    width: 12.5707%;
   }
   .footer-nav-item {
     font-size: 0.55em;
@@ -5966,9 +5990,10 @@
     .holiday-pkg-link {
       width: 50%;
       font-size: 1.2em;
-      margin: 1em auto;
+      margin: 0.5em auto;
       &:hover {
         cursor: pointer;
+        font-weight: bold;
       }
     }
   }
@@ -6118,9 +6143,10 @@
   #site-inner-footer {
     margin: 0 auto;
     padding: 0;
+    width: 100%;
   }
   .inner-footer-item {
-    width: 16.5707%;
+    width: 12.5707%;
   }
   .footer-nav-item {
     font-size: 0.5em;

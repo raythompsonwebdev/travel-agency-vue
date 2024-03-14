@@ -17,16 +17,13 @@
     </aside>
 
     <main id="page-content">
-      <h2>Lorem ipsum dolor sit amet, consectetur</h2>
-      <p>
+      <h2 class="page-content-title">Lorem Ipsum Dolor Sit Amet</h2>
+      <p class="page-content-text">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
         dolor sequi voluptatem esse doloribus libero commodi ea debitis id
         nostrum odio velit impedit vitae tenetur voluptates vero beatae
         excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-        nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       </p>
       <br />
       <ContactForm @review-submitted="addReview" />
