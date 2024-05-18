@@ -7,7 +7,7 @@
           @remove-from-cart="removeFromCart($event)"
           :products="cartItems"
         />
-        <button class="bestdeal-link">Proceed to Checkout</button>
+        <button class="proceed-to-checkout">Proceed to Checkout</button>
       </div>
       <div v-if="cartItems.length === 0">
         You current have no items in your cart!
