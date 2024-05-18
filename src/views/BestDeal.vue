@@ -22,6 +22,16 @@
             <p class="single-best-rating">
               Rating: {{ singlebestdeal.rating }} Star
             </p>
+            <button
+              @click="addToCart"
+              class="bestdeal-link"
+              v-if="!itemIsInCart"
+            >
+              Add to cart
+            </button>
+            <button class="grey-button" v-if="itemIsInCart">
+              Item is already in cart
+            </button>
           </figcaption>
         </figure>
       </article>
@@ -47,7 +57,15 @@ export default {
   data() {
     return {
       singlebestdeal: {},
+      cartItems: [],
     };
+  },
+  computed: {
+    itemIsInCart() {
+      return this.cartItems.some(
+        (item) => item.id === this.$route.params.itemid
+      );
+    },
   },
   methods: {
     async initData() {
@@ -56,9 +74,18 @@ export default {
 
       this.singlebestdeal = data;
     },
+    async addToCart() {
+      await axios.post("/api/users/12345/cart", {
+        id: this.$route.params.itemid,
+      });
+      alert("Successfully added item to cart!");
+    },
   },
-  created() {
+  async created() {
     this.initData();
+    const cartResponse = await axios.get("/api/users/12345/cart");
+    const cartItems = cartResponse.data;
+    this.cartItems = cartItems;
   },
 
   beforeRouteUpdate(to, from, next) {

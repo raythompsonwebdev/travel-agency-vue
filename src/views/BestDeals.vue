@@ -95,7 +95,6 @@ export default {
   async created() {
     const result = await axios.get("/api/bestdeals");
     const { data } = result;
-    console.log(result);
     this.bestdealitems = data;
   },
 

@@ -58,7 +58,7 @@
       </li>
     </ul>
 
-    <LanguageSelect :languageselectitems="languageitems.data" />
+    <LanguageSelect :languageselectitems="languageitems" />
   </nav>
 </template>
 
@@ -77,7 +77,7 @@ export default {
   },
   async created() {
     const languagedata = await axios.get("/api/languages");
-    this.languageitems = languagedata;
+    this.languageitems = languagedata.data;
   },
   methods: {
     naviFunction(e) {

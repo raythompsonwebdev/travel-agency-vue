@@ -207,22 +207,23 @@
     display: block;
     font-weight: bold;
     letter-spacing: 0.03em;
-    // &:link {
-    //   color: $nav-link-color;
-    //   background: $site-background;
-    //   text-shadow: none;
-    // }
+    &:link {
+      color: $nav-link-color;
+      background: linear-gradient(#5bb3fd, #1180c5);
+      text-shadow: none;
+    }
     &:visited {
       font-weight: bold;
-      color: $nav-link-color;
-      background: $header-background;
+      // color: $nav-link-color;
+      background: linear-gradient($site-background, $header-background);
       text-shadow: none;
     }
 
     &:active {
       text-shadow: none;
       color: $nav-link-color;
-      background: $header-background;
+      font-weight: bold;
+      background: linear-gradient($site-background, $header-background);
     }
 
     &:hover {
@@ -230,7 +231,7 @@
       width: 100%;
       text-align: center;
       color: $nav-link-color;
-      background: $header-background;
+      background: linear-gradient($site-background, $header-background);
       height: 38px;
       line-height: 40px;
       font-weight: bold;

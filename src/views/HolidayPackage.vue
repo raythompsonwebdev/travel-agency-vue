@@ -21,6 +21,16 @@
           <p class="single-item-rating">
             Rating: {{ singleholidaypackage.rating }} Star
           </p>
+          <button
+            @click="addToCart"
+            class="holiday-pkg-link"
+            v-if="!itemIsInCart"
+          >
+            Add to cart
+          </button>
+          <button class="grey-button" v-if="itemIsInCart">
+            Item is already in cart
+          </button>
         </figcaption>
       </figure>
     </article>
@@ -46,7 +56,15 @@ export default {
   data() {
     return {
       singleholidaypackage: {},
+      cartItems: [],
     };
+  },
+  computed: {
+    itemIsInCart() {
+      return this.cartItems.some(
+        (item) => item.id === this.$route.params.itemid
+      );
+    },
   },
   methods: {
     async initData() {
@@ -56,9 +74,18 @@ export default {
       const { data } = result;
       this.singleholidaypackage = data;
     },
+    async addToCart() {
+      await axios.post("/api/users/12345/cart", {
+        id: this.$route.params.itemid,
+      });
+      alert("Successfully added item to cart!");
+    },
   },
-  created() {
+  async created() {
     this.initData();
+    const cartResponse = await axios.get("/api/users/12345/cart");
+    const cartItems = cartResponse.data;
+    this.cartItems = cartItems;
   },
   beforeRouteUpdate(to, from, next) {
     this.initData();

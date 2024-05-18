@@ -35,7 +35,7 @@
 export default {
   name: "LanguageSelect",
   props: {
-    languageselectitems: { type: Array, required: true },
+    languageselectitems: { type: Array, default: null },
   },
   data() {
     return {

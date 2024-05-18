@@ -8,7 +8,7 @@ import HolidayPackage from "@/views/HolidayPackage";
 import ContactPage from "@/views/ContactPage";
 import ServicePage from "@/views/ServicePage";
 import NotFoundpage from "@/views/NotFoundpage";
-import CartPage from "@/views/Cart";
+import CartPage from "@/views/CartPage";
 
 const routes = [
   {
