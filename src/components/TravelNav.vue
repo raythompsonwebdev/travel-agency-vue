@@ -65,7 +65,7 @@
 
 <script>
 import LanguageSelect from "@/components/LanguageSelect.vue";
-// import axios from "axios";
+
 export default {
   name: "TravelNav",
   components: {
@@ -73,14 +73,10 @@ export default {
   },
   data() {
     return {
-      languageitems: [],
       isActive: false,
     };
   },
-  // async created() {
-  //   const languagedata = await axios.get("/api/languages");
-  //   this.languageitems = languagedata.data;
-  // },
+
   methods: {
     naviFunction(e) {
       e.preventDefault();

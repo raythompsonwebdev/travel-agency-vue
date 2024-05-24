@@ -34,9 +34,7 @@
 <script>
 export default {
   name: "LanguageSelect",
-  // props: {
-  //   languageselectitems: { type: Array, default: null },
-  // },
+
   data() {
     return {
       selected: " ",

@@ -23,7 +23,6 @@ import SearchForm from "@/components/SearchForm.vue";
 import Destinations from "@/components/Destinations.vue";
 import FeaturedHolidays from "@/components/FeaturedHolidays.vue";
 import bannerImage from "@/assets/img/travel-agency-website-banner-image.jpg";
-// import axios from "axios";
 
 export default {
   name: "HomePage",
@@ -113,13 +112,7 @@ export default {
       bannerImage,
     };
   },
-  // async created() {
-  //   const searchformdata = await axios.get("/api/searchform");
 
-  //   const [searchformresult] = searchformdata.data;
-
-  //   this.searchform = searchformresult;
-  // },
   methods: {
     sideBarFunction(event) {
       event.preventDefault();
