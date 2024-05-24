@@ -1,43 +1,46 @@
 <template>
-  <div v-if="singleholidaypackage" class="singleholidaypackage">
-    <article class="single-item-details">
-      <h2 class="single-item-title">{{ singleholidaypackage.title }}</h2>
-      <span class="single-item-price">
-        from
-        <span class="single-item-offer">{{ singleholidaypackage.price }}</span>
-      </span>
-      <p class="single-item-text">{{ singleholidaypackage.text }}</p>
-
-      <figure class="single-item">
-        <img
-          class="single-item-img"
-          :src="singleholidaypackage.url"
-          :alt="singleholidaypackage.title"
-        />
-        <figcaption class="single-item-caption">
-          <h3 class="single-item-location">
-            Location : {{ singleholidaypackage.location }}
-          </h3>
-          <p class="single-item-rating">
-            Rating: {{ singleholidaypackage.rating }} Star
-          </p>
-          <button
-            @click="addToCart"
-            class="holiday-pkg-link"
-            v-if="!itemIsInCart"
-          >
-            Add to cart
-          </button>
-          <button class="grey-button" v-if="itemIsInCart">
-            Item is already in cart
-          </button>
-        </figcaption>
-      </figure>
-    </article>
-  </div>
-  <div v-else>
-    <NotFoundpage />
-  </div>
+  <main id="single-page" key="/best">
+    <transition name="fade" tag="div">
+      <article v-if="singleholidaypackage" class="single-item">
+        <h2 class="single-item-title">{{ singleholidaypackage.title }}</h2>
+        <figure class="single-item-figure">
+          <img
+            class="single-item-img"
+            :src="singleholidaypackage.url"
+            :alt="singleholidaypackage.title"
+          />
+          <figcaption class="single-item-caption">
+            <h3 class="single-item-location">
+              Location : {{ singleholidaypackage.location }}
+            </h3>
+            <span class="single-item-price">
+              from
+              <span class="single-item-offer">{{
+                singleholidaypackage.price
+              }}</span>
+            </span>
+            <p class="single-item-text">{{ singleholidaypackage.text }}</p>
+            <p class="single-item-rating">
+              Rating: {{ singleholidaypackage.rating }} Star
+            </p>
+            <button
+              @click="addToCart"
+              class="single-item-submit"
+              v-if="!itemIsInCart"
+            >
+              Add to cart
+            </button>
+            <button class="single-item-added-to-cart" v-if="itemIsInCart">
+              Item is already in cart
+            </button>
+          </figcaption>
+        </figure>
+      </article>
+      <div v-else>
+        <NotFoundpage />
+      </div>
+    </transition>
+  </main>
 </template>
 
 <script>
@@ -62,7 +65,7 @@ export default {
   computed: {
     itemIsInCart() {
       return this.cartItems.some(
-        (item) => item.id === this.$route.params.itemid
+        (item) => item?.id === this.$route.params.itemid
       );
     },
   },
@@ -78,7 +81,10 @@ export default {
       await axios.post("/api/users/12345/cart", {
         id: this.$route.params.itemid,
       });
-      alert("Successfully added item to cart!");
+      this.$router.push({
+        name: "CartPage",
+        //query: this.formData,
+      });
     },
   },
   async created() {

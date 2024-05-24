@@ -1,7 +1,7 @@
 <template>
   <!--wrapper-->
   <div id="wrapper">
-    <TravelHeader />
+    <TravelHeader :cartItems="cartItems" />
     <TravelNav />
     <!--:key="$route.path" :key="$route.fullPath"-->
     <router-view v-slot="{ Component, route }">
@@ -11,13 +11,12 @@
         </keep-alive>
       </transition>
     </router-view>
-
-    <div class="clearfix"></div>
   </div>
 
   <TravelFooter />
 </template>
 <script>
+import axios from "axios";
 import TravelNav from "@/components/TravelNav";
 import TravelHeader from "@/components/TravelHeader";
 import TravelFooter from "@/components/TravelFooter";
@@ -28,6 +27,34 @@ export default {
     TravelNav,
     TravelHeader,
     TravelFooter,
+  },
+  data() {
+    return {
+      cartItems: [],
+    };
+  },
+  // computed: {
+  //   cartTotal() {
+  //     let sum = 0;
+  //     for (const key in this.cartItems) {
+  //       sum = sum + this.cartItems[key].price * this.cartItems[key].qty;
+  //     }
+
+  //     return sum;
+  //   },
+  //   cartQty() {
+  //     let qty = 0;
+  //     for (const key in this.cartItems) {
+  //       qty = qty + this.cartItems[key].qty;
+  //     }
+  //     return qty;
+  //   },
+  // },
+
+  async created() {
+    const response = await axios.get("/api/users/12345/cart");
+    const cartItems = response.data;
+    this.cartItems = cartItems;
   },
 };
 </script>

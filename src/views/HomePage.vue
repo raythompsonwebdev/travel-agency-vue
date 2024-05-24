@@ -1,23 +1,21 @@
 /* eslint-disable prefer-destructuring */
 <template>
-  <div class="Home page">
+  <main id="home-page">
     <button id="side-bar-btn" @click="sideBarFunction">SIDE</button>
 
     <aside id="home-page-sidebar" class="hide">
-      <SearchForm :searchformdata="searchform" />
+      <SearchForm />
       <Destinations :destinationitems="destinationitems" />
     </aside>
 
-    <main id="home-page-content">
+    <section id="home-page-content">
       <figure id="banner">
         <img :src="bannerImage" :alt="'banner-image'" id="banner-img" />
       </figure>
 
       <FeaturedHolidays :featuredholidayitems="featuredholidayitems" />
-    </main>
-
-    <div class="clearfix" />
-  </div>
+    </section>
+  </main>
 </template>
 
 <script>
@@ -25,7 +23,7 @@ import SearchForm from "@/components/SearchForm.vue";
 import Destinations from "@/components/Destinations.vue";
 import FeaturedHolidays from "@/components/FeaturedHolidays.vue";
 import bannerImage from "@/assets/img/travel-agency-website-banner-image.jpg";
-import axios from "axios";
+// import axios from "axios";
 
 export default {
   name: "HomePage",
@@ -36,27 +34,92 @@ export default {
   },
   data() {
     return {
-      destinationitems: [],
-      featuredholidayitems: [],
-      searchform: [],
+      destinationitems: [
+        {
+          id: 1,
+          city: "Paris",
+          country: "France",
+          hotels: "1,399 Hotels",
+          url: "/assets/img/destinations/travel-agency-website-eiffel-tower-image.jpg",
+        },
+        {
+          id: 2,
+          city: "London",
+          country: "England",
+          hotels: "1,912 Hotels",
+          url: "/assets/img/destinations/travel-agency-website-tower-of-london-image.jpg",
+        },
+        {
+          id: 3,
+          city: "Bangkok",
+          country: "Thailand",
+          hotels: "1,542 Hotels",
+          url: "/assets/img/destinations/travel-agency-website-bangkok-image.jpg",
+        },
+        {
+          id: 4,
+          city: "Istanbul",
+          country: "Turkey",
+          hotels: "504 Hotels",
+          url: "/assets/img/destinations/travel-agency-website-istanbul-image.jpg",
+        },
+        {
+          id: 5,
+          city: "Hong Kong",
+          country: "China",
+          hotels: "504 Hotels",
+          url: "/assets/img/destinations/travel-agency-website-hong-kong-image.jpg",
+        },
+      ],
+      featuredholidayitems: [
+        {
+          id: 1,
+          url: "/assets/img/travel-agency-website-spanish-villa-image.jpg",
+          text: "Lorem Ipsum Dolen sit.",
+          price: "£339",
+        },
+        {
+          id: 2,
+          url: "/assets/img/travel-agency-website-taj-mahal-image.jpg",
+          text: "Lorem Ipsum Dolen sit.",
+          price: "£339",
+        },
+        {
+          id: 3,
+          url: "/assets/img/travel-agency-website-gold-coast-image.jpg",
+          text: "Lorem Ipsum Dolen sit.",
+          price: "£339",
+        },
+        {
+          id: 4,
+          url: "/assets/img/travel-agency-website-dubai-image.jpg",
+          text: "Lorem Ipsum Dolen sit.",
+          price: "£339",
+        },
+        {
+          id: 5,
+          url: "/assets/img/travel-agency-website-singapore-image.jpg",
+          text: "Lorem Ipsum Dolen sit.",
+          price: "£339",
+        },
+        {
+          id: 6,
+          url: "/assets/img/travel-agency-website-toronto-image.jpg",
+          text: "Lorem Ipsum Dolen sit.",
+          price: "£339",
+        },
+      ],
       show: true,
       bannerImage,
     };
   },
-  async created() {
-    const result = await axios.get("/api/home");
-    const { data } = result;
+  // async created() {
+  //   const searchformdata = await axios.get("/api/searchform");
 
-    const searchformdata = await axios.get("/api/searchform");
+  //   const [searchformresult] = searchformdata.data;
 
-    const { destinationitems } = data[0];
-    const { featuredholidayitems } = data[0];
-    const [searchformresult] = searchformdata.data;
-
-    this.destinationitems = destinationitems;
-    this.featuredholidayitems = featuredholidayitems;
-    this.searchform = searchformresult;
-  },
+  //   this.searchform = searchformresult;
+  // },
   methods: {
     sideBarFunction(event) {
       event.preventDefault();

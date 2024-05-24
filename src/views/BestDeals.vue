@@ -1,25 +1,24 @@
 <template>
-  <div class="BestDeals">
+  <main id="best-deals">
     <FilterNav
-      :seasons="seasons"
-      :prices="prices"
-      :locations="locations"
-      :ratings="ratings"
+      :seasons="filterNavData.seasons"
+      :prices="filterNavData.prices"
+      :locations="filterNavData.locations"
+      :ratings="filterNavData.ratings"
       @seasonClick="itemsSearched"
     />
 
-    <main id="holiday-items">
+    <section id="holiday-items">
       <transition-group name="fade" tag="div">
         <div v-for="(bestdealitem, index) in filteredPacks" :key="index">
           <BestDealItem :bestdealitem="bestdealitem" />
         </div>
       </transition-group>
-    </main>
-  </div>
+    </section>
+  </main>
 </template>
 
 <script>
-import navdata from "@/assets/data/data-json.json";
 import BestDealItem from "@/components/BestDealItem.vue";
 import FilterNav from "@/components/FilterNav.vue";
 import axios from "axios";
@@ -32,10 +31,108 @@ export default {
   },
   data() {
     return {
-      seasons: navdata.seasons,
-      ratings: navdata.ratings,
-      locations: navdata.locations,
-      prices: navdata.prices,
+      filterNavData: {
+        locations: [
+          {
+            id: 1,
+            title: "london",
+          },
+          {
+            id: 2,
+            title: "paris",
+          },
+          {
+            id: 3,
+            title: "madrid",
+          },
+          {
+            id: 4,
+            title: "rome",
+          },
+          {
+            id: 5,
+            title: "dubai",
+          },
+          {
+            id: 6,
+            title: "tajmahal",
+          },
+          {
+            id: 7,
+            title: "singapore",
+          },
+          {
+            id: 8,
+            title: "toronto",
+          },
+          {
+            id: 9,
+            title: "goldcoast",
+          },
+        ],
+        prices: [
+          {
+            id: 1,
+            title: "$399 - $499",
+          },
+          {
+            id: 2,
+            title: "$499 - $599",
+          },
+          {
+            id: 3,
+            title: "$599 - $699",
+          },
+          {
+            id: 4,
+            title: "$699 - $999",
+          },
+          {
+            id: 5,
+            title: "$999 +",
+          },
+        ],
+        ratings: [
+          {
+            id: 1,
+            title: "one",
+          },
+          {
+            id: 2,
+            title: "two",
+          },
+          {
+            id: 3,
+            title: "three",
+          },
+          {
+            id: 4,
+            title: "four",
+          },
+          {
+            id: 5,
+            title: "five",
+          },
+        ],
+        seasons: [
+          {
+            id: 1,
+            title: "winter",
+          },
+          {
+            id: 2,
+            title: "summer",
+          },
+          {
+            id: 3,
+            title: "spring",
+          },
+          {
+            id: 4,
+            title: "autumn",
+          },
+        ],
+      },
       selected: " ",
       bestdealitems: [],
     };

@@ -19,11 +19,11 @@
           aria-label="select country"
         >
           <option
-            v-for="languageselectitems in onChangeImg"
-            :key="languageselectitems.id"
-            :value="languageselectitems.value"
+            v-for="(languageselectitem, index) in onChangeImg"
+            :key="index"
+            :value="languageselectitem.value"
           >
-            {{ languageselectitems.text }}
+            {{ languageselectitem.text }}
           </option>
         </select>
       </label>
@@ -34,13 +34,50 @@
 <script>
 export default {
   name: "LanguageSelect",
-  props: {
-    languageselectitems: { type: Array, default: null },
-  },
+  // props: {
+  //   languageselectitems: { type: Array, default: null },
+  // },
   data() {
     return {
       selected: " ",
       defaultImage: require(`@/assets/img/flags/default.png`),
+      languageselectitems: [
+        {
+          value: "default",
+          text: " ",
+          url: "/assets/img/flags/United_Kingdom.jpg",
+        },
+        {
+          value: "Bangkok",
+          text: "Bangkok",
+          url: "/assets/img/flags/Bangkok.png",
+        },
+        {
+          value: "Germany",
+          text: "Germany",
+          url: "/assets/img/flags/Germany.jpg",
+        },
+        {
+          value: "United_States",
+          text: "United_States",
+          url: "/assets/img/flags/USA.gif",
+        },
+        {
+          value: "India",
+          text: "India",
+          url: "/assets/img/flags/India.png",
+        },
+        {
+          value: "France",
+          text: "France",
+          url: "/assets/img/flags/France.jpg",
+        },
+        {
+          value: "Spain",
+          text: "Spain",
+          url: "/assets/img/flags/Spain.jpg",
+        },
+      ],
     };
   },
   computed: {

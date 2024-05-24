@@ -1,45 +1,44 @@
 <template>
-  <transition name="fade" tag="div">
-    <div v-if="singlebestdeal" class="singlebestdeal" key="/best">
-      <article class="single-best-details">
-        <h1 class="single-best-title">{{ singlebestdeal.title }}</h1>
-        <span class="single-best-price">
-          from
-          <span class="single-best-offer">{{ singlebestdeal.price }}</span>
-        </span>
-        <p class="single-best-txt">{{ singlebestdeal.text }}</p>
-
-        <figure class="single-best-item">
+  <main id="single-page" key="/best">
+    <transition name="fade" tag="div">
+      <article v-if="singlebestdeal" class="single-item">
+        <h2 class="single-item-title">{{ singlebestdeal.title }}</h2>
+        <figure class="single-item-figure">
           <img
             :src="singlebestdeal.url"
             :alt="singlebestdeal.title"
-            class="single-best-img"
+            class="single-item-img"
           />
-          <figcaption class="single-best-caption">
-            <h3 class="single-best-location">
+          <figcaption class="single-item-caption">
+            <h3 class="single-item-location">
               Location : {{ singlebestdeal.location }}
             </h3>
-            <p class="single-best-rating">
+            <span class="single-item-price">
+              from
+              <span class="single-item-offer">{{ singlebestdeal.price }}</span>
+            </span>
+            <p class="single-item-text">{{ singlebestdeal.text }}</p>
+            <p class="single-item-rating">
               Rating: {{ singlebestdeal.rating }} Star
             </p>
             <button
               @click="addToCart"
-              class="bestdeal-link"
+              class="single-item-submit"
               v-if="!itemIsInCart"
             >
               Add to cart
             </button>
-            <button class="grey-button" v-if="itemIsInCart">
+            <button class="single-item-added-to-cart" v-if="itemIsInCart">
               Item is already in cart
             </button>
           </figcaption>
         </figure>
       </article>
-    </div>
-    <div v-else>
-      <NotFoundpage />
-    </div>
-  </transition>
+      <div v-else>
+        <NotFoundpage />
+      </div>
+    </transition>
+  </main>
 </template>
 
 <script>
@@ -63,7 +62,7 @@ export default {
   computed: {
     itemIsInCart() {
       return this.cartItems.some(
-        (item) => item.id === this.$route.params.itemid
+        (item) => item?.id === this.$route.params.itemid
       );
     },
   },
@@ -78,7 +77,11 @@ export default {
       await axios.post("/api/users/12345/cart", {
         id: this.$route.params.itemid,
       });
-      alert("Successfully added item to cart!");
+
+      this.$router.push({
+        name: "CartPage",
+        //query: this.formData,
+      });
     },
   },
   async created() {

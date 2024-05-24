@@ -1,7 +1,5 @@
 <template>
-  <!--header-->
   <header id="site-header">
-    <!---logo-->
     <figure id="logo">
       <img :src="image" :alt="'website logo'" id="logo-img" />
       <h1 id="logo-title">
@@ -9,7 +7,12 @@
         ><span class="logo-span">AGENCY</span>
       </h1>
     </figure>
-    <!---contact number-->
+    <!-- <div id="cart-icon">
+      <img :src="image" :alt="'website logo'" id="logo-img" />
+      <router-link id="cart-icon-btn" to="/cart">{{
+        cartItems ? cartItems.length : ""
+      }}</router-link>
+    </div> -->
     <aside class="contact">
       <address class="telephone-number">
         <a id="contact-number" :href="`tel:${phoneNumber}`">
@@ -25,6 +28,9 @@
 import phoneImage from "@/assets/img/contact/Telephone.png";
 export default {
   name: "TravelHeader",
+  props: {
+    cartItems: { type: Array, required: true },
+  },
   data() {
     return {
       phoneNumber: "0208-365-1452",

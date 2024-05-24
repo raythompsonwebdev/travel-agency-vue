@@ -60,7 +60,7 @@
 </template>
 
 <script>
-//import axios from "axios";
+import axios from "axios";
 export default {
   name: "ContactForm",
 
@@ -93,7 +93,7 @@ export default {
 
         console.error(contactData);
 
-        //await axios.post("/api/contact", contactData);
+        await axios.post("/api/contact", contactData);
 
         this.firstname = " ";
         this.lastname = " ";

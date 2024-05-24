@@ -1,5 +1,5 @@
 <template>
-  <div class="Contact">
+  <main class="contact-page">
     <button id="side-bar-btn" @click="contactFunction">Contact</button>
 
     <!--contact details box-->
@@ -16,7 +16,7 @@
       </address>
     </aside>
 
-    <main id="page-content">
+    <section id="page-content">
       <h2 class="page-content-title">Lorem Ipsum Dolor Sit Amet</h2>
       <p class="page-content-text">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
@@ -26,10 +26,9 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       </p>
       <br />
-      <ContactForm @review-submitted="addReview" />
-    </main>
-    <div class="clearfix" />
-  </div>
+      <ContactForm />
+    </section>
+  </main>
 </template>
 
 <script>
@@ -61,14 +60,6 @@ export default {
       } else {
         el.setAttribute("class", "hide");
       }
-    },
-    addReview(productReview) {
-      this.reviews.push(productReview);
-    },
-
-    imageFunc() {
-      const addrTitles = document.getElementsByClassName("addr_title");
-      console.error(addrTitles);
     },
   },
 };

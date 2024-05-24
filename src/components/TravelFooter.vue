@@ -1,5 +1,4 @@
 <template>
-  <!--footer-->
   <footer id="site-footer">
     <ul id="site-inner-footer">
       <li class="inner-footer-item">

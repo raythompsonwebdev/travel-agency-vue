@@ -13,6 +13,7 @@
       </li>
       <li class="site-inner-nav-item">
         <router-link
+          active-class="active"
           to="/holidaypackages"
           class="nav-item r-item"
           @mouseup="InlineMenuButtonClickHandler()"
@@ -58,13 +59,13 @@
       </li>
     </ul>
 
-    <LanguageSelect :languageselectitems="languageitems" />
+    <LanguageSelect />
   </nav>
 </template>
 
 <script>
 import LanguageSelect from "@/components/LanguageSelect.vue";
-import axios from "axios";
+// import axios from "axios";
 export default {
   name: "TravelNav",
   components: {
@@ -73,12 +74,13 @@ export default {
   data() {
     return {
       languageitems: [],
+      isActive: false,
     };
   },
-  async created() {
-    const languagedata = await axios.get("/api/languages");
-    this.languageitems = languagedata.data;
-  },
+  // async created() {
+  //   const languagedata = await axios.get("/api/languages");
+  //   this.languageitems = languagedata.data;
+  // },
   methods: {
     naviFunction(e) {
       e.preventDefault();

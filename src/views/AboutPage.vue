@@ -1,10 +1,10 @@
 <template>
-  <div class="AboutUs page">
+  <main id="about-page">
     <button id="side-bar-btn" @click="aboutPageFunction">SIDE</button>
 
     <SideBanner />
 
-    <main id="page-content">
+    <section id="page-content">
       <h2 class="page-content-title">Lorem Ipsum Dolor Sit Amet</h2>
       <p class="page-content-text">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.Enim odit sequi
@@ -69,8 +69,8 @@
         nostrum odio velit impedit vitae tenetur voluptates vero beatae
         excepturi.
       </p>
-    </main>
-  </div>
+    </section>
+  </main>
 </template>
 
 <script>

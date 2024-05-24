@@ -3,7 +3,6 @@
     <button id="side-bar-btn" @click="searchFilterFunction">SIDE</button>
 
     <section id="seasons">
-      <h1 class="filter-title">Filter By Season</h1>
       <ul class="filter-list">
         <li class="filter-list-item">
           <button
@@ -16,6 +15,7 @@
           </button>
         </li>
       </ul>
+      <h1 class="filter-title">Filter By Season</h1>
       <ul class="filter-list">
         <li v-for="season in seasons" :key="season.id" class="filter-list-item">
           <button

@@ -1,10 +1,10 @@
 <template>
-  <div class="Services">
+  <main id="services-page">
     <button id="side-bar-btn" @click="servicePageFunction">SIDE</button>
 
     <SideBanner />
 
-    <main id="page-content">
+    <section id="page-content">
       <h2 class="page-content-title">Lorem Ipsum Dolor Sit Amet</h2>
 
       <p class="page-content-text">
@@ -106,10 +106,8 @@
         debitis id nostrum odio velit impedit vitae tenetur voluptates vero
         beatae excepturi
       </p>
-    </main>
-
-    <div class="clearfix" />
-  </div>
+    </section>
+  </main>
 </template>
 
 <script>

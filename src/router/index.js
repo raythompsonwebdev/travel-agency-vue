@@ -9,6 +9,7 @@ import ContactPage from "@/views/ContactPage";
 import ServicePage from "@/views/ServicePage";
 import NotFoundpage from "@/views/NotFoundpage";
 import CartPage from "@/views/CartPage";
+import SearchResultsPage from "@/views/SearchResultsPage";
 
 const routes = [
   {
@@ -49,7 +50,6 @@ const routes = [
     path: "/services",
     name: "ServicePage",
     component: ServicePage,
-    //component: () => import("@/views/ServicePage"),
   },
   {
     path: "/contact",
@@ -67,11 +67,19 @@ const routes = [
     component: CartPage,
     props: true,
   },
+  {
+    path: "/search-results",
+    name: "SearchResultsPage",
+    component: SearchResultsPage,
+    props: true,
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  linkActiveClass: "active",
+  linkExactActiveClass: "exact-active",
 });
 
 export default router;
