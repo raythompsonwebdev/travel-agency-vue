@@ -1,5 +1,5 @@
 <template>
-  <article v-for="product in products" :key="product.id" class="cart-details">
+  <article v-for="product in props.products" :key="product.id" class="cart-details">
     <figure v-if="product" class="cart-details-items">
       <img :src="product.url" :alt="product.title" class="cart-details-img" />
       <figcaption class="cart-details-caption">
@@ -18,9 +18,11 @@
   </article>
 </template>
 
-<script>
-export default {
-  name: "ShoppingCartList",
-  props: ["products"],
-};
+<script setup>
+import { defineProps } from 'vue'
+
+const props = defineProps({
+  products: Array
+})
 </script>
+<style lang="scss"></style>

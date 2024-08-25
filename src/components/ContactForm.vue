@@ -13,18 +13,12 @@
       <ul id="contact-form-fields">
         <li class="contact-form-field">
           <label for="firstname" class="contact-label"
-            >First name
-            <input
-              id="firstname"
-              v-model="firstname"
-              type="text"
-              name="firstname"
+            >First name <input id="firstname" v-model="firstname" type="text" name="firstname"
           /></label>
         </li>
         <li class="contact-form-field">
           <label for="lastname" class="contact-label"
-            >Last name
-            <input id="lastname" v-model="lastname" type="text" name="lastname"
+            >Last name <input id="lastname" v-model="lastname" type="text" name="lastname"
           /></label>
         </li>
         <li class="contact-form-field">
@@ -59,55 +53,42 @@
   </div>
 </template>
 
-<script>
-import axios from "axios";
-export default {
-  name: "ContactForm",
+<script setup>
+import axios from 'axios'
+import { onMounted, ref } from 'vue'
 
-  data() {
-    return {
-      show: "true",
-      firstname: " ",
-      lastname: " ",
-      email: " ",
-      phone: " ",
-      message: " ",
-      errors: [],
-    };
-  },
+const firstname = ref(' ')
+const lastname = ref(' ')
+const email = ref(' ')
+const phone = ref(' ')
+const message = ref(' ')
+const errors = ref([])
 
-  methods: {
-    async onSubmit() {
-      if (
-        this.firstname !== " " &&
-        this.lastname !== " " &&
-        this.email !== " "
-      ) {
-        const contactData = {
-          firstname: this.firstname,
-          lastname: this.lastname,
-          email: this.email,
-          phone: this.phone,
-          message: this.message,
-        };
+onMounted(async () => {
+  if (firstname.value !== ' ' && lastname.value !== ' ' && email.value !== ' ') {
+    const contactData = {
+      firstname: firstname.value,
+      lastname: lastname.value,
+      email: email.value,
+      phone: phone.value,
+      message: message.value
+    }
 
-        console.error(contactData);
+    console.error(contactData)
 
-        await axios.post("/api/contact", contactData);
+    await axios.post('/api/contact', contactData)
 
-        this.firstname = " ";
-        this.lastname = " ";
-        this.email = " ";
-        this.phone = " ";
-        this.message = " ";
-      } else {
-        this.errors.push("FirstName required");
-        this.errors.push("LastName required");
-        this.errors.push("e-mail required");
-      }
-    },
-  },
-};
+    firstname.value = ' '
+    lastname.value = ' '
+    email.value = ' '
+    phone.value = ' '
+    message.value = ' '
+  } else {
+    errors.value.push('FirstName required')
+    errors.value.push('LastName required')
+    errors.value.push('e-mail required')
+  }
+})
 </script>
 
 <style lang="scss"></style>

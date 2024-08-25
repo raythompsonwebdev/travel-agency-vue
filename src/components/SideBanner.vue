@@ -10,9 +10,7 @@
             :alt="'travel-agency-website-sidebar-banner-image-label'"
         /></span>
 
-        <p class="page-banner-text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </p>
+        <p class="page-banner-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         <p class="page-banner-text">
           Maxime minima magnam iure libero, laboriosam. Vitae magnam earum, quae
         </p>
@@ -29,17 +27,9 @@
   </aside>
 </template>
 
-<script>
-export default {
-  name: "SideBanner",
-  data() {
-    return {
-      show: "true",
-      bannerImage: require("@/assets/img/travel-agency-website-sidebar-banner-image.jpg"),
-      bannerImageLabel: require("@/assets/img/travel-agency-website-sidebar-banner-image-label.jpg"),
-    };
-  },
-};
+<script setup>
+import bannerImage from '@/assets/img/travel-agency-website-sidebar-banner-image.jpg'
+import bannerImageLabel from '@/assets/img/travel-agency-website-sidebar-banner-image-label.jpg'
 </script>
 
 <style lang="scss"></style>

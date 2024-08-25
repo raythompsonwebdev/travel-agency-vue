@@ -8,13 +8,11 @@
       <h2 class="page-content-title">Lorem Ipsum Dolor Sit Amet</h2>
 
       <p class="page-content-text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-        nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Enim odit dolor sequi voluptatem esse doloribus libero commodi ea
-        debitis id nostrum odio velit impedit vitae tenetur voluptates vero
-        beatae excepturi.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem
+        esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur
+        voluptates vero beatae excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio
+        velit impedit vitae tenetur voluptates vero beatae excepturi.
       </p>
       <br />
       <div class="services-card">
@@ -27,14 +25,11 @@
           />
           <figcaption class="services-card-caption">
             <p class="services-card-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-              odit dolor sequi voluptatem esse doloribus libero commodi ea
-              debitis id nostrum odio velit impedit vitae tenetur voluptates
-              vero beatae excepturi.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi
+              voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit
+              vitae tenetur voluptates vero beatae excepturi.
             </p>
-            <a :href="'http://www.google.com'" class="services-card-link"
-              >Learn More</a
-            >
+            <a :href="'http://www.google.com'" class="services-card-link">Learn More</a>
           </figcaption>
         </figure>
       </div>
@@ -50,15 +45,12 @@
 
           <figcaption class="services-card-caption">
             <p class="services-card-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-              odit dolor sequi voluptatem esse doloribus libero commodi ea
-              debitis id nostrum odio velit impedit vitae tenetur voluptates
-              vero beatae excepturi.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi
+              voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit
+              vitae tenetur voluptates vero beatae excepturi.
             </p>
 
-            <a :href="'http://www.google.com'" class="services-card-link"
-              >Learn More</a
-            >
+            <a :href="'http://www.google.com'" class="services-card-link">Learn More</a>
           </figcaption>
         </figure>
       </div>
@@ -73,14 +65,11 @@
           />
           <figcaption class="services-card-caption">
             <p class="services-card-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-              odit dolor sequi voluptatem esse doloribus libero commodi ea
-              debitis id nostrum odio velit impedit vitae tenetur voluptates
-              vero beatae excepturi.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi
+              voluptatem esse doloribus libero commodi ea debitis id nostrum odio velit impedit
+              vitae tenetur voluptates vero beatae excepturi.
             </p>
-            <a :href="'http://www.google.com'" class="services-card-link"
-              >Learn More</a
-            >
+            <a :href="'http://www.google.com'" class="services-card-link">Learn More</a>
           </figcaption>
         </figure>
       </div>
@@ -88,58 +77,43 @@
       <div class="clearfix" />
       <br />
       <p class="page-content-text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-        nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Enim odit dolor sequi voluptatem esse doloribus libero commodi ea
-        debitis id nostrum odio velit impedit vitae tenetur voluptates vero
-        beatae excepturi.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem
+        esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur
+        voluptates vero beatae excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio
+        velit impedit vitae tenetur voluptates vero beatae excepturi.
       </p>
 
       <p class="page-content-text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit
-        dolor sequi voluptatem esse doloribus libero commodi ea debitis id
-        nostrum odio velit impedit vitae tenetur voluptates vero beatae
-        excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Enim odit dolor sequi voluptatem esse doloribus libero commodi ea
-        debitis id nostrum odio velit impedit vitae tenetur voluptates vero
-        beatae excepturi
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odit dolor sequi voluptatem
+        esse doloribus libero commodi ea debitis id nostrum odio velit impedit vitae tenetur
+        voluptates vero beatae excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nostrum odio
+        velit impedit vitae tenetur voluptates vero beatae excepturi
       </p>
     </section>
   </main>
 </template>
 
-<script>
-import SideBanner from "@/components/SideBanner.vue";
+<script setup>
+import SideBanner from '@/components/SideBanner.vue'
+import customerService from '@/assets/img/service/travel-agency-website-customer-service-image.jpg'
+import busTours from '@/assets/img/service/travel-agency-website-bus-tours-image.jpg'
+import hotelRoom from '@/assets/img/service/travel-agency-website-hotel-room-image.jpg'
 
-export default {
-  name: "ServicePage",
-  components: {
-    SideBanner,
-  },
-  data() {
-    return {
-      show: "true",
-      customerService: require("@/assets/img/service/travel-agency-website-customer-service-image.jpg"),
-      busTours: require("@/assets/img/service/travel-agency-website-bus-tours-image.jpg"),
-      hotelRoom: require("@/assets/img/service/travel-agency-website-hotel-room-image.jpg"),
-    };
-  },
-  methods: {
-    servicePageFunction(event) {
-      event.preventDefault();
-      const el = document.getElementById("about-page-banner");
-      const box = el.getAttribute("class");
+// const show = 'true';
 
-      if (box === "hide") {
-        el.setAttribute("class", "show");
-      } else {
-        el.setAttribute("class", "hide");
-      }
-    },
-  },
-};
+const servicePageFunction = (event) => {
+  event.preventDefault()
+  const el = document.getElementById('about-page-banner')
+  const box = el.getAttribute('class')
+
+  if (box === 'hide') {
+    el.setAttribute('class', 'show')
+  } else {
+    el.setAttribute('class', 'hide')
+  }
+}
 </script>
 
 <style lang="scss"></style>

@@ -3,59 +3,47 @@
     <button id="toggle-menu" @click="naviFunction">Menu</button>
     <ul id="site-inner-nav" class="hide">
       <li class="site-inner-nav-item">
-        <router-link
-          to="/"
-          class="nav-item r-item"
-          @click="InlineMenuButtonClickHandler()"
-        >
+        <RouterLink to="/" class="nav-item r-item" @click="InlineMenuButtonClickHandler()">
           Home
-        </router-link>
+        </RouterLink>
       </li>
       <li class="site-inner-nav-item">
-        <router-link
+        <RouterLink
           active-class="active"
           to="/holidaypackages"
           class="nav-item r-item"
           @mouseup="InlineMenuButtonClickHandler()"
         >
           Holiday Packages
-        </router-link>
+        </RouterLink>
       </li>
       <li class="site-inner-nav-item">
-        <router-link
+        <RouterLink
           to="/bestdeals"
           class="nav-item r-item"
           @mouseup="InlineMenuButtonClickHandler()"
         >
           BestDeal
-        </router-link>
+        </RouterLink>
       </li>
       <li class="site-inner-nav-item">
-        <router-link
+        <RouterLink
           to="/services"
           class="nav-item r-item"
           @mouseup="InlineMenuButtonClickHandler()"
         >
           Services
-        </router-link>
+        </RouterLink>
       </li>
       <li class="site-inner-nav-item">
-        <router-link
-          to="/about"
-          class="nav-item r-item"
-          @mouseup="InlineMenuButtonClickHandler()"
-        >
+        <RouterLink to="/about" class="nav-item r-item" @mouseup="InlineMenuButtonClickHandler()">
           AboutUs
-        </router-link>
+        </RouterLink>
       </li>
       <li class="site-inner-nav-item">
-        <router-link
-          to="/contact"
-          class="nav-item r-item"
-          @mouseup="InlineMenuButtonClickHandler()"
-        >
+        <RouterLink to="/contact" class="nav-item r-item" @mouseup="InlineMenuButtonClickHandler()">
           Contact
-        </router-link>
+        </RouterLink>
       </li>
     </ul>
 
@@ -63,42 +51,36 @@
   </nav>
 </template>
 
-<script>
-import LanguageSelect from "@/components/LanguageSelect.vue";
+<script setup>
+// import { RouterLink, useRoute } from 'vue-router';
+import { RouterLink } from 'vue-router'
+import LanguageSelect from '@/components/LanguageSelect.vue'
 
-export default {
-  name: "TravelNav",
-  components: {
-    LanguageSelect,
-  },
-  data() {
-    return {
-      isActive: false,
-    };
-  },
+// const isActiveLink = (routePath) => {
+//   const route = useRoute();
+//   return route.path === routePath;
+// };
 
-  methods: {
-    naviFunction(e) {
-      e.preventDefault();
-      const slideoutNav = document.getElementById("site-inner-nav");
-      if (slideoutNav.classList.contains("show")) {
-        slideoutNav.setAttribute("class", "hide");
-      } else {
-        slideoutNav.setAttribute("class", "show");
-      }
-    },
-    InlineMenuButtonClickHandler() {
-      const slideoutMenu = document.getElementById("site-inner-nav");
+const naviFunction = (e) => {
+  e.preventDefault()
+  const slideoutNav = document.getElementById('site-inner-nav')
+  if (slideoutNav.classList.contains('show')) {
+    slideoutNav.setAttribute('class', 'hide')
+  } else {
+    slideoutNav.setAttribute('class', 'show')
+  }
+}
 
-      const box = slideoutMenu.getAttribute("class");
-      if (box === "hide") {
-        slideoutMenu.setAttribute("class", "show");
-      } else {
-        slideoutMenu.setAttribute("class", "hide");
-      }
-    },
-  },
-};
+const InlineMenuButtonClickHandler = () => {
+  const slideoutMenu = document.getElementById('site-inner-nav')
+
+  const box = slideoutMenu.getAttribute('class')
+  if (box === 'hide') {
+    slideoutMenu.setAttribute('class', 'show')
+  } else {
+    slideoutMenu.setAttribute('class', 'hide')
+  }
+}
 </script>
 
 <style lang="scss"></style>

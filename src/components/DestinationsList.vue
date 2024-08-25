@@ -1,12 +1,7 @@
 <template>
-  <!--Destinations-->
   <section class="holiday-search-sidebar">
-    <h2 id="holiday-destination-title">Top Destinations</h2>
-    <div
-      v-for="destination in destinationitems"
-      :key="destination.id"
-      class="destinations"
-    >
+    <h2 id="holiday-destination-title">{{ title }}</h2>
+    <div v-for="destination in props.destinationitems" :key="destination.id" class="destinations">
       <figure class="destination">
         <img
           class="destination-img"
@@ -24,16 +19,13 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: "Destinations",
-  props: {
-    destinationitems: {
-      type: Array,
-      default: null,
-    },
-  },
-};
+<script setup>
+import { defineProps } from 'vue'
+const title = 'Top Destinations'
+
+const props = defineProps({
+  destinationitems: Object
+})
 </script>
 
 <style lang="scss"></style>

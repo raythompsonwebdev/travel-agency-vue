@@ -1,54 +1,35 @@
 # travel-agency-vue
 
-![travel-agency-vue](/travel-agency-vue.png)
+This template should help get you started developing with Vue 3 in Vite.
 
-# Description
+## Recommended IDE Setup
 
-Travel Agency Web application based on photoshop website template design downloaded from website [php.jabber.com](https://www.phpjabbers.com/).
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-Built using JS framework VueJS, this web application allows users to search for holiday destinations using search filter.
+## Customize configuration
 
-## Features
+See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-- Products Search Filters
-- Responsive Design viewable on most mobile devices.
+## Project Setup
 
-## Tools
-
-- [VueJS](https://vuejs.org/)
-- [VueJS CLI](https://cli.vuejs.org/guide/)
-- [Sass](https://sass-lang.com/)
-- [Node](https://nodejs.org/en)
-- [Prettier](https://prettier.io/)
-- [Eslint](https://eslint.org/)
-- [Postcss](https://postcss.org/)
-- [Stylelint](https://stylelint.io/)
-- [Axios](https://axios-http.com/docs/intro/)
-
-## Project setup
-
-```
+```sh
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compile and Hot-Reload for Development
 
-```
-npm run serve
+```sh
+npm run dev
 ```
 
-### Compiles and minifies for production
+### Compile and Minify for Production
 
-```
+```sh
 npm run build
 ```
 
-### Lints and fixes files
+### Lint with [ESLint](https://eslint.org/)
 
-```
+```sh
 npm run lint
 ```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).

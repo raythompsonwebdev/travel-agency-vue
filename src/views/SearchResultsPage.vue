@@ -3,39 +3,39 @@
     <h2 class="single-item-title">{{ title }}</h2>
     <transition-group name="fade" tag="div" id="cart-items">
       <div v-if="results.length > 0">
-        <!-- <ResultsList :products="results" /> -->
+        <ResultsList :products="results" />
       </div>
-      <div v-if="results.length === 0">
-        You current have no items in your cart!
-      </div>
+      <div v-if="results.length === 0">You current have no items in your cart!</div>
     </transition-group>
   </main>
 </template>
 
-<script>
-import axios from "axios";
-// import ResultsList from "@/components/ResultsList.vue";
+<script setup>
+import axios from 'axios'
+import ResultsList from '@/components/ResultsList.vue'
+import { ref, onMounted } from 'vue'
 
-export default {
-  name: "SearchResultsPage",
-  components: {
-    // ResultsList,
-  },
-  data() {
-    return {
-      results: [],
-      title: "Search Results Page",
-    };
-  },
-  async created() {
-    console.log(this.$route.query);
-    const result = await axios.get("/api/searchform", {
-      data: this.$route.query,
-    });
-    const { data } = result;
-    this.results = data;
-  },
-};
+const results = ref([])
+const title = 'Search Results Page'
+
+onMounted(async () => {
+  try {
+    console.log(this.$route.query)
+    const result = await axios.get('/api/searchform', {
+      data: this.$route.query
+    })
+    const { data } = result
+    results.value = data
+  } catch (error) {
+    console.error('Error fetching best deals:', error)
+    // Check if it's an HTML response or another issue
+    if (error.response && error.response.status === 404) {
+      console.error('API endpoint not found')
+    } else if (error.response && error.response.status === 500) {
+      console.error('Server error')
+    }
+  }
+})
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

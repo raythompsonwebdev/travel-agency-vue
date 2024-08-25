@@ -5,10 +5,8 @@
   </main>
 </template>
 
-<script>
-export default {
-  name: "NotFoundpage",
-};
+<script setup>
+// const name = "NotFoundpage";
 </script>
 
 <style lang="scss"></style>

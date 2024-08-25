@@ -10,24 +10,14 @@
             :alt="singleholidaypackage.title"
           />
           <figcaption class="single-item-caption">
-            <h3 class="single-item-location">
-              Location : {{ singleholidaypackage.location }}
-            </h3>
+            <h3 class="single-item-location">Location : {{ singleholidaypackage.location }}</h3>
             <span class="single-item-price">
               from
-              <span class="single-item-offer">{{
-                singleholidaypackage.price
-              }}</span>
+              <span class="single-item-offer">{{ singleholidaypackage.price }}</span>
             </span>
             <p class="single-item-text">{{ singleholidaypackage.text }}</p>
-            <p class="single-item-rating">
-              Rating: {{ singleholidaypackage.rating }} Star
-            </p>
-            <button
-              @click="addToCart"
-              class="single-item-submit"
-              v-if="!itemIsInCart"
-            >
+            <p class="single-item-rating">Rating: {{ singleholidaypackage.rating }} Star</p>
+            <button @click="addToCart" class="single-item-submit" v-if="!itemIsInCart">
               Add to cart
             </button>
             <button class="single-item-added-to-cart" v-if="itemIsInCart">
@@ -43,61 +33,58 @@
   </main>
 </template>
 
-<script>
-import NotFoundpage from "../views/NotFoundpage.vue";
-import axios from "axios";
+<script setup>
+import NotFoundpage from '../views/NotFoundpage.vue'
+import axios from 'axios'
+import { defineProps, ref, computed, onMounted } from 'vue'
 
-export default {
-  name: "HolidayPackage",
-  title: "Holiday Package Page",
-  props: {
-    itemid: { type: String, required: true },
-  },
-  components: {
-    NotFoundpage,
-  },
-  data() {
-    return {
-      singleholidaypackage: {},
-      cartItems: [],
-    };
-  },
-  computed: {
-    itemIsInCart() {
-      return this.cartItems.some(
-        (item) => item?.id === this.$route.params.itemid
-      );
-    },
-  },
-  methods: {
-    async initData() {
-      const result = await axios.get(
-        `/api/holidaypackage/${parseInt(this.itemid)}`
-      );
-      const { data } = result;
-      this.singleholidaypackage = data;
-    },
-    async addToCart() {
-      await axios.post("/api/users/12345/cart", {
-        id: this.$route.params.itemid,
-      });
-      this.$router.push({
-        name: "CartPage",
-        //query: this.formData,
-      });
-    },
-  },
-  async created() {
-    this.initData();
-    const cartResponse = await axios.get("/api/users/12345/cart");
-    const cartItems = cartResponse.data;
-    this.cartItems = cartItems;
-  },
-  beforeRouteUpdate(to, from, next) {
-    this.initData();
-    next();
-  },
-};
+const props = defineProps({
+  itemid: String
+})
+
+const singleholidaypackage = ref([])
+
+const cartItems = ref([])
+
+const itemIsInCart = computed(() => {
+  return cartItems.value.some((item) => item?.id === this.$route.params.props.itemid)
+})
+
+const initData = async () => {
+  const result = await axios.get(`/api/holidaypackage/${parseInt(props.itemid)}`)
+  const { data } = result
+
+  singleholidaypackage.value = data
+}
+const addToCart = async () => {
+  await axios.post('/api/users/12345/cart', {
+    id: this.$route.params.props.itemid
+  })
+  this.$router.push({
+    name: 'CartPage'
+    //query: this.formData,
+  })
+}
+
+onMounted(async () => {
+  initData()
+  itemIsInCart()
+
+  try {
+    const cartResponse = await axios.get('/api/users/12345/cart')
+    const { data } = cartResponse
+    cartItems.value = data
+  } catch (error) {
+    console.error('Error fetching jobs', error)
+  } finally {
+    console.log('Products received')
+  }
+})
+
+// beforeRouteUpdate(to, from, next) {
+//   initData();
+//   next();
+// };
 </script>
 
 <style lang="scss">

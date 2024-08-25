@@ -2,41 +2,31 @@
   <footer id="site-footer">
     <ul id="site-inner-footer">
       <li class="inner-footer-item">
-        <router-link to="/" class="footer-nav-item r-item"> Home </router-link>
+        <RouterLink to="/" class="footer-nav-item r-item"> Home </RouterLink>
       </li>
       <li class="inner-footer-item">
-        <router-link to="/BestDeal" class="footer-nav-item r-item">
-          BestDeal
-        </router-link>
+        <RouterLink to="/BestDeal" class="footer-nav-item r-item"> BestDeal </RouterLink>
       </li>
       <li class="inner-footer-item">
-        <router-link to="/AboutUs" class="footer-nav-item r-item">
-          AboutUs
-        </router-link>
+        <RouterLink to="/AboutUs" class="footer-nav-item r-item"> AboutUs </RouterLink>
       </li>
       <li class="inner-footer-item">
-        <router-link to="/HolidayPackages" class="footer-nav-item r-item">
+        <RouterLink to="/HolidayPackages" class="footer-nav-item r-item">
           HolidayPackages
-        </router-link>
+        </RouterLink>
       </li>
       <li class="inner-footer-item">
-        <router-link to="/Contact" class="footer-nav-item r-item">
-          Contact
-        </router-link>
+        <RouterLink to="/Contact" class="footer-nav-item r-item"> Contact </RouterLink>
       </li>
       <li class="inner-footer-item">
-        <router-link to="/Services" class="footer-nav-item r-item">
-          Services
-        </router-link>
+        <RouterLink to="/Services" class="footer-nav-item r-item"> Services </RouterLink>
       </li>
     </ul>
   </footer>
 </template>
 
-<script>
-export default {
-  name: "TravelFooter",
-};
+<script setup>
+import { RouterLink } from 'vue-router'
 </script>
 
 <style lang="scss"></style>

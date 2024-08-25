@@ -4,7 +4,7 @@
     <h2 id="holiday-offers-title">Featured Holiday Package</h2>
 
     <div
-      v-for="featuredholiday in featuredholidayitems"
+      v-for="featuredholiday in props.featuredholidayitems"
       :key="featuredholiday.id"
       class="offer-item-div"
     >
@@ -21,27 +21,19 @@
         </figcaption>
       </figure>
     </div>
-
-    <div class="clearfix" />
   </section>
 </template>
 
-<script>
-export default {
-  name: "FeaturedHolidays",
-  props: {
-    featuredholidayitems: {
-      type: Array,
-      default: null,
-    },
-  },
-  computed: {
-    holidayImage(url) {
-      return require(`${url}`);
-    },
-  },
-};
+<script setup>
+import { defineProps } from 'vue'
+// const name = "FeaturedHolidays";
+const props = defineProps({
+  featuredholidayitems: Array
+})
+
+// const holidayImage = computed((url) => {
+//   return url;
+// });
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss"></style>

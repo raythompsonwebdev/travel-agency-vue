@@ -17,7 +17,7 @@
       </ul>
       <h1 class="filter-title">Filter By Season</h1>
       <ul class="filter-list">
-        <li v-for="season in seasons" :key="season.id" class="filter-list-item">
+        <li v-for="season in props.seasons" :key="season.id" class="filter-list-item">
           <button
             @click="SearchItemBtn(season.title)"
             @mouseup="InlineButtonClickHandler()"
@@ -31,11 +31,7 @@
     <section id="locations">
       <h1 class="filter-title">Filter By Location</h1>
       <ul class="filter-list">
-        <li
-          v-for="location in locations"
-          :key="location.id"
-          class="filter-list-item"
-        >
+        <li v-for="location in props.locations" :key="location.id" class="filter-list-item">
           <button
             @click="SearchItemBtn(location.title)"
             @mouseup="InlineButtonClickHandler()"
@@ -49,7 +45,7 @@
     <section id="prices">
       <h1 class="filter-title">Filter By Price</h1>
       <ul class="filter-list">
-        <li v-for="price in prices" :key="price.id" class="filter-list-item">
+        <li v-for="price in props.prices" :key="price.id" class="filter-list-item">
           <button
             @click="SearchItemBtn(price.title)"
             @mouseup="InlineButtonClickHandler()"
@@ -63,7 +59,7 @@
     <section id="ratings">
       <h1 class="filter-title">Filter By Rating</h1>
       <ul class="filter-list">
-        <li v-for="rating in ratings" :key="rating.id" class="filter-list-item">
+        <li v-for="rating in props.ratings" :key="rating.id" class="filter-list-item">
           <button
             @click="SearchItemBtn(rating.title)"
             @mouseup="InlineButtonClickHandler()"
@@ -78,54 +74,40 @@
   </aside>
 </template>
 
-<script>
-export default {
-  name: "FilterNav",
-  props: {
-    seasons: {
-      type: Array,
-      default: null,
-    },
-    prices: {
-      type: Array,
-      default: null,
-    },
-    locations: {
-      type: Array,
-      default: null,
-    },
-    ratings: {
-      type: Array,
-      default: null,
-    },
-  },
-  methods: {
-    InlineButtonClickHandler() {
-      const slideoutMenu = document.querySelector("#filter-nav-sidebar");
-      if (slideoutMenu.classList.contains("show")) {
-        slideoutMenu.setAttribute("class", "hide");
-      } else {
-        slideoutMenu.setAttribute("class", "show");
-      }
-    },
-    searchFilterFunction(event) {
-      event.preventDefault();
+<script setup>
+import { defineProps } from 'vue'
 
-      const el = document.getElementById("filter-nav-sidebar");
+const props = defineProps({
+  seasons: Array,
+  prices: Array,
+  locations: Array,
+  ratings: Array
+})
 
-      const box = el.getAttribute("class");
+const InlineButtonClickHandler = () => {
+  const slideoutMenu = document.querySelector('#filter-nav-sidebar')
+  if (slideoutMenu.classList.contains('show')) {
+    slideoutMenu.setAttribute('class', 'hide')
+  } else {
+    slideoutMenu.setAttribute('class', 'show')
+  }
+}
+const searchFilterFunction = (event) => {
+  event.preventDefault()
 
-      if (box === "hide") {
-        el.setAttribute("class", "show");
-      } else {
-        el.setAttribute("class", "hide");
-      }
-    },
-    SearchItemBtn(item) {
-      this.$emit("seasonClick", item);
-    },
-  },
-};
+  const el = document.getElementById('filter-nav-sidebar')
+
+  const box = el.getAttribute('class')
+
+  if (box === 'hide') {
+    el.setAttribute('class', 'show')
+  } else {
+    el.setAttribute('class', 'hide')
+  }
+}
+const SearchItemBtn = (item) => {
+  this.$emit('seasonClick', item)
+}
 </script>
 
 <style lang="scss"></style>

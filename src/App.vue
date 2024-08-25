@@ -16,22 +16,22 @@
   <TravelFooter />
 </template>
 <script>
-import axios from "axios";
-import TravelNav from "@/components/TravelNav";
-import TravelHeader from "@/components/TravelHeader";
-import TravelFooter from "@/components/TravelFooter";
+import axios from 'axios'
+import TravelNav from '@/components/TravelNav.vue'
+import TravelHeader from '@/components/TravelHeader.vue'
+import TravelFooter from '@/components/TravelFooter.vue'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     TravelNav,
     TravelHeader,
-    TravelFooter,
+    TravelFooter
   },
   data() {
     return {
-      cartItems: [],
-    };
+      cartItems: []
+    }
   },
   // computed: {
   //   cartTotal() {
@@ -52,14 +52,14 @@ export default {
   // },
 
   async created() {
-    const response = await axios.get("/api/users/12345/cart");
-    const cartItems = response.data;
-    this.cartItems = cartItems;
-  },
-};
+    const response = await axios.get('/api/users/12345/cart')
+    const cartItems = response.data
+    this.cartItems = cartItems
+  }
+}
 </script>
 <style lang="scss">
-@import "assets/sass/main";
+@import 'assets/sass/main';
 @keyframes coming {
   from {
     transform: translateX(-200px);

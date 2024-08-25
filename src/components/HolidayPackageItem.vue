@@ -1,15 +1,11 @@
 <template>
-  <article v-if="holidaypackageitem" class="holiday-pkg-details">
+  <article v-if="props.holidaypackageitem" class="holiday-pkg-details">
     <h1 class="holiday-pkg-title">{{ holidaypackageitem.title }}</h1>
     <span class="holiday-pkg-price">
       <span class="holiday-pkg-offer">{{ holidaypackageitem.price }}</span>
     </span>
     <figure class="holiday-pkg-item">
-      <img
-        :src="holidaypackageitem.url"
-        :alt="holidaypackageitem.title"
-        class="holiday-pkg-img"
-      />
+      <img :src="holidaypackageitem.url" :alt="holidaypackageitem.title" class="holiday-pkg-img" />
       <figcaption class="holiday-pkg-caption">
         <p class="holiday-pkg-txt">
           Location :
@@ -22,8 +18,8 @@
           :to="{
             name: 'HolidayPackage',
             params: {
-              itemid: holidaypackageitem.id,
-            },
+              itemid: holidaypackageitem.id
+            }
           }"
         >
           View Details
@@ -33,21 +29,16 @@
   </article>
 </template>
 
-<script>
-export default {
-  name: "HolidayPackageItem",
-  props: {
-    holidaypackageitem: {
-      type: Object,
-      required: true,
-    },
-  },
-  flushCom() {
-    this.$router.go();
-  },
-};
-</script>
+<script setup>
+import { defineProps } from 'vue'
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+const props = defineProps({
+  holidaypackageitem: Object
+})
+
+// const flushCom = () => {
+//   this.$router.go();
+// };
+</script>
 
 <style lang="scss"></style>

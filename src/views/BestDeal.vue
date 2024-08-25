@@ -4,28 +4,16 @@
       <article v-if="singlebestdeal" class="single-item">
         <h2 class="single-item-title">{{ singlebestdeal.title }}</h2>
         <figure class="single-item-figure">
-          <img
-            :src="singlebestdeal.url"
-            :alt="singlebestdeal.title"
-            class="single-item-img"
-          />
+          <img :src="singlebestdeal.url" :alt="singlebestdeal.title" class="single-item-img" />
           <figcaption class="single-item-caption">
-            <h3 class="single-item-location">
-              Location : {{ singlebestdeal.location }}
-            </h3>
+            <h3 class="single-item-location">Location : {{ singlebestdeal.location }}</h3>
             <span class="single-item-price">
               from
               <span class="single-item-offer">{{ singlebestdeal.price }}</span>
             </span>
             <p class="single-item-text">{{ singlebestdeal.text }}</p>
-            <p class="single-item-rating">
-              Rating: {{ singlebestdeal.rating }} Star
-            </p>
-            <button
-              @click="addToCart"
-              class="single-item-submit"
-              v-if="!itemIsInCart"
-            >
+            <p class="single-item-rating">Rating: {{ singlebestdeal.rating }} Star</p>
+            <button @click="addToCart" class="single-item-submit" v-if="!itemIsInCart">
               Add to cart
             </button>
             <button class="single-item-added-to-cart" v-if="itemIsInCart">
@@ -41,61 +29,61 @@
   </main>
 </template>
 
-<script>
-import NotFoundpage from "./NotFoundpage";
-import axios from "axios";
+<script setup>
+import NotFoundpage from './NotFoundpage.vue'
+import axios from 'axios'
+import { defineProps, ref, computed, onMounted } from 'vue'
 
-export default {
-  name: "BestDeal",
-  props: {
-    itemid: { type: String, required: true },
-  },
-  components: {
-    NotFoundpage,
-  },
-  data() {
-    return {
-      singlebestdeal: {},
-      cartItems: [],
-    };
-  },
-  computed: {
-    itemIsInCart() {
-      return this.cartItems.some(
-        (item) => item?.id === this.$route.params.itemid
-      );
-    },
-  },
-  methods: {
-    async initData() {
-      const result = await axios.get(`/api/bestdeal/${parseInt(this.itemid)}`);
-      const { data } = result;
+const props = defineProps({
+  itemid: Object
+})
 
-      this.singlebestdeal = data;
-    },
-    async addToCart() {
-      await axios.post("/api/users/12345/cart", {
-        id: this.$route.params.itemid,
-      });
+const singlebestdeal = ref({})
+const cartItems = ref([])
 
-      this.$router.push({
-        name: "CartPage",
-        //query: this.formData,
-      });
-    },
-  },
-  async created() {
-    this.initData();
-    const cartResponse = await axios.get("/api/users/12345/cart");
-    const cartItems = cartResponse.data;
-    this.cartItems = cartItems;
-  },
+const itemIsInCart = computed(() => {
+  return cartItems.value.some((item) => item?.id === this.$route.params.props.itemid)
+})
 
-  beforeRouteUpdate(to, from, next) {
-    this.initData();
-    next();
-  },
-};
+const initData = async () => {
+  const result = await axios.get(`/api/bestdeal/${parseInt(props.itemid)}`)
+  const { data } = result
+  singlebestdeal.value = data
+}
+const addToCart = async () => {
+  await axios.post('/api/users/12345/cart', {
+    id: this.$route.params.props.itemid
+  })
+
+  this.$router.push({
+    name: 'CartPage'
+    //query: this.formData,
+  })
+}
+
+onMounted(async () => {
+  initData()
+  itemIsInCart()
+
+  try {
+    const cartResponse = await axios.get('/api/users/12345/cart')
+    const cartItems = cartResponse.data
+    cartItems.value = cartItems
+  } catch (error) {
+    console.error('Error fetching best deals:', error)
+    // Check if it's an HTML response or another issue
+    if (error.response && error.response.status === 404) {
+      console.error('API endpoint not found')
+    } else if (error.response && error.response.status === 500) {
+      console.error('Server error')
+    }
+  }
+})
+
+// beforeRouteUpdate(to, from, next) {
+//   this.initData()
+//   next()
+// }
 </script>
 
 <style lang="scss" scoped>
