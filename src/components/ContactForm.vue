@@ -55,7 +55,7 @@
 
 <script setup>
 import axios from 'axios'
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 
 const firstname = ref(' ')
 const lastname = ref(' ')
@@ -64,31 +64,37 @@ const phone = ref(' ')
 const message = ref(' ')
 const errors = ref([])
 
-onMounted(async () => {
+const onSubmit = async () => {
+  let contactData = {}
+
   if (firstname.value !== ' ' && lastname.value !== ' ' && email.value !== ' ') {
-    const contactData = {
+    contactData = {
       firstname: firstname.value,
       lastname: lastname.value,
       email: email.value,
       phone: phone.value,
       message: message.value
     }
-
-    console.error(contactData)
-
-    await axios.post('/api/contact', contactData)
-
-    firstname.value = ' '
-    lastname.value = ' '
-    email.value = ' '
-    phone.value = ' '
-    message.value = ' '
-  } else {
-    errors.value.push('FirstName required')
-    errors.value.push('LastName required')
-    errors.value.push('e-mail required')
   }
-})
+
+  try {
+    const sendData = await axios.post('/api/contact', contactData)
+
+    if (sendData.status === 200) {
+      firstname.value = ' '
+      lastname.value = ' '
+      email.value = ' '
+      phone.value = ' '
+      message.value = ' '
+    } else {
+      errors.value.push('FirstName required')
+      errors.value.push('LastName required')
+      errors.value.push('e-mail required')
+    }
+  } catch (error) {
+    console.log(error)
+  }
+}
 </script>
 
 <style lang="scss"></style>

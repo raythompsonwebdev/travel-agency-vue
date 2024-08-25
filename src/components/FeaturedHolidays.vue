@@ -26,9 +26,11 @@
 
 <script setup>
 import { defineProps } from 'vue'
-// const name = "FeaturedHolidays";
+
 const props = defineProps({
-  featuredholidayitems: Array
+  featuredholidayitems: {
+    type: Array
+  }
 })
 
 // const holidayImage = computed((url) => {

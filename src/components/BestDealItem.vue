@@ -33,7 +33,9 @@ import { defineProps } from 'vue'
 import { RouterLink } from 'vue-router'
 
 const props = defineProps({
-  bestdealitem: Object
+  bestdealitem: {
+    type: Object
+  }
 })
 </script>
 

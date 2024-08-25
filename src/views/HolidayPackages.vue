@@ -5,7 +5,7 @@
       :prices="filterNavData.prices"
       :locations="filterNavData.locations"
       :ratings="filterNavData.ratings"
-      @seasonClick="itemsSearched"
+      @findSeason="itemsSearched"
     />
 
     <!---main content-->

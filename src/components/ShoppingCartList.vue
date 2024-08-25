@@ -22,6 +22,8 @@
 import { defineProps } from 'vue'
 
 const props = defineProps({
-  products: Array
+  products: {
+    type: Array
+  }
 })
 </script>

@@ -33,7 +33,9 @@
 import { defineProps } from 'vue'
 
 const props = defineProps({
-  holidaypackageitem: Object
+  holidaypackageitem: {
+    type: Object
+  }
 })
 
 // const flushCom = () => {

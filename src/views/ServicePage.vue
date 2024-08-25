@@ -101,8 +101,6 @@ import customerService from '@/assets/img/service/travel-agency-website-customer
 import busTours from '@/assets/img/service/travel-agency-website-bus-tours-image.jpg'
 import hotelRoom from '@/assets/img/service/travel-agency-website-hotel-room-image.jpg'
 
-// const show = 'true';
-
 const servicePageFunction = (event) => {
   event.preventDefault()
   const el = document.getElementById('about-page-banner')

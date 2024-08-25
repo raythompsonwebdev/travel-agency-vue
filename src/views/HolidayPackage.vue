@@ -39,7 +39,9 @@ import axios from 'axios'
 import { defineProps, ref, computed, onMounted } from 'vue'
 
 const props = defineProps({
-  itemid: String
+  itemid: {
+    type: String
+  }
 })
 
 const singleholidaypackage = ref([])

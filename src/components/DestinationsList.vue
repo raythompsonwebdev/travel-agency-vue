@@ -24,7 +24,9 @@ import { defineProps } from 'vue'
 const title = 'Top Destinations'
 
 const props = defineProps({
-  destinationitems: Object
+  destinationitems: {
+    type: Object
+  }
 })
 </script>
 

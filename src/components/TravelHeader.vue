@@ -32,7 +32,9 @@ const phoneNumber = '0208-365-1452'
 const openTime = 'Everyday 8am - 9pm'
 
 const props = defineProps({
-  cartItems: Array
+  cartItems: {
+    type: Object
+  }
 })
 </script>
 

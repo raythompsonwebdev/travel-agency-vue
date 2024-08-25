@@ -1,12 +1,12 @@
 <template>
   <aside v-if="searchFilterFunction" id="filter-nav-sidebar" class="hide">
-    <button id="side-bar-btn" @click="searchFilterFunction">SIDE</button>
+    <button id="side-bar-btn" @click="handleClick">SIDE</button>
 
     <section id="seasons">
       <ul class="filter-list">
         <li class="filter-list-item">
           <button
-            @click="SearchItemBtn()"
+            @click="handleClick()"
             @mouseup="InlineButtonClickHandler()"
             id="reset"
             type="submit"
@@ -19,7 +19,7 @@
       <ul class="filter-list">
         <li v-for="season in props.seasons" :key="season.id" class="filter-list-item">
           <button
-            @click="SearchItemBtn(season.title)"
+            @click="handleClick(season.title)"
             @mouseup="InlineButtonClickHandler()"
             class="filter-list-btn"
           >
@@ -33,7 +33,7 @@
       <ul class="filter-list">
         <li v-for="location in props.locations" :key="location.id" class="filter-list-item">
           <button
-            @click="SearchItemBtn(location.title)"
+            @click="handleClick(location.title)"
             @mouseup="InlineButtonClickHandler()"
             class="filter-list-btn"
           >
@@ -47,7 +47,7 @@
       <ul class="filter-list">
         <li v-for="price in props.prices" :key="price.id" class="filter-list-item">
           <button
-            @click="SearchItemBtn(price.title)"
+            @click="handleClick(price.title)"
             @mouseup="InlineButtonClickHandler()"
             class="filter-list-btn"
           >
@@ -61,7 +61,7 @@
       <ul class="filter-list">
         <li v-for="rating in props.ratings" :key="rating.id" class="filter-list-item">
           <button
-            @click="SearchItemBtn(rating.title)"
+            @click="handleClick(rating.title)"
             @mouseup="InlineButtonClickHandler()"
             class="filter-list-btn"
           >
@@ -76,6 +76,8 @@
 
 <script setup>
 import { defineProps } from 'vue'
+// Define the emit function
+const emit = defineEmits(['findSeason'])
 
 const props = defineProps({
   seasons: Array,
@@ -105,9 +107,10 @@ const searchFilterFunction = (event) => {
     el.setAttribute('class', 'hide')
   }
 }
-// const SearchItemBtn = (item) => {
-//   this.$emit('seasonClick', item)
-// }
+
+const handleClick = (item) => {
+  emit('findSeason', item)
+}
 </script>
 
 <style lang="scss"></style>
