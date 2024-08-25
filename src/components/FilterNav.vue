@@ -105,9 +105,9 @@ const searchFilterFunction = (event) => {
     el.setAttribute('class', 'hide')
   }
 }
-const SearchItemBtn = (item) => {
-  this.$emit('seasonClick', item)
-}
+// const SearchItemBtn = (item) => {
+//   this.$emit('seasonClick', item)
+// }
 </script>
 
 <style lang="scss"></style>
